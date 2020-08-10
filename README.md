@@ -4,8 +4,8 @@
 
  ### Hi there 👋
 
- - 🔭 Surge
- - 🌱 Quantumult X
- - 💬 Clash
- - 📫 Boxjs
- - ⚡ Altstore
+ - 🛰 Surge
+ - 🚀 Quantumult X
+ - 🛸 Clash
+ - ⚓️ Boxjs
+ - 🛠 Altstore

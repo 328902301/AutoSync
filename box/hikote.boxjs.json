@@ -1,0 +1,18 @@
+{
+  "id": "hikote.app.sub",
+  "name": "Hikote 签到应用订阅",
+  "author": "@HIkote",
+  "icon": "https://avatars0.githubusercontent.com/u/10055901",
+  "repo": "https://github.com/Hikote/Surge/box/",
+  "apps": [
+    {
+      "id": "CCCAT",
+      "name": "CCCAT机场",
+      "keys": ["senku_signurl_cccat", "senku_signheader_cccat", "senku_signbody_cccat"],
+      "author": "@Hikote",
+      "repo": "https://raw.githubusercontent.com/Hikote/Surge/master/Script/cccat.js",
+      "script": "https://raw.githubusercontent.com/Hikote/Surge/master/Script/cccat.js",
+      "icons": ["https://raw.githubusercontent.com/Hikote/Surge/master/box/cccat.png", "https://raw.githubusercontent.com/Hikote/Surge/master/box/cccat.png"]
+    }
+  ]
+}

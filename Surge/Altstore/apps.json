@@ -1,0 +1,46 @@
+{
+  "name": "Panda App Ru++",
+  "identifier": "com.bmth.city.Demo",
+  "apps": [
+    {
+      "name": "YouTube++",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Cercube Team",
+      "subtitle": "YouTube 15.31.3 | Cercube 5.1.18",
+      "version": "15.31.3",
+      "versionDate": "2020-06-15T14:30:00-07:00",
+      "versionDescription": "📹 Updated to YouTube 15.31.3 | Cercube 5.1.18\n\n• Support PiP on iPhones running iOS 13.\n• Fixed invalid parameters error when try to save videos.\n• Fixed Google account login issues.\n• Fixed incompatibility with Little11.\n• Other bug fixes and stability improvements.\n\n— Hikote1 🙈",
+      "downloadURL": "https://file.nyxz188.com/B:/Software/YouTube.ipa",
+      "localizedDescription": "Adds new features to YouTube:\n\n• Download and save videos up to 4k resolution\n• Save videos as audio only\n• View, manage and share all your downloads in Cercube's download manager\n• Block ads\n• Share downloaded videos with other devices via AirDrop\n• Background playback for streamed and downloaded videos\n• Import downloads to Music or Videos\n• Play YouTube videos using Picture-in-Picture mode\n• Downloaded videos are displayed within a beautifully crafted downloads manager that shows all the available information\n• Choose the default tab to open when launching YouTube\n• Stream videos in HD on cellular network\n• Auto-replay videos\n• Hide floating upload button\n• Hide the Trending tab\n• Rewind or forward videos\n• Cercube options are configurable from within YouTube settings\n• Play in high quality on Mobile Data",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/YouTube_social_white_squircle_%282017%29.svg/1024px-YouTube_social_white_squircle_%282017%29.svg.png",
+      "tintColor": "FF4500",
+      "size": 91936890,
+      "permissions": [
+        {
+          "type": "photos",
+          "usageDescription": "This lets you upload videos you've already created."
+        },
+        {
+          "type": "contacts",
+          "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."
+        },
+        {
+          "type": "microphone",
+          "usageDescription": "This lets you include audio with your videos and search using your voice."
+        },
+        {
+          "type": "location",
+          "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."
+        }
+      ],
+      "screenshotURLs": [
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/b8/74/03/b8740367-2dcf-6a0c-d738-be91b34281ab/mzl.ksabbijd.png/1000x1000bb.png",
+	"https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/0d/36/c20d36a4-c4f2-a27d-012d-fceeddea392b/mzl.wqtsgyvi.png/1000x1000bb.png",
+	"https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/c3/28/ed/c328ed06-2f1f-3380-1665-68c921553d4c/mzl.ehrowzdv.png/1000x1000bb.png",
+	"https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/78/c5/17/78c517e1-21a9-40a6-1163-0dd919136c54/mzl.loxwfgsa.png/1000x1000bb.png",
+	"https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/a2/8f/8e/a28f8eaf-a227-3215-5c36-fa8976772c30/mzl.xeupxvot.png/1000x1000bb.png"      ]
+    }
+  ],
+  "news": [
+  ]
+}

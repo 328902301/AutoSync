@@ -42,5 +42,14 @@
     }
   ],
   "news": [
+    {
+      "title": "New YouTube++ Now Available",
+      "identifier": "New YouTube++ Now Available",
+      "caption": "Enjoy your life with no-ads youtube.",
+      "tintColor": "FF4500",
+      "imageURL": "https://raw.githubusercontent.com/Hikote/Free/master/Altstore/image/1024px-YouTube.svg.png",
+      "date": "2020-06-15",
+      "notify": true
+    }
   ]
 }

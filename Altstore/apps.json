@@ -48,7 +48,7 @@
       "caption": "Enjoy your life with no-ads youtube.",
       "tintColor": "FF4500",
       "imageURL": "https://raw.githubusercontent.com/Hikote/Free/master/Altstore/image/1024px-YouTube.svg.png",
-      "appID": "com.bmth.city.youtube",
+      "appID": "com.google.ios.youtube",
       "date": "2020-06-15",
       "notify": true
     }

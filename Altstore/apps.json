@@ -1,6 +1,6 @@
 {
-  "name": "Panda App Ru++",
-  "identifier": "com.bmth.city.Demo",
+  "name": "Selected apps",
+  "identifier": "com.hikote.demo",
   "apps": [
     {
       "name": "YouTube++",

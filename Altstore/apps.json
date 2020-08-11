@@ -6,7 +6,7 @@
       "name": "YouTube++",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "Cercube Team",
-      "subtitle": "YouTube 15.31.3 | Cercube 5.1.18",
+      "subtitle": "YouTube 15.31.3 | Cercube 5.1.20",
       "version": "15.31.3",
       "versionDate": "2020-06-15T14:30:00-07:00",
       "versionDescription": "📹 Updated to YouTube 15.31.3 | Cercube 5.1.18\n\n• Support PiP on iPhones running iOS 13.\n• Fixed invalid parameters error when try to save videos.\n• Fixed Google account login issues.\n• Fixed incompatibility with Little11.\n• Other bug fixes and stability improvements.\n\n— Hikote1 🙈",
@@ -34,11 +34,11 @@
         }
       ],
       "screenshotURLs": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/b8/74/03/b8740367-2dcf-6a0c-d738-be91b34281ab/mzl.ksabbijd.png/1000x1000bb.png",
-	"https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/0d/36/c20d36a4-c4f2-a27d-012d-fceeddea392b/mzl.wqtsgyvi.png/1000x1000bb.png",
-	"https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/c3/28/ed/c328ed06-2f1f-3380-1665-68c921553d4c/mzl.ehrowzdv.png/1000x1000bb.png",
-	"https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/78/c5/17/78c517e1-21a9-40a6-1163-0dd919136c54/mzl.loxwfgsa.png/1000x1000bb.png",
-	"https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/a2/8f/8e/a28f8eaf-a227-3215-5c36-fa8976772c30/mzl.xeupxvot.png/1000x1000bb.png"      ]
+        "https://raw.githubusercontent.com/Hikote/Free/master/box/image/Screenshot-1.png",
+	"https://raw.githubusercontent.com/Hikote/Free/master/box/image/Screenshot-2.png",
+	"https://raw.githubusercontent.com/Hikote/Free/master/box/image/Screenshot-3.png",
+	"https://raw.githubusercontent.com/Hikote/Free/master/box/image/Screenshot-4.png",
+	"https://raw.githubusercontent.com/Hikote/Free/master/box/image/Screenshot-5.png"      ]
     }
   ],
   "news": [

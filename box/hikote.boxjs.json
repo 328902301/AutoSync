@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "RRtv",
-      "name": "RRtv Checkin",
+      "name": "RRtv任务",
       "keys": ["rrsp_cookie"],
       "author": "@Hikote",
       "repo": "https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/rrsp_task.js",

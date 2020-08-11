@@ -13,7 +13,7 @@
       "downloadURL": "https://file.nyxz188.com/B:/Software/YouTube.ipa",
       "localizedDescription": "Adds new features to YouTube:\n\n• Download and save videos up to 4k resolution\n• Save videos as audio only\n• View, manage and share all your downloads in Cercube's download manager\n• Block ads\n• Share downloaded videos with other devices via AirDrop\n• Background playback for streamed and downloaded videos\n• Import downloads to Music or Videos\n• Play YouTube videos using Picture-in-Picture mode\n• Downloaded videos are displayed within a beautifully crafted downloads manager that shows all the available information\n• Choose the default tab to open when launching YouTube\n• Stream videos in HD on cellular network\n• Auto-replay videos\n• Hide floating upload button\n• Hide the Trending tab\n• Rewind or forward videos\n• Cercube options are configurable from within YouTube settings\n• Play in high quality on Mobile Data",
       "iconURL": "https://raw.githubusercontent.com/Hikote/Free/master/Altstore/image/1024px-YouTube.svg.png",
-      "tintColor": "FF4500",
+      "tintColor": "FF0000",
       "size": 95538335,
       "permissions": [
         {

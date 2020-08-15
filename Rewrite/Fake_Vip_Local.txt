@@ -26,6 +26,8 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body l
 
 # Jibjab
 ^https:\/\/origin-prod-phoenix\.jibjab\.com\/v1\/user$ url script-response-body langkhach/jibjab.js
+#boom
+^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url script-response-body langkhach/boom.js
 
 #buyhack
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body langkhach/verify_receipt.js
@@ -80,9 +82,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body l
 
 #Musixmatch
 ^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body langkhach/musixmatch.js
-
-#boom
-^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url script-response-body langkhach/boom.js
 
 #mimo
 ^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body langkhach/mimo.js

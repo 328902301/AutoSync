@@ -1,4 +1,4 @@
-if ($response.status == 200) {
+if ($response.statusCode == 200) {
   if ($request.url.endsWith("account-status")) {
 $done({body: JSON.stringify({
   "expirationDate": 1893427199000,

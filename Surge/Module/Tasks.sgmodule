@@ -1,0 +1,27 @@
+#!name=Tasks
+#!desc=Tasks all in one
+#!system=ios
+
+[Script]
+# CCCAT
+CCCAT签到 = type=cron,cronexp=3 8 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+
+# 京东
+JD_DailyBonus = type=cron,cronexp=10 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# 网易云音乐
+网易音乐签到 = type=cron,cronexp=20 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0
+
+# RRtv
+RRtv签到 = type=cron,cronexp=10 7 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
+
+# 人人影视
+zimuzu签到 = type=cron,cronexp=15 7 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js
+
+# 航旅纵横
+cron "15 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
+
+# NASA
+NASA每日一图 = type=cron,cronexp=5 14 * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js
+
+京东手机狂欢城 = type=cron,cronexp=1 0-18/6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js

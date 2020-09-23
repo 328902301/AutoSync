@@ -3,61 +3,75 @@
 #!system=ios
 
 [General]
-proxy-test-url = http://www.apple.com/
-internet-test-url = http://www.baidu.com/
-force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
+force-http-engine-hosts = %APPEND% *.ott.cibntv.net,123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
+proxy-test-url = http://www.gstatic.com/generate_204
+internet-test-url = http://www.aliyun.com
 
 [Rule]
-# Adhosts
-DOMAIN-SET,Bypass/Reject.txt,REJECT
-# 抖音
-URL-REGEX,^https?:\/\/.+?\.(snssdk|amemv)\.com\/api\/ad\/,REJECT
-# 优酷
-URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
-# 微信
-URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,REJECT
-# 网易云音乐
-URL-REGEX,^http:\/\/.+?\/eapi\/ad\/,REJECT
-# 淘宝
-URL-REGEX,^https?:\/\/(gw|heic)\.alicdn\.com\/.+?\.jpg_(9\d{2}|\d{4}),REJECT
-# 京东
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
-# 京东金融
-URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture),REJECT
-# YouTube
-URL-REGEX,^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
+# JD
+URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 # 天翼生活
 URL-REGEX,^http:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.+?Animation$,REJECT
 # 苏州市民卡
 URL-REGEX,^https?:\/\/newapp\.szsmk\.com\/app\/config\/.+?Ad$,REJECT
-# 高德地图
-URL-REGEX,^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash,REJECT
 # 同花顺
 URL-REGEX,^https?:\/\/adm\.10jqka\.com\.cn\/img\/ad\/\d+?\/.+?_(1\d{2}|\d{4}),REJECT
 # 高铁管家
 URL-REGEX,^https?:\/\/[a-z]+?\.rsscc\.com\/trainact\/adver\/,REJECT
 # 智行火车票
 URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/.+?\/getAdsList,REJECT
-# 百度网盘
-URL-REGEX,^https?:\/\/pan\.baidu\.com\/(rest\/\d(|\.\d)\/pcs\/adx|act\/api\/activityentry),REJECT
 # 工商银行
 URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,REJECT
 # 招商银行
 URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
 # 淘宝联盟
 URL-REGEX,^https?:\/\/img\.alicdn\.com\/tfs\/\w+?(-\d{4}){2},REJECT
-# 人人视频
+# 人人视频 - *.rr.tv
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(ad\/getAll$|storage\/business\/rootName\/app\/homePage),REJECT
+# cloudmusic
+URL-REGEX,^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT
+
+URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/,REJECT
+URL-REGEX,^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$,REJECT
+URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad,REJECT
+URL-REGEX,^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$,REJECT
+URL-REGEX,^https?:\/\/p\.c\.music\.126.net\/.*?jpg$,REJECT
+URL-REGEX,^https?:\/\/img1\.126\.net\/.+?dpi=\w{7,8},REJECT
+URL-REGEX,^https?:\/\/img1\.126\.net\/channel14\/,REJECT
 
 [Host]
-*.apple.com = server:114.114.114.114
-*.icloud.com = server:114.114.114.114
+mtalk.google.com = 108.177.125.188
+//*.apple.com = server:114.114.114.114
+//*.icloud.com = server:114.114.114.114
 
 [URL Rewrite]
+# > AMap - m*.amap.com
+^(http|https):\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
+# > YOUKU
+//^(http|https):\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
+# > iQIYI
+//^(http|https):\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
+//^(http|https):\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
+//^(http|https):\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
+# > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
+^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
+^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+^(http|https):\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
+^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
+
+# > YYeTss
+^(http|https):\/\/tj\.playcvn\.com\/app\/ads\? - reject
+^(http|https):\/\/\w+\.jstucdn\.com\/(g3\/|js\/ad) - reject
+
+# Pornhub
 ^https?:\/\/cn\.pornhub\.com\/interstitial https://cn.pornhub.com/view_video.php header
 
+# QQ Music
+//^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
+//^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
+
 [Script]
-Q-Search = type=http-request,pattern=^http:\/\/www\.google\.cn\/,script-path=Script/search.js
+JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=true,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
 [MITM]
-hostname = %APPEND% *.amemv.com, *.snssdk.com, mp.weixin.qq.com, acs.m.taobao.com, heic.alicdn.com, gw.alicdn.com, img.alicdn.com, api.m.jd.com, ms.jr.jd.com, *.googlevideo.com, newapp.szsmk.com, m5.amap.com, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pan.baidu.com, pic1cdn.cmbchina.com, api.rr.tv, cn.pornhub.com, music.163.com, wapside.189.cn:9001
+hostname = %APPEND% img.alicdn.com, newapp.szsmk.com, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, cn.pornhub.com, music.163.com, cccat.io, *.rr.tv, *.rrys2020.com, ios.zmzapi.com, acs.m.taobao.com,m*.amap.com,api.m.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*, interfac*.music.163.com, p1.music.126.net, img1.126.net

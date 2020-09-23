@@ -1,9 +1,0 @@
-#!name=不背单词
-#!desc=解锁会员权限
-#!system=ios
-
-[Script]
-Lexies.js = type=http-response,requires-body=1,max-size=0,pattern=^https://sapi\.beingfine\.cn/v3/report/launch/,script-path=Script/Lexies.js
-
-[MITM]
-hostname = %APPEND% sapi.beingfine.cn

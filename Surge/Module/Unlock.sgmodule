@@ -10,7 +10,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/
 # Altstore - Unlock Altstore Patron
 Altstore = type=http-response,requires-body=true,pattern=^https?:\/\/www\.patreon\.com\/api\/oauth2\/v\d\/identity,script-path=https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/Altstore.js
 # 蜗牛读书 - 解锁VIP
-wnds.js = requires-body=1,script-path=https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/wnds.js,type=http-response,pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json
+wnds.js = type=http-response,requires-body=1,pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json,script-path=https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/wnds.js
 # 不背单词 - 解锁会员权限
 Lexies.js = type=http-response,requires-body=1,max-size=0,pattern=^https://sapi\.beingfine\.cn/v3/report/launch/,script-path=Script/https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/Lexies.js
 

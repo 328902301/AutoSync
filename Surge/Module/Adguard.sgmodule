@@ -1,9 +1,0 @@
-#!name=AdGuard
-#!desc=超高效广告拦截器
-#!system=ios
-
-[Script]
-AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
-
-[MITM]
-hostname = %APPEND% mobile-api.adguard.com

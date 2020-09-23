@@ -1,9 +1,0 @@
-#!name=人人视频
-#!desc=您的海外追剧神器
-#!system=ios
-
-[Script]
-rrsp_task = type=cron,cronexp=10 0 * * *,script-path=Script/rrsp_task.js
-rrsp_cookie = type=http-request,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/user\/profile$,script-path=Script/rrsp.js
-rrsp_video = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info,script-path=Script/rrsp.js
-rrsp_banner = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$,script-path=Script/rrsp.js

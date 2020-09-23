@@ -1,9 +1,0 @@
-#!name=Altstore
-#!desc=Unlock Altstore Patron
-#!system=ios
-
-[Script]
-Altstore = type=http-response,requires-body=true,pattern=^https?:\/\/www\.patreon\.com\/api\/oauth2\/v\d\/identity,script-path=Script/Altstore.js
-
-[MITM]
-hostname = %APPEND% www.patreon.com

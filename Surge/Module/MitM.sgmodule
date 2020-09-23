@@ -28,9 +28,8 @@ URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
 URL-REGEX,^https?:\/\/img\.alicdn\.com\/tfs\/\w+?(-\d{4}){2},REJECT
 # 人人视频 - *.rr.tv
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(ad\/getAll$|storage\/business\/rootName\/app\/homePage),REJECT
-# cloudmusic
+# 网易云音乐
 URL-REGEX,^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT
-
 URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/,REJECT
 URL-REGEX,^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$,REJECT
 URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad,REJECT
@@ -47,12 +46,7 @@ mtalk.google.com = 108.177.125.188
 [URL Rewrite]
 # > AMap - m*.amap.com
 ^(http|https):\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
-# > YOUKU
-//^(http|https):\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
-# > iQIYI
-//^(http|https):\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
-//^(http|https):\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
-//^(http|https):\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
+
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
 ^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
@@ -65,10 +59,6 @@ mtalk.google.com = 108.177.125.188
 
 # Pornhub
 ^https?:\/\/cn\.pornhub\.com\/interstitial https://cn.pornhub.com/view_video.php header
-
-# QQ Music
-//^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
-//^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
 
 [Script]
 # JD - Price trend

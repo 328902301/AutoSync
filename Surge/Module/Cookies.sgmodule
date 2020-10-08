@@ -24,4 +24,4 @@ http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=
 # 航旅纵横ID
 umetrip = type=http-request,pattern=^https:\/\/cloud\.umetrip\.com\/gateway\/api\/web\/rest\/polite\/app\/sign\/signpageinitdata,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
 [MITM]
-hostname= %APPEND% ifac*.iqiyi.com, cloud.umetrip.com
+hostname= %APPEND% cccat.io, api.m.jd.com, music.163.com, ifac*.iqiyi.com, cloud.umetrip.com

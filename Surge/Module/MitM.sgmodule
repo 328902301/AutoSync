@@ -26,17 +26,7 @@ URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,
 URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
 # 淘宝联盟
 URL-REGEX,^https?:\/\/img\.alicdn\.com\/tfs\/\w+?(-\d{4}){2},REJECT
-# 人人视频 - *.rr.tv
-URL-REGEX,^https?:\/\/api\.rr\.tv\/(ad\/getAll$|storage\/business\/rootName\/app\/homePage),REJECT
-# 网易云音乐
-URL-REGEX,^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT
-URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/,REJECT
-URL-REGEX,^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$,REJECT
-URL-REGEX,^https?:\/\/interface\.music\.163\.com\/eapi\/ad,REJECT
-URL-REGEX,^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$,REJECT
-URL-REGEX,^https?:\/\/p\.c\.music\.126.net\/.*?jpg$,REJECT
-URL-REGEX,^https?:\/\/img1\.126\.net\/.+?dpi=\w{7,8},REJECT
-URL-REGEX,^https?:\/\/img1\.126\.net\/channel14\/,REJECT
+
 
 [Host]
 mtalk.google.com = 108.177.125.188
@@ -44,28 +34,13 @@ mtalk.google.com = 108.177.125.188
 //*.icloud.com = server:114.114.114.114
 
 [URL Rewrite]
-# > AMap - m*.amap.com
-^(http|https):\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
-
-# > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
-^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
-^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
-^(http|https):\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
-^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
-
-# > YYeTss
-^(http|https):\/\/tj\.playcvn\.com\/app\/ads\? - reject
-^(http|https):\/\/\w+\.jstucdn\.com\/(g3\/|js\/ad) - reject
-
-# Pornhub
-^https?:\/\/cn\.pornhub\.com\/interstitial https://cn.pornhub.com/view_video.php header
 
 [Script]
 # JD - Price trend
 JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=true,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
 # AdGuard - Unlock premium
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
 
-
 [MITM]
-hostname = %APPEND% mobile-api.adguard.com, img.alicdn.com, newapp.szsmk.com, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, cn.pornhub.com, music.163.com, cccat.io, *.rr.tv, *.rrys2020.com, ios.zmzapi.com, acs.m.taobao.com,m*.amap.com,api.m.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*, interfac*.music.163.com, p1.music.126.net, img1.126.net
+hostname = %APPEND% api.m.jd.com, zt-app.go189.cn, newapp.szsmk.com, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, img.alicdn.com, mobile-api.adguard.com

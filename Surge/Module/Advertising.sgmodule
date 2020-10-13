@@ -38,13 +38,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
 ^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
 
-# M
-# > MI - api.jr.mi.com,api-mifit*.huami.com
-^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start - reject
-^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ - reject
-^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
-^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
-
 # N
 # ---(NetEase)---
 # > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
@@ -81,4 +74,4 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/brand\/search\/v1\.json - reject
 
 [MITM]
-hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,interface*.music.163.com,59.111.181.*,p.du.163.com,mp.weixin.qq.com,api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228
+hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com,mp.weixin.qq.com,api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228

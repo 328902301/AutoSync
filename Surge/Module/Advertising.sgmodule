@@ -6,8 +6,6 @@
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [URL Rewrite]
-# A
-# --- (Alibaba) ---
 # > Taobao - gw.alicdn.com,heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
 # > Xiami Music - acs.m.taobao.com
@@ -16,43 +14,29 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # > YOUKU
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
-
-# B
 # > iQIYI - act.vip.iqiyi.com
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
-
-# C
-# ---(ChinaTelecom)---
 # > Cloud189 - cloud.189.cn
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
 # > CSDN - gw.csdn.net
 ^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement - reject
-
-# J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
 # ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
 ^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
-
-# N
-# ---(NetEase)---
 # > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ - reject
 ^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
 # > NetEase SnailRead - p.du.163.com
 ^https?:\/\/p\.du\.163\.com\/ad\/ - reject
-# ---
 # > NationalGeographic
 ^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
 # > NationalGeographicChina
 ^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ - reject
-
-# T
-# ---(Tencent)---
 # > Tencent Video
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? - reject
@@ -63,13 +47,5 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
 
-# > Ximalaya FM
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ - reject
-# > Xueqiu - api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/promotion\/(display_cache|display_ad|feed_display|search_ad) - reject
-^https?:\/\/(api|promo)\.xueqiu\.com\/promotion\/(display_cache|display_ad|feed_display|search_ad) - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/brand\/search\/v1\.json - reject
-
 [MITM]
-hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com,mp.weixin.qq.com,api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228
+hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com

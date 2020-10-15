@@ -46,6 +46,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # > Tencent Music
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
+# > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 
 [MITM]
-hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com
+hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com,api.yangkeduo.com,api.pinduoduo.com

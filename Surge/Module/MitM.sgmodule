@@ -13,7 +13,7 @@ URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJ
 # 天翼生活
 URL-REGEX,^http:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.+?Animation$,REJECT
 # 苏州市民卡
-URL-REGEX,^https?:\/\/newapp\.szsmk\.com\/app\/config\/.+?Ad$,REJECT
+URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
 # 同花顺
 URL-REGEX,^https?:\/\/adm\.10jqka\.com\.cn\/img\/ad\/\d+?\/.+?_(1\d{2}|\d{4}),REJECT
 # 高铁管家

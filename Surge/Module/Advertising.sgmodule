@@ -2,52 +2,33 @@
 #!desc=Block Advertising for Surge iOS
 #!system=ios
 
-[Rule]
-URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
-
 [URL Rewrite]
-# > Taobao - gw.alicdn.com,heic.alicdn.com
-^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
-# > Xiami Music - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
+
 # > YOUKU
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
+
 # > iQIYI - act.vip.iqiyi.com
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
-# > Cloud189 - cloud.189.cn
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
-# > CSDN - gw.csdn.net
-^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement - reject
-# > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
-# ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
+
+# > JD - api.m.jd.com
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
-^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
+
 # > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ - reject
 ^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
-# > NetEase SnailRead - p.du.163.com
-^https?:\/\/p\.du\.163\.com\/ad\/ - reject
-# > NationalGeographic
-^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
-# > NationalGeographicChina
-^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ - reject
+
 # > Tencent Video
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - reject
 ^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ - reject
-# > Tencent Music
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
-# > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+
 
 [MITM]
-hostname = %APPEND% gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,act.vip.iqiyi.com,cloud.189.cn,gw.csdn.net,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,interface*.music.163.com,59.111.181.*,p.du.163.com,api.yangkeduo.com,api.pinduoduo.com
+hostname = %APPEND% m*.amap.com,act.vip.iqiyi.com,api.m.jd.com,interface*.music.163.com,59.111.181.*

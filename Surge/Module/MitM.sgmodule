@@ -3,17 +3,19 @@
 #!system=ios
 
 [General]
-force-http-engine-hosts = %APPEND% *.ott.cibntv.net,123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
+force-http-engine-hosts = %APPEND% 123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
 proxy-test-url = http://www.gstatic.com/generate_204
 internet-test-url = http://www.aliyun.com
 
 [Rule]
-# JD
+# > JD - api.m.jd.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 # 天翼生活
 URL-REGEX,^http:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.+?Animation$,REJECT
 # 苏州市民卡
 URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
+URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryAllAdvertisement$,REJECT
+URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryInterductionArea$,REJECT
 # 同花顺
 URL-REGEX,^https?:\/\/adm\.10jqka\.com\.cn\/img\/ad\/\d+?\/.+?_(1\d{2}|\d{4}),REJECT
 # 高铁管家
@@ -24,14 +26,9 @@ URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/.+?\/getAdsList,REJECT
 URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,REJECT
 # 招商银行
 URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
-# 淘宝联盟
-URL-REGEX,^https?:\/\/img\.alicdn\.com\/tfs\/\w+?(-\d{4}){2},REJECT
-
 
 [Host]
 mtalk.google.com = 108.177.125.188
-//*.apple.com = server:114.114.114.114
-//*.icloud.com = server:114.114.114.114
 
 [URL Rewrite]
 
@@ -43,4 +40,4 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, zt-app.go189.cn, newapp.szsmk.com, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, img.alicdn.com, mobile-api.adguard.com
+hostname = %APPEND% zt-app.go189.cn, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, mobile-api.adguard.com, as.xiaojukeji.com

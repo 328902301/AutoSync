@@ -1,0 +1,18 @@
+#!name=Tasks
+#!desc=Tasks all in one
+#!system=ios
+
+[Script]
+# 京东
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, timeout=20, wake-system=1, tag=每日京豆
+
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/xingliuchao/jd/main/jd_lotteryMachine.js, timeout=50, wake-system=1, tag=京豆抽奖机
+
+cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, timeout=650, wake-system=1, tag=京豆变动通知
+
+//京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# 滴滴
+cron "0 1,20 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+
+http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js

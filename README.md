@@ -1,4 +1,4 @@
-## QuantumultX小白配置v1.0.17-build452 2020-12-14
+## QuantumultX小白配置v1.0.17-build452 2020-12-16
 
 ### 配置说明：
 

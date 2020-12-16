@@ -1,6 +1,6 @@
 {
-    "name": "songyangzz",
-    "description": "https://github.com/songyangzz/QuantumultX",
+    "name": "Hikote",
+    "description": "https://github.com/hikote/QuantumultX",
     "task": [
 "10 0 * * * https://github.com/NobyDa/Script/raw/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/jd.png, enabled=true",
 "10 8 * * * https://github.com/NobyDa/Script/raw/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png, enabled=true",

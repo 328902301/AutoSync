@@ -1,0 +1,49 @@
+# 请求头
+USER-AGENT,NeteaseMusic*,🎧 Music
+USER-AGENT,NeteaseMusic**,🎧 Music
+USER-AGENT,网易云音乐*,🎧Music
+USER-AGENT,网易云音乐**,🎧Music
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,🎧 Music
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**,🎧 Music
+
+# 通用规则
+DOMAIN-SUFFIX,163yun.com,🎧 Music
+DOMAIN-SUFFIX,music.126.com,🎧 Music
+DOMAIN-SUFFIX,music.126.net,🎧 Music
+DOMAIN-SUFFIX,music.163.com,🎧 Music
+DOMAIN-SUFFIX,api.iplay.163.com,🎧 Music
+DOMAIN-SUFFIX,apm.music.163.com,🎧 Music
+DOMAIN-SUFFIX,apm3.music.163.com,🎧 Music
+DOMAIN-SUFFIX,mam.netease.com,🎧 Music
+DOMAIN-SUFFIX,hz.netease.com,🎧 Music
+DOMAIN-SUFFIX,ac.dun.163yun.com,🎧 Music
+DOMAIN-SUFFIX,mr.da.netease.com,🎧 Music
+DOMAIN-SUFFIX,crash.163.com,🎧 Music
+DOMAIN-SUFFIX,imap.163.com,🎧 Music
+DOMAIN-SUFFIX,interface.music.163.com,🎧 Music
+DOMAIN-SUFFIX,interface3.music.163.com,🎧 Music
+DOMAIN-KEYWORD,netease,🎧 Music
+
+# 网易云音乐解锁相关CIDR规则
+IP-CIDR,39.105.63.80/32,🎧 Music
+IP-CIDR,45.254.48.1/32,🎧 Music
+IP-CIDR,47.100.127.239/32,🎧 Music
+IP-CIDR,59.111.21.14/31,🎧 Music
+IP-CIDR,59.111.128.0/17,🎧 Music
+IP-CIDR,59.111.179.214/32,🎧 Music
+IP-CIDR,101.71.154.241/32,🎧 Music
+IP-CIDR,115.236.112.0/20,🎧 Music
+IP-CIDR,115.236.118.33/32,🎧 Music
+IP-CIDR,59.111.181.38/32,🎧 Music
+IP-CIDR,59.111.181.60/32,🎧 Music
+IP-CIDR,59.111.160.195/32,🎧 Music
+IP-CIDR,59.111.160.197/32,🎧 Music
+IP-CIDR,59.111.181.35/32,🎧 Music
+IP-CIDR,59.111.238.29/32,🎧 Music
+IP-CIDR,115.236.118.33/32,🎧 Music
+IP-CIDR,115.236.121.1/32,🎧 Music
+IP-CIDR,118.24.63.156/32,🎧 Music
+IP-CIDR,193.112.159.225/32,🎧 Music
+IP-CIDR,223.252.192.0/19,🎧 Music
+IP-CIDR,223.252.199.66/32,🎧 Music
+IP-CIDR,223.252.199.67/32,🎧 Music

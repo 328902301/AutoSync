@@ -22,7 +22,6 @@ DOMAIN-SUFFIX,crash.163.com,🎧 Music
 DOMAIN-SUFFIX,imap.163.com,🎧 Music
 DOMAIN-SUFFIX,interface.music.163.com,🎧 Music
 DOMAIN-SUFFIX,interface3.music.163.com,🎧 Music
-DOMAIN-KEYWORD,netease,🎧 Music
 
 # 网易云音乐解锁相关CIDR规则
 IP-CIDR,39.105.63.80/32,🎧 Music

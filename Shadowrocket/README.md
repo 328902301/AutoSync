@@ -1,7 +1,5 @@
-# Shadowrocket小火箭 懒人配置（附解锁wwy）
+# Shadowrocket小火箭 懒人配置（附UnblockNeteaseMusic）
 # 使用手册
-
-### 简介
 
 ### Function
 - [x] 自动代理 / 全局代理

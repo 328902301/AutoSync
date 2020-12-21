@@ -25,7 +25,7 @@ DOMAIN-SUFFIX,interface3.music.163.com,🎧 Music
 
 DOMAIN-KEYWORD,netease,🎧 Music
 ##### 网易云音乐解锁相关CIDR规则 #####
-IP-CIDR,39.105.63.80/32,🎧 Music
+IP-CIDR,39.105.63.80/32,🎧Music
 IP-CIDR,45.254.48.1/32,🎧 Music
 IP-CIDR,47.100.127.239/32,🎧 Music
 IP-CIDR,59.111.21.14/31,🎧 Music

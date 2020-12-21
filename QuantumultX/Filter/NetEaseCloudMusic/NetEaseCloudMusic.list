@@ -1,4 +1,4 @@
-  
+# 请求头
 USER-AGENT,NeteaseMusic*,🎧 Music
 USER-AGENT,NeteaseMusic**,🎧 Music
 USER-AGENT,网易云音乐*,🎧Music
@@ -6,7 +6,7 @@ USER-AGENT,网易云音乐**,🎧Music
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,🎧 Music
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**,🎧 Music
 
-##### 通用规则 #####
+# 通用规则
 DOMAIN-SUFFIX,163yun.com,🎧 Music
 DOMAIN-SUFFIX,music.126.com,🎧 Music
 DOMAIN-SUFFIX,music.126.net,🎧 Music
@@ -22,10 +22,10 @@ DOMAIN-SUFFIX,crash.163.com,🎧 Music
 DOMAIN-SUFFIX,imap.163.com,🎧 Music
 DOMAIN-SUFFIX,interface.music.163.com,🎧 Music
 DOMAIN-SUFFIX,interface3.music.163.com,🎧 Music
-
 DOMAIN-KEYWORD,netease,🎧 Music
-##### 网易云音乐解锁相关CIDR规则 #####
-IP-CIDR,39.105.63.80/32,🎧Music
+
+# 网易云音乐解锁相关CIDR规则
+IP-CIDR,39.105.63.80/32,🎧 Music
 IP-CIDR,45.254.48.1/32,🎧 Music
 IP-CIDR,47.100.127.239/32,🎧 Music
 IP-CIDR,59.111.21.14/31,🎧 Music

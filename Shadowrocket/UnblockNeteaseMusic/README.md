@@ -2,9 +2,11 @@
 **懒人配置：本仓库只是为了我个人使用而创建的一个配置仓，没分享无动力，所以大家可以订阅来使用，不用到处去搜集这么麻烦。（内含17条线路）**
 
 1.添加并使用配置文件
+
 	链接:https://raw.githubusercontent.com/2k1bk/Rules/1/Shadowrocket/UnblockNeteaseMusic/UnblockNeteaseMusic.conf
 
 2.添加订阅
+
 	链接:https://raw.githubusercontent.com/2k1bk/Rules/1/Shadowrocket/UnblockNeteaseMusic/shadowrocket-server.txt
 	
 3.开启连接选择节点就可以使用

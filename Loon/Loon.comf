@@ -19,6 +19,8 @@ test-timeout = 3
 
 
 [Remote Proxy]
+✈️ = https://suburl.mimemi.net/link/X8qZHLiYr4kdy5gP?mu=1
+🔧 = https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3QvcyFBakdEc3oydC1PRFJnWDdFQ0VmenlmTWN2MWFPP2U9WGcxYXJY
 🚚 = https://www.mojie.me/api/v1/client/subscribe?token=5f82add612369ba8fb9d868c085171be
 
 
@@ -48,19 +50,19 @@ Other = NameRegex, FilterKey = "^(?!.*(HK|JP|US|KR|香港|日本|韩国|美国))
 #📳SSID = ssid, default = PROXY, cellular = DIRECT, ”DivineEngine“ = PROXY
 🕹𝐅𝐢𝐧𝐚𝐥 = select,🔰𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 🔰𝐏𝐫𝐨𝐱𝐲 = select,♻️𝐀𝐮𝐭𝐨,🌀𝐒𝐞𝐥𝐞𝐜𝐭,🔴𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤
-♻️𝐀𝐮𝐭𝐨 = url-test,🇭🇰香港,Other,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 100
+♻️𝐀𝐮𝐭𝐨 = url-test,🇭🇰香港,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 100
 🌀𝐒𝐞𝐥𝐞𝐜𝐭 = select,🇭🇰香港,🇯🇵日本,🇰🇷韩国,🇺🇸美国
 🔴𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤 = fallback,🇭🇰香港,🇯🇵日本,🇰🇷韩国,🇺🇸美国,REJECT,url = http://www.gstatic.com/generate_204,interval = 600,max-timeout = 3000
-🎵𝐓𝐢𝐤𝐓𝐨𝐤 = select,🔰𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-🖥𝐍𝐞𝐭𝐟𝐥𝐢𝐱 = select,𝐍𝐞𝐭𝐟𝐥𝐢𝐱,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🎵𝐓𝐢𝐤𝐓𝐨𝐤 = select,🔰𝐏𝐫𝐨𝐱𝐲,♻️𝐀𝐮𝐭𝐨,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🖥𝐍𝐞𝐭𝐟𝐥𝐢𝐱 = select,𝐍𝐞𝐭𝐟𝐥𝐢𝐱,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🔰𝐏𝐫𝐨𝐱𝐲
 💳𝐏𝐚𝐲𝐏𝐚𝐥 = select,𝐏𝐚𝐲𝐏𝐚𝐥,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 📱𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 = select,🔰𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 🎬𝐘𝐨𝐮𝐓𝐮𝐛𝐞 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🔰𝐏𝐫𝐨𝐱𝐲,♻️𝐀𝐮𝐭𝐨,🌀𝐒𝐞𝐥𝐞𝐜𝐭
 🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛 = select,🔰𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-🎧𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🎧,🔰𝐏𝐫𝐨𝐱𝐲
+🎧𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜 = select,🎧,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🔰𝐏𝐫𝐨𝐱𝐲
 🚀𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🌀𝐒𝐞𝐥𝐞𝐜𝐭
 🍎𝐀𝐩𝐩𝐥𝐞 = select,🔰𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭,⛔️𝐑𝐞𝐣𝐞𝐜𝐭
-🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = select,⛔️𝐑𝐞𝐣𝐞𝐜𝐭,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = select,⛔️𝐑𝐞𝐣𝐞𝐜𝐭
 🎯𝐃𝐢𝐫𝐞𝐜𝐭 = select,DIRECT
 ⛔️𝐑𝐞𝐣𝐞𝐜𝐭 = select,REJECT
 
@@ -149,7 +151,7 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, t
 https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.plugin, tag=BoxJs, enabled=true
 https://github.com/Tartarus2014/For-own-use/raw/master/Loon/Plugin/HKMTMedia.plugin, tag=哔哩哔哩, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.plugin, tag=去广告, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag= YouTube去广告, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YouTube去广告, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/DouYin.plugin, tag=抖音去广告水印, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Block%20Update.plugin, tag=屏蔽iOS系统更新, enabled=false
 # 下面3个Tiktok解锁只能同时开启一个，其他禁用！

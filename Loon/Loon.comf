@@ -149,7 +149,7 @@ https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, e
 [Plugin]
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, tag=Su-Store, enabled=true
 https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.plugin, tag=BoxJs, enabled=true
-https://github.com/Tartarus2014/For-own-use/raw/master/Loon/Plugin/HKMTMedia.plugin, tag=哔哩哔哩, enabled=true
+https://github.com/Tartarus2014/For-own-use/raw/master/Loon/Plugin/HKMTMedia.plugin, tag=哔哩哔哩, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.plugin, tag=去广告, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YouTube去广告, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/DouYin.plugin, tag=抖音去广告水印, enabled=false

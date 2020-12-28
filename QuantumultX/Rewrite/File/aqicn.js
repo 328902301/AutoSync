@@ -7,7 +7,7 @@ const aqicnToken = '96ee4da0d6977131197f04ec7fad30cbcb3e02c4'
 // STEP 2: 参考下方配置片段，在代理工具的配置文件中添加对应的配置。注意：script-response-body 后应该替换为添加 apicnToken 值后的脚本路径
 /*
 [rewrite_local]
-https://weather-data.apple.com/v1/weather/[\w-_]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+ url script-response-body aqicn.js
+https://weather-data.apple.com/v1/weather/[\w-_]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+ url script-response-body https://raw.githubusercontent.com/2k1bk/Rules/1/QuantumultX/Rewrite/File/aqicn.js
 [mitm]
 hostname = weather-data.apple.com
 */

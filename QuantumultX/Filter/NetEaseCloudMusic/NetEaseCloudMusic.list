@@ -1,14 +1,14 @@
 # Netease Music Advertising
-host,admusicpic.music.126.net,reject
-host,iadmat.nosdn.127.net,reject
-host,iadmusicmat.music.126.net,reject
-host,iadmusicmatvideo.music.126.net,reject
+HOST,admusicpic.music.126.net,reject
+HOST,iadmat.nosdn.127.net,reject
+HOST,iadmusicmat.music.126.net,reject
+HOST,iadmusicmatvideo.music.126.net,reject
 
-DOMAIN-SUFFIX,music.126.com
-DOMAIN-SUFFIX,music.163.com
-DOMAIN-SUFFIX,music.126.net
-DOMAIN-SUFFIX,music.163.com
-DOMAIN-SUFFIX,api.iplay.163.com
+HOST-SUFFIX,music.126.com
+HOST-SUFFIX,music.163.com
+HOST-SUFFIX,music.126.net
+HOST-SUFFIX,music.163.com
+HOST-SUFFIX,api.iplay.163.com
 IP-CIDR,45.254.48.1/32
 IP-CIDR,47.100.127.239/32
 IP-CIDR,59.111.128.0/17
@@ -17,14 +17,14 @@ IP-CIDR,115.236.112.0/20
 IP-CIDR,193.112.159.225/32
 IP-CIDR,223.252.192.0/19
 ##### 通用规则 #####
-DOMAIN-SUFFIX,music.163.com
-DOMAIN-SUFFIX,api.iplay.163.com
-DOMAIN-SUFFIX,apm.music.163.com
-DOMAIN-SUFFIX,apm3.music.163.com
-DOMAIN-SUFFIX,interface.music.163.com
-DOMAIN-SUFFIX,interface3.music.163.com
-DOMAIN-SUFFIX,mam.netease.com
-DOMAIN-SUFFIX,hz.netease.com
+HOST-SUFFIX,music.163.com
+HOST-SUFFIX,api.iplay.163.com
+HOST-SUFFIX,apm.music.163.com
+HOST-SUFFIX,apm3.music.163.com
+HOST-SUFFIX,interface.music.163.com
+HOST-SUFFIX,interface3.music.163.com
+HOST-SUFFIX,mam.netease.com
+HOST-SUFFIX,hz.netease.com
 ##### 无法捕获的规则 #####
 ##### 网易云音乐解锁相关CIDR规则 #####
 IP-CIDR,39.105.63.80/32
@@ -45,23 +45,23 @@ IP-CIDR,193.112.159.225/32
 IP-CIDR,223.252.199.66/32
 IP-CIDR,223.252.199.67/32
 # > NeteaseMusic
-DOMAIN-SUFFIX,music.126.net
+HOST-SUFFIX,music.126.net
 IP-CIDR,45.254.48.1/32
 IP-CIDR,59.111.128.0/17
 IP-CIDR,101.71.154.241/32
 IP-CIDR,115.236.112.0/20
 IP-CIDR,223.252.192.0/19
 ##### 网易云音乐解锁相关域名规则 #####
-# DOMAIN-SUFFIX,music.126.net,DIRECT
-# DOMAIN-SUFFIX,126.net
-# DOMAIN-SUFFIX,music.163.com
-# DOMAIN-SUFFIX,api.iplay.163.com
-# DOMAIN-SUFFIX,apm.music.163.com
-# DOMAIN-SUFFIX,apm3.music.163.com
-# DOMAIN-SUFFIX,interface.music.163.com
-# DOMAIN-SUFFIX,interface3.music.163.com
-# DOMAIN-SUFFIX,mam.netease.com
-# DOMAIN-SUFFIX,hz.netease.com
+# HOST-SUFFIX,music.126.net,DIRECT
+# HOST-SUFFIX,126.net
+# HOST-SUFFIX,music.163.com
+# HOST-SUFFIX,api.iplay.163.com
+# HOST-SUFFIX,apm.music.163.com
+# HOST-SUFFIX,apm3.music.163.com
+# HOST-SUFFIX,interface.music.163.com
+# HOST-SUFFIX,interface3.music.163.com
+# HOST-SUFFIX,mam.netease.com
+# HOST-SUFFIX,hz.netease.com
 
 # Final
 final,direct

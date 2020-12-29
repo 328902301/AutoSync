@@ -23,7 +23,9 @@ IOS-QUANX[NeteaseMusic]不使用本配置conf仅单订阅按1-4步骤
 
 IOS-QUANX[NeteaseMusic]Rules.conf使用说明（这个很重要且简单）
 
-  如果你都使用RULES.CONF配置了就不用跟着上面步骤了，直接下载[CA]证书用就完事了┗|｀O′|┛ 嗷~~ 简单又方便，能去掉只能听15秒还能下载VIP歌曲
+  如果你都使用RULES.CONF配置了就不用跟着上面步骤了，直接下载[CA]证书用就完事了┗|｀O′|┛ 嗷~~ 
+  
+  简单又方便，能去掉只能听15秒还能下载VIP歌曲
 
  1.打开Safari浏览器下载
   [CA证书](https://raw.githubusercontent.com/2k1bk/UnblockNeteaseMusic/master/ca.crt)

@@ -1,7 +1,8 @@
 单订阅wwy说明
 
-1.Safari浏览器打开https://raw.githubusercontent.com/2k1bk/Rules/1/QuantumultX/Filter/NetEaseCloudMusic/ca.crt
-  下载CA证书添加并信任
+1.打开Safari浏览器
+  下载添加并信任
+  [CA证书](https://raw.githubusercontent.com/2k1bk/Rules/1/QuantumultX/Filter/NetEaseCloudMusic/ca.crt)
 以下请在QuanX编辑中添加
 
 2.订阅添加

@@ -5,12 +5,6 @@ user-agent, 网易云音乐**, 🎧 网易云音乐
 user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*, 🎧 网易云音乐
 user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**, 🎧 网易云音乐
 
-# Netease Music Advertising
-HOST,admusicpic.music.126.net,reject
-HOST,iadmat.nosdn.127.net,reject
-HOST,iadmusicmat.music.126.net,reject
-HOST,iadmusicmatvideo.music.126.net,reject
-
 ##### 网易云音乐解锁相关域名规则 #####
 HOST-SUFFIX,music.126.com,🎧 网易云音乐
 HOST-SUFFIX,music.126.net,🎧 网易云音乐

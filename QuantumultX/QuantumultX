@@ -1,0 +1,357 @@
+# quantumult 全局配置 by YAOJIO
+# 20201219_184200
+# 以 ";" 或 "#" 或 "//" 开头的行为注释行。
+
+
+[general]
+network_check_url=http://www.baidu.com/
+
+server_check_url=http://www.gstatic.com/generate_204
+
+dns_exclusion_list = *.cmbchina.com, *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, id6.me
+
+excluded_routes=10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24, 192.168.0.0/16, 198.51.100.0/24, 224.0.0.0/4
+
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
+
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+
+#第一个filter为4g模式开启规则分流，第二个filter为其他wifi下开启规则分流，第三个wifi1修改成你路由器翻墙的wifi名开启直连模式，第四个wifi2为你需要全局代理的wifi名（这个一般不需要随便写就行）
+#默认关闭根据wifi切换模式，如需开启，删除下方的“#”即可！
+#running_mode_trigger=filter, filter, 你家WiFi名1:all_direct, 你家WiFi名2: all_proxy
+
+
+[dns]
+server=119.29.29.29
+server=223.5.5.5
+server=114.114.114.114
+server=1.0.0.1
+server=8.8.8.8
+server=/*.taobao.com/223.5.5.5
+server=/*.tmall.com/223.5.5.5
+server=/*.alipay.com/223.5.5.5
+server=/*.alicdn.com/223.5.5.5
+server=/*.aliyun.com/223.5.5.5
+server=/*.jd.com/119.28.28.28
+server=/*.qq.com/119.28.28.28
+server=/*.tencent.com/119.28.28.28
+server=/*.weixin.com/119.28.28.28
+server=/*.bilibili.com/119.29.29.29
+server=/hdslb.com/119.29.29.29
+server=/*.163.com/119.29.29.29
+server=/*.126.com/119.29.29.29
+server=/*.126.net/119.29.29.29
+server=/*.127.net/119.29.29.29
+server=/*.netease.com/119.29.29.29
+server=/*.mi.com/119.29.29.29
+server=/*.xiaomi.com/119.29.29.29
+
+
+[policy]
+#ssid=🐳 SSID策略, proxy, proxy, 一般路由器(自己修改WiFi名称): proxy, 翻墙路由器(自己修改WiFi名称): direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/SSID.png
+
+static=🤖 节点选择, 🕹 手动切换, DIRECT, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
+
+static=🕹 手动切换, resource-tag-regex=.*, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Static.png
+
+#available=♻️ 健康检测, 香港, 香港-优化, server-tag-regex=(?=.*)^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
+
+#round-robin=🔮 负载均衡, server-tag-regex=.*, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Round_Robin.png
+
+#static=🐟 漏网之鱼, direct, proxy, 健康检测, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Final.png
+
+static=🇨🇳 China, direct, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/China.png
+
+static=🌏 国外网站, proxy, direct, 🇯🇵 Japan, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇭🇰 Hong Kong, 🇺🇸 United States, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Global.png
+
+static=💻 国外影视, proxy, direct, 🇯🇵 Japan, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇭🇰 Hong Kong, 🇺🇸 United States, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/ForeignMedia.png
+
+static=📱 Telegram, proxy, direct, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇺🇸 United States, 🇸🇬 Singapore, 新加坡, 新加坡-优化, 新加坡-优化2, 香港HKT-优化, 香港HKT-优化2, 香港HGC-优化, 香港HGC-优化2, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
+
+static=🎬 YouTube, proxy, direct, 🇯🇵 Japan, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇭🇰 Hong Kong, 🇺🇸 United States, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/YouTube.png
+
+static=🎵 TikTok, proxy, direct, 🇭🇰 Hong Kong, 🇺🇸 United States, 🇯🇵 Japan, 🇨🇳 Taiwan, 🇸🇬 Singapore, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/TikTok.png
+
+static=🚀 SpeedTest, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Speedtest.png
+
+static=💭 Emby, direct, proxy, img-url=https://raw.githubusercontent.com/echoops/emby/main/IconSet/Emby.png
+
+static=🍎 苹果服务, proxy, direct, reject, 🇭🇰 Hong Kong, 🇺🇸 United States, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
+
+static=🇨🇳 回国, direct, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/China_Map.png
+
+static=🎸 解锁网易云音乐, direct, 🎧 解锁网易云音乐, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Netease_Music_Unlock.png
+
+static=🚫 屏蔽系统更新, reject, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple_Update.png
+
+static=📺 Netflix, proxy, direct, server-tag-regex=Netflix|netflix|NF|nf|奈飞|网飞|解锁流媒体|流媒体, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Netflix_Letter.png
+
+static=🇭🇰 Hong Kong, proxy, server-tag-regex=(?=.*(香港|HK|(?i)Hong))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Hong_Kong.png
+
+static=🇨🇳 Taiwan, proxy, server-tag-regex=(?=.*(台湾|台灣|TW|(?i)Taiwan))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/China.png
+
+static=🇺🇸 United States, proxy, server-tag-regex=(?=.*(美国|美國|US|(?i)States|American))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png
+
+static=🇯🇵 Japan, proxy, server-tag-regex=(?=.*(日本|JP|(?i)Japan))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Japan.png
+
+static=🇰🇷 Korea, proxy, server-tag-regex=(?=.*(韩国|韓國|南朝鲜|KR|(?i)Korean))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Korea.png
+
+static=🇸🇬 Singapore, proxy, server-tag-regex=(?=.*(新加坡|狮城|SG|(?i)Singapore))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Singapore.png
+
+static=🇬🇧 United Kingdom, proxy, server-tag-regex=(?=.*(英国|欧洲|英格兰|荷兰|UK|(?i)United))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_Kingdom.png
+
+static=Final, DIRECT, proxy, server-tag-regex=^((?!(专线|手游|游戏|香港|台湾|日本|新加坡|美国|韩国|狮城|南朝鲜|US|SG|JP|KR|HK|TW|台灣|美國|韓國|獅城|账号|试用|流量|电报|网址|最新|域名|剩余|(?i)IPLC|IEPL|game|States|American|Singapore|Japan|Korea|Hong|Taiwan|data|date|website)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/UN.png
+
+static=IPLC, DIRECT, proxy, server-tag-regex=(手游|游戏|专线|(?i)IPLC|IEPL|game), img-url=https://raw.githubusercontent.com/Orz-3/mini/master/IPLC.png
+
+
+[server_remote]
+https://www.mojie.me/api/v1/client/subscribe?token=07719e4808d33bf08eac8198c65a6184, tag=💎, update-interval=86400, opt-parser=true, enabled=true
+https://suburl.mimemi.net/link/X8qZHLiYr4kdy5gP?mu=1, tag=✈️, update-interval=86400, opt-parser=true, enabled=true
+
+
+[filter_remote]
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRule.list, tag=🚫 广告拦截, force-policy=reject, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Liby.txt, tag=🚫 广告拦截, force-policy=reject, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Privacy.list, tag=💥 隐私保护, force-policy=reject, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Hijacking.list, tag=💥 运营劫持, force-policy=reject, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/787a68/Rules/master/QuantumultX/Filter/Sub/Speedtest.txt, tag=🚀 SpeedTest, force-policy=🚀 SpeedTest, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/QuantumultX/Telegram/Telegram.list, tag=📱Telegram, force-policy=📱 Telegram, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Sub/YouTube.txt, tag=🎬 YouTube, force-policy=🎬 YouTube, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Sub/Netflix.txt, tag=📺 Netflix, force-policy=📺 Netflix, enabled=true
+
+https://raw.githubusercontent.com/echoops/emby/main/Filter/Emby.list, tag=💭 Emby, force-policy=💭 Emby, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/Hedilict/QuantumultX/master/Filter/NetEaseCloudMusic.list, tag=🎸 解锁网易云音乐, force-policy=🎸 解锁网易云音乐, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/GlobalMedia.txt, tag=💻 国外影视, force-policy=💻 国外影视, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Global.txt, tag=🌏 国外网站, force-policy=proxy, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Apple_CDN.txt, tag=苹果CDN 资源类(建议直连), force-policy=direct, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/TestFlight.list, tag=TestFlight, force-policy=🍎 苹果服务, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Apple_API.txt, tag=苹果API 服务类 (账号所在区), force-policy=🍎 苹果服务, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Zhihu/Zhihu.list, tag=知乎, force-policy=direct, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/AsianMedia.txt, tag=国内媒体, force-policy=direct, enabled=true
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Filter/Domestic.txt, tag=国内网站, force-policy=direct, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/ChinaIP.list, tag=ChinaIP, force-policy=🇨🇳 China, update-interval=86400, enabled=true
+
+https://raw.githubusercontent.com/limbopro/Profiles/master/Quantumult/X/Filter/BacktoCN.list, tag=CN（回国，默认禁用）, force-policy=🇨🇳 China, update-interval=86400, opt-parser=false, enabled=true
+
+
+[rewrite_remote]
+https://raw.githubusercontent.com/YAOJIO/myself/master/QuantumultX/rewrite_remote/Js.conf, tag=会员, update-interval=86400, opt-parser=true, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf, tag=去广告, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Q-Search_All_in_one.conf, tag=Q-Search, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf, tag=神机重定向, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.qxrewrite, tag=知乎助手plus, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=神机去广告, update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/echoops/limitless/main/QuantumultX/Rewrite/emby.qxrewrite, tag=Emby Premiere, update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Unlock/TikTokJP.conf, tag=解锁tiktok, update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/Orz-3/QuantumultX/master/YouTube.conf, tag=YouTube去广告, update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=轻度去广告(400+规则), update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Rewrite.txt, tag=eHpo1去广告, update-interval=86400, opt-parser=false, enabled=false
+
+https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JS_GetCookie.conf, tag=cookie, update-interval=86400, opt-parser=false, enabled=false
+
+
+[server_local]
+http=106.52.127.72:19951, fast-open=false, udp-relay=false, tag=🎧 解锁网易云音乐
+
+
+[rewrite_local]
+# TikTok By wzw1997007 & Choler
+(?<=_region=)CN(?=&) url 307 JP
+(?<=&app_version=)1(6|7)..(?=.?.?&) url 307 1
+(?<=\?version_code=)1(6|7)..(?=.?.?&) url 307 1
+
+# 淘宝比价
+^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+
+# 京东历史价格
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+# 去微信公众号广告
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+# 抖音去广告去水印 (By Choler)
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
+
+
+[task_local]
+0 * * * * D497866D302C.js, tag=BoxJs抹除全局备份, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=false
+
+0 * * * * 0C5311288CA4.js, tag=BoxJs抹除订阅缓存, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=false
+
+# 京东多合一签到
+# 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
+1 */12 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+
+# 京东游戏及活动
+1 1-23/5 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京小超, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
+10 10 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js, tag=领京豆额外奖励, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png, enabled=true
+0 0,10 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js, tag=京东白条, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/baitiao.png, enabled=true
+0 */3 * * * https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js, tag=京东泡泡大战, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_paopao.png, enabled=true
+0 */3 * * * https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_new_shop.js, tag=京东新店福利, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+0 * * * * https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js, tag=京喜财富岛, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
+0 10 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=京喜, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true
+
+# 彩云天气 (By Peng-YM)
+# 打开手机设置 > 隐私 > 定位服务
+# (1) 打开定位服务
+# (2) 选择天气，设置永远允许天气访问位置信息，并允许使用精确位置。
+# (3) 打开box.js设置API token即可。
+0 6-23/1 * * * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气, img-url=https://raw.githubusercontent.com/Orz-3/task/master/caiyun.png, enabled=true
+
+# 52破解
+# 浏览器访问https://www.52pojie.cn/home.php?mod=space 即可
+2 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=52破解, img-url=https://raw.githubusercontent.com/Orz-3/task/master/52pj.png,enabled=true
+
+# bilibili
+# 打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com
+2 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili, img-url=https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png,enabled=true
+# 如需银瓜子转硬币，取消下方注释
+;2 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili银瓜子转硬币, img-url=https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png,enabled=true
+
+# 哔哩哔哩番剧监控(By @lowking)
+# App点击我的-动态，即可获取cookie
+0 0 0,1 * * ? https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js, tag=哔哩哔哩番剧监控, img-url=https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png, enabled=false
+
+# 网易云音乐
+# 1.先登录: <https://music.163.com/m/login>
+# 2.再访问: <https://music.163.com/#/user/level>
+# 3.提示: `获取会话: 成功!`
+3 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url=https://github.com/Orz-3/task/raw/master/neteasemusic.png, enabled=true
+
+# 每日一句+ 蚂蚁森林收能量
+30 8 * * * https://raw.githubusercontent.com/nzw9314/QuantumultX/master/yichahucha/cron_daily.js, tag=每日一句+蚂蚁森林收能量, img-url=moon.circle.system, enabled=true
+
+# 倒数日
+0 10 * * * https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/daysmatter.js, tag=倒数日, img-url=https://raw.githubusercontent.com/Orz-3/task/master/daysmatter.png, enabled=true
+
+# 英雄联盟排名 (By @syzzzf)
+3 0 * * * https://raw.githubusercontent.com/songyangzz/QuantumultX/master/lol.js, tag=英雄联盟排名, img-url=https://raw.githubusercontent.com/Orz-3/task/master/lol.png,enabled=true
+
+# 电视节目预告 (By @syzzzf)
+# var c = "cctv1"  // 可更改电视台，央视可以直接改后缀数字
+# 常用卫视代码北京: btv1 | 湖南: hunan | 浙江: zhejiang|河南: henan| 江苏: jiangsu|广东: guangdong
+1 10 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/tvpreview.js, tag=电视节目预告, img-url=https://raw.githubusercontent.com/Orz-3/task/master/dianshijia.png,enabled=true
+
+# 12306余票及列车时刻表查询(By @Macsuny)
+# 可更改出发地、目的地、出发时间及列车车次
+0 * * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/trainquery.js, tag=12306余票及列车时刻表查询, img-url=https://raw.githubusercontent.com/Orz-3/task/master/12306.png, enabled=false
+
+# 实时货币换算(By @Macsuny)
+0 10 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/exchangeRate.js, tag=实时货币换算, img-url=https://raw.githubusercontent.com/Orz-3/task/master/exchangerate.png,enabled=true
+
+# 热门监控 (By Evilbutcher)
+0 8-22/2 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js, tag=热门监控, img-url=https://raw.githubusercontent.com/Orz-3/task/master/hot.png, enabled=true
+
+# 微博通知(By @zZPiglet)
+# 进入 https://m.weibo.cn 并登陆，获取cookie后进入boxjs配置
+1 * * * * https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js, tag=微博通知, img-url=https://raw.githubusercontent.com/Orz-3/task/master/weibo.png, enabled=true
+
+# GitHub监控(By Peng-YM)
+# name: "",//填写仓库名称，可自定义
+# file_names:[],//可选参数。若需要监控具体文件或目录，请填写路径
+0 10 * * * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js, tag=GitHub, img-url=https://raw.githubusercontent.com/Orz-3/task/master/github.png, enabled=true
+
+# 汇率监控(By Peng-YM)
+0 8 * * * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js, tag=汇率监控, img-url=https://raw.githubusercontent.com/Orz-3/task/master/exchangerate.png,enabled=true
+
+# 疫情日报 (By Peng-YM)
+0 10 * * * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js, tag=疫情日报, img-url=https://raw.githubusercontent.com/Orz-3/task/master/COVID-19.png, enabled=true
+
+# 切换会话
+# 访问: https://8.8.8.8/home管理
+0 12 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=false
+
+# 有道云笔记
+3 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/noteyoudao/noteyoudao.js, tag=有道云笔记, img-url=https://raw.githubusercontent.com/Orz-3/task/master/noteyoudao.png, enabled=false
+
+# App价格版本监控
+0 0-18/6 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/appstore/AppMonitor.js, tag=App价格版本监控, img-url=https://raw.githubusercontent.com/Orz-3/task/master/appstore.png,enabled=true
+
+# TG图片推送 (By Peng-YM)
+0 9 * * * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/telegram.js, tag=TG图片推送, img-url=https://raw.githubusercontent.com/Orz-3/task/master/tgpic.png, enabled=false
+
+
+[filter_local]
+;user-agent, ?abc*, proxy
+;host, www.google.com, proxy
+;host-keyword, adsite, reject
+;host-suffix, googleapis.com, proxy
+
+# 绕过企业证书过期
+host, ocsp.apple.com, reject
+
+# 屏蔽系统更新
+host, mesu.apple.com, 🚫 屏蔽系统更新
+host, gdmf.apple.com, 🚫 屏蔽系统更新
+
+# 迅雷版权问题
+host, hub5idx.v6.shub.sandai.net, reject
+host, hub5emu.v6.shub.sandai.net, reject
+host, hub5btmain.v6.shub.sandai.net, reject
+
+# 去掉YouTube++底部广告
+host-suffix, ehg-youtube.hitbox.com, reject
+
+# 网易云音乐
+host-suffix, music.126.net, direct
+
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 224.0.0.0/24, direct
+ip6-cidr, fe80::/10, direct
+geoip, cn, direct
+final, proxy
+
+# 知乎去广告
+DOMAIN,118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+USER-AGENT,AVOS*,REJECT
+
+
+[mitm]
+hostname= *.googlevideo.com, trade-acs.m.taobao.com, *.tiktokv.com, api*.musical.ly, api*.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, mp.weixin.qq.com, *.amemv.com, ms.jr.jd.com, jdjoy.jd.com
+passphrase = 42950F11
+p12 = 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
+
+# 如果是YouTube Premium请删掉googlevideo主机名，否则无法加载视频
+# 如不需要淘宝比价请删掉taobao主机名
+
+
+[http_backend]
+https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js, tag=sub-store, path=^/, enabled=false
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, tag=BoxJs, path=^/, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=true

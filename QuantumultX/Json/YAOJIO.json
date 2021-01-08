@@ -2,7 +2,7 @@
   "id": "YAOJIO.app.sub",
   "name": "YAOJIO 应用订阅",
   "author": "@ZIYE",
-  "icon": "",
+  "icon": "https://raw.githubusercontent.com/YAOJIO/myself/master/YAOJIO.png",
   "repo": "https://github.com/ziye12/JavaScript",
   "apps": [{
     "id": "qqread",

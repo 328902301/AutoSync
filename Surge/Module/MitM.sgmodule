@@ -26,11 +26,11 @@ URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/.+?\/getAdsList,REJECT
 URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,REJECT
 # 招商银行
 URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
+# Mi home
+URL-REGEX,https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation,REJECT
 
 [Host]
 mtalk.google.com = 108.177.125.188
-
-[URL Rewrite]
 
 [Script]
 # JD - Price trend
@@ -40,4 +40,4 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
 
 [MITM]
-hostname = %APPEND% zt-app.go189.cn, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, mobile-api.adguard.com, as.xiaojukeji.com
+hostname = %APPEND% zt-app.go189.cn, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, mobile-api.adguard.com, home.mi.com

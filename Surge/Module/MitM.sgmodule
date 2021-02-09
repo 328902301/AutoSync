@@ -28,6 +28,8 @@ URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,
 URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
 # Mi home
 URL-REGEX,https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation,REJECT
+URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
+URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 
 [Host]
 mtalk.google.com = 108.177.125.188

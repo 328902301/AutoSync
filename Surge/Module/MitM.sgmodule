@@ -12,10 +12,12 @@ internet-test-url = http://www.aliyun.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 # 天翼生活
 URL-REGEX,^http:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.+?Animation$,REJECT
+URL-REGEX,^https:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/showBootAnimation$,REJECT
 # 苏州市民卡
-URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
-URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryAllAdvertisement$,REJECT
-URL-REGEX,^http:\/\/newapp2\.szsmk\.com\/app\/config\/queryInterductionArea$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryPageAd$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryAllAdvertisement$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryInterductionArea$,REJECT
 # 同花顺
 URL-REGEX,^https?:\/\/adm\.10jqka\.com\.cn\/img\/ad\/\d+?\/.+?_(1\d{2}|\d{4}),REJECT
 # 高铁管家
@@ -42,4 +44,4 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
 
 [MITM]
-hostname = %APPEND% zt-app.go189.cn, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, mobile-api.adguard.com, home.mi.com
+hostname = %APPEND% newapp.szsmk.com, zt-app.go189.cn, adm.10jqka.com.cn, *.rsscc.com, m.ctrip.com, pic1cdn.cmbchina.com, mobile-api.adguard.com, home.mi.com

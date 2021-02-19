@@ -13,6 +13,7 @@
 http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
 
 # GlaDOS
+GLaDOS_Cookie = type=http-request, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
 
 #爱奇艺
 # 登陆会员 - 等级福利重新获取cookie
@@ -28,4 +29,4 @@ http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githu
 //umetrip cookie= type=http-request,pattern=^https:\/\/cloud\.umetrip\.com\/gateway\/api\/web\/rest\/polite\/app\/sign\/signpageinitdata,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
 
 [MITM]
-hostname= %APPEND% ifac*.iqiyi.com, music.163.com, cloud.umetrip.com ,common.diditaxi.com.cn
+hostname= %APPEND% ifac*.iqiyi.com, music.163.com, cloud.umetrip.com ,common.diditaxi.com.cn, glados.rocks

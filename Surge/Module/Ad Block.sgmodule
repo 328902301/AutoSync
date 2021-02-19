@@ -7,18 +7,6 @@ force-http-engine-hosts = %APPEND% 123.59.31.1,119.18.193.135,122.14.246.33,175.
 proxy-test-url = http://www.gstatic.com/generate_204
 internet-test-url = http://www.aliyun.com
 
-[URL Rewrite]
-# Redirect Google Search Service
-^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
-
-# Redirect Google Maps Service
-^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
-
-# Redirect HTTP to HTTPS
-^(http|https):\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
-^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
-^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
-
 [Rule]
 # > JD - api.m.jd.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
@@ -33,6 +21,18 @@ URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryInterductionArea$,REJ
 URL-REGEX,https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation,REJECT
 URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
 URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
+
+[URL Rewrite]
+# Redirect Google Search Service
+^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+# Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
+
+# Redirect HTTP to HTTPS
+^(http|https):\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
+^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
+^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
 
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject

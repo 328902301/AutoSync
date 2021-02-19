@@ -1,0 +1,38 @@
+#!name=A Profile Lite
+#!desc=Ad block & Unlock
+#!system=ios
+
+[General]
+force-http-engine-hosts = %APPEND% 123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
+proxy-test-url = http://www.gstatic.com/generate_204
+internet-test-url = http://www.aliyun.com
+
+[Rule]
+# > JD - api.m.jd.com
+URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
+# 苏州市民卡
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryPageAd$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryAllAdvertisement$,REJECT
+URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryInterductionArea$,REJECT
+# 工商银行
+URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,REJECT
+# 招商银行
+URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
+# Mi home
+URL-REGEX,https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation,REJECT
+URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
+URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
+
+[Host]
+mtalk.google.com = 108.177.125.188
+
+[Script]
+# JD - Price trend
+JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=true,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+# AdGuard - Unlock premium
+AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
+
+[MITM]
+hostname = %APPEND% newapp.szsmk.com, v.icbc.com.cn, pic1cdn.cmbchina.com, mobile-api.adguard.com, home.mi.com

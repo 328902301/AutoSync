@@ -15,7 +15,7 @@ http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githu
 # GlaDOS
 GLaDOS_Cookie = type=http-request, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
 
-#爱奇艺
+# 爱奇艺
 # 登陆会员 - 等级福利重新获取cookie
 //爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 

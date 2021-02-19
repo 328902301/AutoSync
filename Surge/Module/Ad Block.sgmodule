@@ -7,22 +7,59 @@ force-http-engine-hosts = %APPEND% 123.59.31.1,119.18.193.135,122.14.246.33,175.
 proxy-test-url = http://www.gstatic.com/generate_204
 internet-test-url = http://www.aliyun.com
 
+[URL Rewrite]
+# Redirect Google Search Service
+^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+# Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
+
+# Redirect HTTP to HTTPS
+^(http|https):\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
+^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
+^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
+
 [Rule]
 # > JD - api.m.jd.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
+
 # 苏州市民卡
 URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryMainAd$,REJECT
 URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryPageAd$,REJECT
 URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryAllAdvertisement$,REJECT
 URL-REGEX,^https:\/\/newapp\.szsmk\.com\/app\/config\/queryInterductionArea$,REJECT
-# 工商银行
-URL-REGEX,http:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/,REJECT
-# 招商银行
-URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
+
 # Mi home
 URL-REGEX,https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation,REJECT
 URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
 URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
+
+# > AMap - m*.amap.com
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
+
+# > YOUKU
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
+URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+
+# > iQIYI - act.vip.iqiyi.com
+^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
+
+# > JD - api.m.jd.com
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+
+# > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ - reject
+^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
+
+# > Tencent Video
+^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? - reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - reject
+^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ - reject
 
 [Host]
 mtalk.google.com = 108.177.125.188
@@ -35,4 +72,4 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js
 
 [MITM]
-hostname = %APPEND% newapp.szsmk.com, v.icbc.com.cn, pic1cdn.cmbchina.com, mobile-api.adguard.com, home.mi.com
+hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*

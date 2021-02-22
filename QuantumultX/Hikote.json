@@ -1,0 +1,16 @@
+{
+    "name": "Hikote",
+    "description": "https://github.com/hikote/QuantumultX",
+    "task": [
+"0 8 * * * https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js, tag=京东神仙书院, img-url= https://m.360buyimg.com/babel/jfs/t1/165970/14/3741/2184/600585feE6fb250f8/77db4ca560e006be.png, enabled=true",
+"1 * * * * https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_family.js, tag=京东家庭号, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/jd.png, enabled=true",
+"20 13 * * 6 https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/jd.png, enabled=true",
+"10 0 * * * https://github.com/NobyDa/Script/raw/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/jd.png, enabled=true",
+"10 8 * * * https://github.com/NobyDa/Script/raw/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png, enabled=true",
+"10 7 * * * https://raw.githubusercontent.com/Hikote/Free/master/Surge/Script/rrsp_task.js, tag=RRtv, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/rrtv.png, enabled=true",
+"20 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, tag=NeteaseMusic, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Netease.png, enabled=true",
+"5 14 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js, tag=NASA每日一图, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/nasa.png, enabled=true",
+"13 8 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/umetrip.png, enabled=true",
+"15 7 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js, tag=人人影视, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/zimuzu.png, enabled=true",
+    ]
+}

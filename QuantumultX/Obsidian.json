@@ -1,6 +1,6 @@
 {
     "name": "Obsidian",
-    "description": "https://github.com/hikote/QuantumultX",
+    "description": "https://obsidian99.github.io/Script/QuantumultX/Obsidian.json",
     "task": [
 "10 1,6,10 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js, tag=京喜工厂plus, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdgc.png, enabled=true",
 "0 0 0 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true",

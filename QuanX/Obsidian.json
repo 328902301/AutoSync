@@ -22,6 +22,7 @@
 "20 0 9 * * 1 https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_meow.js, tag=招行领喵喵, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true",
 "25 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_gold.js, tag=招行领黄金, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true",
 "30 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_688.js, tag=招行消费抽奖, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=false",
+"0 12 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/cron-sync-artifacts.js, tag=Sub-Store, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true",
     
     ]
 }

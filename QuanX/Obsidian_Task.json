@@ -42,8 +42,8 @@
             "config": "4 6 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js, tag=N3RO, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/N3RO.png, enabled=true"
         },
          {
-            "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/Dark/jd_bean_sign_dark.png, enabled=true"
-             "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/Dark/jd_bean_sign_dark.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie, update-interval=-1, opt-parser=false, enabled=true"
         },
         {
             "config": "0 0 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js, tag=中国电信套餐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png, enabled=true", 

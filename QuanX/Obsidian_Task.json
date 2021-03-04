@@ -14,9 +14,40 @@
         {
             "config": "11 0 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=删除优惠券, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=false"
         }, 
+         {
+            "config": "11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true"
+        },
+         {
+            "config": "11 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true"
+        },
+         {
+            "config": "3 0 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtect.js, tag=京东价格保护, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/Test/jd_price.jpg, enabled=true"
+        },
+         {
+            "config": "15 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js, tag=招行刮刮乐, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+        },
+         {
+            "config": "20 0 9 * * 1 https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_meow.js, tag=招行领喵喵, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+        },
+         {
+            "config": "25 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_gold.js, tag=招行领黄金, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+        },
+         {
+            "config": "30 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_688.js, tag=招行消费抽奖, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=false"
+        },
+         {
+            "config": "0 12 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/cron-sync-artifacts.js, tag=Sub-Store, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true"
+        },
+         {
+            "config": "4 6 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js, tag=N3RO, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/N3RO.png, enabled=true"
+        },
+         {
+            "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/Dark/jd_bean_sign_dark.png, enabled=true"
+             "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie, update-interval=-1, opt-parser=false, enabled=true"
+        },
         {
             "config": "0 0 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js, tag=中国电信套餐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Sunert/Scripts/master/TaskConf/dianxin/qx_rewite.txt, tag=天翼电信套餐, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=天翼电信套餐, update-interval=-1, opt-parser=false, enabled=true"
         }, 
         {
             "config": "5 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png, enabled=true", 
@@ -25,10 +56,6 @@
         {
             "config": "0 0 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=航旅纵横cookie, update-interval=-1, opt-parser=false, enabled=true"
-        }, 
-        {
-            "config": "40 10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=来客有礼, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/lkyl.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Sunert/Scripts/master/TaskConf/jd/qx_rewite.txt, tag=来客有礼cookie, update-interval=-1, opt-parser=false, enabled=true"
         }, 
         {
             "config": "0 1,20 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行, img-url=https://raw.githubusercontent.com/Orz-3/task/master/didi.png, enabled=true", 

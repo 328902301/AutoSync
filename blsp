@@ -3,7 +3,7 @@ QX:
 [rewrite_local]
 
 #菠萝视频解锁无限看
-^http:\/\/api\.myb6api\.org:8080\/api\.php\/api\/users\/getBaseInfo url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/blsp
+http://api.myb6api.com:8080/api.php/api/users/getBaseInfo url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/blsp
 [mitm]
 hostname = api.myb6api.org:8080
 

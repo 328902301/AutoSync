@@ -1,5 +1,5 @@
 {
-    "name": "Obsidian Task gallery", 
+    "name": "Obsidian Task Gallery", 
     "description": "https://github.com/Obsidian99/Script", 
     "task": [
         {
@@ -76,6 +76,10 @@
         {
             "config": "10 0 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=伊利乳品cookie, update-interval=-1, opt-parser=false, enabled=true"
+        },
+        {
+            "config": "15 17 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/backUp/xmSports.js, tag=小米运动, img-url=https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=小米运动cookie, update-interval=-1, opt-parser=false, enabled=true"
         }
     ]
 }

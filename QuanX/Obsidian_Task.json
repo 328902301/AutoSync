@@ -24,7 +24,7 @@
             "config": "20 0 9 * * 1 https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_meow.js, tag=招行领喵喵, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
         },
          {
-            "config": "25 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_gold.js, tag=招行领黄金, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+            "config": "25 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_trip.js, tag=招行出游有招, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
         },
          {
             "config": "30 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_688.js, tag=招行消费抽奖, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=false"

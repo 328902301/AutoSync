@@ -1,9 +1,9 @@
-#!name=Tasks
-#!desc=Tasks all in one
+#!name=JD Tasks
+#!desc=JD beans
 #!system=ios
 
 [Script]
-# > ================================================================================
+# > =====================================
 
 手机尚学季 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js
 环球挑战赛 = type=cron,cronexp="0 9,12,20,21 8-31 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js
@@ -30,4 +30,4 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 京东资产变动通知 = type=cron,cronexp=2 9 * * *,wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_bean_change.js
 取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
 
-# > ================================================================================
+# > =====================================

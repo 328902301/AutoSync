@@ -2,7 +2,9 @@
 #!desc=Adblock4fun
 #!system=ios
 
-hostname =*.xvideos-cdn.com, www.xvideos.com,-*.phncdn.com, www.pornhub.com, cn.pornhub.com, *.pornhub.com
+[MITM]
+hostname = %APPEND% =*.xvideos-cdn.com, www.xvideos.com,-*.phncdn.com, www.pornhub.com, cn.pornhub.com, *.pornhub.com
+
 [URL Rewrite]
 ##### pornhub.hub
 ^https://\b((?!cn\.)\w{2,3})\.pornhub\.com(.*) url 302 https://cn.pornhub.com/

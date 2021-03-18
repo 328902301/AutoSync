@@ -1,6 +1,6 @@
-// 知乎手机网页优化。(如使用 APP 请勿添加本规则)
-// author: https://t.me/elecV2
-// QuanX 订阅地址：https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihu.conf
+#!name=A Profile Lite
+#!desc=Ad block & Unlock
+#!system=ios
 
 hostname = oia.zhihu.com, link.zhihu.com, www.zhihu.com
 

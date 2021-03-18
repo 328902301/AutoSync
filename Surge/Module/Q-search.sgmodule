@@ -1,5 +1,8 @@
+#!name=Q-search
+#!desc=Quick search
+#!system=ios
 
-
+[URL Rewrite]
 # > Q-Search
 # dlc xxx (DeepL 译至中)
 ^https:\/\/duckduckgo.com\/\?q=dlc(\+|%20)([^&]+).+ url script-echo-response https://raw.githubusercontent.com/zZPiglet/Task/master/asset/DeepLQ-search.js

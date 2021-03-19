@@ -1,25 +1,21 @@
-#!name=Zhihu optimize(elecV2)
-#!desc=Zhihu web Optimize
+#!name=Zhihu
+#!desc=知乎网页显示优化
 #!system=ios
 
-[MITM]
-hostname = %APPEND% oia.zhihu.com, link.zhihu.com, www.zhihu.com
-
-[Script]
-知乎_question = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js,pattern=^https:\/\/www\.zhihu\.com\/question
-知乎_topic = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js,pattern=^https:\/\/www\.zhihu\.com\/topic
+[Header Rewrite]
+^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
 
 [URL Rewrite]
-https://www\.zhihu\.com/api/v4/questions/\d+/related-readings - reject
-https://www\.zhihu\.com/api/v4/answers/\d+/related-readings - reject
-https://www\.zhihu\.com/api/v4/hot_recommendation - reject
-https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner - reject
-https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation - reject
+^https://oia\.zhihu\.com/articles/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 307
+^https://oia\.zhihu\.com/answers/([0-9]+)\?.* https://www.zhihu.com/answer/$1 307
+^https?://link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 307
 
+[Header Rewrite]
+^https://www\.zhihu\.com\/(question|topic) header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
 
-// 去掉知乎跳转第三方网站的中间页面
-^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 302
+[Script]
+zhihux_question = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
+zhihux_topic = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/topic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
 
-// 不跳转应用商店
-^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 302
-^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 302
+[MITM]
+hostname = %APPEND% www.zhihu.com,link.zhihu.com,oia.zhihu.com

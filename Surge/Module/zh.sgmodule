@@ -18,8 +18,8 @@ https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation - reject
 
 
 // 去掉知乎跳转第三方网站的中间页面
-^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 307
+^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 302
 
 // 不跳转应用商店
-^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 307
-^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 307
+^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 302
+^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 302

@@ -13,9 +13,12 @@
 [Header Rewrite]
 ^https://www\.zhihu\.com\/(question|topic) header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
 
+# 百度防跳转
+^https?:\/\/.*\.baidu\.com header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+
 [Script]
 zhihux_question = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
 zhihux_topic = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/topic,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
 
 [MITM]
-hostname = %APPEND% www.zhihu.com,link.zhihu.com,oia.zhihu.com
+hostname = %APPEND% www.zhihu.com,link.zhihu.com,oia.zhihu.com,*.baidu.com

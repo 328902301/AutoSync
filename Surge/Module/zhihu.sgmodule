@@ -12,13 +12,13 @@ hostname = %APPEND% oia.zhihu.com, link.zhihu.com, www.zhihu.com
 
 
 // 去掉知乎跳转第三方网站的中间页面
-^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) url 307 $1://$2
+^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 307
 
 // 不跳转应用商店
-^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* url 307 https://www.zhihu.com/answer/$1
-^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* url 307 https://zhuanlan.zhihu.com/p/$1
+^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 307
+^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 307
 
 [Script]
 // 再注入 CSS 进行优化
-^https:\/\/www\.zhihu\.com\/question url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
-^https:\/\/www\.zhihu\.com\/topic url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
+知乎_question = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js,pattern=^https:\/\/www\.zhihu\.com\/question
+知乎_topic = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js,pattern=^https:\/\/www\.zhihu\.com\/topic

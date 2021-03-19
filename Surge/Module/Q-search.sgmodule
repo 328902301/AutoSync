@@ -2,6 +2,9 @@
 #!desc=Quick search(dlc,dle,dlj,bd,zh,gl)
 #!system=ios
 
+[MITM]
+hostname = %APPEND% duckduckgo.com
+
 [Script]
 # > Q-Search
 # dlc xxx (DeepL 译至中)

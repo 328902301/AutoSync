@@ -18,16 +18,13 @@
             "config": "3 0 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtect.js, tag=京东价格保护, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/Test/jd_price.jpg, enabled=true"
         },
          {
-            "config": "15 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js, tag=招行刮刮乐, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+            "config": "11 12 17-30 3 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_oneplus.js, tag=一加盲盒, enabled=true"
         },
          {
-            "config": "20 0 9 * * 1 https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_meow.js, tag=招行领喵喵, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
+            "config": "5 1,6,11,16,21 * 3-4 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_super5g.js, tag=5G超级盲盒, enabled=true"
         },
          {
-            "config": "25 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_trip.js, tag=招行出游有招, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
-        },
-         {
-            "config": "30 0 9 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_688.js, tag=招行消费抽奖, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=false"
+            "config": "5 10 * 3 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_mgold.js, tag=金口碑奖投票, enabled=true"
         },
          {
             "config": "0 12 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/cron-sync-artifacts.js, tag=Sub-Store, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true"

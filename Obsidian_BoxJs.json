@@ -191,6 +191,58 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/umetrip.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png"
       ]
+      },
+    {
+      "id": "eliminate",
+      "name": "东东爱消除",
+      "settings": [
+        { "id": "CFG_ELIMINATE_LOG", "name": "显示出参详情", "val": false, "type": "boolean", "desc": "是否显示出参详情，默认不显示，仅调试时开启" }
+      ],
+      "author": "@yangtingxiao",
+      "repo": "https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/",
+      "icons": ["https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/eliminate.png", "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/eliminate.png"]
+    },
+    {
+      "id": "deleteCoupon",
+      "name": "删除优惠券",
+      "settings": [
+        { "id": "CFG_DELCOUPON_LEAVE", "name": "需要保留的优惠券关键字", "val": "", "type": "textarea", "desc": "需要保留的，英文逗号隔开，输入关键字即可" }
+      ],
+      "author": "@yangtingxiao",
+      "repo": "https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/",
+      "script": "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js",
+      "icons": ["https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png", "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png"]
+       },
+    {
+      "id": "videoqq",
+      "name": "腾讯视频",
+      "keys": ["chavy_cookie_videoqq", "chavy_auth_url_videoqq", "chavy_auth_header_videoqq", "chavy_msign_url_videoqq", "chavy_msign_header_videoqq"],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/videoqq",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/videoqq.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/videoqq.png"]
+    },
+    {
+     "id": "NeteaseMusic",
+      "name": "网易云音乐",
+      "keys": ["chavy_cookie_neteasemusic"],
+      "settings": [
+        { "id": "CFG_neteasemusic_retryCnt", "name": "重试次数", "val": 10, "type": "text", "desc": "一直尝试签到直至出现“重复签到”标识!" },
+        { "id": "CFG_neteasemusic_retryInterval", "name": "重试间隔 (毫秒)", "val": 500, "type": "text", "desc": "每次重试间隔时间 (毫秒)！" }
+      ],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/neteasemusic",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/neteasemusic.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/neteasemusic.png"]
+    },
+    {
+     "id": "rrtv",
+      "name": "人人视频",
+      "keys": ["chavy_cookie_rrtv"],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/rrtv",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/rrtv.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/rrtv.png"],
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js" 
   }],
   "task": [{
             "config": "11 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Icon/jd_rankingList.png, enabled=true"

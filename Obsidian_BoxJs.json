@@ -191,16 +191,6 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/umetrip.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png"
       ]
-      },
-    {
-      "id": "eliminate",
-      "name": "东东爱消除",
-      "settings": [
-        { "id": "CFG_ELIMINATE_LOG", "name": "显示出参详情", "val": false, "type": "boolean", "desc": "是否显示出参详情，默认不显示，仅调试时开启" }
-      ],
-      "author": "@yangtingxiao",
-      "repo": "https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/",
-      "icons": ["https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/eliminate.png", "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/eliminate.png"]
     },
     {
       "id": "deleteCoupon",

@@ -30,7 +30,6 @@
     "author": "@NobyDa",
     "repo": "https://github.com/NobyDa/Script/blob/master/iQIYI-DailyBonus/iQIYI.js",
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png", "https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png"]
-  }, {
   }],
   "task": [{
             "config": "11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true"

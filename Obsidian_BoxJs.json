@@ -555,6 +555,9 @@
          {
             "config": "11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true" 
         },
+         {
+            "config": "0 9 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚whyour, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true" 
+        },
         {
             "config": "11 0 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=删除优惠券, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_unbind.png, enabled=false"
         },

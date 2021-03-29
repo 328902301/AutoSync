@@ -8,7 +8,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 internet-test-url = http://www.aliyun.com
 
 [Rule]
-# > Self use--------------------------------------------
+# > Self use----------------------------
 # > JD - api.m.jd.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
@@ -24,10 +24,10 @@ URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
 URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 
 [URL Rewrite]
-# > Unlock--------------------------------------------
+# > Redirect----------------------------
+# > Redirect JD shopmember
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
 
-# > Redirect--------------------------------------------
 # > Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
@@ -39,7 +39,7 @@ URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 ^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
 ^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
 
-# > Adblock---------------------------------------------
+# > Adblock----------------------------
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 

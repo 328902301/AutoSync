@@ -351,7 +351,7 @@
       ],
       "author": "@whyour",
       "repo": "https://github.com/whyour/hundun/blob/master/quanx/jdzz.js",
-      "script": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jdzz.js",
+      "script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzz_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png"

@@ -1,5 +1,5 @@
-#!name=Zhihu
-#!desc=知乎网页显示优化
+#!name=Zhihu （Modify from elecV2)
+#!desc=Optimize zhihu web experience
 #!system=ios
 
 [Header Rewrite]

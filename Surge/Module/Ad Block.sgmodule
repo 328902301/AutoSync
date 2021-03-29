@@ -24,6 +24,9 @@ URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
 URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 
 [URL Rewrite]
+# > Unlock--------------------------------------------
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
+
 # > Redirect--------------------------------------------
 # > Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
@@ -77,4 +80,4 @@ Xmin = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_
 Wechat = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=true,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
 [MITM]
-hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*,mp.weixin.qq.com,*.xmind.*
+hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*,mp.weixin.qq.com,*.xmind.*, shopmember.m.jd.com

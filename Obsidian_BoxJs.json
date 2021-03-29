@@ -567,7 +567,7 @@
         },
         {
             "config": "1 10 3 * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js, tag=电信套餐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=天翼电信套餐, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=天翼账号中心cookie, update-interval=-1, opt-parser=false, enabled=true"
         }, 
         {
             "config": "5 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/iQIYI.png, enabled=true", 

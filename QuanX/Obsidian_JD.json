@@ -12,7 +12,7 @@
              "config": "15 08 2-18 4 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/monk_skyworth.js, tag=创维408下班全勤奖, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {
-             "config": "11 9 * * * 5 8,14,20 6-13 4 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/z_mother_jump.js, tag=母婴-跳一跳, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+             "config": "11 9 * * * 5 8,14,20 6-13 4 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/z_mother_jump.js, tag=母婴跳一跳, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {
              "config": "3 20 * * * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/z_shake.js, tag=摇一摇, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"

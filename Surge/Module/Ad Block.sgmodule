@@ -4,8 +4,9 @@
 
 [General]
 force-http-engine-hosts = %APPEND% 123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
-proxy-test-url = http://www.gstatic.com/generate_204
-internet-test-url = http://www.aliyun.com
+proxy-test-url = http://cp.cloudflare.com/generate_204
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+test-timeout = 5
 
 [Rule]
 # > Self use----------------------------
@@ -48,9 +49,10 @@ URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
 
-# > JD - api.m.jd.com
+# > JD - api.m.jd.com,img*.360buyimg.com
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
 
 # > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ - reject

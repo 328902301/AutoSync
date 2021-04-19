@@ -1,0 +1,89 @@
+# --- Quantumult X ---For O7Y0
+# --- UpdateTime   ---2021/4/19
+# --- TGChannel    ---M0nata
+# --- Thanks       ---ORZ-3
+
+[general]
+server_check_url=http://bing.com/
+dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/Orz-3/Orz-3/master/QuantumultX/IP.js
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+excluded_routes=239.255.255.250/32, 24.105.30.129/32, 185.60.112.157/32, 185.60.112.158/32, 182.162.132.1/32
+
+[dns]
+no-ipv6
+server=119.29.29.29
+address=/mtalk.google.com/108.177.125.188
+server=/dl.google.com/119.29.29.29
+server=/dl.l.google.com/119.29.29.29
+
+[policy]
+static=网易音乐, server-tag-regex=(?=.*(M0NATA|M0NATAS|网易云|音乐|数值|(?i)Music))^((?!(TG@M0NATA_|台|日|韩|新|美|香|加)).)*$, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/neteasemusic.png
+static=全球加速, proxy, direct, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/Global.png
+static=苹果服务, direct, proxy, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/Apple.png
+static=港台番剧, direct, proxy, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/StreamingSE.png
+static=国际媒体, proxy, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/Streaming.png
+static=黑白名单, proxy, direct, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/Final.png
+
+[server_remote]
+https://raw.githubusercontent.com/O7Y0/Attached/main/CollEct, tag=CollEct, img-url=https://git.io/JYhcy, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/UnblockNeteaseMusic.txt, tag=网易云音乐, img-url=https://raw.githubusercontent.com/O7Y0/Attached/master/ICON/Color/Netease.png, update-interval=86400, opt-parser=true, enabled=true
+
+[filter_remote]
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, tag=广告拦截, force-policy=reject, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list, tag=广告拦截, force-policy=reject, update-interval=86400, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block.txt, tag=广告拦截, force-policy=reject, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=广告拦截, force-policy=reject, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list, tag=运营劫持, force-policy=reject, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list, tag=隐私保护, force-policy=reject, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/NeteaseCloudMusic.list, tag=网易音乐, force-policy=网易音乐, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/TikTok.list, tag=海外抖音, force-policy=全球加速, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Bahamut.list, tag=动画疯, force-policy=国际媒体, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/YouTube.list, tag=YouTube, force-policy=国际媒体, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=国际媒体, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list, tag=BiliBili, force-policy=港台番剧, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list, tag=港台番剧, force-policy=港台番剧, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list, tag=全球加速, force-policy=全球加速, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/AppStore.list, tag=苹果服务, force-policy=苹果服务, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/AppStoreConnect.list, tag=苹果服务, force-policy=苹果服务, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/TestFlight.list, tag=Testflight, force-policy=苹果服务, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list, tag=国内网站, force-policy=direct, update-interval=86400, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/ChinaIP.list, tag=ChinaIP, force-policy=direct, update-interval=86400, opt-parser=true, enabled=false
+
+[rewrite_remote]
+https://subweb.oss-cn-hongkong.aliyuncs.com/Module/embyUnlocked.conf, tag=EMBY解锁, update-interval=86400, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/O7Y0/Profiles/master/QuantumultX/Rewrite/Script.conf, tag=Script, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JS_GetCookie.conf, tag=Cookie, update-interval=86400, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=lhie1去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=神机去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=神机去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf, tag=神机重定向, update-interval=86400, opt-parser=false, enabled=true
+
+[server_local]
+
+[filter_local]
+host-suffix, local, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 224.0.0.0/4, direct
+ip6-cidr, fe80::/10, direct
+geoip, cn, direct
+final, 黑白名单
+
+[rewrite_local]
+
+[task_local]
+
+[http_backend]
+https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, tag=BoxJS, path=^/, enabled=true
+
+[mitm]
+passphrase = A45671AA
+p12 = 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
+skip_validating_cert = true
+hostname = me-api.jd.com, m.jingxi.com, wq.jd.com, veishop.iboxpay.com, ymz.iphonezhuan.com, ranlv.lvfacn.com, api-9f9d25.sz365.cn, account.huami.com, dkd-api.dysdk.com, www.geekhub.com, *.music.163.com, music.163.com, *.m.163.com, *.googlevideo.com, *.youtube.com, *.googleapis.com, www.52pojie.cn, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.zhihu.com, link.zhihu.com, pan.baidu.com, www.baidu.com2.club, vipapi.jxedt.com, app.flashdown365.com, *.gao1gps.cn, greasyfork.org, mp.weixin.qq.com, app.bilibili.com, api.gamer.com.tw, trade-acs.m.taobao.com, ios.prod.ftl.netflix.com

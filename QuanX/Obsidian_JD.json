@@ -3,13 +3,13 @@
     "description": "https://github.com/Obsidian99/Script", 
     "task": [  
          {
-             "config": "0 0,1-22/2 1-31 4-7 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/monk_pasture.js, tag=有机牧场, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+             "config": "15 7,15 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {
              "config": "3 0,10,23 * * * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/monk_shop_lottery.js, tag=店铺大转盘, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {
-             "config": "15 08 2-18 4 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/monk_skyworth.js, tag=创维408下班全勤奖, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+             "config": "0,1,2 0 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_exchange.js, tag=领现金兑换红包Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {
              "config": "5 8,14,20 6-13 4 * https://raw.githubusercontent.com/Obsidian99/Script/master/JD/z_mother_jump.js, tag=母婴-跳一跳, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"

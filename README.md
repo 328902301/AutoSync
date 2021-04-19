@@ -1,17 +1,15 @@
-## QuantumultX小白配置 2021-3-22
-谢谢你不fork我的库还特地下载文件再新建一个库给你自己用。谢谢你连谁写的东西也不好意思标上去。谢谢你全家了。真的衷心谢谢你全家。如果不是我在搜索东西的时候意外发现，我还不知道该说声谢谢呢！
+# QuantumultX小白配置 2021-3-22
 
-### 配置说明：
-
-  本配置由神机规则修改而来，修改了默认策略组，增加了正则筛选策略组，并集成了Nobyda的去广告脚本和重写，同时集合了大量task类签到脚本，默认皆为禁用，可按需求启用<br>
-
-### 补充说明：
-
-  支持解锁WYY / YT / BILIBILI / XL / WECHATBANAD /
+## 配置说明：
+功能:
+    <br>1.去广告
+    <br>2.应用解锁
+    <br>3.规则分流
+    <br>4.网易云解锁
 
 ### 使用方法：
 
-  1.点击库中的O7Y0.conf文件，点击raw获取真实地址，复制地址备用<br>
+  1.点击库中的O7Y0-Quantumult X.conf文件，点击raw获取真实地址，复制地址备用<br>
 
   2.Quan X主界面，点击右下角风车，然后弹出界面下拉至 配置文件-下载，点击下载，将上一步复制的地址粘贴到弹出窗口，然后点确定<br>
 
@@ -27,20 +25,8 @@
   
   8.开始使用<br>
 
-### 注意事项：
+TIPS:
 
-  1.默认6个策略组<br>
-
-  2.策略选择方式为proxy和direct，最简单的选择模式<br>
-
-  3.分流中，已将动画疯默认为国际媒体<br>
-
-  4.集成了Nobyda库中的去广告类js<br>
-
-  5.启用需额外在重写中启用JS-GetCookie，并按脚本中说明获取cookie方可用<br>
-
-  6.如果你购买Quantumult X还不足30天，无法一键更新，在启用Get-Cookie时，请搜索并单独缓存你需要的获取cookie脚本<br>
-
-  7.默认已解锁Tiktok<br>
-
-  8.452版本已支持远程task，已集成。<br>
+[O7Y0-Quantumult X.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)和
+[O7Y0-Quantumult X-icon.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
+没什么差别，只是一个图标是白色一个是图标是彩色

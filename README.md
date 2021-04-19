@@ -26,7 +26,6 @@
   8.开始使用<br>
 
 TIPS:
-
-[O7Y0-Quantumult X.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)和
-[O7Y0-Quantumult X-icon.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
-没什么差别，只是一个图标是白色一个是图标是彩色
+<br>[O7Y0-Quantumult X.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
+<br>[O7Y0-Quantumult X-icon.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
+<br>没什么差别，只是一个图标是白色一个是图标是彩色

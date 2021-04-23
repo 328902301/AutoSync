@@ -1,15 +1,12 @@
 ﻿/*
-#by-ios黑科技
-
 #Python Ai解锁会员
+#by-ios黑科技 
+#https://apps.apple.com/cn/app/id1471351733
+
 ^http:\/\/ws\.60he\.com\/(book|user).+ url script-response-body pyai.js
 
 [mitm]
 hostname= ws.60he.com
-
-下载地址：
-https://apps.apple.com/cn/app/id1471351733
-
 */
 
 

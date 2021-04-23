@@ -1,9 +1,9 @@
-Gear Browser 来自 Li YanZhao https://apps.apple.com/cn/app/gear-browser/id1458962238
-@大哥别杀我
-可能会和其他规则冲突留意下有buy apple.com的
-
-
 /* 
+#Gear Browser
+#BY-Li YanZhao 
+#https://apps.apple.com/cn/app/gear-browser/id1458962238
+#可能会和其他规则冲突留意下有buy apple.com的
+
 # Gear解锁订阅 
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body Gear.js
 */ 

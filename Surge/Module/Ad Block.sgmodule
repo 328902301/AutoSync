@@ -69,8 +69,8 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 
 [Map Local]
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts data="Script/reject-dict.json"
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start data="Script/reject-dict.json"
 
 [MITM]
 hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*,mp.weixin.qq.com, shopmember.m.jd.com

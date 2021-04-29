@@ -10,7 +10,7 @@
       "name": "京东多账号 Ck 管理",
       "keys": ["CookiesJD"],
       "descs_html": [
-        "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改（<a href=\"https://www.bejson.com/json/format\">可使用此JSON校验</a> ）。",
+        "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改（<a href=\"https://www.bejson.com/json/format\">可使用此JSON校验</a> ，或点击右上角按钮🔘进行校验(如有弹窗提示则为异常JSON)）。",
         "示例：[{\"userName\":\"jd_xxx\",\"cookie\":\"pt_key=AAJ;pt_pin=jd_xxx;\"},{\"userName\":\"jd_66\",\"cookie\":\"pt_key=AAJ;pt_pin=jd_66;\"}]",
         "脚本地址【<a href=\"https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
         "使用方式【<a href=\"https://home.m.jd.com/myJd/newhome.action\">个人中心</a>】获取对应的数据Code",
@@ -33,7 +33,7 @@
       ],
       "author": "@dompling",
       "repo": "https://github.com/dompling/Script",
-      "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+      "script": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_feedPets.js"
     },
     {
       "id": "JD_UA",
@@ -93,8 +93,8 @@
       "keys": ["jd_fruit_inviter"],
       "descs_html": [
         "请在输入框输入跟你互助的东东农场的好友互助码",
-        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1@账号1-好友2<br/><br/>账号2-好友1@账号2-好友2",
-        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写即可"
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
       ],
       "settings": [
         {
@@ -105,9 +105,17 @@
           "desc": "运行东东农场脚本时不发出系统通知"
         },
         {
+          "id": "jdFruitBeanCard",
+          "name": "使用水滴换豆卡",
+          "val": false,
+          "type": "boolean",
+          "desc": "使用水滴换豆卡(如果出现限时活动是100g水换20豆,此时比浇水划算,推荐换豆)"
+        },
+        {
           "id": "jd_fruit_inviter",
           "name": "东东农场好友邀请码 列表",
           "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
           "type": "textarea",
           "autoGrow": true,
           "rows": 8,
@@ -128,8 +136,8 @@
       "keys": ["jd_pet_inviter"],
       "descs_html": [
         "请在输入框输入跟你互助的东东萌宠的好友互助码",
-        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1@账号1-好友2<br/><br/>账号2-好友1@账号2-好友2",
-        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写即可"
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
       ],
       "settings": [
         {
@@ -143,6 +151,7 @@
           "id": "jd_pet_inviter",
           "name": "东东萌宠好友邀请码 列表",
           "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
           "type": "textarea",
           "autoGrow": true,
           "rows": 8,
@@ -163,8 +172,8 @@
       "keys": ["jd_plantbean_inviter"],
       "descs_html": [
         "请在输入框输入跟你互助的京东种豆得豆的好友互助码",
-        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1@账号1-好友2<br/><br/>账号2-好友1@账号2-好友2",
-        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写即可"
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
       ],
       "settings": [
         {
@@ -178,6 +187,7 @@
           "id": "jd_plantbean_inviter",
           "name": "京东种豆好友邀请码 列表",
           "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
           "type": "textarea",
           "autoGrow": true,
           "rows": 8,
@@ -396,9 +406,9 @@
         {
           "id": "MONEY_TREE_SELL_FRUIT",
           "name": "是否卖出金果获得金币",
-          "val": false,
+          "val": true,
           "type": "boolean",
-          "desc": "是否卖出金果获得金币,金币具有有效期，默认不卖出"
+          "desc": "是否卖出金果获得金币,金币具有有效期，默认卖出"
         }
       ],
       "author": "@lxk0301",
@@ -559,53 +569,6 @@
       ]
     },
     {
-      "id": "lxk0301Webhook",
-      "name": "Webhook",
-      "keys": [
-        "ACTIONS_TRIGGER_TOKEN",
-        "githubUser",
-        "repo",
-        "TRIGGER_KEYWORDS"
-      ],
-      "settings": [
-        {
-          "id": "ACTIONS_TRIGGER_TOKEN",
-          "name": "github token",
-          "val": "",
-          "type": "text",
-          "desc": "申请教程:https://www.jianshu.com/p/bb82b3ad1d11 记得勾选repo权限就行"
-        },
-        {
-          "id": "githubUser",
-          "name": "github 用户名",
-          "val": "",
-          "type": "text",
-          "desc": "例如：lxk0301"
-        },
-        {
-          "id": "repo",
-          "name": "仓库名称",
-          "val": "",
-          "type": "text",
-          "desc": "例如：scripts"
-        },
-        {
-          "id": "TRIGGER_KEYWORDS",
-          "name": "触发关键词",
-          "val": "",
-          "type": "text",
-          "desc": ".github/workflows/路径里面yml文件repository_dispatch项目的types值，例如jd_fruit.yml里面的值为fruit,多个使用英文逗号','隔开"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://gitee.com/lxk0301/jd_scripts/tree/master",
-      "script": "https://jdsharedresourcescdn.azureedge.net/jdresource/webhook.js",
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/webhooks_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/webhooks.png"
-      ]
-    },
-    {
       "id": "xmSports",
       "name": "小米运动",
       "keys": [
@@ -673,14 +636,15 @@
       "keys": ["jd_jxFactory"],
       "descs_html": [
         "请在输入框输入跟你互助的京喜工厂的好友互助码",
-        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1@账号1-好友2<br/><br/>账号2-好友1@账号2-好友2",
-        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写即可"
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
       ],
       "settings": [
         {
           "id": "jd_jxFactory",
           "name": "京喜工厂好友邀请码 列表",
           "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
           "type": "textarea",
           "autoGrow": true,
           "rows": 8,
@@ -701,14 +665,15 @@
       "keys": ["jd_jxCFD"],
       "descs_html": [
         "请在输入框输入跟你互助的京喜财富岛的好友互助码",
-        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1@账号1-好友2<br/><br/>账号2-好友1@账号2-好友2",
-        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写即可"
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
       ],
       "settings": [
         {
           "id": "jd_jxCFD",
           "name": "京喜财富岛好友邀请码 列表",
           "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
           "type": "textarea",
           "autoGrow": true,
           "rows": 8,
@@ -722,6 +687,42 @@
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/jd_scripts/tree/master",
       "script": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_cfd.js"
+    },
+    {
+      "id": "jd_cash",
+      "name": "签到领现金",
+      "keys": ["jd_cash_invite"],
+      "descs_html": [
+        "请在输入框输入跟你互助的签到领现金的好友互助码",
+        "同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开。例：<br/>账号1-好友1邀请码@账号1邀请码-好友2邀请码<br/><br/>账号2-好友1邀请码@账号2-好友2邀请码",
+        "下方输入框给出一个示例,自己使用时删除示例邀请码然后按示例填写(只填邀请码)即可"
+      ],
+      "settings": [
+        {
+          "id": "cash_exchange",
+          "name": "是否消耗红包兑换京豆",
+          "val": true,
+          "type": "boolean",
+          "desc": "是否消耗2元红包兑换200京豆，一周可换四次，默认是"
+        },
+        {
+          "id": "jd_cash_invite",
+          "name": "签到领现金好友邀请码 列表",
+          "val": "",
+          "placeholder": "账号1的好友1邀请码@账号1的好友2邀请码\n\n账号2的好友1邀请码@账号2的好友2邀请码",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "签到领现金邀请码,同一个京东账号的好友邀请码用@隔开,不同京东账号互助码用换行(return按键)隔开"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png"
+      ],
+      "author": "@lxk0301",
+      "repo": "https://gitee.com/lxk0301/jd_scripts/tree/master",
+      "script": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_cash.js"
     },
     {
       "id": "jd_jxd",

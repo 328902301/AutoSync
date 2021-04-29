@@ -9,7 +9,7 @@ internet-test-url = http://wifi.vivo.com.cn/generate_204
 test-timeout = 5
 
 [Rule]
-# > Self use----------------------------
+
 # > JD - api.m.jd.com
 URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
@@ -25,7 +25,7 @@ URL-REGEX,https:\/\/home\.mi\.com\/newoperation\/recommendNames,REJECT
 URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 
 [URL Rewrite]
-# > Redirect----------------------------
+
 # > Redirect JD shopmember
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
 
@@ -40,7 +40,7 @@ URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 ^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
 ^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
 
-# > Adblock----------------------------
+
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 
@@ -50,7 +50,6 @@ URL-REGEX,https:\/\/api2\.mina\.mi\.com\/banner\/get,REJECT
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
 
 # > JD - api.m.jd.com,img*.360buyimg.com
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
 
@@ -74,4 +73,4 @@ JD_Price = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
 
 [MITM]
-hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*,mp.weixin.qq.com,shopmember.m.jd.com
+hostname = %APPEND% www.google.cn, api.m.jd.com, img*.360buyimg.com, newapp.szsmk.com, mobile-api.adguard.com, home.mi.com, api2.mina.mi.com, m*.amap.com, *.cp31.ott.cibntv.net, act.vip.iqiyi.com,interface*.music.163.com,59.111.181.*,mp.weixin.qq.com, shopmember.m.jd.com

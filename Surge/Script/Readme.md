@@ -16,6 +16,7 @@ caixin = type=http-response,pattern= https://mappsv5.caixin.com/articlev5/*,requ
 # > Bear
 Bear Unlock = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/Bear.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
+---
 [Map Local]
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts data="Script/reject-dict.json"

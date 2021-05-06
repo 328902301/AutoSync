@@ -20,5 +20,7 @@ Bear Unlock = requires-body=1,max-size=0,script-path=https://raw.githubuserconte
 [Map Local]
 
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
+
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts data="Script/reject-dict.json"
+
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start data="Script/reject-dict.json"

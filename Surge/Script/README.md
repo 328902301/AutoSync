@@ -21,6 +21,10 @@ caixin = type=http-response,pattern= https://mappsv5.caixin.com/articlev5/*,requ
 ```properties
 Bear Unlock = type=http-response,pattern= ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=true,script-path=https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/Bear.js
 ```
+> Xmind - *.xmind.*
+```properties
+Xmind = type=http-response,pattern=^https?:\/\/.*\.xmind\..*\/_res\/devices,requires-body=true,script-path=https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/XMind.js
+```
 ---
 [Map Local]
 ```properties

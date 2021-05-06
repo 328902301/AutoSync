@@ -14,7 +14,7 @@ cxzk = type=http-response,pattern= http://ipadcms.caixin.com/tmp/articles/*,requ
 caixin = type=http-response,pattern= https://mappsv5.caixin.com/articlev5/*,requires-body=true,script-path= https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/caixin.js
 
 # > Bear
-Bear Unlock = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/Bear.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+Bear Unlock = type=http-response,pattern= ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,script-path=https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/Bear.js
 
 ---
 [Map Local]

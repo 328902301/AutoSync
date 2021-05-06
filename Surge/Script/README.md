@@ -1,3 +1,4 @@
+[Script]
 > AdGuard Unlock premium - mobile-api.adguard.com
 ```properties
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.com\/api\/\d(|\.\d)\/ios_validate_receipt$,requires-body=true,script-path=Script/AdGuard.js

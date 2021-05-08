@@ -32,3 +32,11 @@ Xmind = type=http-response,pattern=^https?:\/\/.*\.xmind\..*\/_res\/devices,requ
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts data="Script/reject-dict.json"
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start data="Script/reject-dict.json"
 ```
+---
+[URL Rewrite]
+> Baidu NetDisk - issuecdn.baidupcs.com
+```properties
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao - reject
+```

@@ -32,42 +32,26 @@
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png", "https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png"]
     },
     {
-      "id": "JDLM",
-      "name": "京东联盟转链",
-      "settings": [
-        {
-          "id": "id77_JDLM_siteId",
-          "name": "siteId",
-          "val": "",
-          "type": "number"
-        },
-        {
-          "id": "id77_JDLM_app_key",
-          "name": "app_key",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "id77_JDLM_appSecret",
-          "name": "appSecret",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "id77_JDLM_log",
-          "name": "输出结果到日志",
-          "val": "y",
-          "type": "text",
-          "placeholder": "y/n",
-          "desc": "y需要打印结果，n不需要"
-        }
+      "id": "debao",
+      "name": "Debao",
+      "descs_html": [
+        "点此直达【<a href=\"https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/funboat/funboat.js\">脚本地址</a>】",
+        "微信小程序搜索 Funboat，按照脚本提示获取Cookie。",
+        "⚠️其他基于有赞的小程序也可能触发获取Cookie，请获取完后及时禁用获取Cookie重写/脚本。"
       ],
-      "author": "@id77",
-      "repo": "https://raw.githubusercontent.com/id77/QuantumultX/master/Script/id77_JDLM.js",
+      "keys": [
+        "evil_funkourl",
+        "evil_funkocookie",
+        "evil_funkostatusurl",
+        "evil_funkostatuscookie"
+      ],
+      "author": "@evilbutcher",
+      "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master/check_in/funboat",
       "icons": [
-        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/JDLM.png",
-        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/JDLM.png"
-      ]
+        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/funko_tran.png",
+        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/funko.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/db.js"
     },
     {
       "id": "yiLi",

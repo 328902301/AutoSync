@@ -49,10 +49,10 @@ hostname = h5.youzan.com
 
 */
 const $ = new Env("Debao");
-const signurl = "evil_funkourl";
-const signcookie = "evil_funkocookie";
-const statusurl = "evil_funkostatusurl";
-const statuscookie = "evil_funkostatuscookie";
+const signurl = "obsi_dburl";
+const signcookie = "obsi_dbcookie";
+const statusurl = "obsi_dbstatusurl";
+const statuscookie = "obsi_dbstatuscookie";
 
 var siurl = $.getdata(signurl);
 var sicookie = $.getdata(signcookie);

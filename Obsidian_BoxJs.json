@@ -40,10 +40,10 @@
         "⚠️其他基于有赞的小程序也可能触发获取Cookie，请获取完后及时禁用获取Cookie重写/脚本。"
       ],
       "keys": [
-        "evil_funkourl",
-        "evil_funkocookie",
-        "evil_funkostatusurl",
-        "evil_funkostatuscookie"
+        "obsi_dburl",
+        "obsi_dbcookie",
+        "obsi_dbstatusurl",
+        "obsi_dbstatuscookie"
       ],
       "author": "@evilbutcher",
       "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master/check_in/funboat",

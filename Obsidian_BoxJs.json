@@ -173,7 +173,7 @@
       ], 
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/telecomSky.js", 
       "id": "chinatelecomEnquiry", 
-      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js", 
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomInfinity.js", 
       "settings": [
         {
           "id": "Mon", 
@@ -504,7 +504,7 @@
       ], 
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/tvpreview.js", 
       "id": "TVlist", 
-      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/tvpreview.js", 
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/tvpreview.js", 
       "settings": [
         {
           "id": "c", 
@@ -525,7 +525,7 @@
       "keys": [ ], 
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/trainquery.js", 
       "id": "trainquery", 
-      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/trainquery.js", 
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/trainquery.js", 
       "settings": [
         {
           "items": [
@@ -591,7 +591,7 @@
       ], 
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/moji.js", 
       "id": "moji", 
-      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/moji.js", 
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/moji.js", 
       "settings": [
         {
           "id": "city", 

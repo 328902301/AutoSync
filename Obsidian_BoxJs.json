@@ -4,7 +4,7 @@
   "description": "该订阅兼容BoxJs以及QX Gallery",
   "author": "@Obsidian",
   "icon": "https://avatars.githubusercontent.com/u/10055901",
-  "repo": "https://github.com/Obsidian99/Script/tree/master",
+  "repo": "https://github.com/Obsidian99/Profile/tree/master",
   "apps": [{
     "id": "iQIYI",
     "name": "爱奇艺",
@@ -51,8 +51,9 @@
             "desc": "需要几个账号，数字为几"
     }],
             "repo": "https://github.com/age174/-/blob/main/bsly.js",
-            "icons": ["https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg", "https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/bsly.js"
+	    "script": "https://raw.githubusercontent.com/age174/-/main/bsly.js",
+            "icons": ["https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg", "https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg"]
+            
     } ,
     {
       "id": "yiLi",

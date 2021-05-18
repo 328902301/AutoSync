@@ -676,27 +676,27 @@
   }],
   "task": [{
             "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true",
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie"
         },
 	{
             "config": "5 8 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js,tag=CCCAT, img-url=https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Icon/CCCAT-D_144-1.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=CCCAT cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=CCCAT cookie"
         }, 
         {
             "config": "1 10 3 * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js, tag=电信套餐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=天翼账号中心cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=天翼账号中心cookie"
         }, 
         {
             "config": "5 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/iQIYI.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=爱奇艺cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=爱奇艺cookie"
         }, 
         {
             "config": "0 0 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=航旅纵横cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=航旅纵横cookie"
         }, 
         {
             "config": "0 1,20,21 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=滴滴出行cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=滴滴出行cookie"
         }, 
         {
             "config": "1 6,22 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_sleep.js,tag=滴滴sleep, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true", 
@@ -706,18 +706,18 @@
         },
         {
             "config": "1 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url= https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/neteasemusic.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=网易云音乐cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=网易云音乐cookie"
         }, 
         {
             "config": "10 7 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=人人视频, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/rrtv.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=人人视频cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=人人视频cookie"
         }, 
         {
             "config": "10 0 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=伊利乳品cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=伊利乳品cookie"
         },
         {
             "config": "15 17 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js, tag=小米运动, img-url=https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=小米运动cookie, update-interval=-1, opt-parser=false, enabled=true"
+            "addons": "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Cookie_Remote.conf, tag=小米运动cookie"
   }]
 }

@@ -32,27 +32,28 @@
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png", "https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png"]
     },
     {
-      "id": "debao",
-      "name": "Debao",
-      "descs_html": [
-        "点此直达【<a href=\"https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/funboat/funboat.js\">脚本地址</a>】",
-        "微信小程序搜索 Funboat，按照脚本提示获取Cookie。",
-        "⚠️其他基于有赞的小程序也可能触发获取Cookie，请获取完后及时禁用获取Cookie重写/脚本。"
-      ],
-      "keys": [
-        "obsi_dburl",
-        "obsi_dbcookie",
-        "obsi_dbstatusurl",
-        "obsi_dbstatuscookie"
-      ],
-      "author": "@evilbutcher",
-      "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master/check_in/funboat",
-      "icons": [
-        "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Icon/db.png",
-        "https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Icon/db.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Obsidian99/Script/master/Surge/Script/db.js"
+            "id": "bsly",
+            "name": "百事乐元",
+            "keys": ["bslyhd","bslybody", "bslyhd2","bslybody2", "bslyhd3","bslybody3", "bslyhd4","bslybody4", "bslyhd5","bslybody5", "bslyhd6","bslybody6", "bslyhd7","bslybody7", "bslyhd8","bslybody8", "bslyhd9","bslybody9", "bslyhd10","bslybody10", "bslyhd11","bslybody11", "bslyhd12","bslybody12", "bslyhd13","bslybody13", "bslyhd14","bslybody14", "bslyhd15","bslybody15"],
+            "author": "@feizao",
+            "settings": [{
+            "id": "bslystatus",
+            "name": "当前账号",
+            "val": "1",
+            "type": "number",
+            "desc": "当前账号对应"
     },
+    {
+            "id": "bslycount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "需要几个账号，数字为几"
+    }],
+            "repo": "https://github.com/age174/-/blob/main/bsly.js",
+            "icons": ["https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg", "https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg"],
+            "script": "https://raw.githubusercontent.com/age174/-/main/bsly.js"
+    } ,
     {
       "id": "yiLi",
       "name": "伊利乳品",

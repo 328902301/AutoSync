@@ -136,7 +136,7 @@ upstream、upstream_mobile：反代的网址，两者保持一致即可除非该
 blocked_region：禁止访问的地区，记得去除'CN
 
 
-######二.
+##二.
 // 替换成你想镜像的站点
 const upstream = 'example.com'
  

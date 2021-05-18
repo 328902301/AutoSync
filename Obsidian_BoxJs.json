@@ -63,86 +63,6 @@
       ]
     }, 
     {
-     "id": "zZ.DiDi",
-      "name": "滴滴出行",
-      "descs_html": [
-        "请先按<a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js\">脚本注释</a>进行配置，然后进入\"滴滴出行\"，若弹出\"首次写入滴滴出行 Token 成功\"即可正常食用。",
-        "若无法通过上述方法获取 Token，可使用<a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_ticket.js\">此脚本脚本</a>获取 Token，并按照此脚本注释进行配置。",
-        "如需使用抢券功能，请设置好抢券时间，同时在抢券前运行一次脚本存储券编号，如不知如何操作请勿修改建议的 cron 设置，请参考 <a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/README.md\">README</a> 。"
-      ],
-      "keys": ["DiDi", "DiDi_city", "@Didi.drawdelay", "@Didi.actIdPM"],
-      "settings": [
-        {
-          "id": "@Didi.debug",
-          "name": "测试环境",
-          "val": false,
-          "type": "boolean",
-          "desc": "如未出现特殊报错等问题请保持关闭。"
-        },
-        {
-          "id": "@Didi.noaff",
-          "name": "不支持作者",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后不使用内置的邀请码，但无法获得需要持续维护的活动编号。"
-        },
-        {
-          "id": "@Didi.isFinance",
-          "name": "滴滴金融",
-          "val": false,
-          "type": "boolean",
-          "desc": "钱包 - 金融服务 - 天天有奖自动签到，即使开启也只自动领取奖品，不使用奖品不会开启滴滴金融服务。由于需要持续维护活动编号，需开启支持作者后使用。"
-        },
-        {
-          "id": "@Didi.isExpenddrawlids",
-          "name": "可能亏损的抽奖",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后，会参与可能亏损的抽奖。由于需要持续维护活动编号，需开启支持作者后使用。"
-        },
-        {
-          "id": "DiDi",
-          "name": "Token",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 7,
-          "desc": "Token 可同时存在多个，可使用不同日期获取的 Token 进行测试。"
-        },
-        {
-          "id": "DiDi_city",
-          "name": "城市编号",
-          "val": "",
-          "type": "number",
-          "desc": "滴滴出行城市编号，可更改至别的城市进行测试。"
-        },
-        {
-          "id": "@Didi.drawdelay",
-          "name": "抽奖延迟",
-          "val": "",
-          "type": "number",
-          "placeholder": "2000", 
-          "desc": "每次抽奖之间的间隔，单位为毫秒，不填默认为 2000 毫秒。如提示抽奖过快请加大延迟。"
-        },
-        {
-          "id": "@Didi.actIdPM",
-          "name": "晚八点券",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
-          "desc": "晚八点的优惠券编号组（如果有）。"
-        }
-      ],
-      "author": "@zZPiglet",
-      "repo": "https://github.com/zZPiglet/Task/blob/master/DiDi/README.md",
-      "script": "https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js",
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/didi.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png"
-      ]
-    },
-    {
      "id": "zZ.umetrip",
       "name": "航旅纵横(pro)",
       "desc_html": "请先按<a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js\">脚本注释</a>进行配置，然后进入\"航旅纵横(Pro)\" - \"出行有礼\" - \"每日签到\"，若弹出\"首次写入 umetrip id 成功\"即可正常食用。",
@@ -166,17 +86,6 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png"
       ]
     },
-    {
-      "id": "deleteCoupon",
-      "name": "删除优惠券",
-      "settings": [
-        { "id": "CFG_DELCOUPON_LEAVE", "name": "需要保留的优惠券关键字", "val": "", "type": "textarea", "desc": "需要保留的，英文逗号隔开，输入关键字即可" }
-      ],
-      "author": "@yangtingxiao",
-      "repo": "https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/",
-      "script": "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js",
-      "icons": ["https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png", "https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png"]
-       },
     {
      "id": "NeteaseMusic",
       "name": "网易云音乐",
@@ -308,31 +217,6 @@
       "script": "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js"
     },
     {
-      "id": "JD_PRICE_PROTECT",
-		"name": "京东价格保护",
-		"keys": [],
-		"settings": [{
-			"id": "jdPriceProtectNotify",
-			"name": "静默运行",
-			"val": false,
-			"type": "boolean",
-			"desc": "运行京东价格保护脚本时不发出系统弹窗通知"
-		}, {
-			"id": "jdPriceProtectDebug",
-			"name": "开启调试",
-			"val": false,
-			"type": "boolean",
-			"desc": "运行京东价格保护脚本时发出错误弹窗通知"
-		}],
-		"icons": [
-			"https://raw.githubusercontent.com/ZCY01/img/master/pricev1.png",
-			"https://raw.githubusercontent.com/ZCY01/img/master/pricev1.png"
-		],
-		"author": "@zcy01",
-		"repo": "https://github.com/ZCY01/daily_scripts",
-		"script": "https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtect.js"
-      },
-    {
       "id": "jdzz",
       "name": "京东赚赚小程序",
       "settings": [
@@ -357,34 +241,6 @@
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzz_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png"
-      ]
-    },
-    {
-      "id": "jdkc",
-      "name": "京东库存查询",
-      "keys": ["jd_skuIds", "jd_areaId"],
-      "settings": [
-        {
-          "id": "jd_skuIds",
-          "name": "商品id",
-          "val": "",
-          "type": "text",
-          "desc": "填写商品id，多个商品以英文逗号分隔，获取方法参考脚本头部说明."
-        },
-        {
-          "id": "jd_areaId",
-          "name": "地区id",
-          "val": "",
-          "type": "text",
-          "desc": "填写收货地址id，获取方法参考脚本头部说明."
-        }
-      ],
-      "author": "@whyour",
-      "repo": "https://github.com/whyour/hundun/blob/master/quanx/jd_stock.js",
-      "script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_stock.js",
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jddj.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jddj.png"
       ]
     },
     {

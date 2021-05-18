@@ -8,16 +8,16 @@ const upper_path ='/'
 const upper_mobile ='www.google.com'
 
 //您希望中止服务的国家和地区。
-constblocked_region = ['CN'，'KP'，'SY'，'PK'，'CU']
+constblocked_region = ['DE','UK']
 
 //您希望阻止其使用服务的IP地址。
-const Blocked_ip_address = ['0.0.0.0'，'127.0.0.1']
+const Blocked_ip_address = '127.0.0.1'
 
 //是否对上游地址使用HTTPS协议。
 const https = true
 
 //是否禁用缓存。
-const disable_cache =假
+const disable_cache =false
 
 //替换文字。
 const replace_dict = {

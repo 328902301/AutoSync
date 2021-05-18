@@ -35,7 +35,6 @@
       "id": "bsly",
       "name": "百事乐元",
       "keys": ["bslyhd","bslybody", "bslyhd2","bslybody2", "bslyhd3","bslybody3", "bslyhd4","bslybody4", "bslyhd5","bslybody5", "bslyhd6","bslybody6", "bslyhd7","bslybody7", "bslyhd8","bslybody8", "bslyhd9","bslybody9", "bslyhd10","bslybody10", "bslyhd11","bslybody11", "bslyhd12","bslybody12", "bslyhd13","bslybody13", "bslyhd14","bslybody14", "bslyhd15","bslybody15"],
-      "author": "@feizao",
       "settings": [{
       "id": "bslystatus",
       "name": "当前账号",

@@ -3,6 +3,12 @@
     "description": "https://github.com/Obsidian99/Profile", 
     "task": [  
         {
+            "config": "1 6,22 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_sleep.js, tag=滴滴sleep, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true", 
+	    },
+        {
+            "config": "40 8,20,9-19/2 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_drink.js, tag=滴滴drink, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true", 
+        },
+        {
              "config": "15 8,13,18 17-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js, tag=京享值PK, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
         {

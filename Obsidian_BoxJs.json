@@ -81,6 +81,9 @@
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie"
         },
 	{
+             "config": "15 8,13,18 17-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js, tag=京享值PK, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+        },
+	{
              "config": "15 7,15 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
 	{

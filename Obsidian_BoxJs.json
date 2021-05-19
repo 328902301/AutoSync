@@ -105,6 +105,7 @@
 	},
         {
             "config": "40 8,20,9-19/2 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_drink.js, tag=滴滴drink, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true"
+        },
         {
             "config": "1 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url= https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/neteasemusic.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=网易云音乐cookie"

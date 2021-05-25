@@ -87,7 +87,10 @@
              "config": "52 6 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js, tag=招行刮刮乐, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
         },
 	{
-             "config": "15 8,13,18 17-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js, tag=京享值PK, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+             "config": "30 8,16,20 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jd_jxd.js, tag=京小兑, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_jxd.png, enabled=true"
+        },
+	{
+             "config": "8 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jx_sign.js, tag=京喜签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jingxi.png, enabled=true"
         },
 	{
              "config": "15 7,15 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
@@ -149,7 +152,7 @@
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profilet/master/QuanX/Cookie_Remote.conf, tag=伊利乳品cookie"
         },
         {
-            "config": "15 17 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js, tag=小米运动, img-url=https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png, enabled=true", 
+            "config": "15 17 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/xmSports.js, tag=小米运动, img-url=https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=小米运动cookie"
   }]
 }

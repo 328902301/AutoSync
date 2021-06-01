@@ -1,6 +1,6 @@
 ## 在编辑区域粘贴以下代码
 
-addEventListener(
+* addEventListener(
     "fetch", event => {
         let url = new URL(event.request.url);
         url.hostname = "your.domain";
@@ -11,5 +11,5 @@ addEventListener(
         )
     }
 )
-
+* 
 ## 将 your.domain 改成你的域名，protocol 如果后端使用 https 就写 https，http 就写 http

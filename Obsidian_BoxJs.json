@@ -90,6 +90,12 @@
              "config": "30 8,16,20 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jd_jxd.js, tag=京小兑, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_jxd.png, enabled=true"
         },
 	{
+             "config": "30 11 * * * https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/superBrand.js, tag=特物ZX联想, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+        },
+	{
+             "config": "30 9,10 * * * https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/babelDiy.js, tag=总裁送好礼, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+        },
+	{
              "config": "8 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jx_sign.js, tag=京喜签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jingxi.png, enabled=true"
         },
 	{

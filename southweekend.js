@@ -1,3 +1,3 @@
 body =
-$response.body.replace(/vip_type":\w/g,'vip_type":s').replace(/svip_given":\d+/g,'svip_given":3650').replace(/is_vip":\w+/g,'is_vip":true').replace(/enabled":\w+/g,'enabled":true').replace(/svip_expired_at":\d+/g,'svip_expired_at":1936627200')
+$response.body.replace(/member_type":\d/g,'member_type":s').replace(/expire_time":\w+/g,'expire_time":"2030-05-05\"').replace(/user":\{[^\}]+\}/g,'user":{"islogin":true,"isview":true,"isNewsStand":2,"member_type":5,"expire_time":"2030-05-05","isdigg":true,"isfav":true}')
 $done({body});

@@ -1,7 +1,7 @@
 /*
 
 QX1.0.0:
-https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/BaiduCloud.js
+https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/BaiduCloud1.js
 
 MITM = pan.baidu.com
 */

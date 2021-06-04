@@ -9,7 +9,7 @@ MITM = pan.baidu.com
 let obj = JSON.parse($response.body);
 obj = {
   "product_infos": [{
-    "product_id": "\d+",
+    "product_id": "",
     "start_time": 1417260485,
     "end_time": 2147483648,
     "buy_time": "1417260485",
@@ -35,6 +35,6 @@ obj = {
     "reminderWithContent": [],
     "advertiseContent": []
   },
-  "request_id": \d+
+  "request_id": “”
 };
 $done({body: JSON.stringify(obj)});

@@ -1,0 +1,50 @@
+#!name=UnLock Premiere
+#!desc=UnLock App Premiere
+
+[MITM]
+hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, api.mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn, viva.v21xy.com
+
+[Script]
+# 01 Varlens 解锁PRO(by iOS黑科技)
+http-response ^https:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sngxpro/QuantumultX/master/s7aa.cn/Varlens.js
+
+# 02 通用订阅解锁（by 公众号 iOS黑科技）⭐️
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/sub.js
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/subs.js
+
+# 03 Emby 流媒体解锁订阅（20200913）Attention: 配合普拉斯影业提供的账号可进行观影：域名: https://movie.xeton.dev 端口: 443 账号：普拉斯影业 密码：plusisbest
+
+# 04 Prisma 解锁高级会员权限 畅想VIP功能(by 公众号墨鱼手记)
+http-response ^https://api.neuralprisma.com/receipt/ios/status/prisma/* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/psa.js
+
+# 05 Lightroom⭐️
+http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
+
+# 06 Fantastical 解锁SVIP会员订阅 （20200924）⭐️
+http-response ^https:\/\/api\.flexibits\.com\/(v1\/auth\/device|v1\/account\/details) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fantastical.js
+
+# 07 Scanner Pro 解锁会员权限 一次性解锁勿卸载（20201219）⭐️
+http-response ^https:\/\/license\.pdfexpert\.com\/api\/.+\/scanner\/subscription\/(refresh$|check$) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/sp.js
+
+# 08 Camera360 MIX滤镜大师⭐️
+http-response ^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/camera360.js
+
+# 09 滴答清单 解锁会员功能（20200903）仅适用旧版 V5.2.51 ID:832943581⭐️
+http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js
+
+# 10 扫描全能王(by nobyda)⭐️
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
+
+# 11 有道云笔记VIP (ByAlex0510)⭐️
+http-response ^https://note.youdao.com/yws/(mapi/payment|api/self) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ydybj.js
+
+# 12 哔哩哔哩番剧开启1080P+⭐️
+http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/bilifj.js
+
+# 13 WPS (By eHpo)⭐️
+http-response ^https://account.wps.cn/api/users/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
+# 14 小影解锁Vip (By @hiepkimcdtk55)
+http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+
+

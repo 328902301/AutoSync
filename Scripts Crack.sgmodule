@@ -13,6 +13,7 @@ http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=1
 http-response ^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/subs.js
 
 # 03 Emby 流媒体解锁订阅（20200913）Attention: 配合普拉斯影业提供的账号可进行观影：域名: https://movie.xeton.dev 端口: 443 账号：普拉斯影业 密码：plusisbest
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0,script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js
 
 # 04 Prisma 解锁高级会员权限 畅想VIP功能(by 公众号墨鱼手记)
 http-response ^https://api.neuralprisma.com/receipt/ios/status/prisma/* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/psa.js

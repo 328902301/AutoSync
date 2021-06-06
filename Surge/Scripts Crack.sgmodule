@@ -2,7 +2,7 @@
 #!desc=UnLock App Premiere
 
 [MITM]
-hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn, viva.v21xy.com
+hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*
 
 [Script]
 # 01 Varlens 解锁PRO(by iOS黑科技)
@@ -45,5 +45,8 @@ http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x
 # 13 WPS (By eHpo)⭐️
 http-response ^https://account.wps.cn/api/users/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 
-# 14 小影解锁Vip (By @hiepkimcdtk55)
-http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+# 14 西窗烛 修复版 解锁终身会员 文艺范的福音（20210514）Attention：登录使用
+http-response ^https://lchttpapi.xczim.com/* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcz.js
+
+# 15 Dayone 更新会员crack功能（20210515）by langkhach
+http-response ^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js

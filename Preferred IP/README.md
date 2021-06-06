@@ -1,4 +1,4 @@
-## 优选IP
+## 优选IP加速节点访问
 linux shell脚本+fping  
 
 具体使用流程，需要编译里面 fping 4.2 修改版本，另外需要系统安装curl支持。  

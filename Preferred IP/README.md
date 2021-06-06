@@ -7,19 +7,19 @@ linux shell脚本+fping
 
 具体编译使用流程如下  
 
-curl https://github.com/General74110/MacBook-M1/raw/master/Preferred%20IP/linux.tar.gz
+`curl https://github.com/General74110/MacBook-M1/raw/master/Preferred%20IP/linux.tar.gz`
 
-tar -vxf linux.tar.gz
+`tar -vxf linux.tar.gz`
 
-cd linux
+`cd linux`
 
-./configure
+`./configure`
 
-make
+`make`
 
-cd src
+`cd src`
 
-sudo ./cf.sh
+`sudo ./cf.sh`
 
 
 ## 引用声明

@@ -7,7 +7,7 @@
 
 具体编译使用流程如下
 
-curl https://github.com/badafans/better-cloudflare-ip/releases/latest/download/linux.tar.gz -o linux.tar.gz
+curl https://github.com/General74110/MacBook-M1/raw/master/Preferred%20IP/linux.tar.gz
 
 tar -vxf linux.tar.gz
 

@@ -283,9 +283,6 @@
              "config": "52 6 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js, tag=招行刮刮乐, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
         },
 	{
-             "config": "30 8,16,20 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jd_jxd.js, tag=京小兑, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_jxd.png, enabled=true"
-        },
-	{
              "config": "8 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jx_sign.js, tag=京喜签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jingxi.png, enabled=true"
         },
 	{

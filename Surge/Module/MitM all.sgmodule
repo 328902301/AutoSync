@@ -3,4 +3,4 @@
 #!systerm=ios
 
 [MITM]
-hostname = %APPEND% *
+hostname = -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *

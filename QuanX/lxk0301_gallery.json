@@ -66,5 +66,5 @@
     {"config":"0 0 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_xtg_help.js, tag=家电星推官好友互助, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
     {"config":"33 0,6-23/2 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_zoo.js, tag=618动物联萌, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
     {"config":"0-59/30 * * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_zooCollect.js, tag=618动物联萌收集金币, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"  
-  }]
+  ]
 }

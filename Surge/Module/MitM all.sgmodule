@@ -1,0 +1,6 @@
+#!name=MitM All Hostnames
+#!desc=Perform MitM on all hostnames
+#!systerm=ios
+
+[MITM]
+hostname = %APPEND% *

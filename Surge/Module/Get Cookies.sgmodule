@@ -1,5 +1,5 @@
 #!name=Cookies
-#!desc=Cookies for 京东,爱奇艺,天翼,人人视频,腾讯视频,网易云音乐,航旅纵横,滴滴,小米运动,伊利乳品
+#!desc=Cookies for 京东,爱奇艺,航旅纵横,滴滴,小米运动,伊利乳品,CCCAT
 #!system=ios
 
 [Script]
@@ -9,29 +9,20 @@
 # 爱奇艺
 爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-# 天翼账号中心
-天翼cookie = script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomInfinity.js,type=http-request,pattern=https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do
-
-# 人人视频
-http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
-
-# 网易云音乐
-# 1.先登录: https://music.163.com/m/login
-# 2.再访问: https://music.163.com/#/user/level
-# 3.提示: 获取会话: 成功!
-网易云音乐cookie = type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.cookie.js,requires-body=true
-
 # 航旅纵横ID
 航旅纵横Cookie= type=http-request,pattern=^https:\/\/cloud\.umetrip\.com\/gateway\/api\/web\/rest\/polite\/app\/sign\/signpageinitdata,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
 
 # 滴滴
-滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=Script/DiDi_new.js
 
 # 小米运动
-小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/backUp/xmSports.js
+小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/xmSports.js
 
 # 伊利乳品
 伊利乳品小程序Cookie = type=http-request, pattern=^https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call, script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 
+# CCCAT
+CCCAT Cookie = type=http-request, pattern=https:\/\/cccat\.io, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+
 [MITM]
-hostname= %APPEND% ifac*.iqiyi.com, music.163.com, cloud.umetrip.com ,common.diditaxi.com.cn, *.rr.tv, club.yili.com, account.huami.com,e.189.cn
+hostname= %APPEND% ifac*.iqiyi.com, cloud.umetrip.com ,common.diditaxi.com.cn, club.yili.com, account.huami.com,cccat.io

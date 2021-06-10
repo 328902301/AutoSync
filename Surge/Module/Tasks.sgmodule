@@ -1,0 +1,37 @@
+#!name=Tasks
+#!desc=Tasks all in one
+#!system=ios
+
+[Script]
+# > 京东
+JD_DailyBonus = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+618限时盲盒 = type=cron,cronexp="30 7,19 1-18 6 *",wake-system=1,timeout=3600,script-path=Script/jd_limitBox.js
+
+特物Z|万物皆可国创 = type=cron,cronexp="30 11 * * *",wake-system=1,timeout=3600,script-path=Script/jd_superBrand.js
+
+618大势新品赏 = type=cron,cronexp="15 9,20 * 5,6 *",wake-system=1,timeout=3600,script-path=Script/adolf_newInteraction.js
+
+---
+京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+
+京东赚赚whyour = type=cron,cronexp=0 0 0 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js
+
+
+# > 爱奇艺
+爱奇艺 = type=cron,cronexp=5 4 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+
+# > 航旅纵横
+航旅纵横签到 = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
+
+# > 滴滴
+滴滴出行 = type=cron,cronexp="0 1,20,21 * * *",wake-system=1,script-path=Script/DiDi_new.js
+滴滴Drink = type=cron,cronexp="40 8,20,9-19/2 * * *",wake-system=1,script-path=Script/DiDi_drink.js
+滴滴Sleep = type=cron,cronexp="1 6,22 * * *",wake-system=1,script-path=Script/DiDi_sleep.js
+刮刮乐 = type=cron,cronexp="52 6 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js
+
+# > 小米运动
+小米运动 = type=cron,cronexp="40 20 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/xmSports.js
+
+# > CCCAT
+CCCAT签到 = type=cron,cronexp=5 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js

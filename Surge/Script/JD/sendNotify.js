@@ -531,7 +531,7 @@ function qywxamNotify(text, desp) {
               textcard: {
                 title: `${text}`,
                 description: `${desp}`,
-                url: 'https://github.com/lxk0301/jd_scripts',
+                url: '',
                 btntxt: '更多'
               }
             }

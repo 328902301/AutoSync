@@ -1,5 +1,5 @@
 #!name=lxk0301 iOS Tasks Lite Module
-#!desc=iOS Tasks&Cookies 模块配置
+#!desc=iOS JD Tasks 模块配置
 
 [Script]
 京东资产变动通知 = type=cron,cronexp="2 9 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_bean_change.js

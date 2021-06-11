@@ -60,7 +60,7 @@ const JD_API_HOST = "https://api.m.jd.com/client.action";
       $.index = i + 1;
       message = "";
       console.log(`\n******开始【京东账号${$.index}】${$.UserName}*********\n`);
-      await shareCodesFormat()
+//      await shareCodesFormat()
       await main()
 //      await showMsg()
     }
@@ -87,7 +87,7 @@ async function main() {
       await $.wait(1000)
     }
     await collectScore()
-    await helpFriends()
+//    await helpFriends()
     await getTaskDetail(22);
     await getTaskDetail(-1)
   } catch (e) {

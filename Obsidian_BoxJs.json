@@ -280,22 +280,10 @@
              "config": "0 30 21 * * *  https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/ssq/ssq.js, tag=Lottery, img-url=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/ssq.png, enabled=true"
         },
 	{
-             "config": "52 6 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/CMB/CMB_scratchers.js, tag=招行刮刮乐, img-url=https://raw.githubusercontent.com/zZPiglet/Task/master/img/coloured/cmbchina.png, enabled=true"
-        },
-	{
-             "config": "15 0,6,13,19,21 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/ddo_pk.js, tag=京享值PK, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
-        },
-	{
-             "config": "8 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jx_sign.js, tag=京喜签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jingxi.png, enabled=true"
-        },
-	{
              "config": "15 7,15 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
         },
 	{
              "config": "0,1,2 0 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_exchange.js, tag=领现金兑换红包Cuttlefish, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
-        },
-	{
-             "config": "0 0 0 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/Obsidian99/Script/master/QuanX/Icon/jd_rankingList.png, enabled=true"
         },
         {
              "config": "11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true" 

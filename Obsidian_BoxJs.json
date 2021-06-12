@@ -292,6 +292,10 @@
              "config": "0 9 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚whyour, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true" 
         },
         {
+             "config": "0 0 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/jd_cardId_export.js, tag=会员取消链接, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_unbind.png, enabled=false"
+        },
+
+        {
              "config": "11 0 * * 1 https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_deleteCoupon.js, tag=删除优惠券, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/lxk0301/jd_unbind.png, enabled=false"
         },
         {

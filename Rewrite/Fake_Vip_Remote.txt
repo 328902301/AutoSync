@@ -7,7 +7,7 @@ hostname = www.google.*, api.textnow.me, *.videostarapp.com, avatar-nct.nixcdn.c
 ^https:\/\/api\.gyrosco\.pe\/v1\/account\/$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/gyroscope.js
 
 #Termius 
-https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/terminus.js
+https:\/\/api\.termius\.com\/api\/.+\/bulk\/account\/ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/terminus.js
 
 #PicsArt
 ^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/picsart.js

@@ -2,13 +2,13 @@
 #!desc=UnLock App Premiere for own myself
 
 [MITM]
-hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*
+hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*, www.40sishi.com
 
 [Script]
 # 01 Varlens 解锁PRO(by iOS黑科技)
 http-response ^https:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sngxpro/QuantumultX/master/s7aa.cn/Varlens.js
 
-# 02 通用订阅解锁（by 公众号 iOS黑科技）⭐️
+# 02 通用订阅解锁（by 公众号 iOS黑科技 与2021.6版本冲突）⭐️
 http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/sub.js
 http-response ^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/subs.js
 
@@ -50,3 +50,7 @@ http-response ^https://lchttpapi.xczim.com/* requires-body=1,max-size=0,script-p
 
 # 15 Dayone 更新会员crack功能（20210515）by langkhach
 http-response ^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js
+
+# 16 豌豆清单 (20201112) by ddgksf2013
+http-response ^https:\/\/www\.40sishi\.com\/list\/user\/profile$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/wdqd.js
+

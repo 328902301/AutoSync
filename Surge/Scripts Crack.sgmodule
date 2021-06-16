@@ -2,7 +2,7 @@
 #!desc=UnLock App Premiere for own myself
 
 [MITM]
-hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*, www.40sishi.com
+hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*, www.40sishi.com, license.enpass.io
 
 [Script]
 # 01 Varlens 解锁PRO(by iOS黑科技)
@@ -54,3 +54,5 @@ http-response ^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-statu
 # 16 豌豆清单 (20201112) by ddgksf2013
 http-response ^https:\/\/www\.40sishi\.com\/list\/user\/profile$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/wdqd.js
 
+# 17 Enpass Unlock
+Endpass = type=http-response,pattern=^https:\/\/license\.enpass\.io/api/.+/subscription/me,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/enpass.js

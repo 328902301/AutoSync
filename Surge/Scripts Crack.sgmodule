@@ -55,4 +55,4 @@ http-response ^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-statu
 http-response ^https:\/\/www\.40sishi\.com\/list\/user\/profile$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/wdqd.js
 
 # 17 Enpass Unlock
-Endpass = type=http-response,pattern=^https:\/\/license\.enpass\.io/api/.+/subscription/me,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/enpass.js
+http-response ^https:\/\/license\.enpass\.io/api/.+/subscription/me requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/enpass.js

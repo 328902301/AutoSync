@@ -4,11 +4,11 @@
 
 [Script]
 # > 临时任务
-//618大势新品赏 = type=cron,cronexp="15 9,20 * 5,6 *",wake-system=1,timeout=3600,script-path=Script/adolf_newInteraction.js
-//主会场红包雨 = type=cron,cronexp="1 20 1-18 6 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/long_hby_lottery.js
+// 618大势新品赏 = type=cron,cronexp="15 9,20 * 5,6 *",wake-system=1,timeout=3600,script-path=Script/adolf_newInteraction.js
+// 主会场红包雨 = type=cron,cronexp="1 20 1-18 6 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/long_hby_lottery.js
 金榜创造营 = type=cron,cronexp="13 1,22 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_gold_creator.js
 新潮品牌狂欢 = type=cron,cronexp="4 10 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_mcxhd.js
-//家电星推官 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_xtg.js
+// 家电星推官 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/JD/jd_xtg.js
 整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/long_super_redrain.js
 半点京豆雨 = type=cron,cronexp="30 16-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/long_half_redrain.js
 

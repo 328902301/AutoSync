@@ -1,0 +1,172 @@
+/*
+Vivavideo unlock vip
+Script data comes from @hiepkimcdtk55
+Descriptions
+
+Surge4：
+http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+QX：
+^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+
+Surge & QX MITM = viva.v21xy.com
+*/
+
+var obj = JSON.parse($response.body);
+obj = {
+  "status": "ok",
+  "images": [
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_DISK_china_ir108-3d_202106032200_202106032214_4000M_webmerc_0_60b8e4709d221641e91d7ec4.jpg?auth_key=1622739561-a8d2aa9ec48411eb87b8eeeeeeeeeeee-0-fdc016686c828f32c0e1f4da2173d861",
+      1622728800,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032215_202106032219_4000M_webmerc_0_60b8e5cb4ccf3ea05f1d7ec4.jpg?auth_key=1622739561-a8d2b2c8c48411eb87b8eeeeeeeeeeee-0-f5ed26591d489b11deee16133c051800",
+      1622729700,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032219_202106032223_4000M_webmerc_0_60b8e6c501513fdbc31d7ecf.jpg?auth_key=1622739561-a8d2b9c6c48411eb87b8eeeeeeeeeeee-0-f2fe02b7accaad6e5a1f63451c9314a1",
+      1622729958,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032223_202106032227_4000M_webmerc_0_60b8e7b4e606a87bbf1d7ec4.jpg?auth_key=1622739561-a8d2c10ac48411eb87b8eeeeeeeeeeee-0-57374daf33ec14428e61506ea7ac8c22",
+      1622730216,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032230_202106032234_4000M_webmerc_0_60b8e9564ccf3ea05f1d7ee6.jpg?auth_key=1622739561-a8d2c84ec48411eb87b8eeeeeeeeeeee-0-6e25789e30a030a8676427e07adfbd2d",
+      1622730600,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032234_202106032238_4000M_webmerc_0_60b8ea65b69758322d1d7ecf.jpg?auth_key=1622739561-a8d2cdbcc48411eb87b8eeeeeeeeeeee-0-f8ab5737de1a335bdd436ba8dce6056d",
+      1622730858,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032238_202106032242_4000M_webmerc_0_60b8eb40edfdfd930e1d7ecf.jpg?auth_key=1622739561-a8d2d2dac48411eb87b8eeeeeeeeeeee-0-3e8496f14a85fe536e105d0775deca29",
+      1622731116,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_DISK_china_ir108-3d_202106032245_202106032259_4000M_webmerc_0_60b8eeff25cf1ed06d1d7eda.jpg?auth_key=1622739561-a8d2d7e4c48411eb87b8eeeeeeeeeeee-0-2b8f009110ad467ad21ee95a238d7cff",
+      1622731500,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_DISK_china_ir108-3d_202106032300_202106032314_4000M_webmerc_0_60b8f273edfdfd930e1d7ef1.jpg?auth_key=1622739561-a8d2dcdac48411eb87b8eeeeeeeeeeee-0-8d5194ecc3903088de53fa7fab9ac7b1",
+      1622732400,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_DISK_china_ir108-3d_202106032315_202106032329_4000M_webmerc_0_60b8f5f5e606a87bbf1d7ef1.jpg?auth_key=1622739561-a8d2e536c48411eb87b8eeeeeeeeeeee-0-deaf302d059f765f804c10849500721f",
+      1622733300,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032330_202106032334_4000M_webmerc_0_60b8f7539d221641e91d7ef1.jpg?auth_key=1622739561-a8d2ebc6c48411eb87b8eeeeeeeeeeee-0-533e1ddd2d3a0dc784e8fdde22631104",
+      1622734200,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032334_202106032338_4000M_webmerc_0_60b8f860e606a87bbf1d7f05.jpg?auth_key=1622739561-a8d2f1cac48411eb87b8eeeeeeeeeeee-0-df9fbd6d4887210aee175aeeecc1d826",
+      1622734458,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032338_202106032342_4000M_webmerc_0_60b8f94dedfdfd930e1d7f05.jpg?auth_key=1622739561-a8d2f878c48411eb87b8eeeeeeeeeeee-0-85c4f5c60eabd4cee2d5d225b4a2dbeb",
+      1622734716,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032345_202106032349_4000M_webmerc_0_60b8fad3e606a87bbf1d7f19.jpg?auth_key=1622739561-a8d2fda0c48411eb87b8eeeeeeeeeeee-0-374c989fdbd539d208edd91caeb7ebc2",
+      1622735100,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ],
+    [
+      "http:\/\/cdn-s.caiyunapp.com\/weather\/satellite\/fy4a_REGC_china_ir108-3d_202106032349_202106032353_4000M_webmerc_0_60b8fbdfedfdfd930e1d7f19.jpg?auth_key=1622739561-a8d30278c48411eb87b8eeeeeeeeeeee-0-988bcc85b17b5f688210b33efec1b63b",
+      1622735358,
+      [
+        6,
+        66,
+        54,
+        136
+      ]
+    ]
+  ],
+  "svip": true
+};
+
+$done({body: JSON.stringify(obj)});

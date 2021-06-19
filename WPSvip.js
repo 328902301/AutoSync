@@ -1,6 +1,6 @@
 /*
 QX：
-^https://account.wps.cn/api/users/ url script-response-body nzw9314/NobyDa/Surge/JS/Wps.js
+^https://account.wps.cn/api/users/ url script-response-body https://raw.githubusercontent.com/byour13/Script/main/WPSvip.js
 
 QX MITM = account.wps.cn
 */

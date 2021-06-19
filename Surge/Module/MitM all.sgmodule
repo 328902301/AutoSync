@@ -1,4 +1,4 @@
-#!name=MitM All Hostnames
+#!name=主机名-MitM All Hostnames
 #!desc=Perform MitM on all hostnames
 #!systerm=ios
 

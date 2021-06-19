@@ -1,14 +1,9 @@
 /*
-Vivavideo unlock vip
-Script data comes from @hiepkimcdtk55
-Descriptions
-
-Surge4：
-http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
 QX：
-^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https://biz.caiyunapp.com/v1/satellite* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/cyweather1.js
 
-Surge & QX MITM = viva.v21xy.com
+QX MITM = biz.caiyunapp.com
+by byour13
 */
 
 var obj = JSON.parse($response.body);

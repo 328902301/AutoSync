@@ -1,14 +1,9 @@
 /*
-Vivavideo unlock vip
-Script data comes from @hiepkimcdtk55
-Descriptions
-
-Surge4：
-http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
 QX：
-^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https://biz.caiyunapp.com/v2/user* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/cyweathervip.js
 
-Surge & QX MITM = viva.v21xy.com
+MITM = biz.caiyunapp.com
+by byour13
 */
 
 var obj = JSON.parse($response.body);
@@ -43,11 +38,11 @@ obj = {
         "expired_at": 0
       },
       "last_acted_at": 1622735987.0591499805,
-      "svip_given": 365,
+      "svip_given": 36500,
       "created_at": 1621147570.368653059,
       "is_login": true
     },
-    "device_id": "12C73469-E13A-4A1F-86AE-1FA8B2DE3E17",
+    "device_id": "12C70000-E00A-4A1F-00AE-1FA8B2DE7E00",
     "name": "***0000",
     "bound_status": {
       "qq": {
@@ -78,7 +73,7 @@ obj = {
       "caiyun": {
         "username": "",
         "is_bound": true,
-        "id": "60a0bfb26c9cf1001246ca6e"
+        "id": "60a0bfb26c9cf1000000ca6e"
       },
       "twitter": {
         "username": "",
@@ -100,7 +95,7 @@ obj = {
     "avatar": "https:\/\/caiyunapp.com\/imgs\/webtrs\/default.png",
     "is_vip": true,
     "gender": "0",
-    "_id": "60a0bfb26c9cf1001246ca6e"
+    "_id": "60a0bfb26c9cf1000000ca6e"
   },
   "rc": 0
 };

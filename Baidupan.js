@@ -9,7 +9,7 @@ var obj = JSON.parse($response.body);
 obj = {
   "errno": 0,
   "used": 384777965185,
-  "total": 19107027820544,
+  "total": 11107027820544,
   "request_id": 474303270288800000
 };
 

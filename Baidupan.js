@@ -10,7 +10,7 @@ obj = {
   "errno": 0,
   "used": 384777965185,
   "total": 11107027820544,
-  "request_id": 7501873289383874371
+  "request_id": 7501873289383800000
 };
 
 $done({body: JSON.stringify(obj)});

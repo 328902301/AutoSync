@@ -1,8 +1,12 @@
 /*
 QX：
+[rewrite_local]
 ^https:\/\/api\.rr\.tv\/watch\/v4\/priority_video_quality\/get_priority_video_quality_config* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/rrtvunlock.js
 
-QX MITM = api.rr.tv
+QX 
+[MITM]
+hostname = api.rr.tv
+by byour13
 */
 
 var obj = JSON.parse($response.body);

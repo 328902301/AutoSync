@@ -1,8 +1,8 @@
 /*
 QX：
-^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/api\.rr\.tv\/user\/profile* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/rrtvvip.js
 
-QX MITM = viva.v21xy.com
+QX MITM = api.rr.tv
 */
 
 var obj = JSON.parse($response.body);

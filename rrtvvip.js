@@ -11,14 +11,14 @@ by byour13
 
 var obj = JSON.parse($response.body);
 obj = {
-  "requestId": "24786e8f1fb44d75b982f73532e60604",
+  "requestId": "24786e8f1fb44d75b982f73532e00000",
   "code": "0000",
   "msg": "Success",
   "recordsTotal": null,
   "data": {
     "commentUser": false,
     "user": {
-      "id": 180766350,
+      "id": 180760000,
       "headImgUrl": "",
       "isConfirmed": false,
       "roleInfo": "normal",

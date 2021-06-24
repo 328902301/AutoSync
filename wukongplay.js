@@ -1,8 +1,8 @@
 /*
 QX：
-^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/iosv2\.cjapi\.papa21\.com\/user\/ios_store_pay_edition\/members_login\/check_members_identity_v2 url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
 
-QX MITM = viva.v21xy.com
+QX MITM = iosv2.cjapi.papa21.com
 */
 
 var obj = JSON.parse($response.body);

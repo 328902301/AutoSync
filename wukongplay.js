@@ -3,6 +3,7 @@ QX：
 ^https:\/\/iosv2\.cjapi\.papa21\.com\/user\/ios_store_pay_edition\/members_login\/check_members_identity_v2 url script-response-body https://raw.githubusercontent.com/byour13/Script/main/wukongplay.js
 
 QX MITM = iosv2.cjapi.papa21.com
+by byour13
 */
 
 var obj = JSON.parse($response.body);

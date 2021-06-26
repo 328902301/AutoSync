@@ -7,7 +7,7 @@ QX MITM = pan.baidu.com
 var obj = JSON.parse($response.body);
 obj = {
   "errno" : 0,
-  "request_id" : 8701805780872292453,
+  "request_id" : 8701805700431308109,
   "records" : [
     {
       "intro" : "",
@@ -16,7 +16,7 @@ obj = {
       ],
       "vip_point" : 0,
       "follow_flag" : 0,
-      "avatar_url" : "https://dss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.de703187.hOYzVF81W6eevLxMaXpv2Q.jpg",
+      "avatar_url" : "https://dss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.58a5f83c.eHXCba_otuycBYW7VKxCkA.jpg",
       "nick_name" : "charliii",
       "follow_source" : "",
       "uname" : "钟炬伸",
@@ -30,7 +30,7 @@ obj = {
         "ban_grade" : -1,
         "ban_msg" : ""
       },
-      "uk" : 1335868873
+      "uk" : 2075873515
     }
   ]
 }

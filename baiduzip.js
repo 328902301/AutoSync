@@ -1,7 +1,6 @@
 /*
 QX：
-^https:\/\/pan\.baidu\.com\/api\/user\/getinfo* url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
-
+^https:\/\/pan\.baidu\.com\/api\/user\/getinfo* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/baiduzip.js
 QX MITM = pan.baidu.com
 */
 

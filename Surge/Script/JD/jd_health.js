@@ -65,7 +65,7 @@ const JD_API_HOST = "https://api.m.jd.com/client.action";
       console.log(`\n******开始【京东账号${$.index}】${$.UserName}*********\n`);
       await shareCodesFormat()
       await main()
-      await showMsg()
+//      await showMsg()
     }
   }
 })()

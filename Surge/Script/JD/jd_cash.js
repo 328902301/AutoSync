@@ -30,9 +30,7 @@ let cookiesArr = [], cookie = '', message;
 let helpAuthor = true;
 const randomCount = $.isNode() ? 5 : 5;
 let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
-const inviteCodes = [
-  `IRM2b-y0YPgh7GrSwnQW1w@YU5rML3dLA`
-]
+const inviteCodes = [`IRM2b-y0YPgh7GrSwnQW1w@YU5rML3dLA`]
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -49,8 +47,8 @@ let allMessage = '';
     return;
   }
   await requireConfig()
- // await getAuthorShareCode();
- // await getAuthorShareCode2();
+  await getAuthorShareCode();
+  await getAuthorShareCode2();
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
       cookie = cookiesArr[i];
@@ -86,8 +84,8 @@ let allMessage = '';
 async function jdCash() {
   $.signMoney = 0;
   await index()
-//  await shareCodesFormat()
-//  await helpFriends()
+  await shareCodesFormat()
+  await helpFriends()
   await getReward()
   await getReward('2');
   $.exchangeBeanNum = 0;
@@ -458,7 +456,7 @@ function taskUrl(functionId, body = {}) {
   }
 }
 
-function getAuthorShareCode(url = "http://cdn.annnibb.me/jd_cash.json") {
+function getAuthorShareCode(url) {
   return new Promise(resolve => {
     $.get({url, headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
@@ -467,7 +465,7 @@ function getAuthorShareCode(url = "http://cdn.annnibb.me/jd_cash.json") {
       try {
         if (err) {
         } else {
-          $.authorCode = JSON.parse(data)
+          $.authorCode = []
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -477,7 +475,7 @@ function getAuthorShareCode(url = "http://cdn.annnibb.me/jd_cash.json") {
     })
   })
 }
-function getAuthorShareCode2(url = "") {
+function getAuthorShareCode2(url) {
   return new Promise(resolve => {
     $.get({url, headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
@@ -486,7 +484,7 @@ function getAuthorShareCode2(url = "") {
       try {
         if (err) {
         } else {
-          $.authorCode2 = JSON.parse(data)
+          $.authorCode2 = []
           if ($.authorCode2 && $.authorCode2.length) {
             $.authorCode.push(...$.authorCode2);
           }

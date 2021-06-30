@@ -2,7 +2,7 @@
 #!desc=UnLock App Premiere for own myself
 
 [MITM]
-hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*, www.40sishi.com, license.enpass.io
+hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, mb3admin.com, api.neuralprisma.com, photos.adobe.io, api.flexibits.com, license.pdfexpert.com, bmall.camera360.com, ticktick.com, dida365.com, *.intsig.net, note.youdao.com, api.bilibili.com, app.bilibili.com, account.wps.cn,, lchttpapi.xczim.com, dayone.*, www.40sishi.com, license.enpass.io, biz.caiyunapp.com
 
 [Script]
 # 01 Varlens 解锁PRO(by iOS黑科技)
@@ -56,3 +56,6 @@ http-response ^https:\/\/www\.40sishi\.com\/list\/user\/profile$ requires-body=1
 
 # 17 Enpass Unlock
 http-response ^https:\/\/license\.enpass\.io/api/.+/subscription/me requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/enpass.js
+
+# 18 彩云天气解锁SVIP
+http-response ^https:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nxyd/Surge/main/caiyun_svip.js

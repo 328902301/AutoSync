@@ -6,7 +6,7 @@ hostname = %APPEND% mid.zineapi.com, buy.itunes.apple.com, api.revenuecat.com, m
 
 [Script]
 # 01 Varlens 解锁PRO(by iOS黑科技)
-http-response ^https:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sngxpro/QuantumultX/master/s7aa.cn/Varlens.js
+http-response ^https:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Youthsongs/QuantumultX/master/s7aa.cn/Varlens.js
 
 # 02 通用订阅解锁（by 公众号 iOS黑科技 与2021.6版本冲突）⭐️
 http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=1,max-size=0,script-path=https://6678888.xyz/quantumultX/sub.js

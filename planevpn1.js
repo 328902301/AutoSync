@@ -1,6 +1,6 @@
 /*
 QX：
-^https:\/\/0ka8kt0n\.api\.lncldglobal\.com\/1.1\/classes\/TPPipeConfig* url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/0ka8kt0n\.api\.lncldglobal\.com\/1.1\/classes\/TPPipeConfig* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/planevpn1.js
 
 QX MITM = 0ka8kt0n.api.lncldglobal.com
 */

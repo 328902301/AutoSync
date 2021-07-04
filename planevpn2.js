@@ -1,7 +1,6 @@
 /*
 QX：
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
-
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/byour13/Script/main/planevpn2.js
 QX MITM = buy.itunes.apple.com
 */
 

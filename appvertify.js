@@ -1,6 +1,6 @@
 /*
 QX：
-^http:\/\/subs\.platforms\.team\/v2\/apple\/verify* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/Baidupan.js
+^http:\/\/subs\.platforms\.team\/v2\/apple\/verify* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/appvertify.js
 QX MITM = subs.platforms.team
 */
 

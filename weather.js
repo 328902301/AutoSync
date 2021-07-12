@@ -1,6 +1,6 @@
 /*
 QX：
-^https:\/\/one\.boohee\.com\/api\/v1\/users\/vip_status* url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/one\.boohee\.com\/api\/v1\/users\/vip_status* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/weather.js
 
 QX MITM = one.boohee.com
 */

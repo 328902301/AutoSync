@@ -7,7 +7,7 @@
 [rewrite_local]
 
 #简影解锁会员
-http:\/\/api\.jianmovie\.com\/(cardinfo|productinfo|balance|expense) url script-response-body jianyin.js
+http:\/\/api\.jianmovie\.com\/(cardinfo|productinfo|balance|expense) url script-response-body https://raw.githubusercontent.com/byour13/Script/main/jianyin.js
 
 
 MITM = api.jianmovie.com

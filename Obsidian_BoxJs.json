@@ -302,8 +302,8 @@
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=航旅纵横cookie"
         }, 
 	{
-            "config": "1 6,22 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/DiDi_sleep.js, tag=滴滴sleep, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true"
-	    "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=滴滴出行cookie"
+            "config": "1 6,22 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/DiDi_sleep.js, tag=滴滴sleep, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true",
+	    "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=滴滴cookie"
 	},
         {
             "config": "40 8,20,9-19/2 * * * https://raw.githubusercontent.com/Obsidian99/Profile/master/Surge/Script/DiDi_drink.js, tag=滴滴drink, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/didi.png, enabled=true"

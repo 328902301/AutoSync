@@ -1,8 +1,3 @@
-/**
- * @supported AE5E51FDD7AA
- */
-/*
-
 
 [rewrite_local]
 

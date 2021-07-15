@@ -1,8 +1,8 @@
 /*
 Loon：
-http-response ^https:\/\/www\.hd238785\.xyz\/myapi\/apinodelist* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+http-response ^https:\/\/www\.hd238785\.xyz\/myapi\/apinodelist* requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/byour13/Script/main/heidong.js
 QX：
-^https:\/\/www\.hd238785\.xyz\/myapi\/apinodelist* url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/www\.hd238785\.xyz\/myapi\/apinodelist* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/heidong.js
 
 Loon&QX MITM = www.hd238785.xyz
 */

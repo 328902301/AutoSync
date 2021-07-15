@@ -2,7 +2,7 @@
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/api\.bilibili\.com\/x\/member\/v2\notice* url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
+^https:\/\/api\.bilibili\.com\/x\/member\/v2\notice* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/bilibili.js
 
 [mitm]
 hostname = p.du.163.com

@@ -15,6 +15,10 @@ DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,ads.internal.unity3d.com
 DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
+
+DOMAIN-SUFFIX,p\d.*?-keyvalueservice.icloud.cn
+DOMAIN-SUFFIX,p**-*.icloud.com.cn
+
 # --- (Alibaba) ---
 DOMAIN,tunion-api.m.taobao.com
 # > YOUKU
@@ -333,3 +337,7 @@ IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 # > ZOL
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
+
+# > WeChat
+DOMAIN,wxsnsdythumb.wxs.qq.com
+DIMAIN,wxsnsdy.wxs.qq.com

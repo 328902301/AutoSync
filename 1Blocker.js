@@ -25,7 +25,7 @@ obj = {
     "last_seen": "2021-07-19T05:41:16Z",
     "management_url": "itms-apps://apps.apple.com/account/subscriptions",
     "non_subscriptions": {},
-    "original_app_user_id": "EED0A7DC-9A59-4743-BAE0-1E17A209E002",
+    "original_app_user_id": "EED0A7DC-9A59-4743-BAE0-1E17A209E000",
     "original_application_version": "1035",
     "original_purchase_date": "2021-07-19T05:40:07Z",
     "other_purchases": {},

@@ -1,6 +1,6 @@
 var obj = JSON.parse($request.body);
 obj = {
-  "fetch_token" : ""
+  "fetch_token" : "",
   "observer_mode" : false,
   "attributes" : {
 

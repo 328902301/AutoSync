@@ -1,8 +1,9 @@
 /*
+有待验证
 Loon：
-http-response ^https:\/\/api\.revenuecat\.com\/v1\/receipts requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/receipts requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/byour13/Script/main/1Blocker.js
 QX：
-^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/byour13/Script/main/1Blocker.js
 
 Loon&QX = api.revenuecat.com
 */

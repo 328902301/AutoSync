@@ -1,6 +1,7 @@
 # Advertising
 # > General
 DOMAIN-KEYWORD,adservice
+DOMAIN-KEYWORD,-toutiao.com
 
 # (A)
 # > Apple
@@ -169,3 +170,6 @@ DOMAIN,pvnapp.zol.com.cn
 # > WeChat
 DOMAIN,wxsnsdythumb.wxs.qq.com
 DOMAIN,wxsnsdy.wxs.qq.com
+
+DOMAIN,afd.baidu.com
+DOMAIN,mi.gdt.qq.com

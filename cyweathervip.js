@@ -23,7 +23,7 @@ obj = {
     "score": 2000,
     "is_xy_auto_renewal": false,
     "is_primary": true,
-    "phone_num": "",
+    "phone_num": "13411079966",
     "free_trial": 0,
     "last_acted_at": 4776814707,
     "vip_type": "s",
@@ -42,8 +42,8 @@ obj = {
       "created_at": 1621147570.368653059,
       "is_login": true
     },
-    "device_id": "",
-    "name": "",
+    "device_id": "12C73469-E13A-4A1F-86AE-1FA0B0DE0E00",
+    "name": "***9966",
     "bound_status": {
       "qq": {
         "username": "",
@@ -73,7 +73,7 @@ obj = {
       "caiyun": {
         "username": "",
         "is_bound": true,
-        "id": ""
+        "id": "60a0bfb26c9cf1007777ca6e"
       },
       "twitter": {
         "username": "",
@@ -95,7 +95,7 @@ obj = {
     "avatar": "https:\/\/caiyunapp.com\/imgs\/webtrs\/default.png",
     "is_vip": true,
     "gender": "0",
-    "_id": ""
+    "_id": "60a0bfb26c9cf1007777ca6e"
   },
   "rc": 0
 };

@@ -23,7 +23,7 @@ obj = {
     "score": 2000,
     "is_xy_auto_renewal": false,
     "is_primary": true,
-    "phone_num": "13411000000",
+    "phone_num": "13411009999",
     "free_trial": 0,
     "last_acted_at": 4776814707,
     "vip_type": "s",
@@ -43,7 +43,7 @@ obj = {
       "is_login": true
     },
     "device_id": "12C70000-E00A-4A1F-00AE-1FA8B2DE7E00",
-    "name": "***0000",
+    "name": "***9999",
     "bound_status": {
       "qq": {
         "username": "",

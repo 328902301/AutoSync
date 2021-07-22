@@ -19,7 +19,7 @@ obj = {
       "avatar_url" : "https://dss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.58a5f83c.eHXCba_otuycBYW7VKxCkA.jpg",
       "nick_name" : "charliii",
       "follow_source" : "",
-      "uname" : "钟炬伸",
+      "uname" : "yyds",
       "vip_type" : 2,
       "black_flag" : 0,
       "vip_level" : 1,

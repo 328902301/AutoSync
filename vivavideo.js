@@ -2,9 +2,9 @@
 Loon：
 http-response ^https:\/\/api\.revenuecat\.com\/v1\/receipts requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
 QX：
-^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/dg8sfxzovqa9t\.cloudfront\.net\/skyvpn\/ip\/v2\/getCountryGroup* url script-response-body https://raw.githubusercontent.com/byour13/Script/main/vivavideo.js
 
-Loon&QX = api.revenuecat.com
+Loon&QX = dg8sfxzovqa9t.cloudfront.net
 */
 
 var obj = JSON.parse($response.body);

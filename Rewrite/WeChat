@@ -1,0 +1,2 @@
+# 去微信公众号广告
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://github.com/DivineEngine/Profiles/raw/master/Surge/Rewrite/WeChat.json

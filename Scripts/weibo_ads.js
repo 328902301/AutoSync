@@ -1,4 +1,5 @@
 /*
+By yichahucha
 去除微博信息流广告
 */
 

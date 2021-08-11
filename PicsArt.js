@@ -1,6 +1,6 @@
 /*
 QX：
-^https:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/byour13/Script/main/PicsArt.js
 
 Loon&QX = api.meiease.cn
 */

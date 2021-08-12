@@ -1,6 +1,6 @@
 /*
 By NobyDa
-去除微信公众号文章底部广告
+微信 去除公众号文章底部广告
 */
 
 var obj = JSON.parse($response.body);

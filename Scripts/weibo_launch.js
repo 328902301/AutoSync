@@ -1,6 +1,6 @@
 /*
 By yichahucha
-去除微博开屏广告
+微博 去除开屏广告
 */
 
 const path1 = "/interface/sdk/sdkad.php";

@@ -1,5 +1,5 @@
 /*
-去除哔哩哔哩开屏广告
+哔哩哔哩 去除开屏广告
 */
 
 let body = $response.body

@@ -1,6 +1,6 @@
 /*
 By yichahucha
-去除微博信息流广告
+微博 去除信息流广告
 */
 
 const path1 = "/groups/timeline";

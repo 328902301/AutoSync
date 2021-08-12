@@ -1,6 +1,6 @@
 /*
 By yichahucha
-显示京东历史价格
+京东 展示商品历史价格
 */
 
 const path1 = "serverConfig";

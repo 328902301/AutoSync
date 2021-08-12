@@ -1,3 +1,8 @@
+/*
+By blackmatrix7
+什么值得买 去广告
+*/
+
 const scriptName = "什么值得买";
 let magicJS = MagicJS(scriptName, "INFO");
 

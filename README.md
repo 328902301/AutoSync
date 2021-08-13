@@ -22,7 +22,10 @@
 
 # 资源解析器使用说明
 
-1. 在 Quantumult X 配置文件中`general`部分，加入`resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js`；
+1. 在 Quantumult X 配置文件中`general`部分，加入
+```Java
+resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js
+```
 >⚠️⚠️ 如提示`没有自定义解析器`，请`长按`右下角风车后，点击左侧`刷新`按钮，然后重新运行 Quantumult X ；
 2. 假设原始订阅链接为`https://xxx.txt`，你想要保留的参数为`in=tls+ss`，想要过滤的参数为`out=http+2`；
 >⚠️⚠️ 请注意下面订阅链接后一定要加`#`符号；

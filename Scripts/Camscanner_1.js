@@ -1,6 +1,6 @@
 /*
 By ICU2Vmile
-扫描全能王Pro
+扫描全能王 解锁VIP
 */
 
 let obj = JSON.parse($response.body);

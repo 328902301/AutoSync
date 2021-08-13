@@ -1,5 +1,5 @@
 /*
-By 
+By KOP-XIAO
 Quantumult X 资源解析器
 */
 

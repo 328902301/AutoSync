@@ -29,10 +29,11 @@
 
 # 资源解析器使用说明
 
-0️. 在 Quantumult X 配置文件中`general`部分，加入 
-`<resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js>`；
+0️. 在 Quantumult X 配置文件中`general`部分，加入
 
-⚠️⚠️如提示`没有自定义解析器`，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app ，直到出现解析器说明；
+    `resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js`；
+
+    ⚠️⚠️如提示`没有自定义解析器`，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app ，直到出现解析器说明；
 
 1. 假设原始订阅连接为:`https://xxx.txt`；
 

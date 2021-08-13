@@ -22,7 +22,7 @@
 
 # 资源解析器使用说明
 
-1. 在 Quantumult X 配置文件中`general`部分，加入
+1. 在 Quantumult X 配置文件中`general`部分，加入下列代码；
 ```Java
 resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js
 ```

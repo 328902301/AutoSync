@@ -37,8 +37,8 @@
 
 >请注意下面订阅链接后一定要加`#`符号；
 
-3️. 则填入 Quantumult X 的引用链接为`https://xxx.txt#in=tls+ss&out=http+2`；
+   3️. 则填入 Quantumult X 的引用链接为`https://xxx.txt#in=tls+ss&out=http+2`；
 
-4️. 填入上述链接, 并打开资源解析器开关。
+   4️. 填入上述链接, 并打开资源解析器开关。
 
 ------------------------------

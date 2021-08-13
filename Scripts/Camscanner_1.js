@@ -1,5 +1,7 @@
-# By ICU2Vmile
-# 扫描全能王Pro
+/*
+By ICU2Vmile
+扫描全能王Pro
+*/
 
 let obj = JSON.parse($response.body);
 obj = {

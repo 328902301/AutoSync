@@ -1,6 +1,7 @@
 /*
 By NobyDa
-91短视频 解除部分限制
+91短视频 解锁部分限制
+http://download.91porn.love
 */
 
 let body = $response.body;

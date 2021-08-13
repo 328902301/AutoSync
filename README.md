@@ -31,7 +31,7 @@
 
 0️. 在 Quantumult X 配置文件中`general`部分，加入`resource_parser_url=https://github.com/RuCu6/QuanX/raw/main/qx_parser.js`；
 
-   ⚠️⚠️如提示`没有自定义解析器`，请`长按`右下角风车后，点击左侧`刷新`按钮，更新资源，然后后台退出 Quantumult X ，直到出现解析器说明；
+   ⚠️⚠️如提示`没有自定义解析器`，请`长按`右下角风车后，点击左侧`刷新`按钮，然后重新运行 Quantumult X ；
 
 1. 假设原始订阅连接为:`https://xxx.txt`；
 

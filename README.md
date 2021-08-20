@@ -3,7 +3,10 @@
 
 ------------------------------
 
-配置链接：https://raw.githubusercontent.com/RuCu6/QuanX/main/RuCu6.conf
+配置文件链接：
+```Java
+https://raw.githubusercontent.com/RuCu6/QuanX/main/RuCu6.conf
+```
 
 # 配置说明
 

@@ -14,16 +14,16 @@ HOST-SUFFIX, t.me
 HOST-SUFFIX, tdesktop.com
 HOST-SUFFIX, telega.one
 HOST-SUFFIX, telegra.ph
-HOST-SUFFIX, telegram.dog
-HOST-SUFFIX, telegram.me
-HOST-SUFFIX, telegram.org
-HOST-SUFFIX, telegram.space
-HOST-SUFFIX, telegramdownload.com
+HOST-SUFFIX.dog
+HOST-SUFFIX.me
+HOST-SUFFIX.org
+HOST-SUFFIX.space
+HOST-SUFFIXdownload.com
 HOST-SUFFIX, telesco.pe
 HOST-SUFFIX, tg.dev
 HOST-SUFFIX, tx.me
 HOST-KEYWORD, nicegram
-HOST-KEYWORD, telegram
+HOST-KEYWORD
 IP-CIDR, 109.239.140.0/24
 IP-CIDR, 149.154.160.0/20
 IP-CIDR, 205.172.60.0/22

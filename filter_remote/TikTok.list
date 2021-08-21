@@ -18,11 +18,11 @@ HOST-SUFFIX, musical.ly
 HOST-SUFFIX, sgpstatp.com
 HOST-SUFFIX, snssdk.com
 HOST-SUFFIX, tik-tokapi.com
-HOST-SUFFIX, tiktok.com
-HOST-SUFFIX, tiktokcdn.com
-HOST-SUFFIX, tiktokv.com
-HOST-KEYWORD,-tiktokcdn-com
+HOST-SUFFIX.com
+HOST-SUFFIXcdn.com
+HOST-SUFFIXv.com
+HOST-KEYWORD, -tiktokcdn-com
 HOST-KEYWORD, musical.ly
-HOST-KEYWORD, tiktok
-HOST-KEYWORD, tiktokv
-USER-AGENT*,TikTok
+HOST-KEYWORD
+HOST-KEYWORDv
+USER-AGENT*

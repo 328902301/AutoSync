@@ -3,11 +3,9 @@
 官方网站：s7aa.cn
 
 QX:
-
 # 麻豆短视频解锁会员
 ^https:\/\/mda\..+\.site\/api\/(auth\/login|mine\/myHome|wallet\/query) url script-response-body https://6678888.xyz/quantumultX/mddsp.js
 ^https:\/\/mda\..+\.site\/api\/operation\/video\/buy url response-body "code":\d+ response-body "code":200
-
 
 [mitm]
 hostname = mda.*.site

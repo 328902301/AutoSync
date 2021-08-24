@@ -5,7 +5,7 @@
 电报私聊 @shaogebot
 QQ群：654371081
 
-圈X配置：
+QX：
 [rewrite_local]
 ^https:\/\/cn1\.invit\.vip\/users\/info url script-response-body https://raw.githubusercontent.com/sngxpro/QuantumultX/master/qing/qing.js
 [mitm]

@@ -2,11 +2,9 @@
 微信公众号：ios黑科技
 官方网站：s7aa.cn
 
-圈X:
-
+QX:
+# AV波波解锁VIP无限看
 [rewrite_local]
-
-#AV波波解锁VIP无限看
 ^https:\/\/s\.(.+)\.com\/s2\/.+ url script-request-header https://6678888.xyz/quantumultX/avbb.js
 
 [mitm]

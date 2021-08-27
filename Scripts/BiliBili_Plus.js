@@ -1,3 +1,7 @@
+/*
+By blackmatrix7
+*/
+
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";

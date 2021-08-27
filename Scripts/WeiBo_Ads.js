@@ -1,7 +1,7 @@
 /*
 By yichahucha
 README：https://github.com/yichahucha/surge/tree/master
- */
+*/
 
 const path1 = "/groups/timeline";
 const path2 = "/statuses/unread";

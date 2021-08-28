@@ -28,7 +28,7 @@ https://raw.githubusercontent.com/RuCu6/QuanX/main/gooxtuu.conf
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
 ```Java
-resource_parser_url=https://raw.githubusercontent.com/RuCu6/QuantumultX/master/Scripts/resource-parser.js
+resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
 ```
 >⚠️⚠️ 如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
 2. 假设原始订阅链接为 `https://xxx.txt` ，你想要保留的参数为 `in=tls+ss` ，想要过滤的参数为 `out=http+2` ；

@@ -7,5 +7,5 @@ QX：
 Loon&QX = i.cls.cn
 */
 var body =
-$response.body.replace(/\u0075\u006e\u006c\u006f\u0063\u006b\u0022\u003a\u005c\u0064/g,'\u0075\u006e\u006c\u006f\u0063\u006b\u0022\u003a\u0032').replace(/\u0075\u006e\u006c\u006f\u0063\u006b\u005f\u006e\u0075\u006d\u0022\u003a\u005c\u0064\u002b/g,'\u0075\u006e\u006c\u006f\u0063\u006b\u005f\u006e\u0075\u006d\u0022\u003a\u0030')
+$response.body.replace(/unlock":\d/g,'unlock":2').replace(/unlock_num":\d+/g,'unlock_num":0')
 $done({body});

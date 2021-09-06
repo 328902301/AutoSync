@@ -1,6 +1,10 @@
+
+[URL Rewrite]
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ http://musicpay.kuwo.cn/music.pay?uid=2 302
+
 [Script]
 # 酷我音乐SVIP
-http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
+http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/kuwo.js
 # 彩云天气 Svip
 http-response ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
 #VSCO 解锁高级特权
@@ -30,7 +34,7 @@ http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=
 # VUE pro
 http-response https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
 #小影 解锁高级功能
-http-response ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/QuantumultX/master/Script/vivavideo.js
+http-response ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js
 # NiChi 解锁素材
 http-response https?:\/\/m(p|ini-hk)\.bybutter\.com\/mood\/(official-templates|privileges) requires-body=1,max-size=524288,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/NiChi.js
 

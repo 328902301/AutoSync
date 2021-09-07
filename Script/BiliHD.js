@@ -1,8 +1,6 @@
 /*
 bilibili fan drama open 1080P+
 
-From https://github.com/Sunert/Scripts/blob/master/Script/Bilibili/BiliHD.js
-
 QX:
 https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body BiliHD.js
 
@@ -28,7 +26,7 @@ if (url.indexOf(path2) != -1){
     obj["data"]["vip"]["type"] = 2;
     obj["data"]["vip"]["status"] = 1;
     obj["data"]["vip"]["vip_pay_type"] = 1;
-    obj["data"]["vip"]["due_date"] = 1669824160;
+    obj["data"]["vip"]["due_date"] = 1796054400000;
 
    body=JSON.stringify(obj);
  };
@@ -39,7 +37,7 @@ if (url.indexOf(path3) != -1){
      obj["data"]["vip"]["type"] = 2;
      obj["data"]["vip"]["status"] = 1;
      obj["data"]["vip"]["vip_pay_type"] = 1;
-     obj["data"]["vip"]["due_date"] = 1669824160;
+     obj["data"]["vip"]["due_date"] = 1796054400000;
    body=JSON.stringify(obj);
 };
    

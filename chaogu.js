@@ -1,6 +1,6 @@
 /*
 QX：
-^http:\/\/xgpiao\.net:6693\/login* script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^http:\/\/xgpiao\.net:6693\/login* script-response-body https://raw.githubusercontent.com/byour13/Script/main/chaogu.js
 
 xgpiao.net:6693
 */

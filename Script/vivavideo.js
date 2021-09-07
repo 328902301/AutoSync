@@ -5,7 +5,7 @@
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/QuantumultX/master/Script/vivavideo.js
+^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js
 
 [mitm]
 hostname = api-chn.rthdo.com
@@ -14,7 +14,7 @@ hostname = api-chn.rthdo.com
 Surge4 or Loon:
 
 [Script]
-http-response ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/QuantumultX/master/Script/vivavideo.js
+http-response ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js
 
 [MITM]
 hostname = api-chn.rthdo.com

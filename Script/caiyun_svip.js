@@ -4,11 +4,11 @@
  * 
  * Quantumult X
  * [rewrite_local]
- * ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/Scripts/scripts/caiyun_svip.js
+ * ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
  *
  * Surge or Loon
  * [Script]
- *http-response ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
+ *http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
  * 
  */
 

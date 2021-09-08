@@ -31,5 +31,6 @@ http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=
 http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/iEwha/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_标签页处理
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/iEwha/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_我的页面处理
 
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BiliHD.js, tag=1080P
 [MITM]
-hostname = app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com
+hostname = app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com, api.bilibili.com

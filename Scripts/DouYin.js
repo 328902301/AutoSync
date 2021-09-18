@@ -1,3 +1,7 @@
+/*
+By Chlor
+*/
+
 const enabled_live = false; // 开启直播推荐，默认关闭
 
 try {

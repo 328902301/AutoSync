@@ -19,4 +19,3 @@ if (obj.data.match(/^[A-Z0-9]{1000,40000}$/)) {
 $done({
 	body: JSON.stringify(obj)
 });
-  // From JGG, Welcome to focus on my TG channel  https://t.me/f4thorHCC

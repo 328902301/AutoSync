@@ -24,8 +24,3 @@
   7.添加节点/订阅，并左滑添加订阅标签（重要，不添加标签是无法筛选的）<br>
   
   8.开始使用<br>
-
-TIPS:
-<br>[O7Y0-Quantumult X.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
-<br>[O7Y0-Quantumult X-icon.conf](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf)
-<br>没什么差别，只是一个图标是白色一个是图标是彩色

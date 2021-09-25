@@ -249,7 +249,6 @@
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/neteasemusic.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/neteasemusic.png"
-      ]
   }],
   "task": [{
             "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true",

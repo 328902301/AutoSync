@@ -229,32 +229,27 @@
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/12306.png", 
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/12306.png"
       ]
-    },   
-    {
-      "id": "jdzz",
-      "name": "京东赚赚小程序",
+        {
+      "id": "NeteaseMusic",
+      "name": "网易云音乐",
+      "keys": ["chavy_cookie_neteasemusic"],
       "settings": [
+        { "id": "CFG_neteasemusic_retryCnt", "name": "重试次数", "val": 10, "type": "text", "desc": "一直尝试签到直至出现“重复签到”标识!" },
         {
-          "id": "zz_showLog",
-          "name": "日志开关",
-          "val": false,
-          "type": "boolean",
-          "desc": "是否打开接口返回详情日志打印，默认关闭"
-        },
-        {
-          "id": "jd_zzExchangePrize",
-          "name": "红包金额",
-          "val": "",
+          "id": "CFG_neteasemusic_retryInterval",
+          "name": "重试间隔 (毫秒)",
+          "val": 500,
           "type": "text",
-          "desc": "填写要兑换的红包金额，不填写不自动兑换，例如：0.25，2，5，10，50，100"
+          "desc": "每次重试间隔时间 (毫秒)！"
         }
       ],
-      "author": "@whyour",
-      "repo": "https://github.com/whyour/hundun/blob/master/quanx/jdzz.js",
-      "script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js",
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/neteasemusic",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js",
       "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdzz_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png"]
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/neteasemusic.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/neteasemusic.png"
+      ]
   }],
   "task": [{
             "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true",

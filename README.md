@@ -1,4 +1,4 @@
 # QuantumultX
 
-自用Quantumult X规则
-基于@Orz-3的配置修改
+##自用Quantumult X规则
+##基于 @Orz-3 的配置修改

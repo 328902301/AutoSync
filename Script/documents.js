@@ -11,7 +11,7 @@ var obj= {
       "receiptStatus": "ok",
       "subscriptionExpirationDate": "17:48 25/11/2019",
       "isEligibleForIntroPeriod": false,
-      "originalTransactionId": "20000625420102",
+      "originalTransactionId": "710000781084863",
       "productName": "subscription",
       "isInBillingRetryPeriod": false,
       "type": "subscription",
@@ -29,7 +29,7 @@ var obj= {
   ],
   "isDocuments6User": true,
   "isEligibleForIntroPeriod": false,
-  "originalTransactionId": "20000625420102",
+  "originalTransactionId": "710000781084863",
   "isEligibleFor": [
     "winback"
   ],
@@ -39,7 +39,7 @@ var obj= {
     "com.readdle.ReaddleDocsIPad.subscription.year50_upd_user"
   ],
   "bundleId": "com.readdle.ReaddleDocsIPad",
-  "receiptId": 1530908572000,
+  "receiptId": 1604898429000,
   "chargingPlatform": "iOS AppStore",
   "subscriptionState": "active",
   "subscriptionAutoRenewStatus": "autoRenewOff",

@@ -3,14 +3,14 @@
 QuantumultX:
 
 [rewrite_local]
-https://lchttpapi.xczim.com/* url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/xcz.js
+https://lchttpapi.xczim.com/* url script-response-body xcz.js
 [mitm]
 hostname =lchttpapi.xczim.com
 ***************************
 Surge4 or Loon: 
 
 [Script]
-http-response https://lchttpapi.xczim.com/* requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/xcz.js
+http-response https://lchttpapi.xczim.com/* requires-body=1,max-size=-1,script-path=xcz.js
 
 [MITM]
 hostname = lchttpapi.xczim.com

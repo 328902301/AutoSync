@@ -4,7 +4,7 @@
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
+^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body ulike.js
 [mitm]
 hostname = commerce-api.faceu.mobi
 
@@ -12,7 +12,7 @@ hostname = commerce-api.faceu.mobi
 Surge4 or Loon: 
 
 [Script]
-http-response ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
+http-response ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info requires-body=1,max-size=0,script-path=ulike.js
 [MITM]
 hostname = commerce-api.faceu.mobi
 

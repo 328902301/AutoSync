@@ -7,7 +7,7 @@ QuantumultX:
 
 [rewrite_local]
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ url 302 http://musicpay.kuwo.cn/music.pay?uid=2
-^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/kuwo.js
+^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body kuwo.js
 [mitm]
 hostname = musicpay.kuwo.cn, vip1.kuwo.cn,
 
@@ -16,7 +16,7 @@ Surge4 or Loon:
 
 [Script]
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+  http://musicpay.kuwo.cn/music.pay?uid=2 302
-http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
+http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) requires-body=1,max-size=0,script-path=Kuwo.js
 [MITM]
 hostname = musicpay.kuwo.cn, vip1.kuwo.cn,
 

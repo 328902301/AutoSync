@@ -3,14 +3,14 @@
 =======Quantumult X=======
 
 [rewrite_local]
-^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mix.js
+^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ url script-response-body mix.js
 [MITM]
 hostname = bmall.camera360.com
 
 ========Surge==========
 
 [Script]
-camera360-Mix = requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mix.js,type=http-response,pattern= ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$
+camera360-Mix = requires-body=1,script-path=mix.js,type=http-response,pattern= ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$
 
 [MITM]
 hostname = bmall.camera360.com

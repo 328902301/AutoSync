@@ -4,7 +4,7 @@
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/adguard.js
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body adguard.js
 [mitm]
 hostname = mobile-api.adguard.com
 
@@ -12,7 +12,7 @@ hostname = mobile-api.adguard.com
 Surge4 or Loon: 
 
 [Script]
-http-response ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/adguard.js
+http-response ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ requires-body=1,max-size=-1,script-path=adguard.js
 
 [MITM]
 hostname = mobile-api.adguard.com

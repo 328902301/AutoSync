@@ -9,7 +9,7 @@
 
 ### 感谢：
  * [@NobyDa](https://github.com/NobyDa/Script/tree/master) 
- * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
+ * [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
  * [@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
  * [@Choler](https://github.com/Choler/Surge)
  * [@chavyleung](https://github.com/chavyleung)

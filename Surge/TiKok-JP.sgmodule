@@ -1,3 +1,6 @@
+#!name=TikTok解锁
+#!desc=最后更新时间 2021-12-1
+#!system=ios
 [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
 (?<=&mcc_mnc=)4 2 307

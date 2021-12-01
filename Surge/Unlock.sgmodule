@@ -44,7 +44,7 @@ Notability= type=http-response,pattern=https://notability.com/subscriptions requ
 
 
 [MITM]
-hostname =musicpay.kuwo.cn, vip1.kuwo.cn, biz.caiyunapp.com, vsco.co, api.revenuecat.com, lcs-mobile-cops.adobe.io, photos.adobe.io, commerce-api.faceu.mobi, license.pdfexpert.com, ap*.intsig.net, mb3admin.com, mobile-api.adguard.com, getway.radio.cn,lchttpapi.xczim.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,notability.com          
+hostname = %APPEND% musicpay.kuwo.cn, vip1.kuwo.cn, biz.caiyunapp.com, vsco.co, api.revenuecat.com, lcs-mobile-cops.adobe.io, photos.adobe.io, commerce-api.faceu.mobi, license.pdfexpert.com, ap*.intsig.net, mb3admin.com, mobile-api.adguard.com, getway.radio.cn,lchttpapi.xczim.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,notability.com          
 
 
 

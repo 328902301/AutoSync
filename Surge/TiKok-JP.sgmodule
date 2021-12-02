@@ -1,5 +1,5 @@
 #!name=TikTok解锁
-#!desc=最后更新时间 2021-12-1
+#!desc=解锁日区和去水印
 #!system=ios
 [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
@@ -8,7 +8,6 @@
 (^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
 
 [Script]
-http-response=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/TikTok.js, requires-body=true, timeout=10, tag=TikTok去水印
-
+http-response=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/TikTok.js, requires-body=true, timeout=10
 [MITM]
 hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com

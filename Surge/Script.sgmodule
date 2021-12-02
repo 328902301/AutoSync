@@ -1,10 +1,15 @@
 #!name=脚本合集
-#!desc=其他脚本
+#!desc=Boxjs、Sub-Store、Bilibili换区去广告、Siri 搜索建议
 #!system=ios
 [Rule]
+URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikipedia_for_Look_Up.list,Proxy
 [URL Rewrite]
+#> Redirect Google Search Service
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+#> Redirect Google Maps Service
+^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 # > Douyin(<= 16.2.0) 
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 [Script]
@@ -27,8 +32,6 @@ bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\
 # > bilbii换区,评分
 换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-//1080P+
-1080 = type=http-request,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BiliHD.js
 # > 空气质量
 空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/iOS15_Weather_AQI_US.js
 #> Siri 搜索建议
@@ -40,4 +43,4 @@ http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/search\?(.*) script-path
 http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/card\?(.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js, timeout=3, tag=Siri_Suggestions
 
 [MITM]
-hostname = %APPEND% sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, api.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,
+hostname = %APPEND% www.google.cn, sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,

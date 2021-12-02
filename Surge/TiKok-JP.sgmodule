@@ -1,5 +1,5 @@
-#!name=TikTok解锁
-#!desc=解锁日区和去水印
+#!name=TikTok
+#!desc=解锁日区和去水印 （v21.1.0支持向下兼容）
 #!system=ios
 [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307

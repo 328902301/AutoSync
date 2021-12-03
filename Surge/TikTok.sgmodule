@@ -1,5 +1,5 @@
 #!name=TikTok去水印
-#!desc=与抖音冲突 
+#!desc=与抖音去广告水印重写冲突，开启无法刷推荐
 #!system=ios
 [URL Rewrite]
 #去水印

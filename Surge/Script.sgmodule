@@ -1,5 +1,5 @@
 #!name=Scripts
-#!desc=Boxjs、Sub-Store、Bilibili换区去广告、Siri 搜索建议
+#!desc=Boxjs、Sub-Store、Bilibili换区去广告、Siri 搜索建议、抖音去广告水印
 #!system=ios
 [Rule]
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT

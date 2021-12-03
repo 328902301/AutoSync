@@ -1,5 +1,5 @@
 #!name=Scripts
-#!desc=Boxjs、Sub-Store、Bilibili换区去广告、Siri 搜索建议、抖音去广告水印
+#!desc=微信公众号去广告、Bilibili换区去广告、Siri 搜索建议、抖音去广告水印
 #!system=ios
 [Rule]
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
@@ -13,6 +13,8 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 # > Douyin(<= 16.2.0) 
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 [Script]
+# 微信公众号去广告
+微信= type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 # > Boxjs 稳定版
 boxjscom = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
 # >Sub-Store
@@ -43,4 +45,4 @@ http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/search\?(.*) script-path
 http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/card\?(.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js, timeout=3, tag=Siri_Suggestions
 
 [MITM]
-hostname = %APPEND% www.google.cn, sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,

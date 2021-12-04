@@ -1,5 +1,5 @@
 #!name=Block YouTube Advertising
-#!desc=仅用于视频广告，不适用允许 UDP 转发的节点及 Premium。
+#!desc=仅用于视频广告，不适用允许 UDP 转发的节点及 Premium
 #!system=ios
 
 [URL Rewrite]

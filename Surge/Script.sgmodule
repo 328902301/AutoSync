@@ -2,15 +2,16 @@
 #!desc=微信公众号去广告、Bilibili换区去广告、Siri搜索建议、抖音去广告&水印
 #!system=ios
 [Rule]
+#> 抖音(<= 16.2.0) 
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
-# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
+#> Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikipedia_for_Look_Up.list,Proxy
 [URL Rewrite]
 #> Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 #> Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
-# > Douyin(<= 16.2.0) 
+#> 抖音(<= 16.2.0) 
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 #> Siri 搜索建议
 # Bag (iOS/macOS)
@@ -26,15 +27,15 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 # tv Movies and TV Show Card (macOS)
 (^https?:\/\/api.*\.smoot\.apple\.)(com|cn)(\/card.*)(card_locale=[a-zA-z\-]{2,7}_[A-Z]{2})(.*)(cc=[A-Z]{2})(.*)(include=(?:tv|movies))(.*)(q=(?:tv|movies)%3A)(.*)(%2F)([a-z]{2}-[A-Z]{2})(.*) $1com$3$4$5cc=US$7$8$9$10$11$12$13$14 header
 [Script]
-# 微信公众号去广告
+#> 微信公众号去广告
 微信= type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-# > Boxjs 稳定版
+#> Boxjs 稳定版
 boxjscom = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
-# >Sub-Store
+#> Sub-Store
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
-# > Douyin(<= 16.2.0) 
+#> 抖音(<= 16.2.0) 
 douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
-# >Bilibili
+#> Bilibili
 // 整体栏的布局修改(包括“首页”右上角、下边 tab 等)
 http-response ^https://app\.bilibili\.com/x/resource/show/tab(/v2)?\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_tab.js
 // “首页”的推荐
@@ -44,12 +45,12 @@ http-response ^https://app\.bilibili\.com/x/v2/account/mine\?access_key, require
 // 动态广告
 bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=0
 bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
-# > bilbii换区,评分
+#> bilbii换区,评分
 换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-# > 空气质量
+#> 美标空气质量
 空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/iOS15_Weather_AQI_US.js
-# > 仅更改手机端百度全站的 User-Agent
+#> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
 [MITM]
 hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,*.baidu.com

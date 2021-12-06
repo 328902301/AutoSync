@@ -49,6 +49,7 @@ bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\
 搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 # > 空气质量
 空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/iOS15_Weather_AQI_US.js
-
+# > 仅更改手机端百度全站的 User-Agent
+BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,*.baidu.com

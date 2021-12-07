@@ -1,5 +1,5 @@
 #!name=Scripts
-#!desc=微信公众号去广告、Bilibili换区去广告、Siri搜索建议、抖音去广告&水印
+#!desc=微信公众号去广告、Siri搜索建议、抖音去广告&水印
 #!system=ios
 [Rule]
 #> 抖音(<= 16.2.0) 
@@ -35,18 +35,9 @@ boxjscom = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 #> 抖音(<= 16.2.0) 
 douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
-#> Bilibili
-// “我的”的修改
-bilibili_mine = type=http-response,pattern=^https://app\.bilibili\.com/x/v2/account/mine\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_mine.js,script-update-interval=0
-// 动态广告
-bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=0
-bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
-#> bilbii换区,评分
-换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 #> 美标空气质量
-空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/iOS15_Weather_AQI_US.js
+空气质量 = type=http-response,pattern= ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.*,requires-body=true,max-size=0,script-path= https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
 #> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com, app.bilibili.com, grpc.biliapi.net, ap?.bilibili.com,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,*.baidu.com
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com

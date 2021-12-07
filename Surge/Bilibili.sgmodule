@@ -1,8 +1,7 @@
-#!name=bilibili换区&去广告(iOS15)
+#!name= Bilibili换区&去广告(iOS15)
 #!desc=开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
 
 [Script]
-#> Bilibili
 // “我的”的修改
 bilibili_mine = type=http-response,pattern=^https://app\.bilibili\.com/x/v2/account/mine\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_mine.js,script-update-interval=0
 // 动态广告
@@ -11,7 +10,6 @@ bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\
 #> bilbii换区,评分
 换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, grpc.biliapi.net, ap?.bilibili.com,

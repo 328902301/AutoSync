@@ -36,12 +36,6 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 #> 抖音(<= 16.2.0) 
 douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
 #> Bilibili
-// 整体栏的布局修改(包括“首页”右上角、下边 tab 等)
-http-response ^https://app\.bilibili\.com/x/resource/show/tab(/v2)?\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_tab.js
-// “首页”的推荐
-http-response ^https://app\.bilibili\.com/x/v2/feed/index\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_feed.js
-// “我的”的修改
-http-response ^https://app\.bilibili\.com/x/v2/account/mine\?access_key, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_mine.js
 // 动态广告
 bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=0
 bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
@@ -53,4 +47,4 @@ bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\
 #> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com,app.bilibili.com, ap?.bilibili.com, grpc.biliapi.net,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,*.baidu.com
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com, app.bilibili.com, grpc.biliapi.net, ap?.bilibili.com,weather-data.apple.com,-cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn,*.baidu.com

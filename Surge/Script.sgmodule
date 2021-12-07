@@ -36,6 +36,8 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 #> 抖音(<= 16.2.0) 
 douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
 #> Bilibili
+// “我的”的修改
+bilibili_mine = type=http-response,pattern=^https://app\.bilibili\.com/x/v2/account/mine\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_mine.js,script-update-interval=0
 // 动态广告
 bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=0
 bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0

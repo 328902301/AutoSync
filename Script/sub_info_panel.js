@@ -5,7 +5,7 @@ Surge配置参考注释，感谢@asukanana,感谢@congcong.
 ----------------------------------------
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#5AC8FA
 
 [Panel]
 Sub_info = script-name=Sub_info,update-interval=600
@@ -22,7 +22,7 @@ Sub_info = script-name=Sub_info,update-interval=600
 
 可选参数"icon=xxx" 可以自定义图标，内容为任意有效的 SF Symbol Name，如 bolt.horizontal.circle.fill，详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
 
-可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
+可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=##5AC8FA
 ----------------------------------------
 */
 
@@ -55,7 +55,7 @@ Sub_info = script-name=Sub_info,update-interval=600
     title: `${args.title} | ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
-    "icon-color": args.color || "#007aff",
+    "icon-color": args.color || "#5AC8FA",
   });
 })();
 

@@ -2,6 +2,9 @@
 #!desc=信息面板
 
 [Panel]
+#Surge Pro标题,可显示启动时间,点击刷新为重载配置
+SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
+
 #节点检测 
 ipcheck = script-name=ipcheck, title="节点信息", content="请刷新", style=info, update-interval=1
 
@@ -9,6 +12,9 @@ ipcheck = script-name=ipcheck, title="节点信息", content="请刷新", style=
 stream-checktool = script-name=stream-check, title="流媒体解锁检测", content="请刷新面板", update-interval=-1
 
 [Script]
+#Surge Pro标题,可显示启动时间,点击刷新为重载配置
+SurgePro_ReloadProfile = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/surgepro_reloadprofile.js ,argument=icon=crown.fill&color=#f6c970
+
 #节点检测
 ipcheck = type=generic, timeout=3, script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ipcheck.js
 

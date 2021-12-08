@@ -10,7 +10,7 @@ $httpClient.get(url, function(error, response, data){
     title: "节点相关信息",
     content: `IP位置: ${emoji}${country} - ${city}\n运营商: ${isp}`,
     icon: "globe.asia.australia.fill"
-    icon-color: "#93DB70"
+    color: "#93DB70"
   }
   $done(body);
 });

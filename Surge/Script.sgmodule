@@ -24,6 +24,14 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 # tv Movies and TV Show Card (macOS)
 (^https?:\/\/api.*\.smoot\.apple\.)(com|cn)(\/card.*)(card_locale=[a-zA-z\-]{2,7}_[A-Z]{2})(.*)(cc=[A-Z]{2})(.*)(include=(?:tv|movies))(.*)(q=(?:tv|movies)%3A)(.*)(%2F)([a-z]{2}-[A-Z]{2})(.*) $1com$3$4$5cc=US$7$8$9$10$11$12$13$14 header
 
+# 知乎网页直接看
+^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+
+[Header Rewrite]
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+^https?:\/\/www\.zhihu\.com header-replace User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.7 SearchCraft/2.7.7 (Baidu; P1 9.0.0)
+
 [Script]
 #> 微信公众号去广告
 微信= type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
@@ -35,6 +43,8 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 空气质量 = type=http-response,pattern= ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.*,requires-body=true,max-size=0,script-path= https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
 #> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
-
+# 知乎网页直接看
+知乎 = type=http-response,pattern=^https://zhuanlan\.zhihu\.com/p/,requires-body=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js,script-update-interval=0
+知乎 = type=http-response,pattern=^https://www\.zhihu\.com/question/,requires-body=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js,script-update-interval=0
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com,www.zhihu.com,zhuanlan.zhihu.com

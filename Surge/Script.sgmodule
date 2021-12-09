@@ -1,20 +1,15 @@
 #!name=Scripts
-#!desc=微信公众号去广告、Siri搜索建议、抖音去广告&水印
+#!desc=微信公众号去广告、Siri搜索建议、美标空气质量、百度User-Agent
 #!system=ios
 [Rule]
-#> 抖音(<= 16.2.0) 
-URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
-URL-REGEX,^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/,REJECT-DROP
-URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/,REJECT-DROP
 #> Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikipedia_for_Look_Up.list,Proxy
+
 [URL Rewrite]
 #> Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 #> Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
-#> 抖音(<= 16.2.0) 
-^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 #> Siri 搜索建议
 # Bag (iOS/macOS)
 (^https?:\/\/api.*\.smoot\.apple\.)(com|cn)(\/bag.*)(cc=[A-Z]{2})(.*) $1com$3cc=US$5 header
@@ -28,6 +23,7 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 (^https?:\/\/api.*\.smoot\.apple\.)(com|cn)(\/search.*)(cardDomain=kg)(.*)(card_locale=[a-zA-z\-]{2,7}_[A-Z]{2})(.*)(cc=[A-Z]{2})(.*) $1com$3$4$5$6$7cc=US$9 header
 # tv Movies and TV Show Card (macOS)
 (^https?:\/\/api.*\.smoot\.apple\.)(com|cn)(\/card.*)(card_locale=[a-zA-z\-]{2,7}_[A-Z]{2})(.*)(cc=[A-Z]{2})(.*)(include=(?:tv|movies))(.*)(q=(?:tv|movies)%3A)(.*)(%2F)([a-z]{2}-[A-Z]{2})(.*) $1com$3$4$5cc=US$7$8$9$10$11$12$13$14 header
+
 [Script]
 #> 微信公众号去广告
 微信= type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
@@ -35,11 +31,10 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 boxjscom = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
 #> Sub-Store
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
-#> 抖音(<= 16.2.0) 
-douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
 #> 美标空气质量
 空气质量 = type=http-response,pattern= ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.*,requires-body=true,max-size=0,script-path= https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
 #> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
+
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store,api*.amemv.com, aweme.snssdk.com, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com
+hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com

@@ -23,13 +23,13 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 #> 仅更改手机端百度全站的 User-Agent
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/BaiduChangeUA.js
 
-#> Redirect Siri Suggestions Service 
+#> Siri搜索建议
 # Bag (iOS/macOS)
-http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/bag\?(.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js, timeout=3, tag=Siri_Suggestions
+Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/bag\?(.*),requires-body=0,script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js,script-update-interval=0
 # Spotlight & Look Up Search (iOS/macOS)
-http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/search\?(.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js, timeout=3, tag=Siri_Suggestions
+Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/search\?(.*),requires-body=0,script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js,script-update-interval=0
 # Siri Infomation Card (macOS)
-http-request ^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/card\?(.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js, timeout=3, tag=Siri_Suggestions
+Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/card\?(.*),requires-body=0,script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com,

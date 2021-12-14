@@ -12,7 +12,7 @@ net-info-panel=title="网络状态",content="请刷新",style=info,script-name=n
 ipcheck = script-name=ipcheck, title="节点信息", content="请刷新", style=info, update-interval=1
 
 #流媒体解锁检测 
-stream-checktool = script-name=stream-check, title="流媒体解锁检测", content="请刷新面板", update-interval=1
+stream-checktool = script-name=stream-check, title="流媒体解锁检测", content="请刷新面板", update-interval=-1
 
 #节假日预览，节日当天早上有提醒
 节假日提醒 = script-name=节假日提醒,update-interval=3600

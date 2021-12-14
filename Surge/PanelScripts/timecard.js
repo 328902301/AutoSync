@@ -72,6 +72,6 @@ function datenotice() {
 $done({
 title:"距离节假日，还有多少天？",
 icon:"hourglass.circle",
-'icon-color': "#F5FFFA",
+'icon-color': "#008B8B",
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })

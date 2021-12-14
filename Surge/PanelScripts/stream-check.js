@@ -9,7 +9,7 @@ const REQUEST_HEADERS = {
     title: '流媒体解锁检测',
     content: '',
     icon: 'play.tv.fill',
-    'icon-color': '#0089A7',
+    'icon-color': '#5AC8FA',
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     .then((result) => {

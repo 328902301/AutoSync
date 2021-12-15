@@ -4,7 +4,8 @@
 [Rule]
 #> Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikipedia_for_Look_Up.list,Proxy
-
+# > 屏蔽知乎网页版强制登陆弹窗
+URL-REGEX,^https?:\/\/static\.zhihu\.com\/[^\/]+\/(main|column)\.signflow\.[^.]+.js,REJECT
 [URL Rewrite]
 #> Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
@@ -32,4 +33,4 @@ Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(c
 Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(com|cn)\/card\?(.*),requires-body=0,script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri_Suggestions.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com,
+hostname = %APPEND% static.zhihu.com, www.google.cn, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,*.baidu.com,

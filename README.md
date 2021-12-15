@@ -1,5 +1,5 @@
 # 说明:
-- QuantumultX配置，搬运的图标&脚本.
+- QuantumultX、Surge，搬运的图标&脚本.
 
 - 所有脚本均来自互联网.
 

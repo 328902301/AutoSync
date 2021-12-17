@@ -8,6 +8,11 @@
 
 看看赚Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js, requires-body=true
 
+阅读Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/article\/info\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js, requires-body=true
+
+阅读Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/article\/complete\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js, requires-body=true
+
+阅读Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com/v5\/user\/stay\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% kd.youth.cn, kandian.wkandian.com
+hostname = %APPEND% ios.baertt.com, kd.youth.cn, kandian.wkandian.com

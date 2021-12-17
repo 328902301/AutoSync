@@ -4,9 +4,9 @@
 [Script]
 # 定时脚本Cookie
 # 中青看点
-浏览赚Cookie = type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js
+浏览赚Cookie = type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js, requires-body=true
 
-看看赚Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js
+看看赚Cookie= type=http-request,pattern=https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json ,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js, requires-body=true
 
 
 [MITM]

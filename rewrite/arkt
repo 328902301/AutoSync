@@ -1,4 +1,4 @@
 var body = $response.body;
-var reg1 = /expire_time =\d+/g;
+var reg1 = /expire_time =\d/g;
 body = body.replace(reg1, 'expire_time=4476655324');
 $done(body);

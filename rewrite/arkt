@@ -1,6 +1,0 @@
-var body = $response.body;
-var reg1 = /expired_at =/g;
-var reg2 = /is_activated=/g;
-body = body.data(reg1, 'expired_at =4476655324');
-body = body.data(reg2, 'is_activatede=999999999');
-$done(body);

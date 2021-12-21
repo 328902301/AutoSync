@@ -1,16 +1,7 @@
 # 录屏大师2.0.8解锁会员 Hausd0rff 下载地址http://t.cn/A6bwldmq
 ^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js
 
-# BoxJS Peng-YM 如果你是tf版 添加 #replace=chavy@box/chavy 需开启解析器 访问地址 http://127.0.0.1:9999
-
-^https?://boxjs.com url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js
-
-# Sub-Store Peng-YM 访问地址 https://sub-store.vercel.app/#/
-
-^https?:\/\/sub\.store url script-analyze-echo-response https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
-
 # 关闭谷歌安全搜索 DivineEngine
-
 (https:\/\/www\.google\.com([.a-z]+)?\/.+)(&safe=strict&)(.+) url 302 $1&safe=off
 https://www\.google\.com\.hk\/search\?q=([\w.]+)&.+ url 302 https://www.google.com.sg/search?q=$1&safe=off
 
@@ -21,17 +12,14 @@ https://www\.google\.com\.hk\/search\?q=([\w.]+)&.+ url 302 https://www.google.c
 (?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) url 307 17
 
 # 京东多合一 NobyDa 如需开启，添加 #replace=#JD^https@^https 需开启解析器
-
 #JD^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/source/script/468f015d9da1a01bf12975782203e978.js
 
 # 京东/淘宝历史价格显示 yichahucha
-
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price_lite.js
 ^http://.+/amdc/mobileDispatch url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
 ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
 
 # TestFlight下载修正 NobyDa
-
 ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 
 hostname = luping.cushuikeji.cn, sub.store, www.google.com,www.google.com.*, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, me-api.jd.com, ms.jr.jd.com, api.m.jd.com, trade-acs.m.taobao.com, testflight.apple.com

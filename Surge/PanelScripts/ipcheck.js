@@ -1,4 +1,4 @@
-let url = "http://ip-api.com/json/?lang=zh-CN"
+let url = "http://ip-api.com/json"
 
 $httpClient.get(url, function(error, response, data){
     let jsonData = JSON.parse(data)
@@ -7,12 +7,10 @@ $httpClient.get(url, function(error, response, data){
     let emoji = getFlagEmoji(jsonData.countryCode)
     let city = jsonData.city
     let isp = jsonData.isp
-    
   body = {
     title: "节点信息",
-    content: `IP信息: ${ip}\n运营商: ${isp}\nIP位置: ${emoji}${country} - ${city}`,
-    icon: "link.icloud",
-    'icon-color': "#5AC8FA"
+    content: `IP: ${ip}\nISP: ${isp}\n位置: ${emoji}${country} - ${city}`,
+    icon: "network"
   }
   $done(body);
 });

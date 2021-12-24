@@ -40,13 +40,13 @@
 |全能搜索 |
 |:--------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf
-|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf|
 
 |功能解锁 |
 |:---------------------------| 
 | https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
 | https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
+
 ### 感谢：
  * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
  * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)

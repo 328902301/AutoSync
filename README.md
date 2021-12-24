@@ -49,7 +49,7 @@
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
 * QuantumultX
- ``` bash
+  ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf
 * 全能搜索
 * Surge
@@ -63,7 +63,7 @@
   ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
 * QuantumultX
- ``` bash
+  ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 
 ### 感谢：

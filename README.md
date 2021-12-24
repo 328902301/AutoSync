@@ -8,8 +8,9 @@
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
 ### Surge&QuantumultX 部分模块
+
 |      Surge模块     |                                          :octocat: GitHub RAW                                             |                        QuantumultX重写    |                                             :octocat: GitHub RAW                                             |                        
-| :-------------: | :---------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+| :-------------: | :---------------------------------------------------------------------------------------------------------: | |:-------------: | :---------------------------------------------------------------------------------------------------------: | 
 | BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule)      |  BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Bilibili.conf)      |  
 | 抖音去广告水印  |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule)      |   抖音去广告水印  |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf)      |  
 | TikTok解锁 | [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule) | TikTok解锁 | [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf) |

@@ -34,14 +34,14 @@
 * Surge
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule
- * QuantumultX
+* QuantumultX
  ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf
 * YouTube去广告
- * Surge
+* Surge
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
- * QuantumultX
+* QuantumultX
  ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
 * 高级解锁
@@ -62,7 +62,7 @@
 * Surge
   ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
- * QuantumultX
+* QuantumultX
  ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 

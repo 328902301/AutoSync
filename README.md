@@ -10,10 +10,10 @@
 ### 配置
 * Surge
     ``` bash
-    `https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf`
+    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
 * QuantumultX
     ``` bash
-    `https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf`
+    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
 
 ### 部分模块和复写
 

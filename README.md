@@ -32,7 +32,6 @@
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
 * 全能搜索
-* Surge
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule
 * 其他

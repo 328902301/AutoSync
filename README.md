@@ -8,10 +8,10 @@
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
 ### `基本配置`
-* >Surge
+* >>>>Surge
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
-* >QuantumultX
+* >>>>QuantumultX
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
 
@@ -24,45 +24,45 @@
   ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音去广告水印
-* Surge
+* *Surge*
    ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule
-* QuantumultX
+* *QuantumultX*
   ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf
 * TikTok解锁
-* Surge
+* *Surge*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule
-* QuantumultX
+* *QuantumultX*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf
 * YouTube去广告
-* Surge
+* *Surge*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
-* QuantumultX
+* *QuantumultX*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
 * 高级解锁
-* Surge
+* *Surge*
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
-* QuantumultX
+* *QuantumultX*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf
 * 全能搜索
-* Surge
+* *Surge*
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule
-* QuantumultX
+* *QuantumultX*
    ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf
 * 其他
-* Surge
+* *Surge*
   ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
-* QuantumultX
+* *QuantumultX*
   ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 

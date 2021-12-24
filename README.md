@@ -44,13 +44,6 @@
 * *QuantumultX*
   ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
-* 高级解锁
-* *Surge*
-   ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
-* *QuantumultX*
-  ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf
 * 全能搜索
 * *Surge*
    ``` bash
@@ -58,13 +51,6 @@
 * *QuantumultX*
    ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf
-* 其他
-* *Surge*
-  ``` bash
-  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
-* *QuantumultX*
-  ``` bash
-  https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 
 ### 感谢：
  * [NobyDa](https://github.com/NobyDa/Script/tree/master) 

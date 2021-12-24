@@ -7,8 +7,8 @@
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
-### 配置
-* ```Surge```
+### `基本配置`
+* Surge
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
 * QuantumultX

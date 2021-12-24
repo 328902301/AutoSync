@@ -11,12 +11,12 @@
 
 |      Surge模块     |                                          :octocat: GitHub RAW                                             |                        QuantumultX重写    |                                             :octocat: GitHub RAW                                             |                
 | :-------------: | :---------------------------------------------------------------------------------------------------------: | :-------------: | :---------------------------------------------------------------------------------------------------------: | 
-| BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule)      |  BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Bilibili.conf)      |  
+| BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule)      |  BiliBili 去广告和换区  |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf)      |  
 | 抖音去广告水印  |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule)      |   抖音去广告水印  |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf)      |  
 | TikTok解锁 | [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule) | TikTok解锁 | [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf) |
 | YouTube去广告  |  [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule)  | YouTube去广告  |  [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf)  | 
 | Surge面板 |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Panels.sgmodule)     |    其他 |     [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf)     |    
-| 高级解锁   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule)       |  高级解锁   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Unlock.conf)       | 
+| 高级解锁   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule)       |  高级解锁   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf)       | 
 | 全能搜索   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule)       |  全能搜索   |      [点我下载](https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf)       | 
 
 ### 感谢：

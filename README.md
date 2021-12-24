@@ -17,39 +17,53 @@
 
 ### 部分模块和复写
 * BiliBili 去广告和换区
-   ``` bash
+* Surge
+    ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule
+* QuantumultX
    ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音去广告水印
+* Surge
    ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule
-   ``` bash
+* QuantumultX
+  ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf
 * TikTok解锁
-   ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule
+* Surge
   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule
+ * QuantumultX
+ ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf
 * YouTube去广告
-   ``` bash
+ * Surge
+  ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
-   ``` bash
+ * QuantumultX
+ ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
 * 高级解锁
+* Surge
    ``` bash
+* QuantumultX
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf
 * 全能搜索
+* Surge
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule
-  ``` bash
+* QuantumultX
+``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf
 * 其他
+* Surge
   ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
-  ``` bash
+ * QuantumultX
+ ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 
 ### 感谢：

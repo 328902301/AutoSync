@@ -8,7 +8,7 @@
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
 ### 配置
-* Surge
+* ```Surge```
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
 * QuantumultX
@@ -17,9 +17,11 @@
 
 ### 部分模块和复写
 * BiliBili 去广告和换区
+* Surge
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule
-   ``` bash
+* QuantumultX
+  ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音去广告水印
 * Surge

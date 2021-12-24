@@ -16,6 +16,7 @@
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
 
 ### `部分Surge模块和QuantumultX复写`
+
 |BiliBili 去广告和换区 |
 |:----------------------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
@@ -38,13 +39,13 @@
 
 |全能搜索 |
 |:----------------------------------------| 
-| https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule|
+|Tab https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf|
 
 |功能解锁 |
 |:----------------------------------------| 
-| https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
-| https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
+|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
 
 ### 感谢：
  * [NobyDa](https://github.com/NobyDa/Script/tree/master) 

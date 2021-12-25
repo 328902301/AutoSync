@@ -12,7 +12,7 @@
 [rewrite_local]
 
 # keep解锁会员
-https://*.gotokeep.com.+ url script-response-body keep.js
+https://*.gotokeep.com.+ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep
 
 [mitm] 
 

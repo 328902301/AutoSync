@@ -39,8 +39,8 @@
 
 |全能搜索 |
 |:--------------------------| 
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q-Search.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q-Search.conf|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf|
 
 |功能解锁 |
 |:---------------------------| 

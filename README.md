@@ -29,8 +29,8 @@
 
 |TikTok解锁 |
 |:-------------------------| 
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok-JP.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TiKok_JP.sgmodule|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf|
 
 |YouTube去广告 |
 |:--------------------------| 

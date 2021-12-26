@@ -61,7 +61,7 @@
 * [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
 * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
 * [Sunert](https://github.com/Sunert/Script/tree/master)
-<details>
+
 
  
 

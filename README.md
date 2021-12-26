@@ -51,6 +51,7 @@
 ### 感谢:
 <details>
   <summary>The author list</summary>
+
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
 * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)

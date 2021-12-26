@@ -12,7 +12,6 @@
 * *Surge*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
-  <summary>QuantumultX </summary>
 * *QuantumultX*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf

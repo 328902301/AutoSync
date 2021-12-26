@@ -8,22 +8,6 @@
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
-Profiles)
-### 感谢:
-<details>
-  <summary>The author list</summary>
- * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
- * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
- * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
- * [Choler](https://github.com/Choler/Surge)
- * [chavyleung](https://github.com/chavyleung)
- * [Orz-3](https://github.com/Orz-3)
- * [Koolson](https://github.com/Koolson/Qure)
- * [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
- * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
- * [Sunert](https://github.com/Sunert/Script/tree/master)
-<details>
-
 ### `基本配置`
 * *Surge*
     ``` bash
@@ -64,6 +48,20 @@ Profiles)
 | https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
 | https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
 
+### 感谢:
+<details>
+  <summary>The author list</summary>
+ * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
+ * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
+ * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
+ * [Choler](https://github.com/Choler/Surge)
+ * [chavyleung](https://github.com/chavyleung)
+ * [Orz-3](https://github.com/Orz-3)
+ * [Koolson](https://github.com/Koolson/Qure)
+ * [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
+ * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
+ * [Sunert](https://github.com/Sunert/Script/tree/master)
+<details>
 
  
 

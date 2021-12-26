@@ -62,8 +62,8 @@
 * [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
 * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
 * [Sunert](https://github.com/Sunert/Script/tree/master)
-* [app2smile](https://github.com/app2smile)
-* [VirgilClyne](https://github.com/VirgilClyne)
+* [app2smile](https://github.com/app2smile/rules)
+* [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 
  
 

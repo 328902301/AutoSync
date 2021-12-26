@@ -6,8 +6,10 @@ let traffic = (await httpAPI("/v1/traffic","GET"))
 let dateNow = new Date()
 let dateTime = Math.floor(traffic.startTime*1000)
 let startTime = timeTransform(dateNow,dateTime)
+let title = params.title
 
-if ($trigger == "button") await httpAPI("/v1/profiles/reload");
+
+if ($trigger == "button") await httpAPI("/v1/dns/flush");
 
   $done({
       title:title,

@@ -8,31 +8,10 @@
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
-<details>
-  <summary>特别感谢以下作者</summary>
-
-* [NobyDa](https://github.com/NobyDa/Script/tree/master) 
-* [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
-* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
-* [Choler](https://github.com/Choler/Surge)
-* [chavyleung](https://github.com/chavyleung)
-* [Orz-3](https://github.com/Orz-3)
-* [Koolson](https://github.com/Koolson/Qure)
-* [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
-* [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
-* [Sunert](https://github.com/Sunert/Script/tree/master)
-* [app2smile](https://github.com/app2smile)
-* [VirgilClyne](https://github.com/VirgilClyne)
-
 ### `基本配置`
-
-<details>
-  <summary>Surge</summary>
 * *Surge*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
-
-<details>
   <summary>QuantumultX </summary>
 * *QuantumultX*
     ``` bash

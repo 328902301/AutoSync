@@ -50,7 +50,7 @@
 
 ### 感谢:
 <details>
-  <summary>特别感谢以下作者</summary>
+  <summary>The author list</summary>
 
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
 * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)

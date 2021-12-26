@@ -1,3 +1,4 @@
+[![iEwha's GitHub stats](https://github-readme-stats.vercel.app/api?username=iEwha&show_icons=true)](https://github.com/iEwha/Profiles)
 ### 说明:
 - QuantumultX、Surge，搬运的图标&脚本.
 

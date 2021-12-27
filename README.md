@@ -26,8 +26,8 @@
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
-<details> 
-  
+ </details>
+ 
 ---
   
 ### `基本配置`

@@ -7,7 +7,7 @@
 - 不维护脚本.
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
-  
+
 ### 自用配置：
 * *Surge*
     ``` bash
@@ -71,10 +71,6 @@
 
 ### 感谢:
 - 致谢以下作者库，排名不分先后
-
-<details> 
-<summary>The author list</summary>
-  
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
 * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
 * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
@@ -87,8 +83,8 @@
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
+* [mieqq](https://github.com/mieqq/mieqq)
   
-</details>
 
  
 

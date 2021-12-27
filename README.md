@@ -9,10 +9,10 @@
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 ### 感谢:
 - 致谢以下作者库，排名不分先后
-<details>
-  
+<details> 
 <summary>The author list</summary>
-  * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
+  
+* [NobyDa](https://github.com/NobyDa/Script/tree/master) 
 * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
 * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 * [Choler](https://github.com/Choler/Surge)

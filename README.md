@@ -27,7 +27,7 @@
   
 </details>
   
-### `基本配置`
+### 基本配置：
 * *Surge*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
@@ -35,7 +35,7 @@
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
   
-### `部分模块和复写`
+### 部分Surge模块和QuantumultX复写：
 |BiliBili 去广告和换区 |
 |:-------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|

@@ -24,8 +24,6 @@
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
  </details>
- 
----
   
 ### `基本配置`
 * *Surge*
@@ -34,8 +32,6 @@
 * *QuantumultX*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
-  
----
   
 ### `部分模块和复写`
 |BiliBili 去广告和换区 |

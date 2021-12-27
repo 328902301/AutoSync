@@ -31,7 +31,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule
 * YouTube去广告
    ``` bash
-https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
+  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
 * 全能搜索
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule
@@ -39,20 +39,17 @@ https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodul
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
 </details> 
-
----
-
 <details> 
 <summary>QuantumultX复写</summary>
 * BiliBili 去广告和换区
    ``` bash
-https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
+  https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音去广告水印 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf 
 * TikTok解锁 
-``` bash
-https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
 * YouTube去广告 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf

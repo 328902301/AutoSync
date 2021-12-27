@@ -37,7 +37,8 @@
 ### `部分模块和复写`
 |BiliBili 去广告和换区 |
 |:-------------------------| 
-|``` bashhttps://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
+|``` bash
+https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf|
 |抖音去广告水印 |
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule |

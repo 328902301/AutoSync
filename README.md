@@ -7,8 +7,10 @@
 - 不维护脚本.
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
+ 
+---
 
-感谢:
+###感谢:
 <details>
   <summary>The author list</summary>
 
@@ -24,6 +26,7 @@
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
+<details> 
   
 ---
   

@@ -22,29 +22,19 @@
 |:-------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf|
-
 |抖音去广告水印 |
-|:-------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule |
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf |
-
 |TikTok解锁 |
-|:-------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf|
-
 |YouTube去广告 |
-|:--------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf|
-
 |全能搜索 |
-|:--------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf|
-
 |功能解锁 |
-|:---------------------------| 
 | https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
 | https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
 

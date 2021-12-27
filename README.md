@@ -2,18 +2,19 @@
 ### 说明:
 - QuantumultX、Surge，搬运的图标&脚本.
 
-- 所有脚本均来自互联网.
+- 所有脚本均来自其他作者库.
 
 - 不维护脚本.
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 ### 感谢:
+- 致谢以下作者库，排名不分先后
 <details>
   <summary>The author list</summary>
 
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
+* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
 * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
-* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
 * [Choler](https://github.com/Choler/Surge)
 * [chavyleung](https://github.com/chavyleung)
 * [Orz-3](https://github.com/Orz-3)
@@ -36,7 +37,7 @@
 ### `部分模块和复写`
 |BiliBili 去广告和换区 |
 |:-------------------------| 
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
+|``` bashhttps://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf|
 |抖音去广告水印 |
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule |

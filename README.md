@@ -56,8 +56,8 @@
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
    -去水印
-   ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf
+     ``` bash
+     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf
 * YouTube去广告 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
@@ -71,8 +71,10 @@
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 </details>
+
 ### 感谢:
 - 致谢以下作者库，排名不分先后
+
 <details> 
 <summary>The author list</summary>
   

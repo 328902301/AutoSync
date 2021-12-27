@@ -10,19 +10,18 @@
 ### 感谢:
 - 致谢以下作者库，排名不分先后
 <details><summary>The author list</summary>
-
-* [NobyDa](https://github.com/NobyDa/Script/tree/master) 
-* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
-* [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
-* [Choler](https://github.com/Choler/Surge)
-* [chavyleung](https://github.com/chavyleung)
-* [Orz-3](https://github.com/Orz-3)
-* [Koolson](https://github.com/Koolson/Qure)
-* [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
-* [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
-* [Sunert](https://github.com/Sunert/Script/tree/master)
-* [app2smile](https://github.com/app2smile/rules)
-* [VirgilClyne](https://github.com/VirgilClyne/iRingo)
+ * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
+ * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
+ * [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
+ * [Choler](https://github.com/Choler/Surge)
+ * [chavyleung](https://github.com/chavyleung)
+ * [Orz-3](https://github.com/Orz-3)
+ * [Koolson](https://github.com/Koolson/Qure)
+ * [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
+ * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
+ * [Sunert](https://github.com/Sunert/Script/tree/master)
+ * [app2smile](https://github.com/app2smile/rules)
+ * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 </details>
   
 ### `基本配置`

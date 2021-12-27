@@ -27,7 +27,7 @@
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf |
 |TikTok解锁 |
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf|
+|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf|  |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf|  
 |YouTube去广告 |
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule|
 |https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf|

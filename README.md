@@ -9,7 +9,7 @@
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 ### 感谢:
 - 致谢以下作者库，排名不分先后
-<details>
+  <details>
   <summary>The author list</summary>
 
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
@@ -24,7 +24,7 @@
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
- </details>
+  </details>
   
 ### `基本配置`
 * *Surge*

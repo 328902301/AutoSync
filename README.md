@@ -52,12 +52,9 @@
 * 抖音去广告水印 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf 
-- TikTok解锁 
+* TikTok解锁 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
-   -去水印
-     ``` bash
-     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf
 * YouTube去广告 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf

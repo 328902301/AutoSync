@@ -10,6 +10,7 @@
 ### 感谢:
 - 致谢以下作者库，排名不分先后
 <details>
+  
 <summary>The author list</summary>
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 
 * [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
@@ -23,6 +24,7 @@
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
+  
 </details>
   
 ### `基本配置`

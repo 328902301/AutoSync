@@ -8,6 +8,24 @@
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
+---
+### 感谢:
+<details>
+  <summary>The author list</summary>
+
+* [NobyDa](https://github.com/NobyDa/Script/tree/master) 
+* [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
+* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
+* [Choler](https://github.com/Choler/Surge)
+* [chavyleung](https://github.com/chavyleung)
+* [Orz-3](https://github.com/Orz-3)
+* [Koolson](https://github.com/Koolson/Qure)
+* [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
+* [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
+* [Sunert](https://github.com/Sunert/Script/tree/master)
+* [app2smile](https://github.com/app2smile/rules)
+* [VirgilClyne](https://github.com/VirgilClyne/iRingo)
+---
 ### `基本配置`
 * *Surge*
     ``` bash
@@ -15,9 +33,8 @@
 * *QuantumultX*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
-
+---
 ### `部分模块和复写`
-
 |BiliBili 去广告和换区 |
 |:-------------------------| 
 |https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
@@ -39,22 +56,7 @@
 | https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
 | https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
 
-### 感谢:
-<details>
-  <summary>The author list</summary>
 
-* [NobyDa](https://github.com/NobyDa/Script/tree/master) 
-* [KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
-* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
-* [Choler](https://github.com/Choler/Surge)
-* [chavyleung](https://github.com/chavyleung)
-* [Orz-3](https://github.com/Orz-3)
-* [Koolson](https://github.com/Koolson/Qure)
-* [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
-* [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
-* [Sunert](https://github.com/Sunert/Script/tree/master)
-* [app2smile](https://github.com/app2smile/rules)
-* [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 
  
 

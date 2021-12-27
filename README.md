@@ -17,27 +17,38 @@
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
   
 ### 部分Surge模块和QuantumultX复写：
-|BiliBili 去广告和换区 |
-|:-------------------------| 
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf|
-|抖音去广告水印 |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf |
-|TikTok解锁 |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf|  
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf|  
-|YouTube去广告 |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf|
-|全能搜索 |
-|https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule|
-|https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf|
-|功能解锁 |
-| https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule |
-| https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf |
+<details> 
+<summary>Surge模块</summary>
 
+* BiliBili 去广告和换区
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule```
+* 抖音去广告水印 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule```
+* TikTok解锁
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule```
+* YouTube去广告
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule```
+* 全能搜索
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule```
+* 功能解锁
+```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule```
+</details>
+---
+<details> 
+<summary>QuantumultX复写</summary>
+* BiliBili 去广告和换区
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf```
+* 抖音去广告水印 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf ```
+* TikTok解锁 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf```
+* YouTube去广告 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf```
+* 全能搜索 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf```
+* 功能解锁 
+```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf ```
+</details>
 ### 感谢:
 - 致谢以下作者库，排名不分先后
 <details> 

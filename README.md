@@ -8,7 +8,7 @@
 
 - iEwha对任何脚本问题和使用后果不承担任何责任.
   
-### 基本配置：
+### 自用配置：
 * *Surge*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
@@ -38,6 +38,9 @@
 * 功能解锁
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
+* 其他
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Script.sgmodule
 </details> 
 
 <details> 
@@ -49,9 +52,12 @@
 * 抖音去广告水印 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf 
-* TikTok解锁 
+- TikTok解锁 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
+   -去水印
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf
 * YouTube去广告 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
@@ -61,7 +67,9 @@
 * 功能解锁 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf 
-
+* 其他 
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 </details>
 ### 感谢:
 - 致谢以下作者库，排名不分先后

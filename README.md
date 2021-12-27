@@ -21,33 +21,47 @@
 <summary>Surge模块</summary>
 
 * BiliBili 去广告和换区
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule
 * 抖音去广告水印 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/douyin.sgmodule
 * TikTok解锁
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule
 * YouTube去广告
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule```
+   ``` bash
+https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
 * 全能搜索
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule
 * 功能解锁
-```https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule```
-</details>
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Unlock.sgmodule
+</details> 
+
 ---
+
 <details> 
 <summary>QuantumultX复写</summary>
 * BiliBili 去广告和换区
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf```
+   ``` bash
+https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音去广告水印 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf ```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf 
 * TikTok解锁 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf```
+``` bash
+https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok_JP.conf
 * YouTube去广告 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf
 * 全能搜索 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Q_Search.conf
 * 功能解锁 
-```https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf ```
+   ``` bash
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/UnlockApp.conf 
 </details>
 ### 感谢:
 - 致谢以下作者库，排名不分先后

@@ -86,14 +86,3 @@
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 * [mieqq](https://github.com/mieqq/mieqq)
   
-<div align="center"> 
-
-![](http://profile-counter.glitch.me/iEwha/count.svg)
-
-</div>
-
-<div align="right"> 
-
-</div>
- 
-

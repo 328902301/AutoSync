@@ -88,13 +88,11 @@
   
 <div align="center"> 
 
-![](http://profile-counter.glitch.me/Semporia/count.svg)
+![](http://profile-counter.glitch.me/iEwha/count.svg)
 
 </div>
 
 <div align="right"> 
-
-Please give a star if you like.
 
 </div>
  

@@ -70,7 +70,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 </details>
 
-## 感谢:
+#### 感谢:
 
 - 致谢以下作者库，排名不分先后
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 

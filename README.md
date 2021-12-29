@@ -16,7 +16,7 @@
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QX_iEwha.conf
 
-### 部分模块和复写：
+## 部分模块和复写：
 
 <details> 
 <summary>Surge模块</summary>
@@ -70,7 +70,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/others.conf
 </details>
 
-#### 感谢:
+## 感谢:
 
 - 致谢以下作者库，排名不分先后
 * [NobyDa](https://github.com/NobyDa/Script/tree/master) 

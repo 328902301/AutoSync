@@ -1,4 +1,6 @@
+/**
 #Supported Surge
+*/
 
 if ($request.url.indexOf('mb3admin.com/admin/service/registration/validateDevice') != -1) {
     if($response.status!=200){

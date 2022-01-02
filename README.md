@@ -80,7 +80,6 @@
 * [chavyleung](https://github.com/chavyleung)
 * [Orz-3](https://github.com/Orz-3)
 * [Koolson](https://github.com/Koolson/Qure)
-* [Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
 * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
 * [Sunert](https://github.com/Sunert/Script/tree/master)
 * [app2smile](https://github.com/app2smile/rules)

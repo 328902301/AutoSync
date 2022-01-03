@@ -18,16 +18,16 @@ stream-checktool = script-name=stream-check, title="流媒体解锁检测", cont
 
 [Script]
 #Surge Pro标题,可显示启动时间,点击刷新为重载配置
-缓存开关 = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/PanelScripts/surgepro_flushdns.js,argument=icon=power.circle&color=#FF7500&title=Surge Pro
+缓存开关 = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/surgepro_flushdns.js,argument=icon=power.circle&color=#FF7500&title=Surge Pro
 
 #网络信息面板
-net-info-panel=script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/PanelScripts/net-info-panel.js,type=generic
+net-info-panel=script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/net-info-panel.js,type=generic
 
 #节点检测
-ipcheck = type=generic, timeout=3, script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/PanelScripts/ipcheck.js
+ipcheck = type=generic, timeout=3, script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/ipcheck.js
 
 #流媒体解锁检测
-stream-check= type=generic, timeout=15, script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/PanelScripts/stream-check.js
+stream-check= type=generic, timeout=15, script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/stream-check.js
 
 #节假日预览
-节假日提醒 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/PanelScripts/timecard.js
+节假日提醒 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/timecard.js

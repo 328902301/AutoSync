@@ -3,6 +3,6 @@
 #!system=ios
 [Script]
 
-中青浏览赚= type=cron,cronexp= 45 11,13 * * *,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js,wake-system=1,timeout=1800,script-update-interval=0
+中青浏览赚= type=cron,cronexp= 25 11 * * *,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js,wake-system=1,timeout=1800,script-update-interval=0
 
 

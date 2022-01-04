@@ -1,9 +1,15 @@
 # > 流媒体emby关键词抽取
 
-DOMAIN-KEYWORD,emby , Emby
-DOMAIN-KEYWORD,emby.wtf , Emby
-DOMAIN-KEYWORD,jmsooo.com , Emby
-DOMAIN-KEYWORD,xeton.dev , Emby
-DOMAIN-KEYWORD,odysseyplus , Emby
-DOMAIN-KEYWORD,pornemby , Emby
-DOMAIN-KEYWORD,plusmedia , Emby
+DOMAIN-KEYWORD,emby,Emby
+DOMAIN-KEYWORD,emby.wtf,Emby
+DOMAIN-KEYWORD,jmsooo.com,Emby
+DOMAIN-KEYWORD,xeton.dev,Emby
+DOMAIN-KEYWORD,odysseyplus,Emby
+DOMAIN-KEYWORD,pornemby,Emby
+DOMAIN-KEYWORD,plusmedia,Emby
+# > 流媒体Odyssey服务器
+DOMAIN,cf.odysseyplus.site,Emby
+DOMAIN,sg.odysseyplus.site,Emby
+DOMAIN,sg2.odysseyplus.site,Emby
+DOMAIN,ru.odysseyplus.site,Emby
+DOMAIN,so.odysseyplus.site,Emby

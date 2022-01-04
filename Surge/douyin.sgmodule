@@ -4,8 +4,6 @@
 [Rule]
 #> 抖音(<= 16.2.0) 
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
-URL-REGEX,^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/,REJECT
-URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/,REJECT
 
 [URL Rewrite]
 #> 抖音(<= 16.2.0) 

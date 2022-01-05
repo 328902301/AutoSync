@@ -21,7 +21,7 @@
 <details> 
 <summary>Surge模块</summary>
 
-* BiliBili 去广告和换区
+* BiliBili 净化和换区
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule
 * 抖音净化
@@ -47,7 +47,7 @@
 <details> 
 <summary>QuantumultX复写</summary>
 
-* BiliBili 去广告和换区
+* BiliBili 净化和换区
    ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音净化

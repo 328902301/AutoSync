@@ -14,7 +14,7 @@ URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.
 
 [Script]
 #> 抖音(<= 16.2.0) 
-douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/aweme.js
+抖音 = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/aweme.js
 
 
 [MITM]

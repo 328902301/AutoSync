@@ -26,7 +26,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Bilibili.sgmodule
 * 抖音去广告水印 
    ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/aweme.sgmodule
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Aweme.sgmodule
 * TikTok解锁
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok_JP.sgmodule

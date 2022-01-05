@@ -3,7 +3,9 @@
 #!system=ios
 [Rule]
 #> 抖音(<= 16.2.0) 
-URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
+URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT-DROP
+URL-REGEX,^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/,REJECT-DROP
+URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/,REJECT-DROP
 
 [URL Rewrite]
 #> 抖音(<= 16.2.0) 
@@ -16,4 +18,4 @@ douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]
 
 
 [MITM]
-hostname = %APPEND% api*.amemv.com, aweme.snssdk.com,
+hostname = %APPEND% api*.amemv.com, aweme.snssdk.com, *.tiktokv.com, *.musical.ly

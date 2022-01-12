@@ -1,5 +1,5 @@
 /**
-By blackmatrix7
+ * By blackmatrix7
  */
 
 const scriptName = "知乎助手";

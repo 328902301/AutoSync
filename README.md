@@ -39,5 +39,5 @@ resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scri
 ------------------------------
 
 # 更新日志
-### 2022-01-12
-- 添加 流媒体监测功能
+#### 2022-01-12
+1. 添加 流媒体监测功能

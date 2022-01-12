@@ -37,3 +37,7 @@ resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scri
 4. 填入上述链接, 并打开资源解析器开关。
 
 ------------------------------
+
+# 更新日志
+## 2022-01-12
+- 添加 流媒体监测功能

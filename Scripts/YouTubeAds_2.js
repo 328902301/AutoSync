@@ -1,5 +1,5 @@
 /**
-By iceparis
+ * By iceparis
  */
 
 if ($request.url.indexOf("&ctier") != -1) {

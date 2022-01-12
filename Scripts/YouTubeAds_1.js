@@ -1,6 +1,6 @@
-/*
+/**
 By Choler
-*/
+ */
 
 if ($request.url.indexOf("&oad") != -1) {
   $done({ response: {body: ""} });

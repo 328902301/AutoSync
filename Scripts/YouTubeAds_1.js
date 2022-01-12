@@ -1,5 +1,5 @@
 /**
-By Choler
+ * By Choler
  */
 
 if ($request.url.indexOf("&oad") != -1) {

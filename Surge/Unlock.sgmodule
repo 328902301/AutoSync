@@ -26,18 +26,21 @@ NiChi= type=http-response,pattern=https?:\/\/m(p|ini-hk)\.bybutter\.com\/mood\/(
 #Polarr泼辣修图 解锁特权 (需恢复购买)
 Polarr= type=http-response,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 #spotify 部分解锁premium 
-spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 #拦截100
-100 = type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/100.js,script-update-interval=0
+100 = type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/100.js
 #白描黄金会员
-白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/baimiao.js,script-update-interval=0
+白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/baimiao.js
 #美图秀秀
 美图秀秀 = type=http-response,pattern= ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/, requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mtxx.js
 #计算器HD
 计算器 = type=http-response,pattern= ^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$, requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/CalculatorHD.js
+#NOMO CAM 解锁订阅
+NOMO CAM = type=http-response,pattern= ^https?:\/\/nomo\.dafork\.com\/api\/v3\/register\/phone_signin$, requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/NoMoCam.js
+
 
 [MITM]
-hostname = %APPEND%  vsco.co, api.revenuecat.com, lcs-mobile-cops.adobe.io,  license.pdfexpert.com, ap*.intsig.net, mb3admin.com, mobile-api.adguard.com, lchttpapi.xczim.com,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com
+hostname = %APPEND%  vsco.co, api.revenuecat.com, lcs-mobile-cops.adobe.io,  license.pdfexpert.com, ap*.intsig.net, mb3admin.com, mobile-api.adguard.com, lchttpapi.xczim.com,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,nomo.dafork.com
 
 
 

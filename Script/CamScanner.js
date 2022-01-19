@@ -36,7 +36,7 @@ let body = JSON.parse($response.body)
       "group1_paid": 1,
       "ys_first_pay": 0,
       "renew_type": "year",
-      "expiry": 9915130487,
+      "expiry": 8487890487,
       "grade": 2,
       "last_payment_method": "appstore",
       "product_id": "com.intsig.camscanner.premiums.oneyear.autorenewable.svip.low"}

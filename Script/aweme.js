@@ -9,14 +9,14 @@ const nicknames = [
   "剪(辑|剧|刀)",
   "(混|夜|渣|爱)剪",
   "电视[^台]*$",
-  "(购物|豪|说|讲|二手|估)车",
-  "车(饰|友|俱乐部)",
+  "(购物|豪|说|讲|二手|汽|追|看|租|估|改装)车",
+  "车(.*评|饰|友|俱乐部)",
   "团(建|购)",
   "(追|明)星",
-  "(卖衣|西)服",
-  "服(务商|装)",
+  "(卖衣|赛|西)服",
+  "服(务商|装|饰)",
   "(男|女|童)装",
-  "(吃|百)货",
+  "(吃|清|百)货",
   "吃.*成都",
   "网红",
   "手游",
@@ -32,8 +32,8 @@ const nicknames = [
   "编程|教学",
   "公司|品牌",
   "文化传媒",
-  "探房",
-  "房产",
+  "(卖|说|探|找)房",
+  "房(产|车)",
   "机械制造",
   "健身",
   "相亲会",
@@ -45,7 +45,7 @@ const nicknames = [
   "(运|训练)营",
   "装修",
   "珠宝",
-  "粉丝团",
+  "(粉丝|集)团",
   "商(贸|业)",
   "整形",
   "贸易",
@@ -53,10 +53,27 @@ const nicknames = [
   "直销|销售|厂家|家政|劳务",
   "测(试|一测)",
   ".+铺",
-  "钓鱼|野钓",
+  "钓鱼|野钓|鳝鱼",
+  "垂钓",
   "严选",
   "好物",
   "推荐",
+  "玩具",
+  "手机",
+  "篮球",
+  "装(修|饰)",
+  "婚嫁",
+  "和平精英",
+  "越野|露营",
+  "汽车",
+  "超跑",
+  "评测",
+  "(酒|探)店",
+  "跳伞",
+  ".+厂$",
+  "美(容|业)",
+  "自驾",
+  "特效",
 ]
 
 // user custom verify
@@ -72,6 +89,9 @@ const customVerifyNames = [
   "网络科技",
   "百货",
   "影评",
+  "蛋糕|甜甜圈",
+  "探店|团购",
+  ".+厂$",
 ]
 
 // video description
@@ -83,15 +103,50 @@ const descNames = [
   "女装",
   "剧场",
   "剪辑",
-  "带货",
+  "(清|带)货",
   "观影",
   "影视",
   "游戏",
-  "#合拍",
+  "#.*合拍",
   "测一测",
   "智商测试",
-  "钓鱼|野钓",
+  "钓鱼|野钓|垂钓",
   "撞脸",
+  "(开|工厂|探)店",
+  "免费测试",
+  "穿搭",
+  "婚礼",
+  "越野|露营",
+  "汽车保养",
+  "创业",
+  "室内改造",
+  "盖房子",
+  "行程轨迹|足迹地图",
+  "#.+测试",
+  "团购",
+  "跳伞|教练",
+  "#.*超跑",
+  "#.+鞋",
+  "美(容|业)",
+  "#.+挑战",
+  "#(P|p|修)图",
+  "#.*酒店",
+  "#.*特效",
+  "(租|改装)车",
+  "#.*好物",
+  "#.*年货节",
+  "豪宅|好房",
+  "#.+样子",
+  "契合度",
+  "#.*教程",
+  "#瘦",
+  "#.*健身",
+  "#.*教学",
+  "结婚",
+  "#.*明星",
+  "颜值|打分",
+  "全民|烧脑｜表情包",
+  "房产",
 ]
 
 // user signatures
@@ -103,6 +158,12 @@ const signatureNames = [
   "西装",
   "二手",
   "网红",
+  "地产",
+  "室内设计",
+  "跳伞|教练",
+  "团购",
+  "垂钓|钓鱼",
+  "(进口|豪|汽|追|看|改装)车",
 ]
 
 // in the top of nickname 
@@ -213,7 +274,12 @@ function is_block_content(aweme) {
       console.log(`aweme.anchor_info.title_tag: ${aweme.anchor_info.title_tag}`)
     }
     
-    if (anchorPattern.test(aweme.anchor_info.title) || anchorPattern.test(aweme.anchor_info.title_tag) || anchorPattern.test(aweme.anchor_info.extra)) {
+    /*if (aweme.anchor_info.extra) {
+      console.log(`aweme.anchor_info.extra: ${aweme.anchor_info.extra}`)
+    }*/
+    
+    if ((aweme.anchor_info.title && anchorPattern.test(aweme.anchor_info.title)) || (aweme.anchor_info.title_tag && anchorPattern.test(aweme.anchor_info.title_tag)) || (aweme.anchor_info.extra && anchorPattern.test(aweme.anchor_info.extra))) {
+      console.log("anchor removed")
       return true
     }
   }

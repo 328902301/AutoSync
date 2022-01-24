@@ -1,3 +1,7 @@
+/*
+脚本作者：app2smile
+*/
+ 
 const url = $request.url;
 const method = $request.method;
 const getMethod = "GET";

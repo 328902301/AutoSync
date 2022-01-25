@@ -5,18 +5,18 @@ Photoshop 解锁高级特权
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body photoshop.js
+^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body photoshop.js
 [mitm]
-hostname = cs-mobile-cops.adobe.io
+hostname =  *.adobe.*
 
 ***************************
 Surge4 or Loon: 
 
 [Script]
-http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile requires-body=1,max-size=0,script-path=photoshop.js
+photoshop= type=http-response,pattern=^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$, requires-body=1,max-size=0,script-path=photoshop.js
 
 [MITM]
-hostname =cs-mobile-cops.adobe.io
+hostname = *.adobe.*
 
 **************************/
 let obj = JSON.parse($response.body);

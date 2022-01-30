@@ -5,8 +5,8 @@
 [Script]
 # > VSCO 解锁高级特权
 VSCO = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
-# > photoshop解锁高级订阅
-photoshop= type=http-response,pattern=^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
+# > PS Express解锁高级订阅
+PS Express= type=http-response,pattern=^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
 # > Documents
 Documents= type=http-response,pattern=https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$), requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/documents.js
 # > Emby解锁
@@ -36,7 +36,7 @@ Spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com
 # > 解锁TextEditor订阅
 TextEditor= type=http-response,pattern= ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/TextEditor.js
 # > Hyperweb
-hyperweb = type=http-response,pattern=^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
+Hyperweb = type=http-response,pattern=^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
 [MITM]
 hostname = %APPEND%  vsco.co, api.revenuecat.com, *.adobe.*,  license.pdfexpert.com,  mb3admin.com, mobile-api.adguard.com, lchttpapi.xczim.com,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com,     
 

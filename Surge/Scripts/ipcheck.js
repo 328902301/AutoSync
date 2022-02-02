@@ -9,7 +9,7 @@ $httpClient.get(url, function(error, response, data){
     let isp = jsonData.isp
   body = {
     title: "节点信息",
-    content: `IP: ${ip}\nISP: ${isp}\n位置: ${emoji}${country} - ${city}`,
+    content: `IP位置: ${emoji}${country} - ${city}\n运营商: ${isp}`,
     icon: "personalhotspot",
     'icon-color': "#5AC8FA"
   }

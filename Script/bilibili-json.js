@@ -1,7 +1,7 @@
 /*
 脚本作者：app2smile
 */
- 
+
 const url = $request.url;
 const method = $request.method;
 const getMethod = "GET";
@@ -41,7 +41,7 @@ if (!body.hasOwnProperty('data')) {
         }
         // 底部tab栏
          if (!body.data.hasOwnProperty('bottom')) {
-           console.log("body:" + $response.body);
+            console.log("body:" + $response.body);
              $notification.post(notifiTitle, 'tab', "bottom字段错误");
          } else {
              body.data.bottom = body.data.bottom.filter(item => {
@@ -50,12 +50,12 @@ if (!body.hasOwnProperty('data')) {
                      return false;
                  } else if (item.name === '会员购') {
                      console.log('去除会员购');
-                   return false;
-                }
+                     return false;
+                 }
                 return true;
-            });
-            fixPos(body.data.bottom);
-        }
+             });
+             fixPos(body.data.bottom);
+         }
     } else if (url.indexOf("x/v2/feed/index") !== -1 && method === getMethod) {
         console.log('推荐页');
         if (!body.data.hasOwnProperty('items')) {
@@ -86,6 +86,9 @@ if (!body.hasOwnProperty('data')) {
                     } else if (cardType === 'cm_v2' && ['ad_web_s', 'ad_av', 'ad_web_gif', 'ad_player'].includes(cardGoto)) {
                         // ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告
                         console.log(`${cardGoto}广告去除)`);
+                        return false;
+                    } else if (cardType === 'small_cover_v10' && cardGoto === 'game') {
+                        console.log('游戏广告去除');
                         return false;
                     }
                 } else {

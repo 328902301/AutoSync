@@ -1,4 +1,16 @@
-# > 流媒体emby关键词
+# > 流媒体emby
+
+DOMAIN,emby.nexitally.com,Emby
+DOMAIN,emby.cjpc.cc,Emby
+DOMAIN,emby.flowercloud.yt,Emby
+DOMAIN,emby.maying.club,Emby
+DOMAIN,emby.mdss.cloud,Emby
+DOMAIN,emby.ytoo.li,Emby
+DOMAIN,embyserver.ga,Emby
+DOMAIN,emby.prprcloud.com,Emby
+DOMAIN,emby.nyancat.net,Emby
+DOMAIN,emby.run,Emby
+DOMAIN,embyserver.ga,Emby
 
 DOMAIN-KEYWORD,emby,Emby
 DOMAIN-KEYWORD,emby.wtf,Emby
@@ -7,3 +19,5 @@ DOMAIN-KEYWORD,xeton.dev,Emby
 DOMAIN-KEYWORD,odysseyplus,Emby
 DOMAIN-KEYWORD,pornemby,Emby
 DOMAIN-KEYWORD,plusmedia,Emby
+DOMAIN-KEYWORD,otakudrive.life,Emby
+

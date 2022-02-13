@@ -1,5 +1,5 @@
 /*
-功能：解锁TextEditor订阅
+功能：解锁拦截100
 作者：Hausd0rff
 */
 

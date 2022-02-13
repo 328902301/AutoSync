@@ -1,5 +1,7 @@
 # > 流媒体emby
 
+IP-CIDR,172.247.48.240/32,no-resolve
+
 DOMAIN,emby.misakaf.xyz,Emby
 DOMAIN,emby.nexitally.com,Emby
 DOMAIN,emby.cjpc.cc,Emby

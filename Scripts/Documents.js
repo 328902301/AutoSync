@@ -1,3 +1,8 @@
+/*
+https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js
+hostname = license.pdfexpert.com
+*/
+
 var obj= {
   "productId": "com.readdle.ReaddleDocsIPad.subscription.year50_upd_user",
   "subscriptionExpirationIntent": "userCancelled",

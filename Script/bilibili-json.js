@@ -39,20 +39,20 @@ if (!body.hasOwnProperty('data')) {
             });
             fixPos(body.data.top);
         }
-        // 底部tab栏
+         底部tab栏
          if (!body.data.hasOwnProperty('bottom')) {
-            console.log("body:" + $response.body);
+             console.log("body:" + $response.body);
              $notification.post(notifiTitle, 'tab', "bottom字段错误");
-         } else {
+        } else {
              body.data.bottom = body.data.bottom.filter(item => {
                  if (item.name === '发布') {
-                    console.log('去除发布');
+                     console.log('去除发布');
                      return false;
                  } else if (item.name === '会员购') {
                      console.log('去除会员购');
                      return false;
                  }
-                return true;
+                 return true;
              });
              fixPos(body.data.bottom);
          }
@@ -89,6 +89,9 @@ if (!body.hasOwnProperty('data')) {
                         return false;
                     } else if (cardType === 'small_cover_v10' && cardGoto === 'game') {
                         console.log('游戏广告去除');
+                        return false;
+                    } else if (cardType === 'cm_double_v9' && cardGoto === 'ad_inline_av') {
+                        console.log('创作推广-大视频广告');
                         return false;
                     }
                 } else {

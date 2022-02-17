@@ -1,3 +1,20 @@
+/* 
+脚本功能：plane vpn恢复订阅
+脚本作者：king
+下载地址：https://apple.co/3Hc4ZH5
+更新时间：2022.2.17
+脚本频道：https://t.me/yqc_123
+问题反馈：https://t.me/yqc_777
+使用声明：⚠️⚠️⚠️此脚本仅供学习与交流，
+        请勿转载与贩卖！⚠️⚠️⚠️
+[rewrite_local]
+# plane vpn恢复订阅@king
+^
+hostname = buy.itunes.apple.com
+********************************
+*/
+
+
 var objc = JSON.parse($response.body);
       
     objc = {

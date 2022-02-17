@@ -39,11 +39,11 @@ if (!body.hasOwnProperty('data')) {
             });
             fixPos(body.data.top);
         }
-         底部tab栏
+        // 底部tab栏
          if (!body.data.hasOwnProperty('bottom')) {
              console.log("body:" + $response.body);
              $notification.post(notifiTitle, 'tab', "bottom字段错误");
-        } else {
+         } else {
              body.data.bottom = body.data.bottom.filter(item => {
                  if (item.name === '发布') {
                      console.log('去除发布');

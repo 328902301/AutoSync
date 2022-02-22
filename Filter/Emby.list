@@ -1,24 +1,11 @@
 # > 流媒体emby
 
-DOMAIN,emby.misakaf.xyz,Emby
-DOMAIN,emby.nexitally.com,Emby
-DOMAIN,emby.cjpc.cc,Emby
-DOMAIN,emby.flowercloud.yt,Emby
-DOMAIN,emby.maying.club,Emby
-DOMAIN,emby.mdss.cloud,Emby
-DOMAIN,emby.ytoo.li,Emby
-DOMAIN,embyserver.ga,Emby
-DOMAIN,emby.prprcloud.com,Emby
-DOMAIN,emby.nyancat.net,Emby
-DOMAIN,emby.run,Emby
-DOMAIN,embyserver.ga,Emby
-
-DOMAIN-KEYWORD,emby,Emby
-DOMAIN-KEYWORD,emby.wtf,Emby
-DOMAIN-KEYWORD,jmsooo.com,Emby
-DOMAIN-KEYWORD,xeton.dev,Emby
-DOMAIN-KEYWORD,odysseyplus,Emby
-DOMAIN-KEYWORD,pornemby,Emby
-DOMAIN-KEYWORD,plusmedia,Emby
-DOMAIN-KEYWORD,otakudrive.life,Emby
-
+DOMAIN-SUFFIX,jmsooo.com
+DOMAIN-SUFFIX,odysseyplus.site
+DOMAIN-SUFFIX,misakaf.xyz
+DOMAIN-SUFFIX,xeton.dev
+DOMAIN-SUFFIX,plusmedia.site
+DOMAIN-SUFFIX,xeton.dev
+DOMAIN-SUFFIX,otakudrive.life
+DOMAIN-SUFFIX,pornemby.club
+DOMAIN-KEYWORD,emby

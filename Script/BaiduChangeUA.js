@@ -1,3 +1,20 @@
+/*
+
+***************************
+更改手机端百度的 User-Agent
+QuantumultX:
+[rewrite_local]
+^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com url script-request-header BaiduChangeUA.js
+
+Surge4：
+[Script]
+BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=BaiduChangeUA.js
+
+[MITM]
+hostname = %APPEND% *.baidu.com,
+
+**************************/
+
 let url = $request.url;
 let headers = $request.headers;
 if (url.indexOf("baidu.com") !== -1) {

@@ -12,7 +12,7 @@ RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikip
 
 [Script]
 # > Youtube-Subtrans
-YouTube中文字幕 = type=http-request,pattern=https:\/\/www.youtube.com\/api\/timedtext.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/YouTube-Subtrans.js
+YouTube中文字幕= type=http-request,pattern=https:\/\/(setting|www).youtube.com\/(api\/timedtext.+|\?action=(g|s)et),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js
 # > 微信公众号去广告
 微信公众号= type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 # > Boxjs 稳定版
@@ -29,4 +29,4 @@ Siri_Suggestions = type=http-request,pattern=^https?:\/\/api.*\.smoot\.apple\.(c
 # > 美标空气质量
 空气质量 = type=http-response,pattern= ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.*,requires-body=true,max-size=0,script-path= https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
 [MITM]
-hostname = %APPEND%  www.google.cn, www.youtube.com, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,
+hostname = %APPEND%  www.google.cn, *.youtube.com, mp.weixin.qq.com,sub.store, -cdn*.smoot.apple.com, -fbs.smoot.apple.com, *.smoot.apple.com, *.smoot.apple.cn, weather-data.apple.com,

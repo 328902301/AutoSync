@@ -1,1 +1,8 @@
-Clash for Windows
+## 说明:
+- Clash for Windows自定义在线分流规则策略组
+## 使用方法：
+- 利用开源订阅转换API转码你的机场订阅链接
+- 在https://www.urlencoder.org上转码`config.ini`
+- 将`转码后的链接地址`粘贴在机场订阅链接后面,或者替换订阅链接的`.ini`链接部分, 即可成功获得最终的配置文件。
+- 如：转换后的订阅地址`&config=https%3A%2F%2Fraw.githubusercontent.com%2FiEwha%2FProfiles%2Fmaster%2FClash%2Fconfig.ini`
+- 将导入配置文件地址到Clash

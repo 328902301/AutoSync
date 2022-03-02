@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Clash
+    - name: Checkout Rules
       uses: actions/checkout@v2
       with:
         repository: DivineEngine/Profiles

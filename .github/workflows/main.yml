@@ -18,7 +18,7 @@ jobs:
       with:
         repository: DivineEngine/Profiles
         ref: master
-        path: Clash
+        path: Rules
     - name: copy files
       run: cp -r Clash/RuleSet/. Clash
     - name: Upload to this repo

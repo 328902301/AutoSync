@@ -27,7 +27,7 @@ jobs:
             git config --global user.name "iEwha"
             git config --global user.email "royiewha@gmail.com" 
             git add . 
-            git commit -m 'async rules'  
+            git commit -m '+'  
             git push -u origin master
             echo "完成同步"
         else

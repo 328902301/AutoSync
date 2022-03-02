@@ -13,14 +13,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Rules
+    - name: Checkout Clash
       uses: actions/checkout@v2
       with:
         repository: DivineEngine/Profiles
         ref: master
-        path: Rules
+        path: Clash
     - name: copy files
-      run: cp -r Rules/Clash/RuleSet/. Clash
+      run: cp -r Clash/RuleSet/. Clash
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

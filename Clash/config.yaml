@@ -59,7 +59,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
-      - 新加坡节点
+      - 狮城节点
       - 韩国节点
       - 日本节点
       - 美国节点
@@ -68,7 +68,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
-      - 新加坡节点
+      - 狮城节点
       - 韩国节点
       - 日本节点
       - 美国节点
@@ -76,7 +76,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
-      - 新加坡节点
+      - 狮城节点
       - 韩国节点
       - 日本节点
       - 美国节点
@@ -85,7 +85,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
-      - 新加坡节点
+      - 狮城节点
       - 韩国节点
       - 日本节点
       - 美国节点
@@ -98,7 +98,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
-      - 新加坡节点
+      - 狮城节点
       - 韩国节点
       - 日本节点
       - 美国节点
@@ -106,7 +106,7 @@ proxy-groups:
     type: url-test
     use:
       - HK
-  - name: "新加坡节点"
+  - name: "狮城节点"
     type: url-test
     use:
       - SG

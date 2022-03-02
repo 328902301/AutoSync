@@ -20,7 +20,7 @@ jobs:
         ref: master
         path: Clash
     - name: copy files
-      run: cp -r Clash/. ruleset
+      run: cp -r Rules/. ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

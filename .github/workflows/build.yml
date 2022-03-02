@@ -16,7 +16,7 @@ jobs:
     - name: Checkout Rules
       uses: actions/checkout@v2
       with:
-        repository: DivineEngine/Profiles
+        repository: DivineEngine/Profiles/Clash
         ref: master
         path: Rules
     - name: copy files

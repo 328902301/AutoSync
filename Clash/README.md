@@ -1,20 +1,13 @@
-⛔️Star ⛔️Fork ⛔️Share
-
-[Telegram Channel](https://t.me/DivineEngine)
-
-这已经不是一个适用于大多数人的项目，仅献给我的小伙伴们。
-
-*在使用 Github 的项目时阅读 Readme 文件和 Wiki 页面(如果有)是个好习惯。*
-
-**Special thanks to**
-
-- [scomper / Surge](https://github.com/scomper/Surge)
-- [lhie1 / Rules](https://github.com/lhie1/Rules)
-- [KOP-XIAO / QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
-- HotKids
-- [Choler / Surge](https://github.com/Choler/Surge)
-- [yichahucha / surge](https://github.com/yichahucha/surge)
-- [Koolson / Qure](https://github.com/Koolson/Qure)
-- [17mon / china_ip_list](https://github.com/17mon/china_ip_list)
-- [blackmatrix7 / ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
-- [srk24 / profile](https://github.com/srk24/profile)
+## 说明:
+- Clash for Windows自定义在线分流规则策略组
+- 原文件来自[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
+- 引用神机规则
+## 使用方法：
+- 利用开源订阅转换API转码你的机场订阅链接
+- 在[https://www.urlencoder.org](https://www.urlencoder.org)上转码[config.ini](https://raw.githubusercontent.com/iEwha/Profiles/master/Clash/config.ini)
+- 将`转码后的链接地址`粘贴在机场订阅链接后面,或者替换订阅链接的`.ini`链接部分, 即可成功获得最终的配置文件。
+- 如：`转换后的订阅地址&config=https%3A%2F%2Fraw.githubusercontent.com%2FiEwha%2FProfiles%2Fmaster%2FClash%2Fconfig.ini`
+- 将导入配置文件地址到Clash
+## 感谢：
+* [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master) 
+* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 

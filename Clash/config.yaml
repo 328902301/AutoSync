@@ -49,11 +49,13 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
+
 mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: debug
 ipv6: false
+
 proxy-groups:
   - name: 全球加速
     type: select
@@ -102,6 +104,16 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
+  - name: 漏网之鱼
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+
   - name: "香港节点"
     type: url-test
     use:
@@ -208,10 +220,11 @@ rules:
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Emby,Emby
   - RULE-SET,YouTube,油管视频
-  - RULE-SET,Streaming,港台番剧
+  - RULE-SET,StreamingSE,港台番剧
   - RULE-SET,Streaming,国际媒体
-  - RULE-SET,China,DIRECT
   - RULE-SET,Telegram,电报信息
+  - RULE-SET,Global,全球加速
+  - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,全球加速
+  - MATCH,漏网之鱼
    

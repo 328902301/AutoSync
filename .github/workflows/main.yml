@@ -18,9 +18,9 @@ jobs:
       with:
         repository: DivineEngine/Profiles
         ref: master
-        path: Rules
+        path: Clash
     - name: copy files
-      run: cp -r Clash/.Rules
+      run: cp -r RuleSet/.Clash
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

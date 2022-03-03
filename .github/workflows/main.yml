@@ -2,8 +2,8 @@ name: rules sync
 
 on:
   push:
-    branches:
-      - master
+     paths:
+      - '**.yaml'
   schedule:
     - cron: '0 0 * * *'
 
@@ -20,7 +20,7 @@ jobs:
         ref: master
         path: Rules
     - name: copy files
-      run: cp -r Clash/RuleSet/.Rules
+      run: cp -r Clash/.Rules
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

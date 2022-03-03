@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: DivineEngine/Profiles
-        ref: release
+        ref: master
         path: Rules
     - name: copy files
       run: cp -r Clash/RuleSet/.yaml/. Ruleset

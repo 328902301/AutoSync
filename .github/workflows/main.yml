@@ -21,7 +21,7 @@ jobs:
         ref: master
         path: Rules
     - name: copy files
-      run: cp -r Clash/RuleSet/.Clash
+      run: cp -r Clash/.Clash
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then
@@ -29,7 +29,7 @@ jobs:
             git config --global user.name "iEwha"
             git config --global user.email "royiewha@gmail.com" 
             git add . 
-            git commit -m 'async rules'  
+            git commit -m '+'  
             git push -u origin master
             echo "完成同步"
         else

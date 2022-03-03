@@ -5,3 +5,21 @@ DOMAIN,appcloud2.in.zhihu.com,REJECT
 DOMAIN,mqtt.zhihu.com,REJECT
 DOMAIN,sugar.zhihu.com,REJECT
 USER-AGENT,AVOS*,REJECT
+
+# 美颜相机去首页和轮播广告
+host, adui.tg.meitu.com, reject
+host, aaid.uyunad.com, reject
+
+# 多多视频去开屏广告
+host-suffix, bayescom.com, reject
+
+# 车来了（包括小程序）
+host-suffix, atrace.chelaile.net.cn, reject
+host, logs.chelaile.net.cn, reject
+host, ad.chelaile.net.cn, reject
+
+# 铁路12306
+HOST, ad.12306.cn, REJECT
+
+# 两步路
+HOST-SUFFIX, admobile.top, REJECT

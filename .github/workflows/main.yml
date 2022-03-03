@@ -2,8 +2,9 @@ name: rules sync
 
 on:
   push:
-     paths:
-      - '**.yaml'
+     branches:
+      - master
+     
   schedule:
     - cron: '0 0 * * *'
 

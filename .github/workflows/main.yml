@@ -19,9 +19,9 @@ jobs:
       with:
         repository: DivineEngine/Profiles
         ref: master
-        path: Profiles
+        path: Clash
     - name: copy files
-      run: cp -r -i Clash/. Profiles/.
+      run: cp -r Clash/. Profiles/.
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

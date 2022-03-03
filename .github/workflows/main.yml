@@ -21,7 +21,7 @@ jobs:
         ref: master
         path: Clash
     - name: copy files
-      run: cp -r Clash/* Profiles/*
+      run: cp -r Clash/* Profiles
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

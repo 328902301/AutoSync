@@ -24,7 +24,7 @@ proxy-providers:
     path: ./Server/kr.yaml
     url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
     interval: 3600
-    filter: '韩国|韓國|南朝鲜|KR|Korean'
+    filter: '韩国|韓國|南朝鲜|KR|Korean|🇰🇷'
     health-check: 
       enable: true
       url: http://www.gstatic.com/generate_204

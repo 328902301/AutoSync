@@ -146,49 +146,49 @@ rule-providers:
    Emby:
     type: http
     behavior: classical
-    path: ./RuleSet/Emby/Emby.yaml
+    path: ./RuleSet/Emby.yaml
     url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Clash/Ruleset/Emby.yaml
     interval: 86400
 
    YouTube:
     type: http
     behavior: classical
-    path: ./RuleSet/YouTube/YouTube.yaml
+    path: ./RuleSet/YouTube.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
     interval: 86400
 
    Telegram:
     type: http
     behavior: classical
-    path: ./RuleSet/Telegram/Telegram.yaml
+    path: ./RuleSet/Telegram.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
     interval: 86400
 
    ChinaMedia:
     type: http
     behavior: classical
-    path: ./RuleSet/ChinaMedia/ChinaMedia.yaml
+    path: ./RuleSet/ChinaMedia.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
     interval: 86400
  
    GlobalMedia:
     type: http
     behavior: classical
-    path: ./RuleSet/GlobalMedia/GlobalMedia.yaml
+    path: ./RuleSet/GlobalMedia.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml
     interval: 86400
 
    Global:
     type: http
     behavior: classical
-    path: ./RuleSet/Global/Global.yaml
+    path: ./RuleSet/Global.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml
     interval: 86400
 
    China:
     type: http
     behavior: classical
-    path: ./RuleSet/China/China.yaml
+    path: ./RuleSet/China.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
     interval: 86400
 

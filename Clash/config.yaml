@@ -154,7 +154,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/YouTube/YouTube.yaml
-    url:     https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
     interval: 86400
 
    Telegram:

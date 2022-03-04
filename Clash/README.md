@@ -1,7 +1,7 @@
 ## 说明:
 - Clash for Windows自定义在线分流规则策略组
 - 原文件来自[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
-- 引用神机规则
+- 引用blackmatrix7规则
 ## 使用方法：
 - 利用开源订阅转换API转码你的机场订阅链接
 - 在[https://www.urlencoder.org](https://www.urlencoder.org)上转码[config.ini](https://raw.githubusercontent.com/iEwha/Profiles/master/Clash/config.ini)
@@ -10,4 +10,4 @@
 - 将导入配置文件地址到Clash
 ## 感谢：
 * [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master) 
-* [DivineEngine](https://github.com/DivineEngine/Profiles/tree/master) 
+* [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script) 

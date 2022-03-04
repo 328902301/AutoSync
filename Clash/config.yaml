@@ -49,7 +49,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
-
 mixed-port: 7890
 allow-lan: false
 mode: rule
@@ -91,11 +90,6 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: 港台番剧
-    type: select
-    proxies:
-      - 香港节点
-      - DIRECT
   - name: 国际媒体
     type: select
     proxies:
@@ -113,7 +107,6 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - DIRECT
-
   - name: "香港节点"
     type: url-test
     use:
@@ -136,93 +129,77 @@ proxy-groups:
       - US
 
 rule-providers:
-   Unbreak:
+   广告拦截:
     type: http
     behavior: domain
-    path: ./RuleSet/Unbreak.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Unbreak.yaml
-    interval: 86400
-    
-   Advertising:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Guard/Advertising.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Advertising.yaml
+    path: ./RuleSet/BanAD.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
     interval: 86400
 
-   Hijacking:
+   应用净化:
     type: http
     behavior: classical
-    path: ./RuleSet/Guard/Hijacking.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Hijacking.yaml
-    interval: 86400
-    
-   Privacy:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Guard/Privacy.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Privacy.yaml
+    path: ./RuleSet/BanProgramAD.list
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanProgramAD.yaml
     interval: 86400
 
    Emby:
     type: http
     behavior: classical
-    path: ./RuleSet/Emby.yaml
+    path: ./RuleSet/Emby/Emby.yaml
     url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Clash/Ruleset/Emby.yaml
     interval: 86400
 
    YouTube:
     type: http
     behavior: classical
-    path: ./RuleSet/StreamingMedia/Video/YouTube.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/YouTube.yaml
+    path: ./RuleSet/YouTube/YouTube.yaml
+    url:     https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
     interval: 86400
 
    Telegram:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/Telegram.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Extra/Telegram/Telegram.yaml
+    path: ./RuleSet/Telegram/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
     interval: 86400
 
-   StreamingSE:
+   ChinaMedia:
     type: http
     behavior: classical
-    path: ./RuleSet/StreamingMedia/StreamingSE.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
+    path: ./RuleSet/ChinaMedia/ChinaMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
     interval: 86400
  
-   Streaming:
+   GlobalMedia:
     type: http
     behavior: classical
-    path: ./RuleSet/StreamingMedia/Streaming.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+    path: ./RuleSet/GlobalMedia/GlobalMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml
     interval: 86400
- 
+
    Global:
     type: http
     behavior: classical
-    path: ./RuleSet/Global.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml
+    path: ./RuleSet/Global/Global.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml
     interval: 86400
 
    China:
     type: http
     behavior: classical
-    path: ./RuleSet/China.yaml
-    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
+    path: ./RuleSet/China/China.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
     interval: 86400
 
 rules:
-  - RULE-SET,Unbreak,DIRECT
-  - RULE-SET,Privacy,REJECT
-  - RULE-SET,Advertising,REJECT
-  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,广告拦截,REJECT
+  - RULE-SET,应用净化,REJECT
   - RULE-SET,Emby,Emby
   - RULE-SET,Telegram,电报信息
   - RULE-SET,YouTube,油管视频
-  - RULE-SET,StreamingSE,港台番剧
-  - RULE-SET,Streaming,国际媒体
+  - RULE-SET,ChinaMedia,DIRECT
+  - RULE-SET,GlobalMedia,国际媒体
   - RULE-SET,Global,全球加速
   - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT,no-resolve

@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@master
     - name: CI
       run: |
-        cd ./Rulesets
+        cd ./Ruleset
         rm -f ./Anti-AD.yaml
         curl -o ./Anti-AD.yaml https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt
         sed -i 's/DOMAIN-SUFFIX,/  - DOMAIN-SUFFIX,/g' ./Anti-AD.yaml

@@ -1,0 +1,31 @@
+name: Clash Ruleset
+
+on:
+ schedule: 
+   - cron: "0 2 */2 * *"
+ # watch: 
+   # types: started 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: CI
+      run: |
+        cd ./Rulesets
+        rm -f ./Anti-AD.yaml
+        curl -o ./Anti-AD.yaml https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt
+        sed -i 's/DOMAIN-SUFFIX,/  - DOMAIN-SUFFIX,/g' ./Anti-AD.yaml
+        sed -i '1i\payload:' ./Anti-AD.yaml
+    - name: Commit files
+      run: |
+        git add .
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Auto renew Ruleset." -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PERSON_TOKEN }}
+        branch: 'master'

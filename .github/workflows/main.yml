@@ -13,14 +13,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Rules
+    - name: Checkout Ruleset
       uses: actions/checkout@v2
       with:
         repository: Loyalsoldier/clash-rules
         ref: release
-        path: Rules
+        path: Ruleset
     - name: copy files
-      run: cp -r Rules/ruleset/. ruleset
+      run: cp -r Rules/. Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

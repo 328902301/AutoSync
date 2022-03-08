@@ -18,9 +18,9 @@ jobs:
       with:
         repository: Loyalsoldier/clash-rules
         ref: release
-        path: Rules
+        path: Ruleset
     - name: copy files
-      run: cp -r Rules/Ruleset/. Ruleset
+      run: cp -r Ruleset/. Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

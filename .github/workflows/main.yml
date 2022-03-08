@@ -16,11 +16,11 @@ jobs:
     - name: Checkout Ruleset
       uses: actions/checkout@v2
       with:
-        repository: Loyalsoldier/surge-rules
+        repository: Loyalsoldier/clash-rules
         ref: release
         path: Ruleset
     - name: copy files
-      run: cp -r ruleset/. Ruleset
+      run: cp -r Ruleset/ruleset/. Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

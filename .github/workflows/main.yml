@@ -20,7 +20,7 @@ jobs:
         ref: release
         path: Rules
     - name: copy files
-      run: cp -r Rules/ruleset/. ruleset
+      run: cp -r Rules/Ruleset/. Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

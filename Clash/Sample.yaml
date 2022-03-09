@@ -21,7 +21,7 @@ proxy-providers:
       interval: 600
 mixed-port: 7890
 allow-lan: false
-mode: rule
+mode: Script
 log-level: debug
 ipv6: false
 

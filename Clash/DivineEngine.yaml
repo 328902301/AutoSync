@@ -204,6 +204,7 @@ rules:
   - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,漏网之鱼
+
 script:
   code: |
     def main(ctx, metadata):

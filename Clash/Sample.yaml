@@ -134,16 +134,35 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
     interval: 86400
 
-rules:
-  - RULE-SET,Unbreak,DIRECT
-  - RULE-SET,BanAD,REJECT
-  - RULE-SET,BanProgramAD,REJECT
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Emby,Emby
-  - RULE-SET,Telegram,电报信息
-  - RULE-SET,Streaming,国际媒体
-  - RULE-SET,Proxy,全球加速
-  - RULE-SET,China,DIRECT
-  - GEOIP,CN,DIRECT,no-resolve
-  - MATCH,漏网之鱼
+script:
+  code: |
+    def main(ctx, metadata):
+        ruleset_action = {
+            "BanAD": "REJECT",
+            "BanProgramAD": "REJECT",
+            "Unbreak": "DIRECT",           
+            "Microsoft": "微软服务",
+            "Emby": "Emby",
+            "Telegram": "电报信息",
+            "Streaming": "国际媒体",
+            "Proxy": "全球加速",
+            "China": "DIRECT",   
+          }
+        if metadata["dst_ip"] == "":
+            metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
+            
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
 
+        if metadata["dst_ip"] == "":
+            return "DIRECT"
+
+        code = ctx.geoip(metadata["dst_ip"])
+        if code == "CN":
+            ctx.log('[Script] Geoip CN')
+            return "DIRECT"
+
+        ctx.log('[Script] MATCH')
+        return "漏网之鱼"
+   

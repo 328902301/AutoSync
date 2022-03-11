@@ -1,3 +1,9 @@
+mixed-port: 7890
+allow-lan: false
+mode: Script
+log-level: debug
+ipv6: false
+
 proxy-providers:
   Acrossline:
     type: http
@@ -19,11 +25,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
-mixed-port: 7890
-allow-lan: false
-mode: Script
-log-level: debug
-ipv6: false
 
 proxy-groups:
   - name: 全球加速

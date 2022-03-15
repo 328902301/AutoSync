@@ -24,5 +24,4 @@ let pro= obj["mobileProfile"];
 pro["profileStatus"] = "PROFILE_AVAILABLE";
 pro["legacyProfile"] = "{}";
 pro["relationshipProfile"] = "[]";
-pro["appLicenseMode"] = "PREMIUM";
 $done({body: JSON.stringify(obj)})

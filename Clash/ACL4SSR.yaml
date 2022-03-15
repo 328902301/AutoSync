@@ -1,0 +1,261 @@
+mixed-port: 7890
+allow-lan: false
+mode: Script
+log-level: debug
+ipv6: false
+
+proxy-providers:
+  HK:
+    type: http
+    path: ./Server/hk.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '香港|HK|Hong Kong|🇭🇰'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  SG:
+    type: http
+    path: ./Server/sg.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '新加坡|狮城|SG|Singapore|🇸🇬'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  KR:
+    type: http
+    path: ./Server/kr.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '韩国|韓國|南朝鲜|KR|Korean|🇰🇷'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  US:
+    type: http
+    path: ./Server/US.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '美国|US|USA|America|United States|🇺🇸'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  JP:
+    type: http
+    path: ./Server/JP.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '日本|JP|Japan|🇯🇵'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+proxy-groups:
+  - name: 全球加速
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: 电报信息
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: 苹果服务
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: 微软服务
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: Emby
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: 国际媒体
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: 漏网之鱼
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: "香港节点"
+    type: url-test
+    use:
+      - HK
+  - name: "狮城节点"
+    type: url-test
+    use:
+      - SG
+  - name: "韩国节点"
+    type: url-test
+    use:
+      - KR
+  - name: "日本节点"
+    type: url-test
+    use:
+      - JP
+  - name: "美国节点"
+    type: url-test
+    use:
+      - US
+
+rule-providers:
+   LocalAreaNetwork:
+    type: http
+    behavior: domain
+    path: ./RuleSet/ACL4SSR/LocalAreaNetwork.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/LocalAreaNetwork.yaml
+    interval: 86400
+
+   BanAD:
+    type: http
+    behavior: domain
+    path: ./RuleSet/ACL4SSR/BanAD.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
+    interval: 86400
+
+   BanProgramAD:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/BanProgramAD.list
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanProgramAD.yaml
+    interval: 86400
+
+   GoogleCN:
+    type: http
+    behavior: domain
+    path: ./RuleSet/ACL4SSR/GoogleCN.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/GoogleCN.yaml
+    interval: 86400
+
+   Microsoft:
+    type: http
+    behavior: domain
+    path: ./RuleSet/ACL4SSR/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml
+    interval: 86400
+
+   Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml
+    interval: 86400
+
+
+   Emby:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Emby.yaml
+    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Clash/Ruleset/Emby.yaml
+    interval: 86400
+
+   Telegram:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml
+    interval: 86400
+
+   ProxyMedia:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/ProxyMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyMedia.yaml
+    interval: 86400
+
+   Proxy:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/ProxyGFWlist.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyGFWlist.yaml
+    interval: 86400
+
+   China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ACL4SSR/ChinaDomain.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml
+    interval: 86400
+
+   ChinaCompanyIp:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/ACL4SSR/ChinaCompanyIp.yaml
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaCompanyIp.yaml
+    interval: 86400
+ 
+script:
+  code: |
+    def main(ctx, metadata):
+        ruleset_action = {
+            "LocalAreaNetwork": "DIRECT",
+            "BanAD": "REJECT",
+            "BanProgramAD": "REJECT",
+            "GoogleCN": "DIRECT", 
+            "Apple": "苹果服务",           
+            "Microsoft": "微软服务",
+            "Emby": "Emby",
+            "Telegram": "电报信息",
+            "ProxyMedia": "国际媒体",
+            "Proxy": "全球加速",
+            "China": "DIRECT",   
+            "ChinaCompanyIp": "DIRECT",   
+          }
+        if metadata["dst_ip"] == "":
+            metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
+            
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
+
+        if metadata["dst_ip"] == "":
+            return "DIRECT"
+
+        code = ctx.geoip(metadata["dst_ip"])
+        if code == "CN":
+            ctx.log('[Script] Geoip CN')
+            return "DIRECT"
+
+        ctx.log('[Script] MATCH')
+        return "漏网之鱼"
+   

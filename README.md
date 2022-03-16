@@ -81,7 +81,7 @@
 * [Orz-3](https://github.com/Orz-3)
 * [Koolson](https://github.com/Koolson/Qure)
 * [zZPiglet](https://github.com/zZPiglet/Task/tree/master)
-* [Sunert](https://github.com/Sunert/Script/tree/master)
+* [Peng-YM](https://github.com/Peng-YM/Sub-Store)
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 * [mieqq](https://github.com/mieqq/mieqq)

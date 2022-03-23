@@ -3,6 +3,13 @@ allow-lan: false
 mode: rule
 log-level: debug
 ipv6: false
+tun:
+  enable: true
+  stack: gvisor
+  auto-detect-interfcae: true
+  auto-route: true
+  dns-hijack:
+      - 198.18.0.2:53
 
 proxy-providers:
   HK:

@@ -177,8 +177,8 @@ rule-providers:
    Microsoft:
     type: http
     behavior: domain
-    path: ./RuleSet/ACL4SSR/Microsoft.yaml
-    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml
+    path: ./RuleSet/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Clash/Ruleset/Microsoft.yaml
     interval: 86400
 
    Apple:

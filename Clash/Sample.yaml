@@ -10,28 +10,6 @@ tun:
   auto-route: true
   dns-hijack:
       - 198.18.0.2:53
-bypass:
-  - 127.0.0.1
-  - localhost
-  - 127.*
-  - 10.*
-  - 172.16.*
-  - 172.17.*
-  - 172.18.*
-  - 172.19.*
-  - 172.20.*
-  - 172.21.*
-  - 172.22.*
-  - 172.23.*
-  - 172.24.*
-  - 172.25.*
-  - 172.26.*
-  - 172.27.*
-  - 172.28.*
-  - 172.29.*
-  - 172.30.*
-  - 172.31.*
-  - 192.168.*
 
 proxy-providers:
   Acrossline:
@@ -163,6 +141,19 @@ rule-providers:
     path: ./RuleSet/DivineEngine/China.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
     interval: 86400
+
+rules:
+  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,BanAD,REJECT
+  - RULE-SET,BanProgramAD,REJECT
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Telegram,电报信息
+  - RULE-SET,Streaming,国际媒体
+  - RULE-SET,Proxy,全球加速
+  - RULE-SET,China,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,漏网之鱼
 
 script:
   code: |

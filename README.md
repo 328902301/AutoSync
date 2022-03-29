@@ -41,3 +41,7 @@ resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scri
 # 更新日志
 ## 2022-01-12
 - 添加 流媒体检测模块
+## 2022-03-27
+- 禁用 geo_location_checker 显示
+- 添加 server_check_timeout 参数
+- 更改 CN & AdBlock 分流规则

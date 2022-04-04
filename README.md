@@ -85,4 +85,4 @@
 * [app2smile](https://github.com/app2smile/rules)
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 * [mieqq](https://github.com/mieqq/mieqq)
-  
+* [Loyalsoldier](https://github.com/Loyalsoldier)

@@ -1,0 +1,37 @@
+name: copy rules
+
+on:
+  push:
+    branches:
+      - master
+    schedule:
+      - cron: '0 10 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Checkout Rules
+      uses: actions/checkout@v2
+      with:
+        repository: Loyalsoldier/clash-rules
+        ref: release
+        path: Rules
+    - name: copy files
+      run: cp -r Rules/. Clash/Ruleset
+    - name: Upload to this repo
+      run: |
+        if [ -n "$(git status -s)" ];then
+            echo "规则同步"
+            git config --global user.name "iEwha"
+            git config --global user.email "royiewha@gmail.com" 
+            git add . 
+            git commit -m '+'  
+            git push -u origin master
+            echo "完成同步"
+        else
+            echo "规则未修改"
+        fi
+        exit 0

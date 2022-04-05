@@ -1,7 +1,7 @@
 # 屏蔽迅雷版权
-HOST, hub5idx.v6.shub.sandai.net, REJECT
-HOST, hub5emu.v6.shub.sandai.net, REJECT
 HOST, hub5btmain.v6.shub.sandai.net, REJECT
+HOST, hub5emu.v6.shub.sandai.net, REJECT
+HOST, hub5idx.v6.shub.sandai.net, REJECT
 
 # 知乎去广告 @blackmatrix7 2022-01-18 https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
 HOST, appcloud2.in.zhihu.com, REJECT

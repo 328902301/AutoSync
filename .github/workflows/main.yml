@@ -1,11 +1,11 @@
-name: copy rules
+name: rules sync
 
 on:
   push:
     branches:
       - master
-    schedule:
-      - cron: '0 10 * * *'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:

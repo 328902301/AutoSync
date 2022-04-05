@@ -24,7 +24,7 @@ jobs:
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then
-            echo "规则同步"
+            echo "规则发生修改，正在同步"
             git config --global user.name "iEwha"
             git config --global user.email "royiewha@gmail.com" 
             git add . 

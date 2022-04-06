@@ -16,8 +16,8 @@ jobs:
     - name: Checkout Rules
       uses: actions/checkout@v2
       with:
-        repository: Loyalsoldier/clash-rules
-        ref: release
+        repository: iEwha/Rules
+        ref: clash-rules
         path: Rules
     - name: copy files
       run: cp -r Rules/. Clash/Ruleset

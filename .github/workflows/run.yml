@@ -16,7 +16,7 @@ jobs:
     - name: Checkout Rules
       uses: actions/checkout@v2
       with:
-        repository: Loyalsoldier/surge-rules
+        repository:iEwha/Rules
         ref: release
         path: Rules
     - name: copy files

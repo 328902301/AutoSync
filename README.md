@@ -47,3 +47,5 @@ resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scri
 - 更改 CN & AdBlock 分流规则
 ## 2022-03-29
 - 禁用 MITM google.com
+## 2022-04-08
+- 添加 IPv6 的 DNS 解析

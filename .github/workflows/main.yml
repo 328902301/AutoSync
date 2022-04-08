@@ -1,0 +1,50 @@
+name: rules sync
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '30 23 * * *'
+
+  watch:
+    types: started
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Checkout Surge-Rules
+      uses: actions/checkout@v2
+      with:
+        repository: iEwha/Rules
+        ref: SurgeRules
+        path: Rules
+    - name: copy Surge-files
+      run: cp -r Rules/. Ruleset
+    - name: Checkout Clash-Rules
+      uses: actions/checkout@v2
+      with:
+        repository: iEwha/Rules
+        ref: clash-rules
+        path: Rules
+    - name: copy Clash-files
+      run: cp -r Rules/. Clash/Ruleset
+    - name: Upload to this repo
+      run: |
+        if [ -n "$(git status -s)" ];then
+            echo "规则同步"
+            git config --global user.name "iEwha"
+            git config --global user.email "royiewha@gmail.com" 
+            git add . 
+            git commit -m 'update'  
+            git push -u origin master
+            echo "完成同步"
+        else
+            echo "规则未修改"
+        fi
+        exit 0

@@ -1,4 +1,43 @@
-# 知乎去广告 @blackmatrix7 2022-01-18 https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
+# utf-8
+# 2022-04-09 18:27
+# 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
+# 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
+# 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
+
+HOST-SUFFIX, govlaibing.cn, REJECT
+HOST-SUFFIX, adtrack.xiaojukeji.com,REJECT
+HOST-SUFFIX, netease.im, REJECT
+HOST, ads.95516.com, REJECT
+HOST, token.safebrowsing.apple, REJECT
+HOST, tnc3-aliec2.snssdk.com, REJECT
+HOST, upload-images.jianshu.io, REJECT
+HOST, static-assets-44d.pages.dev, REJECT
+HOST, support.you.163.com, REJECT
+HOST, cm-cn-central-00001.albatross.10086.cn, REJECT
+HOST, cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com, REJECT
+HOST, s.openmediation.com, REJECT
+HOST, api16-access-sg.pangle.io, REJECT
+HOST, a1235.hnhx360.com, REJECT
+HOST, down-files.2bulu.com, REJECT
+HOST, httpdns.titannetwork.cn, REJECT
+HOST, mpush-api.aliyun.com, REJECT
+HOST, dark.hyhuo.com, REJECT
+HOST, ntb.hyhuo.com, REJECT
+HOST, ip-api.com, REJECT
+HOST, wanproxy-hz.127.net, REJECT
+HOST, nstool.netease.com, REJECT
+HOST, api-access.pangolin-sdk-toutiao.com, REJECT
+HOST, sensorsdata.cmcc-cs.cn, REJECT
+HOST, lupic.cdn.bcebos.com, REJECT
+HOST, moment-app-team.s3.amazonaws.com, REJECT
+HOST, iconfactory.com, REJECT
+HOST, img.offeryeah.online, REJECT
+HOST, img.cdn.famobi.com, REJECT
+HOST, static.alookbrowser.com, REJECT
+HOST, log.ihuman.com, REJECT
+HOST, dc.114dev.com, REJECT
+
+# 知乎
 HOST, appcloud2.in.zhihu.com, REJECT
 HOST, mqtt.zhihu.com, REJECT
 HOST, sugar.zhihu.com, REJECT
@@ -6,14 +45,28 @@ USER-AGENT, AVOS*, REJECT
 IP-CIDR, 118.89.204.198/32, REJECT
 IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
+# 真不卡
+HOST-SUFFIX, ttayy.cn, REJECT
+HOST-SUFFIX, zhengxiaoliu.top, REJECT
+
+# NicoNico
+HOST, ads.nicovideo.jp, REJECT
+
+# HDO
+HOST-SUFFIX, applovin.com, REJECT
+HOST-SUFFIX, applvn.com, REJECT
+
 # 美颜相机去首页和轮播广告
 HOST, adui.tg.meitu.com, REJECT
 HOST, aaid.uyunad.com, REJECT
 
+# 爱奇艺广告屏蔽
+IP-CIDR, 203.107.63.154/32, REJECT
+
 # 多多视频去开屏广告
 HOST-SUFFIX, bayescom.com, REJECT
 
-# 车来了（包括小程序）
+# 车来了 (包括小程序)
 HOST-SUFFIX, atrace.chelaile.net.cn, REJECT
 HOST, logs.chelaile.net.cn, REJECT
 HOST, ad.chelaile.net.cn, REJECT

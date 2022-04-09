@@ -41,10 +41,12 @@ jobs:
             git config --global user.email "action@github.com"
             git config --global user.name "GitHub Action[bot]" 
             git add . 
-            git commit -m 'update'  
-            git push -u origin master
-            echo "完成同步"
-        else
-            echo "规则未修改"
-        fi
-        exit 0
+            git commit -m 'update' 
+
+    - name: push
+      uses: ad-m/github-push-action@master
+      with:
+          branch: 'master'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+           

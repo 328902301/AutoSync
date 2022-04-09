@@ -26,6 +26,14 @@ jobs:
         path: Rules
     - name: copy files
       run: cp -r Rules/. Ruleset
+    - name: Checkout Clash-Rules
+       uses: actions/checkout@v2
+       with:
+         repository: iEwha/Rules
+         ref: clash-rules
+         path: Rules
+    - name: copy Clash-files
+       run: cp -r Rules/. Clash/Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

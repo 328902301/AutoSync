@@ -18,35 +18,25 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Surge-Rules
+    - name: Checkout Rules
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
         ref: SurgeRules
         path: Rules
-    - name: copy Surge-files
+    - name: copy files
       run: cp -r Rules/. Ruleset
-    - name: Checkout Clash-Rules
-      uses: actions/checkout@v2
-      with:
-        repository: iEwha/Rules
-        ref: clash-rules
-        path: Rules
-    - name: copy Clash-files
-      run: cp -r Rules/. Clash/Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then
             echo "规则同步"
-            git config --global user.email "action@github.com"
-            git config --global user.name "GitHub Action[bot]" 
+            git config --global user.name "iEwha"
+            git config --global user.email "royiewha@gmail.com" 
             git add . 
-            git commit -m 'update' 
-
-    - name: push
-      uses: ad-m/github-push-action@master
-      with:
-          branch: 'master'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-           
+            git commit -m 'update'  
+            git push -u origin master
+            echo "完成同步"
+        else
+            echo "规则未修改"
+        fi
+        exit 0

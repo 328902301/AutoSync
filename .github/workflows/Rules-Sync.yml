@@ -13,21 +13,21 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Rules
+    - name: Checkout SurgeRules
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
         ref: SurgeRules
         path: Rules
-    - name: copy files
+    - name: copy SurgeRules
       run: cp -r Rules/. Ruleset
-    - name: Checkout Clash-Rules
+    - name: Checkout Clash-rules
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
         ref: clash-rules
         path: Rules
-    - name: copy Clash-files
+    - name: copy Clash-rules
       run: cp -r Rules/. Clash/Ruleset
     - name: Upload to this repo
       run: |

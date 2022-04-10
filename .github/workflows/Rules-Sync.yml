@@ -13,13 +13,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout SurgeRules
+    - name: Checkout iosRules
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
-        ref: SurgeRules
+        ref: iosRules
         path: Rules
-    - name: copy SurgeRules
+    - name: copy iosRules
       run: cp -r Rules/. Provider
    
     - name: Upload to this repo

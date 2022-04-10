@@ -20,7 +20,7 @@ jobs:
         ref: iosRules
         path: Rules
     - name: copy Rules
-      run: cp -r Rules/. Provider
+      run: cp -r Rules/. Ruleset
     
     - name: Upload to this repo
       run: |

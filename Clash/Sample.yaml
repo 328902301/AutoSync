@@ -111,7 +111,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Emby.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Ruleset/Emby.yaml
+    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
    Telegram:

@@ -1,5 +1,4 @@
-
-      name: rules sync
+name: rules sync
 
 on:
   push:

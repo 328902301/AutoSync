@@ -13,15 +13,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Checkout Rules
+    - name: Checkout iosRules
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
         ref: iosRules
         path: Rules
-    - name: copy Rules
+    - name: copy iosRules
       run: cp -r Rules/. Ruleset
-    
+   
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

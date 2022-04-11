@@ -1,14 +1,14 @@
 # NAME: ChinaMax
 # AUTHOR: blackmatrix7
 # REPO: https://gitlab.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-04-11 02:12:25
+# UPDATED: 2022-04-12 02:13:08
 # USER-AGENT: 62
-# HOST-SUFFIX: 71406
+# HOST-SUFFIX: 71405
 # HOST: 84
-# IP-CIDR: 6141
+# IP-CIDR: 6140
 # HOST-KEYWORD: 15
 # IP6-CIDR: 4151
-# TOTAL: 81859
+# TOTAL: 81857
 HOST,265.com,ChinaMax
 HOST,adservice.google.com,ChinaMax
 HOST,analytics.strava.com,ChinaMax
@@ -1465,7 +1465,6 @@ HOST-SUFFIX,148la.com,ChinaMax
 HOST-SUFFIX,14hj.com,ChinaMax
 HOST-SUFFIX,14xd.com,ChinaMax
 HOST-SUFFIX,150072.com,ChinaMax
-HOST-SUFFIX,150075.com,ChinaMax
 HOST-SUFFIX,1502828.com,ChinaMax
 HOST-SUFFIX,150cn.com,ChinaMax
 HOST-SUFFIX,151.hk,ChinaMax
@@ -77517,6 +77516,7 @@ IP-CIDR,45.87.54.0/23,ChinaMax
 IP-CIDR,46.248.24.0/23,ChinaMax
 IP-CIDR,47.235.0.0/16,ChinaMax
 IP-CIDR,47.236.0.0/14,ChinaMax
+IP-CIDR,47.240.0.0/14,ChinaMax
 IP-CIDR,47.244.0.0/15,ChinaMax
 IP-CIDR,47.246.0.0/16,ChinaMax
 IP-CIDR,47.250.0.0/15,ChinaMax
@@ -77669,7 +77669,6 @@ IP-CIDR,66.102.255.0/24,ChinaMax
 IP-CIDR,67.198.146.0/24,ChinaMax
 IP-CIDR,67.198.148.0/24,ChinaMax
 IP-CIDR,67.198.160.0/23,ChinaMax
-IP-CIDR,67.198.164.0/24,ChinaMax
 IP-CIDR,67.198.168.0/22,ChinaMax
 IP-CIDR,67.198.173.0/24,ChinaMax
 IP-CIDR,67.198.174.0/24,ChinaMax

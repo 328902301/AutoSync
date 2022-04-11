@@ -140,20 +140,16 @@ if (magicJS.read(blackKey)) {
             //2022-02-16 add by ddgksf2013
             for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
               if(obj.data.sections_v2[ii].title=='推荐服务'||obj.data.sections_v2[ii].title=='推薦服務'){
-                  delete obj.data.sections_v2[ii].title;
-                  delete obj.data.sections_v2[ii].type;
-                //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
-                //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
+                obj.data.sections_v2[ii].items[0].title='个性皮肤';
+                obj.data.sections_v2[ii].items[1].title='我的钱包';
               }
               if(obj.data.sections_v2[ii].title=='更多服務'||obj.data.sections_v2[ii].title=='更多服务'){
-                  delete obj.data.sections_v2[ii].title;
-                  delete obj.data.sections_v2[ii].type;
-                  //if(obj.data.sections_v2[ii].items[0].id==500){
-                      //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
-                  //}
-                  //if(obj.data.sections_v2[ii].items[1].id==501){
-                      //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
-                  //}
+                  if(obj.data.sections_v2[ii].items[0].id==500){
+                      obj.data.sections_v2[ii].items[0].title='个性皮肤';
+                  }
+                  if(obj.data.sections_v2[ii].items[1].id==501){
+                      obj.data.sections_v2[ii].items[1].title='我的钱包';
+                  }
               }
               if(obj.data.sections_v2[ii].title=='创作中心'||obj.data.sections_v2[ii].title=='創作中心'){
                   delete obj.data.sections_v2[ii].title;
@@ -291,17 +287,17 @@ if (magicJS.read(blackKey)) {
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          if(obj.data){
-          for (let item of obj["data"]["list"]) {
-              item["duration"] = 0;  // 显示时间
-              // 2040 年
-              item["begin_time"] = 2240150400;
-              item["end_time"] = 2240150400;
-          }
+          obj["data"]["max_time"] = 0;
+          obj["data"]["min_interval"] = 31536000;
+          obj["data"]["pull_interval"] = 31536000;
+          for (let i = 0; i < obj["data"]["list"].length; i++) {
+            obj["data"]["list"][i]["duration"] = 0;
+            obj["data"]["list"][i]["begin_time"] = 1915027200;
+            obj["data"]["list"][i]["end_time"] = 1924272000;
           }
           body = JSON.stringify(obj);
         } catch (err) {
-          magicJS.logError(`开屏广告（预加载）出现异常：${err}`);
+          magicJS.logError(`开屏广告处理出现异常：${err}`);
         }
         break;
       default:

@@ -1,5 +1,5 @@
 # utf-8
-# 2022-04-09 18:27
+# 2022-04-12 12:47
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
@@ -50,29 +50,29 @@ HOST-SUFFIX, ttayy.cn, REJECT
 HOST-SUFFIX, zhengxiaoliu.top, REJECT
 
 # NicoNico
-HOST, ads.nicovideo.jp, REJECT
+;HOST, ads.nicovideo.jp, REJECT
 
 # HDO
 HOST-SUFFIX, applovin.com, REJECT
 HOST-SUFFIX, applvn.com, REJECT
 
 # 美颜相机去首页和轮播广告
-HOST, adui.tg.meitu.com, REJECT
-HOST, aaid.uyunad.com, REJECT
+;HOST, adui.tg.meitu.com, REJECT
+;HOST, aaid.uyunad.com, REJECT
 
 # 爱奇艺广告屏蔽
-IP-CIDR, 203.107.63.154/32, REJECT
+;IP-CIDR, 203.107.63.154/32, REJECT
 
 # 多多视频去开屏广告
-HOST-SUFFIX, bayescom.com, REJECT
+;HOST-SUFFIX, bayescom.com, REJECT
 
 # 车来了 (包括小程序)
-HOST-SUFFIX, atrace.chelaile.net.cn, REJECT
-HOST, logs.chelaile.net.cn, REJECT
-HOST, ad.chelaile.net.cn, REJECT
+;HOST-SUFFIX, atrace.chelaile.net.cn, REJECT
+;HOST, logs.chelaile.net.cn, REJECT
+;HOST, ad.chelaile.net.cn, REJECT
 
 # 铁路12306
 HOST, ad.12306.cn, REJECT
 
 # 两步路
-HOST-SUFFIX, admobile.top, REJECT
+;HOST-SUFFIX, admobile.top, REJECT

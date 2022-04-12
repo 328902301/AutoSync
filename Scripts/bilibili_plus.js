@@ -176,19 +176,6 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`热搜去广告出现异常：${err}`);
         }
         break;
-        //会员身份标识 2022-03-05 add by ddgksf2013
-        case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          obj["data"]["vip"]["type"] = 2;
-          obj["data"]["vip"]["status"] = 1;
-          obj["data"]["vip"]["vip_pay_type"] = 1;
-          obj["data"]["vip"]["due_date"] = 4669824160;
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`1080P出现异常：${err}`);
-        }
-        break;
       // 追番去广告
       case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
         try {

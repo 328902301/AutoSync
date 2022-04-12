@@ -784,7 +784,7 @@ DOMAIN-SUFFIX,aty.sohu.com,REJECT
 DOMAIN,imp.optaim.com,REJECT
 DOMAIN,v2.reachmax.cn,REJECT
 DOMAIN,hui.sohu.com,REJECT
-# > Snapcha‪t‬
+# > Snapchat
 DOMAIN,ads.snapchat.com,REJECT
 DOMAIN,adsapi.snapchat.com,REJECT
 

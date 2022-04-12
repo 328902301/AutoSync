@@ -498,7 +498,7 @@ HOST-SUFFIX,ad.g.daum.net,REJECT
 
 HOST,abema-adx.ameba.jp,REJECT
 HOST,ad.12306.cn,REJECT
-HOST,ad.caiyunapp.com,REJECT
+;HOST,ad.caiyunapp.com,REJECT
 HOST,ad.flurry.com,REJECT
 HOST,ad.huajiao.com,REJECT
 HOST,ad.hzyoka.com,REJECT

@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -26,8 +26,8 @@ jobs:
       run: |
         if [ -n "$(git status -s)" ];then
             echo "规则同步"
-            git config --global user.name "GitHub Action[bot]"
-            git config --global user.email "action@github.com" 
+            git config --global user.name "iEwha"
+            git config --global user.email "royiewha@gmail.com" 
             git add . 
             git commit -m 'update'  
             git push -u origin master

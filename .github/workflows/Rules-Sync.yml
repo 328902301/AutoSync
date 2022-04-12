@@ -1,11 +1,13 @@
 name: rules sync
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
   schedule:
     - cron: '30 23 * * *'
+watch:
+    types: started
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   build:

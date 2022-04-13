@@ -52,6 +52,7 @@ DOMAIN,dlmobilegarena-a.akamaihd.net
 DOMAIN,ds-linear-abematv.akamaized.net
 DOMAIN,ds-vod-abematv.akamaized.net
 DOMAIN,dtlgalleryint.cloudapp.net
+DOMAIN,e122475.dscg.akamaiedge.net
 DOMAIN,ea.tt.omtrdc.net
 DOMAIN,eaassets-a.akamaihd.net
 DOMAIN,ebay-25-assets.s3-us-west-1.amazonaws.com
@@ -81,8 +82,10 @@ DOMAIN,imperial.insendi.com
 DOMAIN,interactive-examples.mdn.mozilla.net
 DOMAIN,itunes-apple.com.akadns.net
 DOMAIN,lgelectronics.122.2o7.net
+DOMAIN,licdn.cn.cdn20.com
 DOMAIN,linear-abematv.akamaized.net
 DOMAIN,link.theplatform.com
+DOMAIN,linkedin.sc.omtrdc.net
 DOMAIN,lolstatic-a.akamaihd.net
 DOMAIN,mdn.mozillademos.org
 DOMAIN,media-rockstargames-com.akamaized.net
@@ -5279,6 +5282,7 @@ DOMAIN-SUFFIX,biz.qltx0.com
 DOMAIN-SUFFIX,biz.qltx1.com
 DOMAIN-SUFFIX,bizhat.com
 DOMAIN-SUFFIX,bizimama.com
+DOMAIN-SUFFIX,bizographics.com
 DOMAIN-SUFFIX,bizzapp.com
 DOMAIN-SUFFIX,bj
 DOMAIN-SUFFIX,bj.ssvps.site
@@ -11931,6 +11935,7 @@ DOMAIN-SUFFIX,gputechconf.com
 DOMAIN-SUFFIX,gqfx.com
 DOMAIN-SUFFIX,gqueues.com
 DOMAIN-SUFFIX,gr
+DOMAIN-SUFFIX,gr-assets.com
 DOMAIN-SUFFIX,gr8domain.biz
 DOMAIN-SUFFIX,gr8name.biz
 DOMAIN-SUFFIX,grababrand.com
@@ -14979,6 +14984,8 @@ DOMAIN-SUFFIX,kyzyhello.com
 DOMAIN-SUFFIX,kz
 DOMAIN-SUFFIX,kzeng.info
 DOMAIN-SUFFIX,kzqzb.com
+DOMAIN-SUFFIX,l-0005.dc-msedge.net
+DOMAIN-SUFFIX,l-0005.l-msedge.net
 DOMAIN-SUFFIX,la-forum.org
 DOMAIN-SUFFIX,la4065.com
 DOMAIN-SUFFIX,lab.gracecode.com
@@ -20721,6 +20728,7 @@ DOMAIN-SUFFIX,scamadviser.com
 DOMAIN-SUFFIX,scasino.com
 DOMAIN-SUFFIX,scb
 DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,scene7.com
 DOMAIN-SUFFIX,scenesource.me
 DOMAIN-SUFFIX,sceper.ws
 DOMAIN-SUFFIX,schaeffler

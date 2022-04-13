@@ -1,14 +1,14 @@
 var tlist = {
-  1: ["元旦", "2022-01-01"],
-  2: ["春节", "2022-02-01"],
-  3: ["元宵", "2022-02-15"],
-  4: ["清明", "2022-04-05"],
-  5: ["劳动", "2022-05-01"],
-  6: ["端午", "2022-06-03"],
-  7: ["中秋", "2022-09-10"],
-  8: ["国庆", "2022-10-01"],
-  9: ["元旦", "2022-01-01"],
-  10: ["春节", "2023-01-22"]
+  1: ["清明", "2022-04-05"],
+  2: ["劳动", "2022-05-01"],
+  3: ["端午", "2022-06-03"],
+  4: ["中秋", "2022-09-10"],
+  5: ["国庆", "2022-10-01"],
+  6: ["元旦", "2023-01-01"],
+  7: ["春节", "2023-01-22"],
+  8: ["元宵", "2023-02-05"],
+  9: ["清明", "2023-04-05"]
+  
 };
 let tnow = new Date();
 let tnowf =
@@ -69,9 +69,39 @@ function datenotice() {
     //console.log("当日已通知");
   }
 }
+
+//>图标依次切换乌龟、兔子、闹钟、礼品盒
+function icon_now(num){
+  if(num<=7 && num>3 ){
+    return "hare"
+  }else if(num<=3 && num>0){
+    return "timer"
+  }else if(num==0){
+    return "gift"
+  }else{
+    return "tortoise"
+  }
+}
+
 $done({
-title:"距离节假日，还有多少天？",
-icon:"tortoise",
-'icon-color': "#00BFFF",
+title:title_random(tnumcount(Number(nowlist))),
+icon:icon_now(tnumcount(Number(nowlist))),
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
+
+function title_random(num){
+  let r = Math.floor((Math.random()*10)+1);
+  let dic = {
+    1:"距离放假，还要摸鱼多少天？",
+    2:"坚持住，就快放假啦！",
+    3:"上班好累呀，好想放假",
+    4:"努力，我还能加班24小时！",
+    5:"天呐，还要多久才放假呀？",
+    6:"躺平中，等放假",
+    7:"只有摸鱼才是赚老板的钱",
+    8:"一起摸鱼吧",
+    9:"摸鱼中，期待下一个假日",
+    10: "小乌龟慢慢爬"
+  };
+  return num==0?"节日快乐，万事大吉":dic[r]
+}

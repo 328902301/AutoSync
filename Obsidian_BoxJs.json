@@ -279,7 +279,7 @@
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie"
         },
 	{
-            "config": "5 8 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js, tag=CCCAT, img-url=https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Icon/CCCAT-D_144-1.png, enabled=true", 
+            "config": "5 8 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js, tag=CCCAT, img-url= https://raw.githubusercontent.com/Orz-3/mini/master/Color/CCCat.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=CCCAT cookie"
         }, 
         {

@@ -37,6 +37,9 @@ HOST,static.alookbrowser.com,REJECT
 HOST,log.ihuman.com,REJECT
 HOST,dc.114dev.com,REJECT
 
+# 哔哩哔哩
+HOST-SUFFIX,grpc.biliapi.net,REJECT
+
 # 真不卡
 HOST-SUFFIX,ttayy.cn,REJECT
 HOST-SUFFIX,zhengxiaoliu.top,REJECT

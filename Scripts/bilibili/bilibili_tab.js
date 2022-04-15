@@ -23,13 +23,13 @@ body['data']['tab'] = [
         tab_id: 'hottopic',
         pos: 3
     },
-    {
-        id: 42,
-        name: '追番',
-        uri: 'bilibili://pgc/home',
-        tab_id: 'bangumi',
-        pos: 4
-    },
+    //{
+        //id: 42,
+        //name: '追番',
+        //uri: 'bilibili://pgc/home',
+        //tab_id: 'bangumi',
+        //pos: 4
+    //},
     {
         id: 151,
         name: '影视',

@@ -1,0 +1,42 @@
+[custom]
+
+ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/AdvertisingPlus.list
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Hijacking.list
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Privacy.list
+ruleset=🍵 Telegram,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Telegram/Telegram.yaml
+ruleset=🎬 Youtube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=🎬 Netflix,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+ruleset=🎬 Disney+,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/DisneyPlus.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+ruleset=🎬 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=🌏 Global,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+;ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+;ruleset=DIRECT,[]GEOIP,LAN
+ruleset=DIRECT,[]GEOIP,CN
+ruleset=🐟 Final,[]FINAL
+
+
+custom_proxy_group=🍵 Telegram`select`[]🏴 Proxy Group`[]🇨🇳 HK or TW Group`[]🇺🇸 American Group`[]🇸🇬 Singapore Group`[]🇯🇵 JP or KR Group`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🎬 Youtube`select`[]🏴 Proxy Group`[]🇨🇳 HK or TW Group`[]🇺🇸 American Group`[]🇸🇬 Singapore Group`[]🇯🇵 JP or KR Group`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🎬 Netflix`select`[]🇸🇬 Singapore Group`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🎬 Disney+`select`[]🇸🇬 Singapore Group`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🌏 Global`select`[]🏴 Proxy Group`[]🇨🇳 HK or TW Group`[]🇺🇸 American Group`[]🇸🇬 Singapore Group`[]🇯🇵 JP or KR Group`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🐟 Final`select`[]🔐 Final Group`[]DIRECT
+custom_proxy_group=🏴 Proxy Group`url-test`(^((?!美|日|韩|新|T|Ex|JP).)*$)`http://www.gstatic.com/generate_204`300,,5
+custom_proxy_group=🇨🇳 HK or TW Group`url-test`(香港|台湾)`http://www.gstatic.com/generate_204`300,,5
+custom_proxy_group=🇺🇸 American Group`url-test`(美国)`http://www.gstatic.com/generate_204`300,,5
+custom_proxy_group=🇸🇬 Singapore Group`select`(新加坡)
+custom_proxy_group=🇯🇵 JP or KR Group`url-test`(日本|韩国|JP)`http://www.gstatic.com/generate_204`300,,5
+custom_proxy_group=🔐 Final Group`url-test`(实验性)`http://www.gstatic.com/generate_204`300,,5
+
+enable_rule_generator=true
+overwrite_original_rules=true

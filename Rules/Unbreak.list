@@ -6,6 +6,7 @@ HOST,bdtj.tagtic.cn,DIRECT
 # > Alibaba
 HOST,log.mmstat.com,DIRECT
 HOST,sycm.mmstat.com,DIRECT
+HOST,guide-acs.m.taobao.com,DIRECT
 # > Google
 HOST-SUFFIX,blog.google,DIRECT
 HOST-SUFFIX,googletraveladservices.com,DIRECT

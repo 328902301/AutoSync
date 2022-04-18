@@ -24,8 +24,7 @@ jobs:
       run: |
         if [ -n "$(git status -s)" ];then
             echo "规则同步"
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "action@github.com" 
+            git config --global user.name "iEwha" 
             git add . 
             git commit -m 'update'  
             git push -u origin master

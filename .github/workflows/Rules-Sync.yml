@@ -1,6 +1,9 @@
 name: rules sync
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
   schedule:
     - cron: '30 23 * * *'

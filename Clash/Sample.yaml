@@ -82,63 +82,63 @@ rule-providers:
    Unbreak:
     type: http
     behavior: domain
-    path: ./RuleSet/DivineEngine/Unbreak.yaml
+    path: ./Ruleset/DivineEngine/Unbreak.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
 
    BanAD:
     type: http
     behavior: domain
-    path: ./RuleSet/ACL4SSR/BanAD.yaml
+    path: ./Ruleset/ACL4SSR/BanAD.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
     interval: 86400
 
    BanProgramAD:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/BanProgramAD.list
+    path: ./Ruleset/ACL4SSR/BanProgramAD.list
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanProgramAD.yaml
     interval: 86400
 
    Microsoft:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/Microsoft.yaml
+    path: ./Ruleset/ACL4SSR/Microsoft.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml
     interval: 86400
 
    Emby:
     type: http
     behavior: classical
-    path: ./RuleSet/Emby.yaml
+    path: ./Ruleset/Emby.yaml
     url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
    Telegram:
     type: http
     behavior: classical
-    path: ./RuleSet/DivineEngine/Telegram.yaml
+    path: ./Ruleset/DivineEngine/Telegram.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Extra/Telegram/Telegram.yaml
     interval: 86400
 
    Streaming:
     type: http
     behavior: classical
-    path: ./RuleSet/DivineEngine/Streaming.yaml
+    path: ./Ruleset/DivineEngine/Streaming.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
     interval: 86400
 
    Proxy:
     type: http
     behavior: classical
-    path: ./RuleSet/DivineEngine/Global.yaml
+    path: ./Ruleset/DivineEngine/Global.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml
     interval: 86400
 
    China:
     type: http
     behavior: classical
-    path: ./RuleSet/DivineEngine/China.yaml
+    path: ./Ruleset/DivineEngine/China.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
     interval: 86400
 

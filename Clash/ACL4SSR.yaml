@@ -10,28 +10,6 @@ tun:
   auto-route: true
   dns-hijack:
       - 198.18.0.2:53
-bypass:
-  - 127.0.0.1
-  - localhost
-  - 127.*
-  - 10.*
-  - 172.16.*
-  - 172.17.*
-  - 172.18.*
-  - 172.19.*
-  - 172.20.*
-  - 172.21.*
-  - 172.22.*
-  - 172.23.*
-  - 172.24.*
-  - 172.25.*
-  - 172.26.*
-  - 172.27.*
-  - 172.28.*
-  - 172.29.*
-  - 172.30.*
-  - 172.31.*
-  - 192.168.*
 
 proxy-providers:
   HK:
@@ -171,42 +149,42 @@ rule-providers:
    LocalAreaNetwork:
     type: http
     behavior: domain
-    path: ./RuleSet/ACL4SSR/LocalAreaNetwork.yaml
+    path: ./Ruleset/ACL4SSR/LocalAreaNetwork.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/LocalAreaNetwork.yaml
     interval: 86400
 
    BanAD:
     type: http
     behavior: domain
-    path: ./RuleSet/ACL4SSR/BanAD.yaml
+    path: ./Ruleset/ACL4SSR/BanAD.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
     interval: 86400
 
    BanProgramAD:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/BanProgramAD.list
+    path: ./Ruleset/ACL4SSR/BanProgramAD.list
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanProgramAD.yaml
     interval: 86400
 
    GoogleCN:
     type: http
     behavior: domain
-    path: ./RuleSet/ACL4SSR/GoogleCN.yaml
+    path: ./Ruleset/ACL4SSR/GoogleCN.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/GoogleCN.yaml
     interval: 86400
 
    Microsoft:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/Microsoft.yaml
+    path: ./Ruleset/ACL4SSR/Microsoft.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml
     interval: 86400
 
    Apple:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/Apple.yaml
+    path: ./Ruleset/ACL4SSR/Apple.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml
     interval: 86400
 
@@ -214,42 +192,42 @@ rule-providers:
    Emby:
     type: http
     behavior: classical
-    path: ./RuleSet/Emby.yaml
+    path: ./Ruleset/Emby.yaml
     url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
    Telegram:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/Telegram.yaml
+    path: ./Ruleset/ACL4SSR/Telegram.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml
     interval: 86400
 
    ProxyMedia:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/ProxyMedia.yaml
+    path: ./Ruleset/ACL4SSR/ProxyMedia.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyMedia.yaml
     interval: 86400
 
    Proxy:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/ProxyGFWlist.yaml
+    path: ./Ruleset/ACL4SSR/ProxyGFWlist.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyGFWlist.yaml
     interval: 86400
 
    China:
     type: http
     behavior: classical
-    path: ./RuleSet/ACL4SSR/ChinaDomain.yaml
+    path: ./Ruleset/ACL4SSR/ChinaDomain.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml
     interval: 86400
 
    ChinaCompanyIp:
     type: http
     behavior: ipcidr
-    path: ./RuleSet/ACL4SSR/ChinaCompanyIp.yaml
+    path: ./Ruleset/ACL4SSR/ChinaCompanyIp.yaml
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaCompanyIp.yaml
     interval: 86400
  

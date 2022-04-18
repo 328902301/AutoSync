@@ -275,27 +275,11 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png"]
       }],
   "task": [{
-            "config": "5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true",
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=获取京东cookie"
-        },
-	{
-            "config": "5 8 * * * https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js, tag=CCCAT, img-url= https://raw.githubusercontent.com/Orz-3/mini/master/Color/CCCat.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=CCCAT cookie"
-        }, 
-        {
-            "config": "1 10 3 * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js, tag=电信套餐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=天翼账号中心cookie"
-        }, 
-        {
             "config": "0 0 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/umetrip.png, enabled=true",
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=航旅纵横cookie"
         }, 
         {
             "config": "1 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url= https://raw.githubusercontent.com/anker1209/icon/main/wyyy.png, enabled=true", 
             "addons": "https://raw.githubusercontent.com/Obsidian99/Profile/master/QuanX/Cookie_Remote.conf, tag=网易云音乐cookie"
-        }, 
-        {
-            "config": "10 0 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png, enabled=true", 
-            "addons": "https://raw.githubusercontent.com/Obsidian99/Profilet/master/QuanX/Cookie_Remote.conf, tag=伊利乳品cookie"
   }]
 }

@@ -1,54 +1,54 @@
 # Privacy
-HOST-SUFFIX,adjust.com,REJECT
-HOST-SUFFIX,cpatrk.net,REJECT
-HOST-SUFFIX,kochava.com,REJECT
-HOST-SUFFIX,marketo.com,REJECT
-HOST-SUFFIX,mobileapptracking.com,REJECT
-HOST-SUFFIX,rtbasia.com,REJECT
-HOST-SUFFIX,scorecardresearch.com,REJECT
-HOST-SUFFIX,sumologic.com,REJECT
-HOST-SUFFIX,survicate.com,REJECT
-HOST-SUFFIX,tagcommander.com,REJECT
-HOST-SUFFIX,tailtarget.com,REJECT
-HOST-SUFFIX,talkingdata.net,REJECT
-HOST-SUFFIX,tapad.com,REJECT
-HOST-SUFFIX,tapfiliate.com,REJECT
-HOST-SUFFIX,tapinfluence.com,REJECT
-HOST-SUFFIX,tapstream.com,REJECT
-HOST-SUFFIX,tealiumiq.com,REJECT
-HOST-SUFFIX,tend.io,REJECT
-HOST-SUFFIX,tpctrust.com,REJECT
-HOST-SUFFIX,trackingio.com,REJECT
-HOST-SUFFIX,tremormedia.com,REJECT
-HOST-SUFFIX,woopra.com,REJECT
-HOST-SUFFIX,wootric.com,REJECT
-HOST-SUFFIX,wowanalytics.co.uk,REJECT
-HOST-SUFFIX,zoomanalytics.co,REJECT
+HOST-SUFFIX,adjust.com,Privacy
+HOST-SUFFIX,cpatrk.net,Privacy
+HOST-SUFFIX,kochava.com,Privacy
+HOST-SUFFIX,marketo.com,Privacy
+HOST-SUFFIX,mobileapptracking.com,Privacy
+HOST-SUFFIX,rtbasia.com,Privacy
+HOST-SUFFIX,scorecardresearch.com,Privacy
+HOST-SUFFIX,sumologic.com,Privacy
+HOST-SUFFIX,survicate.com,Privacy
+HOST-SUFFIX,tagcommander.com,Privacy
+HOST-SUFFIX,tailtarget.com,Privacy
+HOST-SUFFIX,talkingdata.net,Privacy
+HOST-SUFFIX,tapad.com,Privacy
+HOST-SUFFIX,tapfiliate.com,Privacy
+HOST-SUFFIX,tapinfluence.com,Privacy
+HOST-SUFFIX,tapstream.com,Privacy
+HOST-SUFFIX,tealiumiq.com,Privacy
+HOST-SUFFIX,tend.io,Privacy
+HOST-SUFFIX,tpctrust.com,Privacy
+HOST-SUFFIX,trackingio.com,Privacy
+HOST-SUFFIX,tremormedia.com,Privacy
+HOST-SUFFIX,woopra.com,Privacy
+HOST-SUFFIX,wootric.com,Privacy
+HOST-SUFFIX,wowanalytics.co.uk,Privacy
+HOST-SUFFIX,zoomanalytics.co,Privacy
 
-HOST,track.tenjin.com,REJECT
-HOST,track.tenjin.io,REJECT
-HOST,api.talkingdata.com,REJECT
-HOST,track.tiara.daum.net,REJECT
-HOST,track.tiara.kakao.com,REJECT
-HOST,zgsdk.zhugeio.com,REJECT
+HOST,track.tenjin.com,Privacy
+HOST,track.tenjin.io,Privacy
+HOST,api.talkingdata.com,Privacy
+HOST,track.tiara.daum.net,Privacy
+HOST,track.tiara.kakao.com,Privacy
+HOST,zgsdk.zhugeio.com,Privacy
 
 # > 51.LA
-HOST,js.users.51.la,REJECT
-HOST,mc.51.la,REJECT
-HOST,wc.51.la,REJECT
+HOST,js.users.51.la,Privacy
+HOST,mc.51.la,Privacy
+HOST,wc.51.la,Privacy
 # > 58
-HOST,track.58.com,REJECT
-HOST,tracklog.58.com,REJECT
+HOST,track.58.com,Privacy
+HOST,tracklog.58.com,Privacy
 # > Baidu
-HOST,hm.baidu.com,REJECT
-HOST,hmma.baidu.com,REJECT
+HOST,hm.baidu.com,Privacy
+HOST,hmma.baidu.com,Privacy
 # > Google
-HOST-SUFFIX,googletagmanager.com,REJECT
-HOST-SUFFIX,google-analytics.com,REJECT
-HOST,safebrowsing.googleapis.com,REJECT
+HOST-SUFFIX,googletagmanager.com,Privacy
+HOST-SUFFIX,google-analytics.com,Privacy
+HOST,safebrowsing.googleapis.com,Privacy
 # > MI
-HOST-SUFFIX,tracking.miui.com,REJECT
-HOST,data.mistat.xiaomi.com,REJECT
-HOST,tracking.intl.miui.com,REJECT
+HOST-SUFFIX,tracking.miui.com,Privacy
+HOST,data.mistat.xiaomi.com,Privacy
+HOST,tracking.intl.miui.com,Privacy
 # > Tencent
-HOST,safebrowsing.urlsec.qq.com,REJECT
+HOST,safebrowsing.urlsec.qq.com,Privacy

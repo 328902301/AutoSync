@@ -4,62 +4,62 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 
-HOST-SUFFIX,govlaibing.cn,REJECT
-HOST-SUFFIX,adtrack.xiaojukeji.com,REJECT
-HOST-SUFFIX,netease.im,REJECT
-HOST,ads.95516.com,REJECT
-HOST,token.safebrowsing.apple,REJECT
-HOST,tnc3-aliec2.snssdk.com,REJECT
-HOST,upload-images.jianshu.io,REJECT
-HOST,static-assets-44d.pages.dev,REJECT
-HOST,support.you.163.com,REJECT
-HOST,cm-cn-central-00001.albatross.10086.cn,REJECT
-HOST,cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com,REJECT
-HOST,s.openmediation.com,REJECT
-HOST,api16-access-sg.pangle.io,REJECT
-HOST,a1235.hnhx360.com,REJECT
-HOST,down-files.2bulu.com,REJECT
-HOST,httpdns.titannetwork.cn,REJECT
-HOST,mpush-api.aliyun.com,REJECT
-HOST,dark.hyhuo.com,REJECT
-HOST,ntb.hyhuo.com,REJECT
-HOST,ip-api.com,REJECT
-HOST,wanproxy-hz.127.net,REJECT
-HOST,nstool.netease.com,REJECT
-HOST,api-access.pangolin-sdk-toutiao.com,REJECT
-HOST,sensorsdata.cmcc-cs.cn,REJECT
-HOST,lupic.cdn.bcebos.com,REJECT
-HOST,moment-app-team.s3.amazonaws.com,REJECT
-HOST,iconfactory.com,REJECT
-HOST,img.offeryeah.online,REJECT
-HOST,img.cdn.famobi.com,REJECT
-HOST,static.alookbrowser.com,REJECT
-HOST,log.ihuman.com,REJECT
-HOST,dc.114dev.com,REJECT
+HOST-SUFFIX,govlaibing.cn,MyBlockAds
+HOST-SUFFIX,adtrack.xiaojukeji.com,MyBlockAds
+HOST-SUFFIX,netease.im,MyBlockAds
+HOST,ads.95516.com,MyBlockAds
+HOST,token.safebrowsing.apple,MyBlockAds
+HOST,tnc3-aliec2.snssdk.com,MyBlockAds
+HOST,upload-images.jianshu.io,MyBlockAds
+HOST,static-assets-44d.pages.dev,MyBlockAds
+HOST,support.you.163.com,MyBlockAds
+HOST,cm-cn-central-00001.albatross.10086.cn,MyBlockAds
+HOST,cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com,MyBlockAds
+HOST,s.openmediation.com,MyBlockAds
+HOST,api16-access-sg.pangle.io,MyBlockAds
+HOST,a1235.hnhx360.com,MyBlockAds
+HOST,down-files.2bulu.com,MyBlockAds
+HOST,httpdns.titannetwork.cn,MyBlockAds
+HOST,mpush-api.aliyun.com,MyBlockAds
+HOST,dark.hyhuo.com,MyBlockAds
+HOST,ntb.hyhuo.com,MyBlockAds
+HOST,ip-api.com,MyBlockAds
+HOST,wanproxy-hz.127.net,MyBlockAds
+HOST,nstool.netease.com,MyBlockAds
+HOST,api-access.pangolin-sdk-toutiao.com,MyBlockAds
+HOST,sensorsdata.cmcc-cs.cn,MyBlockAds
+HOST,lupic.cdn.bcebos.com,MyBlockAds
+HOST,moment-app-team.s3.amazonaws.com,MyBlockAds
+HOST,iconfactory.com,MyBlockAds
+HOST,img.offeryeah.online,MyBlockAds
+HOST,img.cdn.famobi.com,MyBlockAds
+HOST,static.alookbrowser.com,MyBlockAds
+HOST,log.ihuman.com,MyBlockAds
+HOST,dc.114dev.com,MyBlockAds
 
 # 哔哩哔哩
-;HOST-SUFFIX,grpc.biliapi.net,REJECT
+;HOST-SUFFIX,grpc.biliapi.net,MyBlockAds
 
 # 真不卡
-HOST-SUFFIX,ttayy.cn,REJECT
-HOST-SUFFIX,zhengxiaoliu.top,REJECT
+HOST-SUFFIX,ttayy.cn,MyBlockAds
+HOST-SUFFIX,zhengxiaoliu.top,MyBlockAds
 
 # NicoNico
-;HOST,ads.nicovideo.jp,REJECT
+;HOST,ads.nicovideo.jp,MyBlockAds
 
 # HDO
-HOST-SUFFIX,applovin.com,REJECT
-HOST-SUFFIX,applvn.com,REJECT
+HOST-SUFFIX,applovin.com,MyBlockAds
+HOST-SUFFIX,applvn.com,MyBlockAds
 
 # 美颜相机去首页和轮播广告
-;HOST,adui.tg.meitu.com,REJECT
-;HOST,aaid.uyunad.com,REJECT
+;HOST,adui.tg.meitu.com,MyBlockAds
+;HOST,aaid.uyunad.com,MyBlockAds
 
 # 爱奇艺广告屏蔽
-;IP-CIDR,203.107.63.154/32,REJECT
+;IP-CIDR,203.107.63.154/32,MyBlockAds
 
 # 多多视频去开屏广告
-;HOST-SUFFIX,bayescom.com,REJECT
+;HOST-SUFFIX,bayescom.com,MyBlockAds
 
 # 两步路
-;HOST-SUFFIX,admobile.top,REJECT
+;HOST-SUFFIX,admobile.top,MyBlockAds

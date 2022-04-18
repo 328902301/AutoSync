@@ -1,0 +1,28 @@
+# 2022-04-18 21:21
+# 引用地址 https://support.apple.com/zh-cn/HT210060
+
+# 安装、恢复以及更新 macOS、iOS、iPadOS、watchOS 和 Apple tvOS 时，需要通过网络访问以下主机名称
+# 注释掉的为 macOS 独享
+HOST,appldnld.apple.com,AppleUpdate
+;HOST,configuration.apple.com,AppleUpdate
+HOST,gdmf.apple.com,AppleUpdate
+HOST,gg.apple.com,AppleUpdate
+;HOST,gnf-mdn.apple.com,AppleUpdate
+;HOST,gnf-mr.apple.com,AppleUpdate
+HOST,gs.apple.com,AppleUpdate
+;HOST,ig.apple.com,AppleUpdate
+HOST,mesu.apple.com,AppleUpdate
+HOST,ns.itunes.apple.com,AppleUpdate
+;HOST,oscdn.apple.com,AppleUpdate
+;HOST,osrecovery.apple.com,AppleUpdate
+;HOST,skl.apple.com,AppleUpdate
+;HOST,swcdn.apple.com,AppleUpdate
+;HOST,swdist.apple.com,AppleUpdate
+;HOST,swdownload.apple.com,AppleUpdate
+;HOST,swscan.apple.com,AppleUpdate
+HOST,updates-http.cdn-apple.com,AppleUpdate
+HOST,updates.cdn-apple.com,AppleUpdate
+HOST,xp.apple.com,AppleUpdate
+
+# 蜂窝网络设备必须能够连接到以下主机才能安装运营商捆绑包更新
+HOST,appldnld.apple.com.edgesuite.net,AppleUpdate

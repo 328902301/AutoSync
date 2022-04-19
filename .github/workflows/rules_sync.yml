@@ -17,15 +17,15 @@ jobs:
         repository: iEwha/Rules
         ref: iosRules
         path: Rules
-    - name: copy iosRules
+    - name: copy SurgeRules
       run: cp -r Rules/Direct.list Provider
-    - name: copy iosRules
+    - name: copy SurgeRules
       run: cp -r Rules/Proxy.list Provider
-    - name: copy iosRules
+    - name: copy ClashRules
       run: cp -r Rules/Ruleset/Proxy.yaml Provider/Ruleset
-    - name: copy iosRules
+    - name: copy ClashRules
       run: cp -r Rules/Ruleset/Direct.yaml Provider/Ruleset
-    - name: copy iosRules
+    - name: copy ClashRules
       run: cp -r Rules/Ruleset/Reject.yaml Provider/Ruleset
     - name: Upload to this repo
       run: |

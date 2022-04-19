@@ -21,7 +21,8 @@ jobs:
         path: Rules
     - name: copy iosRules
       run: cp -r Rules/direct.list Provider
-             cp -r Rules/proxy.list Provider
+    - name: copy iosRules
+      run: cp -r Rules/proxy.list Provider
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

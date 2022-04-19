@@ -7,6 +7,12 @@ DOMAIN,emby.cjpc.cc
 # > 流媒体emby-flowercloud服务器
 DOMAIN,emby.flowercloud.yt
 
+# > masakaf
+DOMAIN,emby.misakaf.xyz
+
+# > TAG
+DOMAIN,emby.riches.cloud
+
 # > 流媒体emby-maying服务器
 DOMAIN,emby.maying.club
 
@@ -81,11 +87,3 @@ DOMAIN,jmsooo.com
 DOMAIN,cf.jmsooo.com
 DOMAIN,hk.jmsooo.com
 DOMAIN,sg.jmsooo.com
-
-# > masakaf
-DOMAIN,emby.misakaf.xyz
-IP-CIDR,194.180.179.226/25
-
-# > TAG
-DOMAIN,emby.riches.cloud
-IP-CIDR,198.204.247.154/80

@@ -28,7 +28,7 @@ jobs:
     - name: copy ClashRules
       run: cp -r Rules/Ruleset/Direct.yaml Provider/Ruleset
     - name: copy ClashRules
-      run: cp -r Rules/Ruleset/Reject.yaml Provider/Ruleset  
+      run: cp -r Rules/Ruleset/Reject.yaml Provider/Ruleset
 
     - name: Upload to this repo
       run: |

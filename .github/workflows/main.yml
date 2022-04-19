@@ -23,6 +23,8 @@ jobs:
       run: cp -r Rules/direct.list Provider
     - name: copy iosRules
       run: cp -r Rules/proxy.list Provider
+    - name: copy iosRules
+      run: cp -r Rules/Ruleset/proxy.yaml Provider/Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

@@ -84,6 +84,8 @@ DOMAIN,sg.jmsooo.com
 
 # > masakaf
 DOMAIN,emby.misakaf.xyz
+IP-CIDR,194.180.179.226/25
 
 # > TAG
 DOMAIN,emby.riches.cloud
+IP-CIDR,198.204.247.154/80

@@ -1,9 +1,7 @@
 name: rules sync
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
   schedule:
     - cron: '30 23 * * *'
 
@@ -20,15 +18,15 @@ jobs:
         ref: iosRules
         path: Rules
     - name: copy iosRules
-      run: cp -r Rules/direct.list Provider
+      run: cp -r Rules/Direct.list Provider
     - name: copy iosRules
-      run: cp -r Rules/proxy.list Provider
+      run: cp -r Rules/Proxy.list Provider
     - name: copy iosRules
-      run: cp -r Rules/Ruleset/proxy.yaml Provider/Ruleset
+      run: cp -r Rules/Ruleset/Proxy.yaml Provider/Ruleset
     - name: copy iosRules
-      run: cp -r Rules/Ruleset/direct.yaml Provider/Ruleset
+      run: cp -r Rules/Ruleset/Direct.yaml Provider/Ruleset
     - name: copy iosRules
-      run: cp -r Rules/Ruleset/reject.yaml Provider/Ruleset
+      run: cp -r Rules/Ruleset/Reject.yaml Provider/Ruleset
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

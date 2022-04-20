@@ -11,7 +11,9 @@ DOMAIN,emby.flowercloud.yt
 DOMAIN,emby.misakaf.xyz
 
 # > TAG
-DOMAIN,emby.riches.cloud
+DOMAIN-SUFFIX,emby.riches.cloud
+IP-CIDR,161.97.148.156/24,no-resolve
+IP-CIDR,198.204.247.154/24,no-resolve
 
 # > 流媒体emby-maying服务器
 DOMAIN,emby.maying.club

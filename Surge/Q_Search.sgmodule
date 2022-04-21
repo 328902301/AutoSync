@@ -19,6 +19,7 @@
 # trc: Google 译至中
 # tre: Google 译至英
 # trj: Google 译至日
+# trk: Google 译至韩
 
 # db：豆瓣搜索
 # zh: 知乎
@@ -42,9 +43,6 @@
 # tgd: TG搜索Google Drive资源
 # tal： 搜索阿里云盘资源
 # tal2： 搜索阿里云盘资源
-
-# ccn 临时切换App Store国区
-# uus 临时切换App Store美区
  
 # bi: 必应
 # bd：百度搜索
@@ -79,6 +77,8 @@
 ^https:\/\/duckduckgo.com\/\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
 # trj  (Google 译至日)
 ^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+# trk  (Google 译至韩)
+^https:\/\/duckduckgo.com\/\?q=trk\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ko&text=$1 302
 # 社区
 # db：豆瓣
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
@@ -138,12 +138,7 @@
 # tgd xxx (t.me/gdsharing 搜索 Google Drive 资源)
 ^https:\/\/duckduckgo.com\/\?q=tgd(\+|%20)([^&]+).+ https://t.me/s/gdsharing?q=$2 302
 # > App Store临时换区
-# ccn 国区
-# ccn (App Store 临时换至中国区)
-^https:\/\/duckduckgo.com\/\?q=ccn&.+ https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143465&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=cn&urlDesc= 302
-# uus 美区
-# uus (App Store 临时换至美国区)
-^https:\/\/duckduckgo.com\/\?q=uus&.+ https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143441&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=us&urlDesc= 302
+
 
 [MITM]
 hostname = %APPEND% duckduckgo.com

@@ -3871,6 +3871,7 @@ payload:
   - DOMAIN-SUFFIX,openervpn.in
   - DOMAIN-SUFFIX,openid.net
   - DOMAIN-SUFFIX,openleaks.org
+  - DOMAIN-SUFFIX,opensea.io
   - DOMAIN-SUFFIX,opensource.google
   - DOMAIN-SUFFIX,opentech.fund
   - DOMAIN-SUFFIX,openvpn.net

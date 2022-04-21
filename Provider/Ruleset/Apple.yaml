@@ -121,3 +121,4 @@ payload:
   - DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
   - DOMAIN-SUFFIX,www.apple.com.edgekey.net
   - DOMAIN-SUFFIX,www.apple.com
+  - DOMAIN-SUFFIX,xp.apple.com

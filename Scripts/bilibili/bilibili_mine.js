@@ -1,4 +1,5 @@
-// 2022-04-15 17:16
+// 2021-08
+// 引用地址 https://github.com/yjqiang/surge_scripts/blob/main/scripts/bilibili/bilibili_mine.js
 let body = JSON.parse($response.body);
 // 删除了“推荐服务”
 body['data']['sections_v2'] = [

@@ -1,5 +1,6 @@
-// 2022-04-15 17:16
-//参考@yichahucha 的脚本
+// 2021-09
+// 引用地址 https://github.com/zmqcherish/proxy-script/blob/main/weibo_launch.js
+// 参考@yichahucha 的脚本
 
 const launchAdUrl1 = '/interface/sdk/sdkad.php';
 const launchAdUrl2 = '/wbapplua/wbpullad.lua';

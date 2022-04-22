@@ -1,4 +1,5 @@
-// 2022-04-15 17:16
+// 2021-10
+// 引用地址 https://github.com/yjqiang/surge_scripts/blob/main/scripts/bilibili/bilibili_tab.js
 let body = JSON.parse($response.body);
 // 首页的 tab 栏（加入影视栏目）
 body['data']['tab'] = [

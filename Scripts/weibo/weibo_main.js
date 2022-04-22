@@ -1,11 +1,12 @@
 // 2022-04-22 11:16
+// 引用地址 https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 const version = 'v0422.1';
 
 let $ = new nobyda();
 let storeMainConfig = $.read('mainConfig');
 let storeItemMenusConfig = $.read('itemMenusConfig');
 
-//主要的选项配置
+// 主要的选项配置
 const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	isDebug: false,						//开启调试，会打印运行中部分日志
 	//个人中心配置，其中多数是可以直接在更多功能里直接移除

@@ -208,13 +208,6 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Lancidr.yaml
     interval: 86400
  
-   cncidr:
-    type: http
-    behavior: classical
-    path: ./Ruleset/iEwha/cncidr.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/cncidr.yaml
-    interval: 86400
- 
 script:
   code: |
     def main(ctx, metadata):
@@ -229,7 +222,6 @@ script:
             "ProxyGFW": "全球加速",
             "China": "DIRECT",   
             "Lancidr": "DIRECT",   
-            "cncidr": "DIRECT",   
           }
         port = int(metadata["dst_port"])
         if metadata["network"] == "UDP":

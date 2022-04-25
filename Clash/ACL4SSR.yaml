@@ -248,21 +248,25 @@ script:
             "China": "DIRECT",   
             "ChinaCompanyIp": "DIRECT",   
           }
+        port = int(metadata["dst_port"])
+        if metadata["network"] == "UDP":
+            if port == 443:
+                ctx.log('[Script] matched QUIC traffic use reject')
+                return "REJECT"
+        port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8888, 8889]
+        if port not in port_list:
+            ctx.log('[Script] not common port use direct')
+            return "DIRECT"
         if metadata["dst_ip"] == "":
             metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
-            
         for ruleset in ruleset_action:
             if ctx.rule_providers[ruleset].match(metadata):
                 return ruleset_action[ruleset]
-
         if metadata["dst_ip"] == "":
             return "DIRECT"
-
         code = ctx.geoip(metadata["dst_ip"])
         if code == "CN":
             ctx.log('[Script] Geoip CN')
             return "DIRECT"
-
         ctx.log('[Script] MATCH')
         return "漏网之鱼"
-   

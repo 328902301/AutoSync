@@ -34,6 +34,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   let total = info.total;
   let expire = args.expire || info.expire;
   let content = [`剩餘: ${bytesToSize(total-used)}｜重置: ${resetDayLeft} Days`];
+  let proportion = used / total
 
 /*
   if (resetDayLeft) {
@@ -52,7 +53,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title}`,
+    title: ${args.title} | ${toPercent(proportion)},
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
@@ -141,4 +142,9 @@ function formatTime(time) {
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
   return year + "年" + month + "月" + day + "日";
+}
+
+function toPercent(proportion) {
+  const percent = Number(proportion*100).toFixed(2);
+  return percent + "%";
 }

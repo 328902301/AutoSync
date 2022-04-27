@@ -29,11 +29,11 @@ Sub_info = script-name=Sub_info,update-interval=86400
   let info = await getDataInfo(args.url);
   if (!info) $done();
   let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
-
+  let proportion = used / total;  
+  
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let proportion = used / total;
   let content = [`Used: ${toPercent(proportion)}｜Avl: ${bytesToSize(total-used)} Days`];
 
 /*

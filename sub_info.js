@@ -33,7 +33,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`剩餘: ${bytesToSize(total-used)}｜重置: ${resetDayLeft} Days`];
+  let content = [`Used：${toPercent(proportion)｜Avl：${bytesToSize(total-used)}`];
   let proportion = used / total;
 
 /*
@@ -53,7 +53,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${toPercent(proportion)}`,
+    ttitle: `${args.title} | reset：${resetDayLeft} Days`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",

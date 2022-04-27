@@ -132,7 +132,7 @@ function bytesToSize(bytes) {
   let k = 1024;
   sizes = ["B", "KB", "MB", "GB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
-  return (bytes / {Math.pow(k, i)-1}).toFixed(2) + " " + sizes[i-1];
+  return (bytes / (Math.pow(k, i)-1)).toFixed(2) + " " + sizes[i-1];
 }
 
 function formatTime(time) {

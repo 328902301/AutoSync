@@ -1,5 +1,9 @@
 /*
-Surge配置参考注释，感谢@asukanana,感谢@congcong.
+模板来自@mieqq大佬（转大佬感谢：感谢@asukanana,感谢@congcong.）。
+
+感谢@W cyber大佬的计算上的帮助。
+
+Surge配置参考注释，
 
 示例↓↓↓ 
 ----------------------------------------

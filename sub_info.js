@@ -1,6 +1,7 @@
 /*
 模板来自@mieqq大佬（转大佬感谢：感谢@asukanana,感谢@congcong.）。
 
+感谢@mieqq大佬
 感谢@W cyber大佬的计算上的帮助。
 
 Surge配置参考注释，
@@ -137,7 +138,8 @@ function bytesToSize(bytes) {
   let k = 1024;
   sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
-  return (((bytes / Math.pow(k, i)))*1024).toFixed(2)+ " " + sizes[i-1];
+  if (sizes[i] === "TB" ) return (((bytes / Math.pow(k, i)))*1024).toFixed(2)+ " " + sizes[i-1];
+  return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
 }
 
 function formatTime(time) {

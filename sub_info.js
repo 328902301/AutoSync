@@ -34,7 +34,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   let total = info.total;
   let expire = args.expire || info.expire;
   let content = [`剩餘: ${bytesToSize(total-used)}｜重置: ${resetDayLeft} Days`];
-  let proportion = used / total
+  let proportion = used / total;
 
 /*
   if (resetDayLeft) {

@@ -53,7 +53,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} ` + `| reset : ` + `${resetDayLeft} Days`,
+    title: `${args.title} ` + `| Reset : ` + `${resetDayLeft} Days`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
@@ -131,7 +131,7 @@ function getRmainingDays(resetDay) {
 function bytesToSize(bytes) {
   if (bytes === 0) return "0B";
   let k = 1024;
-  sizes = ["B", "KB", "MB", "GB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (((bytes / Math.pow(k, i)))*1024).toFixed(2)+ " " + sizes[i-1];
 }

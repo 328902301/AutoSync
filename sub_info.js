@@ -138,7 +138,7 @@ function bytesToSize(bytes) {
   let k = 1024;
   sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
-  if (sizes[i] === "TB" ) return (((bytes / Math.pow(k, i)))*1024).toFixed(2)+ " " + sizes[i-1];
+  if (i === 4 ) return (((bytes / Math.pow(k, i)))*1024).toFixed(2)+ " " + sizes[i-1];
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
 }
 

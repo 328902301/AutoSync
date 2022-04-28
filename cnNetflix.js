@@ -7,7 +7,7 @@ const AREA_TEST_FILM_ID = 80018499
 ;(async () => {
   let result = {
     title: "Netflix",
-    icon: "play.circle",
+    icon: "wifi.slash",
 	  'icon-color':"#FF0000",
     content: '快給我刷新一下的喔',
   }
@@ -16,8 +16,8 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] ="Netflix"
-      result['icon'] = "play.circle"
+      result['Title'] = "Netflix"
+      result['icon'] = "checkmark.seal"
 	    result['icon-color'] = '#228B22'
       //result['icon'] = params.icon1
 	    //result['icon-color'] = params.color1
@@ -28,8 +28,8 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] ="Netflix"
-      result['icon'] = "play.circle"
+      result['Title'] = "Netflix"
+      result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#EFBB24"
       //result['icon'] = params.icon2
 	    //result['icon-color'] = params.color2
@@ -38,8 +38,8 @@ const AREA_TEST_FILM_ID = 80018499
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] ="Netflix"
-        result['icon'] = "play.circle"
+        result['Title'] = "Netflix"
+        result['icon'] = "eye.slash"
 	      result['icon-color'] = "#CB1B45"
         //result['icon'] = params.icon3
 	      //result['icon-color'] = params.color3

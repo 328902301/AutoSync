@@ -9,7 +9,7 @@ const AREA_TEST_FILM_ID = 80018499
     title: "Netflix",
     icon: "play.circle",
 	  'icon-color':"#FF0000",
-    content: '給我刷個新',
+    content: '快給我刷新一下的喔',
   }
   await test(FILM_ID)
     .then((code) => {
@@ -33,7 +33,7 @@ const AREA_TEST_FILM_ID = 80018499
 	    result['icon-color'] = "#EFBB24"
       //result['icon'] = params.icon2
 	    //result['icon-color'] = params.color2
-      result['content'] = '你只能看一部分喔 ' + code.toUpperCase()
+      result['content'] = '你只能看一點點喔 ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -43,7 +43,7 @@ const AREA_TEST_FILM_ID = 80018499
 	      result['icon-color'] = "#CB1B45"
         //result['icon'] = params.icon3
 	      //result['icon-color'] = params.color3
-        result['content'] = '你一点都不能看喔'
+        result['content'] = '你一點也不能看喔'
         return
       }
     })

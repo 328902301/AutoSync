@@ -8,8 +8,8 @@ const AREA_TEST_FILM_ID = 80018499
   let result = {
     title: "Netflix",
     icon: "wifi.slash",
-	  'icon-color':"#FF0000",
-    content: '快給我刷新一下的喔',
+	  'icon-color':"#000000",
+    content: '你快給我刷新一下的喔',
   }
   await test(FILM_ID)
     .then((code) => {
@@ -17,11 +17,9 @@ const AREA_TEST_FILM_ID = 80018499
         return test(AREA_TEST_FILM_ID)
       }
       result['Title'] = "Netflix"
-      result['icon'] = "checkmark.seal"
-	    result['icon-color'] = '#228B22'
-      //result['icon'] = params.icon1
-	    //result['icon-color'] = params.color1
-      result['content'] = '你全部都可以看喔 ' + code.toUpperCase()
+      result['icon'] = "checkmark.seal.fill"
+	    result['icon-color'] = '#3CB371'
+      result['content'] = '你在' + code.toUpperCase() + '可以看全部的内容喔！'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -30,20 +28,16 @@ const AREA_TEST_FILM_ID = 80018499
       }
       result['Title'] = "Netflix"
       result['icon'] = "exclamationmark.triangle"
-	    result['icon-color'] = "#EFBB24"
-      //result['icon'] = params.icon2
-	    //result['icon-color'] = params.color2
-      result['content'] = '你只能看一點點喔 ' + code.toUpperCase()
+	    result['icon-color'] = "#FFD700"
+      result['content'] = '你在' + code.toUpperCase() + '只能看一點點自制喔！ '
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
       if (error === 'Not Available') {
         result['Title'] = "Netflix"
         result['icon'] = "eye.slash"
-	      result['icon-color'] = "#CB1B45"
-        //result['icon'] = params.icon3
-	      //result['icon-color'] = params.color3
-        result['content'] = '你一點也不能看喔'
+	      result['icon-color'] = "#DC143C"
+        result['content'] = '你现在这个地方一點點也不能看喔'
         return
       }
     })

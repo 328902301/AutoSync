@@ -9,7 +9,7 @@ const AREA_TEST_FILM_ID = 80018499
     title: "Netflix",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
-    content: '你快給我刷新一下的喔',
+    content: '你快給我刷新一下的喔！',
   }
   await test(FILM_ID)
     .then((code) => {
@@ -37,7 +37,7 @@ const AREA_TEST_FILM_ID = 80018499
         result['Title'] = "Netflix"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '你现在这个地方一點點也不能看喔'
+        result['content'] = '你现在这个地方一點點也不能看喔！'
         return
       }
     })

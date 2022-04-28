@@ -36,7 +36,7 @@ const DEFAULT_OPTIONS = {
   fullIconColor: '',
   fullStyle: 'good',
   onlyOriginalContent: 'Partial support by #REGION_FLAG# #REGION_NAME_EN#',
-  onlyOriginalIcon: 'exclamationmark.triangle'
+  onlyOriginalIcon: 'exclamationmark.triangle',
   onlyOriginalIconColor: '',
   onlyOriginalStyle: 'info',
   notAvailableContent: 'You can\'t watch Netflix.',

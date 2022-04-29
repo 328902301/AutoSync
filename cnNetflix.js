@@ -37,7 +37,7 @@ const AREA_TEST_FILM_ID = 80018499
         result['Title'] = "Can I watch Netflix in " + code.toUpperCase() + "?"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '哇！太好了这里不能观看，快去板砖！'
+        result['content'] = '哇！不能观看！快去板砖！'
         return
       }
     })

@@ -6,7 +6,7 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: "Netflix",
+    title: "让我瞧瞧你的Netflix可不可以看！",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
     content: '你快給我刷新一下的喔！',
@@ -16,7 +16,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] = "Netflix"
+      result['Title'] = "让我瞧瞧你的Netflix可不可以看！"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
       result['content'] = '你在' + code.toUpperCase() + '可以看全部的内容喔！'
@@ -26,7 +26,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] = "Netflix"
+      result['Title'] = "让我瞧瞧你的Netflix可不可以看！"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
       result['content'] = '你在' + code.toUpperCase() + '只能看一點點自制喔！ '
@@ -34,7 +34,7 @@ const AREA_TEST_FILM_ID = 80018499
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] = "Netflix"
+        result['Title'] = "让我瞧瞧你的Netflix可不可以看！"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
         result['content'] = '你现在这个地方一點點也不能看喔！'

@@ -10,6 +10,8 @@ nf_rating.js = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\
 nf_rating_season.js = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
 # Lightroom
 Lightroom Premium = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Lightroom.js,script-update-interval=0
+# Photoshop
+Photoshop = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/photoshop.js
 
 [MITM]
-hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io
+hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io

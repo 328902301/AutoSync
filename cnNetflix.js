@@ -6,7 +6,7 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: "Can you watch Netflix without net?",
+    title: "Can I watch Netflix in " + "code.toUpperCase()" + "?",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
     content: '你快給我刷新一下的喔！',
@@ -19,7 +19,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['Title'] = "Can I watch Netflix in " + "code.toUpperCase()" + "?"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = '在这里你可以观看Netflix全部的剧集喔！'
+      result['content'] = '在这里你可以观看全部的剧集喔！'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -29,7 +29,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['Title'] = "Can I watch Netflix in " + "code.toUpperCase()" + "?"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = '在这里你只能看一點點自制解解乏喔！ '
+      result['content'] = '在这里你只能看一點點的自制喔！'
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {

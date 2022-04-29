@@ -16,7 +16,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] = "想在#REGION_NAME_EN看Netflix嘛！"
+      result['Title'] = "想在#REGION_NAME_EN#看Netflix嘛！"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
       result['content'] = '你在这里可以看全部的内容喔！'
@@ -26,7 +26,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] = "想在#REGION_NAME_EN看Netflix嘛！"
+      result['Title'] = "想在#REGION_NAME_EN#看Netflix嘛！"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
       result['content'] = '你在这里只能看一點點自制喔！ '
@@ -34,7 +34,7 @@ const AREA_TEST_FILM_ID = 80018499
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] = "想在#REGION_NAME_EN看Netflix嘛！"
+        result['Title'] = "想在#REGION_NAME_EN#看Netflix嘛！"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
         result['content'] = '你现在这个地方一點點也不能看喔！'

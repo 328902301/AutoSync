@@ -52,12 +52,12 @@ body['data']['sections_v2'] = [
                 "uri": "bilibili://user_center/lessonsmode",
                 "icon": "http://i0.hdslb.com/bfs/archive/bb3b48455b9364440785fade6223e0c774891b31.png"
             },
-            {
-                "id": 409,
-                "title": "青少年模式",
-                "uri": "bilibili://user_center/teenagersmode",
-                "icon": "http://i0.hdslb.com/bfs/archive/68acfd37a735411ad56b59b3253acc33f94f7046.png"
-            },
+            //{
+              //"id": 409,
+                //"title": "青少年模式",
+                //"uri": "bilibili://user_center/teenagersmode",
+                //"icon": "http://i0.hdslb.com/bfs/archive/68acfd37a735411ad56b59b3253acc33f94f7046.png"
+            //},
             {
                 "id": 410,
                 "title": "设置",

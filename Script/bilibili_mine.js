@@ -40,12 +40,12 @@ body['data']['sections_v2'] = [
     {
         "title": "更多服务",
         "items": [
-           // {
-              //"id": 407,
-              //"title": "联系客服",
-              //"uri": "bilibili://user_center/feedback",
-              //"icon": "http://i0.hdslb.com/bfs/archive/7ca840cf1d887a45ee1ef441ab57845bf26ef5fa.png"
-           // },
+            {
+              "id": 407,
+              "title": "联系客服",
+              "uri": "bilibili://user_center/feedback",
+              "icon": "http://i0.hdslb.com/bfs/archive/7ca840cf1d887a45ee1ef441ab57845bf26ef5fa.png"
+            },
             {
                 "id": 408,
                 "title": "课堂模式",

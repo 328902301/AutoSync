@@ -6,7 +6,7 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: "看Netflix前先看看网络！",
+    title: "看Netflix前先看看网络的喔！",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
     content: '你要刷新我一下的喔！立刻！马上！',

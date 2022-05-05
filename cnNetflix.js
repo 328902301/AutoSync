@@ -6,38 +6,38 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: `Can I watch Netflix in ` + code.toUpperCase() + `?`,
+    title: `让我瞧瞧你这里能不能看Netflix！`,
     icon: "wifi.slash",
 	  'icon-color':"#000000",
-    content: '你快給我刷新一下的喔！',
+    content: '你要刷新我一下的喔！立刻！马上！',
   }
   await test(FILM_ID)
     .then((code) => {
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+      result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = '在这里你可以观看全部的剧集喔！'
+      result['content'] = '在' + code.replace(HK,HongKong).replace(SG,Singapore).replace(JP,Japan).replace(KR,korea).replace(TW,Taiwan).replace(US,American) + '你可以观看全部的剧集喔！'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+      result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = '在这里你只能看一點點的自制喔！'
+      result['content'] = '在' + code.replace(HK,HongKong).replace(SG,Singapore).replace(JP,Japan).replace(KR,korea).replace(TW,Taiwan).replace(US,American) + '你只能看一點點的自制喔！'
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+        result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '哇！不能观看！快去板砖！'
+        result['content'] = '这个位置不能看喔！快去搬砖喔！'
         return
       }
     })

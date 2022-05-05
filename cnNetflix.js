@@ -9,7 +9,7 @@ const AREA_TEST_FILM_ID = 80018499
     title: "看Netflix前先看看网络的喔！",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
-    content: '你快刷新我一下的喔！网络不怎么好喔！',
+    content: "你快刷新我一下的喔！网络不怎么好喔！",
   }
   await test(FILM_ID)
     .then((code) => {
@@ -19,7 +19,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['title'] = "快来看Netflix的喔 我的宝！"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = '宝~ 在' + code.toUpperCase() + '可以观看全部的剧集喔！'
+      result['content'] = "宝~ 在" + code.toUpperCase() + "可以观看全部的剧集喔！"
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -29,7 +29,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['title'] = "听说你要看Netflix的喔！"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = '但是你在' + code.toUpperCase() + '只能看一点点自制的喔！'
+      result['content'] = "但是你在" + code.toUpperCase() + "只能看一点点自制的喔！"
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -37,7 +37,7 @@ const AREA_TEST_FILM_ID = 80018499
         result['title'] = "就你要看Netflix的喔？"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '但是你在' + code.toUpperCase() + '完全不能看的喔！'
+        result['content'] = "但是你在" + code.toUpperCase() + "完全不能看的喔！"
         return
       }
     })

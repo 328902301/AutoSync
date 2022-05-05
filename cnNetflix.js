@@ -9,7 +9,7 @@ const AREA_TEST_FILM_ID = 80018499
     title: "看Netflix前先看看網絡的喔！",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
-    content: '你要刷新一下我的喔！立刻！马上！',
+    content: '吊毛你在' + code.toUpperCase() + '完全不能看的喔！搬砖去喔！',
   }
   await test(FILM_ID)
     .then((code) => {

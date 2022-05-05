@@ -16,7 +16,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['title'] = "快来看Netflix喔我的宝！"
+      result['title'] = "快来看Netflix喔 我的宝！"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
       result['content'] = '宝 在' + code.toUpperCase() + '可以观看全部的剧集喔！'
@@ -37,7 +37,7 @@ const AREA_TEST_FILM_ID = 80018499
         result['title'] = "就你要看Netflix喔？"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '在' + code.toUpperCase() + '不能看喔！快去搬砖喔！'
+        result['content'] = '吊毛 在' + code.toUpperCase() + '不能看喔！快去搬砖喔！'
         return
       }
     })

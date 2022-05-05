@@ -6,7 +6,6 @@ PROCESS-NAME,SOgouTaskManager,REJECT-DROP
 PROCESS-NAME,SogouServices,REJECT-DROP
 USER-AGENT,SogouInput,REJECT-DROP
 USER-AGENT,com.sogou.sogouinput.BaseKeyboard,REJECT-DROP
-URL-REGEX,^https:\/\/pb\d*\.sogou\.com\/pv\.gif,REJECT-TINYGIF
 DOMAIN-SUFFIX,get.sogou.com,REJECT-DROP
 DOMAIN-SUFFIX,shouji.sogou.com,REJECT-DROP
 DOMAIN-SUFFIX,account.sogou.com,REJECT-DROP
@@ -15,5 +14,3 @@ DOMAIN-SUFFIX,ime.sogou.com,REJECT-DROP
 DOMAIN-SUFFIX,macime.sogou.com,REJECT-DROP
 
 
-[MITM]
-hostname = %APPEND% *.sogou.com

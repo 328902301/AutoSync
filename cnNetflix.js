@@ -16,28 +16,28 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
+      result['Title'] = `让我瞧瞧你这里能不能看Netflix的喔！`
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '你可以观看全部的剧集喔！'
+      result['content'] = '在' + code.replace('hk','HongKong').replace('sg','Singapore').replace('jp','Japan').replace('kr','Korea').replace('tw','Taiwan').replace('us','American') + '你可以观看全部的剧集喔！'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
+      result['Title'] = `让我瞧瞧你这里能不能看Netflix的喔！`
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '你只能看一點點的自制喔！'
+      result['content'] = '在' + code.replace('hk','HongKong').replace('sg','Singapore').replace('jp','Japan').replace('kr','Korea').replace('tw','Taiwan').replace('us','American') + '你只能看一點點的自制喔！'
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
+        result['Title'] = `让我瞧瞧你这里能不能看Netflix的喔！`
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '不能看喔！快去搬砖喔！'
+        result['content'] = '在' + code.replace('hk','HongKong').replace('sg','Singapore').replace('jp','Japan').replace('kr','Korea').replace('tw','Taiwan').replace('us','American') + '不能看喔！快去搬砖喔！'
         return
       }
     })

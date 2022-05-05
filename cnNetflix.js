@@ -6,7 +6,7 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: `让我瞧瞧你这里能不能看Netflix！`,
+    title: `你就是传说中的漏网之鱼吗！！！`,
     icon: "wifi.slash",
 	  'icon-color':"#000000",
     content: '你要刷新我一下的喔！立刻！马上！',
@@ -19,7 +19,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = '在' + code.replace(HK,HongKong).replace(SG,Singapore).replace(JP,Japan).replace(KR,korea).replace(TW,Taiwan).replace(US,American) + '你可以观看全部的剧集喔！'
+      result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '你可以观看全部的剧集喔！'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -29,7 +29,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = '在' + code.replace(HK,HongKong).replace(SG,Singapore).replace(JP,Japan).replace(KR,korea).replace(TW,Taiwan).replace(US,American) + '你只能看一點點的自制喔！'
+      result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '你只能看一點點的自制喔！'
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -37,7 +37,7 @@ const AREA_TEST_FILM_ID = 80018499
         result['Title'] = `让我瞧瞧你这里能不能看Netflix！`
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '这个位置不能看喔！快去搬砖喔！'
+        result['content'] = '在' + code.replace('HK','HongKong').replace('SG','Singapore').replace('JP','Japan').replace('KR','Korea').replace('TW','Taiwan').replace('US','American') + '不能看喔！快去搬砖喔！'
         return
       }
     })

@@ -6,7 +6,7 @@ const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
-    title: `Can I watch Netflix in ` + code.toUpperCase() + `?`,
+    title: "`Can I watch Netflix in ` + code.toUpperCase() + `?`",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
     content: '你快給我刷新一下的喔！',
@@ -16,7 +16,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return test(AREA_TEST_FILM_ID)
       }
-      result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+      result['Title'] = "`Can I watch Netflix in ` + code.toUpperCase() + `?`"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
       result['content'] = '在这里你可以观看全部的剧集喔！'
@@ -26,7 +26,7 @@ const AREA_TEST_FILM_ID = 80018499
       if (code === 'Not Found') {
         return Promise.reject('Not Available')
       }
-      result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+      result['Title'] = "`Can I watch Netflix in ` + code.toUpperCase() + `?`"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
       result['content'] = '在这里你只能看一點點的自制喔！'
@@ -34,7 +34,7 @@ const AREA_TEST_FILM_ID = 80018499
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['Title'] = `Can I watch Netflix in ` + code.toUpperCase() + `?`
+        result['Title'] = "`Can I watch Netflix in ` + code.toUpperCase() + `?`"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
         result['content'] = '哇！不能观看！快去板砖！'

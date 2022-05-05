@@ -34,10 +34,10 @@ const AREA_TEST_FILM_ID = 80018499
     })
     .catch((error) => {
       if (error === 'Not Available') {
-        result['title'] = "就你要看Netflix喔？"
+        result['title'] = "就你要看Netflix的喔？"
         result['icon'] = "eye.slash"
 	      result['icon-color'] = "#DC143C"
-        result['content'] = '吊毛 在' + code.toUpperCase() + '不能看喔！快去搬砖喔！'
+        result['content'] = '吊毛 在' + code.toUpperCase() + '不能看的喔！快去搬砖喔！'
         return
       }
     })

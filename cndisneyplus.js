@@ -34,9 +34,9 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
-  title: '你是准备看R21吗？我的宝！',
+  title: '你是准备看D+吗？我的宝！',
   availabletitle: '你是准备看R21吗？我的宝！',
-  availableContent: '宝~ 可以在#REGION_CODE#欣赏R21的喔！',
+  availableContent: '宝~ 在#REGION_CODE#可以欣赏R21的喔！',
   availableIcon: 'checkmark.seal.fill',
   availableIconColor: '#3CB371',
   availableStyle: 'good',

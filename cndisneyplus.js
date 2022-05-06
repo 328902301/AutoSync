@@ -44,7 +44,7 @@ const STATUS_ERROR = -2
 const DEFAULT_OPTIONS = {
   title: '你是准备看R21吗？我的宝！',
   availabletitle: '你是准备看R21吗？我的宝！',
-  availableContent: '哇！你可以在 #REGION_NAME# 看R21的喔！',
+  availableContent: '哇！可以在 #REGION_NAME# 看R21的喔！',
   availableIcon: 'checkmark.seal.fill',
   availableIconColor: '#3CB371',
   availableStyle: 'good',
@@ -54,7 +54,7 @@ const DEFAULT_OPTIONS = {
   comingIconColor: '#FFD700',
   comingStyle: 'info',
   notAvailabletitle: '宝喔!这里有一点点小问题喔',
-  notAvailableContent: '你这里不能看D+的喔！与R21无缘的喔',
+  notAvailableContent: '你不能看D+的喔！与R21无缘的喔',
   notAvailableIcon: 'eye.slash',
   notAvailableIconColor: '#DC143C',
   notAvailableStyle: 'alert',

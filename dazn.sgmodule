@@ -1,0 +1,8 @@
+#!name=Dazn
+#!desc=信息面板
+
+[Panel]
+dazn_check = script-name=dazn_check, title="dazn", content="请刷新", update-interval=86400
+
+[Script]
+dazn_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cndazn.js

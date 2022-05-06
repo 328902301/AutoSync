@@ -97,18 +97,6 @@ function getLocationInfo() {
   })
 }
 
-function replaceRegionPlaceholder(content, region) {
-    let result = content
-    if (result.indexOf('#REGION_FLAG#') !== -1) {
-      result = result.replaceAll('#REGION_FLAG#', getCountryFlagEmoji(region.toUpperCase()))
-    }
-  
-    if (result.indexOf('#REGION_NAME#') !== -1) {
-      result = result.replaceAll('#REGION_NAME#', RESION_NAMES?.[region.toUpperCase()]?.chinese ?? '')
-    }
-  
-    return result
-}
   
 function getCountryFlagEmoji(countryCode) {
     if (countryCode.toUpperCase() == 'TW') {

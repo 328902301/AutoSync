@@ -1,0 +1,10 @@
+#!name=Youtube
+#!desc=信息面板
+
+[Panel]
+#奈飞检测
+ytb_check = script-name=ytb_check, title="Youtube", content="请刷新", update-interval=86400
+
+[Script]
+#奈飞检测
+ytb_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cnYoutube.js

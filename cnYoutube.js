@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
   }
   await test()
     .then((code) => {
-      if (code === 'Not Available') 
+      if (code === 'Not Available') {
         result['title'] = "你的Premium有点不对劲的喔！"
         result['icon'] = "exclamationmark.triangle"
 	        result['icon-color'] = '#DC143C'
@@ -31,6 +31,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
       $done(result)
     })
 })()
+
 function test() {
   return new Promise((resolve, reject) => {
     let option = {

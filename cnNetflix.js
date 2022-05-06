@@ -9,7 +9,7 @@ const AREA_TEST_FILM_ID = 80018499
     title: "你是准备看NFLX吗？我的宝！",
     icon: "wifi.slash",
 	  'icon-color':"#000000",
-    content: "你快刷新我一下的喔！网络不怎么好喔！",
+    content: "你快刷新我的喔！网络不怎么好喔！",
   }
   await test(FILM_ID)
     .then((code) => {

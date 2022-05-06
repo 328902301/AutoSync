@@ -36,7 +36,7 @@ const STATUS_ERROR = -2
 const DEFAULT_OPTIONS = {
   title: '你是准备看R21吗？我的宝！',
   availabletitle: '你是准备看R21吗？我的宝！',
-  availableContent: '哇！可以在#REGION_CODE#看R21的喔！',
+  availableContent: '宝~ 可以在#REGION_CODE#欣赏R21的喔！',
   availableIcon: 'checkmark.seal.fill',
   availableIconColor: '#3CB371',
   availableStyle: 'good',

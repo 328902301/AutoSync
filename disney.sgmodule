@@ -1,0 +1,10 @@
+#!name=Disney+
+#!desc=信息面板
+
+[Panel]
+#奈飞检测
+disney_check = script-name=disney_check, title="Disney+", content="请刷新", update-interval=86400
+
+[Script]
+#奈飞检测
+disney_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cndisneyplus.js

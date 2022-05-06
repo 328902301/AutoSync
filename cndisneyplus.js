@@ -25,22 +25,22 @@ const STATUS_ERROR = -2
       if (status==STATUS_COMING) {
         result['title'] : "我的宝是要看Disney+了吗！"
         result['icon'] : "exclamationmark.triangle"
-	  result['icon-color'] :"#FFD700"
+            result['icon-color'] :"#FFD700"
         result['content'] : "宝~ D+即将在你这里上线的喔！"
       } else if (status==STATUS_AVAILABLE){
         result['title'] : "你是准备看R21吗？我的宝！"
         result['icon'] : "checkmark.seal.fill"
-	  result['icon-color'] :"#3CB371"
+            result['icon-color'] :"#3CB371"
         result['content'] : "哇！你可以在" + region.toUpperCase() + "看R21的喔！"
       } else if (status==STATUS_NOT_AVAILABLE){
         result['title'] : "宝喔!这里有一点点小问题喔"
         result['icon'] : "eye.slash",
-	  result['icon-color'] :"#DC143C"
+            result['icon-color'] :"#DC143C"
         result['content'] : "你这里不能看D+的喔！与R21无缘的喔！"
       } else if (status==STATUS_TIMEOUT){
         result['title'] : "看Disney+前先看看网络的喔！"
         result['icon'] : "wifi.slash"
-	  result['icon-color'] :"#000000"
+            result['icon-color'] :"#000000"
         result['content'] : "你快刷新我一下的喔！网络不怎么好喔！"
         }
 })().finally(() => {

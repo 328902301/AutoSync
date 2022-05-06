@@ -74,7 +74,7 @@ let options = getOptions()
   switch (status) {
     case STATUS_AVAILABLE:
       if (options.availableIcon) {
-	panel['title'] = options.availabletitle
+        panel['title'] = options.availabletitle
         panel['icon'] = options.availableIcon
         panel['icon-color'] = options.availableIconColor ?? undefined
       } else {
@@ -84,7 +84,7 @@ let options = getOptions()
       return
     case STATUS_COMING:
       if (options.comingIcon) {
-	panel['title'] = options.comingtitle
+        panel['title'] = options.comingtitle
         panel['icon'] = options.comingIcon
         panel['icon-color'] = options.comingIconColor ?? undefined
       } else {
@@ -95,7 +95,7 @@ let options = getOptions()
       return
     case STATUS_NOT_AVAILABLE:
       if (options.notAvailableIcon) {
-	panel['title'] = options.notAvaibaletitle
+        panel['title'] = options.notAvaibaletitle
         panel['icon'] = options.notAvailableIcon
         panel['icon-color'] = options.notAvailableIconColor ?? undefined
       } else {
@@ -105,7 +105,7 @@ let options = getOptions()
       return
     default:
       if (options.errorIcon) {
-	panel['title'] = options.errortitle
+        panel['title'] = options.errortitle
         panel['icon'] = options.errorIcon
         panel['icon-color'] = options.errorIconColor ? options.errorIconColor : undefined
       } else {

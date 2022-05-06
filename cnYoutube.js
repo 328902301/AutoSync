@@ -15,7 +15,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 	        result['icon-color'] = '#DC143C'
         result['content'] = "哇！你的Premium白办了耶！不能用喔"
       } else {
-        result['title'] = "让我看看你的Youtube我的宝！"
+        result['title'] = "我的宝！看看你的Youtube喔！"
         result['icon'] = "checkmark.seal.fill"
 	        result['icon-color'] = '#3CB371'
         result['content'] = "宝~ 在" + code.toUpperCase() + "你的Premium不白办的喔！"

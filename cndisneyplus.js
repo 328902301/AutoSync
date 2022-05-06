@@ -66,6 +66,8 @@ const DEFAULT_OPTIONS = {
 }
 
 let options = getOptions()
+let panel = {
+}
 
 ;(async () => {
   let { region, status } = await testDisneyPlus()

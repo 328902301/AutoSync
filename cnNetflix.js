@@ -19,7 +19,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['title'] = "你是准备看NFLX吗？我的宝！"
       result['icon'] = "checkmark.seal.fill"
 	    result['icon-color'] = '#3CB371'
-      result['content'] = "宝~ 在" + code.toUpperCase() + "可以观看全部的剧集喔！"
+      result['content'] = "宝~ 在" + code.toUpperCase() + "可以观看全部的喔！"
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -29,7 +29,7 @@ const AREA_TEST_FILM_ID = 80018499
       result['title'] = "你是准备看NFLX吗？我的宝！"
       result['icon'] = "exclamationmark.triangle"
 	    result['icon-color'] = "#FFD700"
-      result['content'] = "但是你在" + code.toUpperCase() + "只能看一点点自制的喔！"
+      result['content'] = "但是你在" + code.toUpperCase() + "只能看自制的喔！"
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {

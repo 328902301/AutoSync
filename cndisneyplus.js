@@ -42,6 +42,7 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
+  title: '你是准备看R21吗？我的宝！',
   availabletitle: '你是准备看R21吗？我的宝！',
   availableContent: '哇！你可以在 #REGION_NAME# 看R21的喔！',
   availableIcon: 'checkmark.seal.fill',
@@ -67,6 +68,7 @@ const DEFAULT_OPTIONS = {
 
 let options = getOptions()
 let panel = {
+  title: options.title,
 }
 
 ;(async () => {
@@ -76,7 +78,6 @@ let panel = {
   switch (status) {
     case STATUS_AVAILABLE:
       if (options.availableIcon) {
-        panel['title'] = options.availabletitle
         panel['icon'] = options.availableIcon
         panel['icon-color'] = options.availableIconColor ?? undefined
       } else {
@@ -86,7 +87,6 @@ let panel = {
       return
     case STATUS_COMING:
       if (options.comingIcon) {
-        panel['title'] = options.comingtitle
         panel['icon'] = options.comingIcon
         panel['icon-color'] = options.comingIconColor ?? undefined
       } else {
@@ -97,7 +97,6 @@ let panel = {
       return
     case STATUS_NOT_AVAILABLE:
       if (options.notAvailableIcon) {
-        panel['title'] = options.notAvaibaletitle
         panel['icon'] = options.notAvailableIcon
         panel['icon-color'] = options.notAvailableIconColor ?? undefined
       } else {
@@ -107,7 +106,6 @@ let panel = {
       return
     default:
       if (options.errorIcon) {
-        panel['title'] = options.errortitle
         panel['icon'] = options.errorIcon
         panel['icon-color'] = options.errorIconColor ? options.errorIconColor : undefined
       } else {

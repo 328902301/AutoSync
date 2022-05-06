@@ -2,9 +2,8 @@
 #!desc=信息面板
 
 [Panel]
-#奈飞检测
-disney_check = script-name=disney_check, title="Disney+", content="请刷新", update-interval=86400
+disney_check = script-name=disney_check,title=Disney+ 解锁检测,style=alert,content=请刷新面板,update-interval=1800
 
 [Script]
 #奈飞检测
-disney_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cndisneyplus.js
+disney_check = type=generic,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cndisneyplus.js

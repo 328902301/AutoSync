@@ -1,12 +1,4 @@
-/**
- * @author Helge_0x00
- *
- * [Panel]
- * disney_check = script-name=disney_check,title=Disney+ 解锁检测,style=alert,content=请刷新面板,update-interval=1800
- *
- * [Script]
- * disney_check = type=generic,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js
- *
+/*
  * 支持使用脚本使用 argument 参数自定义配置，如：argument=key1=URLEncode(value1)&key2=URLEncode(value2)，具体参数如下所示，
  * title: 面板标题
  * availableContent: 解锁时展示的的文本内容，支持以下四个个区域占位符 #REGION_FLAG#、#REGION_CODE#、#REGION_NAME#、#REGION_NAME_EN#，用来展示地区国旗 emoji 、地区编码、地区中文名称、地区英文名称

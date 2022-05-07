@@ -12,7 +12,7 @@
 ********************************
 [rewrite_local]
 #TATA直播解锁付费
-http://j9700.xinxindaka.com/api/public/\?service=Live.checkLive url script-response-body TATA.js
+http://j9700.xinxindaka.com/api/public/\?service=Live.checkLive url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/TATA.js
 
 [mitm] 
 hostname = j9700.xinxindaka.com

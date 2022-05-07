@@ -1,6 +1,7 @@
 /*
  *
  *
+
 脚本功能：TATA直播🔓
 脚本作者：King
 更新时间：2022.5.7
@@ -11,6 +12,7 @@
         请勿转载与贩卖！🈲️
 ********************************
 [rewrite_local]
+
 #TATA直播解锁付费
 http://j9700.xinxindaka.com/api/public/\?service=Live.checkLive url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/TATA.js
 

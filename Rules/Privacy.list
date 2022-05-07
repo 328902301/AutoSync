@@ -1,54 +1,58 @@
-# Privacy
-HOST-SUFFIX,adjust.com,Privacy
-HOST-SUFFIX,cpatrk.net,Privacy
-HOST-SUFFIX,kochava.com,Privacy
-HOST-SUFFIX,marketo.com,Privacy
-HOST-SUFFIX,mobileapptracking.com,Privacy
-HOST-SUFFIX,rtbasia.com,Privacy
-HOST-SUFFIX,scorecardresearch.com,Privacy
-HOST-SUFFIX,sumologic.com,Privacy
-HOST-SUFFIX,survicate.com,Privacy
-HOST-SUFFIX,tagcommander.com,Privacy
-HOST-SUFFIX,tailtarget.com,Privacy
-HOST-SUFFIX,talkingdata.net,Privacy
-HOST-SUFFIX,tapad.com,Privacy
-HOST-SUFFIX,tapfiliate.com,Privacy
-HOST-SUFFIX,tapinfluence.com,Privacy
-HOST-SUFFIX,tapstream.com,Privacy
-HOST-SUFFIX,tealiumiq.com,Privacy
-HOST-SUFFIX,tend.io,Privacy
-HOST-SUFFIX,tpctrust.com,Privacy
-HOST-SUFFIX,trackingio.com,Privacy
-HOST-SUFFIX,tremormedia.com,Privacy
-HOST-SUFFIX,woopra.com,Privacy
-HOST-SUFFIX,wootric.com,Privacy
-HOST-SUFFIX,wowanalytics.co.uk,Privacy
-HOST-SUFFIX,zoomanalytics.co,Privacy
+# utf-8
+# 2022-05-07 20:30
+# 引用地址 https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Filter/Guard/Privacy.list
 
-HOST,track.tenjin.com,Privacy
-HOST,track.tenjin.io,Privacy
-HOST,api.talkingdata.com,Privacy
-HOST,track.tiara.daum.net,Privacy
-HOST,track.tiara.kakao.com,Privacy
-HOST,zgsdk.zhugeio.com,Privacy
+# Privacy
+DOMAIN-SUFFIX,adjust.com,Privacy
+DOMAIN-SUFFIX,cpatrk.net,Privacy
+DOMAIN-SUFFIX,kochava.com,Privacy
+DOMAIN-SUFFIX,marketo.com,Privacy
+DOMAIN-SUFFIX,mobileapptracking.com,Privacy
+DOMAIN-SUFFIX,rtbasia.com,Privacy
+DOMAIN-SUFFIX,scorecardresearch.com,Privacy
+DOMAIN-SUFFIX,sumologic.com,Privacy
+DOMAIN-SUFFIX,survicate.com,Privacy
+DOMAIN-SUFFIX,tagcommander.com,Privacy
+DOMAIN-SUFFIX,tailtarget.com,Privacy
+DOMAIN-SUFFIX,talkingdata.net,Privacy
+DOMAIN-SUFFIX,tapad.com,Privacy
+DOMAIN-SUFFIX,tapfiliate.com,Privacy
+DOMAIN-SUFFIX,tapinfluence.com,Privacy
+DOMAIN-SUFFIX,tapstream.com,Privacy
+DOMAIN-SUFFIX,tealiumiq.com,Privacy
+DOMAIN-SUFFIX,tend.io,Privacy
+DOMAIN-SUFFIX,tpctrust.com,Privacy
+DOMAIN-SUFFIX,trackingio.com,Privacy
+DOMAIN-SUFFIX,tremormedia.com,Privacy
+DOMAIN-SUFFIX,woopra.com,Privacy
+DOMAIN-SUFFIX,wootric.com,Privacy
+DOMAIN-SUFFIX,wowanalytics.co.uk,Privacy
+DOMAIN-SUFFIX,zoomanalytics.co,Privacy
+
+DOMAIN,track.tenjin.com,Privacy
+DOMAIN,track.tenjin.io,Privacy
+DOMAIN,api.talkingdata.com,Privacy
+DOMAIN,track.tiara.daum.net,Privacy
+DOMAIN,track.tiara.kakao.com,Privacy
+DOMAIN,zgsdk.zhugeio.com,Privacy
 
 # > 51.LA
-HOST,js.users.51.la,Privacy
-HOST,mc.51.la,Privacy
-HOST,wc.51.la,Privacy
+DOMAIN,js.users.51.la,Privacy
+DOMAIN,mc.51.la,Privacy
+DOMAIN,wc.51.la,Privacy
 # > 58
-HOST,track.58.com,Privacy
-HOST,tracklog.58.com,Privacy
+DOMAIN,track.58.com,Privacy
+DOMAIN,tracklog.58.com,Privacy
 # > Baidu
-HOST,hm.baidu.com,Privacy
-HOST,hmma.baidu.com,Privacy
+DOMAIN,hm.baidu.com,Privacy
+DOMAIN,hmma.baidu.com,Privacy
 # > Google
-HOST-SUFFIX,googletagmanager.com,Privacy
-HOST-SUFFIX,google-analytics.com,Privacy
-HOST,safebrowsing.googleapis.com,Privacy
+DOMAIN-SUFFIX,googletagmanager.com,Privacy
+DOMAIN-SUFFIX,google-analytics.com,Privacy
+DOMAIN,safebrowsing.googleapis.com,Privacy
 # > MI
-HOST-SUFFIX,tracking.miui.com,Privacy
-HOST,data.mistat.xiaomi.com,Privacy
-HOST,tracking.intl.miui.com,Privacy
+DOMAIN-SUFFIX,tracking.miui.com,Privacy
+DOMAIN,data.mistat.xiaomi.com,Privacy
+DOMAIN,tracking.intl.miui.com,Privacy
 # > Tencent
-HOST,safebrowsing.urlsec.qq.com,Privacy
+DOMAIN,safebrowsing.urlsec.qq.com,Privacy

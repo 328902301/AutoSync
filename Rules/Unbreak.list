@@ -1,3 +1,8 @@
+# utf-8
+# 2022-05-07 20:26
+# 引用地址 https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Filter/Unbreak.list
+# 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Unbreak/Unbreak.list
+
 # Unbreak
 # > General
 HOST,app.adjust.com,Unbreak
@@ -6,7 +11,6 @@ HOST,bdtj.tagtic.cn,Unbreak
 # > Alibaba
 HOST,log.mmstat.com,Unbreak
 HOST,sycm.mmstat.com,Unbreak
-HOST,guide-acs.m.taobao.com,Unbreak
 # > Google
 HOST-SUFFIX,blog.google,Unbreak
 HOST-SUFFIX,googletraveladservices.com,Unbreak
@@ -37,3 +41,19 @@ HOST,analytics.strava.com,Unbreak
 # > Umeng
 HOST,msg.umeng.com,Unbreak
 HOST,msg.umengcloud.com,Unbreak
+
+# Direct
+HOST,ad.10010.com,Unbreak
+HOST,analytics.95516.com,Unbreak
+HOST,errlog.umeng.com,Unbreak
+HOST,fonts.gstatic.com,Unbreak
+HOST,origin-a.akamaihd.net,Unbreak
+HOST,picanalysis.vivo.com.cn,Unbreak
+HOST,sycm.mmstat.com,Unbreak
+HOST,tracking.miui.com,Unbreak
+HOST,xivanalysis.com,Unbreak
+HOST-SUFFIX,dizhensubao.getui.com,Unbreak
+HOST-SUFFIX,f.video.weibocdn.com,Unbreak
+HOST-SUFFIX,fus.cdn.krcom.cn,Unbreak
+HOST-SUFFIX,ol.epicgames.com,Unbreak
+HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Unbreak

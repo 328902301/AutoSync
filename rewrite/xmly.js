@@ -15,7 +15,7 @@
 ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)) url script-request-header https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/xmly.js
 
 [mitm] 
-hostname = *.*xima*.*, *.xmcdn.com, *.*.*.*,
+hostname = *.*xima*.*, *.xmcdn.com,
 *
 *
 */

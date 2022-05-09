@@ -30,7 +30,7 @@ jobs:
         path: Rules
 
     - name: copy AdRules
-      run: cp -r Rules/AdRule.list Provider/Ruleset/AdRule.list
+      run: cp -r Rules/RuleSet/AdRule.list Provider/Ruleset/AdRule.list
 
     - name: Upload to this repo
       run: |

@@ -20,7 +20,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 const DEFAULT_OPTIONS = {
   title: '你是准备看Ytb吗？我的宝！',
   availableContent: '宝~ 在#REGION_CODE#可以用Premium的喔！',
-  availableIcon: 'checkmark.seal.fill',
+  availableIcon: 'checkmark.seal',
   availableIconColor: '#3CB371',
   availableStyle: 'good',
   notAvailableContent: '哇！钱飞走咯！Premium不能用喔！',

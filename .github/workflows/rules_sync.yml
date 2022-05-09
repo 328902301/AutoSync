@@ -22,16 +22,6 @@ jobs:
     - name: copy Files
       run: cp -r Rules/. Provider
 
-    - name: Checkout AdRules
-      uses: actions/checkout@v2
-      with:
-        repository: xOS/Config
-        ref: Her
-        path: Rules
-
-    - name: copy AdRules
-      run: cp -r Rules/RuleSet/AdRule.list Provider/Ruleset/AdRule.list
-
     - name: Upload to this repo
       run: |
         if [ -n "$(git status -s)" ];then

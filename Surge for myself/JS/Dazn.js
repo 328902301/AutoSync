@@ -1,7 +1,7 @@
 const DEFAULT_OPTIONS = {
     title: '你是准备看DAZN吗？我的宝！',
     availableContent: '宝~ 在#REGION_CODE#看男男对抗的喔！',
-    availableIcon: 'checkmark.seal.fill',
+    availableIcon: 'checkmark.seal',
     availableIconColor: '#3CB371',
     availableStyle: 'good',
     comingtitle: '我的宝是要看Dazn了吗！',

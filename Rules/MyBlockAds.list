@@ -1,5 +1,5 @@
 # utf-8
-# 2022-04-15 16:12
+# 2022-05-09 16:34
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
@@ -45,21 +45,29 @@ HOST-SUFFIX,ttayy.cn,MyBlockAds
 HOST-SUFFIX,zhengxiaoliu.top,MyBlockAds
 
 # NicoNico
-;HOST,ads.nicovideo.jp,MyBlockAds
+HOST,ads.nicovideo.jp,MyBlockAds
 
 # HDO
 HOST-SUFFIX,applovin.com,MyBlockAds
 HOST-SUFFIX,applvn.com,MyBlockAds
 
 # 美颜相机去首页和轮播广告
-;HOST,adui.tg.meitu.com,MyBlockAds
-;HOST,aaid.uyunad.com,MyBlockAds
+HOST,adui.tg.meitu.com,MyBlockAds
+HOST,aaid.uyunad.com,MyBlockAds
 
 # 爱奇艺广告屏蔽
-;IP-CIDR,203.107.63.154/32,MyBlockAds
+IP-CIDR,203.107.63.154/32,MyBlockAds
 
 # 多多视频去开屏广告
-;HOST-SUFFIX,bayescom.com,MyBlockAds
+HOST-SUFFIX,bayescom.com,MyBlockAds
+
+# 车来了
+HOST-SUFFIX,atrace.chelaile.net.cn,MyBlockAds
+HOST,logs.chelaile.net.cn,MyBlockAds
+HOST,ad.chelaile.net.cn,MyBlockAds
+
+# 铁路 12306
+HOST,ad.12306.cn,MyBlockAds
 
 # 两步路
-;HOST-SUFFIX,admobile.top,MyBlockAds
+HOST-SUFFIX,admobile.top,MyBlockAds

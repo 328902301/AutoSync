@@ -18,7 +18,7 @@ const AREA_TEST_FILM_ID = 80018499
       }
       result['title'] = "你是准备看NFLX吗？我的宝！"
       result['icon'] = "checkmark.seal"
-	    result['icon-color'] = '#3CB371'
+	    result['icon-color'] = '#16A951'
       result['content'] = "宝~ 在" + code.toUpperCase() + "可以观看全部的喔！"
       return Promise.reject('BreakSignal')
     })

@@ -37,7 +37,7 @@ const DEFAULT_OPTIONS = {
   title: '你是准备看D+吗？我的宝！',
   availabletitle: '你是准备看R21吗？我的宝！',
   availableContent: '宝~ 在#REGION_CODE#可以欣赏R21的喔！',
-  availableIcon: 'checkmark.seal.fill',
+  availableIcon: 'checkmark.seal',
   availableIconColor: '#3CB371',
   availableStyle: 'good',
   comingtitle: '我的宝是要看Disney+了吗！',

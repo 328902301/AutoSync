@@ -1,9 +1,0 @@
-#!name=Disney+
-#!desc=信息面板
-
-[Panel]
-disney_check = script-name=disney_check,title=Disney+ 解锁检测,style=alert,content=请刷新面板,update-interval=86400
-
-[Script]
-#奈飞检测
-disney_check = type=generic,script-path=https://raw.githubusercontent.com/Kyookk/cfwforme/main/cndisneyplus.js

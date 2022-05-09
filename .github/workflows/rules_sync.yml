@@ -12,15 +12,25 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Checkout iosRules
+    - name: Checkout Files
       uses: actions/checkout@v2
       with:
         repository: iEwha/Rules
         ref: iosRules
         path: Rules
 
-    - name: copy iosRules
+    - name: copy Files
       run: cp -r Rules/. Provider
+
+    - name: Checkout AdRules
+      uses: actions/checkout@v2
+      with:
+        repository: iEwha/Rules
+        ref: main
+        path: Rules
+
+    - name: copy AdRules
+      run: cp -r RuleSet/AdRule.list Provider/Ruleset/AdRule.list
 
     - name: Upload to this repo
       run: |

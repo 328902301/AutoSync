@@ -86,4 +86,4 @@
 * [VirgilClyne](https://github.com/VirgilClyne/iRingo)
 * [mieqq](https://github.com/mieqq/mieqq)
 * [Loyalsoldier](https://github.com/Loyalsoldier)
-
+* [xOS](https://github.com/xOS/Config)

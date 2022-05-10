@@ -1,4 +1,4 @@
 [Panel]
-reload = title=不舒服就刷新我一下的喔！,content=哇！希望你今天也是开开心心的一天！,style=info,script-name=reload,update-interval=-1
+reload = title=不开心就刷新我一下的喔！,content=哇！希望你今天也是开开心心的一天！,style=info,script-name=reload,update-interval=-1
 [Script]
 reload=script-path=https://raw.githubusercontent.com/futurkk/Potato/main/Surge%20for%20myself/JS/reload.js,type=generic

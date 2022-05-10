@@ -1,0 +1,20 @@
+{
+  "name": "update-adrules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "update-adrules": "node Script/AdRules"
+  },
+  "repository": "https://github.com/iEwha/Profiles.git",
+  "author": "iEwha",
+  "license": "MIT",
+  "dependencies": {
+    "@adguard/hostlist-compiler": "^1.0.12",
+    "fs-extra": "^10.1.0"
+  },
+  "resolutions": {
+    "axios": "^0.24.0",
+    "jsonpointer": "^5.0.0",
+    "better-ajv-errors": "^1.1.2"
+  }
+}

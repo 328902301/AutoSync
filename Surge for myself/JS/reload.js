@@ -4,7 +4,7 @@ $httpAPI("POST", "/v1/profiles/reload", {}, data => {
     $done({
         title: "不开心就刷新我一下的喔！",
         content: "哇！希望你今天也是开开心心的一天！",
-        icon: "globe.asia.australia",
+        icon: "hand.thumbsup.circle",
         "icon-color": "#0047AB",
      })
     });

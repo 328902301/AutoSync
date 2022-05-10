@@ -29,8 +29,6 @@ jobs:
         ref: Her
         path: Rules
 
-    - name: copy AdRules
-      run: cp -r Rules/RuleSet/AdRule.list Provider/Ruleset/AdRule.list
     - name: copy Advertising
       run: cp -r Rules/RuleSet/Advertising.list Provider/Ruleset/Advertising.list
 

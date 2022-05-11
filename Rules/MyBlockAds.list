@@ -12,6 +12,10 @@ USER-AGENT,AVOS*,MyBlockAds
 IP-CIDR,118.89.204.198/32,MyBlockAds
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,MyBlockAds
 
+# 云闪付
+HOST,ads.95516.com,MyBlockAds
+HOST,tysdk.95516.com,MyBlockAds
+
 # MyAdRule
 HOST-SUFFIX,ywak.com.cn,MyBlockAds
 HOST-SUFFIX,govlaibing.cn,MyBlockAds
@@ -28,8 +32,6 @@ HOST-SUFFIX,zqslg.cn,MyBlockAds
 HOST-SUFFIX,govhebie.cn,MyBlockAds
 
 HOST,ad.12306.cn,MyBlockAds
-HOST,ads.95516.com,MyBlockAds
-HOST,tysdk.95516.com,MyBlockAds
 HOST,token.safebrowsing.apple,MyBlockAds
 HOST,tnc3-aliec2.snssdk.com,MyBlockAds
 HOST,upload-images.jianshu.io,MyBlockAds

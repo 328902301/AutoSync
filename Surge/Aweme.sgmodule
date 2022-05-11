@@ -9,8 +9,7 @@ URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.
 
 [URL Rewrite]
 #> 抖音(<= 16.2.0) 
-^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
-
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ https://aweme.snssdk.com/aweme/v1/ header
 
 [Script]
 #> 抖音(<= 16.2.0) 

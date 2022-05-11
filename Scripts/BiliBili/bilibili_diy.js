@@ -3,7 +3,7 @@
 腳本作者：Cuttlefish
 微信賬號：公眾號墨魚手記
 更新時間：2022-05-04
-腳本版本：(59)
+腳本版本：(61)
 通知頻道：https://t.me/ddgksf2021
 問題反饋：ddgksf2013@163.com
 */
@@ -205,6 +205,7 @@ if (magicJS.read(blackKey)) {
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
+          magicJS.logInfo(`公众号墨鱼手记`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;

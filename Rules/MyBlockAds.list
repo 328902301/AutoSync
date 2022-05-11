@@ -1,6 +1,6 @@
 # utf-8
-# 2022-05-11 09:51
-# 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/MyBlockAds/MyBlockAds.list
+# 2022-05-11 20:59
+# 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
@@ -31,7 +31,6 @@ HOST-SUFFIX,bayescom.cn,MyBlockAds
 HOST-SUFFIX,zqslg.cn,MyBlockAds
 HOST-SUFFIX,govhebie.cn,MyBlockAds
 
-HOST,ad.12306.cn,MyBlockAds
 HOST,token.safebrowsing.apple,MyBlockAds
 HOST,tnc3-aliec2.snssdk.com,MyBlockAds
 HOST,upload-images.jianshu.io,MyBlockAds

@@ -51,6 +51,6 @@ jobs:
           add: "-A"
           author_name: ${{ secrets.GIT_USER }}
           author_email: ${{ secrets.GIT_EMAIL }}
-          message: "Update AdRules"
+          message: "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

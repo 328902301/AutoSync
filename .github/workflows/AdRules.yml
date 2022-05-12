@@ -48,7 +48,7 @@ jobs:
           rm -rf Provider/AdRules/Merge.list
 
       - name: Upload to this repo
-      run: |
+        run: |
         if [ -n "$(git status -s)" ];then
             echo "规则同步"
             git config --global user.name ${{ secrets.GIT_USER }}

@@ -31,20 +31,15 @@ jobs:
 
     - name: copy Advertising
       run: cp -r Rules/RuleSet/Advertising.list Provider/Ruleset/Advertising.list
-      
+    - name: commit
+      run: | 
+        git status -s
+        git config --global ${{ secrets.GIT_USER }}
+        git config --global user.email ${{ secrets.GIT_EMAIL }}
+        git add .
+        git commit -m "规则文件,已在$(date)更新" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        git_token: ${{ secrets.GIT_TOKEN }}
     
-    - name: Upload to this repo
-      run: |
-        if [ -n "$(git status -s)" ];then
-            echo "规则同步"
-            git config --global user.name ${{ secrets.GIT_USER }}
-            git config --global user.email ${{ secrets.GIT_EMAIL }}
-            git add . 
-            git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')"
-            git push -u origin master
-            echo "完成同步"
-        else
-            echo "规则未修改"
-        fi
-        exit 0        
- 

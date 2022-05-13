@@ -34,7 +34,7 @@ jobs:
     - name: commit
       run: | 
         git status -s
-        git config --global ${{ secrets.GIT_USER }}
+        git config --global user.name ${{ secrets.GIT_USER }}
         git config --global user.email ${{ secrets.GIT_EMAIL }}
         git add .
         git commit -m "规则文件,已在$(date)更新" -a

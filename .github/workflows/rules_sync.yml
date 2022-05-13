@@ -34,7 +34,7 @@ jobs:
       
     - name: commit
       run: |
-        git config --global ${{ secrets.GIT_USER }}
+        git config --global user.name ${{ secrets.GIT_USER }}
         git config --global user.email ${{ secrets.GIT_EMAIL }}
         git add .
         git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" -a

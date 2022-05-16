@@ -1,3 +1,7 @@
+#!name=Reload
+#!desc=开开心心阿宝！
+
+
 [Panel]
 reload = title=不开心就刷新一下我的我！,content=宝～ 今天也要开开心心的喔！,style=info,script-name=reload,update-interval=-1
 [Script]

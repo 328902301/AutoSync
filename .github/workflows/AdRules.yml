@@ -45,15 +45,13 @@ jobs:
           grep -v -f Provider/AdRules/Bypass.list Provider/AdRules/Merge.list | sed '/^$/d' > Provider/AdRule.list
           rm -rf Provider/AdRules/Merge.txt
           rm -rf Provider/AdRules/Merge.list
-      - name: commit
-        run: | 
-         git config --global user.name ${{ secrets.GIT_USER }}
-         git config --global user.email ${{ secrets.GIT_EMAIL }}
-         git add .
-         git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+          
+      - name: commit, push
+        uses: EndBug/add-and-commit@v9
         with:
-          git_token: ${{ secrets.GIT_TOKEN }}    
-             
-                 
+          add: "-A"
+          author_name: ${{ secrets.GIT_USER }}
+          author_email: ${{ secrets.GIT_EMAIL }}
+          message: "Update AdRules"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -4,7 +4,10 @@
 
 // countries列表。"关键词": ["替换为", 0]
 var countries = {
-
+  "Traffic":["delete",0],
+  "Expire":["delete",0],
+  "剩余":["delete",0],
+  "到期":["delete",0],
   "阿富汗":["Afghanistan",0],
   "阿尔巴尼亚":["Albania",0],
   "阿尔及利亚":["Algeria",0],

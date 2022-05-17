@@ -4,7 +4,7 @@
 
 // countries列表。"关键词": ["替换为", 0]
 var countries = {
-    "AF":[Afghanistan",0],
+  "AF":[Afghanistan",0],
   "AL":[Albania",0],
   "DZ":[Algeria",0],
   "AO":[Angola",0],

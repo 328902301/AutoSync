@@ -17,6 +17,7 @@ var countries = {
   "阿塞拜疆":["Azerbaijan",0],
   "巴林":["Bahrain",0],
   "孟加拉国":["Bangladesh",0],
+  "孟加拉":["Bangladesh",0],
   "白俄罗斯":["Belarus",0],
   "比利时":["Belgium",0],
   "伯利兹":["Belize",0],

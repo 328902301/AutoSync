@@ -8,16 +8,20 @@
 使用声明：⚠️⚠️⚠️此脚本仅供学习与交流，
         请勿转载与贩卖！⚠️⚠️⚠️
 
-*******************************
+更新日志：2022.5.17                1.5.9                  
+        2021.11.20               1.5.1
+
+************ QX *****************
 
 [rewrite_local]
 
 # 傲软抠图解锁会员
-^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt
+^https?:(.+).aoscdn.com/app/aimage/usersInfo$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt
 
 [mitm] 
 
-hostname = gw.aoscdn.com
+hostname = *.aoscdn.com
+
 
 */
 

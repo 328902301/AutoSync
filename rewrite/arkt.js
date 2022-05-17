@@ -17,8 +17,7 @@
 [rewrite_local]
 
 # 傲软抠图解锁会员
-^https?:(.+).aoscdn.com/app/aimage/usersInfo$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt
-
+^https?:(.+).aoscdn.com/app/aimage/usersInfo$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
 [mitm] 
 
 hostname = *.aoscdn.com

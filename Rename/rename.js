@@ -210,7 +210,8 @@ var others = {
   "高级": "PRO",
   "标准": "STD",
   "实验": "EXP",
-
+  "商宽": "BIZ",
+  "加宽": "FAM",
 };
 
 var airport = "";

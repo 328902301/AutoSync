@@ -1,3 +1,7 @@
+//感谢 @bluman  @Mashiro 两位大佬！
+//我要跪着感谢！
+
+
 // countries列表。"关键词": ["替换为", 0]
 var countries = {
   

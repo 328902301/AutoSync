@@ -194,6 +194,7 @@ var countries = {
   "广新":["020-Singapore",0],
   "京德":["010-Germany",0],
   "深港":["755-HongKong",0],
+
 };
 
 
@@ -205,6 +206,7 @@ var others = {
   "高级": "PRO",
   "标准": "STD",
   "实验": "EXP",
+
 };
 
 var airport = "";

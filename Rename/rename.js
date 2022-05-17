@@ -247,7 +247,7 @@ function operator(proxies) {
     });
     Object.keys(others).forEach((elem, index) => {
       if (simplify(res.name).indexOf(elem) != -1) {
-        resultArray.push(others[elem]);
+        resultArray.splice(1,0,others[elem]);
       };
     });
     res.name = resultArray.join(' ');

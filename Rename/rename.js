@@ -49,6 +49,7 @@ var countries = {
   "克罗地亚":["Croatia",0],
   "塞浦路斯":["Cyprus",0],
   "捷克共和国":["Czech Republic",0],
+  "捷克":["Czech Republic",0],
   "丹麦":["Denmark",0],
   "吉布提":["Djibouti",0],
   "多米尼加共和国":["Dominican Republic",0],

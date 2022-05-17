@@ -8,6 +8,7 @@ var countries = {
   "Expire":["delete",0],
   "剩余":["delete",0],
   "到期":["delete",0],
+  "过期":["delete",0],
   "阿富汗":["Afghanistan",0],
   "阿尔巴尼亚":["Albania",0],
   "阿尔及利亚":["Algeria",0],

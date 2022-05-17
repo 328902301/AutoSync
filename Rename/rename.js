@@ -175,6 +175,7 @@ var countries = {
   "乌干达":["Uganda",0],
   "乌克兰":["Ukraine",0],
   "阿拉伯联合酋长国":["United Arab Emirates",0],
+  "阿联酋":["United Arab Emirates",0],
   "英国":["United Kiongdom",0],
   "美国":["United States",0],
   "乌拉圭":["Uruguay",0],

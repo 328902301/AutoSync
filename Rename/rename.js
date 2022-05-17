@@ -415,11 +415,12 @@ function simplify(cc){
 function operator(proxies) {
   proxies.map(res => {
     var resultArray = [airport];
-    Object.keys(countries).forEach((elem, index) => {
+    for (let elem of Object.keys(countries)) {
       if (simplify(res.name).indexOf(elem) != -1) {
         countries[elem][1] += 1;
         resultArray.push(countries[elem][0],countries[elem][1]);
         console.log(resultArray);
+        break;
       };
     });
     Object.keys(others).forEach((elem, index) => {

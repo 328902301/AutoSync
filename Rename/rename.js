@@ -767,7 +767,7 @@ if ($arguments["airport"] == undefined) {
     var airport = '';
 } else {
     var airport = $arguments["airport"];
-}
+};
 
 // 简繁转换
 function charPYStr() {

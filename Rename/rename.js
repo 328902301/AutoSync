@@ -121,3 +121,9 @@ function operator(proxies) {
     })
     return proxies
 }
+
+// 释放内存
+countries = {};
+enShort = [];
+enFull = [];
+zh = []

@@ -123,7 +123,7 @@ function operator(proxies) {
 }
 
 // 释放内存
-countries = {};
-enShort = [];
-enFull = [];
-zh = []
+// countries = {};
+// enShort = [];
+// enFull = [];
+// zh = []

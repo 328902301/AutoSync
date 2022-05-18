@@ -156,6 +156,7 @@ var countries = {
   "塞尔维亚":["Serbia",0],
   "塞拉利昂":["Sierra Leone",0],
   "新加坡":["Singapore",0],
+  "狮城":["Singapore",0],
   "斯洛伐克":["Slovakia",0],
   "斯洛文尼亚":["Slovenia",0],
   "索马里":["Somalia",0],

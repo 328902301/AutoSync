@@ -1,6 +1,6 @@
 //感谢 @bluman  @Mashiro 两位大佬！
 //我要跪着感谢！
-if ($arguments["short"] == 1) {
+if ($arguments["short"] == true) {
     var countries = {
         "Traffic": ["delete", 0],
         "Expire": ["delete", 0],
@@ -584,7 +584,7 @@ if ($arguments["short"] == 1) {
         "家宽": "FAM",
     };
 
-    var airport = "";
+    var airport = $arguments[airport] + ' ';
 
     // 简繁转换
     function charPYStr() {

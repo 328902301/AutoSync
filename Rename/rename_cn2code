@@ -6,7 +6,7 @@
 var countries = {
   "Traffic":["delete",0],
   "Expire":["delete",0],
- "阿富汗":["AF",0]
+  "阿富汗":["AF",0]
   "阿尔巴尼亚":["AL",0]
   "阿尔及利亚":["DZ",0]
   "安哥拉":["AO",0]

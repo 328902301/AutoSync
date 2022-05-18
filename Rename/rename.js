@@ -1,7 +1,7 @@
 //感谢 @bluman(@qwerzl) 大佬爆肝代码！
 //我要跪着感谢！
 
-//*
+//
 // Rename 的使用方法！！
 //''airport=''后需添加你需要的前缀，添加"Texon"，重命名后为：Texon HK 1/Texon Hong Kong 1/Texon 香港 1
 //除了国家外也有部分已知的需要展示出的rename添加在//其他里面，如果在使用过程中出现其他个性化的rename可以联系作者！
@@ -28,7 +28,7 @@
   // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enFull&output=enShort&airport=
 // > 英文全称改为英文全称（例：Hong Kong=>Hong Kong）
   // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enFull&output=enFull&airport=
-*//
+//
 
 
 

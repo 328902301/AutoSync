@@ -766,7 +766,7 @@ var others = {
 if ($arguments["airport"] == undefined) {
     var airport = '';
 } else {
-    var airport = $arguments["airport"];
+    var airport = decodeURI($arguments["airport"]);
 };
 
 // 简繁转换

@@ -78,11 +78,7 @@ var others = {
 };
 
 // 获取机场名
-if ($arguments["airport"] == undefined) {
-    var airport = '';
-} else {
-    var airport = decodeURI($arguments["airport"]);
-};
+$arguments["airport"] == undefined ? var airport = '' : var airport = decodeURI($arguments["airport"]);
 
 // 简繁转换
 function charPYStr() {

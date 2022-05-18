@@ -10,27 +10,27 @@
 //除了国家外也有部分已知的需要展示出的rename添加在//其他里面，如果在使用过程中出现其他个性化的rename可以联系作者！
 //原节点名以中文命名地区。
 // > 中文改为中文（例：香港=>香港）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=zh&output=zh&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=zh&airport=
 // > 中文改为英文简写（例：香港=>HK）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=zh&output=enShort&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=enShort&airport=
 // > 中文改为英文全称（例：香港=>Hong Kong）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=zh&output=enFull&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=enFull&airport=
 
 //原节点名以英文简写命名地区。
 // > 英文简写改为中文（例：HK=>香港）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enShort&output=zh&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=zh&airport=
 // > 英文简写改为英文简写（例：HK=>HK）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enShort&output=enShort&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enShort&airport=
 // > 英文简写改为英文全称（例：HK=>Hong Kong）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enShorth&output=enFull&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShorth&output=enFull&airport=
 
 //原节点名以英文全称命名地区。
 // > 英文全称改为中文（例：Hong Kong=>香港）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enFull&output=zh&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=zh&airport=
 // > 英文全称改为英文简写（例：Hong Kong=>HK）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enFull&output=enShort&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enShort&airport=
 // > 英文全称改为英文全称（例：Hong Kong=>Hong Kong）
-  // > https://raw.githubusercontent.com/futurkk/Potato/main/rename/rename.js#input=enFull&output=enFull&airport=
+  // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enFull&airport=
 //
 
 

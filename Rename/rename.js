@@ -56,7 +56,9 @@ if ($arguments["output"] == undefined || $arguments["output"] == "enFull") {
     var outputList = zh;
 } else if ($arguments["output"] == "enShort") {
     var outputList = enShort;
-};
+} else {
+    var outputList = enFull;
+}
 
 var countries = {};
 for (let i = 0; i < inputList.length; ++i) {

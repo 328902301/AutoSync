@@ -70,8 +70,8 @@ for (let i in inputList) {
 // 其它
 const others = {
   '[Premium]': '[Premium]',
-  //IEPL: 'Spec'
-  IPlC: 'Spec'
+  //'IEPL': 'Spec'
+  'IPLC': 'Spec'
   专线: 'Spec',
   核心: 'Kern',
   边缘: 'Edge',

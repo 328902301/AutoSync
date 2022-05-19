@@ -70,7 +70,6 @@ for (let i in inputList) {
 // 其它
 const others = {
   '[Premium]': '[Premium]',
-  'IPLC': 'Spec'
   专线: 'Spec',
   核心: 'Kern',
   边缘: 'Edge',
@@ -79,6 +78,7 @@ const others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
+  'IPLC': 'Spec'
   //'IEPL': 'Spec'
   //沪日: 'SH-Japan',
   //沪韩: 'SH-Korea',

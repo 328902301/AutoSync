@@ -78,8 +78,8 @@ const others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  'IPLC': 'Spec'
-  //'IEPL': 'Spec'
+  'IPLC': 'Spec',
+  //'IEPL': 'Spec',
   //沪日: 'SH-Japan',
   //沪韩: 'SH-Korea',
   //沪美: 'SH-United States',

@@ -1,5 +1,39 @@
-// 感谢 @bluman(@qwerzl) 大佬爆肝代码！
+// 感谢 @bluman ( @qwerzl ) 大佬爆肝代码！
 // 我要跪着感谢！
+
+// Rename 的使用方法！！
+
+// ''airport=''后需添加你需要的前缀，添加"Texon"，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon 香港 1]
+// > 如需在前缀添加符号，需对整个前缀进行一次encode转码操作。
+
+// //其他中保留了一部分涉及到只能使用特殊字符才能区分节点或有特殊字符才可进行正则筛选的情况。如果有需要的话可以在issue留言。
+// 节点中的[Premium]的更改已被 @Sebastian Yo 买断。
+
+// 原节点名以中文命名地区。
+// > 中文改为中文（例：香港=>香港）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=zh&airport=[你需要的机场名]
+// > 中文改为英文简写（例：香港=>HK）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=enShort&airport=[你需要的机场名]
+// > 中文改为英文全称（例：香港=>Hong Kong）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=enFull&airport=[你需要的机场名]
+
+// 原节点名以英文简写命名地区。
+// > 英文简写改为中文（例：HK=>香港）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=zh&airport=[你需要的机场名]
+// > 英文简写改为英文简写（例：HK=>HK）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enShort&airport=[你需要的机场名]
+// > 英文简写改为英文全称（例：HK=>Hong Kong）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShorth&output=enFull&airport=[你需要的机场名]
+
+// 原节点名以英文全称命名地区。
+// > 英文全称改为中文（例：Hong Kong=>香港）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=zh&airport=[你需要的机场名]
+// > 英文全称改为英文简写（例：Hong Kong=>HK）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enShort&airport=[你需要的机场名]
+// > 英文全称改为英文全称（例：Hong Kong=>Hong Kong）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enFull&airport=[你需要的机场名]
+//
+
 
 // 创建国家列表
 const enShort = ['HK', 'MO', 'TW', 'JP', 'KR', 'SG', 'SG', 'US', 'UK', 'FR', 'DE', 'AU', 'AU', 'AF', 'AL', 'DZ', 'AO', 'AR', 'AM', 'AT', 'AZ', 'BH', 'BD', 'BY', 'BE', 'BZ', 'BJ', 'BT', 'BO', 'BA', 'BA', 'BW', 'BR', 'VG', 'BN', 'BG', 'BF', 'BI', 'KH', 'CM', 'CA', 'CV', 'KY', 'CF', 'TD', 'CL', 'CN', 'CO', 'KM', 'CG', 'CD', 'CR', 'HR', 'CY', 'CZ', 'DK', 'DJ', 'DO', 'EC', 'EG', 'SV', 'GQ', 'ER', 'EE', 'ET', 'FJ', 'FI', 'GA', 'GM', 'GE', 'GH', 'GR', 'GL', 'GT', 'GN', 'GY', 'HT', 'HN', 'HU', 'IS', 'IN', 'ID', 'ID', 'IR', 'IQ', 'IE', 'IM', 'IL', 'IT', 'CI', 'JM', 'JO', 'KZ', 'KE', 'KW', 'KG', 'LA', 'LV', 'LB', 'LS', 'LR', 'LY', 'LT', 'LU', 'MK', 'MG', 'MW', 'MY', 'MV', 'ML', 'MT', 'MR', 'MU', 'MX', 'MD', 'MC', 'MN', 'ME', 'MA', 'MZ', 'MM', 'NA', 'NP', 'NL', 'NZ', 'NI', 'NE', 'NG', 'KP', 'NO', 'OM', 'PK', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'PR', 'QA', 'RE', 'RO', 'RU', 'RW', 'SM', 'SA', 'SN', 'RS', 'SL', 'SK', 'SI', 'SO', 'ZA', 'ES', 'LK', 'SD', 'SR', 'SZ', 'SE', 'CH', 'SY', 'TJ', 'TZ', 'TH', 'TG', 'TO', 'TT', 'TN', 'TR', 'TM', 'VI', 'UG', 'UA', 'AE', 'AE', 'UY', 'UZ', 'VA', 'VE', 'VN', 'YE', 'YU', 'ZR', 'ZM', 'ZW', 'BD', 'CZ','Chuncheon','Seoul','Osaka','Tokyo','London','Taipei','Taipei','Los Angeles','San Jose','Silicon Valley','Michigan','Mumbai','Frankfurt','Zurich','Moscow'];

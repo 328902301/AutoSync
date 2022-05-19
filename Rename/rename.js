@@ -47,7 +47,8 @@ switch ($arguments['input']) {
     break;
   default:
     var inputList = zh;
-}
+};
+
 switch ($arguments['output']) {
   case 'enShort':
     var outputList = enShort;
@@ -57,7 +58,7 @@ switch ($arguments['output']) {
     break;
   default:
     var outputList = zh;
-}
+};
 
 const countries = {};
 for (let i in inputList) {
@@ -77,7 +78,7 @@ const others = {
 };
 
 // 获取机场名
-const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);
+const airport = ($arguments[airport]== undefined) ? '' : decodeURI($arguments[airport]);
 
 // 简繁转换
 function charPYStr() {

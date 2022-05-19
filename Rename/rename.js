@@ -78,13 +78,13 @@ const others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  /沪日: 'SH-Japan',
-  /沪韩: 'SH-Korea',
-  /沪美: 'SH-United States',
-  /广港: 'GZ-Hong Kong',
-  /广新: 'GZ-Singapore',
-  /深港: 'SZ-Hong Kong',
-  /莞港: 'DG-Hong Kong',  
+  //沪日: 'SH-Japan',
+  //沪韩: 'SH-Korea',
+  //沪美: 'SH-United States',
+  //广港: 'GZ-Hong Kong',
+  //广新: 'GZ-Singapore',
+  //深港: 'SZ-Hong Kong',
+  //莞港: 'DG-Hong Kong',  
 };
 
 // 获取机场名

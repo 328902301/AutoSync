@@ -7,7 +7,9 @@
 // ''airport=''后需添加你需要的前缀，添加"Texon"，重命名后为：Texon HK 1/Texon Hong Kong 1/Texon 香港 1
 // > 如需在前缀添加符号，需对整个前缀转码。
 
-// 除了国家外也有部分已知的需要展示出的rename添加在//其他里面，如果在使用过程中出现其他个性化的rename可以联系作者！
+// 除了国家外也有部分已知的需要展示出的rename添加在//其他里面，如果在使用过程中出现其他个性化的rename可以联系作者，添加城市时只给出城市名字的全称！
+// 节点中的[premium]的更改已被买断。
+
 // 原节点名以中文命名地区。
 // > 中文改为中文（例：香港=>香港）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=zh&output=zh&airport=

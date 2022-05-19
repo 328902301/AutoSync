@@ -60,7 +60,7 @@ switch ($arguments['output']) {
     var outputList = zh;
 };
 
-const countries = {};
+var countries = {};
 for (let i in inputList) {
   countries[inputList[i]] = [outputList[i], 0];
 }

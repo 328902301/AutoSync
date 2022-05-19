@@ -77,7 +77,7 @@ const others = {
   标准: 'STD',
   实验: 'EXP',
   商宽: 'BIZ',
-  家宽：'FAM',
+  家宽: 'FAM',
   沪日: 'SH-Japan',
   沪韩: 'SH-Korea',
   沪美: 'SH-United States',

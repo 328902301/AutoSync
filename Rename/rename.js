@@ -75,6 +75,7 @@ const others = {
   实验: 'EXP',
   商宽: 'BIZ',
   家宽: 'FAM',
+  Premium: 'Premium',
 };
 
 // 获取机场名

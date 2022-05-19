@@ -8,7 +8,7 @@
 // > 如需在前缀添加符号，需对整个前缀转码。
 
 // 除了国家外也有部分已知的需要展示出的rename添加在//其他里面，如果在使用过程中出现其他个性化的rename可以联系作者，添加城市时只给出城市名字的全称！
-// 节点中的[premium]的更改已被买断。
+// 节点中的[Premium]的更改已被买断。
 
 // 原节点名以中文命名地区。
 // > 中文改为中文（例：香港=>香港）
@@ -69,6 +69,7 @@ for (let i in inputList) {
 
 // 其它
 const others = {
+  '[Premium]': '[Premium]',
   专线: 'Spec',
   核心: 'Kern',
   边缘: 'Edge',
@@ -76,8 +77,13 @@ const others = {
   标准: 'STD',
   实验: 'EXP',
   商宽: 'BIZ',
-  家宽: 'FAM',
-  '[Premium]': '[Premium]',
+  沪日: 'SH-Japan',
+  沪韩: 'SH-Korea',
+  沪美: 'SH-United States',
+  广港: 'GZ-Hong Kong',
+  广新: 'GZ-Singapore',
+  深港: 'SZ-Hong Kong',
+  莞港: 'DG-Hong Kong',  
 };
 
 // 获取机场名

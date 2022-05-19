@@ -102,15 +102,19 @@ function simplify(cc) {
 function operator(proxies) {
   proxies.map((res) => {
     const resultArray = [airport];
+    var matched = false
     for (const elem of Object.keys(countries)) {
       if (simplify(res.name).indexOf(elem) !== -1) {
         countries[elem][1] += 1;
         resultArray.push(countries[elem][0], countries[elem][1]);
         console.log(resultArray);
+        matched = true
         break;
       };
+    };
+    if (!matched) {
       resultArray.push(res.name);
-    }
+    };
     Object.keys(others).forEach((elem, index) => {
       if (simplify(res.name).indexOf(elem) !== -1) {
         resultArray.splice(2, 0, others[elem]);

@@ -108,7 +108,8 @@ function operator(proxies) {
         resultArray.push(countries[elem][0], countries[elem][1]);
         console.log(resultArray);
         break;
-      }
+      };
+      resultArray.push(res.name);
     }
     Object.keys(others).forEach((elem, index) => {
       if (simplify(res.name).indexOf(elem) !== -1) {

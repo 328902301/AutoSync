@@ -2,7 +2,7 @@
 ## Written by limbopro  
 ## https://limbopro.com/archives/12904.html 
 ## https://t.me/Adblock4limbo  
-## Last updated at 04.22.2022
+## Last updated at 05.20.2022
 ## */  
 
 #####https://javmost.xyz/
@@ -81,7 +81,7 @@ HOST-SUFFIX,s96.cnzz.com,reject
 #HOST-SUFFIX,yabo729.com,reject
 
 ######m.pianku.me/手机片库网
-HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i:4443,reject
+HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i,reject
 #HOST-KEYWORD,xn--2qux23c9ziyrq,reject
 HOST-SUFFIX,xn--3bs795g.zone,reject
 HOST-SUFFIX,xn--2qux23c9ziyrq.plus,reject

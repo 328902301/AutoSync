@@ -1,4 +1,4 @@
-hostname = api.douban.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226, m.client.10010.com, mp.weixin.qq.com, api.m.jd.com, 
+hostname = api.douban.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226, m.client.10010.com, mp.weixin.qq.com, api.m.jd.com, 91porn.com, cn.pornhub.com, 
 #豆瓣去广告
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/common_ads url reject-img
@@ -143,3 +143,8 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/ggx\.cmvideo\.cn\/request\/ url reject
 ^https?:\/\/ggx\.cmvideo\.cn\/request\/ url reject-img
 ^https?+:\/\/.+?\/cdn-adn\/ url reject-200
+# www.91porn.com
+^https?:\/\/(\w{0,3}(\.){0,1}(91porn)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|ttf|PNG|woff|woff2|m3u8))).* url script-response-body https://limbopro.com/Adguard/surge_91porn.js
+# cn.pornhub.com
+^https?:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://limbopro.com/Adguard/surge_pornhub.js
+^https:\/\/cn\.pornhub\.com\/_xa\/ads.* url reject

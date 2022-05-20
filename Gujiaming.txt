@@ -54,3 +54,8 @@ URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-di
 ^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= url reject-img
 # > 微信公众号文章页面去广告
 ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
+# > 网易云音乐
+^https?+:\/\/.+?\/eapi\/(?>ad|log)\/ url reject-200
+^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ url reject
+^https?:\/\/iadmusicmat\.music\.126\.net\/.+\.jpg url reject
+^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject

@@ -105,3 +105,24 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
 ^https?:\/\/support.you.163.com\/xhr\/boot\/getBootMedia.json url reject
+# > 抖音去广告, 去水印
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-request-header https://raw.githubusercontent.com/28413761/QX/main/JS/douyin.js
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/douyin.js
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/ url reject
+^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/ url reject
+^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
+^https?:\/\/.+?\.(musical|snssdk)\.(com|ly)\/(api|motor)\/ad\/ url reject
+^https?:\/\/.+?\.(musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ url reject
+^https?:\/\/.+?\.(musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ url reject-200
+^https?:\/\/.+\.musical\.ly\/.+stats url reject-img
+^https?:\/\/.+\.musical\.ly\/api\/ad url reject-img
+^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ url reject
+^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/aweme\/stats\/ url reject-img
+^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/device\/update\/ url reject-img
+^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/screen\/ad\/ url reject-img
+^https?:\/\/aweme\.snssdk\.com\/service\/1\/app_logout\/ url reject-img
+^https?:\/\/aweme\.snssdk\.com\/service\/2\/app_log url reject-img
+# > 爱阅书香
+^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ url reject
+# > 皮皮虾
+^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/Super.js

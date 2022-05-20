@@ -126,3 +126,20 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ url reject
 # > 皮皮虾
 ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/Super.js
+# > 埋堆堆
+^https?:\/\/api\.mddcloud\.com\.cn\/api\/ad\/getClassAd\.action url reject-img
+^https?:\/\/api\.mddcloud\.com\.cn\/api\/advert\/getHomepage\.action url reject-img
+^https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/ url reject
+^https?+:\/\/mob\.mddcloud\.com\.cn\/api\/ad(?:vert)?+\/ url reject-200
+# >> 咪咕
+^https?+:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ url reject-200
+^https?+:\/\/ggic\d?\.cmvideo\.cn\/ad\/ url reject-200
+^https?+:\/\/ggx\.cmvideo\.cn\/request\/ url reject-200
+^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ url reject
+^https?:\/\/gg\w+\.cmvideo\.cn\/v\d\/iflyad\/ url reject
+^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ url reject
+^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ url reject
+^https?:\/\/ggv\.cmvideo\.cn\/v1\/iflyad\/ url reject-img
+^https?:\/\/ggx\.cmvideo\.cn\/request\/ url reject
+^https?:\/\/ggx\.cmvideo\.cn\/request\/ url reject-img
+^https?+:\/\/.+?\/cdn-adn\/ url reject-200

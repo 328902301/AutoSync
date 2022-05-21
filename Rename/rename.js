@@ -78,8 +78,8 @@ const others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  'LB': 'LB',
-  'IPLC': 'Spec',
+  LB: 'LB',
+  IPLC: 'Spec',
   //'IEPL': 'Spec',
   //沪日: 'SH-Japan',
   //沪韩: 'SH-Korea',
@@ -92,6 +92,19 @@ const others = {
 
 // 获取机场名
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);
+
+//删除非必要的1
+function stripOnes() {
+  Object.keys(countries).forEach((item,index,array)=>{
+    if (countries[item][1] === 1) {
+      proxies.map((res) => {
+        if (res.name.indexOf(countries[item][0]) !== -1) {
+          res.name = res.name.replace("1", '');
+        };
+      });
+    };
+  });
+};
 
 // 简繁转换
 function charPYStr() {
@@ -135,5 +148,8 @@ function operator(proxies) {
     });
     res.name = resultArray.join(' ');
   });
+  if ($arguments.del1) {
+    stripOnes();
+  };
   return proxies;
 }

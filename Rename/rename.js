@@ -78,7 +78,7 @@ const others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  'LB': "LB',
+  'LB': 'LB',
   'IPLC': 'Spec',
   //'IEPL': 'Spec',
   //沪日: 'SH-Japan',

@@ -69,7 +69,7 @@ for (let i in inputList) {
 
 // 其它
 const others = {
-  '[Premium]': '爱lu0 1314',
+  '[Premium]': '[Premium]',
   专线: 'Spec',
   核心: 'Kern',
   边缘: 'Edge',

@@ -1,4 +1,4 @@
-hostname = api.douban.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226, m.client.10010.com, mp.weixin.qq.com, api.m.jd.com, 91porn.com, cn.pornhub.com, 
+hostname = api.douban.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226, m.client.10010.com, mp.weixin.qq.com, api.m.jd.com, 91porn.com, cn.pornhub.com, music.163.com, support.you.163.com, p.du.163.com,
 #豆瓣去广告
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/common_ads url reject-img
@@ -148,3 +148,29 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 # cn.pornhub.com
 ^https?:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://limbopro.com/Adguard/surge_pornhub.js
 ^https:\/\/cn\.pornhub\.com\/_xa\/ads.* url reject
+# > 网易
+^https?:\/\/p[4](c)?.music.126.net\/\w+==\/10995\d{13}.jpg$ url reject
+^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ url reject-img
+^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ url reject
+^https?:\/\/img1.126.net\/.+dpi=\w{7,8} url reject
+^https?:\/\/img1.126.net\/channel14\/ url reject
+^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ url reject
+^https?:\/\/img1\.126\.net\/.+?dpi=\w{7,8} url reject-img
+^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
+^https?:\/\/img1\.126\.net\/channel14\/ url reject-img
+^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc url reject
+^https?:\/\/www.icourse163.org\/.*?(Advertisement) url reject-img
+^https?:\/\/nex.163.com\/q url reject
+^https?:\/\/g1.163.com\/madfeedback url reject
+^https?:\/\/client.mail.163.com\/apptrack\/confinfo\/searchMultiAds url reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds url reject
+^https?:\/\/c\.m\.163\.com\/nc\/gl\/ url reject
+^https?:\/\/c.m.163.com\/nc\/gl\/ url reject
+^https?+:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc url reject-200
+^https?:\/\/g1\.163\.com\/madfeedback url reject-img
+^https?:\/\/interface(\d)?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|search/(specialkeyword|defaultkeyword|hot)) url reject
+^https?:\/\/interface.music.163.com\/eapi\/ad\/ url reject
+^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) url reject-img
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad url reject-img
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/ url reject-img
+^https?:\/\/nex\.163\.com\/q url reject-img

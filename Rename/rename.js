@@ -44,6 +44,9 @@ switch ($arguments['input']) {
   case 'enShort':
     var inputList = enShort;
     break;
+  case 'enShort':
+    var inputList = enShort;
+    break;
   case 'enFull':
     var inputList = enFull;
     break;
@@ -52,6 +55,9 @@ switch ($arguments['input']) {
 };
 
 switch ($arguments['output']) {
+  case 'enShort':
+    var inputList = enShort;
+    break;
   case 'enShort':
     var outputList = enShort;
     break;
@@ -78,16 +84,6 @@ var others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  //LB: 'LB',
-  //IPLC: 'Spec',
-  //'IEPL': 'Spec',
-  //沪日: 'SH-Japan',
-  //沪韩: 'SH-Korea',
-  //沪美: 'SH-United States',
-  //广港: 'GZ-Hong Kong',
-  //广新: 'GZ-Singapore',
-  //深港: 'SZ-Hong Kong',
-  //莞港: 'DG-Hong Kong',  
 };
 
 var additionalOthers = $arguments.others || '';

@@ -86,7 +86,7 @@ var others = {
   家宽: 'Fam',
 };
 
-var additionalOthers = $arguments.others || '';
+var additionalOthers = $arguments.others || '{}';
 console.log(additionalOthers);
 additionalOthers = JSON.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);

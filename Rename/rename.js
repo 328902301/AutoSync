@@ -92,7 +92,7 @@ const others = {
 
 var additionalOthers = $arguments.others || '';
 console.log(additionalOthers);
-additionalOthers = Json.parse(additionalOthers);
+additionalOthers = JSON.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);
 
 

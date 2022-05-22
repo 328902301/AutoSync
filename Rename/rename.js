@@ -1,7 +1,7 @@
 // 感谢 @bluman ( @qwerzl ) 大佬爆肝代码！
 // 我要跪着感谢！
 
-// Rename v 0.3 的使用方法
+// Rename v 0.1 的使用方法
 // 在以下九个连接中选择你原节点的格式及你需要的格式复制并修改[&airport=]部分即可。
 // [airport=]后需添加你需要的前缀，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon 香港 1]
 // > 如需在前缀添加符号，需对整个前缀进行一次encode转码操作。
@@ -55,11 +55,11 @@ switch ($arguments['output']) {
   case 'enShort':
     var outputList = enShort;
     break;
-  case 'zh':
-    var outputList = zh;
+  case 'enFull':
+    var outputList = enFull;
     break;
   default:
-    var outputList = enFull;
+    var outputList = zh;
 };
 
 var countries = {};
@@ -78,6 +78,16 @@ var others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
+  LB: 'LB',
+  IPLC: 'Spec',
+  //'IEPL': 'Spec',
+  //沪日: 'SH-Japan',
+  //沪韩: 'SH-Korea',
+  //沪美: 'SH-United States',
+  //广港: 'GZ-Hong Kong',
+  //广新: 'GZ-Singapore',
+  //深港: 'SZ-Hong Kong',
+  //莞港: 'DG-Hong Kong',  
 };
 
 var additionalOthers = $arguments.others || '{}';

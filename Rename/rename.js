@@ -42,24 +42,24 @@ const enFull = ['Hong Kong', 'Macao', 'Taiwan', 'Japan', 'Korea', 'Singapore', '
 
 switch ($arguments['input']) {
   case 'enShort':
-    var outputList = enShort;
+    var inputList = enShort;
     break;
   case 'enFull':
-    var outputList = enFull;
+    var inputList = enFull;
     break;
   default:
     var inputList = zh;
 };
 
 switch ($arguments['output']) {
-  case 'zh':
-    var outputList = zh;
-    break;
   case 'enShort':
     var outputList = enShort;
     break;
-  default:
+  case 'enFull':
     var outputList = enFull;
+    break;
+  default:
+    var outputList = zh;
 };
 
 var countries = {};

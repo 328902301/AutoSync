@@ -55,11 +55,11 @@ switch ($arguments['output']) {
   case 'enShort':
     var outputList = enShort;
     break;
-  case 'enFull':
-    var outputList = enFull;
+  case 'zh':
+    var outputList = zh;
     break;
   default:
-    var outputList = zh;
+    var outputList = enFull;
 };
 
 var countries = {};

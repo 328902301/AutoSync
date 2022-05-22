@@ -91,6 +91,7 @@ const others = {
 };
 
 var additionalOthers = $arguments.others || '';
+console.log(additionalOthers);
 additionalOthers = Json.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);
 

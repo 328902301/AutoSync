@@ -7,7 +7,7 @@ obj["data"] = {
       end_time: "2023-05-22T18:57:30+08:00",
       total_count: 100,
       left_count: 100,
-      pre_left_count: 10,
+      pre_left_count: 100,
     },
   ],
 };

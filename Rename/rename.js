@@ -68,7 +68,7 @@ for (let i in inputList) {
 }
 
 // 其它
-const others = {
+var others = {
   '[Premium]': '[Premium]',
   专线: 'Spec',
   核心: 'Kern',
@@ -89,6 +89,12 @@ const others = {
   //深港: 'SZ-Hong Kong',
   //莞港: 'DG-Hong Kong',  
 };
+
+var additionalOthers = $arguments.others || '';
+console.log(additionalOthers);
+additionalOthers = JSON.parse(additionalOthers);
+others = Object.assign({}, additionalOthers, others);
+
 
 // 获取机场名
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);

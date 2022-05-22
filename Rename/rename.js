@@ -59,7 +59,7 @@ switch ($arguments['output']) {
     var outputList = enFull;
     break;
   default:
-    var outputList = zh;
+    var outputList = enFull;
 };
 
 var countries = {};
@@ -78,8 +78,8 @@ var others = {
   实验: 'Exp',
   商宽: 'Biz',
   家宽: 'Fam',
-  LB: 'LB',
-  IPLC: 'Spec',
+  //LB: 'LB',
+  //IPLC: 'Spec',
   //'IEPL': 'Spec',
   //沪日: 'SH-Japan',
   //沪韩: 'SH-Korea',

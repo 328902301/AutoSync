@@ -90,6 +90,11 @@ const others = {
   //莞港: 'DG-Hong Kong',  
 };
 
+var additionalOthers = $arguments.others || '';
+additionalOthers = Json.parse(additionalOthers);
+others = Object.assign({}, additionalOthers, others);
+
+
 // 获取机场名
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);
 

@@ -1,5 +1,5 @@
 #Speedtest
-host, csl.hkspeedtest.com
-host, speedtest.website-solution.net
-host, csl2.hkspeedtest.com
-ip-cidr, 202.75.250.35/32
+host, csl.hkspeedtest.com,Speedtest
+host, speedtest.website-solution.net,Speedtest
+host, csl2.hkspeedtest.com,Speedtest
+ip-cidr, 202.75.250.35/32,Speedtest

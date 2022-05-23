@@ -35,7 +35,7 @@ jobs:
       - name: yarn install, update
         run: |
           yarn install
-          yarn update-adrules
+          yarn build
         
       - name: Merge and Rules and remove duplicates
         run: |

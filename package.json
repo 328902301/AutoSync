@@ -1,7 +1,7 @@
 {
   "name": "build",
   "version": "1.0.0",
-  
+
   "scripts": {
     "build": "wireit",
     "build:AdRules": "wireit",
@@ -11,7 +11,7 @@
     "build:AdRules": {
       "command": "node ./Script/AdRules.js"
     },
-    "build:telegram-cidr": {
+    "build:Telegramcidr": {
       "command": "node ./Script/Telegramcidr.js"
     },
     "build": {

@@ -45,7 +45,11 @@ jobs:
           grep -v -f Provider/AdRules/Bypass.list Provider/AdRules/Merge.list | sed '/^$/d' > Provider/AdRule.list
           rm -rf Provider/AdRules/Merge.txt
           rm -rf Provider/AdRules/Merge.list
-          
+
+      - name: yarn install
+        run: |
+          yarn build-Telegramcidr
+
       - name: commit
         run: | 
          git config --global user.name ${{ secrets.GIT_USER }}

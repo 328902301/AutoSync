@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "update-adrules": "node Script/AdRules"
+    "update-adrules": "node Script/AdRules",
+    "build-Telegramcidr": "node Script/Telegramcidr "
   },
   "repository": "https://github.com/iEwha/Profiles.git",
   "author": "iEwha",
   "license": "MIT",
   "dependencies": {
     "@adguard/hostlist-compiler": "^1.0.12",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "^10.1.0",
+    "undici": "^5.2.0"
   },
   "resolutions": {
     "axios": "^0.24.0",

@@ -142,13 +142,13 @@ rule-providers:
     type: http
     behavior: domain
     path: ./Ruleset/iEwha/Reject.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Reject.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Reject.yaml
     interval: 86400
 
    Private:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Private.yaml"
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Private.yaml
     path: ./Ruleset/iEwha/Private.yaml
     interval: 86400
 
@@ -156,48 +156,41 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Ruleset/iEwha/Microsoft.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Microsoft.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Microsoft.yaml
     interval: 86400
 
    Emby:
     type: http
     behavior: classical
     path: ./Ruleset/Emby.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Emby.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
    Telegram:
     type: http
     behavior: classical
     path: ./Ruleset/iEwha/Telegram.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Telegram.yaml
-    interval: 86400
-
-   ProxyGFW:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/ProxyGFW.yaml"
-    path: ./Ruleset/iEwha/ProxyGFW.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Telegram.yaml
     interval: 86400
 
    Proxy:
     type: http
     behavior: domain
     path: ./Ruleset/iEwha/Proxy.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Proxy.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Proxy.yaml
     interval: 86400
 
    China:
     type: http
     behavior: domain
     path: ./Ruleset/iEwha/Direct.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Direct.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Direct.yaml
     interval: 86400
 
    cncidr:
     type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/cncidr.yaml
+    behavior: ipcidr
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/cncidr.yaml
     path: ./Ruleset/iEwha/cncidr.yaml
     interval: 36000
 
@@ -205,7 +198,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     path: ./Ruleset/iEwha/Lancidr.yaml
-    url: https://cdn.jsdelivr.net/gh/iEwha/Profiles@master/Provider/Ruleset/Lancidr.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Lancidr.yaml
     interval: 86400
 
 # 规则模式
@@ -215,7 +208,6 @@ rules:
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Emby,Emby
   - RULE-SET,Telegram,电报信息
-  - RULE-SET,ProxyGFW,全球加速
   - RULE-SET,Proxy,全球加速
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
@@ -232,7 +224,6 @@ script:
             "Microsoft": "微软服务",
             "Emby": "Emby",
             "Telegram": "电报信息",
-            "ProxyGFW": "全球加速",
             "Proxy": "全球加速",
             "China": "DIRECT",   
             "cncidr": "DIRECT",   

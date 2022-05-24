@@ -1,3 +1,4 @@
+hostname = api.douban.com,
 #豆瓣去广告
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/common_ads url reject-img

@@ -79,6 +79,7 @@ const nicknames = [
   ".+连锁",
   "(发|脸)型",
   "蛇|鼠",
+  "三只羊",
 ]
 
 // user custom verify
@@ -180,6 +181,7 @@ const signatureNames = [
   "(进口|豪|汽|追|看|改装)车",
   "投资",
   "资本",
+  "三只羊",
 ]
 
 // in the top of nickname 

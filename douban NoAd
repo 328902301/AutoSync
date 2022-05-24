@@ -1,0 +1,9 @@
+#豆瓣去广告
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/common_ads url reject-img
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash url reject-img
+^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ url reject
+^https?:\/\/frodo.douban.com\/api\/v2\/movie\/banner url reject
+^https?:\/\/erebor\.douban\.com\/count\/\?ad= url reject
+^https?:\/\/api.douban.com\/v2\/app_ads\/common_ads url reject
+^https?+:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject-200

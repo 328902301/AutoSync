@@ -4,6 +4,8 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.insights.algolia.io
+.heatmap.emma.tools
 .reports.koalametrics.com
 .js.go2sdk.com
 .dbfocus.jp
@@ -4543,6 +4545,7 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.teralog.techhub.co.kr
 .data.mimikama.at
 .sayac.tmgrup.com.tr
 .t.melhorplano.net

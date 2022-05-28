@@ -4,6 +4,9 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
+# 高德地图
+HOST,awaken.amap.com,MyBlockAds
+
 # 知乎
 HOST,appcloud2.in.zhihu.com,MyBlockAds
 HOST,mqtt.zhihu.com,MyBlockAds

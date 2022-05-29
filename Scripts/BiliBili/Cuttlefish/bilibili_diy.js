@@ -205,7 +205,7 @@ if (magicJS.read(blackKey)) {
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          magicJS.logInfo(`公众号墨鱼手记`);
+          //magicJS.logInfo(`公众号墨鱼手记`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;

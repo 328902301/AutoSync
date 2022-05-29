@@ -205,14 +205,14 @@ if (magicJS.read(blackKey)) {
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          //magicJS.logInfo(`公众号墨鱼手记`);
+          magicJS.logInfo(`已开启1080p高码率`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;
           obj["data"]["vip"]["due_date"] = 4669824160;
           body = JSON.stringify(obj);
         } catch (err) {
-          magicJS.logError(`1080P出现异常：${err}`);
+          magicJS.logError(`1080p高码率出现异常：${err}`);
         }
         break;
       // 追番去广告

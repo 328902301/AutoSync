@@ -2,8 +2,8 @@
 應用名稱：自用B站去广告脚本
 腳本作者：Cuttlefish
 微信賬號：公眾號墨魚手記
-更新時間：2022-05-04
-腳本版本：(61)
+更新時間：2022-05-26
+腳本版本：(64)
 通知頻道：https://t.me/ddgksf2021
 問題反饋：ddgksf2013@163.com
 */
@@ -77,7 +77,7 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
           
-          const tabList = new Set([39, 40, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
+          const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
           
           const topList = new Set([176, 107]);
           
@@ -216,7 +216,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
       // 追番去广告
-      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
+      case /pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
@@ -238,13 +238,16 @@ if (magicJS.read(blackKey)) {
         }
         break;
         // 观影页去广告
-      case /https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
+      case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
               module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
+            }
+            if (module.style.startsWith("function")) {
+              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
             }
             if (module.style.startsWith("tip")) {
               module.items = null;

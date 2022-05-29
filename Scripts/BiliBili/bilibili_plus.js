@@ -1,6 +1,6 @@
 // 2022-01
 // 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/bilibili/bilibili_plus.js
-// 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
+
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";

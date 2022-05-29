@@ -4,6 +4,9 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
+# 哔哩哔哩自动换区支持
+IP-CIDR, 203.107.1.1/24, MyBlockAds
+
 # 高德地图开屏广告
 HOST, awaken.amap.com, MyBlockAds
 

@@ -76,11 +76,11 @@ let $ = nobyda();
 let run = EnvInfo();
 
 async function SwitchRegion(play) {
-	const Group = $.read('BiliArea_Policy') || '📺 DomesticMedia'; //Your blibli policy group name.
+	const Group = $.read('BiliArea_Policy') || 'Domestic'; //Your blibli policy group name.
 	const CN = $.read('BiliArea_CN') || 'DIRECT'; //Your China sub-policy name.
-	const TW = $.read('BiliArea_TW') || '🇹🇼 sub-policy'; //Your Taiwan sub-policy name.
-	const HK = $.read('BiliArea_HK') || '🇭🇰 sub-policy'; //Your HongKong sub-policy name.
-	const DF = $.read('BiliArea_DF') || '🏁 sub-policy'; //Sub-policy name used after region is blocked(e.g. url 404)
+	const TW = $.read('BiliArea_TW') || '台湾节点'; //Your Taiwan sub-policy name.
+	const HK = $.read('BiliArea_HK') || '香港节点'; //Your HongKong sub-policy name.
+	const DF = $.read('BiliArea_DF') || 'PROXY'; //Sub-policy name used after region is blocked(e.g. url 404)
 	const off = $.read('BiliArea_disabled') || ''; //WiFi blacklist(disable region change), separated by commas.
 	const current = await $.getPolicy(Group);
 	const area = (() => {

@@ -1,112 +1,112 @@
 # utf-8
-# 2022-05-29 07:55
+# 2022-05-29 08:54
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
-# 高德地图
-HOST,awaken.amap.com,MyBlockAds
+# 高德地图开屏广告
+HOST, awaken.amap.com, MyBlockAds
 
 # 知乎
-HOST,appcloud2.in.zhihu.com,MyBlockAds
-HOST,mqtt.zhihu.com,MyBlockAds
-HOST,sugar.zhihu.com,MyBlockAds
-USER-AGENT,AVOS*,MyBlockAds
-IP-CIDR,118.89.204.198/32,MyBlockAds
-IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,MyBlockAds
+HOST, appcloud2.in.zhihu.com, MyBlockAds
+HOST, mqtt.zhihu.com, MyBlockAds
+HOST, sugar.zhihu.com, MyBlockAds
+USER-AGENT, AVOS*, MyBlockAds
+IP-CIDR, 118.89.204.198/32, MyBlockAds
+IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, MyBlockAds
 
-# 云闪付
-HOST,ads.95516.com,MyBlockAds
-HOST,tysdk.95516.com,MyBlockAds
+# 云闪付开屏广告
+HOST, ads.95516.com, MyBlockAds
+HOST, tysdk.95516.com, MyBlockAds
 
 # MyAdRule
-HOST-SUFFIX,ywak.com.cn,MyBlockAds
-HOST-SUFFIX,govlaibing.cn,MyBlockAds
-HOST-SUFFIX,log.trackingio.com,MyBlockAds
-HOST-SUFFIX,adtrack.xiaojukeji.com,MyBlockAds
-HOST-SUFFIX,adtrack.unilog.wostore.cn,MyBlockAds
-HOST-SUFFIX,trackingio.com,MyBlockAds
-HOST-SUFFIX,hpplay.cn,MyBlockAds
-HOST-SUFFIX,admobile.top,MyBlockAds
-HOST-SUFFIX,yvfnb.cn,MyBlockAds
-HOST-SUFFIX,netease.im,MyBlockAds
-HOST-SUFFIX,bayescom.cn,MyBlockAds
-HOST-SUFFIX,zqslg.cn,MyBlockAds
-HOST-SUFFIX,govhebie.cn,MyBlockAds
+HOST-SUFFIX, ywak.com.cn, MyBlockAds
+HOST-SUFFIX, govlaibing.cn, MyBlockAds
+HOST-SUFFIX, log.trackingio.com, MyBlockAds
+HOST-SUFFIX, adtrack.xiaojukeji.com, MyBlockAds
+HOST-SUFFIX, adtrack.unilog.wostore.cn, MyBlockAds
+HOST-SUFFIX, trackingio.com, MyBlockAds
+HOST-SUFFIX, hpplay.cn, MyBlockAds
+HOST-SUFFIX, admobile.top, MyBlockAds
+HOST-SUFFIX, yvfnb.cn, MyBlockAds
+HOST-SUFFIX, netease.im, MyBlockAds
+HOST-SUFFIX, bayescom.cn, MyBlockAds
+HOST-SUFFIX, zqslg.cn, MyBlockAds
+HOST-SUFFIX, govhebie.cn, MyBlockAds
 
-HOST,token.safebrowsing.apple,MyBlockAds
-HOST,tnc3-aliec2.snssdk.com,MyBlockAds
-HOST,upload-images.jianshu.io,MyBlockAds
-HOST,static-assets-44d.pages.dev,MyBlockAds
-HOST,support.you.163.com,MyBlockAds
-HOST,cm-cn-central-00001.albatross.10086.cn,MyBlockAds
-HOST,cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com,MyBlockAds
-HOST,s.openmediation.com,MyBlockAds
-HOST,api.applovefrom.com,MyBlockAds
-HOST,api16-access-sg.pangle.io,MyBlockAds
-HOST,a1235.hnhx360.com,MyBlockAds
-HOST,adash-emas.cn-hangzhou.aliyuncs.com,MyBlockAds
-HOST,mediation-tracking.prd.mz.internal.unity3d.com,MyBlockAds
-HOST,down-files.2bulu.com,MyBlockAds
-HOST,httpdns.titannetwork.cn,MyBlockAds
-HOST,mpush-api.aliyun.com,MyBlockAds
-HOST,dark.hyhuo.com,MyBlockAds
-HOST,beacon-api.aliyuncs.com,MyBlockAds
-HOST,ntb.hyhuo.com,MyBlockAds
-HOST,logs.chelaile.net.cn,MyBlockAds
-HOST,ip-api.com,MyBlockAds
-HOST,6185059.com,MyBlockAds
-HOST,wanproxy-hz.127.net,MyBlockAds
-HOST,nstool.netease.com,MyBlockAds
-HOST,api-access.pangolin-sdk-toutiao.com,MyBlockAds
-HOST,91adv.com.cn,MyBlockAds
-HOST,adui.tg.meitu.com,MyBlockAds
-HOST,sensorsdata.cmcc-cs.cn,MyBlockAds
-HOST,lupic.cdn.bcebos.com,MyBlockAds
-HOST,moment-app-team.s3.amazonaws.com,MyBlockAds
-HOST,pgapi.ksmobile.com,MyBlockAds
-HOST,pangolin.snssdk.com,MyBlockAds
-HOST,iconfactory.com,MyBlockAds
-HOST,ocsp.apple.com,MyBlockAds
-HOST,img.offeryeah.online,MyBlockAds
-HOST,img.cdn.famobi.com,MyBlockAds
-HOST,static.alookbrowser.com,MyBlockAds
-HOST,app-measurement.com,MyBlockAds
-HOST,log.ihuman.com,MyBlockAds
-HOST,dc.114dev.com,MyBlockAds
+HOST, token.safebrowsing.apple, MyBlockAds
+HOST, tnc3-aliec2.snssdk.com, MyBlockAds
+HOST, upload-images.jianshu.io, MyBlockAds
+HOST, static-assets-44d.pages.dev, MyBlockAds
+HOST, support.you.163.com, MyBlockAds
+HOST, cm-cn-central-00001.albatross.10086.cn, MyBlockAds
+HOST, cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com, MyBlockAds
+HOST, s.openmediation.com, MyBlockAds
+HOST, api.applovefrom.com, MyBlockAds
+HOST, api16-access-sg.pangle.io, MyBlockAds
+HOST, a1235.hnhx360.com, MyBlockAds
+HOST, adash-emas.cn-hangzhou.aliyuncs.com, MyBlockAds
+HOST, mediation-tracking.prd.mz.internal.unity3d.com, MyBlockAds
+HOST, down-files.2bulu.com, MyBlockAds
+HOST, httpdns.titannetwork.cn, MyBlockAds
+HOST, mpush-api.aliyun.com, MyBlockAds
+HOST, dark.hyhuo.com, MyBlockAds
+HOST, beacon-api.aliyuncs.com, MyBlockAds
+HOST, ntb.hyhuo.com, MyBlockAds
+HOST, logs.chelaile.net.cn, MyBlockAds
+HOST, ip-api.com, MyBlockAds
+HOST, 6185059.com, MyBlockAds
+HOST, wanproxy-hz.127.net, MyBlockAds
+HOST, nstool.netease.com, MyBlockAds
+HOST, api-access.pangolin-sdk-toutiao.com, MyBlockAds
+HOST, 91adv.com.cn, MyBlockAds
+HOST, adui.tg.meitu.com, MyBlockAds
+HOST, sensorsdata.cmcc-cs.cn, MyBlockAds
+HOST, lupic.cdn.bcebos.com, MyBlockAds
+HOST, moment-app-team.s3.amazonaws.com, MyBlockAds
+HOST, pgapi.ksmobile.com, MyBlockAds
+HOST, pangolin.snssdk.com, MyBlockAds
+HOST, iconfactory.com, MyBlockAds
+HOST, ocsp.apple.com, MyBlockAds
+HOST, img.offeryeah.online, MyBlockAds
+HOST, img.cdn.famobi.com, MyBlockAds
+HOST, static.alookbrowser.com, MyBlockAds
+HOST, app-measurement.com, MyBlockAds
+HOST, log.ihuman.com, MyBlockAds
+HOST, dc.114dev.com, MyBlockAds
 
 # Mybreak
 # 哔哩哔哩
-;HOST-SUFFIX,grpc.biliapi.net,MyBlockAds
+;HOST-SUFFIX, grpc.biliapi.net, MyBlockAds
 
 # 真不卡
-HOST-SUFFIX,ttayy.cn,MyBlockAds
-HOST-SUFFIX,zhengxiaoliu.top,MyBlockAds
+HOST-SUFFIX, ttayy.cn, MyBlockAds
+HOST-SUFFIX, zhengxiaoliu.top, MyBlockAds
 
 # NicoNico
-HOST,ads.nicovideo.jp,MyBlockAds
+HOST, ads.nicovideo.jp, MyBlockAds
 
 # HDO
-HOST-SUFFIX,applovin.com,MyBlockAds
-HOST-SUFFIX,applvn.com,MyBlockAds
+HOST-SUFFIX, applovin.com, MyBlockAds
+HOST-SUFFIX, applvn.com, MyBlockAds
 
-# 美颜相机去首页和轮播广告
-HOST,adui.tg.meitu.com,MyBlockAds
-HOST,aaid.uyunad.com,MyBlockAds
+# 美颜相机首页和轮播广告
+HOST, adui.tg.meitu.com, MyBlockAds
+HOST, aaid.uyunad.com, MyBlockAds
 
 # 爱奇艺广告屏蔽
-IP-CIDR,203.107.63.154/32,MyBlockAds
+IP-CIDR, 203.107.63.154/32, MyBlockAds
 
 # 多多视频去开屏广告
-HOST-SUFFIX,bayescom.com,MyBlockAds
+HOST-SUFFIX, bayescom.com, MyBlockAds
 
 # 车来了
-HOST-SUFFIX,atrace.chelaile.net.cn,MyBlockAds
-HOST,logs.chelaile.net.cn,MyBlockAds
-HOST,ad.chelaile.net.cn,MyBlockAds
+HOST-SUFFIX, atrace.chelaile.net.cn, MyBlockAds
+HOST, logs.chelaile.net.cn, MyBlockAds
+HOST, ad.chelaile.net.cn, MyBlockAds
 
 # 铁路 12306
-HOST,ad.12306.cn,MyBlockAds
+HOST, ad.12306.cn, MyBlockAds
 
 # 两步路
-HOST-SUFFIX,admobile.top,MyBlockAds
+HOST-SUFFIX, admobile.top, MyBlockAds

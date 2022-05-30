@@ -1,12 +1,11 @@
 # utf-8
-# 2022-05-30 22:17
+# 2022-05-30 22:19
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
 # 每日万年历应用推广
-HOST, pic.yupoo.com, MyBlockAds
-HOST, in.appcenter.ms, MyBlockAds
+;HOST, pic.yupoo.com, MyBlockAds
 
 # 解除安全浏览限制
 HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds

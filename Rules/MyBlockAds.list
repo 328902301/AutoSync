@@ -1,11 +1,13 @@
 # utf-8
-# 2022-05-30 22:35
+# 2022-05-30 22:40
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
 # Clue智库推广信息
 HOST, images.ctfassets.net, MyBlockAds
+HOST, api.helloclue.com, MyBlockAds
+HOST, collector.clue.run, MyBlockAds
 
 # 每日万年历横版图片推广
 HOST, pic.yupoo.com, MyBlockAds

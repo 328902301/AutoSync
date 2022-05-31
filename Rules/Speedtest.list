@@ -8,8 +8,8 @@
 # USER-AGENT: 1
 # HOST: 1
 # TOTAL: 5
-HOST,speed.dler.io,Speedtest
-HOST-SUFFIX,fast.com,Speedtest
-HOST-SUFFIX,ooklaserver.net,Speedtest
-HOST-SUFFIX,speed.cloudflare.com,Speedtest
-USER-AGENT,SpeedTest*,Speedtest
+HOST, speed.dler.io, Speedtest
+HOST-SUFFIX, fast.com, Speedtest
+HOST-SUFFIX, ooklaserver.net, Speedtest
+HOST-SUFFIX, speed.cloudflare.com, Speedtest
+USER-AGENT, SpeedTest*, Speedtest

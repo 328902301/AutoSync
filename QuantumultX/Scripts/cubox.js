@@ -14,8 +14,7 @@ https://apps.apple.com/cn/app/todo%E6%B8%85%E5%8D%95-%E8%B7%A8%E5%B9%B3%E5%8F%B0
 var obj = JSON.parse($response.body);
 
 obj.data.isExpire = false;
-obj.data.payTime = "2020-06-01T21:50:27+08:00";
 obj.data.expireTime = "2029-06-01T21:50:27+08:00";
-
+obj.data.payTime = "2020-06-01T21:50:27+08:00";
 
 $done({body: JSON.stringify(obj)}); 

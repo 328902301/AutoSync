@@ -12,10 +12,40 @@ https://apps.apple.com/cn/app/todo%E6%B8%85%E5%8D%95-%E8%B7%A8%E5%B9%B3%E5%8F%B0
 */
 
 
-var obj = JSON.parse($response.body);
-
-obj.data.isExpire = false;
-obj.data.expireTime = 2029-06-01T21:50:27+08:00;
-obj.data.payTime = 2020-01-01T08:00:00+08:00
-
+var obj = {
+  "message" : "",
+  "data" : {
+    "nickName" : "江南 月",
+    "thirdNickName" : "江南 月",
+    "active" : true,
+    "isThirdUser" : true,
+    "thirdType" : null,
+    "payTime" : "2020-01-01T08:00:00+08:00",
+    "paymentSource" : null,
+    "admin" : false,
+    "bind" : false,
+    "thirdAccounts" : [
+      {
+        "userId" : null,
+        "uid" : null,
+        "id" : null,
+        "appleEmail" : "kgy88xjsxm@privaterelay.appleid.com",
+        "bind" : false,
+        "token" : null,
+        "type" : 1,
+        "nickName" : "江南 月"
+      }
+    ],
+    "id" : "ff80808179170ff4017960a76ee25449",
+    "level" : 1,
+    "email" : "kgy88xjsxm@privaterelay.appleid.com",
+    "sync" : null,
+    "mobile" : null,
+    "isExpire" : false,
+    "userName" : "kgy88xjsxm@privaterelay.appleid.com",
+    "password" : "0",
+    "expireTime" : "2029-06-01T22:10:18+08:00",
+    "weixinOpenid" : null,
+    "receipt" : null
+  }
 $done({body: JSON.stringify(obj)}); 

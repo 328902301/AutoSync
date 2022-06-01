@@ -11,41 +11,11 @@ hostname= = www.evestudio.cn
 https://apps.apple.com/cn/app/todo%E6%B8%85%E5%8D%95-%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9%E4%B8%8E%E7%95%AA%E8%8C%84%E9%92%9F/id1566997654
 */
 
+var obj = JSON.parse($response.body);
 
-var obj = {
-  "message" : "",
-  "data" : {
-    "nickName" : "江南 月",
-    "thirdNickName" : "江南 月",
-    "active" : true,
-    "isThirdUser" : true,
-    "thirdType" : null,
-    "payTime" : "2020-01-01T08:00:00+08:00",
-    "paymentSource" : null,
-    "admin" : false,
-    "bind" : false,
-    "thirdAccounts" : [
-      {
-        "userId" : null,
-        "uid" : null,
-        "id" : null,
-        "appleEmail" : "kgy88xjsxm@privaterelay.appleid.com",
-        "bind" : false,
-        "token" : null,
-        "type" : 1,
-        "nickName" : "江南 月"
-      }
-    ],
-    "id" : "ff80808179170ff4017960a76ee25449",
-    "level" : 1,
-    "email" : "kgy88xjsxm@privaterelay.appleid.com",
-    "sync" : null,
-    "mobile" : null,
-    "isExpire" : false,
-    "userName" : "kgy88xjsxm@privaterelay.appleid.com",
-    "password" : "0",
-    "expireTime" : "2029-06-01T22:10:18+08:00",
-    "weixinOpenid" : null,
-    "receipt" : null
-  }
+obj.data.isExpire = false;
+obj.data.payTime = 2020;
+obj.data.expireTime = 2029;
+
+
 $done({body: JSON.stringify(obj)}); 

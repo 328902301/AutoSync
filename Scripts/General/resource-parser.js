@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-05-31 22:20⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-06-02 14:00⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -60,6 +60,7 @@
   ❖ sort=IEPL<IPLC<BGP , 靠后排序
 ⦿ info=1, 开启通知提示机场 ✈️ 流量信息(如有提供);
 ⦿ del=1, 有重名节点时用此参数删除重复节点(默认改名保留)
+⦿ flow=2022-06-02:1000:54, 订阅到期时间:总流量:已用流量
 ⦿ ⟦进阶参数⟧: 𝘀𝗳𝗶𝗹𝘁𝗲𝗿/𝘀𝗿𝗲𝗻𝗮𝗺𝗲, 传入一段 base64 编码的脚本, 可用于更为复杂的[过滤/重命名] 需求
   ❖ 说明: https://github.com/KOP-XIAO/QuantumultX/pull/9
 
@@ -92,6 +93,7 @@
 ⦿ 类型参数 type=domain-set/rule/module/list/nodes
   ❖ 当解析器未能正确识别类型时, 可尝试使用此参数强制指定
 ⦿ 隐藏参数 hide=0, 禁用筛除的分流/重写，默认方式为删除
+
 ----------------------------------------------------------
 */
 
@@ -149,7 +151,6 @@ const Field = {
   "server" : "server_remote"
 }  
 
-var Finfo={bytes_used: 1073741824, bytes_remaining: 2147483648, expire_date: 1653193966}
 
 SubFlow() //流量通知
 
@@ -206,8 +207,22 @@ var PUOT = mark0 && para1.indexOf("uot=") != -1 && version >= 665? para1.split("
 var PcheckU = mark0 && para1.indexOf("checkurl=") != -1 ? decodeURIComponent(para1.split("checkurl=")[1].split("&")[0]) : ""; // 节点 server_check_url 参数
 typeQ = PRelay!=""? "server":typeQ
 var typec="" //check result type
-var Pflow=mark0 &&para1.indexOf("flow=") != -1 ? decodeURIComponent(para1.split("flow=")[1].split("&")[0]) : ""; // 流量时间等参数
+var Pflow=mark0 && para1.indexOf("flow=") != -1 ? para1.split("flow=")[1].split("&")[0] : 0; // 流量时间等参数
 
+
+//流量信息
+//{bytes_used: 1073741824, bytes_remaining: 2147483648, expire_date: 1653193966}}
+var Finfo={}
+if (Pflow!=0) {
+  Pflow = Pflow.split(":")
+  var Bdate=Date.parse(new Date(Pflow[0]))/1000
+  var Btotal=Pflow[1]? Pflow[1]*1024*1024*1024 : 0
+  var Bused=Pflow[2]? Pflow[2]*1024*1024*1024 : 0
+  var Bremain=Btotal !=0 ? Btotal-Bused : 1
+  var BJson={bytes_used: Bused, bytes_remaining: Bremain, expire_date: Bdate}
+  //$notify("Flow","",JSON.strigify(BJson))
+  Finfo = BJson
+}
 
 //花漾字 pattern
 var pat=[]
@@ -279,7 +294,6 @@ function Parser() {
 
 if (typeof($resource)!=="undefined") {
   Parser()
-  if (Pflow!=1) {Finfo={}}
   $done({ content: total, info: Finfo })
 }
 
@@ -391,7 +405,7 @@ function ResourceParse() {
       //$notify("before","haha",total)
       total = TagCheck_QX(total).join("\n") //节点名检查
       if (PUOT==1) { total = total.split("\n").map(UOT).join("\n")}
-      if (Pcnt == 1) {$notify("解析后最终返回内容" , "节点数量: " +total.split("\n").length, total)}
+      if (Pcnt == 1) {$notify("⟦" + subtag + "⟧"+"解析后最终返回内容" , "节点数量: " +total.split("\n").length, total)}
       total = PRelay==""? Base64.encode(total) : ServerRelay(total.split("\n"),PRelay) //强制节点类型 base64 加密后再导入 Quantumult X, 如果是relay，则转换成分流类型
       if(Pflow==1) {
         //$notify("添加流量信息","xxx","xxxx")
@@ -468,7 +482,6 @@ function RegCheck(total, typen, paraname,regpara) {
 }
 //判断订阅类型
 function Type_Check(subs) {
-
     var type = "unknown"
     var RuleK = ["host,", "-suffix,", "domain,", "-keyword,", "ip-cidr,", "ip-cidr6,",  "geoip,", "user-agent,", "ip6-cidr,"];
     var DomainK = ["domain-set,"]
@@ -484,7 +497,7 @@ function Type_Check(subs) {
     const RuleCheck = (item) => subi.toLowerCase().indexOf(item) != -1;
     const NodeCheck = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1;
     const NodeCheck1 = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1; //b64加密的订阅类型
-    const NodeCheck2 = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) == 0; //URI 类型
+    const NodeCheck2 = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1; //URI 类型
     const RewriteCheck = (item) => subs.indexOf(item) != -1;
     var subsn = subs.split("\n")
     if ( (subs.indexOf(html) != -1 || subs.indexOf("doctype html") != -1) && link0.indexOf("github.com" == -1)) {
@@ -539,7 +552,7 @@ function Type_Check(subs) {
       type = (typeQ == "unsupported" || typeQ =="server")? "Subs-B64Encode":"wrong-field"
     } 
   // 用于通知判断类型，debug
-  if(type == "X"){
+  if(typeU == "X"){
     $notify("该链接判定类型",type+" : " +typec, subs)
   }
   //$notify(type)
@@ -2097,7 +2110,7 @@ function get_emoji(emojip, sname) {
     "🇸🇮": ["斯洛文尼亚"],
     "🇷🇸": ["RS", "塞尔维亚"],
     "🇲🇩": ["摩爾多瓦","MD","摩尔多瓦"],
-    "🇩🇪": ["DE", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德","沪德","广德"],
+    "🇩🇪": [" DE ", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德","沪德","广德"],
     "🇩🇰": ["DK","DNK","丹麦","丹麥"],
     "🇪🇸": ["ES", "西班牙", "Spain"],
     "🇪🇺": ["EU", "欧盟", "欧罗巴","欧洲"],

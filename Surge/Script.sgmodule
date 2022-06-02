@@ -7,14 +7,38 @@
 URL-REGEX,^https:\/\/pb\d*\.sogou\.com\/pv\.gif,REJECT-TINYGIF
 # > Look Up 
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Wikipedia_for_Look_Up.list,Proxy
+# > 腾讯QQ
+URL-REGEX,^http:\/\/.+\/analytics\/upload,REJECT
+DOMAIN,sq.bls.mdt.qq.com,REJECT
+# > 微信
+URL-REGEX,^https?:\/\/resstatic\.servicewechat\.com\/weapp\/release_,REJECT
+URL-REGEX,^https?:\/\/wxsnsdythumb\.wxs\.qq\.com\/.+\/snscosdownload\/SZ\/reserved,REJECT
+URL-REGEX,^https?:\/\/dlied(.*).cdntips.net,REJECT
+URL-REGEX,^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad),REJECT
 
 [URL Rewrite]
 # > Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+(https:\/\/www\.google\.com([.a-z]+)?\/.+)(&safe=(active|strict)&)(.+) $1&safe=off 302
+https://www\.google\.com\.hk\/search\?q=([\w.]+)&(.+) https://www.google.com.sg/search?q=$1&safe=off 302
+^https?:\/\/(www.)?(g|google)\.(cn|hk) https://www.google.com 302
 # > Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+# > IGN China to IGN Global
+^https?:\/\/(www.)?ign\.xn--fiqs8s\/ http://cn.ign.com/ccpref/us 302
+
 # > YouTube中文字幕
 ^https:\/\/www\.youtube\.com\/api\/timedtext\? https://www.youtube.com/api/timedtext?tlang=zh-Hans& header
+# > 微信
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/ad.*" - reject
+^https?:\/\/mp\.weixin\.qq.com\/mp\/ad_complaint - reject
+^https?:\/\/mp\.weixin\.qq.com\/mp\/ad_video - reject
+^https?:\/\/mp\.weixin\.qq.com\/mp\/advertisement_report - reject
+^https?:\/\/mp\.weixin\.qq\.com\/(s|mp)\/(ad_|advertisement|getappmsgad|report|appmsgreport|appmsgpicreport) - reject
+
+[Map Local]
+^https?:\/\/mp\.weixin\.qq\.com\/(s|mp)\/(ad_|advertisement|getappmsgad|report|appmsgreport|appmsgpicreport)" data="https://raw.githubusercontent.com/iEwha/Profiles/master/Mock/Blank.gif"
+^https?:\/\/szextshort\.weixin\.qq\.com\/cgi-bin\/mmoc-bin\/ad\/" data="https://raw.githubusercontent.com/iEwha/Profiles/master/Mock/Blank.gif"
+^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ data="https://raw.githubusercontent.com/iEwha/Profiles/master/Mock/Blank.gif"
 
 [Script]
 #> bilbii换区,评分
@@ -47,4 +71,4 @@ Siri Infomation Card = type=http-response, pattern=^https?:\/\/api.*\.smoot\.app
 天气地图 = type=http-request, pattern=^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*), requires-body=0, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Map.js
 
 [MITM]
-hostname = %APPEND%  *.sogou.com, ap?.bilibili.com, ap?.biliapi.net, www.google.cn, *.youtube.com, mp.weixin.qq.com,sub.store, api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, 
+hostname = %APPEND%  *.sogou.com, ap?.bilibili.com, ap?.biliapi.net, www.google.cn, *.youtube.com, mp.weixin.qq.com,szextshort.weixin.qq.com,qzonestyle.gtimg.cn,sub.store, api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, 

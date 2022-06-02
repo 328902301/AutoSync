@@ -75,14 +75,9 @@ if (magicJS.read(blackKey)) {
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 545, 151, 442, 99, 100, 101, 554, 556]);
-          // 尝试使用tab name直观修改
-          const tabNameList = new Set(["直播", "推荐", "热门", "追番", "影视"]);
-          // 107 概念版游戏中心，获取修改为Story模式
-          const topList = new Set([176, 222, 107]);
-          // 102 开始为概念版id
-          const bottomList = new Set([177, 178, 179, 181, 102, 103, 104, 105, 106]);
+          const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
+          const topList = new Set([176, 107]);
+          const bottomList = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
@@ -122,8 +117,7 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // 622 为会员购中心, 425 开始为概念版id
-          const itemList = new Set([396, 397, 398, 399, 171, 172, 534, 8, 4, 428, 352, 1, 405, 402, 404, 544, 407, 410, 622, 425, 426, 427, 428, 171, 430, 431, 432]);
+          const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {
@@ -138,7 +132,6 @@ if (magicJS.read(blackKey)) {
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
-            obj["data"]["sections_v2"][index]["items"] = items;
             //2022-02-16 add by ddgksf2013
             for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
               if(obj.data.sections_v2[ii].title=='推荐服务'||obj.data.sections_v2[ii].title=='推薦服務'){
@@ -157,8 +150,7 @@ if (magicJS.read(blackKey)) {
                   delete obj.data.sections_v2[ii].title;
                   delete obj.data.sections_v2[ii].type;
               }
-
-            }      
+            }
             delete obj.data.vip_section_v2;
             delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;

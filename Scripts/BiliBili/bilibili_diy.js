@@ -1,12 +1,3 @@
-/*
-應用名稱：自用B站去广告脚本
-腳本作者：Cuttlefish
-微信賬號：公眾號墨魚手記
-更新時間：2022-05-26
-腳本版本：(64)
-通知頻道：https://t.me/ddgksf2021
-問題反饋：ddgksf2013@163.com
-*/
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";
@@ -75,8 +66,11 @@ if (magicJS.read(blackKey)) {
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
+          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
           const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
+          // 107 概念版游戏中心，获取修改为Story模式
           const topList = new Set([176, 107]);
+          // 102 开始为概念版id
           const bottomList = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {

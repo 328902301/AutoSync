@@ -77,7 +77,7 @@ if (magicJS.read(blackKey)) {
         try {
           const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
           const topList = new Set([176, 107]);
-          const bottomList = new Set([177, 178, 179, 181, 102,  104, 106, 486, 488, 489]);
+          const bottomList = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {

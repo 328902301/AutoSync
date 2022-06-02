@@ -38,4 +38,4 @@ URL-REGEX,^https?:\/\/www\.googleapis\.com\/adsmeasurement,REJECT
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
 
 [MITM]
-hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,youtubei.googleapis.com,*.youtube.com,premiumyva.appspot.com,s0.2mdn.net,youtubei.googleapis.com, notifications-pa.googleapis.com, www.googleapis.com, suggestqueries.google.com,*.googleusercontent.com,
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,youtubei.googleapis.com,*.youtube.com,premiumyva.appspot.com,s0.2mdn.net,notifications-pa.googleapis.com, www.googleapis.com, suggestqueries.google.com,*.googleusercontent.com,

@@ -71,4 +71,4 @@ Siri Infomation Card = type=http-response, pattern=^https?:\/\/api.*\.smoot\.app
 天气地图 = type=http-request, pattern=^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*), requires-body=0, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Map.js
 
 [MITM]
-hostname = %APPEND%  *.sogou.com, ap?.bilibili.com, ap?.biliapi.net, www.google.cn, *.youtube.com, mp.weixin.qq.com,szextshort.weixin.qq.com,qzonestyle.gtimg.cn,sub.store, api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, 
+hostname = %APPEND%  *.sogou.com, ap?.bilibili.com, ap?.biliapi.net, www.google.cn, *.youtube.com, resstatic.servicewechat.com,wxsnsdythumb.wxs.qq.com,dlied*.cdntips.net,mp.weixin.qq.com,szextshort.weixin.qq.com,qzonestyle.gtimg.cn,sub.store, api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, 

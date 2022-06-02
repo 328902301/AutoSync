@@ -22,8 +22,6 @@ hostname=www.evestudio.cn
 
 ***********************************/
 
-
-
 var obj = JSON.parse($response.body);
 obj.data.vip = true;
 obj.data.vipDeadTime = 9961626781227;

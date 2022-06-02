@@ -1,6 +1,3 @@
-// 2022-01
-// 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/bilibili/bilibili_plus.js
-
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";
@@ -21,7 +18,7 @@ if (magicJS.read(blackKey)) {
   if (magicJS.isResponse) {
     switch (true) {
       // 推荐去广告，最后问号不能去掉，以免匹配到story模式
-      /* case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           let items = [];
@@ -155,7 +152,7 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`我的页面处理出现异常：${err}`);
         }
-        break; */
+        break;
       // 直播去广告
       case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(magicJS.request.url):
         try {

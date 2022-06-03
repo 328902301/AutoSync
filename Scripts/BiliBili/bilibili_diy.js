@@ -72,15 +72,11 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
-      
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          
           const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
-          
           const topList = new Set([176, 107]);
-          
           const bottomList = new Set([177, 178, 179, 181, 102,  104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
@@ -121,7 +117,6 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          
           const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
@@ -155,8 +150,7 @@ if (magicJS.read(blackKey)) {
                   delete obj.data.sections_v2[ii].title;
                   delete obj.data.sections_v2[ii].type;
               }
-
-            }      
+            }
             delete obj.data.vip_section_v2;
             delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
@@ -205,14 +199,14 @@ if (magicJS.read(blackKey)) {
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          magicJS.logInfo(`公众号墨鱼手记`);
+          //magicJS.logInfo(`已解锁1080p高码率`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;
           obj["data"]["vip"]["due_date"] = 4669824160;
           body = JSON.stringify(obj);
         } catch (err) {
-          magicJS.logError(`1080P出现异常：${err}`);
+          magicJS.logError(`解锁1080p高码率出现异常：${err}`);
         }
         break;
       // 追番去广告

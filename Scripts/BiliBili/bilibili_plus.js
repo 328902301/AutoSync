@@ -147,18 +147,6 @@ if (magicJS.read(blackKey)) {
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
             obj["data"]["sections_v2"][index]["items"] = items;
-            //2022-03-05 add by ddgksf2013
-            if(obj.data.hasOwnProperty("live_tip")){
-                obj["data"]["live_tip"]={};
-            }
-            if(obj.data.hasOwnProperty("answer")){
-                obj["data"]["answer"]={};
-            }
-            obj["data"]["vip_type"] = 2;
-            obj["data"]["vip"]["type"] = 2;
-            obj["data"]["vip"]["status"] = 1;
-            obj["data"]["vip"]["vip_pay_type"] = 1;
-            obj["data"]["vip"]["due_date"] = 4669824160;
           });
           body = JSON.stringify(obj);
         } catch (err) {
@@ -175,33 +163,6 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`直播去广告出现异常：${err}`);
         }
         break;
-        //屏蔽热搜
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          if(obj.data.length>3){
-          delete obj.data[0];
-          delete obj.data[3];
-          }
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`热搜去广告出现异常：${err}`);
-        }
-        break;
-        //2022-03-05 add by ddgksf2013
-        case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          //magicJS.logInfo(`公众号墨鱼手记`);
-          obj["data"]["vip"]["type"] = 2;
-          obj["data"]["vip"]["status"] = 1;
-          obj["data"]["vip"]["vip_pay_type"] = 1;
-          obj["data"]["vip"]["due_date"] = 4669824160;
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`解锁高码率出现异常：${err}`);
-        }
-        break;
       // 追番去广告
       case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
@@ -215,27 +176,6 @@ if (magicJS.read(blackKey)) {
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`追番去广告出现异常：${err}`);
-        }
-        break;
-        // 观影页去广告
-      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          obj.result.modules.forEach((module) => {
-            // 头部banner
-            if (module.style.startsWith("banner")) {
-              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
-            }
-            if (module.style.startsWith("function")) {
-              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
-            }
-            if (module.style.startsWith("tip")) {
-              module.items = null;
-            }
-          });
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`观影页去广告出现异常：${err}`);
         }
         break;
       // 动态去广告

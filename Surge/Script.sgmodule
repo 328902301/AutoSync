@@ -18,6 +18,9 @@ https://www\.google\.com\.hk\/search\?q=([\w.]+)&(.+) https://www.google.com.sg/
 # > YouTube中文字幕
 ^https:\/\/www\.youtube\.com\/api\/timedtext\? https://www.youtube.com/api/timedtext?tlang=zh-Hans& header
 
+[Header Rewrite]
+http-request ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* header-del If-None-Match
+
 [Script]
 #> bilbii换区,评分,画质
 换区 = type=http-response,pattern= ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js

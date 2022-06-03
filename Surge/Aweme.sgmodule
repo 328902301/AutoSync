@@ -1,20 +1,17 @@
 #!name=抖音短视频
 #!desc=最高支持版本号16.2.0
 #!system=ios
+
 [Rule]
-#> 抖音(<= 16.2.0) 
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT-DROP
 URL-REGEX,^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/,REJECT-DROP
 URL-REGEX,^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/,REJECT-DROP
 
 [URL Rewrite]
-#> 抖音(<= 16.2.0) 
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ https://aweme.snssdk.com/aweme/v1/ header
 
 [Script]
-#> 抖音(<= 16.2.0) 
-抖音 = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/aweme.js
-
+抖音短视频 = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Script/aweme.js
 
 [MITM]
 hostname = %APPEND% api*.amemv.com, aweme.snssdk.com, *.tiktokv.com, *.musical.ly

@@ -19,7 +19,7 @@
 
 
 [mitm] 
-hostname=subscription.grammarly.com
+hostname = subscription.grammarly.com
 
 ***********************************/
 

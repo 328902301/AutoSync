@@ -5,6 +5,7 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
 # 微博开屏广告
+HOST, h5.sinaimg.cn, MyBlockAds
 HOST, api.im.weibo.cn, MyBlockAds
 HOST, gw.im.weibo.cn, MyBlockAds
 HOST, gw1.im.weibo.cn, MyBlockAds

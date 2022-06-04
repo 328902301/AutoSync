@@ -7,10 +7,10 @@
 # 微博开屏广告
 HOST, h5.sinaimg.cn, MyBlockAds
 HOST, api.im.weibo.cn, MyBlockAds
-HOST, gw.im.weibo.cn, MyBlockAds
-HOST, gw1.im.weibo.cn, MyBlockAds
-IP-CIDR, 111.13.134.170/24, MyBlockAds
-IP-CIDR, 123.126.43.92/24, MyBlockAds
+HOST-SUFFIX, im.weibo.cn, MyBlockAds
+;HOST, gw1.im.weibo.cn, MyBlockAds
+;IP-CIDR, 111.13.134.170/24, MyBlockAds
+;IP-CIDR, 123.126.43.92/24, MyBlockAds
 
 # Clue智库推广信息
 HOST, images.ctfassets.net, MyBlockAds

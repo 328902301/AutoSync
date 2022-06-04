@@ -65,9 +65,16 @@ if (magicJS.read(blackKey)) {
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          let lastItem = obj["data"]["items"].pop();
-          let aid = lastItem["stat"]["aid"].toString();
-          magicJS.write(storyAidKey, aid);
+          let items = [];
+          for (let item of obj["data"]["items"]) {
+            if (
+              !item.hasOwnProperty("ad_info") &&
+              item.card_goto.indexOf("ad") === -1) {
+              items.push(item);
+            }
+          }
+          obj["data"]["items"] = items;
+          body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }

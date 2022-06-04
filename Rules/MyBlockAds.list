@@ -4,6 +4,11 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
+# 微博开屏广告
+HOST, api.im.weibo.cn, MyBlockAds
+HOST, gw.im.weibo.cn, MyBlockAds
+IP-CIDR, 111.13.134.170/32, MyBlockAds
+
 # Clue智库推广信息
 HOST, images.ctfassets.net, MyBlockAds
 HOST, api.helloclue.com, MyBlockAds

@@ -84,8 +84,13 @@ if (magicJS.read(blackKey)) {
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
-          const topList = new Set([176, 107]);
+          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
+          const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 554, 556]);
+          // 尝试使用tab name直观修改
+          // const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
+          // 107 概念版游戏中心，获取修改为Story模式
+          const topList = new Set([176, 222, 107]);
+          // 102 开始为概念版id
           const bottomList = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
@@ -126,8 +131,7 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          
-          const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
+          const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {
@@ -295,7 +299,7 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
         }
         break;
-        // 开屏广告（预加载）如果粗暴地关掉，那么就使用预加载的数据，就会导致关不掉
+        // 调整开屏广告（已缓存）的显示时间，如果粗暴地关掉，还是会显示缓存的广告
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);

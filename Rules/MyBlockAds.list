@@ -5,7 +5,7 @@
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
 
 # 京东全屏弹窗
-HOST, m.360buyimg.com, MyBlockAds
+;HOST, m.360buyimg.com, MyBlockAds
 
 # 微博开屏广告
 HOST, h5.sinaimg.cn, MyBlockAds

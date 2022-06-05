@@ -85,15 +85,18 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
           //39直播 40推荐 41热门 545追番 151影视
+          //99直播 100推荐 101热门 554追番 556影视
           //442开始为概念版id，适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 151]);
+          const tabList = new Set([39, 40, 41, 151, 99, 100, 101, 556]);
           //尝试使用tab name直观修改
           //const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           //176消息 107概念版游戏中心，获取修改为Story模式
           const topList = new Set([176, 107]);
           //177首页 178频道 179动态 181我的
+          //102首页 103频道 104动态 106我的
+          //486首页 487频道 488动态 490我的
           //102开始为概念版id
-          const bottomList = new Set([177, 179, 181]);
+          const bottomList = new Set([177, 179, 181, 102, 104, 106, 486, 488, 490]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {

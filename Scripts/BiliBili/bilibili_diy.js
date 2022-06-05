@@ -300,7 +300,7 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
         }
         break;
-        // 开屏广告（预加载）如果粗暴地关掉，那么就使用预加载的数据，就会导致关不掉
+        // 预加载开屏广告，去广告更彻底
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);

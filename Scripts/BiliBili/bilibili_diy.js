@@ -81,13 +81,13 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
-      // 标签页处理，如去除会员购等等
+      // 标签页和底部tab处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 554, 556]);
+          // 39直播 40推荐 41热门 545追番 151影视 442开始为概念版id，适配港澳台代理模式
+          const tabList = new Set([39, 40, 41, 774, 857, 151, 442, 99, 100, 101, 554, 556]);
           // 尝试使用tab name直观修改
-          // const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
+          const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           // 107 概念版游戏中心，获取修改为Story模式
           const topList = new Set([176, 222, 107]);
           // 102 开始为概念版id
@@ -95,7 +95,7 @@ if (magicJS.read(blackKey)) {
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
-              return tabList.has(e.id);
+              return tabNameList.has(e.name);
             });
             obj["data"]["tab"] = tab;
           }
@@ -131,7 +131,8 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432]);
+          // 622 为会员购中心, 425 开始为概念版id
+          const itemList = new Set([396, 397, 398, 399, 171, 172, 534, 8, 4, 428, 352, 1, 405, 402, 404, 544, 407, 410, 622, 425, 426, 427, 428, 171, 430, 431, 432]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {
@@ -146,8 +147,8 @@ if (magicJS.read(blackKey)) {
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
-/*            //2022-02-16 add by ddgksf2013
-            for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
+            //2022-02-16 add by ddgksf2013
+/*            for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
               if(obj.data.sections_v2[ii].title=='推荐服务'||obj.data.sections_v2[ii].title=='推薦服務'){
                 //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
                 //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
@@ -299,7 +300,7 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
         }
         break;
-        // 调整开屏广告（已缓存）的显示时间，如果粗暴地关掉，还是会显示缓存的广告
+        // 开屏广告（预加载）如果粗暴地关掉，那么就使用预加载的数据，就会导致关不掉
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);

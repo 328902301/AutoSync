@@ -142,7 +142,7 @@ if (magicJS.read(blackKey)) {
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
-            //2022-02-16 add by ddgksf2013
+/*            //2022-02-16 add by ddgksf2013
             for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
               if(obj.data.sections_v2[ii].title=='推荐服务'||obj.data.sections_v2[ii].title=='推薦服務'){
                 //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
@@ -162,7 +162,7 @@ if (magicJS.read(blackKey)) {
               }
             }
             delete obj.data.vip_section_v2;
-            delete obj.data.vip_section;
+            delete obj.data.vip_section;*/
             obj["data"]["sections_v2"][index]["items"] = items;
             //2022-03-05 add by ddgksf2013
             if(obj.data.hasOwnProperty("live_tip")){
@@ -193,7 +193,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
         //屏蔽热搜
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/(defaultword|square)/.test(magicJS.request.url):
+        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           if(obj.data.length>3){

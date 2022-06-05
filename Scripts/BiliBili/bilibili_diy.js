@@ -84,10 +84,11 @@ if (magicJS.read(blackKey)) {
       // 标签页和底部tab处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 39直播 40推荐 41热门 545追番 151影视 442开始为概念版id，适配港澳台代理模式
+          // 39直播 40推荐 41热门 545追番 151影视
+          // 442开始为概念版id，适配港澳台代理模式
           const tabList = new Set([39, 40, 41, 774, 857, 151, 442, 99, 100, 101, 554, 556]);
           // 尝试使用tab name直观修改
-          const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
+          // const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           // 107 概念版游戏中心，获取修改为Story模式
           const topList = new Set([176, 222, 107]);
           // 102 开始为概念版id
@@ -95,7 +96,7 @@ if (magicJS.read(blackKey)) {
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
-              return tabNameList.has(e.name);
+              return tabList.has(e.id);
             });
             obj["data"]["tab"] = tab;
           }
@@ -131,8 +132,9 @@ if (magicJS.read(blackKey)) {
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // 622 为会员购中心, 425 开始为概念版id
-          const itemList = new Set([396, 397, 398, 399, 171, 172, 534, 8, 4, 428, 352, 1, 405, 402, 404, 544, 407, 410, 622, 425, 426, 427, 428, 171, 430, 431, 432]);
+          // 396离线缓存 397历史记录 398我的收藏 399稍后再看 402个性装扮 404我的钱包 407联系客服 410设置 171创作中心
+          // 425开始为概念版id 622会员购
+          const itemList = new Set([396, 397, 398, 399, 407, 410, 425, 426, 427, 428, 433, 434, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {

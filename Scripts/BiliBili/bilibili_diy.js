@@ -1,15 +1,13 @@
-/*
-2022-06-05 11:28
-*/
+// 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
 
 /*
-應用名稱：自用B站去广告脚本
-腳本作者：Cuttlefish
-微信賬號：公眾號墨魚手記
-更新時間：2022-06-04
-腳本版本：(65)
-通知頻道：https://t.me/ddgksf2021
-問題反饋：ddgksf2013@163.com
+应用名称：自用B站去广告脚本
+脚本作者：Cuttlefish
+微信账号：公众号墨鱼手记
+更新时间：2022-06-04
+脚本版本：(65)
+通知频道：https://t.me/ddgksf2021
+问题反馈：ddgksf2013@163.com
 */
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -31,7 +29,7 @@ if (magicJS.read(blackKey)) {
   if (magicJS.isResponse) {
     switch (true) {
       // 推荐去广告，最后问号不能去掉，以免匹配到story模式
-/*      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           let items = [];
@@ -82,13 +80,13 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
-        break;*/
+        break;
       // 标签页处理，如去除会员购等等
-/*      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
+      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
           const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
           const topList = new Set([176, 107]);
-          const bottomList = new Set([177, 178, 179, 181, 102,  104, 106, 486, 488, 489]);
+          const bottomList = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
@@ -123,11 +121,12 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`标签页处理出现异常：${err}`);
         }
-        break;*/
+        break;
       // 我的页面处理，去除一些推广按钮
-/*      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
+          
           const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             element["items"].forEach((e) => {
@@ -182,7 +181,7 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`我的页面处理出现异常：${err}`);
         }
-        break;*/
+        break;
       // 直播去广告
       case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(magicJS.request.url):
         try {
@@ -194,7 +193,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
         //屏蔽热搜
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
+        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/(defaultword|square)/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           if(obj.data.length>3){

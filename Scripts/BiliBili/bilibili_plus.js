@@ -1,3 +1,5 @@
+// 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/bilibili/bilibili_plus.js
+
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";

@@ -170,7 +170,7 @@ if (magicJS.read(blackKey)) {
             }
             delete obj.data.vip_section_v2;
             delete obj.data.vip_section;*/
-            obj["data"]["sections_v2"][index]["items"] = items;
+            delete obj["data"]["sections_v2"][index]["items"] = items;
             //2022-03-05 add by ddgksf2013
             if(obj.data.hasOwnProperty("live_tip")){
                 obj["data"]["live_tip"]={};

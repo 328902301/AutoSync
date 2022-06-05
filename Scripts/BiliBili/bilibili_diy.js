@@ -1,4 +1,8 @@
 /*
+2022-06-05 11:28
+*/
+
+/*
 應用名稱：自用B站去广告脚本
 腳本作者：Cuttlefish
 微信賬號：公眾號墨魚手記
@@ -27,7 +31,7 @@ if (magicJS.read(blackKey)) {
   if (magicJS.isResponse) {
     switch (true) {
       // 推荐去广告，最后问号不能去掉，以免匹配到story模式
-      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
+/*      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           let items = [];
@@ -78,9 +82,9 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
-        break;
+        break;*/
       // 标签页处理，如去除会员购等等
-      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
+/*      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
           const tabList = new Set([39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556]);
           const topList = new Set([176, 107]);
@@ -119,9 +123,9 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`标签页处理出现异常：${err}`);
         }
-        break;
+        break;*/
       // 我的页面处理，去除一些推广按钮
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
+/*      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           const itemList = new Set([396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501]);
@@ -178,7 +182,7 @@ if (magicJS.read(blackKey)) {
         } catch (err) {
           magicJS.logError(`我的页面处理出现异常：${err}`);
         }
-        break;
+        break;*/
       // 直播去广告
       case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(magicJS.request.url):
         try {

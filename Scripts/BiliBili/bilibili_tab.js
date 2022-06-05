@@ -1,6 +1,6 @@
-// 2021-10
+// B站首页标签栏 2021-10-12
 // 引用地址 https://github.com/yjqiang/surge_scripts/blob/main/scripts/bilibili/bilibili_tab.js
-// B站首页标签栏
+
 let body = JSON.parse($response.body);
 // 首页的 tab 栏（加入影视栏目）
 body['data']['tab'] = [
@@ -26,13 +26,13 @@ body['data']['tab'] = [
         tab_id: 'hottopic',
         pos: 3
     },
-    //{
-        //id: 42,
-        //name: '追番',
-        //uri: 'bilibili://pgc/home',
-        //tab_id: 'bangumi',
-        //pos: 4
-    //},
+/*    {
+        id: 42,
+        name: '追番',
+        uri: 'bilibili://pgc/home',
+        tab_id: 'bangumi',
+        pos: 4
+    },*/
     {
         id: 151,
         name: '影视',
@@ -63,15 +63,15 @@ body['data']['bottom'] =[
         tab_id: 'home',
         pos: 1
     },
-    //{
-        //id: 178,
-        //icon: 'http://i0.hdslb.com/bfs/archive/9c453a54eb83f5140cd098bf2e8ed8a599edc7fe.png',
-        //icon_selected: 'http://i0.hdslb.com/bfs/archive/79d29e6ac3b6e52652881b050e63988e2038130f.png',
-        //name: '频道',
-        //uri: 'bilibili://pegasus/channel/',
-        //tab_id: '频道Bottom',
-        //pos: 2
-    //},
+/*    {
+        id: 178,
+        icon: 'http://i0.hdslb.com/bfs/archive/9c453a54eb83f5140cd098bf2e8ed8a599edc7fe.png',
+        icon_selected: 'http://i0.hdslb.com/bfs/archive/79d29e6ac3b6e52652881b050e63988e2038130f.png',
+        name: '频道',
+        uri: 'bilibili://pegasus/channel/',
+        tab_id: '频道Bottom',
+        pos: 2
+    },*/
     {
         id: 179,
         icon: 'http://i0.hdslb.com/bfs/archive/86dfbe5fa32f11a8588b9ae0fccb77d3c27cedf6.png',

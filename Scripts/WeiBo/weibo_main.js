@@ -1,4 +1,7 @@
-const version = 'v0524.1';
+// 2021-06-06
+// 引用地址 https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
+
+const version = 'v0606.2';
 
 let $ = new nobyda();
 let storeMainConfig = $.read('mainConfig');
@@ -23,11 +26,12 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeLiveMedia: true,		//首页顶部直播
 	removeNextVideo: true,					//关闭自动播放下一个视频
 
-	removeInterestFriendInTopic: false,		//超话：超话里的好友
-	removeInterestTopic: false,				//超话：可能感兴趣的超话 + 好友关注
-	removeInterestUser: false,				//用户页：可能感兴趣的人
+	removeInterestFriendInTopic: true,		//超话：超话里的好友
+	removeInterestTopic: true,				//超话：可能感兴趣的超话 + 好友关注
+	removeInterestUser: true,				//用户页：可能感兴趣的人
 
 	removeLvZhou: true,					//绿洲模块
+	removeSearchWindow: true,			//#搜索页滑动窗口，有的不是广告
 
 	profileSkin1: null,						//用户页：自定义图标1
 	profileSkin2: null,						//用户页：自定义图标2
@@ -82,7 +86,7 @@ const otherUrls = {
 	'/littleskin/preview': 'skinPreviewHandler',
 	'/search/finder': 'removeSearchMain',
 	'/search/container_timeline': 'removeSearch',
-	'/remind/container_discover': 'removeSearch',
+	'/search/container_discover': 'removeSearch',
 }
 
 function getModifyMethod(url) {
@@ -131,9 +135,9 @@ function removeSearchMain(data) {
 function checkSearchWindow(item) {
 	if(!mainConfig.removeSearchWindow) return false;
 	if(item.category != 'card') return false;
-	return item?.data.itemid == 'finder_window';
+	return item.data?.itemid == 'finder_window';
 }
-		
+
 
 //发现页
 function removeSearch(data) {
@@ -153,7 +157,7 @@ function removeSearch(data) {
 		}
 	}
 	data.items = newItems;
-	log('remove_search success');	
+	log('remove_search success');
 	return data;
 }
 

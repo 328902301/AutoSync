@@ -1,4 +1,4 @@
-// 2021-09
+// 2021-09-23
 // 引用地址 https://github.com/zmqcherish/proxy-script/blob/main/weibo_launch.js
 // 参考@yichahucha 的脚本
 

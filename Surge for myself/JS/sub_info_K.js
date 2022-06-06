@@ -8,7 +8,7 @@
   let total = info.total;
   let proportion = used / total;
   let expire = args.expire || info.expire;
-  let content = [`${toPercent(proportion)} quota used, enjoy ur day!`];
+  let content = [`${toPercent(proportion)} quota used, enjoy your day!`];
 
   let now = new Date();
   let hour = now.getHours();

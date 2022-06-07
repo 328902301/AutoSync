@@ -120,7 +120,7 @@ function stripOnes(proxies) {
     if (countries[item][1] === theOneToDelete) {
       proxies.map((res) => {
         if (res.name.indexOf(countries[item][0]) !== -1) {
-          res.name = res.name.replace(parseInt(theOneToDelete), '');
+          res.name = res.name.replace(theOneToDelete, '');
         };
       });
     };

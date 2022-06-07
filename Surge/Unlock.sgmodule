@@ -4,7 +4,7 @@
 
 [Script]
 # > VSCO 解锁高级特权
-VSCO = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
+VSCO = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
 # > PS Express解锁高级订阅
 PS Express= type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
 # > Emby解锁
@@ -33,5 +33,5 @@ Spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com
 美图秀秀 = type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json), requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mtxx.js
 
 [MITM]
-hostname = %APPEND%  vsco.co, api.revenuecat.com, lcs-mobile-cops.adobe.io, mb3admin.com, mobile-api.adguard.com, lchttpapi.xczim.com,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,baimiao.uzero.cn, www.40sishi.com,bmall.camera360.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com，
+hostname = %APPEND%  api.revenuecat.com, lcs-mobile-cops.adobe.io, mb3admin.com, mobile-api.adguard.com, lchttpapi.xczim.com,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com, spclient.wg.spotify.com,baimiao.uzero.cn, www.40sishi.com,bmall.camera360.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com，
 

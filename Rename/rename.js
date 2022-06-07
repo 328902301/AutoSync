@@ -2,8 +2,8 @@
 // 我要跪着感谢！
 
 // Rename v 0.1 的使用方法
-// 在以下九个连接中选择你原节点的格式及你需要的格式复制并修改[&airport=]部分即可。
-// [airport=]后需添加你需要的前缀，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon 香港 1]
+// 在以下十二个连接中选择你原节点的格式及你需要的格式复制并修改[&airport=]部分即可。
+// [airport=]后需添加你需要的前缀，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon HKG 1]或[Texon 香港 1]
 // > 如需在前缀添加符号，需对整个前缀进行一次encode转码操作。
 
 // //其他中保留了一部分涉及到只能使用特殊字符才能区分节点或有特殊字符才可进行正则筛选的情况。如果有需要的话可以在issue留言。

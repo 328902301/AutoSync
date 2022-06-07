@@ -111,11 +111,16 @@ const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.ai
 
 //删除非必要的1
 function stripOnes(proxies) {
+  if (!autofill) {
+    var theOneToDelete = 1
+  } else {
+    var theOneToDelete = "1".padStart(autofill, '0')
+  }
   Object.keys(countries).forEach((item,index,array)=>{
-    if (countries[item][1] === 1) {
+    if (countries[item][1] === theOneToDelete) {
       proxies.map((res) => {
         if (res.name.indexOf(countries[item][0]) !== -1) {
-          res.name = res.name.replace("1", '');
+          res.name = res.name.replace(theOneToDelete, '');
         };
       });
     };

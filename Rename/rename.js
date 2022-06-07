@@ -110,7 +110,7 @@ var autofill = parseInt($arguments.autofill) || false;
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);
 
 //删除非必要的1
-function stripOnes() {
+function stripOnes(proxies) {
   Object.keys(countries).forEach((item,index,array)=>{
     if (countries[item][1] === 1) {
       proxies.map((res) => {
@@ -120,6 +120,7 @@ function stripOnes() {
       });
     };
   });
+  return proxies
 };
 
 // 简繁转换
@@ -169,7 +170,7 @@ function operator(proxies) {
     res.name = resultArray.join(' ');
   });
   if ($arguments.del1) {
-    stripOnes();
+    proxies = stripOnes(proxies);
   };
   return proxies;
 }

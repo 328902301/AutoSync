@@ -104,7 +104,7 @@ console.log(additionalOthers);
 additionalOthers = JSON.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);
 
-var autofill = parseInt($arguments.autofill) || False;
+var autofill = parseInt($arguments.autofill) || false;
 
 // 获取机场名
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);

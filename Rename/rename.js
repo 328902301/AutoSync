@@ -2,8 +2,8 @@
 // 我要跪着感谢！
 
 // Rename v 0.1 的使用方法
-// 在以下九个连接中选择你原节点的格式及你需要的格式复制并修改[&airport=]部分即可。
-// [airport=]后需添加你需要的前缀，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon 香港 1]
+// 在以下十二个连接中选择你原节点的格式及你需要的格式复制并修改[&airport=]部分即可。
+// [airport=]后需添加你需要的前缀，如[&airport=Texon]则效果为：[Texon HK 1]或[Texon Hong Kong 1]或[Texon HKG 1]或[Texon 香港 1]
 // > 如需在前缀添加符号，需对整个前缀进行一次encode转码操作。
 
 // //其他中保留了一部分涉及到只能使用特殊字符才能区分节点或有特殊字符才可进行正则筛选的情况。如果有需要的话可以在issue留言。
@@ -24,6 +24,8 @@
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=zh&airport=[你需要的机场名]
 // > 两位英文简写改为英文简写（例：HK=>HK）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enShort&airport=[你需要的机场名]
+// > 两位英文简写改为三位英文简写（例：香港=>HKG）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enShort3&airport=[你需要的机场名]
 // > 两位英文简写改为英文全称（例：HK=>Hong Kong）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShorth&output=enFull&airport=[你需要的机场名]
 
@@ -32,6 +34,8 @@
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=zh&airport=[你需要的机场名]
 // > 英文全称改为两位英文简写（例：Hong Kong=>HK）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enShort&airport=[你需要的机场名]
+// > 英文全称改为三位英文简写（例：香港=>HKG）
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enShort3&airport=[你需要的机场名]
 // > 英文全称改为英文全称（例：Hong Kong=>Hong Kong）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enFull&output=enFull&airport=[你需要的机场名]
 //
@@ -115,7 +119,7 @@ function stripOnes(proxies) {
     if (countries[item][1] === 1) {
       proxies.map((res) => {
         if (res.name.indexOf(countries[item][0]) !== -1) {
-          res.name = res.name.replace("1", '');
+          res.name = res.name.replace("1", '').replace('0', '');
         };
       });
     };

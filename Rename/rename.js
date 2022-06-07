@@ -116,7 +116,7 @@ function stripOnes(proxies) {
   } else {
     var theOneToDelete = "1".padStart(autofill, '0')
   }
-  comsole.log(theOneToDelete)
+  console.log(theOneToDelete)
   Object.keys(countries).forEach((item,index,array)=>{
     if (countries[item][1] === theOneToDelete) {
       proxies.map((res) => {

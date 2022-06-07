@@ -104,6 +104,7 @@ console.log(additionalOthers);
 additionalOthers = JSON.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);
 
+var autofill = parseInt($arguments.autofill) || false;
 
 // 获取机场名
 const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.airport);
@@ -147,7 +148,11 @@ function operator(proxies) {
     for (const elem of Object.keys(countries)) {
       if (simplify(res.name).indexOf(elem) !== -1) {
         countries[elem][1] += 1;
-        resultArray.push(countries[elem][0], countries[elem][1]);
+        if (!autofill) {
+          resultArray.push(countries[elem][0], countries[elem][1]);
+        } else {
+          resultArray.push(countries[elem][0], countries[elem][1].toString().padStart(autofill, '0'));
+        }
         console.log(resultArray);
         matched = true
         break;

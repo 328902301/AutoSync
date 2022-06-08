@@ -1,18 +1,8 @@
-vmess=00000000000000000000000000000000000000000000000000000000000001a.rui77.com:80, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag=1Tb流量-搞1
-vmess=00000000000000000000000000000000000000000000000000000000000002a.rui77.com:443, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞2
-vmess=00000000000000000000000000000000000000000000000000000000000003a.rui77.com:80, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞3
-vmess=00000000000000000000000000000000000000000000000000000000000005a.rui77.com:80, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞4
-vmess=00000000000000000000000000000000000000000000000000000000000007a.rui77.com:80, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞5
-vmess=00000000000000000000000000000000000000000000000000000000000008a.rui77.com:443, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞6
-vmess=00000000000000000000000000000000000000000000000000000000000009a.rui77.com:80, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞7
-vmess=00000000000000000000000000000000000000000000000000000000000010a.rui77.com:443, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞8
-vmess=00000000000000000000000000000000000000000000000000000000000013a.rui77.com:43566, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞9
-vmess=00000000000000000000000000000000000000000000000000000000000014a.rui77.com:12659, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞10
-vmess=00000000000000000000000000000000000000000000000000000000000016a.rui77.com:51200, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞11
-vmess=00000000000000000000000000000000000000000000000000000000000017a.rui77.com:51200, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞12
-vmess=00000000000000000000000000000000000000000000000000000000000019a.rui77.com:51200, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞13
-vmess=00000000000000000000000000000000000000000000000000000000000020a.rui77.com:51200, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞14
-vmess=00000000000000000000000000000000000000000000000000000000000021a.rui77.com:52356, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, obfs-host=www.baidu.com, obfs-uri=/, fast-open=true, udp-relay=true, tag= 1Tb流量-搞15
-vmess=00000000000000000000000000000000000000000000000000000000000022a.rui77.com:52356, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, obfs-host=www.baidu.com, obfs-uri=/, fast-open=true, udp-relay=true, tag= 1Tb流量-搞16
-vmess=00000000000000000000000000000000000000000000000000000000000024a.rui77.com:52356, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞17
-vmess=00000000000000000000000000000000000000000000000000000000000026a.rui77.com:52356, method=chacha20-ietf-poly1305, password=961f647d-48bc-4567-b95a-9fb64f7e673d, obfs=ws, fast-open=true, udp-relay=true, tag= 1Tb流量-搞18
+shadowsocks=jp.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag=搞鸡玩家-解锁奈飞-解锁流媒体1
+shadowsocks=jp4.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体2
+shadowsocks=kr1.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体3
+shadowsocks=jp5.mayiyun.shop:10014, method=chacha20-ietf-poly1305, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体4
+shadowsocks=azhk1.mayiyun.shop:20002, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体5
+shadowsocks=usa1.mayiyun.shop:20012, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体6
+shadowsocks=usa.mayiyun.shop:20012, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体7
+shadowsocks=can.mayiyun.shop:10015, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体8

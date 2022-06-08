@@ -4,7 +4,7 @@
 
 脚本功能：TATA直播🔓
 脚本作者：King
-更新时间：2022.5.7
+更新时间：2022.6.8
 下载地址：https://www.tata9.live
 脚本发布：https://t.me/yqc_123
 问题反馈：https://t.me/yqc_007

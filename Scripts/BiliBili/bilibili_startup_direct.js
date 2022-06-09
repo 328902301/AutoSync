@@ -28,7 +28,7 @@ hostname=api.bilibili.com
 
 
 
-const Group = $prefs.valueForKey('BiliArea_Policy') || 'Domestic';
+const Group = $prefs.valueForKey('BiliArea_Policy') || 'DomesticMedia';
 
 const message = {
     action: "set_policy_state",

@@ -1,4 +1,5 @@
 /***
+引用地址 https://github.com/KOP-XIAO/QuantumultX/blob/master/Scripts/streaming-ui-check.js
 
 Thanks to & modified from 
 1. https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js

@@ -1,5 +1,5 @@
 // 2021-06-06
-// 引用地址 https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
+// 引用地址 https:// github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 
 const version = 'v0606.2';
 
@@ -7,80 +7,80 @@ let $ = new nobyda();
 let storeMainConfig = $.read('mainConfig');
 let storeItemMenusConfig = $.read('itemMenusConfig');
 
-//主要的选项配置
+// 主要的选项配置
 const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
-	isDebug: false,						//开启调试，会打印运行中部分日志
-	//个人中心配置，其中多数是可以直接在更多功能里直接移除
-	removeHomeVip: true,				//个人中心头像旁边的vip样式
-	removeHomeCreatorTask: true,		//个人中心创作者中心下方的轮播图
+	isDebug: false,						// 开启调试，会打印运行中部分日志
+	// 个人中心配置，其中多数是可以直接在更多功能里直接移除
+	removeHomeVip: true,				// 个人中心头像旁边的vip样式
+	removeHomeCreatorTask: true,		// 个人中心创作者中心下方的轮播图
 
-	//微博详情页配置
-	removeRelate: true,			//相关推荐
-	removeGood: true,			//微博主好物种草
-	removeFollow: true,			//关注博主
-	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: true,	//评论区相关内容
-	removeRecommendItem: true,	//评论区推荐内容
-	removeRewardItem: true,	//微博详情页打赏模块
+	// 微博详情页配置
+	removeRelate: true,			// 相关推荐
+	removeGood: true,			// 微博主好物种草
+	removeFollow: true,			// 关注博主
+	modifyMenus: true,			// 编辑上下文菜单
+	removeRelateItem: true,	// 评论区相关内容
+	removeRecommendItem: true,	// 评论区推荐内容
+	removeRewardItem: true,	// 微博详情页打赏模块
 
-	removeLiveMedia: true,		//首页顶部直播
-	removeNextVideo: true,					//关闭自动播放下一个视频
+	removeLiveMedia: true,		// 首页顶部直播
+	removeNextVideo: true,					// 关闭自动播放下一个视频
 
-	removeInterestFriendInTopic: true,		//超话：超话里的好友
-	removeInterestTopic: true,				//超话：可能感兴趣的超话 + 好友关注
-	removeInterestUser: true,				//用户页：可能感兴趣的人
+	removeInterestFriendInTopic: true,		// 超话：超话里的好友
+	removeInterestTopic: true,				// 超话：可能感兴趣的超话 + 好友关注
+	removeInterestUser: true,				// 用户页：可能感兴趣的人
 
-	removeLvZhou: true,					//绿洲模块
-	removeSearchWindow: true,			//#搜索页滑动窗口，有的不是广告
+	removeLvZhou: true,					// 绿洲模块
+	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告
 
-	profileSkin1: null,						//用户页：自定义图标1
-	profileSkin2: null,						//用户页：自定义图标2
-	tabIconVersion: 0,						//配置大于100的数
-	tabIconPath: ''							//配置图标路径
+	profileSkin1: null,						// 用户页：自定义图标1
+	profileSkin2: null,						// 用户页：自定义图标2
+	tabIconVersion: 0,						// 配置大于100的数
+	tabIconPath: ''							// 配置图标路径
 }
 
 
-//菜单配置
+// 菜单配置
 const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) : {
-	creator_task:false,					//转发任务
-	mblog_menus_custom:false,				//寄微博
-	mblog_menus_video_later:true,			//可能是稍后再看？没出现过
-	mblog_menus_comment_manager:true,		//评论管理
-	mblog_menus_avatar_widget:false,		//头像挂件
-	mblog_menus_card_bg: false,			//卡片背景
-	mblog_menus_long_picture:true,		//生成长图
-	mblog_menus_delete:true,				//删除
-	mblog_menus_edit:true,				//编辑
-	mblog_menus_edit_history:true,		//编辑记录
-	mblog_menus_edit_video:true,			//编辑视频
-	mblog_menus_sticking:true,			//置顶
-	mblog_menus_open_reward:true,			//赞赏
-	mblog_menus_novelty:false,			//新鲜事投稿
-	mblog_menus_favorite:true,			//收藏
-	mblog_menus_promote:true,				//推广
-	mblog_menus_modify_visible:true,		//设置分享范围
-	mblog_menus_copy_url:true,			//复制链接
-	mblog_menus_follow:true,				//关注
-	mblog_menus_video_feedback:true,		//播放反馈
-	mblog_menus_shield:true,				//屏蔽
-	mblog_menus_report:true,				//投诉
-	mblog_menus_apeal:true,				//申诉
-	mblog_menus_home:true					//返回首页
+	creator_task:false,					// 转发任务
+	mblog_menus_custom:false,				// 寄微博
+	mblog_menus_video_later:true,			// 可能是稍后再看？没出现过
+	mblog_menus_comment_manager:true,		// 评论管理
+	mblog_menus_avatar_widget:false,		// 头像挂件
+	mblog_menus_card_bg: false,			// 卡片背景
+	mblog_menus_long_picture:true,		// 生成长图
+	mblog_menus_delete:true,				// 删除
+	mblog_menus_edit:true,				// 编辑
+	mblog_menus_edit_history:true,		// 编辑记录
+	mblog_menus_edit_video:true,			// 编辑视频
+	mblog_menus_sticking:true,			// 置顶
+	mblog_menus_open_reward:true,			// 赞赏
+	mblog_menus_novelty:false,			// 新鲜事投稿
+	mblog_menus_favorite:true,			// 收藏
+	mblog_menus_promote:true,				// 推广
+	mblog_menus_modify_visible:true,		// 设置分享范围
+	mblog_menus_copy_url:true,			// 复制链接
+	mblog_menus_follow:true,				// 关注
+	mblog_menus_video_feedback:true,		// 播放反馈
+	mblog_menus_shield:true,				// 屏蔽
+	mblog_menus_report:true,				// 投诉
+	mblog_menus_apeal:true,				// 申诉
+	mblog_menus_home:true					// 返回首页
 }
 
 const modifyCardsUrls = ['/cardlist', '/page', 'video/community_tab', '/searchall'];
 const modifyStatusesUrls = ['statuses/friends/timeline', 'statuses/unread_friends_timeline', 'statuses/unread_hot_timeline', 'groups/timeline'];
 
 const otherUrls = {
-	'/profile/me': 'removeHome',						//个人页模块
-	'/statuses/extend': 'itemExtendHandler',					//微博详情页
-	'/video/remind_info': 'removeVideoRemind',			//tab2菜单上的假通知
-	'/checkin/show': 'removeCheckin',					//签到任务
-	'/live/media_homelist': 'removeMediaHomelist',		//首页直播
-	'/comments/build_comments': 'removeComments',		//微博详情页评论区相关内容
-	'/container/get_item': 'containerHandler',			//列表相关
-	'/profile/statuses': 'userHandler',					//用户主页
-	'/video/tiny_stream_video_list': 'nextVideoHandler',	//取消自动播放下一个视频
+	'/profile/me': 'removeHome',						// 个人页模块
+	'/statuses/extend': 'itemExtendHandler',					// 微博详情页
+	'/video/remind_info': 'removeVideoRemind',			// tab2菜单上的假通知
+	'/checkin/show': 'removeCheckin',					// 签到任务
+	'/live/media_homelist': 'removeMediaHomelist',		// 首页直播
+	'/comments/build_comments': 'removeComments',		// 微博详情页评论区相关内容
+	'/container/get_item': 'containerHandler',			// 列表相关
+	'/profile/statuses': 'userHandler',					// 用户主页
+	'/video/tiny_stream_video_list': 'nextVideoHandler',	// 取消自动播放下一个视频
 	'/2/statuses/video_mixtimeline': 'nextVideoHandler',	
 	'/!/client/light_skin': 'tabSkinHandler',
 	'/littleskin/preview': 'skinPreviewHandler',
@@ -139,7 +139,7 @@ function checkSearchWindow(item) {
 }
 
 
-//发现页
+// 发现页
 function removeSearch(data) {
 	if(!data.items) {
 		return data;
@@ -258,7 +258,7 @@ function removeHomeVip(data) {
 	return data;
 }
 
-//移除tab2的假通知
+// 移除tab2的假通知
 function removeVideoRemind(data) {
 	data.bubble_dismiss_time = 0;
 	data.exist_remind = false;
@@ -271,7 +271,7 @@ function removeVideoRemind(data) {
 }
 
 
-//微博详情页
+// 微博详情页
 function itemExtendHandler(data) {
 	if(mainConfig.removeRelate || mainConfig.removeGood) {
 		if(data.trend && data.trend.titles) {
@@ -295,7 +295,7 @@ function itemExtendHandler(data) {
 		}
 	}
 
-	//广告 暂时判断逻辑根据图片	https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
+	// 广告 暂时判断逻辑根据图片	https:// h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
 	try {
 		let picUrl = data.trend.extra_struct.extBtnInfo.btn_picurl;
 		if(picUrl.indexOf('timeline_icon_ad_delete') > -1) {
@@ -405,14 +405,14 @@ function removeHome(data) {
 }
 
 
-//移除tab1签到
+// 移除tab1签到
 function removeCheckin(data) {
 	log('remove tab1签到');
 	data.show = 0;
 }
 
 
-//首页直播
+// 首页直播
 function removeMediaHomelist(data) {
 	if(mainConfig.removeLiveMedia) {
 		log('remove 首页直播');
@@ -420,7 +420,7 @@ function removeMediaHomelist(data) {
 	}
 }
 
-//评论区相关和推荐内容
+// 评论区相关和推荐内容
 function removeComments(data) {
 	let delType = ['广告'];
 	if(mainConfig.removeRelateItem) delType.push('相关内容');
@@ -440,7 +440,7 @@ function removeComments(data) {
 }
 
 
-//处理感兴趣的超话和超话里的好友
+// 处理感兴趣的超话和超话里的好友
 function containerHandler(data) {
 	if(mainConfig.removeInterestFriendInTopic) {
 		if(data.card_type_name === '超话里的好友') {
@@ -459,7 +459,7 @@ function containerHandler(data) {
 	}
 }
 
-//可能感兴趣的人
+// 可能感兴趣的人
 function userHandler(data) {
 	if(!mainConfig.removeInterestUser) {
 		return;

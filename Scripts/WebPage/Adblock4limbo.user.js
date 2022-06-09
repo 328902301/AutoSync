@@ -61,3 +61,4 @@ if(needleArg===''){needleArg='.?';}else if(needleArg.charAt(0)==='/'&&needleArg.
 const reNeedle=new RegExp(needleArg);let delay=delayArg!=='*'?parseInt(delayArg,10):-1;if(isNaN(delay)||isFinite(delay)===false){delay=1000;}
 let boost=parseFloat(boostArg);boost=isNaN(boost)===false&&isFinite(boost)?Math.min(Math.max(boost,fasterx),50):fasterx;self.setInterval=new Proxy(self.setInterval,{apply:function(target,thisArg,args){const[a,b]=args;if((delay===-1||b===delay)&&reNeedle.test(a.toString())){args[1]=b*boost;}
 return target.apply(thisArg,args);}});};
+

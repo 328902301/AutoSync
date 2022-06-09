@@ -1,3 +1,7 @@
+/*
+引用地址 https://github.com/KOP-XIAO/QuantumultX/blob/master/Scripts/IP_API.js
+*/
+
 if ($response.statusCode != 200) {
   $done(null);
 }

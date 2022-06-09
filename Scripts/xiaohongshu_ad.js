@@ -1,4 +1,5 @@
 /*
+引用地址 https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.sgmodule
 引用地址 https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.js
 */
 

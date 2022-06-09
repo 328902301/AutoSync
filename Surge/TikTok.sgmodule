@@ -1,5 +1,5 @@
 #!name=TikTok
-#!desc=解锁日区&去水印,优先级应低于抖音去水印（v21.1.0支持向下兼容）
+#!desc=解锁日区&去水印（v21.1.0支持向下兼容）
 #!system=ios
 [URL Rewrite]
 #解锁

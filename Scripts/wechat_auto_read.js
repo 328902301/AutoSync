@@ -1,4 +1,7 @@
 /*
+引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/wechatread.conf
+引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/wechat_auto_read.js
+
 🐏 微信阅读（全自动），阅读得积分，100积分换1元
 👀 请复制下面的链接在微信中打开👇👇👇
 🔗 主选打开地址：https://shrtm.nu/riIs

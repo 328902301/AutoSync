@@ -1,5 +1,3 @@
-// 2022-01
-// 引用地址 https://gist.githubusercontent.com/blackmatrix7/2e550ebf28ca60d620654e394ec47e0b/raw/zhihu.js
 const scriptName = "知乎助手";
 const blockedUsersKey = "zhihu_blocked_users";
 const currentUserInfoKey = "zhihu_current_userinfo";

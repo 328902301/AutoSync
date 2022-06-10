@@ -1,4 +1,5 @@
 /******************************
+引用地址 https://github.com/yqc007/QuantumultX/blob/master/JavDBCrack.js
 
 脚本功能：JavDB解锁会员
 软件版本：1.9.12

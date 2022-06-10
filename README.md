@@ -5,7 +5,7 @@
 
 配置文件链接：
 ```Java
-https://raw.githubusercontent.com/RuCu6/QuanX/main/gooxtuu.conf
+https://raw.githubusercontent.com/RuCu6/QuanX/main/QuantumultX.conf
 ```
 
 # 配置说明

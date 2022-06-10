@@ -1,4 +1,5 @@
 /******************************
+引用地址 https://github.com/yqc007/QuantumultX/blob/master/PornHubPremiumCrack.js
 
 脚本功能：PornHub Unlock Premium
 网页版本：2.0.1

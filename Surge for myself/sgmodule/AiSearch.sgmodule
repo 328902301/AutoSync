@@ -1,18 +1,8 @@
 #!name=AiSearch
 #!desc=Change search engine in Safari.
 
-# ---
-# dg: DuckDuckGo
-# bi: Bing
-
-# gh: GitHub 
-
-# db: 豆瓣
-# zh: 知乎
-# ---
-
 [URL Rewrite]
-^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://www.duckduckgo.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=wk\+([^&]+).+ https://zh.m.wikipedia.org/wiki/$1 302
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://www.bing.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302

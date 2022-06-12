@@ -13,6 +13,7 @@
 
 [URL Rewrite]
 ^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://www.duckduckgo.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=wk\+([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://www.bing.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302

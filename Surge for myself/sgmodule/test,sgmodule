@@ -1,0 +1,8 @@
+#!name=ayyl
+#!desc=ayyl
+
+[Panel]
+ayyl = script-name=ayyl,update-interval=0
+
+[Script]
+ayyl = script-path=https://raw.githubusercontent.com/futurkk/Potato/main/Surge%20for%20myself/JS/ayyl.js

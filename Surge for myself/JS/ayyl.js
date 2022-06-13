@@ -3,6 +3,7 @@ const ttitle = ['yi','er','san','si','wu','liu','qi','ba','jiu','shi','shiyi','s
 const tcontent = ['香港', '澳门', '台湾', '日本', '韩国', '新加坡', '狮城', '美国', '英国', '法国', '德国', '澳大利亚', '澳洲', '阿富汗', '阿尔巴尼亚', '阿尔及利亚', '安哥拉','哥拉','巴尼','及','大利','加坡','尼亚','汗'];
 
 let tnow = new Date();
+var Date.getHours() = tnum;
 
 var tt = {};
 for (let i in tnum) {
@@ -13,8 +14,6 @@ var cc = {};
 for (let i in tnum) {
   tt[tnum[i]] = [tcontent[i], 0];
 }
-
-let i = tnow.getHours()
 
 $done({
 title:tt,

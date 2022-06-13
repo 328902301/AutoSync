@@ -3,10 +3,7 @@
 #资源频道：https://t.me/yqc_123
 #问题反馈：https://t.me/yqc_777
 
-http=music.lolico.me:39000, fast-open=false, udp-relay=false, tag=Music 1
 
-http=MUSIC.GRIOUGES.CN:39000, over-tls=false, fast-open=false, udp-relay=false, tag=Music 2
+trojan=36.137.102.237:30140,password=7b453cb8-9582-4e47-80ba-7809f6908d7f,tls-host=telegram.channel.p2psharing,over-tls=true,tls-verification=false,fast-open=false,udp-relay=false,tag= Music 1
 
-shadowsocks=MUSIC.DESPERADOJ.COM:30001, method=aes-128-gcm, password=desperadoj.com_free_proxy_d39m, fast-open=false, udp-relay=false, tag=Music 3
-
-shadowsocks=MUSIC.DESPERADOJ.COM:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_d39m, fast-open=false, udp-relay=false, tag=Music 4
+trojan=103.173.255.228:28000,password=7b453cb8-9582-4e47-80ba-7809f6908d7f,tls-host=telegram.channel.p2psharing,over-tls=true,tls-verification=false,fast-open=false,udp-relay=false,tag= Music 2

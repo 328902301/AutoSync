@@ -1,8 +1,0 @@
-shadowsocks=jp.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag=搞鸡玩家-解锁奈飞-解锁流媒体1
-shadowsocks=jp4.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体2
-shadowsocks=kr1.mayiyun.shop:10014, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体3
-shadowsocks=jp5.mayiyun.shop:10014, method=chacha20-ietf-poly1305, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体4
-shadowsocks=azhk1.mayiyun.shop:20002, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体5
-shadowsocks=usa1.mayiyun.shop:20012, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体6
-shadowsocks=usa.mayiyun.shop:20012, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体7
-shadowsocks=can.mayiyun.shop:10015, method=aes-256-gcm, password=9be8090d-bbdc-4e75-90da-044f04dd9c31, fast-open=true, udp-relay=true, tag= 搞鸡玩家-解锁奈飞-解锁流媒体8

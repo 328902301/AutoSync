@@ -1,0 +1,4 @@
+[MITM]
+hostname=weather-data.apple.com, api.weather.com
+[rewrite_local]
+https:\/\/((weather-data\.apple)|(api.weather))\.com url script-request-header https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js

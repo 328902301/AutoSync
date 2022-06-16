@@ -4,6 +4,3 @@
 #问题反馈：https://t.me/yqc_777
 
 shadowsocks=101.132.192.212:30001, method=aes-128-gcm, password=desperadoj.com_free_proxy_etg0, fast-open=false, udp-relay=false, server_check_url=http://interface3.music.163.com, tag= Music 1
-trojan=36.137.102.237:30140,password=7b453cb8-9582-4e47-80ba-7809f6908d7f,tls-host=telegram.channel.p2psharing,over-tls=true,tls-verification=false,fast-open=false,udp-relay=false,tag= Music 1
-
-trojan=103.173.255.228:28000,password=7b453cb8-9582-4e47-80ba-7809f6908d7f,tls-host=telegram.channel.p2psharing,over-tls=true,tls-verification=false,fast-open=false,udp-relay=false,tag= Music 2

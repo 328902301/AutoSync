@@ -1,5 +1,5 @@
 # utf-8
-# 2022-06-15 16:23
+# 2022-06-17 09:35
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
@@ -101,8 +101,8 @@ HOST-SUFFIX, zhengxiaoliu.top, MyBlockAds
 HOST, ads.nicovideo.jp, MyBlockAds
 
 # HDO
-HOST-SUFFIX, applovin.com, MyBlockAds
-HOST-SUFFIX, applvn.com, MyBlockAds
+;HOST-SUFFIX, applovin.com, MyBlockAds
+;HOST-SUFFIX, applvn.com, MyBlockAds
 
 # 美颜相机首页和轮播广告
 HOST, adui.tg.meitu.com, MyBlockAds

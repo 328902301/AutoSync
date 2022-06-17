@@ -107,9 +107,9 @@ function operator(proxies) {
       if (simplify(res.name).indexOf(elem) !== -1) {
         countries[elem][1] += 1;
         if (!autofill) {
-          resultArray.push(countries[elem][0], airport, countries[elem][1]);
+          resultArray.push(airport, countries[elem][0], countries[elem][1]);
         } else {
-          resultArray.push(countries[elem][0], airport, countries[elem][1].toString().padStart(autofill, '0'));
+          resultArray.push(airport, countries[elem][0], countries[elem][1].toString().padStart(autofill, '0'));
         }
         console.log(resultArray);
         matched = true

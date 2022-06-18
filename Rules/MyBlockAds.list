@@ -1,8 +1,11 @@
 # utf-8
-# 2022-06-18 11:31
+# 2022-06-18 11:56
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
+
+# 工商银行开屏广告
+HOST, pageviewp.icbc.com.cn, MyBlockAds
 
 # Clue智库推广信息
 HOST, api.helloclue.com, MyBlockAds

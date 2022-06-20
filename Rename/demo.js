@@ -44,10 +44,10 @@ for (let i in inputList) {
 
 // 其它
 var others = {
-  // 'LB': 'LB',
-  // '[Premium]': '[Premium]',
-  // 专线: 'Spec',
-  // 核心: 'Kern',
+  'SH': 'SH',
+  'SKS': 'SKS',
+  'BJ': 'BJ',
+  'GHW': 'GHW',
   // 边缘: 'Edge',
   // 高级: 'Pro',
   // 标准: 'Std',

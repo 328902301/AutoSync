@@ -1,0 +1,12 @@
+#!name = GitHub加速
+#!desc = 加速GitHub访问，解决GitHub访问困难的问题。
+#!openUrl = https://github.com/ArriettyQAQ/networktools/tree/main/script/GitHub
+#!author = 可莉🅥
+#!homepage = https://github.com/ArriettyQAQ/networktools
+#!icon = https://raw.githubusercontent.com/ArriettyQAQ/networktools/main/icon/GitHub/GitHub.png
+
+[MITM]
+hostname=raw.githubusercontent.com
+
+[URL Rewrite]
+^https?:\/\/raw.githubusercontent.com https://raw.githubusercontents.com 302

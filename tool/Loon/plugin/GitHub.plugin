@@ -1,9 +1,9 @@
 #!name = GitHub加速
 #!desc = 加速GitHub访问，解决GitHub访问困难的问题。
-#!openUrl = https://github.com/ArriettyQAQ/networktools/tree/main/script/GitHub
+#!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/tool/Loon/plugin
 #!author = 可莉🅥
-#!homepage = https://github.com/ArriettyQAQ/networktools
-#!icon = https://raw.githubusercontent.com/ArriettyQAQ/networktools/main/icon/GitHub/GitHub.png
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/blob/41a4dd3c98ab32b9dbe0d1a98e86c4439e553751/icon/60px/GitHub.png
 
 [MITM]
 hostname=raw.githubusercontent.com

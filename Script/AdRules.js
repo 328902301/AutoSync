@@ -22,10 +22,10 @@ const configurations = [{
     ],
 },
 {
-    name: 'neohosts',
-    homepage: 'https://github.com/neoFelhz/neohosts',
+    name: 'nocoin',
+    homepage: 'https://github.com/hoshsadiq/adblock-nocoin-list',
     sources: [{
-        source: 'https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts',
+        source: 'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
         type: 'hosts',
     },],
     transformations: [

@@ -37,6 +37,21 @@ const configurations = [{
     ],
 },
 {
+    name: 'adservers',
+    homepage: 'https://pgl.yoyo.org/adservers',
+    sources: [{
+        source: 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext',
+        type: 'hosts',
+    },],
+    transformations: [
+        'RemoveComments',
+        'RemoveModifiers',
+        'Compress',
+        'Validate',
+        'Deduplicate',
+    ],
+},
+{
     name: 'TrackingProtection',
     sources: [{
         source: 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt',

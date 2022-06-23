@@ -1,5 +1,5 @@
 #!name = 哔哩哔哩去广告
-#!desc = 过滤推广、过滤漫画、推荐、追番、直播、动态、开屏图中的广告，并精简标签页、我的页面、大家都在搜、过滤动态中的话题、过滤动态中的最常访问功能。
+#!desc = 精简多余功能并过滤广告
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/

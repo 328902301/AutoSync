@@ -3,7 +3,7 @@
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/9c42632df9f8fc1387d6a0be8ff674aab7c13e6c/Icon/60px/GitHub.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/a9df67eee4a03af9b40fc739886f40c751eebb53/Resource/Icon/60px/GitHub.png
 
 [MITM]
 hostname=raw.githubusercontent.com

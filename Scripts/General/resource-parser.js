@@ -1,10 +1,6 @@
 /** 
 ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-06-23 16:30⟧
 ----------------------------------------------------------
-🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
-⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
-📖 使用 教程: https://shrtm.nu/4ECS
-🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM, @vinewx, @love4taylor, @shadowdogy 
 
 🤖 主要功能: 
 ❶ 将其它格式的⟦服务器订阅⟧解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式

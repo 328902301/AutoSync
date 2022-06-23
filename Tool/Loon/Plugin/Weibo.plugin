@@ -1,7 +1,7 @@
 #!name = 微博去广告
 #!desc = 过滤微博主页、个人信息页、会员中心页、消息列表、开屏图、信息流、微博钱包的广告。
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!author = 可莉🅥
+#!author = xOS
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Weibo.png
 

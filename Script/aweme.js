@@ -1,72 +1,49 @@
-if (typeof $response === "undefined") {
-  const path = [
-    "/feed/", // 推荐
-    "/aweme/post/", // 用户
-    "/follow/feed/", // 关注
-    "/nearby/feed/", // 附近
-    "/aweme/detail/", // 分享
-    "/mix/aweme/", // 合辑
-    "/hot/search/video/list/", // 热榜
-    "/aweme/favorite/" // 喜欢
-  ];
-  let url = $request.url;
-  let pattern = new RegExp(`\\d(${path.join("|")})\\?`);
-  if (url.match(pattern)) {
-    $done({ url: url.replace("/v2/", "/v1/") + "#scripting" });
-  } else {
-    $done({});
-  }
+if (typeof $response != "undefined") {
+    var obj = JSON.parse($response.body);
+    if (obj.data) {
+        for (var i = obj.data.length - 1; i >= 0; i--) {
+            if (obj.data[i].aweme.video) {
+                if (obj.data[i].aweme.status.reviewed != 1) {
+                    obj.data[i].aweme.status.reviewed = 1;
+                    obj.data[i].aweme.video_control.allow_download = true;
+                }
+                if (obj.data[i].aweme.video.download_addr) {
+                    var play = obj.data[i].aweme.video.play_addr.url_list;
+                    obj.data[i].aweme.video.download_addr.url_list = play;
+                }
+                if (obj.data[i].aweme.video.download_suffix_logo_addr) {
+                    var download = obj.data[i].aweme.video.download_addr;
+                    obj.data[i].aweme.video.download_suffix_logo_addr = download;
+                }
+            } else {
+                obj.data.aweme.splice(i, 1);
+            }
+        }
+    }
+    if (obj.aweme_list) {
+        for (var i = obj.aweme_list.length - 1; i >= 0; i--) {
+            if (obj.aweme_list[i].video) {
+                if (obj.aweme_list[i].is_ads != false) {
+                    obj.aweme_list.splice(i, 1);
+                }
+                if (obj.aweme_list[i].status.reviewed != 1) {
+                    obj.aweme_list[i].status.reviewed = 1;
+                    obj.aweme_list[i].video_control.allow_download = true;
+                }
+                if (obj.aweme_list[i].video.download_addr) {
+                    var play = obj.aweme_list[i].video.play_addr.url_list;
+                    obj.aweme_list[i].video.download_addr.url_list = play;
+                }
+                if (obj.aweme_list[i].video.download_suffix_logo_addr) {
+                    var download = obj.aweme_list[i].video.download_addr;
+                    obj.aweme_list[i].video.download_suffix_logo_addr = download;
+                }
+            } else {
+                obj.aweme_list.splice(i, 1);
+            }
+        }
+    }
+    $done({ body: JSON.stringify(obj) });
 } else {
-  let obj = JSON.parse($response.body);
-  delete obj.poi_op_card_list;
-  if (obj.data) obj.data = filter_data(obj.data);
-  if (obj.aweme_list) obj.aweme_list = filter_list(obj.aweme_list);
-  if (obj.aweme_detail) obj.aweme_detail = filter_detail(obj.aweme_detail);
-  $done({ body: JSON.stringify(obj) });
-}
-
-function filter_data(array) {
-  let i = array.length;
-  while (i--) {
-    if (array[i].aweme.status) patch(array[i].aweme);
-  }
-  return array;
-}
-
-function filter_list(array) {
-  let i = array.length;
-  while (i--) {
-    if (array[i].raw_ad_data || array[i].live_reason) {
-      array.splice(i, 1);
-    } else if (array[i].status) {
-      patch(array[i]);
-    }
-  }
-  return array;
-}
-
-function filter_detail(dictionary) {
-  if (dictionary.status) patch(dictionary);
-  return dictionary;
-}
-
-function patch(aweme) {
-  try {
-    aweme.status.reviewed = 1;
-    aweme.video_control.allow_download = true;
-    aweme.video_control.prevent_download_type = 0;
-    delete aweme.video.misc_download_addrs;
-    const play_url = aweme.video.play_addr;
-    aweme.video.download_addr = play_url;
-    aweme.video.download_suffix_logo_addr = play_url;
-    if (aweme.images && aweme.images.length > 0) {
-      let i = aweme.images.length;
-      while (i--) {
-        aweme.images[i].download_url_list = aweme.images[i].url_list;
-      }
-    }
-  } catch (error) {
-    console.log(`\n${error}\n${JSON.stringify(aweme)}`);
-  }
-  return aweme;
+    $done({ url: $request.url.replace(/\/v\d\//, "/v1/") });
 }

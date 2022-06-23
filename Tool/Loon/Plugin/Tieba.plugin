@@ -1,5 +1,5 @@
 #!name = 百度贴吧去广告
-#!desc = 过滤开屏广告、推荐页列表及吧内帖子列表的直播和其他广告、帖子详情页直播及关联商品和其他广告、看图模式下的广告、首页及帖子详情页右下角悬浮广告、部分吧内的置顶及最新中间的广告、head图片广告。此插件会导致新回复等通知功能不可用，需手动进入消息页点击查看，仅限iOS 15及以上版本系统使用。
+#!desc = 过滤百度贴吧广告，需注意此插件会导致新回复等通知功能不可用，需手动进入消息页点击查看。仅限iOS 15及以上版本系统使用。
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = toulanboy
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/

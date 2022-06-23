@@ -1,4 +1,5 @@
 /*
+引用地址 https://github.com/qiangxinglin/Emby/blob/main/scripts/emby.js
 
 ************************
 QuantumultX :

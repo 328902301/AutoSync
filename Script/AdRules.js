@@ -22,21 +22,6 @@ const configurations = [{
     ],
 },
 {
-    name: 'nocoin',
-    homepage: 'https://github.com/hoshsadiq/adblock-nocoin-list',
-    sources: [{
-        source: 'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt',
-        type: 'hosts',
-    },],
-    transformations: [
-        'RemoveComments',
-        'RemoveModifiers',
-        'Compress',
-        'Validate',
-        'Deduplicate',
-    ],
-},
-{
     name: 'adservers',
     homepage: 'https://pgl.yoyo.org/adservers',
     sources: [{

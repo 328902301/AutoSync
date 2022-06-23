@@ -3,7 +3,7 @@
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/58463bfc8188cde042a1c187154b01cb904436ae/Resource/Icon/60px/Google.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Google.png
 
 [MITM]
 hostname=*.google.com.cn,*.google.com.hk

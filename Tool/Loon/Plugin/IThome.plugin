@@ -1,0 +1,12 @@
+#!name = IT之家去广告
+#!desc = 拦截IT之家信息流和正文广告
+#!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/IThome.PNG
+
+[Script]
+http-response https?:\/\/api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)) script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js,requires-body=true, tag=IT之家去广告
+  
+[MITM]
+hostname = api.ithome.com

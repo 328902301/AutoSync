@@ -1,1 +1,6 @@
+#!name=定时任务
+#!desc= Sub-Store订阅同步
+#!system=ios
+
+[Script]
 GistSync = type=cron,cronexp=0 */12 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/cron-sync-artifacts.min.js,script-update-interval=0

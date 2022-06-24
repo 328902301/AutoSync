@@ -35,6 +35,7 @@ boxjscom = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw
 
 # > Sub-Store
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+GistSync = type=cron,cronexp=0 */12 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/cron-sync-artifacts.min.js,script-update-interval=0
 
 # > Siri搜索建议
 # Bag (iOS/macOS)

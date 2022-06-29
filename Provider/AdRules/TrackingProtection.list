@@ -4,6 +4,8 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.automizely-analytics.com
+.metrics.dominos.com.tr
 .salesloft.com
 .ctags.cn
 .gridsumdissector.com
@@ -4594,6 +4596,7 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.acelogger.heraldcorp.com
 .t.hypers.com.cn
 .log.ycapp.yiche.com
 .stats.videoseyred.in
@@ -18616,6 +18619,7 @@
 .int.vlancaa.site
 .int.vlancaa.fun
 .tok.vaicore.xyz
+.countly.globaldelight.net
 .log.game.qcplay.com
 .report-stats.ad.jiguang.cn
 .config.jpush.cn

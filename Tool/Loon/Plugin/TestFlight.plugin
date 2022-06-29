@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/TestFlight.png
 
 [script]
-http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TestFlight解锁
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TF_Download.js, tag=TestFlight解锁
 
 [MITM]
 hostname = testflight.apple.com

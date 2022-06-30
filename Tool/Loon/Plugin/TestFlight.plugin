@@ -5,6 +5,9 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/TestFlight.png
 
+[General]
+skip-proxy = iosapps.itunes.apple.com
+
 [script]
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TF_Download.js, tag=TestFlight解锁
 

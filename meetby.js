@@ -27,8 +27,8 @@ if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //};
 $done({
     title:"𝗦𝗨𝗥𝗚𝗘  已运行"+startTime, //标题
-    content:"Enjoy your day meetby!",
-    icon: icon_s?"power.circle":"exclamationmark.circle", //图标
+    content:"",
+    icon: icon_s?"xxxx.xxx":"xxxx.xx", //图标
    "icon-color":icon_s?"#FF2121":"#FF7500" //颜色
 });
 })();

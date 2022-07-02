@@ -1,6 +1,9 @@
 #!name= Bilibili去广告(iOS15)
 #!desc=开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
 
+[Rule]
+DOMAIN,grpc.biliapi.net,REJECT-NO-DROP
+
 [Script]
 # > 去广告
 标签页处理 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js,script-update-interval=0

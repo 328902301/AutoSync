@@ -26,7 +26,7 @@ if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //$notification.post("配置重载","配置重载成功","")
 //};
 $done({
-    title:"SUGER  已运行"+startTime, //标题
+    title:"SURGE  已运行"+startTime, //标题
     content:"",
     icon: icon_s?"xxxx.xxx":"xxxx.xx", //图标
    "icon-color":icon_s?"#FF2121":"#FF7500" //颜色

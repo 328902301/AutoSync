@@ -1,0 +1,16 @@
+
+#
+T G 频道：https://t.me/gjwj6
+
+公众号搞鸡玩家
+
+解锁功能:  Vip功能 无线观看
+
+下载链接: https://app.kbrwhub.xyz/i-ST7Q9S
+
+下载说明:必须是下载TF版的才能使用.每天晚上8点后开放TF下载
+
+
+^https://(api|app).(qishangzs|rcljx|qdjdswkj|jisudaigou|0954auto).com url request-header (\r\n)X-AUTH-TOKEN:.+(\r\n) request-header $1X-AUTH-TOKEN:eyJhbGciOiJIUzUxMiIsImlhdCI6MTY1Njc3NDkxMSwiZXhwIjoxNjcyMzI2OTExfQ.eyJpZCI6ODY0NDExNzl9.tf905_BnIHjt8Ot5H7TufBklhdFNAsPxL38XKdej7QucOOzyk3N0PqwahFFV6Km3p0DEWkd6EEwdGEcIXDIYzQ$2
+
+hostname = api.qishangzs.com,api.rcljx.com,app.qdjdswkj.com,api.jisudaigou.com,api.0954auto.com

@@ -27,7 +27,7 @@
 // > 两位英文简写改为三位英文简写（例：香港=>HKG）
 // > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enShort3&airport=[你需要的机场名]
 // > 两位英文简写改为英文全称（例：HK=>Hong Kong）
-// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShorth&output=enFull&airport=[你需要的机场名]
+// > https://raw.githubusercontent.com/futurkk/Potato/main/Rename/rename.js#input=enShort&output=enFull&airport=[你需要的机场名]
 
 // 原节点名以英文全称命名地区。
 // > 英文全称改为中文（例：Hong Kong=>香港）

@@ -152,7 +152,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
             obj["data"]["sections_v2"][index]["items"] = items;
-
             if (element.title === "更多服务" && enableMall) {
               element.items.unshift({
                 id: 999,

@@ -73,6 +73,23 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
+        // 预加载开屏广告，去广告更彻底
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          obj["data"]["max_time"] = 0;
+          obj["data"]["min_interval"] = 31536000;
+          obj["data"]["pull_interval"] = 31536000;
+          for (let i = 0; i < obj["data"]["list"].length; i++) {
+            obj["data"]["list"][i]["duration"] = 0;
+            obj["data"]["list"][i]["begin_time"] = 1915027200;
+            obj["data"]["list"][i]["end_time"] = 1924272000;
+          }
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`开屏广告处理出现异常：${err}`);
+        }
+        break;
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
@@ -129,16 +146,19 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         try {
           let obj = JSON.parse(magicJS.response.body);
           /*
-            171创作中心 172我的钱包 404创作中心 544我的钱包 430我的钱包 431联系客服 432设置
+            544我的钱包
             标准版：
-            396 离线缓存 397 历史记录 398 我的收藏 399 稍后再看 402 个性装扮 404 我的钱包 407 联系客服 410 设置
+            396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+            港澳台：
+            534离线缓存 8历史记录 4我的收藏 428稍后再看 402个性装扮 404创作中心
+            352离线缓存 1历史记录 405我的收藏 544稍后再看 402个性装扮 404创作中心
             概念版：
-            425 离线缓存 426 历史记录 427 我的收藏 428 稍后再看 171 创作中心 430 我的钱包 431 联系客服 432 设置
+            425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
             国际版：
-            494 离线缓存 495 历史记录 496 我的收藏 497 稍后再看 741 我的钱包 742 稿件管理 500 联系客服 501 设置
+            494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
           */
           // 622为会员购中心 425开始为概念版id
-          const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 402, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
+          const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 544, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             let items = element["items"].filter((e) => {
               return itemList.has(e.id);
@@ -253,23 +273,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`观影页去广告出现异常：${err}`);
-        }
-        break;
-        // 预加载开屏广告，去广告更彻底
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
-        try {
-          let obj = JSON.parse(magicJS.response.body);
-          obj["data"]["max_time"] = 0;
-          obj["data"]["min_interval"] = 31536000;
-          obj["data"]["pull_interval"] = 31536000;
-          for (let i = 0; i < obj["data"]["list"].length; i++) {
-            obj["data"]["list"][i]["duration"] = 0;
-            obj["data"]["list"][i]["begin_time"] = 1915027200;
-            obj["data"]["list"][i]["end_time"] = 1924272000;
-          }
-          body = JSON.stringify(obj);
-        } catch (err) {
-          magicJS.logError(`开屏广告处理出现异常：${err}`);
         }
         break;
         // 2022-03-05 add by ddgksf2013

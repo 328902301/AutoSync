@@ -175,19 +175,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
               });
             }
           });
-          //2022-03-05 add by ddgksf2013
-            if(obj.data.hasOwnProperty("live_tip")){
-                obj["data"]["live_tip"]={};
-            }
-            if(obj.data.hasOwnProperty("answer")){
-                obj["data"]["answer"]={};
-            }
-            obj["data"]["vip_type"] = 2;
-            obj["data"]["vip"]["type"] = 2;
-            obj["data"]["vip"]["status"] = 1;
-            obj["data"]["vip"]["vip_pay_type"] = 1;
-            obj["data"]["vip"]["due_date"] = 4669824160;
-          });
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`我的页面处理出现异常：${err}`);

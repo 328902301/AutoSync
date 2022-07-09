@@ -1,10 +1,10 @@
-// 引用地址 https:// github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
+// 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
 
 /*
 应用名称：自用B站去广告脚本
 脚本作者：Cuttlefish
 微信账号：公众号墨鱼手记
-更新时间：2022-06-04
+更新时间：2022-07-03
 脚本版本：(65)
 通知频道：https:// t.me/ddgksf2021
 问题反馈：ddgksf2013@163.com
@@ -112,8 +112,8 @@ if (magicJS.read(blackKey)) {
           if (obj["data"]["top"]) {
             let top = obj["data"]["top"].filter((e) => {
               if (e.id === 222 || e.id === 107) {
-                e.uri = `bilibili:// story/${storyAid}`;
-                e.icon = "https:// raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_icon.png";
+                e.uri = `bilibili://story/${storyAid}`;
+                e.icon = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_icon.png";
                 e.tab_id = "Story_Top";
                 e.name = "Story";
               }
@@ -143,7 +143,7 @@ if (magicJS.read(blackKey)) {
             element["items"].forEach((e) => {
               if (e["id"] === 622) {
                 e["title"] = "会员购";
-                e["uri"] = "bilibili:// mall/home";
+                e["uri"] = "bilibili://mall/home";
               }
             });
             let items = element["items"].filter((e) => {

@@ -1,4 +1,8 @@
-// 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
+/*
+引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Script/bilibili_diy.js
+引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/bilibili/bilibili_plus.js
+已对代码进行一定修改，以满足自己使用需求
+*/
 
 /*
 应用名称：自用B站去广告脚本

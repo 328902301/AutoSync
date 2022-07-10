@@ -1,4 +1,6 @@
 /*
+引用地址 https://github.com/I-am-R-E/Functional-Store-Hub/blob/Master/WPSOffice/Script/WPS.js
+
 脚本功能：解锁WPS本地会员
 脚本作者：R·E
 支持版本：商店最新 11.24.0(US) 11.26.1(CN)

@@ -168,6 +168,8 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
+            delete obj.data.vip_section_v2;
+            delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
             if (element.title === "更多服务" && enableMall) {
               element.items.unshift({
@@ -178,6 +180,18 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
                 uri: "bilibili://mall/home",
               });
             }
+            //2022-03-05 add by ddgksf2013
+            if(obj.data.hasOwnProperty("live_tip")){
+                obj["data"]["live_tip"]={};
+            }
+            if(obj.data.hasOwnProperty("answer")){
+                obj["data"]["answer"]={};
+            }
+            obj["data"]["vip_type"] = 2;
+            obj["data"]["vip"]["type"] = 2;
+            obj["data"]["vip"]["status"] = 1;
+            obj["data"]["vip"]["vip_pay_type"] = 1;
+            obj["data"]["vip"]["due_date"] = 4669824160;
           });
           body = JSON.stringify(obj);
         } catch (err) {

@@ -1,4 +1,5 @@
 /******************************
+引用地址 https://github.com/yqc007/QuantumultX/blob/master/WPSDocerVIPowerCrack.js
 
 脚本功能：WPS解锁稻壳会员
 软件版本：11.26.0

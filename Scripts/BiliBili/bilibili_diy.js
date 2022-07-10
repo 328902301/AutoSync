@@ -252,7 +252,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 追番去广告
-      case /^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi/.test(magicJS.request.url):
+      case /pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
@@ -274,7 +274,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
         // 观影页去广告
-      case /^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
+      case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {

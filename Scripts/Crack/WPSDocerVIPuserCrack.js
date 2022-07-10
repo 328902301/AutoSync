@@ -1,6 +1,7 @@
 /******************************
+引用地址 https://github.com/yqc007/QuantumultX/blob/master/WPSDocerVIPuserCrack.js
 
-脚本功能：WPS解锁稻壳会员
+脚本功能：WPS解锁稻壳会员模板
 软件版本：11.26.0
 下载地址：http://t.cn/A6ZD2hl3
 脚本作者：Hausd0rff

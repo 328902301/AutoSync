@@ -83,14 +83,23 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 545 首页追番tab，442 开始为概念版id 适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 545, 151, 442, 99, 100, 101, 554, 556]);
+          // 39直播 40推荐 41热门 545追番 554动画 151影视 99直播 100推荐 101热门
+          // 442开始为概念版id，适配港澳台代理模式
+          const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
           // 尝试使用tab name直观修改
-          const tabNameList = new Set(["直播", "推荐", "热门", "动画", "影视"]);
+          const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           // 107 概念版游戏中心，获取修改为Story模式
           const topList = new Set([176, 222, 107]);
+          /*
+            标准版
+            177首页 178频道 179动态 181我的
+            概念版
+            102首页 103频道 104动态 106我的
+            港澳台
+            486首页 487频道 488动态 490我的
+          */
           // 102 开始为概念版id
-          const bottomList = new Set([177, 178, 179, 181, 102, 103, 104, 105, 106]);
+          const bottomList = new Set([177, 179, 181, 102, 104, 106, 486, 488, 490]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
@@ -130,19 +139,19 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // 622 为会员购中心, 425 开始为概念版id
           /*
-            国际版
-            494 离线缓存
-            495 历史记录
-            496 我的收藏
-            497 稍后再看
-            500 联系客服
-            501 设置
-            741 我的钱包
-            742 稿件管理
-           */
-          const itemList = new Set([396, 397, 398, 399, 171, 172, 534, 8, 4, 428, 352, 1, 405, 402, 404, 544, 407, 410, 425, 426, 427, 428, 171, 430, 431, 432, 494, 495, 496, 497, 500, 501, 741, 742]);
+            标准版：
+            396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+            港澳台：
+            534离线缓存 8历史记录 4我的收藏 428稍后再看
+            352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
+            概念版：
+            425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
+            国际版：
+            494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
+          */
+          // 622为会员购中心 425开始为概念版id
+          const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {
             let items = element["items"].filter((e) => {
               return itemList.has(e.id);

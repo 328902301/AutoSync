@@ -29,3 +29,4 @@ function getQueryVariable(url) {
     return querys;
   }
 }
+

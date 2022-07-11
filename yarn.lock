@@ -157,7 +157,7 @@ consola@^2.11.3:
 decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
-  integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
+  integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -188,9 +188,9 @@ find-up@^4.1.0:
     path-exists "^4.0.0"
 
 follow-redirects@^1.14.4:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.0.tgz#06441868281c86d0dda4ad8bdaead2d02dca89d4"
-  integrity sha512-aExlJShTV4qOUOL7yF1U5tvLCB0xQuudbf6toyYA0E/acBNw71mvjFTnLaRp50aQaYocMR0a/RMMBIHeZnGyjQ==
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"
+  integrity sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==
 
 fs-extra@^10.1.0:
   version "10.1.0"
@@ -299,7 +299,7 @@ punycode@^2.1.0:
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
-  integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
+  integrity sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==
 
 require-main-filename@^2.0.0:
   version "2.0.0"
@@ -309,7 +309,7 @@ require-main-filename@^2.0.0:
 set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
-  integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
+  integrity sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==
 
 string-width@^4.1.0, string-width@^4.2.0:
   version "4.2.3"
@@ -341,17 +341,17 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-tldts-core@^5.7.77:
-  version "5.7.77"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-5.7.77.tgz#ddc7fb6c9b0c03b19cf0985f4eaf6f79c43d9096"
-  integrity sha512-iEVvz9jdx8zxKPx4qT2bVoewFoU3fctREwYTjlXmBJJKX8JWk90W4pPKqSIFGdfvC0laH3XyZKe1sugHqUpgDQ==
+tldts-core@^5.7.84:
+  version "5.7.84"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-5.7.84.tgz#0e128f7d70c0b91741156e1d3ce072fac687ef2a"
+  integrity sha512-1qKxwSDjmWdqG81cnXGvKI+FHPiVRT6w5DORjp2+YVqDdzFUZO0oQoWu0zbDtWA6HXVk+B15yY9DKbVKZ6fRLg==
 
 tldts@^5.6.10:
-  version "5.7.77"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-5.7.77.tgz#e62443f2ec239c9df6d1733100b767a114868035"
-  integrity sha512-MZCdAWwI28j2KJY+1FC+SJ0E/YWW6ZbHczRTCumaDDbh6tV3WVU0DE2vWYQ2I13lRRp8ab3q0BPSeMmOPD9laQ==
+  version "5.7.84"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-5.7.84.tgz#c22e8824545ece1cac0a909692d12378b39429d1"
+  integrity sha512-PGkhyObqEEntI/xUDJdagtvNW+O7+5j8vbXSOXL+563At8gH/4LHxHjdPNv7qrahYuL6y6ZgjBxcvWdut7/LtA==
   dependencies:
-    tldts-core "^5.7.77"
+    tldts-core "^5.7.84"
 
 universalify@^2.0.0:
   version "2.0.0"
@@ -368,7 +368,7 @@ uri-js@^4.2.2:
 which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
-  integrity sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+  integrity sha512-B+enWhmw6cjfVC7kS8Pj9pCrKSc5txArRyaYGe088shv/FGWH+0Rjx/xPgtsWfsUtS27FkP697E4DDhgrgoc0Q==
 
 wrap-ansi@^6.2.0:
   version "6.2.0"

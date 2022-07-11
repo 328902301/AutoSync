@@ -6,7 +6,7 @@
     "update-adrules": "node Script/AdRules"
   },
   "repository": "https://github.com/iEwha/Profiles.git",
-  "author": "iEwha",
+  "author": "iEwha <royiewha@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@adguard/hostlist-compiler": "^1.0.12",

@@ -286,6 +286,11 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
+package@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/package/-/package-1.0.1.tgz#d25a1f99e2506dcb27d6704b83dca8a312e4edcc"
+  integrity sha512-g6xZR6CO7okjie83sIRJodgGvaXqymfE5GLhN8N2TmZGShmHc/V23hO/vWbdnuy3D81As3pfovw72gGi42l9qA==
+
 path-exists@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"

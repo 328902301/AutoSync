@@ -10,8 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "@adguard/hostlist-compiler": "^1.0.12",
-    "fs-extra": "^10.1.0",
-    "package": "^1.0.1"
+    "better-ajv-errors": "^1.1.2",
+    "fs-extra": "^10.1.0"
   },
   "resolutions": {
     "axios": "^0.24.0",

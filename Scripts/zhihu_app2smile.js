@@ -1,3 +1,5 @@
+# 引用地址 https://github.com/app2smile/rules/blob/master/js/zhihu.js
+
 const url = $request.url;
 const method = $request.method;
 let body = JSON.parse($response.body);

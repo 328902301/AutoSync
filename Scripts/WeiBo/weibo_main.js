@@ -9,7 +9,7 @@ let storeItemMenusConfig = $.read('itemMenusConfig');
 
 //主要的选项配置
 const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
-	isDebug: false,						//开启调试，会打印运行中部分日志
+	isDebug: false,				//开启调试，会打印运行中部分日志
 	//个人中心配置，其中多数是可以直接在更多功能里直接移除
 	removeHomeVip: true,			//个人中心头像旁边的vip样式
 	removeHomeCreatorTask: true,		//个人中心创作者中心下方的轮播图
@@ -19,38 +19,38 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeGood: true,			//微博主好物种草
 	removeFollow: true,			//关注博主
 	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: true, 	//评论区相关内容
-	removeRecommendItem: true,	//评论区推荐内容
-	removeRewardItem: true, 	//微博详情页打赏模块
+	removeRelateItem: true, 		//评论区相关内容
+	removeRecommendItem: true,		//评论区推荐内容
+	removeRewardItem: true, 		//微博详情页打赏模块
 
-	removeLiveMedia: true,		//首页顶部直播
-	removeNextVideo: true, 		//关闭自动播放下一个视频
+	removeLiveMedia: true,			//首页顶部直播
+	removeNextVideo: true, 			//关闭自动播放下一个视频
 
-	removeInterestFriendInTopic: true,		//超话：超话里的好友
-	removeInterestTopic: true,			//超话：可能感兴趣的超话 + 好友关注
-	removeInterestUser: true,			//用户页：可能感兴趣的人
+	removeInterestFriendInTopic: true,	//超话：超话里的好友
+	removeInterestTopic: true,		//超话：可能感兴趣的超话 + 好友关注
+	removeInterestUser: true,		//用户页：可能感兴趣的人
 
-	removeLvZhou: true,				//绿洲模块
-	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告
+	removeLvZhou: true,			//绿洲模块
+	removeSearchWindow: true,		//搜索页滑动窗口，有的不是广告
 
-	profileSkin1: null,				//用户页：自定义图标1
-	profileSkin2: null,				//用户页：自定义图标2
-	tabIconVersion: 0,				//配置大于100的数
-	tabIconPath: ''					//配置图标路径
+	profileSkin1: null,			//用户页：自定义图标1
+	profileSkin2: null,			//用户页：自定义图标2
+	tabIconVersion: 0,			//配置大于100的数
+	tabIconPath: ''				//配置图标路径
 }
 
 
 //菜单配置
 const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) : {
-	creator_task:false,					//转发任务
-	mblog_menus_custom:false,				//寄微博
-	mblog_menus_video_later:true,			//可能是稍后再看？没出现过
-	mblog_menus_comment_manager:true,		//评论管理
-	mblog_menus_avatar_widget:false,		//头像挂件
-	mblog_menus_card_bg: false,			//卡片背景
+	creator_task:false,			//转发任务
+	mblog_menus_custom:false,		//寄微博
+	mblog_menus_video_later:true,		//可能是稍后再看？没出现过
+	mblog_menus_comment_manager:true,	//评论管理
+	mblog_menus_avatar_widget:false,	//头像挂件
+	mblog_menus_card_bg: false,		//卡片背景
 	mblog_menus_long_picture:true,		//生成长图
-	mblog_menus_delete:true,				//删除
-	mblog_menus_edit:true,				//编辑
+	mblog_menus_delete:true,		//删除
+	mblog_menus_edit:true,			//编辑
 	mblog_menus_edit_history:true,		//编辑记录
 	mblog_menus_edit_video:true,			//编辑视频
 	mblog_menus_sticking:true,			//置顶

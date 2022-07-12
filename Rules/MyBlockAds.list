@@ -1,5 +1,5 @@
 # utf-8
-# 2022-07-12 15:26
+# 2022-07-12 15:35
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
@@ -9,11 +9,11 @@
 IP-CIDR, 180.76.76.200/32, MyBlockAds
 
 # 微博开屏广告
-HOST, api.im.weibo.cn, MyBlockAds
-HOST, gw.im.weibo.cn, MyBlockAds
-HOST, gw1.im.weibo.cn, MyBlockAds
-HOST, public.us.sinaimg.cn, MyBlockAds
-HOST, wbox.sinaimg.cn, MyBlockAds
+;HOST, api.im.weibo.cn, MyBlockAds
+;HOST, gw.im.weibo.cn, MyBlockAds
+;HOST, gw1.im.weibo.cn, MyBlockAds
+;HOST, public.us.sinaimg.cn, MyBlockAds
+;HOST, wbox.sinaimg.cn, MyBlockAds
 
 # RARBG屏蔽跳转
 HOST, swallowcrockerybless.com, MyBlockAds

@@ -1,5 +1,5 @@
 # utf-8
-# 2022-07-12 15:35
+# 2022-07-12 17:18
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/ZhihuAds/ZhihuAds.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/MyAdRule.list
 # 引用地址 https://github.com/ddgksf2013/Cuttlefish/blob/master/Filter/Mybreak.list
@@ -35,8 +35,6 @@ HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds
 HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
-# h2下会请求这个,但请求会很慢发出
-HOST, grpc.biliapi.net, MyBlockAds
 # 哔哩哔哩自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
 

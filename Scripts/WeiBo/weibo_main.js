@@ -19,16 +19,16 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeGood: true,			//微博主好物种草
 	removeFollow: true,			//关注博主
 	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: true,	//评论区相关内容
+	removeRelateItem: true, 	//评论区相关内容
 	removeRecommendItem: true,	//评论区推荐内容
-	removeRewardItem: true,	//微博详情页打赏模块
+	removeRewardItem: true, 	//微博详情页打赏模块
 
 	removeLiveMedia: true,		//首页顶部直播
 	removeNextVideo: true,					//关闭自动播放下一个视频
 
-	removeInterestFriendInTopic: false,		//超话：超话里的好友
-	removeInterestTopic: false,				//超话：可能感兴趣的超话 + 好友关注
-	removeInterestUser: false,				//用户页：可能感兴趣的人
+	removeInterestFriendInTopic: true,		//超话：超话里的好友
+	removeInterestTopic: true,				//超话：可能感兴趣的超话 + 好友关注
+	removeInterestUser: true,				//用户页：可能感兴趣的人
 
 	removeLvZhou: true,					//绿洲模块
 	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告

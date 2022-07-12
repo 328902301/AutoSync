@@ -19,9 +19,9 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeGood: true,			//微博主好物种草
 	removeFollow: true,			//关注博主
 	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: true, 	//评论区相关内容
+	removeRelateItem: true,	//评论区相关内容
 	removeRecommendItem: true,	//评论区推荐内容
-	removeRewardItem: true, 	//微博详情页打赏模块
+	removeRewardItem: true,	//微博详情页打赏模块
 
 	removeLiveMedia: true,		//首页顶部直播
 	removeNextVideo: true,					//关闭自动播放下一个视频
@@ -31,7 +31,7 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeInterestUser: true,				//用户页：可能感兴趣的人
 
 	removeLvZhou: true,					//绿洲模块
-	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告
+	removeSearchWindow: true,			//搜索页滑动窗口，有的不是广告
 
 	profileSkin1: null,						//用户页：自定义图标1
 	profileSkin2: null,						//用户页：自定义图标2

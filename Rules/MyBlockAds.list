@@ -8,11 +8,6 @@
 # 贴吧屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, MyBlockAds
 
-# 微博开屏广告
-;HOST, api.im.weibo.cn, MyBlockAds
-;HOST, gw.im.weibo.cn, MyBlockAds
-;HOST, gw1.im.weibo.cn, MyBlockAds
-
 # RARBG屏蔽跳转
 HOST, swallowcrockerybless.com, MyBlockAds
 

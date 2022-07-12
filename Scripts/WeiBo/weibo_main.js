@@ -1,7 +1,4 @@
-// 2021-07-12
-// 引用地址 https:// github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-
-const version = 'v0712.1';
+const version = 'v0712.2';
 
 let $ = new nobyda();
 let storeMainConfig = $.read('mainConfig');
@@ -19,19 +16,18 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeGood: true,			//微博主好物种草
 	removeFollow: true,			//关注博主
 	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: true, 	//评论区相关内容
+	removeRelateItem: false,	//评论区相关内容
 	removeRecommendItem: true,	//评论区推荐内容
-	removeRewardItem: true, 	//微博详情页打赏模块
+	removeRewardItem: false,	//微博详情页打赏模块
 
 	removeLiveMedia: true,		//首页顶部直播
-	removeNextVideo: true,					//关闭自动播放下一个视频
+	removeNextVideo: false,					//关闭自动播放下一个视频
 
-	removeInterestFriendInTopic: true,		//超话：超话里的好友
-	removeInterestTopic: true,				//超话：可能感兴趣的超话 + 好友关注
-	removeInterestUser: true,				//用户页：可能感兴趣的人
+	removeInterestFriendInTopic: false,		//超话：超话里的好友
+	removeInterestTopic: false,				//超话：可能感兴趣的超话 + 好友关注
+	removeInterestUser: false,				//用户页：可能感兴趣的人
 
-	removeLvZhou: true,					//绿洲模块
-	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告
+	removeLvZhou: false,					//绿洲模块
 
 	profileSkin1: null,						//用户页：自定义图标1
 	profileSkin2: null,						//用户页：自定义图标2
@@ -87,6 +83,7 @@ const otherUrls = {
 	'/search/finder': 'removeSearchMain',
 	'/search/container_timeline': 'removeSearch',
 	'/search/container_discover': 'removeSearch',
+	'/2/messageflow': 'removeMsgAd',
 }
 
 function getModifyMethod(url) {
@@ -161,6 +158,21 @@ function removeSearch(data) {
 	return data;
 }
 
+
+function removeMsgAd(data) {
+	if(!data.messages) {
+		return;
+	}
+	let newMsgs = [];
+	for (let msg of data.messages) {
+		if(msg.msg_card?.ad_tag) {
+			continue;
+		}
+		newMsgs.push(msg)
+	}
+	data.messages = newMsgs;
+	return data;
+}
 
 function removeCards(data) {
 	if(!data.cards) {

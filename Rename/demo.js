@@ -57,7 +57,7 @@ var others = {
 };
 
 var additionalOthers = $arguments.others || '{}';
-console.log(additionalOthers);
+// console.log(additionalOthers);
 additionalOthers = JSON.parse(additionalOthers);
 others = Object.assign({}, additionalOthers, others);
 
@@ -111,7 +111,7 @@ function operator(proxies) {
         } else {
           resultArray.push(airport, countries[elem][0], countries[elem][1].toString().padStart(autofill, '0'));
         }
-        console.log(resultArray);
+        // console.log(resultArray);
         matched = true
         break;
       };

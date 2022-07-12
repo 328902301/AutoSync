@@ -30,13 +30,13 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeInterestTopic: true, 			//超话：可能感兴趣的超话 + 好友关注
 	removeInterestUser: true, 			//用户页：可能感兴趣的人
 
-	removeLvZhou: true,					//绿洲模块
-	removeSearchWindow: true,			// #搜索页滑动窗口，有的不是广告
+	removeLvZhou: true, 			//绿洲模块
+	removeSearchWindow: true, 			//搜索页滑动窗口，有的不是广告
 
-	profileSkin1: null,						//用户页：自定义图标1
-	profileSkin2: null,						//用户页：自定义图标2
-	tabIconVersion: 0,						//配置大于100的数
-	tabIconPath: ''							//配置图标路径
+	profileSkin1: null, 			//用户页：自定义图标1
+	profileSkin2: null,			//用户页：自定义图标2
+	tabIconVersion: 0,			//配置大于100的数
+	tabIconPath: ''				//配置图标路径
 }
 
 

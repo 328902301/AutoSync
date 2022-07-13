@@ -1,12 +1,12 @@
-#!name = IT之家去广告
-#!desc = 过滤IT之家信息流广告和正文广告
+#!name = 京东比价
+#!desc = 在京东应用内嵌入比价信息
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = toulanboy
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/IThome.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/JD.png
 
 [Script]
-http-response https?:\/\/api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)) script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js,requires-body=true, tag=IT之家去广告
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js,requires-body=true, tag=京东比价
   
 [MITM]
-hostname = api.ithome.com
+hostname = api.m.jd.com

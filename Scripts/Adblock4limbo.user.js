@@ -1,3 +1,5 @@
+// 引用地址 https://github.com/limbopro/Adblock4limbo/blob/main/Adguard/Adblock4limbo.user.js
+
 // ==UserScript==
 // @name         Adblock4limbo
 // @namespace    https://greasyfork.org/zh-CN/scripts/443290-adblock4limbo-adsremoveproject

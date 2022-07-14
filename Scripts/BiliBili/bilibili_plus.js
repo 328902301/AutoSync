@@ -83,7 +83,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 39直播 40推荐 41热门 545追番 554动画 151影视 99直播 100推荐 101热门
+          // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
           // 442开始为概念版id，适配港澳台代理模式
           const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
           // 尝试使用tab name直观修改
@@ -222,7 +222,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`动态去广告出现异常：${err}`);
         }
         break;
-      // 去除统一设置的皮肤
+      // 去除强制设置的皮肤
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);

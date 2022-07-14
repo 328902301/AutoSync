@@ -30,9 +30,9 @@ if (magicJS.read(blackKey)) {
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 39直播 40推荐 41热门 545追番 554动画 151影视 442动画, 99直播 100推荐 101热门
+          // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画 556动画
           // 442开始为概念版id，适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 151, 99, 100, 101, 556]);
+          const tabList = new Set([39, 40, 41, 151, 99, 100, 101, 554]);
           // 尝试使用tab name直观修改
           const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           let obj = JSON.parse(magicJS.response.body);

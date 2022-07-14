@@ -87,7 +87,7 @@ if (magicJS.read(blackKey)) {
             delete obj.data.vip_section_v2;
             delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
-            //2022-03-05 add by ddgksf2013
+            // 开启本地会员标识 2022-03-05 add by ddgksf2013
             if(obj.data.hasOwnProperty("live_tip")){
                 obj["data"]["live_tip"]={};
             }
@@ -130,7 +130,7 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`追番去广告出现异常：${err}`);
         }
         break;
-      // 去除统一设置的皮肤
+      // 去除强制设置的皮肤
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
@@ -142,7 +142,7 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
         }
         break;
-        // 屏蔽热搜
+        // 热搜去广告
         case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
@@ -170,11 +170,11 @@ if (magicJS.read(blackKey)) {
           magicJS.logError(`观影页去广告出现异常：${err}`);
         }
         break;
-        // 2022-03-05 add by ddgksf2013
+        // 解锁1080p高码率 2022-03-05 add by ddgksf2013
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // magicJS.logInfo(`已解锁1080p高码率`);
+          //magicJS.logInfo(`已解锁1080p高码率`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;
@@ -185,7 +185,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
       default:
-        //magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
+        magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
         break;
     }
   } else {

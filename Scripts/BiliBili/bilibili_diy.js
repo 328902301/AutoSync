@@ -12,6 +12,8 @@
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";
+const bilibili_disable_index_story = "bilibili_disable_index_story";
+const bilibili_enable_mall = "bilibili_enable_mall";
 let magicJS = MagicJS(scriptName, "INFO");
 
 // Customize blacklist
@@ -24,11 +26,70 @@ if (magicJS.read(blackKey)) {
   blacklist = defaultList.split(";");
 }
 
+const disableIndexStory = Boolean(magicJS.read(bilibili_disable_index_story));
+const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
+
 (() => {
   let body = null;
   if (magicJS.isResponse) {
     switch (true) {
-      // 标签页处理
+      // 推荐去广告，最后问号不能去掉，以免匹配到story模式
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          let items = [];
+          for (let item of obj["data"]["items"]) {
+            if (item.hasOwnProperty("banner_item")) {
+              continue;
+            } else if (
+              !item.hasOwnProperty("ad_info") &&
+              !blacklist.includes(item["args"]["up_name"]) &&
+              item.card_goto.indexOf("ad") === -1 &&
+              (item["card_type"] === "small_cover_v2" || item["card_type"] === "large_cover_v1")
+            ) {
+              if (disableIndexStory) {
+                if (item.uri.includes("bilibili://story")) {
+                  item.uri = item.uri.replace("bilibili://story", "bilibili://video");
+                }
+              }
+              items.push(item);
+            }
+          }
+          obj["data"]["items"] = items;
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`推荐去广告出现异常：${err}`);
+        }
+        break;
+      // 匹配story模式，用于记录Story的aid
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          let lastItem = obj["data"]["items"].pop();
+          let aid = lastItem["stat"]["aid"].toString();
+          magicJS.write(storyAidKey, aid);
+        } catch (err) {
+          magicJS.logError(`记录Story的aid出现异常：${err}`);
+        }
+        break;
+      // 开屏广告处理
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          obj["data"]["max_time"] = 0;
+          obj["data"]["min_interval"] = 31536000;
+          obj["data"]["pull_interval"] = 31536000;
+          for (let i = 0; i < obj["data"]["list"].length; i++) {
+            obj["data"]["list"][i]["duration"] = 0;
+            obj["data"]["list"][i]["begin_time"] = 1915027200;
+            obj["data"]["list"][i]["end_time"] = 1924272000;
+          }
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`开屏广告处理出现异常：${err}`);
+        }
+        break;
+      // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
           // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
@@ -36,12 +97,47 @@ if (magicJS.read(blackKey)) {
           const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
           // 尝试使用tab name直观修改
           const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
+          // 176消息 107概念版游戏中心，获取修改为Story模式
+          const topList = new Set([176, 222, 107]);
+          /*
+            标准版
+            177首页 178频道 179动态 181我的
+            概念版
+            102首页 103频道 104动态 106我的
+            港澳台
+            486首页 487频道 488动态 490我的
+          */
+          // 102开始为概念版id
+          const bottomList = new Set([177, 179, 181, 102, 104, 106, 486, 488, 490]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
               return tabNameList.has(e.name);
             });
             obj["data"]["tab"] = tab;
+          }
+          // 将 id（222 & 107）调整为Story功能按钮
+          let storyAid = magicJS.read(storyAidKey);
+          if (!storyAid) {
+            storyAid = "246834163";
+          }
+          if (obj["data"]["top"]) {
+            let top = obj["data"]["top"].filter((e) => {
+              if (e.id === 222 || e.id === 107) {
+                e.uri = `bilibili://story/${storyAid}`;
+                e.icon = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_icon.png";
+                e.tab_id = "Story_Top";
+                e.name = "Story";
+              }
+              return topList.has(e.id);
+            });
+            obj["data"]["top"] = top;
+          }
+          if (obj["data"]["bottom"]) {
+            let bottom = obj["data"]["bottom"].filter((e) => {
+              return bottomList.has(e.id);
+            });
+            obj["data"]["bottom"] = bottom;
           }
           body = JSON.stringify(obj);
         } catch (err) {
@@ -76,6 +172,15 @@ if (magicJS.read(blackKey)) {
             delete obj.data.vip_section_v2;
             delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
+            if (element.title === "更多服务" && enableMall) {
+              element.items.unshift({
+                id: 999,
+                title: "会员购",
+                icon: "http://i0.hdslb.com/bfs/archive/19c794f01def1a267b894be84427d6a8f67081a9.png",
+                common_op_item: {},
+                uri: "bilibili://mall/home",
+              });
+            }
             // 开启本地会员标识 2022-03-05 add by ddgksf2013
             if(obj.data.hasOwnProperty("live_tip")){
                 obj["data"]["live_tip"]={};
@@ -153,7 +258,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
         // 热搜去广告
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
+        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/(defaultwords|square)/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           if(obj.data.length>3){

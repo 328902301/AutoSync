@@ -73,7 +73,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 开屏广告处理
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj["data"]["max_time"] = 0;
@@ -258,7 +258,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
         // 热搜去广告
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/(defaultwords|square)/.test(magicJS.request.url):
+        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           if(obj.data.length>3){

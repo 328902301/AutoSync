@@ -4,12 +4,13 @@
 
 已对代码进行一定修改，以满足自己使用需求
 
-更新时间：2022-07-03
 修改时间：2022-07-14
+更新时间：2022-07-03
 脚本版本：(66)
 */
 
 const scriptName = "BiliBili";
+const storyAidKey = "bilibili_story_aid";
 const blackKey = "bilibili_feed_black";
 let magicJS = MagicJS(scriptName, "INFO");
 
@@ -27,6 +28,26 @@ if (magicJS.read(blackKey)) {
   let body = null;
   if (magicJS.isResponse) {
     switch (true) {
+      // 标签页处理
+      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
+        try {
+          // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
+          // 442开始为概念版id，适配港澳台代理模式
+          const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
+          // 尝试使用tab name直观修改
+          const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
+          let obj = JSON.parse(magicJS.response.body);
+          if (obj["data"]["tab"]) {
+            let tab = obj["data"]["tab"].filter((e) => {
+              return tabNameList.has(e.name);
+            });
+            obj["data"]["tab"] = tab;
+          }
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`标签页处理出现异常：${err}`);
+        }
+        break;
       // 我的页面处理，去除一些推广按钮
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
@@ -96,6 +117,27 @@ if (magicJS.read(blackKey)) {
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`追番去广告出现异常：${err}`);
+        }
+        break;
+      // 动态去广告
+      case /^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          let cards = [];
+          obj.data.cards.forEach((element) => {
+            if (element.hasOwnProperty("display") && element.card.indexOf("ad_ctx") <= 0) {
+              // 解决number类型精度问题导致B站动态中图片无法打开的问题
+              element["desc"]["dynamic_id"] = element["desc"]["dynamic_id_str"];
+              element["desc"]["pre_dy_id"] = element["desc"]["pre_dy_id_str"];
+              element["desc"]["orig_dy_id"] = element["desc"]["orig_dy_id_str"];
+              element["desc"]["rid"] = element["desc"]["rid_str"];
+              cards.push(element);
+            }
+          });
+          obj.data.cards = cards;
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`动态去广告出现异常：${err}`);
         }
         break;
       // 去除强制设置的皮肤

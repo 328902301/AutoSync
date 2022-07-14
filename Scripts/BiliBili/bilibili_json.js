@@ -8,7 +8,6 @@ if ($response.body === undefined) {
     $done({});
 }
 let body = JSON.parse($response.body);
-
 if (!body.hasOwnProperty('data')) {
     //console.log(url);
     //console.log("body:" + $response.body);
@@ -105,12 +104,10 @@ if (!body.hasOwnProperty('data')) {
         //$notification.post(notifiTitle, "路径/请求方法匹配错误:", method + "," + url);
     }
 }
-
 body = JSON.stringify(body);
 $done({
     body
 });
-
 function fixPos(arr) {
     for (let i = 0; i < arr.length; i++) {
         // 修复pos

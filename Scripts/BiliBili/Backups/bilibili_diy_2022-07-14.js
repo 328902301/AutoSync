@@ -4,6 +4,7 @@
 
 已对代码进行一定修改，以满足自己使用需求
 
+修改时间：2022-07-14
 更新时间：2022-07-03
 脚本版本：(66)
 */
@@ -91,9 +92,9 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
-          // 39直播 40推荐 41热门 545追番 554动画 151影视 99直播 100推荐 101热门
+          // 39直播 40推荐 41热门 545追番 554动画 151影视 442动画, 99直播 100推荐 101热门
           // 442开始为概念版id，适配港澳台代理模式
-          const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
+          const tabList = new Set([39, 40, 41, 151, 99, 100, 101, 556]);
           // 尝试使用tab name直观修改
           const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
           // 176消息 107概念版游戏中心，获取修改为Story模式
@@ -244,7 +245,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`动态去广告出现异常：${err}`);
         }
         break;
-      // 去除统一设置的皮肤
+      // 去除强制设置的皮肤
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
@@ -256,7 +257,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
         }
         break;
-        // 屏蔽热搜
+        // 热搜去广告
         case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
@@ -284,11 +285,11 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`观影页去广告出现异常：${err}`);
         }
         break;
-        // 2022-03-05 add by ddgksf2013
+        // 解锁1080p高码率 2022-03-05 add by ddgksf2013
         case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          // magicJS.logInfo(`已解锁1080p高码率`);
+          //magicJS.logInfo(`已解锁1080p高码率`);
           obj["data"]["vip"]["type"] = 2;
           obj["data"]["vip"]["status"] = 1;
           obj["data"]["vip"]["vip_pay_type"] = 1;

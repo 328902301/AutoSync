@@ -22,7 +22,7 @@ if (!body.hasOwnProperty('data')) {
             delete body.data.show;
             //console.log('成功');
         }
-    } else if (url.indexOf("resource/show/tab/v2") !== -1 && method === getMethod) {
+    } else if (url.indexOf("resource/show/tab") !== -1 && method === getMethod) {
         //console.log('tab修改');
         // 顶部右上角
         if (!body.data.hasOwnProperty('top')) {

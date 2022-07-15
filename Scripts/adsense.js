@@ -1,3 +1,5 @@
+// 引用地址 https://github.com/app2smile/rules/blob/master/js/adsense.js
+
 const url = $request.url;
 const method = $request.method;
 //console.log($response.body)

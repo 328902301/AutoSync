@@ -70,24 +70,16 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 开屏广告处理
-      case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          if(obj.data){
-          for (let item of obj["data"]["list"]) {
-              item["duration"] = 0;  // 显示时间
-              // 2040 年
-              item["begin_time"] = 2240150400;
-              item["end_time"] = 2240150400;
-          }
-          }
-          if(obj.data){
-          for (let item of obj["data"]["show"]) {
-              item["duration"] = 0;  // 显示时间
-              // 2040 年
-              item["begin_time"] = 2240150400;
-              item["end_time"] = 2240150400;
-          }
+          obj["data"]["max_time"] = 0;
+          obj["data"]["min_interval"] = 31536000;
+          obj["data"]["pull_interval"] = 31536000;
+          for (let i = 0; i < obj["data"]["list"].length; i++) {
+            obj["data"]["list"][i]["duration"] = 0;
+            obj["data"]["list"][i]["begin_time"] = 1915027200;
+            obj["data"]["list"][i]["end_time"] = 1924272000;
           }
           body = JSON.stringify(obj);
         } catch (err) {

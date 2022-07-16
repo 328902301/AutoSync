@@ -4,7 +4,7 @@
 
 已对代码进行一定修改，以满足自己使用需求
 
-修改时间：2022-07-14
+修改时间：2022-07-16
 更新时间：2022-07-03
 脚本版本：(66)
 */
@@ -73,7 +73,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 开屏广告处理
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj["data"]["max_time"] = 0;
@@ -83,6 +83,11 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             obj["data"]["list"][i]["duration"] = 0;
             obj["data"]["list"][i]["begin_time"] = 1915027200;
             obj["data"]["list"][i]["end_time"] = 1924272000;
+          }
+          for (let ii = 0; ii < obj["data"]["show"].length; ii++) {
+            obj["data"]["list"][ii]["duration"] = 0;
+            obj["data"]["list"][ii]["begin_time"] = 1915027200;
+            obj["data"]["list"][ii]["end_time"] = 1924272000;
           }
           body = JSON.stringify(obj);
         } catch (err) {

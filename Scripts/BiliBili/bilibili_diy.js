@@ -85,9 +85,9 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             obj["data"]["list"][i]["end_time"] = 1924272000;
           }
           for (let ii = 0; ii < obj["data"]["show"].length; ii++) {
-            obj["data"]["list"][ii]["duration"] = 0;
-            obj["data"]["list"][ii]["begin_time"] = 1915027200;
-            obj["data"]["list"][ii]["end_time"] = 1924272000;
+            obj["data"]["show"][ii]["duration"] = 0;
+            obj["data"]["show"][ii]["begin_time"] = 1915027200;
+            obj["data"]["show"][ii]["end_time"] = 1924272000;
           }
           body = JSON.stringify(obj);
         } catch (err) {

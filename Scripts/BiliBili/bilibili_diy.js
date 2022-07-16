@@ -70,21 +70,24 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 开屏广告处理
-      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
+      case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          obj["data"]["max_time"] = 0;
-          obj["data"]["min_interval"] = 31536000;
-          obj["data"]["pull_interval"] = 31536000;
-          for (let i = 0; i < obj["data"]["list"].length; i++) {
-            obj["data"]["list"][i]["duration"] = 0;
-            obj["data"]["list"][i]["begin_time"] = 1915027200;
-            obj["data"]["list"][i]["end_time"] = 1924272000;
+          if(obj.data){
+          for (let item of obj["data"]["list"]) {
+              item["duration"] = 0;  // 显示时间
+              // 2040 年
+              item["begin_time"] = 2240150400;
+              item["end_time"] = 2240150400;
           }
-          for (let ii = 0; ii < obj["data"]["show"].length; ii++) {
-            obj["data"]["show"][ii]["duration"] = 0;
-            obj["data"]["show"][ii]["begin_time"] = 1915027200;
-            obj["data"]["show"][ii]["end_time"] = 1924272000;
+          }
+          if(obj.data){
+          for (let item of obj["data"]["show"]) {
+              item["duration"] = 0;  // 显示时间
+              // 2040 年
+              item["begin_time"] = 2240150400;
+              item["end_time"] = 2240150400;
+          }
           }
           body = JSON.stringify(obj);
         } catch (err) {

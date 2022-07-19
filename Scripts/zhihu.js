@@ -1,8 +1,3 @@
-/*
-引用地址 https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
-引用地址 https://gist.githubusercontent.com/blackmatrix7/2e550ebf28ca60d620654e394ec47e0b/raw/zhihu.js
-*/
-
 const scriptName = "知乎助手";
 const blockedUsersKey = "zhihu_blocked_users";
 const currentUserInfoKey = "zhihu_current_userinfo";
@@ -26,7 +21,7 @@ let magicJS = MagicJS(scriptName, "INFO");
         response = modifyAnswer();
         break;
       // 处理登录用户信息
-      case /^https:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/people\/self/.test(magicJS.request.url):
+      case /^https:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/people\/self$/.test(magicJS.request.url):
         response = processUserInfo();
         break;
       // 黑名单增强 - 浏览黑名单用户信息时自动加入脚本黑名单
@@ -394,14 +389,16 @@ function removeHotListAds() {
   try {
     if (!!magicJS.response.body) {
       let obj = JSON.parse(magicJS.response.body);
-      let data = obj["data"].filter((e) => {
-        return e["type"] === "hot_list_feed" || e["type"] === "hot_list_feed_video";
-      });
-      obj["data"] = data;
+      if ('data' in obj){
+        let data = obj["data"].filter((e) => {
+          return e["type"] === "hot_list_feed" || e["type"] === "hot_list_feed_video";
+        });
+        obj["data"] = data;
+      }
       response = { body: JSON.stringify(obj) };
     }
   } catch (err) {
-    magicJS.logError(`去除知乎热搜广告出现异常：${err}`);
+    magicJS.logError(`去除知乎热榜广告出现异常：${err}`);
   }
   return response;
 }
@@ -577,22 +574,25 @@ function removeQuestionsAds() {
     magicJS.logDebug(`当前黑名单列表: ${JSON.stringify(customBlockedUsers)}`);
     delete obj["ad_info"];
     delete obj["roundtable_info"];
-    let data = obj["data"].filter((element) => {
-      let blackUserName = "";
-      try{
-        if ("author" in element){
-          blackUserName = element["author"]["name"]
+    // 去除回答列表中的黑名单用户
+    if ('data' in obj){
+      let data = obj["data"].filter((element) => {
+        let blackUserName = "";
+        try{
+          if ("author" in element){
+            blackUserName = element["author"]["name"]
+          }
+          else if("target" in element){
+            blackUserName = element["target"]["author"]["name"]
+          }
         }
-        else if("target" in element){
-          blackUserName = element["target"]["author"]["name"]
+        catch (ex){
+          magicJS.logError(`获取回答列表用户名出现异常：${err}`);
         }
-      }
-      catch (ex){
-        magicJS.logError(`获取回答列表用户名出现异常：${err}`);
-      }
-      return blackUserName == "" || !customBlockedUsers[blackUserName];
-    });
-    obj["data"] = data;
+        return blackUserName == "" || !customBlockedUsers[blackUserName];
+      });
+      obj["data"] = data;
+    }
     let body = JSON.stringify(obj);
     magicJS.logDebug(`修改后的回答列表数据：${body}`);
     response = { body: body };

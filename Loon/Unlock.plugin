@@ -1,6 +1,6 @@
 #!name=APP功能
 #!desc=解锁订阅，高级功能
-
+#!icon= https://raw.githubusercontent.com/iEwha/Profiles/master/icon/Unlock.png
 [Script]
 # > VSCO 解锁高级特权
 http-response pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js, requires-body=true, timeout=10, tag=vsco

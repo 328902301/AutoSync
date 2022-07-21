@@ -6,7 +6,6 @@ https://github.com/ddgksf2013/Cuttlefish/blob/master/Html/WebAdBlock.conf
 # 引用地址 - MyBlockAds.conf
 ```
 https://github.com/app2smile/rules/blob/master/module/adsense.conf
-https://github.com/zZPiglet/Task/blob/master/ChangeUA.conf
 https://github.com/zZPiglet/Task/blob/master/noredirect.conf
 https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/MyAdRule.conf
 https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/AdBlock/Bilibili.conf
@@ -29,4 +28,5 @@ https://github.com/yqc007/QuantumultX/blob/master/PornHubPremiumCrack.js
 ```
 https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Rewrite/General.conf
 https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.conf
+https://github.com/zZPiglet/Task/blob/master/ChangeUA.conf
 ```

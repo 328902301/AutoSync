@@ -98,7 +98,7 @@ if (url.indexOf("api.zhihu.com/commercial_api/real_time_launch_v2") !== -1 && me
         return true;
     });
 } else if (url.indexOf("www.zhihu.com/api/v4/answers") !== -1 && method === getMethod) {
-    console.log('知乎-回答下的广告');
+    //console.log('知乎-回答下的广告');
     if (body.paging === undefined || body.data === undefined) {
         //console.log("body:" + $response.body);
         //$notification.post(noticeTitle, '知乎回答下广告', "paging/data字段为undefined");
@@ -154,7 +154,7 @@ $done({
  * @param {*} name 日志名称
  */
 function zhihuAds(body, name) {
-    console.log(name);
+    //console.log(name);
     let launch;
     if (body.launch === undefined) {
         //console.log("body:" + $response.body);

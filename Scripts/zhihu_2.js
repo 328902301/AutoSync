@@ -69,7 +69,7 @@ if (url.indexOf("api.zhihu.com/commercial_api/real_time_launch_v2") !== -1 && me
     } else {
         //console.log('questions');
     }
-    console.log('知乎-问题回答列表');
+    //console.log('知乎-问题回答列表');
     if (body.ad_info === undefined) {
         // 个别问题回答列表无广告
         //console.log("问题回答列表无广告");

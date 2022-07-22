@@ -10,6 +10,7 @@ https://github.com/zZPiglet/Task/blob/master/noredirect.conf
 https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/MyAdRule.conf
 https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/AdBlock/Bilibili.conf
 #https://github.com/app2smile/rules/blob/master/module/bilibili-qx.conf
+https://github.com/zZPiglet/Task/blob/master/UnblockURLinWeChat.conf
 https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.sgmodule
 https://github.com/zmqcherish/proxy-script/blob/main/weibo.conf
 https://github.com/yjqiang/surge_scripts/blob/main/modules/weibo/weibo.sgmodule

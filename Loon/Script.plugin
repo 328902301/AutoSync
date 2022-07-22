@@ -8,13 +8,9 @@ DOMAIN-SUFFIX,waqi.info
 
 [URL Rewrite]
 # > Redirect Google Search Service
-(https:\/\/www\.google\.com([.a-z]+)?\/.+)(&safe=(active|strict)&)(.+) 302 $1&safe=off
-https://www\.google\.com\.hk\/search\?q=([\w.]+)&(.+) 302 https://www.google.com.sg/search?q=$1&safe=off
-^https?:\/\/(www.)?(g|google)\.(cn|hk) 302 https://www.google.com
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
 # > Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
-# > IGN China to IGN Global
-^https?:\/\/(www.)?ign\.xn--fiqs8s\/ 302 http://cn.ign.com/ccpref/us
 # > YouTube中文字幕
 ^https:\/\/www\.youtube\.com\/api\/timedtext\? header https://www.youtube.com/api/timedtext?tlang=zh-Hans&
 # > 天气

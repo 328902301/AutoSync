@@ -22,7 +22,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: 'All streaming checking!',
+      title: 'Streaming Media Checking!',
       content: '',
       icon: 'xxxx',
       'icon-color': 'xxxx',

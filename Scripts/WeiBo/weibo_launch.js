@@ -1,11 +1,39 @@
-let body = JSON.parse($response.body.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
-if (body.background_delay_display_time)
-    body.background_delay_display_time = 60*60*24*365;
-for (let item of body['ads']) {
-    // console.log(`${item['begintime']} -- ${item['endtime']}`);
-    item['displaytime'] = 0;  // 显示时间
-    // 2040 年
-    item['begintime'] = '2040-12-27 00:00:01';
-    item['endtime'] = '2040-12-27 23:59:59';
+//参考@yichahucha 的脚本
+
+const launchAdUrl1 = '/interface/sdk/sdkad.php';
+const launchAdUrl2 = '/wbapplua/wbpullad.lua';
+
+// function needModify(url) {
+// 	if(url.indexOf(launchAdUrl1) > -1 || url.indexOf(launchAdUrl2) > -1) {
+// 		return true;
+// 	}
+// 	return false;
+// }
+
+function modifyMain(url, data) {
+	if(url.indexOf(launchAdUrl1) > -1) {
+		let temp = data.match(/\{.*\}/);
+		if(!temp) return data;
+		data = JSON.parse(temp);
+		if (data.ads) data.ads = [];
+		if (data.background_delay_display_time) data.background_delay_display_time = 60 * 60 * 24 * 1000;
+		if (data.show_push_splash_ad) data.show_push_splash_ad = false;
+		return JSON.stringify(data) + 'OK';
+	}
+	if(url.indexOf(launchAdUrl2) > -1) {
+		data = JSON.parse(data);
+		if (data.cached_ad && data.cached_ad.ads) {
+			data.cached_ad.ads = [];
+		}
+		return JSON.stringify(data);
+	}
+	return data;
 }
-$done({body: `${JSON.stringify(body)}OK`});
+
+var body = $response.body;
+var url = $request.url;
+// if(needModify(url)) {
+body = modifyMain(url, body);
+// }
+
+$done(body);

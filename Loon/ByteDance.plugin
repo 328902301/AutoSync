@@ -1,6 +1,10 @@
-#!name= 抖音
-#!desc= 去除广告和水印
+#!name=抖音短视频
+#!desc=去广告和水印 | 抖音版本 <= 16.2.0
+#!system=ios
 #!icon= https://raw.githubusercontent.com/iEwha/Profiles/master/icon/ByteDance.png
+
+[Rule]
+URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
 
 [Rewrite]
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v2\/feed\/ header https://aweme.snssdk.com/aweme/v1/feed/

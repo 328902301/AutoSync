@@ -2,7 +2,6 @@
 ```
 #https://github.com/zmqcherish/proxy-script/blob/main/weibo_config.js
 https://github.com/yichahucha/surge/blob/master/wb_launch.js
-#https://github.com/zmqcherish/proxy-script/blob/main/weibo_launch.js
 https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 #https://github.com/yjqiang/surge_scripts/tree/main/scripts/weibo/weibo_sdkad.js
 ```

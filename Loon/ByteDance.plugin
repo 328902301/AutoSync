@@ -3,14 +3,11 @@
 #!system=ios
 #!icon= https://raw.githubusercontent.com/iEwha/Profiles/master/icon/ByteDance.png
 
-[Rule]
-URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
-
 [Rewrite]
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v2\/feed\/ header https://aweme.snssdk.com/aweme/v1/feed/
 
 [Script]
-http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v\d\/feed\/ script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ByteDance.js, requires-body=true, timeout=10, tag=抖音
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v\d\/feed\/ script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ByteDance.js, requires-body=true, timeout=10, tag=抖音短视频
 
 [MITM]
 hostname = *.snssdk.com,*.amemv.com

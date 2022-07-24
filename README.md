@@ -55,7 +55,7 @@
   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/bilibili.conf
 * 抖音净化
    ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/douyin.conf 
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Aweme.conf 
 * TikTok解锁 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf

@@ -1,20 +1,18 @@
 # Quantumult X
-全部资源来源于互联网，纯自用，如侵删。
 
+全部资源来源于互联网，纯自用，如侵删。
 配置文件链接：
-```JavaScript
+```Java
 https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ```
-
-------------------------------
 
 # 配置说明
 
 本配置纯自用。
->⚠️⚠️下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请导出并保存。
+>⚠️⚠️下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
 
 使用方法：
-  1. 复制上面的 `配置文件链接` 备用；
+  1. 复制上面的 `[配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf)` 备用；
   2. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，将复制的链接 `粘贴` 进去，然后点右上角点 `保存` ；
   3. 在当前界面，找到 `MitM` 选项卡，先点击 `生成证书` ，再点击 `配置证书` ，在弹出窗口中点击 `允许` ；
   4. 打开iOS系统设置，打开 `通用-描述文件` ，点击两次 `安装` ，等待安装完成；
@@ -23,12 +21,10 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
   7. 在当前界面，找到 `节点` 选项卡，点击 `引用(订阅)` 添加自己的 `订阅链接` ；
   8. 开始使用。
 
-------------------------------
-
 # 资源解析器使用说明
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
-```JavaScript
+```Java
 resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
 ```
 >⚠️⚠️ 如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
@@ -37,9 +33,8 @@ resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scri
 3. 则填入 Quantumult X 的引用链接为 `https://xxx.txt#in=tls+ss&out=http+2` ；
 4. 填入上述链接, 并打开资源解析器开关。
 
-------------------------------
-
 # 更新日志
+
 ## 2022-01-12
 - 新增 添加流媒体检测模块
 ## 2022-03-27

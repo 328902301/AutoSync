@@ -12,7 +12,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 >⚠️⚠️下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
 
 使用方法：
-  1. 复制上面的 `[配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf)` 备用；
+  1. 复制上面的 [配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf) 备用；
   2. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，将复制的链接 `粘贴` 进去，然后点右上角点 `保存` ；
   3. 在当前界面，找到 `MitM` 选项卡，先点击 `生成证书` ，再点击 `配置证书` ，在弹出窗口中点击 `允许` ；
   4. 打开iOS系统设置，打开 `通用-描述文件` ，点击两次 `安装` ，等待安装完成；

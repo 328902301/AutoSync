@@ -1,12 +1,12 @@
 # Quantumult X
 全部资源来源于互联网，纯自用，如侵删。
 
-------------------------------
-
 配置文件链接：
-```Java
+```JavaScript
 https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ```
+
+------------------------------
 
 # 配置说明
 
@@ -28,7 +28,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 # 资源解析器使用说明
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
-```Java
+```JavaScript
 resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
 ```
 >⚠️⚠️ 如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；

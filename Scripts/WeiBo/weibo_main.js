@@ -505,7 +505,7 @@ function nextVideoHandler(data) {
 	if(mainConfig.removeNextVideo) {
 		data.statuses = [];
 		data.tab_list = [];
-		console.log('nextVideoHandler');
+		log('nextVideoHandler');
 	}
 }
 

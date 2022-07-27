@@ -14,6 +14,5 @@ https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Dir
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Microsoft/Microsoft.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Speedtest/Speedtest.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/SystemOTA/SystemOTA.list
-https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/TikTok/TikTok.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/WeChat/WeChat.list
 ```

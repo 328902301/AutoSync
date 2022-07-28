@@ -152,6 +152,20 @@ rule-providers:
     path: ./Ruleset/iEwha/Private.yaml
     interval: 86400
 
+   Apple:
+    type: http
+    behavior: domain
+    path: ./Ruleset/iEwha/Apple.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Apple.yaml
+    interval: 86400
+
+   icloud:
+    type: http
+    behavior: domain
+    path: ./Ruleset/iEwha/icloud.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/icloud.yaml
+    interval: 86400
+
    Microsoft:
     type: http
     behavior: classical
@@ -205,6 +219,8 @@ rule-providers:
 rules:
   - RULE-SET,Reject,REJECT
   - RULE-SET,Private,DIRECT
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,icloud,苹果服务
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Emby,Emby
   - RULE-SET,Telegram,电报信息
@@ -221,6 +237,8 @@ script:
         ruleset_action = {     
             "Reject": "REJECT",
             "Private": "DIRECT",   
+            "Apple": "苹果服务",
+            "icloud": "苹果服务",
             "Microsoft": "微软服务",
             "Emby": "Emby",
             "Telegram": "电报信息",

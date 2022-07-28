@@ -44,6 +44,7 @@ IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, MyBlockAds
 # 云闪付开屏广告
 HOST, ads.95516.com, MyBlockAds
 HOST, tysdk.95516.com, MyBlockAds
+HOST, sdk.open.talk.getui.net, MyBlockAds
 
 # MyAdRule
 HOST-SUFFIX, ywak.com.cn, MyBlockAds

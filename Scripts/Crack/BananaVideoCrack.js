@@ -7,14 +7,15 @@
 更新时间：2022-07-24
 脚本发布：https://t.me/yqc_123
 问题反馈：https://t.me/yqc_777
-使用声明：⚠️此脚本仅供学习与交流，
-        请勿转载与贩卖！⚠️⚠️⚠️
+使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
+
 *******************************
+
 [rewrite_local]
 # > 香蕉视频解锁无限次数
 ^https?:\/\/.+\/(index|ucp\/index|vod\/(show|reqplay\/)|getGlobalData).+ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/BananaVideoCrack.js
 
-[mitm] 
+[mitm]
 hostname = o0o0plpl11.xinai99.com
 
 *******************************/

@@ -13,6 +13,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 >⚠️ 此配置文件没有国内 IP 分流，请配置 IP 数据库。
 
 使用方法：
+
   0. 复制上面的 [配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf) 备用；
   1. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，将复制的链接 `粘贴` 进去，然后点右上角点 `保存` ；
   2. 在当前界面，找到 `MitM` 选项卡，先点击 `生成证书` ，再点击 `配置证书` ，在弹出窗口中点击 `允许` ；
@@ -24,6 +25,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
   8. 大功告成，开始使用。
 
 配置国内 IP 数据库：
+
   0. 复制[此链接](https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/Country.mmdb)备用；
   1. 在 Quantumult X 主界面，点击 `右下角风车` ；
   2. 滑到底部，点击 `其他设置` ；

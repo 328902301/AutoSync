@@ -9,11 +9,11 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 
 # 配置说明
 
->⚠️ 本配置纯自用。
+>⚠️⚠️ 本配置纯自用。
 
->⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
+>⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
 
->⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
+>⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
 
 ## 使用方法：
   0. 复制上面的 [配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf) 备用；
@@ -27,11 +27,11 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
   8. 大功告成，开始使用。
 
 ## 配置国内 IP 数据库：
->⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
+>⚠️⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
 
->⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效。
+>⚠️⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效。
 
->‼️ 注意！不是退出后台。
+>❗️❗️ 注意！不是退出后台。
   0. 复制 [此链接](https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/Country.mmdb) 备用；
   1. 在 Quantumult X 主界面，点击 `右下角风车` ；
   2. 滑到底部，点击 `其他设置` ；
@@ -44,9 +44,9 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ```Java
 resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
 ```
->⚠️ 如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
+>⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
 2. 假设原始订阅链接为 `https://xxx.txt` ，你想要保留的参数为 `in=tls+ss` ，想要过滤的参数为 `out=http+2` ；
->⚠️ 请注意下面订阅链接后一定要加 `#` 符号；
+>⚠️⚠️ 请注意下面订阅链接后一定要加 `#` 符号；
 3. 则填入 Quantumult X 的引用链接为 `https://xxx.txt#in=tls+ss&out=http+2` ；
 4. 填入上述链接, 并打开资源解析器开关。
 

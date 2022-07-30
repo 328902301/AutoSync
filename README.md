@@ -35,7 +35,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
   1. 在 Quantumult X 主界面，点击 `右下角风车` ；
   2. 滑到底部，点击 `其他设置` ；
   3. 滑到底部，找到 `GeoLite2` 选项卡，点击右上角的 `来源` ；
-  4. 输入此前 `复制的链接` ，点击 `好的` 即可。
+  4. 输入此前 `复制的链接` ，点击 `好的` 保存，之后点击 `立即更新` 即可。
 
 # 资源解析器使用说明
 

@@ -28,7 +28,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ## 配置国内 IP 数据库：
 >⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
 
->⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效(注意‼️不是退出后台)。
+>⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效 (‼️注意不是退出后台)。
   0. 复制 [此链接](https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/Country.mmdb) 备用；
   1. 在 Quantumult X 主界面，点击 `右下角风车` ；
   2. 滑到底部，点击 `其他设置` ；

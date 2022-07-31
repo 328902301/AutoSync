@@ -2,7 +2,17 @@
 #!desc= Bilbii换区,评分、YouTube 字幕翻译、Siri搜索建议、美标空气质量、微信公众号广告
 #!system=ios
 
+[General]
+force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
+
 [Rule]
+# > Safari 防跳转
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+# > 屏蔽HTTP3/QUIC协议
+AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+# > Block iOS Update
+DOMAIN,gdmf.apple.com,REJECT
+
 # > Look Up 
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Look_Up.Wikipedia.list,Proxy
 

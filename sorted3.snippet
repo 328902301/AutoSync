@@ -1,0 +1,7 @@
+[mitm] 
+hostname= api.sortedapp.com
+
+[rewrite_local]
+# ～ filebox解鎖會員權限（2022-02-18）
+^https:\/\/api\.sortedapp\.com\/receipts\/verify url script-response-body https://raw.githubusercontent.com/YAOJIO/myself/master/sorted3.js
+

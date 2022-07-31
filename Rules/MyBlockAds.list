@@ -1,5 +1,5 @@
 # utf-8
-# 2022-07-31 09:52
+# 2022-07-31 10:05
 
 # 贴吧屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, MyBlockAds
@@ -13,6 +13,8 @@ HOST, pageviewp.icbc.com.cn, MyBlockAds
 # Clue智库推广信息
 HOST, api.helloclue.com, MyBlockAds
 HOST, brahe.apptimize.com, MyBlockAds
+HOST, mapi.apptimize.com, MyBlockAds
+HOST, md-i-s.apptimize.com, MyBlockAds
 HOST, collector.clue.run, MyBlockAds
 HOST, images.ctfassets.net, MyBlockAds
 

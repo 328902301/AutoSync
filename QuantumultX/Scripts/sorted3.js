@@ -1,15 +1,19 @@
 /***********************************
+
 > 應用名稱：Sorted3
 > 軟件版本：3.8.6
 > 下載地址：https://apps.apple.com/cn/app/id1306893526
 > 特別說明：本腳本自用，禁止轉載銷售
  
+ 
 [rewrite_local]
 # Sorted3 解鎖會員權限
 ^https:\/\/api\.sortedapp\.com\/receipts\/verify url script-response-body sorted3.js
 
+
 [mitm] 
 hostname= api.sortedapp.com
+
 ***********************************/
 
 var ddgksf2013={

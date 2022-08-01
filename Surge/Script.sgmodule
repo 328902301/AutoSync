@@ -6,6 +6,11 @@
 force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
 [Rule]
+# > 手机百度
+DOMAIN-SUFFIX,boxer.baidu.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,ug.baidu.com,REJECT-TINYGIF
+URL-REGEX,^https?:\/\/mbd\.baidu\.com\/tcbox,REJECT-TINYGIF
+URL-REGEX,^https?:\/\/s\.bdstatic\.com\/common\/openjs\/openBox\.js.*,REJECT-TINYGIF
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > 屏蔽HTTP3/QUIC协议
@@ -17,7 +22,6 @@ DOMAIN,api.waqi.info,𝐏𝐫𝐨𝐱𝐲
 # > boxjs 代理
 DOMAIN,boxjs.net,𝐏𝐫𝐨𝐱𝐲
 DOMAIN,boxjs.com,𝐏𝐫𝐨𝐱𝐲
-
 # > Look Up 
 RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Look_Up.Wikipedia.list,𝐏𝐫𝐨𝐱𝐲
 
@@ -66,4 +70,4 @@ Siri Infomation Card = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.a
 微信公众号 = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/WeChat.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND%  ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, mp.weixin.qq.com,
+hostname = %APPEND% mbd.baidu.com, ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, mp.weixin.qq.com,

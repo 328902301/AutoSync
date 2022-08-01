@@ -12,9 +12,14 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # > Block iOS Update
 DOMAIN,gdmf.apple.com,REJECT
+# > 天气数据
+DOMAIN,api.waqi.info,𝐏𝐫𝐨𝐱𝐲
+# > boxjs 代理
+DOMAIN,boxjs.net,𝐏𝐫𝐨𝐱𝐲
+DOMAIN,boxjs.com,𝐏𝐫𝐨𝐱𝐲
 
 # > Look Up 
-RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Look_Up.Wikipedia.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Look_Up.Wikipedia.list,𝐏𝐫𝐨𝐱𝐲
 
 [URL Rewrite]
 # > Redirect Google Search Service

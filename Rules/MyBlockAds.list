@@ -1,10 +1,10 @@
 # utf-8
-# 2022-08-01 22:26
+# 2022-08-01 22:27
 
 # 网上国网开屏广告
-HOST, kepler.jd.com, MyBlockAds
 HOST, dg.k.jd.com, MyBlockAds
 HOST, dgstatic.jd.com, MyBlockAds
+HOST, kepler.jd.com, MyBlockAds
 
 # 贴吧屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, MyBlockAds

@@ -45,6 +45,8 @@ DOMAIN,cdn4.apple-mapkit.com
 DOMAIN,cds-cdn.v.aaplimg.com
 DOMAIN,cds.apple.com
 DOMAIN,cds.apple.com.akadns.net
+DOMAIN,certs-lb.apple.com.akadns.net
+DOMAIN,certs.apple.com
 DOMAIN,checkin.gstatic.com
 DOMAIN,cl1-cdn.origin-apple.com.akadns.net
 DOMAIN,cl1.apple.com
@@ -71,7 +73,10 @@ DOMAIN,configuration.apple.com
 DOMAIN,configuration.apple.com.akadns.net
 DOMAIN,connectivitycheck.gstatic.com
 DOMAIN,corp.google.com
+DOMAIN,crl-lb.apple.com.akadns.net
+DOMAIN,crl.apple.com
 DOMAIN,crl.pki.goog
+DOMAIN,crl2.alphassl.com
 DOMAIN,csi-china.l.google.com
 DOMAIN,csi.gstatic.com
 DOMAIN,cstat.apple.com
@@ -220,6 +225,7 @@ DOMAIN,se-edge.itunes.apple.com
 DOMAIN,se2.itunes.apple.com
 DOMAIN,search.itunes.apple.com
 DOMAIN,secure.globalsign.com
+DOMAIN,secure2.alphassl.com
 DOMAIN,settings.crashlytics.com
 DOMAIN,sf-api-token-service.itunes.apple.com
 DOMAIN,silverlight.dlservice.microsoft.com

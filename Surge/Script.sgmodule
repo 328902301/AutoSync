@@ -17,13 +17,6 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # > Block iOS Update
 DOMAIN,gdmf.apple.com,REJECT
-# > 天气数据
-DOMAIN,api.waqi.info,𝐏𝐫𝐨𝐱𝐲
-# > boxjs 代理
-DOMAIN,boxjs.net,𝐏𝐫𝐨𝐱𝐲
-DOMAIN,boxjs.com,𝐏𝐫𝐨𝐱𝐲
-# > Look Up 
-RULE-SET,https://raw.githubusercontent.com/VirgilClyne/iRingo/main/RuleSet/Look_Up.Wikipedia.list,𝐏𝐫𝐨𝐱𝐲
 
 [URL Rewrite]
 # > Redirect Google Search Service
@@ -70,4 +63,4 @@ Siri Infomation Card = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.a
 微信公众号 = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/WeChat.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% mbd.baidu.com, s.bdstatic.com,ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, mp.weixin.qq.com,
+hostname = %APPEND% mbd.baidu.com, s.bdstatic.com, ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn, weather-data.apple.com, weather-map.apple.com, mp.weixin.qq.com,

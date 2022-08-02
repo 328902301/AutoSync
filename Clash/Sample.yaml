@@ -253,6 +253,7 @@ rules:
   - RULE-SET,icloud,苹果服务
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Emby,Emby
+  - RULE-SET,instagram,instagram
   - RULE-SET,Telegram,电报信息
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Proxy,全球加速

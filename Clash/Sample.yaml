@@ -80,6 +80,14 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
+  - name: TikTok
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
   - name: 苹果服务
     type: select
     proxies:
@@ -187,6 +195,13 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Telegram.yaml
     interval: 86400
 
+   TikTok:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/TikTok.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/TikTok.yaml
+    interval: 86400
+
    Proxy:
     type: http
     behavior: domain
@@ -224,6 +239,7 @@ rules:
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Emby,Emby
   - RULE-SET,Telegram,电报信息
+  - RULE-SET,TikTok,TikTok
   - RULE-SET,Proxy,全球加速
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
@@ -242,6 +258,7 @@ script:
             "Microsoft": "微软服务",
             "Emby": "Emby",
             "Telegram": "电报信息",
+            "TikTok": "TikTok",
             "Proxy": "全球加速",
             "China": "DIRECT",   
             "cncidr": "DIRECT",   

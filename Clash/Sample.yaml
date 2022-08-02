@@ -64,24 +64,6 @@ proxy-providers:
       interval: 600
 
 proxy-groups:
-  - name: 苹果服务
-    type: select
-    proxies:
-      - 香港节点
-      - 狮城节点
-      - 韩国节点
-      - 日本节点
-      - 美国节点
-      - DIRECT
-  - name: 微软服务
-    type: select
-    proxies:
-      - 香港节点
-      - 狮城节点
-      - 韩国节点
-      - 日本节点
-      - 美国节点
-      - DIRECT
   - name: Emby
     type: select
     proxies:
@@ -99,7 +81,7 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: 电报信息
+  - name: Telegram
     type: select
     proxies:
       - 香港节点
@@ -115,7 +97,7 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: 全球加速
+  - name: Porxy
     type: select
     proxies:
       - 香港节点
@@ -123,7 +105,7 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: 漏网之鱼
+  - name: MATCH
     type: select
     proxies:
       - 香港节点
@@ -249,18 +231,18 @@ rule-providers:
 rules:
   - RULE-SET,Reject,REJECT
   - RULE-SET,Private,DIRECT
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,icloud,苹果服务
-  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Emby,Emby
   - RULE-SET,instagram,instagram
-  - RULE-SET,Telegram,电报信息
+  - RULE-SET,Telegram,Telegram
   - RULE-SET,TikTok,TikTok
-  - RULE-SET,Proxy,全球加速
+  - RULE-SET,Proxy,Proxy
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,Lancidr,DIRECT
-  - MATCH,漏网之鱼
+  - MATCH,MATCH
 
 # 脚本模式
 script:
@@ -269,14 +251,14 @@ script:
         ruleset_action = {     
             "Reject": "REJECT",
             "Private": "DIRECT",   
-            "Apple": "苹果服务",
-            "icloud": "苹果服务",
-            "Microsoft": "微软服务",
+            "Apple": "DIRECT",
+            "icloud": "DIRECT",
+            "Microsoft": "DIRECT",
             "Emby": "Emby",
             "instagram": "instagram",
-            "Telegram": "电报信息",
+            "Telegram": "Telegram",
             "TikTok": "TikTok",
-            "Proxy": "全球加速",
+            "Proxy": "Proxy",
             "China": "DIRECT",   
             "cncidr": "DIRECT",   
             "Lancidr": "DIRECT",   
@@ -303,6 +285,6 @@ script:
             ctx.log('[Script] Geoip CN')
             return "DIRECT"
         ctx.log('[Script] MATCH')
-        return "漏网之鱼"
+        return "MATCH"
         
       

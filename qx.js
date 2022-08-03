@@ -9,7 +9,7 @@
 * @ScriptURL         https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/60s.js
 * ==/UserScript==
 [task_local]
-0 9 * * * https://github.com/jackwude/fix/blob/a420b9a285b0acbbf5338ddd5dd3f44d3c38921f/qx.js, tag=每天60s读懂世界
+0 9 * * * https://github.com/jackwude/qx/qx.js, tag=每天60s读懂世界
 */
 
 $notify("每日60s读懂世界", '  ','墨鱼：'+JSON.parse(response.body).datatime+' 请点击通知查看内容',{"open-url":JSON.parse(response.body).imageUrl});

@@ -1,6 +1,6 @@
 mixed-port: 7890
 allow-lan: false
-mode: rule
+mode: script
 log-level: debug
 ipv6: false
 tun:
@@ -73,7 +73,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - DIRECT
-  - name: instagram
+  - name: Instagram
     type: select
     proxies:
       - 香港节点
@@ -178,7 +178,7 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
-   instagram:
+   Instagram:
     type: http
     behavior: classical
     path: ./Ruleset/iEwha/instagram.yaml
@@ -235,7 +235,7 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Emby,Emby
-  - RULE-SET,instagram,instagram
+  - RULE-SET,Instagram,Instagram
   - RULE-SET,Telegram,Telegram
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Proxy,Proxy
@@ -255,7 +255,7 @@ script:
             "icloud": "DIRECT",
             "Microsoft": "DIRECT",
             "Emby": "Emby",
-            "instagram": "instagram",
+            "Instagram": "Instagram",
             "Telegram": "Telegram",
             "TikTok": "TikTok",
             "Proxy": "Proxy",

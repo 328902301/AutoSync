@@ -12,5 +12,5 @@
 0 9 * * * https://github.com/jackwude/qx/raw/main/test.js, tag=每天60s读懂世界
 */
 
-$notify("每日60s读懂世界", '  ','墨鱼：'+JSON.parse(response.body).datatime+' 请点击通知查看内容',{"open-url":JSON.parse(response.body).imageUrl});
+$notify("每日60s读懂世界");
     $done();

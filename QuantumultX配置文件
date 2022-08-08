@@ -1,0 +1,357 @@
+# MengRain - Configuration
+# 作者:MengRain
+# 写于2022年8月8日
+# 我的TG频道：https://t.me/mengyulianmian
+# 我的TG聊群：https://t.me/mengdelaochao
+
+[general]
+# 资源解析器
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+;profile_img_url=http://www.example.com/example.png
+# 资源解析
+;resource_parser_url=http://www.example.com/parser.js
+# 网络延迟检查
+;network_check_url=http://bing.com
+# 服务器检查
+;server_check_url=http://www.google.com/generate_204
+# 服务器检查用户代理
+;server_check_user_agent= Agent/1.0
+# 用户代理
+;doh_user_agent= Agent/1.0
+# 地理位置检查
+;geo_location_checker=http://www.example.com/json/, https://www.example.com/script.js
+# 运行模式触发
+;running_mode_trigger=filter, filter, LINK_22E171:all_proxy, LINK_22E172:all_direct
+dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me
+# ssid 挂起列表
+;ssid_suspended_list=LINK_22E174, LINK_22E175
+# udp 白名单
+;udp_whitelist=53, 123, 1900, 80-443
+# 排除路线
+;excluded_routes= 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+# icmp 自动回复
+;icmp_auto_reply=true
+
+#
+# The DNS servers fetched from current network(system) will always be used for better performance(you can disable this feature by using "no-system", but you should at least add one customized DNS server like "server=223.5.5.5").
+# When no-ipv6 is set, the DNS module of Quantumult X Tunnel will directly let the AAAA query fail but still allow the A query from IPv6 DNS servers.
+# The result of query will only be used for evaluating filter or connecting through direct policy, when connecting through server the result will not be used and Quantumult will never know the destination IP of related domain.
+# When doh-server is set, all other regular(has no specific domain related to it) servers will be ignored.
+# When multiple doh-server(s) are set, only the first will be used.
+# When the doh-server in use is NOT based on HTTP/2, the DoH will be temporarily disabled and the regular servers will be used until next start of the VPN connection.
+# Specially directly set 127.0.0.1 for a domain is not allowed in here. if you want some domain(eg: example.com) to be 127.0.0.1, just add "host, example.com, reject" to the "filter_local" section. The reject action will return DNS response with 127.0.0.1 to the query.
+#
+[dns]
+;no-system
+
+no-ipv6
+server=223.5.5.5
+server=114.114.114.114
+server=119.29.29.29
+server=8.8.8.8
+;doh-server=https://dns.alidns.com/dns-query
+;doh-server=https://223.6.6.6/dns-query, excluded_ssids=SSID1
+;server=8.8.4.4:53, excluded_ssids=SSID1
+;server=/example0.com/system
+;server=/example1.com/8.8.4.4
+;server=/*.example2.com/223.5.5.5
+;server=/example4.com/[2001:4860:4860::8888]:53
+;address=/example5.com/192.168.16.18
+;address=/example6.com/[2001:8d3:8d3:8d3:8d3:8d3:8d3:8d3]
+
+#
+# static policy points to the server in candidates you manually selected.
+# available policy points to the first available server in candidates based on server_check_url(concurrent url latency test will be immediately launched when the policy has been triggered and the policy result is unavailable. If no network request is taking the policy at that time, that means the policy is in the idle state and the test won't be launched even if the server is down. At that time you can update the server status by manually launching the test, but it doesn't make any sense).
+# round-robin policy points to the next server in candidates for next connection.
+# dest-hash policy points to the server according to hash function that uses the destination address (domain or IP) as input. This policy is particularly useful for use cases that require session persistence. Adding or removing servers from the policy may change the results.
+# url-latency-benchmark policy points to the server with the best (the param tolerance ms will be considered) url latency result. When the user starts the url test in Quantumult X container app manually, the policy result will also be updated. This type policy has a param called check-interval (seconds), if this policy has been activated by any request then the interval will be considered.
+# ssid policy points to the server depending on the network environment.
+# Param resource-tag-regex and server-tag-regex only work for static, available and round-robin type of polices.
+#
+[policy]
+url-latency-benchmark=国际网络（自动选择节点）, server-tag-regex=.*, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+url-latency-benchmark=Netflix, server-tag-regex=新加坡, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+url-latency-benchmark=Disiney, server-tag-regex=新加坡|香港, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
+url-latency-benchmark=HK 香港, server-tag-regex=香港|🇭🇰|HK, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+url-latency-benchmark=RU俄罗斯, server-tag-regex=俄罗斯|🇷🇺, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
+url-latency-benchmark=US 美国, server-tag-regex=美国|🇺🇸|US, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+url-latency-benchmark=UK英国, server-tag-regex=英国|🇬🇧|UK, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
+url-latency-benchmark=CA加拿大, server-tag-regex=加拿大|🇨🇦|ca, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
+url-latency-benchmark=JP 日本, server-tag-regex=日本|🇯🇵|JP|东京, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+url-latency-benchmark=KR 韩国, server-tag-regex=韩国|🇰🇷|KR, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+url-latency-benchmark=TR土耳其, server-tag-regex=土耳其|tr, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
+url-latency-benchmark=SG 新加坡, server-tag-regex=新加坡|🇸🇬|SG|狮城, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+url-latency-benchmark=DE德国, server-tag-regex=德国|🇩🇪, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
+url-latency-benchmark=IND印度, server-tag-regex=印度, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
+url-latency-benchmark=TW 台湾, server-tag-regex=台湾|🇹🇼|TW, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+static=Google, direct, 国际网络（自动选择节点）, HK 香港, RU俄罗斯, US 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+static=AppleMusic, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+static=AppStore, direct, 国际网络（自动选择节点）, HK 香港, US 美国, TW 台湾, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
+static=Discord, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+static=Facebook, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+static=Wikimedia, direct, HK 香港, US 美国, SG 新加坡, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
+static=Steam, direct, 国际网络（自动选择节点）, RU俄罗斯, HK 香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
+static=BiliBili, direct, HK 香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+static=YouTube, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+static=Blizzard, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
+static=PayPal, direct, 国际网络（自动选择节点）, US 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+static=Telegram, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+static=Weibo, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Mouse.png
+url-latency-benchmark=spotify, server-tag-regex=美国|us, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+;static=policy-name-1, Sample-A, Sample-B, Sample-C, img-url=http://example.com/icon.png
+;available=policy-name-2, Sample-A, Sample-B, Sample-C
+;round-robin=policy-name-3, Sample-A, Sample-B, Sample-C
+;ssid=policy-name-4, Sample-A, Sample-B, LINK_22E171:Sample-B, LINK_22E172:Sample-C
+;static=policy-name-5, resource-tag-regex=^sample, server-tag-regex=^example, img-url=http://example.com/icon.png
+;available=policy-name-6, resource-tag-regex=^sample, server-tag-regex=^example
+;round-robin=policy-name-7, resource-tag-regex=^sample, server-tag-regex=^example
+;dest-hash=policy-name-8, resource-tag-regex=^sample, server-tag-regex=^example
+;url-latency-benchmark=policy-name-9, resource-tag-regex=^sample, server-tag-regex=^example, check-interval=600, tolerance=0
+
+#
+# Params "tag" and "enabled" are optional.
+# The default sync interval for all kinds of remote resources is 86400 seconds.
+# You can set update-interval=172800 to customize your auto sync interval(seconds), negative number means disable auto sync.
+#
+[server_remote]
+# 你机场的订阅链接
+
+[filter_remote]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppStore/AppStore.list, tag=App store, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Wikimedia/Wikimedia.list, tag=维基百科, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=迪士尼, force-policy=Disiney, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=奈飞, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Weibo/Weibo.list, tag=微博, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleMusic/AppleMusic.list, tag=苹果音乐, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Facebook/Facebook.list, tag=Facebook, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=telegram, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PayPal/PayPal.list, tag=paypal, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=steam, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Blizzard/Blizzard.list, tag=暴雪, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Discord/Discord.list, tag=discord, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list, tag=bilibili, update-interval=172800, opt-parser=false, enabled=true
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.snippet, tag=Sample, force-policy=your-policy-name, enabled=true
+
+#
+# Params "tag" and "enabled" are optional.
+#
+[rewrite_remote]
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Weather.qxrewrite?raw=true, tag=苹果天气, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/TV.qxrewrite?raw=true, tag=苹果TV, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Location.qxrewrite?raw=true, tag=苹果定位服务, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Sunert/Script/master/TaskConf/sina/qx_rewite.txt, tag=微博, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/DisneyPlus-Dualsub.snippet, tag=Disney+双语字幕, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/Netflix-Dualsub.snippet, tag=Netflix双语字幕, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=YouTube去广告, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf, tag=油管机翻字幕, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=Boxjs, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Siri.qxrewrite?raw=true, tag=siri解鎖, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=解鎖2, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/qxrewrite/Weather.beta.qxrewrite, tag=解鎖, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=spotify搜索点赞随意播, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf, tag=TF解除锁区, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NoByDa（lhie1 Rewrite）, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Apple_Maps_CN.qxrewrite?raw=true, tag=Apple maps, update-interval=172800, opt-parser=false, enabled=false
+https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Weather.qxrewrite?raw=true, tag=天氣, update-interval=172800, opt-parser=false, enabled=false
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
+
+#
+# Only obfs=http, obfs=ws, obfs=wss can have optional "obfs-uri" field.
+# The obfs-host param in wss will be used for TLS handshake and for HTTP header host field, if obfs-host is not set for wss the server address will be used.
+# When using obfs=ws and obfs=wss the server side can be deployed by v2ray-plugin with mux = 0 or by v2ray-core.
+# The obfs plugin tls1.2_ticket_auth has one more RTT than tls1.2_ticket_fastauth and obfs tls, you'd better use tls1.2_ticket_fastauth instead.
+# The method chacha20-ietf-poly1305 and chacha20-poly1305 have the same effect in VMess configuration.
+#
+[server_local]
+# Optional field tls13 is only for shadowsocks obfs=wss
+;shadowsocks=example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, server_check_url=http://www.apple.com/generate_204, tag=ss-01
+;shadowsocks=example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, tag=ss-02
+;shadowsocks=example.com:443, method=chacha20, password=pwd, obfs=tls, obfs-host=bing.com, fast-open=false, udp-relay=false, tag=ss-03
+;shadowsocks=example.com:443, method=chacha20, password=pwd, ssr-protocol=auth_chain_b, ssr-protocol-param=def, obfs=tls1.2_ticket_fastauth, obfs-host=bing.com, tag=ssr
+;shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, udp-relay=false, tag=ss-ws-01
+;shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=ss-ws-02
+;shadowsocks=example.com:443, method=aes-128-gcm, password=pwd, obfs=wss, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=ss-ws-tls-01
+;shadowsocks=example.com:443, method=aes-128-gcm, password=pwd, obfs=wss, obfs-uri=/ws, tls13=true, fast-open=false, udp-relay=false, tag=ss-ws-tls-02
+#
+# Optional field tls13 is only for vmess obfs=over-tls and obfs=wss
+# To disable aead header for vmess, just set aead=false, the default value is true. If your server(V2Ray) version is less than v4.28 please set aead=false
+;vmess=example.com:80, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, fast-open=false, udp-relay=false, tag=vmess-01
+;vmess=example.com:80, method=aes-128-gcm, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, fast-open=false, udp-relay=false, aead=false, tag=vmess-02
+;vmess=example.com:443, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=over-tls, fast-open=false, udp-relay=false, tag=vmess-tls-01
+;vmess=example.com:80, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, server_check_url=http://www.apple.com/generate_204, tag=vmess-http
+;vmess=192.168.1.1:443, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=over-tls, obfs-host=example.com, fast-open=false, udp-relay=false, tag=vmess-tls-02
+;vmess=192.168.1.1:443, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=over-tls, obfs-host=example.com, tls13=true, fast-open=false, udp-relay=false, tag=vmess-tls-03
+;vmess=example.com:80, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=ws, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws-01
+;vmess=192.168.1.1:80, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=ws, obfs-host=example.com, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws-02
+;vmess=example.com:443, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=wss, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws-tls-01
+;vmess=192.168.1.1:443, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=wss, obfs-host=example.com, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws-tls-02
+;vmess=192.168.1.1:443, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=wss, obfs-host=example.com, obfs-uri=/ws, tls13=true, fast-open=false, udp-relay=false, tag=vmess-ws-tls-03
+#
+# Optional field tls13 is only for http over-tls=true
+# The obfs field is not supported for http
+;http=example.com:80,fast-open=false, udp-relay=false, tag=http-01
+;http=example.com:80, username=name, password=pwd, fast-open=false, udp-relay=false, tag=http-02
+;http=example.com:443, username=name, password=pwd, over-tls=true, tls-host=example.com, tls-verification=true, fast-open=false, udp-relay=false, tag=http-tls-01
+;http=example.com:443, username=name, password=pwd, over-tls=true, tls-host=example.com, tls-verification=true, tls13=true, fast-open=false, udp-relay=false, tag=http-tls-02
+#
+# Optional field tls13 is only for trojan over-tls=true
+# The obfs field is not supported for trojan
+;trojan=example.com:443, password=pwd, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-01
+;trojan=example.com:443, password=pwd, over-tls=true, tls-verification=true, tls13=true, fast-open=false, udp-relay=false, tag=trojan-tls-02
+;trojan=192.168.1.1:443, password=pwd, over-tls=true, tls-host=example.com, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-03
+;trojan=192.168.1.1:443, password=pwd, over-tls=true, tls-host=example.com, tls-verification=true, tls13=true, fast-open=false, udp-relay=false, tag=trojan-tls-04
+
+[filter_local]
+host-keyword, disney, Disiney
+host-keyword, epic, 国际网络（自动选择节点）
+host-keyword, weibo, 国际网络（自动选择节点）
+host-keyword, weki, 国际网络（自动选择节点）
+host-keyword, netflix, Netflix
+host-keyword, whatsapp, 国际网络（自动选择节点）
+host-keyword, cn, direct
+host-keyword, outlook, 国际网络（自动选择节点）
+host-keyword, apple, direct
+host-keyword, twitch, 国际网络（自动选择节点）
+host-keyword, ttvnw, 国际网络（自动选择节点）
+host-keyword, measurement, 国际网络（自动选择节点）
+host-keyword, battle, 国际网络（自动选择节点）
+host-keyword, taptap, direct
+-host-keyword, discord, 国际网络（自动选择节点）
+host-keyword, weibo, 国际网络（自动选择节点）
+host-keyword, mihoyo, direct
+host-keyword, yuanshen, direct
+-host-keyword, steam, 国际网络（自动选择节点）
+host-keyword, activision, 国际网络（自动选择节点）
+host-keyword, twitch, 国际网络（自动选择节点）
+host-keyword, blizzard, 国际网络（自动选择节点）
+host-keyword, messenger, 国际网络（自动选择节点）
+host-keyword, instagram, 国际网络（自动选择节点）
+host-keyword, twitter, 国际网络（自动选择节点）
+-host-keyword, facebook, 国际网络（自动选择节点）
+-host-keyword, telegram, 国际网络（自动选择节点）
+-host-keyword, discord, 国际网络（自动选择节点）
+host-keyword, playstation, HK 香港
+host-keyword, spotify, spotify
+host-keyword, bing, 国际网络（自动选择节点）
+host-keyword, suning, direct
+host-keyword, jindong, direct
+host-keyword, taobao, direct
+host-keyword, icloud, direct
+host-keyword, yuanshen, direct
+;user-agent, ?abc*, proxy
+;host, www.google.com, proxy
+;host-keyword, adsite, reject
+;host-suffix, googleapis.com, proxy
+;host-suffix, googleapis.com, proxy, force-cellular
+;host-suffix, googleapis.com, proxy, multi-interface
+;host-suffix, googleapis.com, proxy, via-interface=pdp_ip0
+;ip6-cidr, 2001:4860:4860::8888/32, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+geoip, cn, direct
+;geoip, cn, direct, force-cellular
+final, proxy
+
+
+#
+# The "reject" returns HTTP status code 404 with no content. This type of rewrite has some kind of dynamic delay (0~5 seconds) mechanism of response for repeated requests in a short period of time. The less the repetition, the shorter the delay (0). The more the repetition, the greater the delay (5).
+# The "reject-200" returns HTTP status code 200 with no content.
+# The "reject-img" returns HTTP status code 200 with content of 1px gif.
+# The "reject-dict" returns HTTP status code 200 with content of empty json object.
+# The "reject-array" returns HTTP status code 200 with content of empty json array.
+# The "request-header" works for all the http headers not just one single header, so you can match two or more headers including CRLF in one regular expression.
+# The "echo-response" just reply back the body of the content type response for matched URL, the body file should be saved at "On My iPhone - Quantumult X - Data".
+# The length and encoding related HTTP header fields will be automatically processed by Quantumult if the "rewrite" is body related, so you should not handle them by yourself. The max supported original response body size is 4 MB(iOS 13+) for script-response-body.
+# The body related rewrite will not be executed if the body is empty.
+# When using javascript in rewrite, you can use those objects: $request, $response, $notify(title, subtitle, message), console.log(message) and Quantumult's built-in objects all have prefix "$".
+# Supports: $request.sessionIndex, $request.scheme, $request.method, $request.url, $request.path, $request.headers,$response.sessionIndex, $response.statusCode, $response.headers, $response.body
+# The $request.sessionIndex is equal to $response.sessionIndex when the response is related to the request. The sessionIndex has nothing to do with the index of TCP records in the orange "Activity" panel.
+# The $notify(title, subtitle, message) will post iOS notifications if Quantumult notification has been enabled.
+# The $prefs is for persistent store: $prefs.valueForKey(key), $prefs.setValueForKey(value, key), $prefs.removeValueForKey(key), $prefs.removeAllValues().
+# The console.log(message)  will output logs to Quantumult log file.
+# The setTimeout(function() { }, interval) will run function after interval(ms).
+# The scripts for script-request-header, script-request-body, script-response-header, script-response-body, script-echo-response and script-analyze-echo-response should be saved in local "On My iPhone - Quantumult X - Scripts" or "iCloud Drive - Quantumult X - Scripts". Samples can be found at https://github.com/crossutility/Quantumult-X
+# The difference between script-analyze-echo-response and script-echo-response is that the former will wait for the request body.
+#
+[rewrite_local]
+;^http://example\.com/resource1/1/ url reject
+;^http://example\.com/resource1/2/ url reject-img
+;^http://example\.com/resource1/3/ url reject-200
+;^http://example\.com/resource1/4/ url reject-dict
+;^http://example\.com/resource1/5/ url reject-array
+;^http://example\.com/resource2/ url 302 http://example.com/new-resource2/
+;^http://example\.com/resource3/ url 307 http://example.com/new-resource3/
+;^http://example\.com/resource4/ url request-header ^GET /resource4/ HTTP/1\.1(\r\n) request-header GET /api/ HTTP/1.1$1
+;^http://example\.com/resource4/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36$2
+;^http://example\.com/resource5/ url request-body "info":\[.+\],"others" request-body "info":[],"others"
+;^http://example\.com/resource5/ url response-body "info":\[.+\],"others" response-body "info":[],"others"
+;^http://example\.com/resource5/ url echo-response text/html echo-response index.html
+;^http://example\.com/resource6/ url script-response-body response-body.js
+;^http://example\.com/resource7/ url script-echo-response script-echo.js
+;^http://example\.com/resource8/ url script-response-header response-header.js
+;^http://example\.com/resource9/ url script-request-header request-header.js
+;^http://example\.com/resource10/ url script-request-body request-body.js
+
+
+
+#
+# The $task.fetch() compose a HTTP request and deal with the response, only text body is supported. A $task.fetch() can be embeded in the completion handler of another $task.fetch(), if you want serial requests not current requests.
+# The scripts should be saved in local "On My iPhone - Quantumult X - Scripts" or "iCloud Drive - Quantumult X - Scripts". Samples can be found at https://github.com/crossutility/Quantumult-X/blob/master/sample-task.js
+# The default HTTP request timeout is 10 seconds.
+#
+# Supports 5 or 6 fields of cron excluding the command field. The event-network will be triggered when network changed. The event-interaction will be triggered when user tapped a UIAction. The event related task only can be triggered when the Quantumult X Tunnel is running.
+#
+[task_local]
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-google.js, tag=Google 切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-disneyplus.js, tag=Disneyᐩ 切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-ytb.js, tag=YouTube 切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube_Letter.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/disney-ui-check.js, tag=Disneyᐩ 查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-nf.js, tag=Netflix 切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/nf-ui-check.js, tag=Netflix 查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/traffic-check.js, tag=策略流量查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/ytb-ui-check.js, tag=YouTube 查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube_Letter.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
+;* * * * * sample-task.js
+;* * * * * sample-task2.js, img-url=https://raw.githubusercontent.com/crossutility/Quantumult-X/master/quantumult-x.png, tag=Sample, enabled=true
+;event-network sample-task3.js
+;event-interaction sample-task4.js
+
+
+#
+# Deploy a local HTTP server and use JavaScript for data processing.
+# The input variables are $reqeust.url, $reqeust.path, $reqeust.headers, $reqeust.body
+# The output using $done like $done({status:"HTTP/1.1 200 OK"}, headers:{}, body:"here is a string") to sendback the response.
+# Further more you can use a signature or any other validation method to verify if the request is legitimate.
+# After the deployment you should visit it through http://127.0.0.1:9999/your-path/your-api/.
+#
+[http_backend]
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, tag=boxjs（测试版）, path=^/, enabled=true
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-backend.js, tag=fileConverter, path=^/example/v1/
+;preference.js, tag=userPreference, path=^/preference/v1/, img-url=https://example.com, enabled=true
+;convert.js, tag=fileConverter, path=^/convert/v1/
+
+
+#
+# Only the TLS SNI or destination address in "hostname" will be handled by MitM.
+#
+# By default when MitM enabled for the HTTPS request, Quantumult X fetches the certificate(the certificate will be cached) from the original site, keeps most of the needed original certificate informations and re-signs it using the MitM root CA, this is the recommended(and more compatible) way of creating MitM certificate.
+# Occasionally some users like to debug the HTTPS request that its domain does not exist, so the original certificate doesn't even exist. This is when the param simple_cert_hostname comes up. The HTTPS request with TLS SNI names that are in the simple_cert_hostname(and hostname) will using the pure local generated MitM  certificate.
+#
+# Important !!! You should always keep your CA passphrase and p12 private.
+#
+[mitm] 
+hostname = https://configuration.ls.apple.com/config/defaults, *google.cn, www.youtube.com
+passphrase = 6B5FF5A7
+p12 = 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
+;passphrase =
+;p12 =
+;skip_validating_cert = false
+;force_sni_domain_name = false
+;hostname = *.example.com, *.sample.com, non-existed-domain.com, *.non-connected-domain.com
+;simple_cert_hostname = non-existed-domain.com, *.non-connected-domain.com

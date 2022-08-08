@@ -12,8 +12,7 @@ QuantumultX的配置文件 纯手工自制 分流更齐 更适合上手
 
 PS：需要更多分流规则请看本文章最底部
 
-![image](https://user-images.githubusercontent.com/89105781/183342122-a2b7ab88-f148-434b-920c-e3d7f76c7832.png)
-
+![image](https://user-images.githubusercontent.com/89105781/183346056-d90a8c06-cf00-444f-8dc6-f8345b58dd69.png)
 # 免责声明
 Rabbit-Spec 本仓库中涉及的任何解锁和解密分析脚本仅用于资源共享和学习研究，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断。
 

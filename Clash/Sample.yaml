@@ -182,7 +182,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Ruleset/iEwha/instagram.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/instagram.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Instagram.yaml
     interval: 86400
 
    Telegram:

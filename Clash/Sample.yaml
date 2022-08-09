@@ -73,14 +73,6 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - DIRECT
-  - name: Instagram
-    type: select
-    proxies:
-      - 香港节点
-      - 狮城节点
-      - 韩国节点
-      - 日本节点
-      - 美国节点
   - name: Telegram
     type: select
     proxies:
@@ -89,15 +81,7 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: TikTok
-    type: select
-    proxies:
-      - 香港节点
-      - 狮城节点
-      - 韩国节点
-      - 日本节点
-      - 美国节点
-  - name: YouTube
+  - name: ProxyMedia
     type: select
     proxies:
       - 香港节点
@@ -177,13 +161,6 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
-   Instagram:
-    type: http
-    behavior: classical
-    path: ./Ruleset/iEwha/instagram.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Instagram.yaml
-    interval: 86400
-
    Telegram:
     type: http
     behavior: classical
@@ -191,18 +168,11 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Telegram.yaml
     interval: 86400
 
-   TikTok:
+   ProxyMedia:
     type: http
     behavior: classical
-    path: ./Ruleset/iEwha/TikTok.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/TikTok.yaml
-    interval: 86400
-
-   YouTube:
-    type: http
-    behavior: classical
-    path: ./Ruleset/iEwha/YouTube.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/YouTube.yaml
+    path: ./Ruleset/iEwha/ProxyMedia.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/ProxyMedia.yaml
     interval: 86400
 
    Proxy:
@@ -241,10 +211,8 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Emby,Emby
-  - RULE-SET,Instagram,Instagram
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,TikTok,TikTok
-  - RULE-SET,YouTube,YouTube
+  - RULE-SET,ProxyMedia,ProxyMedia
   - RULE-SET,Proxy,Proxy
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
@@ -262,10 +230,8 @@ script:
             "icloud": "DIRECT",
             "Microsoft": "DIRECT",
             "Emby": "Emby",
-            "Instagram": "Instagram",
             "Telegram": "Telegram",
-            "TikTok": "TikTok",
-            "YouTube": "YouTube",
+            "ProxyMedia": "ProxyMedia",
             "Proxy": "Proxy",
             "China": "DIRECT",   
             "cncidr": "DIRECT",   

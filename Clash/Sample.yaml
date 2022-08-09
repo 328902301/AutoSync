@@ -105,15 +105,6 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: MATCH
-    type: select
-    proxies:
-      - 香港节点
-      - 狮城节点
-      - 韩国节点
-      - 日本节点
-      - 美国节点
-      - DIRECT
   - name: "香港节点"
     type: url-test
     use:
@@ -242,7 +233,7 @@ rules:
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,Lancidr,DIRECT
-  - MATCH,MATCH
+  - MATCH,Proxy
 
 # 脚本模式
 script:
@@ -285,6 +276,6 @@ script:
             ctx.log('[Script] Geoip CN')
             return "DIRECT"
         ctx.log('[Script] MATCH')
-        return "MATCH"
+        return "Proxy"
         
       

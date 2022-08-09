@@ -97,6 +97,14 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
+  - name: YouTube
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
   - name: Porxy
     type: select
     proxies:
@@ -190,6 +198,13 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/TikTok.yaml
     interval: 86400
 
+   YouTube:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/YouTube.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/YouTube.yaml
+    interval: 86400
+
    Proxy:
     type: http
     behavior: domain
@@ -229,6 +244,7 @@ rules:
   - RULE-SET,Instagram,Instagram
   - RULE-SET,Telegram,Telegram
   - RULE-SET,TikTok,TikTok
+  - RULE-SET,YouTube,YouTube
   - RULE-SET,Proxy,Proxy
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
@@ -249,6 +265,7 @@ script:
             "Instagram": "Instagram",
             "Telegram": "Telegram",
             "TikTok": "TikTok",
+            "YouTube": "YouTube",
             "Proxy": "Proxy",
             "China": "DIRECT",   
             "cncidr": "DIRECT",   

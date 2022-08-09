@@ -1,7 +1,8 @@
 [Panel]
-Panel = title=TributePaulWalker, content=GitHub:https://github.com/TributePaulWalker,icon=aqi.medium,icon-color=#5AC8FA
+Panel = title=Obsidian, content=GitHub:https://github.com/Obsidian99,icon=aqi.medium,icon-color=#5AC8FA
 
-节假日倒计时 = script-name=节假日倒计时,update-interval=600
+//节假日倒计时 = script-name=节假日倒计时,update-interval=600
 
 网络信息 = script-name=网络信息,title=网络信息,content=请刷新,style=info,update-interval=60
 
+配置重载 = title=配置重载,content=配置重载,style=info,script-name=配置重载,update-interval=-1

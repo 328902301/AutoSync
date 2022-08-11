@@ -30,7 +30,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
   let body = null;
   if (magicJS.isResponse) {
     switch (true) {
-/*
       // 推荐去广告，最后问号不能去掉，以免匹配到story模式
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
         try {
@@ -70,6 +69,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
+/*
       // 开屏广告处理
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {

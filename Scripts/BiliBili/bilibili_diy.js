@@ -106,6 +106,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             486首页 487频道 488动态 490我的
           */
           // 102开始为概念版id
+          /*
           const bottomList = new Set([177, 179, 181, 102, 104, 106, 486, 488, 490]);
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {

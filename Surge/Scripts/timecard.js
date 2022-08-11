@@ -10,6 +10,7 @@ var tlist = {
   9: ["中秋", "2023-09-29"],
   10: ["国庆", "2023-10-01"],
   11: ["元旦", "2024-01-01"]
+  
 };
 let tnow = new Date();
 let tnowf =
@@ -49,6 +50,28 @@ function now() {
   }
 }
 
+//如果是0天，发送emoji;
+let nowlist = now();
+function today(day) {
+  let daythis = day;
+  if (daythis == "0") {
+    datenotice();
+    return "🎉";
+  } else {
+    return daythis+"天";
+  }
+}
+
+//提醒日当天发送通知
+function datenotice() {
+  if ($persistentStore.read("timecardpushed") != tlist[nowlist][1] && tnow.getHours() >= 6) {
+    $persistentStore.write(tlist[nowlist][1], "timecardpushed");
+    $notification.post("假日祝福","", "今天是" + tlist[nowlist][1] + "日 " + tlist[nowlist][0] + "   🎉")
+  } else if ($persistentStore.read("timecardpushed") == tlist[nowlist][1]) {
+    //console.log("当日已通知");
+  }
+}
+
 //>图标依次切换乌龟、兔子、闹钟、礼品盒
 function icon_now(num){
   if(num<=7 && num>3 ){
@@ -65,7 +88,7 @@ function icon_now(num){
 $done({
 title:title_random(tnumcount(Number(nowlist))),
 icon:icon_now(tnumcount(Number(nowlist))),
-content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
+content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+","+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
 
 function title_random(num){
@@ -73,9 +96,9 @@ function title_random(num){
   let dic = {
     1:"距离放假，还要摸鱼多少天？",
     2:"坚持住，就快放假啦！",
-    3:"上班好累呀，好想放假",
+    3:"上班好累呀，下顿吃啥？",
     4:"努力，我还能加班24小时！",
-    5:"天呐，还要多久才放假呀？",
+    5:"今日宜：吃饭饭  忌：减肥",
     6:"躺平中，等放假",
     7:"只有摸鱼才是赚老板的钱",
     8:"一起摸鱼吧",

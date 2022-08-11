@@ -69,7 +69,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`记录Story的aid出现异常：${err}`);
         }
         break;
-/*
       // 开屏广告处理
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
@@ -140,22 +139,19 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`标签页处理出现异常：${err}`);
         }
         break;
-*/
       // 我的页面处理，去除一些推广按钮
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          /*
-            标准版：
-            396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
-            港澳台：
-            534离线缓存 8历史记录 4我的收藏 428稍后再看
-            352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
-            概念版：
-            425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
-            国际版：
-            494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
-          */
+          // 标准版：
+          // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+          // 港澳台：
+          // 534离线缓存 8历史记录 4我的收藏 428稍后再看
+          // 352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
+          // 概念版：
+          // 425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
+          // 国际版：
+          // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
           // 622为会员购中心 425开始为概念版id
           const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
           obj["data"]["sections_v2"].forEach((element, index) => {

@@ -1,14 +1,15 @@
 var tlist = {
-  1: ["清明", "2022-04-05"],
-  2: ["劳动", "2022-05-01"],
-  3: ["端午", "2022-06-03"],
-  4: ["中秋", "2022-09-10"],
-  5: ["国庆", "2022-10-01"],
-  6: ["元旦", "2023-01-01"],
-  7: ["春节", "2023-01-22"],
-  8: ["元宵", "2023-02-05"],
-  9: ["清明", "2023-04-05"]
-  
+  1: ["中秋", "2022-09-10"],
+  2: ["国庆", "2022-10-01"],
+  3: ["元旦", "2023-01-01"],
+  4: ["春节", "2023-01-22"],
+  5: ["元宵", "2023-02-05"],
+  6: ["清明", "2023-04-05"],
+  7: ["劳动", "2023-05-01"],
+  8: ["端午", "2023-06-22"],
+  9: ["中秋", "2023-09-29"],
+  10: ["国庆", "2023-10-01"],
+  11: ["元旦", "2024-01-01"]
 };
 let tnow = new Date();
 let tnowf =
@@ -45,28 +46,6 @@ function now() {
       //console.log("时间差距:" + Number(dateDiff(tnowf, tlist[i.toString()][1])));
       return i;
     }
-  }
-}
-
-//如果是0天，发送emoji;
-let nowlist = now();
-function today(day) {
-  let daythis = day;
-  if (daythis == "0") {
-    datenotice();
-    return "🎉";
-  } else {
-    return daythis;
-  }
-}
-
-//提醒日当天发送通知
-function datenotice() {
-  if ($persistentStore.read("timecardpushed") != tlist[nowlist][1] && tnow.getHours() >= 6) {
-    $persistentStore.write(tlist[nowlist][1], "timecardpushed");
-    $notification.post("假日祝福","", "今天是" + tlist[nowlist][1] + "日 " + tlist[nowlist][0] + "   🎉")
-  } else if ($persistentStore.read("timecardpushed") == tlist[nowlist][1]) {
-    //console.log("当日已通知");
   }
 }
 

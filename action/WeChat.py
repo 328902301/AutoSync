@@ -1,5 +1,4 @@
 import requests
-from operator import itemgetter
 
 rawWeChat = requests.get("https://raw.githubusercontent.com/NobyDa/Script/master/Surge/WeChat.list").text
 

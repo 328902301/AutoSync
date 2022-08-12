@@ -50,9 +50,13 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ```Java
 resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
 ```
->⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
+```ruby
+⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
+```
 2. 假设原始订阅链接为 `https://xxx.txt` ，你想要保留的参数为 `in=tls+ss` ，想要过滤的参数为 `out=http+2` ；
->⚠️⚠️ 请注意下面订阅链接后一定要加 `#` 符号；
+```ruby
+⚠️⚠️ 请注意下面订阅链接后一定要加 `#` 符号；
+```
 3. 则填入 Quantumult X 的引用链接为 `https://xxx.txt#in=tls+ss&out=http+2` ；
 4. 填入上述链接, 并打开资源解析器开关。
 

@@ -5,7 +5,5 @@ rawRejectip = requests.get("https://ruleset.skk.moe/List/ip/reject.conf").text
 
 result = rawRejectnonip.split("\n") + rawRejectip.split("\n")
 
-result = list(set(result))
-
 with open("./Reject.conf", "w") as f:
     f.write("\n".join(result))

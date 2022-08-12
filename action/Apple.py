@@ -1,5 +1,4 @@
 import requests
-from operator import itemgetter
 
 rawApple = requests.get("https://ruleset.skk.moe/List/non_ip/apple_services.conf").text
 

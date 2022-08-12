@@ -4,7 +4,5 @@ rawWeChat = requests.get("https://raw.githubusercontent.com/NobyDa/Script/master
 
 result = rawWeChat.split("\n")
 
-result = list(set(result))
-
 with open("./WeChat.conf", "w") as f:
     f.write("\n".join(result))

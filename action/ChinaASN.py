@@ -4,7 +4,5 @@ rawChinaASN = requests.get("https://raw.githubusercontent.com/VirgilClyne/Virgil
 
 result = rawChinaASN.split("\n")
 
-result = list(set(result))
-
 with open("./ChinaASN.conf", "w") as f:
     f.write("\n".join(result))

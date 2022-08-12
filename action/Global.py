@@ -4,7 +4,5 @@ rawGlobal = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rul
 
 result = rawGlobal.split("\n")
 
-result = list(set(result))
-
 with open("./Global.conf", "w") as f:
     f.write("\n".join(result))

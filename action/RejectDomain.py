@@ -1,5 +1,4 @@
 import requests
-from operator import itemgetter
 
 rawRejectDomian = requests.get("https://ruleset.skk.moe/List/domainset/reject.conf").text
 

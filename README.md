@@ -8,13 +8,15 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 ```
 
 # 配置说明
-
->⚠️⚠️ 本配置纯自用。
-
->⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
-
->⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
-
+```
+⚠️⚠️ 本配置纯自用。
+```
+```ruby
+⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
+```
+```ruby
+⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
+```
 ## 使用方法：
   0. 复制上面的 [配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf) 备用；
   1. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，输入此前 `复制的链接` ，点击右上角 `保存` ；
@@ -27,11 +29,15 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
   8. 大功告成，开始使用。
 
 ## 配置国内 IP 数据库：
->⚠️⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
-
->⚠️⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效。
-
->❗️❗️❗️ 注意！不是退出后台。
+```ruby
+⚠️⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
+```
+```ruby
+⚠️⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效。
+```
+``` ruby
+❗️❗️❗️ 注意！不是退出后台。
+```
   0. 复制 [此链接](https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/Country.mmdb) 备用；
   1. 在 Quantumult X 主界面，点击 `右下角风车` ；
   2. 滑到底部，点击 `其他设置` ；

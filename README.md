@@ -1,4 +1,3 @@
-图标库
 {
 "name":"Hand Painted Icon", 
 "description":"Desing By Semporia", 

@@ -1,11 +1,12 @@
 # utf-8
-# 2022-08-08 08:42
+# 2022-08-12 23:15
 
 # 贴吧屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, MyBlockAds
 
 # RARBG屏蔽跳转
 HOST, swallowcrockerybless.com, MyBlockAds
+HOST, furiousfar.com, MyBlockAds
 
 # 工商银行开屏广告
 HOST, pageviewp.icbc.com.cn, MyBlockAds

@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: python3 ./action/*
+        run: for f in action/*.py; do python "$f"; done
 
       - name: Commit files
         run: |

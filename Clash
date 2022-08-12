@@ -5,6 +5,7 @@ ruleset=全球拦截,rules/ACL4SSR/Clash/BanAD.list
 ruleset=应用净化,rules/ACL4SSR/Clash/BanProgramAD.list
 ruleset=全球直连,rules/ACL4SSR/Clash/GoogleCN.list
 ruleset=全球直连,rules/ACL4SSR/Clash/Ruleset/SteamCN.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
 ruleset=国外媒体,rules/ACL4SSR/Clash/ProxyMedia.list
 ruleset=节点选择,rules/ACL4SSR/Clash/ProxyLite.list
 ruleset=全球直连,rules/ACL4SSR/Clash/ChinaDomain.list

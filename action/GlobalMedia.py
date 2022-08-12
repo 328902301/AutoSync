@@ -6,7 +6,5 @@ rawDisney = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rul
 
 result = rawTelegram.split("\n") + rawNetflix.split("\n") + rawDisney.split("\n")
 
-result = list(set(result))
-
 with open("./GlobalMedia.conf", "w") as f:
     f.write("\n".join(result))

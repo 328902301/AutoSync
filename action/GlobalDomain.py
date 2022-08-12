@@ -4,7 +4,5 @@ rawGlobalDomian = requests.get("https://raw.githubusercontent.com/blackmatrix7/i
 
 result = rawGlobalDomian.split("\n")
 
-result = list(set(result))
-
 with open("./GlobalDomian.conf", "w") as f:
     f.write("\n".join(result))

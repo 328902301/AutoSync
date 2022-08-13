@@ -7,10 +7,10 @@ Panel = title=Obsidian, content=GitHub:https://github.com/Obsidian99,icon=aqi.me
 stream-all = script-name=stream-all, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
 # Timecard
 Timecard = script-name=Timecard,update-interval=3600
-# Covid19
-疫情统计 = script-name=疫情统计, title=新冠疫情查询, content=请刷新, update-interval=600
-# 机场信息
-Sub_info_panel = script-name=Sub_info_panel,update-interval=600
+//# Covid19
+//疫情统计 = script-name=疫情统计, title=新冠疫情查询, content=请刷新, update-interval=600
+//# 机场信息
+//Sub_info_panel = script-name=Sub_info_panel,update-interval=600
 # FlushDNS
 FlushDNS = script-name=FlushDNS,update-interval=600
 # 节点IP信息
@@ -25,10 +25,10 @@ SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 stream-all = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Panel/Stream-All/Stream-All.js
 # Timecard
 Timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Timecard.js
-# Covid19
-疫情统计 = type=generic, script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Covid19.js
-CFW info
-机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Sub_info_lite.js,timeout=10
+//# Covid19
+//疫情统计 = type=generic, script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Covid19.js
+//CFW info
+//机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Sub_info_lite.js,timeout=10
 # FlushDNS
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Panel/Flush-DNS/Flush-DNS/Flush-DNS.js,argument=title=DNS FLush&icon=gear=#f6c970&server=false
 #节点IP信息

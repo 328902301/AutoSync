@@ -9,4 +9,4 @@
 hostname=raw.githubusercontent.com
 
 [URL Rewrite]
-^https?:\/\/raw.githubusercontent.com https://raw.githubusercontents.com 302
+^https?:\/\/raw.githubusercontent.com https://raw.iqiq.io/ 302

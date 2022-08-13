@@ -2,4 +2,4 @@
 
 hostname = raw.githubusercontent.com
 
-^https?:\/\/raw.githubusercontent.com url 302 https://raw.githubusercontents.com
+^https?:\/\/raw.githubusercontent.com url 302 https://raw.iqiq.io

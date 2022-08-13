@@ -1,10 +1,9 @@
 #!name=Scripts
-#!desc= Bilbii换区,评分、YouTube 字幕翻译、美标空气质量、微信公众号广告
+#!desc= Bilbii换区,评分、YouTube 字幕翻译、微信公众号广告
 #!icon= https://raw.githubusercontent.com/iEwha/Profiles/master/icon/box.png
 
 [Rule]
-# > Apple Weather
-DOMAIN-SUFFIX,waqi.info
+
 
 [URL Rewrite]
 # > Redirect Google Search Service
@@ -13,8 +12,6 @@ DOMAIN-SUFFIX,waqi.info
 ^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
 # > YouTube中文字幕
 ^https:\/\/www\.youtube\.com\/api\/timedtext\? header https://www.youtube.com/api/timedtext?tlang=zh-Hans&
-# > 天气
-^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* header-del If-None-Match
 
 [Script]
 # > bilbii换区,评分,画质
@@ -28,13 +25,8 @@ http-request https?:\/\/boxjs\.(com|net) script-path=https://raw.githubuserconte
 # > Sub-Store
 http-request https?:\/\/sub\.store script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js, requires-body=true, timeout=120, tag=Sub-Store
 
-# > 美标空气质量
-http-response ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/availability\/.* script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Availability.js, requires-body=1, tag=天气可用性
-http-response ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.js, requires-body=1, timeout=20, tag=天气
-http-request ^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*) script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Map.js, requires-body=0, tag=天气地图
-
 # > 微信
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=true,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/WeChat.js,tag=微信公众号
 
 [MITM]
-hostname = ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, sub.store, weather-data.apple.com, weather-map.apple.com, mp.weixin.qq.com,
+hostname = ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, sub.store, mp.weixin.qq.com,

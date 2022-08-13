@@ -5,5 +5,5 @@ rawApple = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule
 
 result = rawWeChat.split("\n") + rawApple.split("\n")
 
-with open("./WeChat.conf", "w") as f:
+with open("./amiDirect.conf", "w") as f:
     f.write("\n".join(result))

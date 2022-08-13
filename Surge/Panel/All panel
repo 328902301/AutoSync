@@ -28,8 +28,6 @@ stream-all = type=generic, timeout=15, script-path=https://raw.githubusercontent
 Timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Obsidian99/Profile/master/Timecard.js
 //# Covid19
 //疫情统计 = type=generic, script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Covid19.js
-//CFW info
-//机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Sub_info_lite.js,timeout=10
 # FlushDNS
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Panel/Flush-DNS/Flush-DNS/Flush-DNS.js,argument=title=DNS FLush&icon=gear=#f6c970&server=false
 #节点IP信息

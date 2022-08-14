@@ -4,5 +4,5 @@ rawRejectDomian = requests.get("https://raw.githubusercontent.com/blackmatrix7/i
 
 result = rawRejectDomian.split("\n")
 
-with open("./RejectDomain.conf", "w") as f:
+with open("./RejectDomain", "w") as f:
     f.write("\n".join(result

@@ -1,8 +1,8 @@
 import requests
 
-rawRejectDomian = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt").text
+rawRejectDomian = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising_Domain.list").text
 
 result = rawRejectDomian.split("\n")
 
-with open("./REJECT.txt", "w") as f:
+with open(./RejecDomain, "w") as f:
     f.write("\n".join(result))

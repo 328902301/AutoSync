@@ -1,7 +1,7 @@
-/*官方网站：ioshkj.com*/
-/*MM下载地址：https://go.hfbidmr.cn/16696735?tmp=web3*/
-/*例子：let yqm = '16696735'*/
-/*漫漫刷邀请，请在下方填入你的邀请码，邀请链接后面的一串数字*/
+/*官方网站：ioshkj.com
+MM下载地址：https://go.hfbidmr.cn/16696735?tmp=web3
+例子：let yqm = '16696735'
+漫漫刷邀请，请在下方填入你的邀请码，邀请链接后面的一串数字 */
 
 const $ = new Env("漫漫刷邀请");
 let yqm = ''

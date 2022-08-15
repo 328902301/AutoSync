@@ -180,14 +180,12 @@ function removeMsgAd(data) {
 	return data;
 }
 
+//删除热搜列表置顶条目
 function removePage(data){
 	removeCards(data);
-
-	//删除热搜列表置顶条目
 	if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
 		data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes("t:51"));
 	}
-
 	return data;
 }
 

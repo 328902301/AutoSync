@@ -1,6 +1,3 @@
-// 2021-08-15
-// 引用地址 https:// github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-
 const version = 'v0712.2';
 
 const $ = new Env("微博去广告");

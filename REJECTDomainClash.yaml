@@ -1,12 +1,12 @@
 # NAME: Advertising
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-08-15 02:26:40
+# UPDATED: 2022-08-15 14:24:05
 # DOMAIN: 14149
 # DOMAIN-KEYWORD: 77
-# DOMAIN-SUFFIX: 73780
+# DOMAIN-SUFFIX: 73796
 # IP-CIDR: 240
-# TOTAL: 88246
+# TOTAL: 88262
 payload:
   - 'ad.xy2013.cn'
   - 'ads.play.cbsi.video'
@@ -15077,6 +15077,7 @@ payload:
   - '+.5glyqw.com'
   - '+.5gustis.xyz'
   - '+.5h3oyhv838.com'
+  - '+.5htftu.com'
   - '+.5ibanma.com'
   - '+.5idoy8p7.live'
   - '+.5ijs.vip'
@@ -15194,6 +15195,7 @@ payload:
   - '+.666753.xyz'
   - '+.666754.xyz'
   - '+.666755.xyz'
+  - '+.666757.xyz'
   - '+.6667778882021.site'
   - '+.666video.asia'
   - '+.668kbet.com'
@@ -33056,6 +33058,7 @@ payload:
   - '+.glacah.com'
   - '+.gladcrumple.com'
   - '+.gladiol9us10.com'
+  - '+.glaichid.net'
   - '+.glaimtug.com'
   - '+.glainsee.com'
   - '+.glaivoun.net'
@@ -33132,6 +33135,7 @@ payload:
   - '+.globalismedia.com'
   - '+.globalnews247.net'
   - '+.globalsiteanalytics.com'
+  - '+.globalso.biz'
   - '+.globalstars.ru'
   - '+.globalsuccessclub.com'
   - '+.globaltakeoff.net'
@@ -35850,6 +35854,7 @@ payload:
   - '+.imhd.io'
   - '+.imho.ru'
   - '+.imiclk.com'
+  - '+.imilroshoors.com'
   - '+.imim.me'
   - '+.imimtord.net'
   - '+.iminatedm.com'
@@ -37930,6 +37935,7 @@ payload:
   - '+.kieden.com'
   - '+.kiezohky.xyz'
   - '+.kihoadoa.com'
+  - '+.kihudevo.pro'
   - '+.kijkxx.com'
   - '+.kikibobo.top'
   - '+.kikugrotzen.com'
@@ -41794,6 +41800,7 @@ payload:
   - '+.mnutan.fr'
   - '+.mnuy56.site'
   - '+.mnvde.com'
+  - '+.mnvrwq.xyz'
   - '+.mnwor.xuanlishi.com'
   - '+.mnyh.fun'
   - '+.mo.5.p2l.info'
@@ -42072,6 +42079,7 @@ payload:
   - '+.morgdm.ru'
   - '+.mori.ink'
   - '+.moriceprich.com'
+  - '+.morlsbli.cyou'
   - '+.morning-croissant.fr'
   - '+.morning-maps.com'
   - '+.morninguglychampionship.com'
@@ -42463,6 +42471,7 @@ payload:
   - '+.mxcount.com'
   - '+.mxeinvwitjitk.com'
   - '+.mxhbkj.cn'
+  - '+.mxlwmp.cn'
   - '+.mxmcdn.net'
   - '+.mxowrwb.cn'
   - '+.mxptint.net'
@@ -47930,6 +47939,7 @@ payload:
   - '+.qhnwj.com'
   - '+.qhonzpl.cn'
   - '+.qhqofqeivtno.com'
+  - '+.qhsihvjmut.com'
   - '+.qhupdate.com'
   - '+.qhytkj.xyz'
   - '+.qian-tao.xyz'
@@ -48083,6 +48093,7 @@ payload:
   - '+.qqjmbj.com'
   - '+.qqlogo.qq.com'
   - '+.qqmilk.ru'
+  - '+.qqpwhge.cn'
   - '+.qqq-www-987.site'
   - '+.qqq123987.site'
   - '+.qqqmmm.top'
@@ -50507,6 +50518,7 @@ payload:
   - '+.sdljvrf.cn'
   - '+.sdmfyqkghzedvx.com'
   - '+.sdmot.ru'
+  - '+.sdnc.top'
   - '+.sdnpggwbkprsndt.xyz'
   - '+.sdofp9c.cddrhx.cn'
   - '+.sdqinghong.cn'
@@ -54352,6 +54364,7 @@ payload:
   - '+.thanosofcos5.com'
   - '+.thapsooz.net'
   - '+.tharbadir.com'
+  - '+.thathechoxe.com'
   - '+.thathersevengid.ru'
   - '+.thatitgivesm.biz'
   - '+.thatohegly.com'
@@ -58145,6 +58158,7 @@ payload:
   - '+.vppvp.com'
   - '+.vprza.com'
   - '+.vpsite.ru'
+  - '+.vptadv.com'
   - '+.vptbn.com'
   - '+.vptjabo.cn'
   - '+.vpvbojamkoxo.com'
@@ -60666,6 +60680,7 @@ payload:
   - '+.xoomer.alice.it'
   - '+.xoor.ru'
   - '+.xopcdnhjf.com'
+  - '+.xorlsblw.cyou'
   - '+.xoso12345.com'
   - '+.xoso5678.com'
   - '+.xoso6.com'
@@ -61120,6 +61135,7 @@ payload:
   - '+.yhhbtavgpuo.com'
   - '+.yhhls.com'
   - '+.yhhtmdvuubnbtbp.com'
+  - '+.yhilnc.cn'
   - '+.yhjzg.cn'
   - '+.yhkiain.cn'
   - '+.yhkt.online'
@@ -62143,6 +62159,7 @@ payload:
   - '+.zouphail.com'
   - '+.zoutubephaid.com'
   - '+.zouxinyan.xyz'
+  - '+.zovgdpj.cn'
   - '+.zowinvn.vip'
   - '+.zoxetijy.xyz'
   - '+.zozocash.biz'
@@ -81466,7 +81483,6 @@ payload:
   - '+.metrics.hemlibra.com'
   - '+.metrics.hmhco.com'
   - '+.metrics.humirapro.com'
-  - '+.metrics.icloud.com'
   - '+.metrics.ireport.com'
   - '+.metrics.jeppesen.com'
   - '+.metrics.jetblue.com'

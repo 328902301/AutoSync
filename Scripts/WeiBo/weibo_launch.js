@@ -1,5 +1,3 @@
-//参考@yichahucha 的脚本
-
 const launchAdUrl1 = '/interface/sdk/sdkad.php';
 const launchAdUrl2 = '/wbapplua/wbpullad.lua';
 

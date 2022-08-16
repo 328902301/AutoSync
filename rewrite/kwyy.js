@@ -1,7 +1,7 @@
 /* 
 脚本功能：解锁酷我音乐会员歌曲➕听书
 脚本作者：king
-下载地址：https://apple.co/3Kcejgh
+下载地址：https://is.gd/CWqKMX
 更新时间：20212.1.15
 脚本频道：https://t.me/yqc_123
 问题反馈：https://t.me/yqc_777

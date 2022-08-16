@@ -8,11 +8,11 @@
 使用声明：⚠️⚠️⚠️此脚本仅供学习与交流，
         请勿转载与贩卖！⚠️⚠️⚠️
 
-代码重构:这版是最完美的酷我解锁，脚本全由yqc大佬提供，yqc大佬牛啤
-当前版本:
+代码重构:这版是最完美的酷我解锁，脚本全由yqc大佬提供，yqc大佬牛逼⚠️⚠️⚠️
+当前版本:10.2.8
 [rewrite_local]
 # 完美解锁酷我音乐
-^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* - script-response-body kw.js
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* - script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
 [mitm] 
 hostname = *.kuwo.cn, *.lrts.me
 ********************************

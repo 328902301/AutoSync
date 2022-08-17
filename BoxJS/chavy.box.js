@@ -44,9 +44,9 @@ $.json = $.name // `接口`类请求的响应体
 $.html = $.name // `页面`类请求的响应体
 
 // 页面源码地址
-$.web = `https://cdn.jsdelivr.net/gh/chavyleung/scripts@${$.version}/box/chavy.boxjs.html?_=${new Date().getTime()}`
+$.web = `https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/chavy.boxjs.html?token=GHSAT0AAAAAABXWOSWFJKWN5LB76QDBSDBGYX5CZCA?_=${new Date().getTime()}`
 // 版本说明地址 (Release Note)
-$.ver = `https://raw.githubusercontent.com/chavyleung/scripts/master/box/release/box.release.tf.json`
+$.ver = `https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/release/box.release.tf.json?token=GHSAT0AAAAAABXWOSWE5ICGJTSCBDDKDFWWYX5C2GA`
 
 !(async () => {
   // 勿扰模式
@@ -333,31 +333,31 @@ function getSystemApps() {
       scripts: [
         {
           name: "抹掉：所有缓存",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.caches.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.caches.js?token=GHSAT0AAAAAABXWOSWF4IE77R3EAFESAXHUYX5C4PA"
         },
         {
           name: "抹掉：收藏应用",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.favapps.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.usercfgs.favapps.js?token=GHSAT0AAAAAABXWOSWEFXUJ7B5U5FGB66GSYX5C5AA"
         },
         {
           name: "抹掉：用户偏好",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.usercfgs.js?token=GHSAT0AAAAAABXWOSWFTM6CZ7EQSZ56BFU4YX5C5RQ"
         },
         {
           name: "抹掉：所有会话",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.sessions.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.usercfgs.sessions.js?token=GHSAT0AAAAAABXWOSWF2OKC7OJBZNYOZSMSYX5C6BQ"
         },
         {
           name: "抹掉：所有备份",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.baks.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.baks.js?token=GHSAT0AAAAAABXWOSWF3JARBUWDI2CZWCXEYX5C6TQ"
         },
         {
           name: "抹掉：BoxJs (注意备份)",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.boxjs.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/scripts/boxjs.revert.boxjs.js?token=GHSAT0AAAAAABXWOSWEVZACBHWXNYYZ36SMYX5C7CQ"
         }
       ],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/switcher/box.switcher.js?token=GHSAT0AAAAAABXWOSWEJA4AMKQ63A7XRJK6YX5C7WQ',
       icons: [
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.mini.png', 
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.png'
@@ -370,12 +370,12 @@ function getSystemApps() {
       keys: [],
       settings: [{ id: 'CFG_BoxSwitcher_isSilent', name: '静默运行', val: false, type: 'boolean', desc: '切换会话时不发出系统通知!' }],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/switcher/box.switcher.js?token=GHSAT0AAAAAABXWOSWEJA4AMKQ63A7XRJK6YX5C7WQ',
       icons: [
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.mini.png', 
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.png'
       ],
-      script: 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js'
+      script: 'https://raw.githubusercontent.com/General74110/QuantumultX/master/BoxJS/Box/switcher/box.switcher.js?token=GHSAT0AAAAAABXWOSWEJA4AMKQ63A7XRJK6YX5C7WQ'
     }
   ]
   return sysapps

@@ -1,3 +1,7 @@
+# 引用地址 - AdvertisingLite.conf
+```
+https://github.com/blackmatrix7/ios_rule_script/blob/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf
+```
 # 引用地址 - MediaPage.conf
 ```
 https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.conf

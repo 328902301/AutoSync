@@ -14,7 +14,7 @@ tun:
 proxy-providers:
   HK:
     type: http
-    path: ./Server/hk.yaml
+    path: ./Server/HK.yaml
     url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
     interval: 3600
     filter: '香港|HK|Hong Kong|🇭🇰'
@@ -22,9 +22,19 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
+  TW:
+    type: http
+    path: ./Server/TW.yaml
+    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    filter: '台湾|TW|🇨🇳'
+    health-check: 
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
   SG:
     type: http
-    path: ./Server/sg.yaml
+    path: ./Server/SG.yaml
     url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
     interval: 3600
     filter: '新加坡|狮城|SG|Singapore|🇸🇬'
@@ -34,7 +44,7 @@ proxy-providers:
       interval: 600
   KR:
     type: http
-    path: ./Server/kr.yaml
+    path: ./Server/KR.yaml
     url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
     interval: 3600
     filter: '韩国|韓國|南朝鲜|KR|Korean|🇰🇷'
@@ -68,6 +78,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
+      - 台湾节点
       - 狮城节点
       - 韩国节点
       - 日本节点
@@ -77,6 +88,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
+      - 台湾节点
       - 狮城节点
       - 韩国节点
       - 日本节点
@@ -85,6 +97,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
+      - 台湾节点
       - 狮城节点
       - 韩国节点
       - 日本节点
@@ -93,6 +106,7 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点
+      - 台湾节点
       - 狮城节点
       - 韩国节点
       - 日本节点
@@ -101,6 +115,10 @@ proxy-groups:
     type: url-test
     use:
       - HK
+  - name: "台湾节点"
+    type: url-test
+    use:
+      - TW
   - name: "狮城节点"
     type: url-test
     use:

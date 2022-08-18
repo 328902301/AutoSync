@@ -1,7 +1,4 @@
 /*
-引用地址 https://github.com/zZPiglet/Task/blob/master/noredirect.conf
-引用地址 https://github.com/zZPiglet/Task/blob/master/asset/noredirect.js
-
 Skip the redirect page.
 
 Quantumult X:
@@ -23,14 +20,14 @@ Surge:
 
 [Script]
 # 简书
-Jianshunoredirect = type=http-request,pattern=^https:\/\/links\.jianshu\.com\/go\?to=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
-Jianshunoredirect2 = type=http-request,pattern=^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+Jianshu_no_redirect = type=http-request,pattern=^https:\/\/links\.jianshu\.com\/go\?to=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+Jianshu_no_redirect2 = type=http-request,pattern=^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
 # 知乎
-# Zhihunoredirect = type=http-request,pattern=^https:\/\/link\.zhihu\.com\/\?target=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+# Zhihu_no_redirect = type=http-request,pattern=^https:\/\/link\.zhihu\.com\/\?target=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
 # 微博
-Weibonoredirect = type=http-request,pattern=^https?:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
-Weibonoredircet2 = type=http-request,pattern=^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url=(.*),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
-Weibonoredirect3 = type=http-response,pattern=^https?:\/\/(sinaurl|t)\.cn\/,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+Weibo_no_redirect = type=http-request,pattern=^https?:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+Weibo_no_redircet2 = type=http-request,pattern=^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url=(.*),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
+Weibo_no_redirect3 = type=http-response,pattern=^https?:\/\/(sinaurl|t)\.cn\/,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/no_redirect.js
 
 [mitm]
 hostname = links.jianshu.com, www.jianshu.com, link.zhihu.com, weibo.cn, t.cn, sinaurl.cn, shop.sc.weibo.com

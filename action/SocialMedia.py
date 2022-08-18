@@ -12,5 +12,5 @@ rawGoogle = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rul
 
 result = rawBiliBili.split("\n") + rawBiliBilintl.split("\n") + rawSpotify.split("\n") + rawTwitch.split("\n") + rawpv.split("\n") + rawMicrosoft.split("\n") + rawYouTube.split("\n") + rawGoogle.split("\n")
 
-with open("./amiProxy.conf", "w") as f:
+with open("./SocialMedia.conf", "w") as f:
     f.write("\n".join(result))

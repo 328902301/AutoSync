@@ -1,12 +1,12 @@
 # NAME: Advertising
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-08-19 02:27:44
+# UPDATED: 2022-08-19 10:30:24
 # DOMAIN: 14149
 # DOMAIN-KEYWORD: 77
-# DOMAIN-SUFFIX: 73951
+# DOMAIN-SUFFIX: 73950
 # IP-CIDR: 240
-# TOTAL: 88417
+# TOTAL: 88416
 payload:
   - 'ad.xy2013.cn'
   - 'ads.play.cbsi.video'
@@ -74218,7 +74218,6 @@ payload:
   - '+.wbanz.com'
   - '+.wbaor.com'
   - '+.wbapp.mobile.sina.cn'
-  - '+.wbapp.uve.weibo.com'
   - '+.wbclick.mobile.sina.cn'
   - '+.wbdcrmn.cn'
   - '+.wbdds.allocine.fr'

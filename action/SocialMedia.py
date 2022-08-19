@@ -7,7 +7,7 @@ rawTwitch = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rul
 rawpv = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AmazonPrimeVideo/AmazonPrimeVideo.list").text
 
 
-result = rawBiliBili.split("\n") + rawBiliBilintl.split("\n") + rawSpotify.split("\n") + rawTwitch.split("\n") + rawpv.split("\n") + rawMicrosoft.split("\n") + rawYouTube.split("\n") + rawGoogle.split("\n")
+result = rawBiliBili.split("\n") + rawBiliBilintl.split("\n") + rawSpotify.split("\n") + rawTwitch.split("\n") + rawpv.split("\n")
 
 with open("./SocialMedia.conf", "w") as f:
     f.write("\n".join(result))

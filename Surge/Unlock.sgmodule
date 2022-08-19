@@ -6,7 +6,7 @@
 # > VSCO 解锁高级特权
 VSCO = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
 # > PS Express解锁高级订阅
-PS Express= type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
+PS Express= type=http-response,pattern=^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$, requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
 # > Emby解锁
 Emby= type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice, requires-body=1,script-path= https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Scripts/EmbyPremiere.js
 # > Adguardpremium

@@ -1,12 +1,12 @@
 # NAME: Advertising
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-08-22 02:27:08
-# DOMAIN: 14155
+# UPDATED: 2022-08-23 02:27:52
+# DOMAIN: 14154
 # DOMAIN-KEYWORD: 77
-# DOMAIN-SUFFIX: 73697
+# DOMAIN-SUFFIX: 73707
 # IP-CIDR: 241
-# TOTAL: 88170
+# TOTAL: 88179
 payload:
   - 'ad.xy2013.cn'
   - 'ads.play.cbsi.video'
@@ -2350,7 +2350,6 @@ payload:
   - 'civyssfaqtufib.com'
   - 'ciwbezny.com'
   - 'cizemeshbbc.com'
-  - 'cizion.com'
   - 'cjdomdjyvble.com'
   - 'cjie.baidu.com'
   - 'cjiv.chengjie168.com.cn'
@@ -14540,6 +14539,7 @@ payload:
   - '+.228kbet.com'
   - '+.22c.in'
   - '+.22ei7q8l12.com'
+  - '+.22fssv.com'
   - '+.22pornz.site'
   - '+.22zalo.com'
   - '+.23205523023daea6.com'
@@ -15468,6 +15468,7 @@ payload:
   - '+.888casino.com'
   - '+.888media.net'
   - '+.888promos.com'
+  - '+.888yh.xyz'
   - '+.889433.com'
   - '+.889fb4992d4e8.com'
   - '+.88d7b6aa44fb8eb.com'
@@ -21526,6 +21527,7 @@ payload:
   - '+.bak0-store.com'
   - '+.bakbb.com'
   - '+.bakcgnxikkxw.com'
+  - '+.bakeryembedded.com'
   - '+.baking.ren'
   - '+.baklajansss.site'
   - '+.bakteso.ru'
@@ -22420,6 +22422,7 @@ payload:
   - '+.better-explorer.com'
   - '+.bettercollective.rocks'
   - '+.bettercontentservice.top'
+  - '+.bettermeter.com'
   - '+.bettermetrics.co'
   - '+.betterprovokesap.com'
   - '+.betting.betfair.com'
@@ -25041,6 +25044,7 @@ payload:
   - '+.ciwvkgthn.xyz'
   - '+.cixawobu.com'
   - '+.cixaxuyu.xyz'
+  - '+.cizion.com'
   - '+.cizykytha.com'
   - '+.cj.com'
   - '+.cj.madeleine.de'
@@ -35816,6 +35820,7 @@ payload:
   - '+.img.xnxx.com'
   - '+.img1458.r.worldssl.net'
   - '+.img1461.r.worldssl.net'
+  - '+.img301.com'
   - '+.imgapp.top'
   - '+.imgcdnbet.com'
   - '+.imgfeedget.com'
@@ -37261,6 +37266,7 @@ payload:
   - '+.jqad.vip'
   - '+.jqcgyjwidktu.xyz'
   - '+.jqdnvg.com'
+  - '+.jqeyvtgelo.com'
   - '+.jqk2me2mzf.ru'
   - '+.jquery-cdn.cc'
   - '+.jquery-cdn.download'
@@ -37684,6 +37690,7 @@ payload:
   - '+.kartables.fr'
   - '+.karteljackal.com'
   - '+.kartikeya-ram.com'
+  - '+.kasdwergv.com'
   - '+.kasheglesy.pro'
   - '+.kasumikarate.hanagasumi.net'
   - '+.kataprius.com'
@@ -41651,6 +41658,7 @@ payload:
   - '+.mjnakecyospspgf.com'
   - '+.mjnxku.com'
   - '+.mjonkers.nl'
+  - '+.mjrhficjcbf.com'
   - '+.mjrvkv5.com'
   - '+.mjsyqwpqnjbgua.com'
   - '+.mjxads.internet.com'
@@ -49886,6 +49894,7 @@ payload:
   - '+.russian-cuties.info'
   - '+.russian-sex.com'
   - '+.rustds.click'
+  - '+.rusticswollenbelonged.com'
   - '+.rustiz.ru'
   - '+.rustizer.com'
   - '+.rustoria-topnews.ru'
@@ -53475,6 +53484,7 @@ payload:
   - '+.sxtc.wang'
   - '+.sxtcdjy.com'
   - '+.sxxfmc.com'
+  - '+.sxyzhdf.cn'
   - '+.sxzchs.cn'
   - '+.sxzcrq.com'
   - '+.sxzx.live'
@@ -57135,6 +57145,7 @@ payload:
   - '+.utxdtismojqk.xyz'
   - '+.uu.domainforlite.com'
   - '+.uu1.3gu.com'
+  - '+.uu2e.com'
   - '+.uu99k.com'
   - '+.uuaauw.com'
   - '+.uuaoy.com'
@@ -66201,7 +66212,6 @@ payload:
   - '+.data.mic.com'
   - '+.data.neuroxmedia.com'
   - '+.data.studybreakmedia.com'
-  - '+.data.vod.itc.cn'
   - '+.data.waptime.cn'
   - '+.data2.doodlemobile.com'
   - '+.datafastguru.info'
@@ -80483,7 +80493,6 @@ payload:
   - '+.log.aliyuncs.com'
   - '+.log.bitauto.com'
   - '+.log.china.cn'
-  - '+.log.cizion.com'
   - '+.log.codemarketing.cloud'
   - '+.log.cognex.com'
   - '+.log.cpex.cz'

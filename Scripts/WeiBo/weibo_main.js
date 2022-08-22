@@ -59,7 +59,7 @@ const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) 
 	mblog_menus_promote:false,				//推广
 	mblog_menus_modify_visible:true,		//设置分享范围
 	mblog_menus_copy_url:true,				//复制链接
-	mblog_menus_follow:true,				//关注
+	mblog_menus_follow:false,				//关注
 	mblog_menus_video_feedback:false,		//播放反馈
 	mblog_menus_shield:true,				//屏蔽
 	mblog_menus_report:true,				//投诉

@@ -362,7 +362,7 @@ function updateFollowOrder(item) {
 			}
 		}
 	} catch (error) {
-		console.log('updateFollowOrder fail');
+		log('updateFollowOrder fail');
 	}
 }
 
@@ -390,7 +390,7 @@ function updateProfileSkin(item, k) {
 		}
 		log('updateProfileSkin success');
 	} catch (error) {
-		console.log('updateProfileSkin fail');
+		log('updateProfileSkin fail');
 	}
 }
 
@@ -515,7 +515,7 @@ function nextVideoHandler(data) {
 	if(mainConfig.removeNextVideo) {
 		data.statuses = [];
 		data.tab_list = [];
-		console.log('nextVideoHandler');
+		log('nextVideoHandler');
 	}
 }
 

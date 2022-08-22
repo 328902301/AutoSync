@@ -4,9 +4,9 @@
 # UPDATED: 2022-08-19 10:30:22
 # HOST: 14147
 # HOST-KEYWORD: 77
-# HOST-SUFFIX: 73949
+# HOST-SUFFIX: 73948
 # IP-CIDR: 240
-# TOTAL: 88413
+# TOTAL: 88412
 HOST,ad.xy2013.cn,Advertising
 HOST,ads.play.cbsi.video,Advertising
 HOST,ads.reembed.com,Advertising
@@ -66768,7 +66768,6 @@ HOST-SUFFIX,downloada.dewmobile.net,Advertising
 HOST-SUFFIX,downloadb.dewmobile.net,Advertising
 HOST-SUFFIX,downmobile.kugou.com,Advertising
 HOST-SUFFIX,dp.559.cc,Advertising
-HOST-SUFFIX,dp.im.weibo.cn,Advertising
 HOST-SUFFIX,dp3.qq.com,Advertising
 HOST-SUFFIX,dpc6.cn,Advertising
 HOST-SUFFIX,dpjszs.com,Advertising

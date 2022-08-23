@@ -26,6 +26,7 @@ https://github.com/yjqiang/surge_scripts/blob/main/modules/zhihu/zhihu_website.s
 > 配合 AdvertisingLite.conf 一起使用
 
 更新日志：
+- 什么值得买 全面去广告 2022-08-23
 - 屏蔽广告联盟推广
 - 跳过重定向页面(简书 知乎 微博 115)
 - 铁路12306 去除开屏广告

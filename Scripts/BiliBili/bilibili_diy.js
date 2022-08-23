@@ -1,9 +1,9 @@
 /*
 已对代码进行一定修改，以满足自己使用需求
 
-修改时间：2022-08-11
-更新时间：2022-07-11
-脚本版本：(0.0.76)
+修改时间：2022-08-24
+更新时间：2022-08-21
+脚本版本：(68)
 */
 
 const scriptName = "BiliBili";
@@ -203,13 +203,20 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 追番去广告
-      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
+      case /pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
-              module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
+              //i.source_content && i.source_content.ad_content
+              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
+            }
+            if (module.style.startsWith("function")) {
+              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
+            }
+            if (module.style.startsWith("tip")) {
+              module.items = null;
             }
           });
           body = JSON.stringify(obj);
@@ -254,9 +261,9 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          if(obj.data.length>3){
+          if(obj.data.length>=3){
           delete obj.data[0];
-          delete obj.data[3];
+          delete obj.data[2];
           }
           body = JSON.stringify(obj);
         } catch (err) {
@@ -264,13 +271,19 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
         // 观影页去广告
-      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
+      case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
-              module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
+              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
+            }
+            if (module.style.startsWith("function")) {
+              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
+            }
+            if (module.style.startsWith("tip")) {
+              module.items = null;
             }
           });
           body = JSON.stringify(obj);

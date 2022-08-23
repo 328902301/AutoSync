@@ -10,7 +10,7 @@
 ## TikTok解锁说明：
 - TikTok版本：抓包V21.1.0解锁登录使用，抓包V23.7.0升级，清理后台如果能正常使用，再商店升级到最新，目前支持V25.7.1
 - 关于无法登录：检查去广告规则并禁用，登录成功再启用广告规则
-- 更多祥细参考[Semporia](https://github.com/Semporia/TikTok-Unlock)
+- 更多详细说明参考[Semporia](https://github.com/Semporia/TikTok-Unlock)
 
 ## 自用配置：
 

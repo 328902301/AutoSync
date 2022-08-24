@@ -21,10 +21,9 @@ const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const list = {
 	'filebox': { name: 'filebox_pro', id: 'filebox_pro' },
 	'Planny': { name: 'premium', id: 'com.kevinreutter.Sagittarius.PremiumLifetime' }
-	'Pixelmator': { name: 'premium', id: 'com.neybox.pillow.premium.year' }
 };
 const data = {
-	"expires_date": "2030-02-18T07:52:54Z",
+	"expires_date": "2050-02-18T07:52:54Z",
 	"original_purchase_date": "2020-02-11T07:52:55Z",
 	"purchase_date": "2020-02-11T07:52:54Z"
 };

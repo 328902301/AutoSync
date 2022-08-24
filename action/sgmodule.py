@@ -11,5 +11,5 @@ tmpresult = list(set(tmpresult))
 result = []
 print(tmpresult)
 
-with open("./GlobalDomain.conf", "w") as f:
+with open("./aa.sgmodule", "w") as f:
     f.write("\n".join(result))

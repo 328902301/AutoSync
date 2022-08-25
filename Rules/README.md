@@ -13,6 +13,6 @@ https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/App
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Direct/Direct.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Microsoft/Microsoft.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Speedtest/Speedtest.list
-https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/SystemOTA/SystemOTA.list
+https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Filter/Extra/Apple/BlockiOSUpdate.list
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/WeChat/WeChat.list
 ```

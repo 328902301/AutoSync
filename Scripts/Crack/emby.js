@@ -1,14 +1,12 @@
-// 2020-12-20
-// 引用地址 https://github.com/qiangxinglin/Emby/blob/main/scripts/emby.js
 /*
+引用地址 https://github.com/qiangxinglin/Emby/blob/main/scripts/emby.js
+2020-12-20
 
-************************
-QuantumultX :
-************************
+[rewrite_local]
+^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Emby/unlock_2.js
 
-[rewrite_remote]
-https://raw.githubusercontent.com/qiangxinglin/Emby/main/QuantumultX/emby.conf, tag=Emby Premiere, update-interval=86400, opt-parser=false, enabled=true
-
+[mitm]
+hostname = mb3admin.com
 */
 
 var url = $request.url;

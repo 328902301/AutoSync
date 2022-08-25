@@ -8,8 +8,8 @@ Please note that the above rewrite link requires open KOP-XIAO's resource parser
 Surge4, Loon and Shadowrocket configuration:
 
 [Script]
-^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-request-header filebox∞planny.js
-^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-response-body filebox∞planny.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-request-header filebox&planny.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-response-body filebox&planny.js
 
 [MITM]
 hostname = api.revenuecat.com

@@ -8,5 +8,5 @@
 [MITM]
 hostname=*.google.com.cn,*.google.com.hk
 
-[URL Rewrite]
+[Rewrite]
 ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) https://www.google.com 302

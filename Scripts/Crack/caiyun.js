@@ -9,7 +9,7 @@
 使用声明：⚠️⚠️⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 [rewrite_local]
-^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/ColorWeather.js
+^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Crack/caiyun.js
 
 [mitm]
 hostname = biz.caiyunapp.com

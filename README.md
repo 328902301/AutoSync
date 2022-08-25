@@ -7,8 +7,12 @@
 - 不维护脚本.
 - iEwha对任何脚本问题和使用后果不承担任何责任.
 
-## 自用配置：
+## TikTok解锁说明：
+- TikTok版本：抓包V21.1.0解锁登录使用，抓包V23.7.0升级，观看视频5-10分钟，清理后台如果能正常使用，再商店升级到最新，目前支持V25.8.0
+- 关于无法登录：检查去广告规则并禁用，登录成功再启用广告规则
+- 更多详细说明参考[Semporia](https://github.com/Semporia/TikTok-Unlock)
 
+## 自用配置：
 * *Surge*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf

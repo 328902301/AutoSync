@@ -8,5 +8,5 @@
 [MITM]
 hostname=raw.githubusercontent.com
 
-[URL Rewrite]
+[Rewrite]
 ^https?:\/\/raw.githubusercontent.com https://raw.iqiq.io 302

@@ -7,7 +7,8 @@ WX: L-190705
 
 [rewrite_local]
 #石墨文档解锁
-^https:\/\/shimo\.im\/lizard-api\/users\/me url script-response-body https://raw.githubusercontent.com/jackwude/qx/main/js/shimo.js
+^https:\/\/shimo\.im\/lizard-api\/users\/me url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Crack/shimo.js
+
 [mitm]
 hostname = shimo.im
 */

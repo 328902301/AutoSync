@@ -9,7 +9,6 @@
 DOMAIN,180.76.76.200,REJECT
 # no-resolve需在最后
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve
-DOMAIN,im.tieba.baidu.com,REJECT
 
 [Mitm]
 hostname = tiebac.baidu.com

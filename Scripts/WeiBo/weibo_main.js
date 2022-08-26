@@ -43,8 +43,8 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) : {
 	creator_task:false,						//转发任务
 	mblog_menus_custom:false,				//寄微博
-	mblog_menus_video_later:true,			//可能是稍后再看？没出现过
-	mblog_menus_comment_manager:true,		//评论管理
+	mblog_menus_video_later:false,			//可能是稍后再看？没出现过
+	mblog_menus_comment_manager:false,		//评论管理
 	mblog_menus_avatar_widget:false,		//头像挂件
 	mblog_menus_card_bg: false,				//卡片背景
 	mblog_menus_long_picture:true,			//生成长图
@@ -59,7 +59,7 @@ const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) 
 	mblog_menus_promote:false,				//推广
 	mblog_menus_modify_visible:true,		//设置分享范围
 	mblog_menus_copy_url:true,				//复制链接
-	mblog_menus_follow:false,				//关注
+	mblog_menus_follow:true,				//关注
 	mblog_menus_video_feedback:false,		//播放反馈
 	mblog_menus_shield:true,				//屏蔽
 	mblog_menus_report:true,				//投诉

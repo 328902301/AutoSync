@@ -1,0 +1,228 @@
+# NAME: BiliBili
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-15 14:25:42
+# HOST: 52
+# HOST-SUFFIX: 51
+# IP-CIDR: 8
+# USER-AGENT: 4
+# TOTAL: 115
+HOST,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com,BiliBili
+HOST,112-81-125-43.dhost.00cdn.com,BiliBili
+HOST,113-219-145-1.ksyungslb.com,BiliBili
+HOST,114-236-92-129.ksyungslb.com,BiliBili
+HOST,180-101-74-1.ksyungslb.com,BiliBili
+HOST,1geadrmttge3nhcjwgazdope.ourdvsss.com,BiliBili
+HOST,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkpe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkpy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkqy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpa.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpo.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcqy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcttgrzdnpo.ourdvsss.com,BiliBili
+HOST,1graukmttga4nhcjtgozdgce.ourdvsss.com,BiliBili
+HOST,218-91-225-1.ksyungslb.com,BiliBili
+HOST,219-155-150-1.ksyungslb.com,BiliBili
+HOST,222-188-6-1.ksyungslb.com,BiliBili
+HOST,36-104-134-1.ksyungslb.com,BiliBili
+HOST,36-25-252-1.ksyungslb.com,BiliBili
+HOST,3ge3drmttga5nhcbqge3ur.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdnqbofa5do.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdnqbofa5dy.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdrcbzfahue.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdrcbzfahuk.ourdvsss.com,BiliBili
+HOST,4go41hcjtgazdoctqge4o.ourdvsss.com,BiliBili
+HOST,p-bstarstatic.akamaized.net,BiliBili
+HOST,p.bstarstatic.com,BiliBili
+HOST,upos-bstar-mirrorakam.akamaized.net,BiliBili
+HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,acg.tv,BiliBili
+HOST-SUFFIX,acgvideo.com,BiliBili
+HOST-SUFFIX,b23.tv,BiliBili
+HOST-SUFFIX,baka.im,BiliBili
+HOST-SUFFIX,bigfun.cn,BiliBili
+HOST-SUFFIX,bigfunapp.cn,BiliBili
+HOST-SUFFIX,bili22.cn,BiliBili
+HOST-SUFFIX,bili2233.cn,BiliBili
+HOST-SUFFIX,bili23.cn,BiliBili
+HOST-SUFFIX,bili33.cn,BiliBili
+HOST-SUFFIX,biliapi.com,BiliBili
+HOST-SUFFIX,biliapi.net,BiliBili
+HOST-SUFFIX,bilibili.cc,BiliBili
+HOST-SUFFIX,bilibili.cn,BiliBili
+HOST-SUFFIX,bilibili.co,BiliBili
+HOST-SUFFIX,bilibili.com,BiliBili
+HOST-SUFFIX,bilibili.tv,BiliBili
+HOST-SUFFIX,bilibiligame.cn,BiliBili
+HOST-SUFFIX,bilibiligame.net,BiliBili
+HOST-SUFFIX,bilibilipay.cn,BiliBili
+HOST-SUFFIX,bilibilipay.com,BiliBili
+HOST-SUFFIX,bilicdn1.com,BiliBili
+HOST-SUFFIX,bilicdn2.com,BiliBili
+HOST-SUFFIX,bilicdn3.com,BiliBili
+HOST-SUFFIX,bilicdn4.com,BiliBili
+HOST-SUFFIX,bilicdn5.com,BiliBili
+HOST-SUFFIX,biligame.cn,BiliBili
+HOST-SUFFIX,biligame.com,BiliBili
+HOST-SUFFIX,biligame.net,BiliBili
+HOST-SUFFIX,biligo.com,BiliBili
+HOST-SUFFIX,biliimg.com,BiliBili
+HOST-SUFFIX,biliintl.com,BiliBili
+HOST-SUFFIX,biliplus.com,BiliBili
+HOST-SUFFIX,bilivideo.cn,BiliBili
+HOST-SUFFIX,bilivideo.com,BiliBili
+HOST-SUFFIX,bilivideo.net,BiliBili
+HOST-SUFFIX,corari.com,BiliBili
+HOST-SUFFIX,dyhgames.com,BiliBili
+HOST-SUFFIX,hdslb.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunhuf.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunpi.com,BiliBili
+HOST-SUFFIX,hdslb.net,BiliBili
+HOST-SUFFIX,hdslb.org,BiliBili
+HOST-SUFFIX,im9.com,BiliBili
+HOST-SUFFIX,mcbbs.net,BiliBili
+HOST-SUFFIX,mincdn.com,BiliBili
+HOST-SUFFIX,sharejoytech.com,BiliBili
+HOST-SUFFIX,smtcdns.net,BiliBili
+HOST-SUFFIX,upos-hz-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,uposdash-302-bilivideo.yfcdn.net,BiliBili
+HOST-SUFFIX,yo9.com,BiliBili
+USER-AGENT,*bili*,BiliBili
+USER-AGENT,Bilibili*,BiliBili
+USER-AGENT,bili*,BiliBili
+USER-AGENT,bili-inter*,BiliBili
+IP-CIDR,106.75.74.76/32,BiliBili
+IP-CIDR,111.206.25.147/32,BiliBili
+IP-CIDR,119.3.238.64/32,BiliBili
+IP-CIDR,120.92.108.182/32,BiliBili
+IP-CIDR,120.92.113.99/32,BiliBili
+IP-CIDR,120.92.153.217/32,BiliBili
+IP-CIDR,134.175.207.130/32,BiliBili
+IP-CIDR,203.107.1.0/24,BiliBili
+
+# NAME: BiliBiliIntl
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-05 22:37:46
+# HOST: 5
+# HOST-SUFFIX: 2
+# TOTAL: 7
+HOST,apm-misaka.biliapi.net,BiliBiliIntl
+HOST,p-bstarstatic.akamaized.net,BiliBiliIntl
+HOST,p.bstarstatic.com,BiliBiliIntl
+HOST,upos-bstar-mirrorakam.akamaized.net,BiliBiliIntl
+HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBiliIntl
+HOST-SUFFIX,bilibili.tv,BiliBiliIntl
+HOST-SUFFIX,biliintl.com,BiliBiliIntl
+
+# NAME: Spotify
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-05 22:36:45
+# HOST-KEYWORD: 2
+# HOST-SUFFIX: 16
+# IP-CIDR: 1
+# USER-AGENT: 2
+# TOTAL: 21
+HOST-SUFFIX,audio-ak-spotify-com.akamaized.net,Spotify
+HOST-SUFFIX,byspotify.com,Spotify
+HOST-SUFFIX,heads4-ak-spotify-com.akamaized.net,Spotify
+HOST-SUFFIX,pscdn.co,Spotify
+HOST-SUFFIX,scdn.co,Spotify
+HOST-SUFFIX,spoti.fi,Spotify
+HOST-SUFFIX,spotify-com.akamaized.net,Spotify
+HOST-SUFFIX,spotify-everywhere.com,Spotify
+HOST-SUFFIX,spotify.com,Spotify
+HOST-SUFFIX,spotify.design,Spotify
+HOST-SUFFIX,spotifycdn.com,Spotify
+HOST-SUFFIX,spotifycdn.net,Spotify
+HOST-SUFFIX,spotifycharts.com,Spotify
+HOST-SUFFIX,spotifycodes.com,Spotify
+HOST-SUFFIX,spotifyforbrands.com,Spotify
+HOST-SUFFIX,spotifyjobs.com,Spotify
+HOST-KEYWORD,-spotify-com,Spotify
+HOST-KEYWORD,spotify.com,Spotify
+USER-AGENT,*Spotify*,Spotify
+USER-AGENT,Spotify*,Spotify
+IP-CIDR,35.186.224.47/32,Spotify
+
+# NAME: Twitch
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-05 22:37:41
+# HOST-KEYWORD: 1
+# HOST-SUFFIX: 7
+# IP-CIDR: 11
+# IP6-CIDR: 1
+# TOTAL: 20
+HOST-SUFFIX,ext-twitch.tv,Twitch
+HOST-SUFFIX,jtvnw.net,Twitch
+HOST-SUFFIX,ttvnw.net,Twitch
+HOST-SUFFIX,twitch-ext.rootonline.de,Twitch
+HOST-SUFFIX,twitch.tv,Twitch
+HOST-SUFFIX,twitchcdn.net,Twitch
+HOST-SUFFIX,twitchsvc.net,Twitch
+HOST-KEYWORD,ttvnw,Twitch
+IP-CIDR,103.53.48.0/23,Twitch
+IP-CIDR,185.42.204.0/22,Twitch
+IP-CIDR,192.108.239.0/24,Twitch
+IP-CIDR,192.16.64.0/21,Twitch
+IP-CIDR,199.9.248.0/21,Twitch
+IP-CIDR,23.160.0.0/24,Twitch
+IP-CIDR,45.113.128.0/22,Twitch
+IP-CIDR,52.223.192.0/20,Twitch
+IP-CIDR,52.223.208.0/21,Twitch
+IP-CIDR,52.223.224.0/19,Twitch
+IP-CIDR,99.181.64.0/18,Twitch
+IP6-CIDR,2402:2a80::/32,Twitch
+
+# NAME: PrimeVideo
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-05 22:37:44
+# HOST: 9
+# HOST-KEYWORD: 1
+# HOST-SUFFIX: 6
+# USER-AGENT: 2
+# TOTAL: 18
+HOST,atv-ps.amazon.com,PrimeVideo
+HOST,avodmp4s3ww-a.akamaihd.net,PrimeVideo
+HOST,d1v5ir2lpwr8os.cloudfront.net,PrimeVideo
+HOST,d22qjgkvxw22r6.cloudfront.net,PrimeVideo
+HOST,d25xi40x97liuc.cloudfront.net,PrimeVideo
+HOST,d27xxe7juh1us6.cloudfront.net,PrimeVideo
+HOST,dmqdd6hw24ucf.cloudfront.net,PrimeVideo
+HOST,fls-na.amazon.com,PrimeVideo
+HOST,www.amazon.com,PrimeVideo
+HOST-SUFFIX,aiv-cdn.net,PrimeVideo
+HOST-SUFFIX,aiv-delivery.net,PrimeVideo
+HOST-SUFFIX,amazonvideo.com,PrimeVideo
+HOST-SUFFIX,media-amazon.com,PrimeVideo
+HOST-SUFFIX,primevideo.com,PrimeVideo
+HOST-SUFFIX,pv-cdn.net,PrimeVideo
+HOST-KEYWORD,avoddashs,PrimeVideo
+USER-AGENT,InstantVideo.US*,PrimeVideo
+USER-AGENT,Prime%20Video*,PrimeVideo

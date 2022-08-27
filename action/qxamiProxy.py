@@ -7,5 +7,5 @@ rawGoogle = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rul
 
 result = rawMicrosoft.split("\n") + rawYouTube.split("\n") + rawGoogle.split("\n")
 
-with open("./quanx/amiProxy.conf", "w") as f:
+with open("./quanx/amiProxy.list", "w") as f:
     f.write("\n".join(result))

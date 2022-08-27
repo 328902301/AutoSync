@@ -21,7 +21,7 @@ https://github.com/yjqiang/surge_scripts/blob/main/modules/weibo/weibo.sgmodule
 https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Rewrite/Block/YouTubeAds.conf
 https://github.com/app2smile/rules/blob/master/module/zhihu.conf
 https://github.com/yjqiang/surge_scripts/blob/main/modules/zhihu/zhihu_website.sgmodule
-#https://github.com/blackmatrix7/ios_rule_script/blob/master/script/zhihu/zhihu_plus.qxrewrite
+https://github.com/blackmatrix7/ios_rule_script/blob/master/script/zhihu/zhihu_plus.qxrewrite
 ```
 > 配合 AdvertisingLite.conf 一起使用
 

@@ -224,7 +224,9 @@ function removeMsgAd(data) {
 function removePage(data){
 	removeCards(data);
 	if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
-		data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes("t:51"));
+		if (data.cards[0].card_group) {
+ 			data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes("t:51"));
+ 		}
 	}
 	return data;
 }

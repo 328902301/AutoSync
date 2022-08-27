@@ -11,6 +11,3 @@ DOMAIN,sdk.open.talk.getui.net,REJECT
 DOMAIN,sdk-conf.getui.com,REJECT
 DOMAIN,cm-10-138.getui.com,REJECT
 DOMAIN,ads.95516.com,REJECT
-
-[MITM]
-hostname = switch.cup.com.cn,sdk.open.talk.getui.net,sdk-conf.getui.com,cm-10-138.getui.com,ads.95516.com

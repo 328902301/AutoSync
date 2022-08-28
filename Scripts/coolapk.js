@@ -5,13 +5,11 @@ tgchannel   https://t.me/ddgksf2021
 function    酷安去信息流和评论广告
 author      kk pp
 
-
 [rewrite_local]
 ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js
 
 [mitm]
 hostname = api.coolapk.com
-
 */
 
 if ($request.url.indexOf('replyList') != -1) {

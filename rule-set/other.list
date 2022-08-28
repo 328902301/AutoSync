@@ -2,5 +2,6 @@ DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,weibo.cn
-DOMAIN-SUFFIX,video.weibo*.com
-DOMAIN-SUFFIX,*.sina.cn
+DOMAIN-SUFFIX,*.video.weibo*.com
+DOMAIN-SUFFIX,sina.*
+

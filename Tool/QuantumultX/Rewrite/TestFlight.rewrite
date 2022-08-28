@@ -2,4 +2,4 @@
 
 hostname = testflight.apple.com
 
-^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TF_Download.js
+^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_Download.js

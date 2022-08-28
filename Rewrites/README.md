@@ -2,6 +2,11 @@
 ```
 https://github.com/blackmatrix7/ios_rule_script/blob/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf
 ```
+# 引用地址 - AppUnlock.conf
+```
+https://github.com/Semporia/TikTok-Unlock/blob/master/Quantumult%20X/TikTok-JP.conf
+https://github.com/qiangxinglin/Emby/blob/main/QuantumultX/emby.conf
+```
 # 引用地址 - MediaPage.conf
 ```
 https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.conf
@@ -42,6 +47,11 @@ https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.conf
 https://github.com/ddgksf2013/Cuttlefish/blob/master/Html/WebAdBlock.conf
 https://github.com/yqc007/QuantumultX/blob/master/JavDBCrack.js
 https://github.com/yqc007/QuantumultX/blob/master/PornHubPremiumCrack.js
+```
+# 引用地址 - TestFlight.conf
+```
+https://github.com/id77/QuantumultX/blob/master/rewrite/other.conf
+https://github.com/NobyDa/Script/blob/master/QuantumultX/TestFlightDownload.conf
 ```
 # 引用地址 - WebPage.conf
 ```

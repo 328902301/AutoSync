@@ -10,4 +10,6 @@
 DOMAIN-SUFFIX,ibm.com
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,odysseyplus.site
+DOMAIN,ssl.ptlogin2.qq.com
+DOMAIN,localhost.ptlogin2.qq.com
 DOMAIN,relay.firefox.com

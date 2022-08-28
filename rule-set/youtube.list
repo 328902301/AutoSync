@@ -3,5 +3,6 @@ DOMAIN-SUFFIX,s.youtube.com
 DOMAIN-SUFFIX,www.youtube.com
 DOMAIN-SUFFIX,*.googlevideo.com
 DOMAIN-SUFFIX,-redirector*.googlevideo.com
+DOMAIN-SUFFIX,*.youtu.be
 DOMAIN-KEYWORD,youtube
-DOMAIN-SUFFIX,youtu.be
+

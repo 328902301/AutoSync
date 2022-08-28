@@ -6,7 +6,7 @@ function    京东搜索页面优化
 author      ddgksf2013
 
 [rewrite_local]
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) url script-response-body url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/jdsearch.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jd_search.js
 
 [mitm]
 hostname = api.m.jd.com

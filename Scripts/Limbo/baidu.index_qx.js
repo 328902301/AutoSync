@@ -9,9 +9,9 @@ $done({body});
 */
 
 let rHead = '<head>'
-let newStyle = '<head><link rel=\"stylesheet\" href=\"https://raw.githubusercontent.com/RuCu6/QuanX/main/Css/baidu.index.css\" type=\"text/css\">'
+let newStyle = '<head><link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Css/baidu.index.css\" type=\"text/css\">'
 var rBody = '</body>'
-var newJavaScript = '<script type="text/javascript" async="async" src="https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/baidu.index.js"></script>'
+var newJavaScript = '<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Scripts/Limbo/baidu.index.js"></script>'
 let body = $response.body
     .replace(rHead, newStyle)
     .replace(rBody, newJavaScript);

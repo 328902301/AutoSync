@@ -48,13 +48,13 @@
 // 一些常量
 const imax = {
     js: {
-        functionx: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/Adblock4limbo.function.js", // 全局js
-        duboku: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/duboku.js", // 独播库
-        avple: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/avple.js", // avple
-        contentFarm: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/contentFarm.js", // 内容农场
+        functionx: "https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Scripts/Limbo/Adblock4limbo.function.js", // 全局js
+        duboku: "https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Scripts/Limbo/duboku.js", // 独播库
+        avple: "https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Scripts/Limbo/avple.js", // avple
+        contentFarm: "https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Scripts/Limbo/contentFarm.js", // 内容农场
     },
     css: {
-        globalcss: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Css/Adblock4limbo.user.css", // 全局
+        globalcss: "https://cdn.jsdelivr.net/gh/RuCu6/QuanX/Css/Adblock4limbo.user.css", // 全局
         libvio: ".hidden-log ,a[target=\"_blank\"] > .img-responsive ,.advertise ,#adsbox ,.t-img-box ,.inner-advertise ,.advertise  {display: none! important;}", // libvio
         goole: "#tvcap,[data-text-ad] {display:none !important}", // 谷歌搜索广告
         avple: "#adsbox,.asg-overlay,.jss20,.jss13,iframe,span[class*=MuiSkeleton-root],.jss16 ,.MuiSkeleton-pulse.jss12.MuiSkeleton-rect.MuiSkeleton-root,[id*=KnvW],img[src*=\".gif\"],iframe[data-width] {display: none! important;}", // avple

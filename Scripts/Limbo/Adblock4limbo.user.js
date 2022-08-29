@@ -48,13 +48,13 @@
 // 一些常量
 const imax = {
     js: {
-        functionx: "https://limbopro.com/Adguard/Adblock4limbo.function.js", // 全局js
-        duboku: "https://limbopro.com/Adguard/duboku.js", // 独播库
-        avple: "https://limbopro.com/Adguard/avple.js", // avple
-        contentFarm: "https://limbopro.com/Adguard/contentFarm/contentFarm.js", // 内容农场
+        functionx: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/Adblock4limbo.function.js", // 全局js
+        duboku: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/duboku.js", // 独播库
+        avple: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/avple.js", // avple
+        contentFarm: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/Limbo/contentFarm.js", // 内容农场
     },
     css: {
-        globalcss: "https://limbopro.com/CSS/Adblock4limbo.user.css", // 全局
+        globalcss: "https://raw.githubusercontent.com/RuCu6/QuanX/main/Css/Adblock4limbo.user.css", // 全局
         libvio: ".hidden-log ,a[target=\"_blank\"] > .img-responsive ,.advertise ,#adsbox ,.t-img-box ,.inner-advertise ,.advertise  {display: none! important;}", // libvio
         goole: "#tvcap,[data-text-ad] {display:none !important}", // 谷歌搜索广告
         avple: "#adsbox,.asg-overlay,.jss20,.jss13,iframe,span[class*=MuiSkeleton-root],.jss16 ,.MuiSkeleton-pulse.jss12.MuiSkeleton-rect.MuiSkeleton-root,[id*=KnvW],img[src*=\".gif\"],iframe[data-width] {display: none! important;}", // avple
@@ -194,7 +194,6 @@ function adsDomain_switch(x) { // 匹配参数值 执行相应函数
             break;
         case 'ttsp':
             css_adsRemove(imax.css.ttsp);
-
             break;
         case 'google':
             js_adsRemove(imax.js.contentFarm);
@@ -212,7 +211,6 @@ function adsDomain_switch(x) { // 匹配参数值 执行相应函数
             css_adsRemove(imax.css.zhihuAds, 100, "hloyx");
             indexLogin();
             addListener("div.TopNavBar-tab-d8yaD", () => { indexLogin() });
-
             /*
             window.onload = href_attributeSet(500, zhihu_id);
             window.onload = addListener("a[class*='css-'],button[class='Button ContentItem-action Button--plain Button--withIcon Button--withLabel']", () => { href_attributeSet(500, zhihu_id) });
@@ -240,7 +238,6 @@ function adsDomain_switch(x) { // 匹配参数值 执行相应函数
                 }
             }, 500)
             */
-
             break;
         default:
             console.log("Catch Nothing!");

@@ -13,7 +13,7 @@ https://biteb.cc/auth/register?code=v7wt
 */
 const $ = new Env('机场签到');
 const jsname = '机场签到'
-const jcAccounts='host=www.dotunnel005.com; username=392071081@qq.com; password=fuxiang1992;'
+
 const logDebug = 0
 const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
 let notifyStr = ''

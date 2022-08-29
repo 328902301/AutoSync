@@ -7,13 +7,14 @@ cron: 16 8,22 * * *
 把机场域名，用户名和密码填到变量jcAccounts里，多账户用换行或者#隔开，格式：
 export jcAccounts='host=biteb.cc; username=你的用户名; password=你的密码;'
 
+export jcAccounts='host=www.dotunnel005.com; username=392071081@qq.com; password=fuxiang1992;'
 自用的机场邀请(6元一个月)：
 https://biteb.cc/auth/register?code=v7wt
 */
 const $ = new Env('机场签到');
 const jsname = '机场签到'
+const jcAccounts='host=www.dotunnel005.com; username=392071081@qq.com; password=fuxiang1992;'
 const logDebug = 0
-
 const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
 let notifyStr = ''
 

@@ -142,6 +142,9 @@ payload:
   - DOMAIN-SUFFIX,spotifycodes.com
   - DOMAIN-SUFFIX,spotifyforbrands.com
   - DOMAIN-SUFFIX,spotifyjobs.com
+  - DOMAIN-SUFFIX,spotifynewsroom.jp
+  - DOMAIN-SUFFIX,spotilocal.com
+  - DOMAIN-SUFFIX,tospotify.com
   - DOMAIN-KEYWORD,-spotify-com
   - DOMAIN-KEYWORD,spotify.com
   - IP-CIDR,35.186.224.47/32

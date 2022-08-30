@@ -584,10 +584,13 @@ payload:
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,gvt2.com
+  - DOMAIN-SUFFIX,video.google.com
   - DOMAIN-SUFFIX,withyoutube.com
   - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,youtube-ui.l.google.com
   - DOMAIN-SUFFIX,youtube.ae
   - DOMAIN-SUFFIX,youtube.al
   - DOMAIN-SUFFIX,youtube.am
@@ -683,6 +686,7 @@ payload:
   - DOMAIN-SUFFIX,youtube.fi
   - DOMAIN-SUFFIX,youtube.fr
   - DOMAIN-SUFFIX,youtube.ge
+  - DOMAIN-SUFFIX,youtube.googleapis.com
   - DOMAIN-SUFFIX,youtube.gr
   - DOMAIN-SUFFIX,youtube.gt
   - DOMAIN-SUFFIX,youtube.hk
@@ -740,6 +744,7 @@ payload:
   - DOMAIN-SUFFIX,youtube.uy
   - DOMAIN-SUFFIX,youtube.vn
   - DOMAIN-SUFFIX,youtubeeducation.com
+  - DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com
   - DOMAIN-SUFFIX,youtubefanfest.com
   - DOMAIN-SUFFIX,youtubegaming.com
   - DOMAIN-SUFFIX,youtubego.co.id
@@ -1258,7 +1263,6 @@ payload:
   - DOMAIN-SUFFIX,gv.com
   - DOMAIN-SUFFIX,gvt0.com
   - DOMAIN-SUFFIX,gvt1-cn.com
-  - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,gvt2-cn.com
   - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,gvt5.com
@@ -1338,6 +1342,7 @@ payload:
   - DOMAIN-SUFFIX,quiksee.com
   - DOMAIN-SUFFIX,recaptcha.net
   - DOMAIN-SUFFIX,redhotlabs.com
+  - DOMAIN-SUFFIX,redirector.gvt1.com
   - DOMAIN-SUFFIX,registry.google
   - DOMAIN-SUFFIX,revolv.com
   - DOMAIN-SUFFIX,ridepenguin.com

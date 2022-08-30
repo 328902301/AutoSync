@@ -35,7 +35,8 @@ payload:
   - PROCESS-NAME,org.telegram.messenger
   - PROCESS-NAME,telegram.exe
 
-  - DOMAIN,api.fast.com
+  - DOMAIN,e13252.dscg.akamaiedge.net
+  - DOMAIN,h-netflix.online-metrix.net
   - DOMAIN,netflix.com.edgesuite.net
   - DOMAIN-SUFFIX,fast.com
   - DOMAIN-SUFFIX,flxvpn.net

@@ -1,5 +1,5 @@
 #!name=Scripts
-#!desc= Bilbii换区,评分、YouTube 字幕翻译、Siri搜索建议、微信公众号广告
+#!desc= Bilbii换区,评分、Siri搜索建议、微信公众号广告
 #!system=ios
 
 [General]
@@ -25,8 +25,6 @@ DOMAIN,gdmf.apple.com,REJECT
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 # > IGN China to IGN Global
 ^https?:\/\/(www.)?ign\.xn--fiqs8s\/ http://cn.ign.com/ccpref/us 302
-# > YouTube中文字幕
-^https:\/\/www\.youtube\.com\/api\/timedtext\? https://www.youtube.com/api/timedtext?tlang=zh-Hans& header
 
 [Script]
 # > bilbii换区,评分,画质
@@ -54,4 +52,4 @@ Siri Infomation Card = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.a
 微信公众号 = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/WeChat.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% mbd.baidu.com, s.bdstatic.com, ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn,mp.weixin.qq.com,
+hostname = %APPEND% mbd.baidu.com, s.bdstatic.com, ap?.bilibili.com, ap?.biliapi.net,www.google.cn, boxjs.net, boxjs.com,sub.store,api*.smoot.apple.com, api*.smoot.apple.cn,mp.weixin.qq.com,

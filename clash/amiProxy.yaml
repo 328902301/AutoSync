@@ -1,4 +1,3 @@
-palyload:
 payload:
   - DOMAIN-SUFFIX,1drv.ms
   - DOMAIN-SUFFIX,a-msedge.net
@@ -582,7 +581,6 @@ payload:
   - PROCESS-NAME,onedrive
   - PROCESS-NAME,onedriveupdater
 
-payload:
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
@@ -760,7 +758,6 @@ payload:
   - IP-CIDR,216.73.80.0/20
   - IP-CIDR6,2620:120:e000::/40
 
-payload:
   - DOMAIN-SUFFIX,0emm.com
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,1ucrs.com

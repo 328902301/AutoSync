@@ -94,8 +94,8 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           const tabList = new Set([39, 40, 41, 151, 442, 99, 100, 101, 556]);
           // 尝试使用tab name直观修改
           const tabNameList = new Set(["直播", "推荐", "热门", "影视"]);
-          // 176消息 107概念版游戏中心，获取修改为Story模式
-          const topList = new Set([176, 222, 107]);
+          // 222游戏中心 107概念版游戏中心 176消息中心
+          const topList = new Set([176]);
           // 标准版
           // 177首页 178频道 179动态 181我的
           // 概念版
@@ -107,23 +107,12 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           let obj = JSON.parse(magicJS.response.body);
           if (obj["data"]["tab"]) {
             let tab = obj["data"]["tab"].filter((e) => {
-              return tabNameList.has(e.name);
+              return tabNameList.has(e.name) || tabList.has(e.id);
             });
             obj["data"]["tab"] = tab;
           }
-          // 将 id（222 & 107）调整为Story功能按钮
-          let storyAid = magicJS.read(storyAidKey);
-          if (!storyAid) {
-            storyAid = "246834163";
-          }
           if (obj["data"]["top"]) {
             let top = obj["data"]["top"].filter((e) => {
-              if (e.id === 222 || e.id === 107) {
-                e.uri = `bilibili://story/${storyAid}`;
-                e.icon = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_icon.png";
-                e.tab_id = "Story_Top";
-                e.name = "Story";
-              }
               return topList.has(e.id);
             });
             obj["data"]["top"] = top;

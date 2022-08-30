@@ -1,10 +1,4 @@
-/*
-已对代码进行一定修改，以满足自己使用需求
-
-修改时间：2022-08-24
-更新时间：2022-08-21
-脚本版本：(68)
-*/
+// 2022-08-30 22:17
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";

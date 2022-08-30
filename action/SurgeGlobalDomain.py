@@ -1,6 +1,6 @@
 import requests
 
-rawGlobalDomian = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list").text
+rawGlobalDomain = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list").text
 
 result = list()
 for rawresult in [rawGlobalDomain]:

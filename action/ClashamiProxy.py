@@ -9,5 +9,5 @@ rawGoogle = rawGoogle.replace("palyload:","")
 
 result = rawMicrosoft.split("\n") + rawYouTube.split("\n") + rawGoogle.split("\n")
 
-with open("./clash/amiProxy.list", "w") as f:
+with open("./clash/amiProxy.yaml", "w") as f:
     f.write("\n".join(result))

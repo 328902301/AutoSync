@@ -10,8 +10,6 @@
 ^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
 # > Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
-# > YouTube中文字幕
-^https:\/\/www\.youtube\.com\/api\/timedtext\? header https://www.youtube.com/api/timedtext?tlang=zh-Hans&
 
 [Script]
 # > bilbii换区,评分,画质
@@ -29,4 +27,4 @@ http-request https?:\/\/sub\.store script-path=https://raw.githubusercontent.com
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=true,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/WeChat.js,tag=微信公众号
 
 [MITM]
-hostname = ap?.bilibili.com, ap?.biliapi.net,www.google.cn, *.youtube.com, sub.store, mp.weixin.qq.com,
+hostname = ap?.bilibili.com, ap?.biliapi.net,www.google.cn, sub.store, mp.weixin.qq.com,

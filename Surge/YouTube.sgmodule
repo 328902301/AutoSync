@@ -9,4 +9,4 @@ URL-REGEX,^https?:\/\/.+?\.googlevideo\.com\/.+&oda,REJECT-TINYGIF
 油管广告 = type=http-request,pattern="^https?:\/\/.+?\.googlevideo\.com\/.+ctier(?!(,|=SH))",requires-body=0,script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/YouTubeAds.js
 
 [MITM]
-hostname = %APPEND% r*.googlevideo.com
+hostname = %APPEND% *.googlevideo.com

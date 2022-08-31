@@ -5,6 +5,7 @@ let magicJS = MagicJS(scriptName, "INFO");
   let response = null;
   if (magicJS.isResponse) {
     switch (true) {
+/*
       // 嘀嗒出行
       case /^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(magicJS.request.url):
         try {
@@ -26,6 +27,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`嘀嗒出行开屏去广告出现异常：${err}`);
         }
         break;
+*/
       // 美团外卖
       case /^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?/.test(magicJS.request.url):
         try {
@@ -90,6 +92,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`联享家开屏去广告出现异常：${err}`);
         }
         break;
+/*
       // 多点
       case /^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(magicJS.request.url):
         try {
@@ -103,6 +106,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`多点开屏广告处理出现异常：${err}`);
         }
         break;
+*/
       default:
         magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
         break;

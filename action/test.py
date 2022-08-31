@@ -18,7 +18,7 @@ for s in sections_list:
     for k in config[s]:
         print(k,':',config[s][k])
 
-result = rawconfig.split("\n")
+result = conf.write(open(cfgpath, “w”))
 
 with open("./sgmodule/test.sgmodule", "w") as f:
     f.write("\n".join(result))

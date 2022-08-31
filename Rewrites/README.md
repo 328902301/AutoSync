@@ -28,8 +28,6 @@ https://github.com/app2smile/rules/blob/master/module/zhihu.conf
 https://github.com/yjqiang/surge_scripts/blob/main/modules/zhihu/zhihu_website.sgmodule
 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/zhihu/zhihu_plus.qxrewrite
 ```
-> 配合 AdvertisingLite.conf 一起使用
-
 更新日志：
 - 2022-08-23 什么值得买 全面去广告
 - 屏蔽广告联盟推广

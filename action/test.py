@@ -18,5 +18,5 @@ for s in sections_list:
     for k in config[s]:
         print(k,':',config[s][k])
 
-with open("./clash/Global.yaml", "w") as f:
+with open("./sgmodule/test.sgmodule", "w") as f:
     f.write("\n".join(config))

@@ -9,5 +9,16 @@ for rawresult in [rawMiTM, rawami, rawsubstore]:
     result.extend([item.rstrip() for item in rawresult.split('\n') if not (item.startswith('#'))])
 result_text = '\n'.join(result)
 
+import configparser
+config = configparser.ConfigParser()
+config.read('result_text')
+sections_list = config.sections()
+for s in sections_list:
+    print(s)
+    for k in config[s]:
+        print(k,':',config[s][k])
+
+result_text = '\n'.join(config)
+
 with open("./sgmodule/test.sgmodule", "w") as f:
     f.write("\n".join(result))

@@ -1,0 +1,13 @@
+#!name = 自动加入TF
+#!desc = 自动监控TF名额，一旦有新的名额即刻加入。
+#!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!author = NobyDa
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/TestFlight.png
+
+[script]
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, timeout=10, tag=TF信息获取
+cron "*/1 * * * * *" script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/Auto_join_TF.js, tag=自动加入TF, argument=timeout=180&wake-system=0
+
+[MITM]
+hostname = testflight.apple.com

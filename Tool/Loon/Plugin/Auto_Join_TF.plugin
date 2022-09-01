@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/TestFlight.png
 
 [script]
-#http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, timeout=10, tag=TF信息获取
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, timeout=10, tag=TF信息获取
 cron "*/1 * * * * *" script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/Auto_join_TF.js, tag=自动加入TF, argument=timeout=180&wake-system=0
 
 [MITM]

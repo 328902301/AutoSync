@@ -28,17 +28,6 @@ https://github.com/app2smile/rules/blob/master/module/zhihu.conf
 https://github.com/yjqiang/surge_scripts/blob/main/modules/zhihu/zhihu_website.sgmodule
 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/zhihu/zhihu_plus.qxrewrite
 ```
-更新日志：
-- 2022-08-23 什么值得买 全面去广告
-- 屏蔽广告联盟推广
-- 跳过重定向页面(简书 知乎 微博 115)
-- 铁路12306 去除开屏广告
-- 小红书 去除开屏广告
-- 微信 去除公众号广告；跳过微信中转页面，解除被封禁链接
-- 哔哩哔哩 全面优化
-- 微博 全面优化
-- YouTube 去除视频内广告
-- 知乎 全面优化(回答下方的视频推广失效)
 # 引用地址 - PornPage.conf
 ```
 https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.conf

@@ -145,8 +145,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
             delete obj["data"]["sections_v2"][index].be_up_title;
             delete obj["data"]["sections_v2"][index].tip_icon;
             delete obj["data"]["sections_v2"][index].tip_title;
-            delete obj.data.vip_section_v2;
-            delete obj.data.vip_section;
             obj["data"]["sections_v2"][index]["items"] = items;
             if (element.title === "更多服务" && enableMall) {
               element.items.unshift({
@@ -186,20 +184,13 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       // 追番去广告
-      case /pgc\/page\/bangumi/.test(magicJS.request.url):
+      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
-              //i.source_content && i.source_content.ad_content
-              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
-            }
-            if (module.style.startsWith("function")) {
-              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
-            }
-            if (module.style.startsWith("tip")) {
-              module.items = null;
+              module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
             }
           });
           body = JSON.stringify(obj);

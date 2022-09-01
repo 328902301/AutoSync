@@ -27,15 +27,14 @@ def get_module_content(module_urls):
 
 
 sgmodules = ['https://ruleset.skk.moe/Modules/sukka_mitm_hostnames.sgmodule',
-             'https://gist.githubusercontent.com/futurkk/144a94ddac70290f638f998148ccccf8/raw/' +
-             '91b0287a3d43983b1407322a3a9b944174c73a41/ami.sgmodule',
+             'https://gist.githubusercontent.com/futurkk/144a94ddac70290f638f998148ccccf8/raw/ami.sgmodule',
              'https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule']
 
 config_combine = get_module_content(sgmodules)
 
 
-with open('result.sgmodule', 'w') as f:
-    f.writelines(['#!name=test\n', '#!desc=sgmodule test\n'])
+with open('./sgmodule/ami.sgmodule', 'w') as f:
+    f.writelines(['#!name=ami@Surge\n', '#!desc=Some thing.\n'])
     for section_key in config_combine:
         f.write(section_key + '\n')
         f.writelines(config_combine[section_key])

@@ -10,3 +10,4 @@
 # TOTAL: 0
 payload:
   - DOMAIN-SUFFIX,plex.tv
+  - DOMAIN,ssl-lvlt.cdn.ea.com

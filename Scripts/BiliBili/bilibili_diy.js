@@ -1,4 +1,4 @@
-// 2022-08-30 22:17
+// 2022-09-01 10:01
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -245,19 +245,13 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
         // 观影页去广告
-      case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
+      case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.result.modules.forEach((module) => {
             // 头部banner
             if (module.style.startsWith("banner")) {
-              module.items = module.items.filter((i) => !(i.link.indexOf("play")==-1));
-            }
-            if (module.style.startsWith("function")) {
-              module.items = module.items.filter((i) => (i.blink.indexOf("www.bilibili.com")==-1));
-            }
-            if (module.style.startsWith("tip")) {
-              module.items = null;
+              module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
             }
           });
           body = JSON.stringify(obj);

@@ -11,6 +11,6 @@ $persistentStore.write(request_id, 'request_id')
 if ($persistentStore.read('request_id') !== null) {
   $notification.post('请关闭本脚本', '信息获取成功','')
 } else {
-  $notification.post('信息获取失败','请打开MITM H2开关并添加testflight.apple.com','')
+  $notification.post('信息获取失败','请打开MitM开关','')
 }
 $done({})

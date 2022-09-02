@@ -1,4 +1,4 @@
-const version = 'v0823.1';
+const version = 'v902.2';
 
 const $ = new Env("微博去广告");
 let storeMainConfig = $.getdata('mainConfig');
@@ -150,9 +150,13 @@ function topicHandler(data) {
 				if(['guess_like_title', 'cats_top_title' ,'chaohua_home_readpost_samecity_title'].indexOf(cGroup0.itemid) > -1) {
 					addFlag = false;
 				} else if(cGroup.length > 1) {
-					if(cGroup[1].itemid == 'chaohua_discovery_banner_1') {
-						c.card_group.splice(1, 1);
+					let newCardGroup = [];
+					for(let cg of cGroup) {
+						if(['chaohua_discovery_banner_1', 'bottom_mix_activity'].indexOf(cg.itemid) == -1) {
+							newCardGroup.push(cg);
+						}
 					}
+					c.card_group = newCardGroup;
 				}
 			}
 		} 
@@ -180,7 +184,7 @@ function removeSearchMain(data) {
 function checkSearchWindow(item) {
 	if(!mainConfig.removeSearchWindow) return false;
 	if(item.category != 'card') return false;
-	return item.data?.itemid == 'finder_window';
+	return item.data?.itemid == 'finder_window' || item.data?.itemid == 'more_frame';
 }
 
 //发现页

@@ -1,5 +1,5 @@
 //您打算为用户检索的网站。
-const上游='www.google.com'
+const upstream ='www.google.com'
 
 //上游网站的自定义路径名。
 const upper_path ='/'

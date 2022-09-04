@@ -1,13 +1,8 @@
-# NAME: Proxy
-# AUTHOR: ArriettyQAQ
-# GITHUB: https://github.com/ArriettyQAQ/networktools
-# UPDATED: 2021-01-13 20:51:34
-# DOMAIN-SUFFIX: 1
-# DOMAIN: 1
-# IP-CIDR: 0
-# DOMAIN-KEYWORD: 0
-# IP-CIDR6: 0
-# TOTAL: 0
 payload:
   - DOMAIN-SUFFIX,plex.tv
+# Emby公益服
+  - DOMAIN-SUFFIX,odysseyplus.site
+  - DOMAIN-SUFFIX,misakaf.org
+# Origin CDN
   - DOMAIN,ssl-lvlt.cdn.ea.com
+  - DOMAIN,origin-a.akamaihd.net

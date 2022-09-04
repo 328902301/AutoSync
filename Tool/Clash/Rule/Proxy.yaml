@@ -1,15 +1,3 @@
-# NAME: Proxy
-# AUTHOR: ArriettyQAQ
-# GITHUB: https://github.com/ArriettyQAQ/networktools
-# UPDATED: 2021-01-13 20:51:34
-# DOMAIN-SUFFIX: 3
-# DOMAIN: 1
-# IP-CIDR: 0
-# DOMAIN-KEYWORD: 1
-# IP-CIDR6: 0
-# TOTAL: 0
 payload:
   - DOMAIN-SUFFIX,ibm.com
   - DOMAIN,relay.firefox.com
-#  - DOMAIN-SUFFIX,2dland.cn
-#  - DOMAIN-KEYWORD,2dland.cn

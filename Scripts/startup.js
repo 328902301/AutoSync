@@ -39,6 +39,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`美团外卖开屏去广告出现异常：${err}`);
         }
         break;
+/*
       // 小爱音箱
       case /^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(magicJS.request.url):
         try {
@@ -58,6 +59,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`小爱音箱开屏去广告出现异常：${err}`);
         }
         break;
+*/
       // 京东
       case /^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(magicJS.request.url):
         try {
@@ -79,6 +81,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`京东开屏去广告出现异常：${err}`);
         }
         break;
+/*
       // 联享家
       case /^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview.fcg/.test(magicJS.request.url):
         try {
@@ -92,7 +95,6 @@ let magicJS = MagicJS(scriptName, "INFO");
           magicJS.logError(`联享家开屏去广告出现异常：${err}`);
         }
         break;
-/*
       // 多点
       case /^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(magicJS.request.url):
         try {

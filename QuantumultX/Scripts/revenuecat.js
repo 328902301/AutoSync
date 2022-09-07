@@ -37,6 +37,12 @@ if (ua.indexOf('Planny') != -1) {
     Body = {"request_date":"2022-07-31T12:39:35Z","request_date_ms":1659271175185,"subscriber":{"entitlements":{"premium":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"com.kevinreutter.Sagittarius.PremiumLifetime","purchase_date":"2022-07-31T12:38:21Z"}},"first_seen":"2022-07-31T12:37:44Z","last_seen":"2022-07-31T12:37:44Z","management_url":null,"non_subscriptions":{"com.kevinreutter.Sagittarius.PremiumLifetime":[{"id":"e69f79ea37","is_sandbox":false,"original_purchase_date":"2022-07-31T12:38:21Z","purchase_date":"2022-07-31T12:38:21Z","store":"app_store"}]},"original_app_user_id":"$RCAnonymousID:7d194fd555aa4d399b98609fa633de22","original_application_version":"1.0","original_purchase_date":"2013-08-01T07:00:00Z","other_purchases":{"com.kevinreutter.Sagittarius.PremiumLifetime":{"purchase_date":"2022-07-31T12:38:21Z"}},"subscriptions":{}}};
 }
 
+//谜底时钟
+//https://apps.apple.com/cn/app/id1536358464
+if (ua.indexOf('%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F') != -1) {
+    Body = {"request_date":"2022-09-07T10:39:48Z","request_date_ms":1662547188167,"subscriber":{"entitlements":{"Entitlement.Pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"tech.miidii.MDClock.pro","purchase_date":"2021-07-23T04:40:29Z"}},"first_seen":"2021-11-04T01:41:55Z","last_seen":"2022-09-07T10:39:40Z","management_url":null,"non_subscriptions":{"tech.miidii.MDClock.pro":[{"id":"9d8637e31a","is_sandbox":false,"original_purchase_date":"2021-07-23T04:40:29Z","purchase_date":"2021-07-23T04:40:29Z","store":"app_store"}]},"original_app_user_id":"$RCAnonymousID:a2b9499d9cf64aca9130c175a4e51b04","original_application_version":"364","original_purchase_date":"2021-07-23T04:39:03Z","other_purchases":{"tech.miidii.MDClock.pro":{"purchase_date":"2021-07-23T04:40:29Z"}},"subscriptions":{}}};
+}
+    
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

@@ -49,6 +49,12 @@ if (ua.indexOf('Darkroom') != -1) {
     Body = {"request_date":"2022-09-08T12:38:57Z","request_date_ms":1662640737186,"subscriber":{"entitlements":{"co.bergen.Darkroom.entitlement.allToolsAndFilters":{"expires_date":"2052-09-15T12:38:24Z","product_identifier":"co.bergen.Darkroom.product.year.everything","purchase_date":"2022-09-08T12:38:24Z"},"co.bergen.Darkroom.entitlement.selectiveAdjustments":{"expires_date":"2052-09-15T12:38:24Z","product_identifier":"co.bergen.Darkroom.product.year.everything","purchase_date":"2022-09-08T12:38:24Z"}},"first_seen":"2022-09-08T12:37:51Z","last_seen":"2022-09-08T12:37:51Z","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:2f245117497f4200b4683f102da726bb","original_application_version":"60600","original_purchase_date":"2022-07-30T04:21:40Z","other_purchases":{},"subscriptions":{"co.bergen.Darkroom.product.year.everything":{"billing_issues_detected_at":null,"expires_date":"2052-09-15T12:38:24Z","is_sandbox":false,"original_purchase_date":"2022-09-08T12:38:25Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-09-08T12:38:24Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//09 Scanner Pro
+//https://apps.apple.com/cn/app/id333710667
+if (ua.indexOf('ScannerPro') != -1) {
+    Body = {"request_date":"2020-06-05T11:54:41Z","request_date_ms":1591358081473,"subscriber":{"entitlements":{"plus":{"expires_date":"2030-02-18T07:52:54Z","product_identifier":"com.premium.yearly","purchase_date":"2020-02-11T07:52:54Z"}},"first_seen":"2020-05-29T07:59:41Z","last_seen":"2020-06-05T11:46:28Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"httpstmeddgksf2021","original_application_version":"5","original_purchase_date":"2020-05-29T07:47:32Z","other_purchases":{},"subscriptions":{"com.premium.yearly":{"billing_issues_detected_at":null,"expires_date":"2030-02-18T07:52:54Z","is_sandbox":false,"original_purchase_date":"2020-02-11T07:52:55Z","period_type":"normal","purchase_date":"2020-02-11T07:52:54Z","store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

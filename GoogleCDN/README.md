@@ -1,4 +1,4 @@
-# 介绍
+##方案一介绍
 WorkersProxy 是一个轻量级的 Javascript 应用程序，可从其他服务器作为客户端检索资源。
 
 在 Cloudflare Workers 上进行部署时，您可以构建自定义的反向代理，而无需购买计算引擎和配置 Nginx 等 Web 服务器。
@@ -13,7 +13,7 @@ wrangler publish
 # 手动部署
 导航到Cloudflare Workers，注册或登录您的Cloudflare帐户，并为worker设置自定义子域，然后创建一个新的Worker。
 
-自定义“ src / index.js ”，将代码粘贴到Cloudflare在线编辑器中以替换默认代码。
+自定义“ src / index1.js ”，将代码粘贴到Cloudflare在线编辑器中以替换默认代码。
 
 更改您的Worker的名称，保存并部署它，并检查其性能是否满足您的需求。
 
@@ -57,5 +57,9 @@ const replace_dict = {
     '$upstream': '$custom_domain',
     '//google.com': ''
 }
+
+## 方案二
+代码为index.js
+其他雷同
 ## 特别感谢：
 * [膨胀面包](https://blog.error.work/qd/47.html)

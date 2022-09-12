@@ -12,6 +12,8 @@ QuantumultX的配置文件 纯手工自制 分流更齐 更适合上手
 
 或者复制后方链接在QuantumultX中引用：https://raw.githubusercontent.com/MengYuLianMian/QuantumultX-configuration-file-MengRain/main/QuantumultX%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6
 
+部分分流属于关闭状态如有需要请手动打开
+
 PS：需要更多分流规则请看本文章最底部
 
 ![image](https://user-images.githubusercontent.com/89105781/183346056-d90a8c06-cf00-444f-8dc6-f8345b58dd69.png)

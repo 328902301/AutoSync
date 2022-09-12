@@ -9,18 +9,18 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	isDebug: false,						//开启调试，会打印运行中部分日志
 	//个人中心配置，其中多数是可以直接在更多功能里直接移除
 	removeHomeVip: true,				//个人中心的vip栏
-	removeHomeCreatorTask: true,		//个人中心创作者中心下方的轮播图
+	removeHomeCreatorTask: false,		//个人中心创作者中心下方的轮播图
 
 	//微博详情页配置
-	removeRelate: true,			//相关推荐
-	removeGood: true,			//微博主好物种草
-	removeFollow: true,			//关注博主
-	modifyMenus: true,			//编辑上下文菜单
+	removeRelate: false,			//相关推荐
+	removeGood: false,			//微博主好物种草
+	removeFollow: false,			//关注博主
+	modifyMenus: fals,			//编辑上下文菜单
 	removeRelateItem: false,	//评论区相关内容
-	removeRecommendItem: true,	//评论区推荐内容
+	removeRecommendItem: false,	//评论区推荐内容
 	removeRewardItem: false,	//微博详情页打赏模块
 
-	removeLiveMedia: true,		//首页顶部直播
+	removeLiveMedia: false,		//首页顶部直播
 	removeNextVideo: false,					//关闭自动播放下一个视频
 
 	removePinedTrending: true,		//删除热搜列表置顶条目

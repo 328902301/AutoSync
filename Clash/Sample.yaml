@@ -1,6 +1,6 @@
 mixed-port: 7890
 allow-lan: false
-mode: rule
+mode: script
 log-level: debug
 ipv6: false
 tun:
@@ -237,7 +237,6 @@ rules:
   - RULE-SET,Lancidr,DIRECT
   - MATCH,Proxy
 
-
 # 脚本模式
 script:
   code: |
@@ -255,7 +254,6 @@ script:
             "China": "DIRECT",
             "cncidr": "DIRECT",   
             "Lancidr": "DIRECT",   
-  
           }
         port = int(metadata["dst_port"])
         if metadata["network"] == "UDP":

@@ -112,27 +112,27 @@ proxy-groups:
       - 日本节点
       - 美国节点
   - name: "香港节点"
-    type: url-test
+    type: fallback
     use:
       - HK
   - name: "台湾节点"
-    type: url-test
+    type: fallback
     use:
       - TW
   - name: "狮城节点"
-    type: url-test
+    type: fallback
     use:
       - SG
   - name: "韩国节点"
-    type: url-test
+    type: fallback
     use:
       - KR
   - name: "日本节点"
-    type: url-test
+    type: fallback
     use:
       - JP
   - name: "美国节点"
-    type: url-test
+    type: fallback
     use:
       - US
 

@@ -8,7 +8,7 @@ TG频道：https://t.me/ioshkj7
 [rewrite_local]
 
 #AI换脸秀解锁会员
-^https:\/\/changeclothes\.szsszykj\.com\/interface\/GetIosVip.php url script-response-body aihlvip.js
+^https:\/\/changeclothes\.szsszykj\.com\/interface\/GetIosVip.php url script-response-body https://gitlab.com/ioshkj/quantumultx/-/raw/main/vipjs/aihlvip.js
 
 
 [mitm]

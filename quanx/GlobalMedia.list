@@ -1,13 +1,13 @@
 # NAME: Telegram
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-09-08 01:24:20
+# UPDATED: 2022-09-14 10:26:44
 # HOST-KEYWORD: 2
 # HOST-SUFFIX: 19
 # IP-ASN: 5
-# IP-CIDR: 7
+# IP-CIDR: 8
 # IP6-CIDR: 4
-# TOTAL: 37
+# TOTAL: 38
 HOST-SUFFIX,comments.app,Telegram
 HOST-SUFFIX,contest.com,Telegram
 HOST-SUFFIX,graph.org,Telegram
@@ -32,6 +32,7 @@ HOST-KEYWORD,telegram,Telegram
 IP-CIDR,109.239.140.0/24,Telegram
 IP-CIDR,149.154.160.0/20,Telegram
 IP-CIDR,185.76.151.0/24,Telegram
+IP-CIDR,5.28.195.163/32,Telegram
 IP-CIDR,5.28.195.205/32,Telegram
 IP-CIDR,91.105.192.0/23,Telegram
 IP-CIDR,91.108.0.0/16,Telegram
@@ -49,15 +50,15 @@ IP-ASN,62041,Telegram
 # NAME: Netflix
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-08-31 02:29:51
+# UPDATED: 2022-09-15 02:32:06
 # HOST: 3
 # HOST-KEYWORD: 4
 # HOST-SUFFIX: 28
 # HOST-WILDCARD: 1
-# IP-CIDR: 957
+# IP-CIDR: 958
 # IP6-CIDR: 4
 # USER-AGENT: 1
-# TOTAL: 998
+# TOTAL: 999
 HOST,e13252.dscg.akamaiedge.net,Netflix
 HOST,h-netflix.online-metrix.net,Netflix
 HOST,netflix.com.edgesuite.net,Netflix
@@ -204,6 +205,7 @@ IP-CIDR,13.245.93.160/29,Netflix
 IP-CIDR,13.245.93.176/28,Netflix
 IP-CIDR,13.245.93.192/28,Netflix
 IP-CIDR,13.246.108.0/22,Netflix
+IP-CIDR,13.246.120.0/22,Netflix
 IP-CIDR,13.246.70.0/23,Netflix
 IP-CIDR,13.248.224.0/21,Netflix
 IP-CIDR,13.248.232.0/23,Netflix

@@ -7,7 +7,7 @@ T馈群：https://t.me/ioshkj7
 
 *******************************
 
-^https?:\/\/cat-match\.easygame2021\.com\/sheep\/v1\/game\/map_info url script-request-header https://raw.githubusercontent.com/missuo/FuckSheepGame/main/sheep.js
+^https?:\/\/cat-match\.easygame2021\.com\/sheep\/v1\/game\/map_info url script-request-header sheep.js
 [mitm] 
 hostname = cat-match.easygame2021.com
 

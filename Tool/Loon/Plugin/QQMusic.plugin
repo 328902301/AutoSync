@@ -27,4 +27,4 @@ DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ url REJECT
 
 [MITM]
-hostname = *,us.l.qq.com,y.gtimg.cn
+hostname = us.l.qq.com,y.gtimg.cn

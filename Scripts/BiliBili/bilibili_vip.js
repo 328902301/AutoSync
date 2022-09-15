@@ -1,6 +1,4 @@
 /*
- *
- *
 脚本功能：哔哩哔哩解锁大会员
 软件版本：6.58.0
 下载地址：http://t.cn/AiOqwnn1
@@ -8,20 +6,14 @@
 更新时间：2022-01-18
 脚本发布：https://t.me/yqc_123
 问题反馈：https://t.me/yqc_777
-使用声明：⚠️此脚本仅供学习与交流，
-        请勿转载与贩卖！⚠️⚠️⚠️
-*******************************
+使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 [rewrite_local]
-
 # > 哔哩哔哩解锁大会员
 ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/Script/BiLiBiLiBVIPCrack.js
 
 [mitm] 
-
 hostname = *.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*
-*
-*
 */
 
 

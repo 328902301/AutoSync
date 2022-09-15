@@ -3,7 +3,7 @@
 #!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/1692041ac44ede9463583810aa715eac8baac694/Resource/Icon/60px/QQMusic.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/QQMusic.png
 
 [Rule]
 DOMAIN,tmeadcomm.y.qq.com,REJECT

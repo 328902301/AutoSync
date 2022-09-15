@@ -12,66 +12,75 @@ tun:
       - 198.18.0.2:53
 
 proxy-providers:
-  HK:
+  #单个机场订阅AcrossLine&GLADOS，也可以机场组合订阅
+  AcrossLine:
     type: http
-    path: ./Server/HK.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
+    url: "这里填写机场订阅链接1，注意保留双引号和双引号前面的空格"
     interval: 3600
+    path: ./Server/AcrossLine.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  GLADOS:
+    type: http
+    url: "这里填写机场订阅链接2，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    path: ./Server/GLADOS.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  #节点筛选
+  HK:
+    type: file
+    path: ./Server/AcrossLine.yaml
     filter: '香港|HK|Hong Kong|🇭🇰'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
   TW:
-    type: http
-    path: ./Server/TW.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
-    interval: 3600
-    filter: '台湾|TW|🇨🇳'
+    type: file
+    path: ./Server/GLADOS.yaml
+    filter: '台湾|TW|cn'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300 
   SG:
-    type: http
-    path: ./Server/SG.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
-    interval: 3600
+    type: file
+    path: ./Server/GLADOS.yaml
     filter: '新加坡|狮城|SG|Singapore|🇸🇬'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
   KR:
-    type: http
-    path: ./Server/KR.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
-    interval: 3600
+    type: file
+    path: ./Server/AcrossLine.yaml
     filter: '韩国|韓國|南朝鲜|KR|Korean|🇰🇷'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
   JP:
-    type: http
-    path: ./Server/JP.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
-    interval: 3600
+    type: file
+    path: ./Server/GLADOS.yaml
     filter: '日本|JP|Japan|🇯🇵'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300  
   US:
-    type: http
-    path: ./Server/US.yaml
-    url: "这里填写你的订阅链接，注意保留双引号和双引号前面的空格"
-    interval: 3600
+    type: file
+    path: ./Server/GLADOS.yaml
     filter: '美国|US|USA|America|United States|🇺🇸'
     health-check: 
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
 
 proxy-groups:
   - name: Emby

@@ -19,12 +19,12 @@ DOMAIN,beacon.qq.com,REJECT
 DOMAIN,v.gdt.qq.com,REJECT
 
 [Rewrite]
-^https?:\/\/us\.l\.qq\.com\/exapp REJECT
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ REJECT
-^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ REJECT
-^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg REJECT-IMG
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads REJECT-IMG
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ REJECT
+^https?:\/\/us\.l\.qq\.com\/exapp - REJECT
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - REJECT
+^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ - REJECT
+^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg - REJECT-IMG
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads - REJECT-IMG
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - REJECT
 
 [MITM]
 hostname = us.l.qq.com,y.gtimg.cn

@@ -2,7 +2,7 @@
 #!desc = 解除TestFlight的区域限制
 #!openUrl = 
 #!author = NobyDa
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/TestFlight.png
 
 [General]

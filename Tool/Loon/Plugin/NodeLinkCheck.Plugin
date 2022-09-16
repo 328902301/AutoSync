@@ -2,7 +2,7 @@
 #!desc = 节点代理链路检测
 #!openUrl = 
 #!author = I-am-R-E
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png
 
 [Script]

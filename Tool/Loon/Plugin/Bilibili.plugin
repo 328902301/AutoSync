@@ -2,7 +2,7 @@
 #!desc = 精简多余功能并过滤广告
 #!openUrl = 
 #!author = blackmatrix7
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Bilibili.png
 
 [Rule]

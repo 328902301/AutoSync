@@ -2,7 +2,7 @@
 #!desc = 过滤银联云闪付广告
 #!openUrl = 
 #!author = 可莉🅥
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/1692041ac44ede9463583810aa715eac8baac694/Resource/Icon/60px/UnionPay.png
 
 [Rule]

@@ -2,7 +2,7 @@
 #!desc = 需要手动先通关第一局，才能速通。
 #!openUrl = 
 #!author = yangdaozhao
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/ylgy.png
 
 [Script]

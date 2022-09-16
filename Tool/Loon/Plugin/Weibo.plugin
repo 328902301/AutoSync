@@ -2,7 +2,7 @@
 #!desc = 过滤微博广告及去除各部分推广模块
 #!openUrl = 
 #!author = zmqcherish
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Weibo.png
 
 [Script]

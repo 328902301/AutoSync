@@ -2,7 +2,7 @@
 #!desc = 过滤IT之家信息流广告和正文广告
 #!openUrl = 
 #!author = toulanboy
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/IThome.png
 
 [Script]

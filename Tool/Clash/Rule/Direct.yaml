@@ -6,5 +6,3 @@ payload:
 # Origin CDN
   - DOMAIN,ssl-lvlt.cdn.ea.com
   - DOMAIN,origin-a.akamaihd.net
-# OneDrive
-  - DOMAIN-SUFFIX,sharepoint.com

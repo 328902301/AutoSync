@@ -2,7 +2,7 @@
 #!desc = 在京东应用内嵌入比价信息
 #!openUrl = 
 #!author = toulanboy
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/JD.png
 
 [Script]

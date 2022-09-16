@@ -138,7 +138,6 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 # Params "tag" and "enabled" are optional.
 #
 [rewrite_remote]
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Weather.qxrewrite?raw=true, tag=苹果天气, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/TV.qxrewrite?raw=true, tag=苹果TV, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Location.qxrewrite?raw=true, tag=苹果定位服务, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Sunert/Script/master/TaskConf/sina/qx_rewite.txt, tag=微博, update-interval=172800, opt-parser=false, enabled=true
@@ -154,7 +153,6 @@ https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, ta
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf, tag=TF解除锁区, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NoByDa（lhie1 Rewrite）, update-interval=172800, opt-parser=false, enabled=true
 https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Apple_Maps_CN.qxrewrite?raw=true, tag=Apple maps, update-interval=172800, opt-parser=false, enabled=false
-https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Weather.qxrewrite?raw=true, tag=天氣, update-interval=172800, opt-parser=false, enabled=false
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
 
 #

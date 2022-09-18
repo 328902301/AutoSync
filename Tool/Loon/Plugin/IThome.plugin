@@ -1,5 +1,5 @@
 #!name = IT之家去广告
-#!desc = 过滤IT之家信息流广告和文末广告
+#!desc = 过滤IT之家信息流广告和文末广告，仅支持8.3.0及以上版本客户端。
 #!openUrl = 
 #!author = toulanboy
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

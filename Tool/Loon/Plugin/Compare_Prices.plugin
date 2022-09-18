@@ -11,4 +11,4 @@ http-request ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/Q
 http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,requires-body=true, timeout=10, tag=淘宝比价
 
 [MITM]
-hostname = api.m.jd.com
+hostname = api.m.jd.com,trade-acs.m.taobao.com

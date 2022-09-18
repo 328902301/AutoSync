@@ -1,3 +1,7 @@
+/*
+脚本来自Telegram的Surge Pro群组热心网友 @小白脸，由于暂无Telegram用户名，所以这里仅署名昵称。
+*/
+
 var Body = JSON.parse($response.body);
 switch ($request.url.match(/map|personal|json/)[0]){
  case "map":

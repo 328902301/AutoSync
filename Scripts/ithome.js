@@ -1,5 +1,11 @@
 /*
-脚本原地址https://github.com/toulanboy/scripts
+引用地址 https://github.com/toulanboy/scripts/tree/master/ithome_ad
+
+[rewrite_local]
+https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js
+
+[MITM]
+hostname = api.ithome.com,napi.ithome.com
 */
 
 const url = $request.url;

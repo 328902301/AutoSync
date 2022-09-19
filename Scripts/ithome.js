@@ -4,7 +4,7 @@
 [rewrite_local]
 https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js
 
-[MITM]
+[mitm]
 hostname = api.ithome.com,napi.ithome.com
 */
 

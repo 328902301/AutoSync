@@ -61,6 +61,8 @@
     <tr>
         <td > 4 </td> <td > 港台番剧<br><strong> </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AsianMedia/AsianMedia.list"><em>AsianMedia.list</em></a></td><td>blackmatrix7</td>
     </tr>
+</table>
+<table>
     <tr>
         <td > 5 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
     </tr>

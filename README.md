@@ -29,6 +29,7 @@
     </tr>
 </table>
 
+> 怎么添加配置文件?点击本消息右边的蓝色链接用Quantumultx打开安装谢谢:) [***O7Y0-Quantumult X.conf***](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf) 
 
 > 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf) 由 [*@Shawn*](https://t.me/QuanX_API) 提供
 

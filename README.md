@@ -30,7 +30,7 @@
     <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
 		<td rowspan="6"><strong>规则修正</strong></td>
-		<td > 1 </td> <td > 真B站去广告+解锁普通视频<br><strong><em>规则修正</em></strong> </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list"><em>China.list</em></a></td><td>blackmatrix7</td>
+		<td > 1 </td> <td > 真B站去广告+解锁普通视频<br><strong><em>规则修正</em></strong> </td> 		<td > 1 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list"><em>China.list</em></a></td><td>blackmatrix7</td>
     </tr>
 	<tr>
 		<td > 2 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ByteDance/ByteDance.list"><em>ByteDance.list</em></a></td><td>blackmatrix7</td>

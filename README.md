@@ -147,6 +147,7 @@
 </table>
 
 ## 4️⃣QuantumultX 脚本Task：
+> ***内置了任务订阅***
 <table>
     <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
@@ -158,5 +159,18 @@
     </tr>
     <tr>
         <td > 3 </td> <td > 外网影视解锁检测 </td> <td ><a href="https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/task.json<em>task.json"<em>task.json</em></a></td><td>Hyseen</td>
+    </tr>
+</table>
+
+## 5️⃣QuantumultX 后端程序
+
+<table>
+    <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
+    <tr>
+    <td rowspan="2"><strong>后端程序</strong></td>
+        <td > 1 </td> <td > BoxJS </td> <td ><a href="https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, tag=BoxJS, path=^/, enabled=true"><em>Sub-Store</em></a></td><td>chavyleung</td>
+    </tr>
+    <tr>
+        <td > 2 </td> <td > Sub-Store </td> <td ><a href="https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js"><em>Sub-Store</em></a></td><td>Peng-YM</td>
     </tr>
 </table>

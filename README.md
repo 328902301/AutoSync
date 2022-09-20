@@ -8,9 +8,8 @@
 [![GitHub Followers](https://img.shields.io/github/followers/O7Y0?label=follow&style=social)](https://github.com/O7Y0)
 
 ## O7Y0
-[![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
-
-> [***修修改改才有乐趣***](https://github.com/O7Y0/Profiles/issues)
+*  [***𝘫𝘰𝘪𝘯 𝘐 𝘸𝘯𝘢𝘵 𝘺𝘰𝘶***](https://t.me/KAMaid)，第一时间获取最新消息
+*  [![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
 
 ## 1️⃣QuantumultX 易用配置：
 * 配置更新时间：2022-09-20
@@ -189,3 +188,9 @@
 | 7 | [小猫咪库](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FYuanxsxs%2FQtumultX%2Fmaster%2FIcon%2FCatcat.json%22%0A%5D) | Yuanxsxs |
 | 8 | [姿势图标库](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fmain%2Fzishi-cs.json%22%0A%5D) | LovedGM | 
 | 9 | [Semporia库 ](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D) | Semporia |
+
+## 7️⃣特别感谢：
+
+以下排名不分先后，如有遗漏就漏一漏:)
+
+[*@Blackmatrix7*](https://github.com/blackmatrix7/ios_rule_script) [*@DivineEngine*](https://github.com/DivineEngine) [*@App2smile*](https://github.com/app2smile/rules)  [*@Peng-YM*](https://github.com/Peng-YM) [*@Nick-workflow*](https://github.com/Nick-workflow) [*@KOP-XIAO*](https://github.com/KOP-XIAO) [*@NobyDa*](https://github.com/NobyDa) [*@Neurogram-R*](https://github.com/Neurogram-R) [*@yjqiang*](https://github.com/yjqiang) [*@O7Y0*](https://github.com/O7Y0) [*@Choler*](https://github.com/Choler) [*@id77*](https://github.com/id77) [*@zmqcherish*](https://github.com/zmqcherish) [*@Qure*](https://github.com/Koolson/Qure) [*@Orz-3*](https://github.com/Orz-3) [*@kyle*](https://github.com/Xirou) [*@HotKids*](https://github.com/hotKids) [*@langkach*](https://github.com/langkhach270389) [*@lxk0301*](https://github.com/lxk0301) [*@zqzess*](https://github.com/zqzess/rule_for_quantumultX) [*@Anti-AD*](https://github.com/privacy-protection-tools/anti-AD) [*@VirgilClyne*](https://github.com/VirgilClyne/iRingo#iringo) [*@zZPiglet*](https://github.com/zZPiglet/Task/tree/master) [*@Chavyleung*](https://github.com/chavyleung) [*@tugepaopao*](https://github.com/tugepaopao/Image-Storage) [*@Yuanxsxs*](https://github.com/Yuanxsxs) [*@LovedGM*](https://github.com/LovedGM/Quantumult-X-TuBiao) [*@Semporia*](https://github.com/Semporia) [*@Koolson*](https://github.com/Koolson) [*@ddgksf2013*](https://github.com/ddgksf2013)

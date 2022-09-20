@@ -27,26 +27,24 @@
 > 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf) 由 [*@Shawn*](https://t.me/QuanX_API) 提供
 
 <table>
-    <tr> <th> 类别 </th> <th> 序号 </th> <th> 链接 </th> <th> 作者 </th> </tr >
+    <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
 		<td rowspan="6"><strong>规则修正</strong></td>
-		<td > 1 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list"><em>China.list</em></a></td><td>blackmatrix7</td>
+		<td > 1 </td> <td > 规则修正 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list"><em>China.list</em></a></td><td>blackmatrix7</td>
     </tr>
 	<tr>
-		<td > 2 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ByteDance/ByteDance.list"><em>ByteDance.list</em></a></td><td>blackmatrix7</td>
+		<td > 2 </td> <td > 字节跳动 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ByteDance/ByteDance.list"><em>ByteDance.list</em></a></td><td>blackmatrix7</td>
     </tr>	
 	<tr>
-		<td > 3 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"><em>AdvertisingLite.list</em></a></td><td>blackmatrix7</td>
+		<td > 3 </td> <td > 广告拦截 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"><em>AdvertisingLite.list</em></a></td><td>blackmatrix7</td>
     </tr>
 	<tr>
-		<td > 4 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list"><em>Hijacking.list</em></a></td><td>blackmatrix7</td>
+		<td > 4 </td> <td > 运营劫持 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list"><em>Hijacking.list</em></a></td><td>blackmatrix7</td>
     </tr>
 	<tr>
-		<td > 5 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"><em>Privacy.list</em></a></td><td>blackmatrix7</td>
+		<td > 5 </td> <td > 隐私保护 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"><em>Privacy.list</em></a></td><td>blackmatrix7</td>
     </tr>
 	<tr>
 	<tr>
 		<td colspan="5">  </td>
     </tr>
-
-</table>

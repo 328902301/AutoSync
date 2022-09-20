@@ -65,10 +65,10 @@
         <td > 5 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
     </tr>
     <tr>
-        <td colspan="5">  </td>
+        <td colspan="8">  </td>
     </tr>
     <tr>
-        <td rowspan="5"><strong>苹果加速</strong></td>
+        <td rowspan="11"><strong>苹果加速</strong></td>
         <td > 1 </td> <td > 苹果服务 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list"><em>Apple.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
@@ -79,7 +79,6 @@
     </tr>
     <tr>
         <td rowspan="8"><strong>其它优化</strong></td>
-    </tr>
         <td > 1 </td> <td > 追踪列表 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PrivateTracker/PrivateTracker.list"><em>PrivateTracker.list</em></a></td><td>O7Y0</td>
     </tr>
     <tr>

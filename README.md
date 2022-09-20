@@ -79,7 +79,7 @@
     </tr>
     <tr>
         <td rowspan="8"><strong>其它优化</strong></td>
-    <tr>
+    </tr>
         <td > 1 </td> <td > 追踪列表 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PrivateTracker/PrivateTracker.list"><em>PrivateTracker.list</em></a></td><td>O7Y0</td>
     </tr>
     <tr>

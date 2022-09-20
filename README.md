@@ -24,7 +24,7 @@
 * 多项信息查询
 * 多类应用解锁
 
-> 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)由[*@Shawn*](https://t.me/QuanX_API) 提供
+> 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf) 由 [*@Shawn*](https://t.me/QuanX_API) 提供
 
 # QuantumultX小白配置 2022-6-27
 

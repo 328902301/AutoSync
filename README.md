@@ -35,4 +35,18 @@
 	<tr>
 		<td > 2 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ByteDance/ByteDance.list"><em>ByteDance.list</em></a></td><td>blackmatrix7</td>
     </tr>	
+	<tr>
+		<td > 3 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"><em>AdvertisingLite.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+	<tr>
+		<td > 4 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list"><em>Hijacking.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+	<tr>
+		<td > 5 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"><em>Privacy.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+	<tr>
+	<tr>
+		<td colspan="5">  </td>
+    </tr>
+
 </table>

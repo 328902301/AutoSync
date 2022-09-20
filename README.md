@@ -47,8 +47,8 @@
     <tr>
     <tr>
         <td colspan="5">  </td>
-    </tr>
     <tr>
+    </tr>
         <td rowspan="11"><strong>娱乐加速</strong></td>
         <td > 1 </td> <td > 网易音乐 </td> <td ><a href="https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/NeteaseCloudMusic.list"><em>NeteaseCloudMusic.list</em></a></td><td>O7Y0</td>
     </tr>
@@ -75,7 +75,7 @@
         <td > 2 </td> <td > 苹果邮件 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleMail/AppleMail.list"><em>AppleMail.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
-        <td colspan="2">  </td>
+        <td colspan="5">  </td>
     </tr>
     <tr>
         <td rowspan="8"><strong>其它优化</strong></td>

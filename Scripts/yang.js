@@ -1,9 +1,13 @@
+/*
+脚本来自https://github.com/yangdaozhao/ylgy
+*/
+
 var body = $response.body
 var url = $request.url
 
 if (body) {
   var obj = JSON.parse($response.body)
-  obj.data ='046ef1bab26e5b9bfe2473ded237b572'
+  obj.blockTypeData = {}
   $done({ body: JSON.stringify(obj) })
 } else {
   $done({})

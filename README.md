@@ -11,7 +11,7 @@
 *  [***𝘫𝘰𝘪𝘯 𝘐 𝘸𝘯𝘢𝘵 𝘺𝘰𝘶***](https://t.me/KAMaid)，第一时间获取最新消息
 *  [![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
 
-## 1️⃣QuantumultX 半自用折磨UP主帮助萌新简易的易上手配置文件：
+## 1️⃣QuantumultX 半自用折磨UP主帮助他人的易上手配置文件：
 <table>
 <tr>
     <td rowspan="6"><strong>配置介绍</strong></td></tr>

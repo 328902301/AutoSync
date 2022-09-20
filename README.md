@@ -47,4 +47,20 @@
 	<tr>
 	<tr>
 		<td colspan="5">  </td>
+    <tr>
+		<td rowspan="11"><strong>娱乐加速</strong></td>
+		<td > 1 </td> <td > 网易音乐 </td> <td ><a href="https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/NeteaseCloudMusic.list"><em>NeteaseCloudMusic.list</em></a></td><td>O7Y0</td>
+    </tr>
+    <tr>
+		<td > 2 </td> <td > 国际媒体 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"><em>GlobalMedia.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+    <tr>
+		<td > 3 </td> <td > 哔哩哔哩 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list"><em>BiliBili.list</em></a></td><td>blackmatrix7</td>  
+    </tr>
+	<tr>
+		<td > 4 </td> <td > 港台番剧<br><strong> </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AsianMedia/AsianMedia.list"><em>AsianMedia.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+	<tr>
+		<td > 5 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
+    </tr>
     </tr>

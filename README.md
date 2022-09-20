@@ -10,10 +10,10 @@
 ## O7Y0
 [![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
 
+> [***修修改改才有乐趣***](https://github.com/O7Y0/Profiles/issues)
+
 # QuantumultX小白配置 2022-6-27
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-[![GitHub stars](https://img.shields.io/github/stars/O7Y0/Profiles.svg?style=popout&label=Stars)](https://github.com/O7Y0/Profiles/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/O7Y0/Profiles.svg?style=popout&label=Fork)](https://github.com/O7Y0/Profiles/fork)
+
 ## 配置说明：做流行的实用配置
 
 功能:

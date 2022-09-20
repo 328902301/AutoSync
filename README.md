@@ -145,3 +145,18 @@
 		<td > 18 </td> <td > 哔哩哔哩自动换区 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/Function/BilibiliAutoRegion.conf"><em>BilibiliAutoRegion.conf</em></a></td><td>ddgksf2013</td>
 	</tr>
 </table>
+
+## 4️⃣QuantumultX 脚本Task：
+<table>
+    <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
+    <tr>
+        <td rowspan="3"><strong>脚本任务</strong></td>
+	<td > 1 </td> <td > 综合大量检测 </td> <td ><a href="https://raw.githubusercontent.com/O7Y0/Profiles/master/QuantumultX/Script%20Gallery%20Subscribe.json"><em>Script Gallery Subscribe.json</em></a></td><td>O7Y0</td>
+    </tr>
+    <tr>
+        <td > 2 </td> <td > 综合少量检测 </td> <td ><a href="https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/task.json"><em>QX.snippet</em></a></td><td>Peng-YM</td>
+    </tr>
+    <tr>
+        <td > 3 </td> <td > 外网影视解锁检测 </td> <td ><a href="https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/task.json<em>task.json"<em>task.json</em></a></td><td>Hyseen</td>
+    </tr>
+</table>

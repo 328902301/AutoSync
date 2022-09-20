@@ -65,7 +65,7 @@
         <td > 5 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
     </tr>
     <tr>
-        <td colspan="8">  </td>
+        <td colspan="5">  </td>
     </tr>
     <tr>
         <td rowspan="11"><strong>苹果加速</strong></td>

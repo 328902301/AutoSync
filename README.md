@@ -75,7 +75,7 @@
         <td > 2 </td> <td > 苹果邮件 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleMail/AppleMail.list"><em>AppleMail.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
-        <td colspan="5">  </td>
+        <td colspan="2">  </td>
     </tr>
     <tr>
         <td rowspan="8"><strong>其它优化</strong></td>

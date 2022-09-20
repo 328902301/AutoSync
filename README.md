@@ -12,6 +12,20 @@
 
 > [***修修改改才有乐趣***](https://github.com/O7Y0/Profiles/issues)
 
+## 1️⃣QuantumultX 易用配置：
+* 配置更新时间：2022-09-20
+* 自用QX配置 [***O7Y0-Quantumult X.conf***](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf) 
+* 支持应用商店最新版
+* 分流和重写去广告
+* 支持图标库订阅
+* 网易云音乐解锁
+* 支持Sub-store
+* 屏蔽系统更新
+* 多项信息查询
+* 多类应用解锁
+
+> 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)由[*@Shawn*](https://t.me/QuanX_API) 提供
+
 # QuantumultX小白配置 2022-6-27
 
 ## 配置说明：做流行的实用配置

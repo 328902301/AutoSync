@@ -68,7 +68,7 @@
         <td colspan="5">  </td>
     </tr>
     <tr>
-        <td rowspan="8"><strong>苹果加速</strong></td>
+        <td rowspan="5"><strong>苹果加速</strong></td>
         <td > 1 </td> <td > 苹果服务 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list"><em>Apple.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>

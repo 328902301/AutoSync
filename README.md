@@ -6,6 +6,10 @@
 [![GitHub Issues](https://img.shields.io/github/issues/O7Y0/Profiles)](https://github.com/O7Y0/Profiles/issues)
 ![GitHub License](https://img.shields.io/github/license/mashape/apistatus.svg)
 [![GitHub Followers](https://img.shields.io/github/followers/O7Y0?label=follow&style=social)](https://github.com/O7Y0)
+
+## O7Y0
+[![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
+
 # QuantumultX小白配置 2022-6-27
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 [![GitHub stars](https://img.shields.io/github/stars/O7Y0/Profiles.svg?style=popout&label=Stars)](https://github.com/O7Y0/Profiles/stargazers)

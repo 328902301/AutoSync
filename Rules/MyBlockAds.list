@@ -1,17 +1,13 @@
-# utf-8
-# 2022-09-15 18:28
-
-# 贴吧屏蔽域名dns查询
-IP-CIDR, 180.76.76.200/32, MyBlockAds
+# 2022-09-20 17:59
 
 # RARBG屏蔽跳转
 HOST, swallowcrockerybless.com, MyBlockAds
 HOST, furiousfar.com, MyBlockAds
 
-# 工商银行开屏广告
+# 工商银行
 HOST, pageviewp.icbc.com.cn, MyBlockAds
 
-# Clue智库推广信息
+# Clue智库
 HOST, api.helloclue.com, MyBlockAds
 HOST, brahe.apptimize.com, MyBlockAds
 HOST, mapi.apptimize.com, MyBlockAds
@@ -24,11 +20,10 @@ HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds
 HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
-# 哔哩哔哩
-# 自动换区支持
+# 哔哩哔哩自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
 
-# 高德地图开屏广告
+# 高德地图
 HOST, awaken.amap.com, MyBlockAds
 HOST, amap-aos-info-nogw.amap.com, MyBlockAds
 HOST, free-aos-cdn-image.amap.com, MyBlockAds
@@ -41,7 +36,7 @@ USER-AGENT, AVOS*, MyBlockAds
 IP-CIDR, 118.89.204.198/32, MyBlockAds
 IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, MyBlockAds
 
-# 云闪付广告
+# 云闪付
 HOST, ads.95516.com, MyBlockAds
 HOST, cm-10-138.getui.com, MyBlockAds
 HOST, tysdk.95516.com, MyBlockAds
@@ -49,90 +44,9 @@ HOST, sdk-conf.getui.com, MyBlockAds
 HOST, sdk.open.talk.getui.net, MyBlockAds
 HOST, switch.cup.com.cn, MyBlockAds
 
-# MyAdRule
-HOST-SUFFIX, ywak.com.cn, MyBlockAds
-HOST-SUFFIX, govlaibing.cn, MyBlockAds
-HOST-SUFFIX, log.trackingio.com, MyBlockAds
-HOST-SUFFIX, adtrack.xiaojukeji.com, MyBlockAds
-HOST-SUFFIX, adtrack.unilog.wostore.cn, MyBlockAds
-HOST-SUFFIX, trackingio.com, MyBlockAds
-HOST-SUFFIX, hpplay.cn, MyBlockAds
-HOST-SUFFIX, admobile.top, MyBlockAds
-HOST-SUFFIX, yvfnb.cn, MyBlockAds
-HOST-SUFFIX, netease.im, MyBlockAds
-HOST-SUFFIX, bayescom.cn, MyBlockAds
-HOST-SUFFIX, zqslg.cn, MyBlockAds
-HOST-SUFFIX, govhebie.cn, MyBlockAds
-
-HOST, token.safebrowsing.apple, MyBlockAds
-HOST, tnc3-aliec2.snssdk.com, MyBlockAds
-HOST, upload-images.jianshu.io, MyBlockAds
-HOST, static-assets-44d.pages.dev, MyBlockAds
-HOST, support.you.163.com, MyBlockAds
-HOST, cm-cn-central-00001.albatross.10086.cn, MyBlockAds
-HOST, cloudmobi-creative-center.s3.ap-southeast-1.amazonaws.com, MyBlockAds
-HOST, s.openmediation.com, MyBlockAds
-HOST, api.applovefrom.com, MyBlockAds
-HOST, api16-access-sg.pangle.io, MyBlockAds
-HOST, a1235.hnhx360.com, MyBlockAds
-HOST, adash-emas.cn-hangzhou.aliyuncs.com, MyBlockAds
-HOST, mediation-tracking.prd.mz.internal.unity3d.com, MyBlockAds
-HOST, down-files.2bulu.com, MyBlockAds
-HOST, httpdns.titannetwork.cn, MyBlockAds
-HOST, mpush-api.aliyun.com, MyBlockAds
-HOST, dark.hyhuo.com, MyBlockAds
-HOST, beacon-api.aliyuncs.com, MyBlockAds
-HOST, ntb.hyhuo.com, MyBlockAds
-HOST, logs.chelaile.net.cn, MyBlockAds
-HOST, ip-api.com, MyBlockAds
-HOST, 6185059.com, MyBlockAds
-HOST, wanproxy-hz.127.net, MyBlockAds
-HOST, nstool.netease.com, MyBlockAds
-HOST, api-access.pangolin-sdk-toutiao.com, MyBlockAds
-HOST, 91adv.com.cn, MyBlockAds
-HOST, adui.tg.meitu.com, MyBlockAds
-HOST, sensorsdata.cmcc-cs.cn, MyBlockAds
-HOST, lupic.cdn.bcebos.com, MyBlockAds
-HOST, moment-app-team.s3.amazonaws.com, MyBlockAds
-HOST, pgapi.ksmobile.com, MyBlockAds
-HOST, pangolin.snssdk.com, MyBlockAds
-HOST, iconfactory.com, MyBlockAds
-HOST, ocsp.apple.com, MyBlockAds
-HOST, img.offeryeah.online, MyBlockAds
-HOST, img.cdn.famobi.com, MyBlockAds
-HOST, static.alookbrowser.com, MyBlockAds
-HOST, app-measurement.com, MyBlockAds
-HOST, log.ihuman.com, MyBlockAds
-HOST, dc.114dev.com, MyBlockAds
-
-# 真不卡
-HOST-SUFFIX, ttayy.cn, MyBlockAds
-HOST-SUFFIX, zhengxiaoliu.top, MyBlockAds
-
-# NicoNico
-HOST, ads.nicovideo.jp, MyBlockAds
-
-# HDO
-;HOST-SUFFIX, applovin.com, MyBlockAds
-;HOST-SUFFIX, applvn.com, MyBlockAds
-
-# 美颜相机首页和轮播广告
+# 美颜相机
 HOST, adui.tg.meitu.com, MyBlockAds
 HOST, aaid.uyunad.com, MyBlockAds
 
-# 爱奇艺广告
-IP-CIDR, 203.107.63.154/32, MyBlockAds
-
-# 多多视频开屏广告
-HOST-SUFFIX, bayescom.com, MyBlockAds
-
-# 车来了
-HOST-SUFFIX, atrace.chelaile.net.cn, MyBlockAds
-HOST, logs.chelaile.net.cn, MyBlockAds
-HOST, ad.chelaile.net.cn, MyBlockAds
-
-# 铁路12306开屏广告(倒计时仍然存在)
+# 铁路12306
 HOST, ad.12306.cn, MyBlockAds
-
-# 两步路
-HOST-SUFFIX, admobile.top, MyBlockAds

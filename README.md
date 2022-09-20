@@ -2,7 +2,7 @@
 [![Stars](https://img.shields.io/github/stars/O7Y0/Profiles)](https://github.com/O7Y0/Profiles/stargazers)
 [![Fork](https://img.shields.io/github/forks/O7Y0/Profiles)](https://github.com/O7Y0/Profiles/network/members)
 [![Commit](https://img.shields.io/github/commit-activity/m/O7Y0/Profiles?label=Commits)](https://github.com/dO7Y0/Profiles/commits/master)
-[![Telegram](https://img.shields.io/badge/Telegram-Channel-33A8E1)](https://t.me/REBIRTHOKAY)
+[![Telegram](https://img.shields.io/badge/Telegram-Channel-33A8E3)](https://t.me/REBIRTHOKAY)
 [![Issues](https://img.shields.io/github/issues/O7Y0/Profiles)](https://github.com/O7Y0/Profiles/issues)
 [![](https://img.shields.io/github/followers/O7Y0?label=follow&style=social)](https://github.com/O7Y0)
 # QuantumultX小白配置 2022-6-27

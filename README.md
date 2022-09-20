@@ -11,17 +11,24 @@
 *  [***𝘫𝘰𝘪𝘯 𝘐 𝘸𝘯𝘢𝘵 𝘺𝘰𝘶***](https://t.me/KAMaid)，第一时间获取最新消息
 *  [![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
 
-## 1️⃣QuantumultX 易用配置：
-* 配置更新时间：2022-09-20
-* 自用QX配置 [***O7Y0-Quantumult X.conf***](https://raw.githubusercontent.com/O7Y0/Profiles/master/O7Y0-Quantumult%20X.conf) 
-* 支持应用商店最新版
-* 分流和重写去广告
-* 支持图标库订阅
-* 网易云音乐解锁
-* 支持Sub-store
-* 屏蔽系统更新
-* 多项信息查询
-* 多类应用解锁
+## 1️⃣QuantumultX 半自用折磨UP主帮助萌新简易的易上手配置文件：
+<table>
+<tr>
+    <td rowspan="6"><strong>配置介绍</strong></td></tr>
+	<tr>
+		<td > 支持应用商店最新版 </td>
+		<td > 支持分流重写去广告 </td>
+		<td > 支持最新图标库订阅 </td>
+		<td > 支持网易云音乐解锁 </td>
+    </tr>
+	<tr>
+		<td > 支持Sub-store </td>
+		<td > 支持屏蔽系统更新 </td>
+		<td > 支持多项信息查询 </td>
+		<td > 支持多类应用解锁 </td>
+    </tr>
+</table>
+
 
 > 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf) 由 [*@Shawn*](https://t.me/QuanX_API) 提供
 

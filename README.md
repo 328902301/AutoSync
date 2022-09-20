@@ -87,3 +87,61 @@
 </table>
 
 ## 3️⃣QuantumultX 复写：
+<table>
+    <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
+    <tr>
+		<td rowspan="18"><strong>解锁优化增强</strong></td>
+		<td > 1 </td> <td > Sub-Store </td> <td ><a href="https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet"><em>QX.snippet</em></a></td><td>Peng-YM</td>
+    </tr>
+	<tr>
+		<td > 2 </td> <td > 神机重定向 </td> <td ><a href="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf"><em>General.conf</em></a></td><td>DivineEngine</td>
+    </tr>
+	<tr>
+		<td > 3 </td> <td > lhie1去广告 </td> <td ><a href="https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf"><em>Rewrite_lhie1.conf</em></a></td><td>NobyDa</td>
+    </tr>
+	<tr>
+		<td > 4 </td> <td > 神机去广告 </td> <td ><a href="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf"><em>Advertising.conf</em></a></td><td>DivineEngine</td>
+    </tr>
+	<tr>
+		<td > 5 </td> <td > EMBY解锁 </td> <td ><a href="https://raw.githubusercontent.com/O7Y0/Profiles/master/QuantumultX/Rewrite/embyUnlocked.conf"><em>embyUnlocked.conf</em></a></td><td>unknown</td>
+    </tr>
+	<tr>
+		<td > 6 </td> <td > P站大会员 </td> <td ><a href="https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js"><em>PornHubPremiumCrack.js</em></a></td><td>yqc007</td>
+    </tr>
+	<tr>
+		<td > 7 </td> <td > 酷我音乐解锁 </td> <td ><a href="https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js"><em>kw.js</em></a></td><td>nameking77</td>
+    </tr>
+	<tr>
+		<td > 8 </td> <td > 链接屏蔽解除 </td> <td ><a href="https://raw.githubusercontent.com/zZPiglet/Task/master/UnblockURLinWeChat.conf"><em>UnblockURLinWeChat.conf</em></a></td><td>zZPiglet</td>
+    </tr>
+	<tr>
+		<td > 9 </td> <td > 谷歌自动翻页 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/Function/EndlessGoogle.conf"><em>EndlessGoogle.conf</em></a></td><td>ddgksf2013</td>
+    </tr>
+	<tr>
+		<td > 10 </td> <td > 油管广告去除 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/AdBlock/YoutubeAds.conf"><em>YoutubeAds.conf</em></a></td><td>ddgksf2013</td>
+    </tr>
+	<tr>
+		<td > 11 </td> <td > 油管中文机翻 </td> <td ><a href="https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf"><em>Youtube_CC.conf</em></a></td><td>id77</td>
+    </tr>
+	<tr>
+		<td > 12 </td> <td > TextEditor解锁 </td> <td ><a href="https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/TextEditor.conf"><em>TextEditor.conf</em></a></td><td>I-am-R-E</td>
+    </tr>
+	<tr>
+		<td > 13 </td> <td > 百度贴吧去广告 </td> <td ><a href="https://raw.githubusercontent.com/app2smile/rules/master/module/tieba-qx.conf"><em>tieba-qx.conf</em></a></td><td>app2smile</td>
+    </tr>
+	<tr>
+		<td > 14 </td> <td > 苹果天气AQI(US) </td> <td ><a href="https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Weather.qxrewrite"><em>Weather.qxrewrite</em></a></td><td>VirgilClyne</td>
+    </tr>
+	<tr>
+		<td > 15 </td> <td > 豆瓣简影快捷播放 </td> <td ><a href="https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/DouBan.conf"><em>DouBan.conf</em></a></td><td>I-am-R-E</td>
+    </tr>
+    <tr>
+		<td > 16 </td> <td > 微信公众号去广告 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/AdBlock/WeChat.conf"><em>WeChat.conf</em></a></td><td>ddgksf2013</td>
+    </tr>
+	<tr>
+		<td > 17 </td> <td > 哔哩哔哩高码去广 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/AdBlock/Bilibili.conf"><em>Bilibili.conf</em></a></td><td>ddgksf2013</td>
+	</tr>
+	<tr>
+		<td > 18 </td> <td > 哔哩哔哩自动换区 </td> <td ><a href="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/Function/BilibiliAutoRegion.conf"><em>BilibiliAutoRegion.conf</em></a></td><td>ddgksf2013</td>
+	</tr>
+</table>

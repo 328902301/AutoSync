@@ -9,4 +9,4 @@
 http-response ^https://cat-match-static.easygame2021\.com/maps/(.*) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/ylgy/ylgy.js,requires-body=true, tag=羊了个羊速通
   
 [MITM]
-hostname = cat-match-static.easygame2021.com,cat-match.easygame2021.com
+hostname = *.easygame2021.com

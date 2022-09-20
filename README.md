@@ -26,6 +26,7 @@
 
 > 详细的[***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf) 由 [*@Shawn*](https://t.me/QuanX_API) 提供
 
+## 2️⃣QuantumultX 分流：
 <table>
     <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
@@ -84,3 +85,5 @@
         <td > 2 </td> <td > 黑白名单 </td> <td ><a href="https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list"><em>ASN.China.list</em></a></td><td>VirgilClyne</td>
     </tr>
 </table>
+
+## 3️⃣QuantumultX 复写：

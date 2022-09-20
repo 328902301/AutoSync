@@ -223,13 +223,6 @@ rule-providers:
     path: ./Ruleset/iEwha/cncidr.yaml
     interval: 36000
 
-   Lancidr:
-    type: http
-    behavior: ipcidr
-    path: ./Ruleset/iEwha/Lancidr.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Lancidr.yaml
-    interval: 86400
-
 # 规则模式
 rules:
   - RULE-SET,Reject,REJECT
@@ -243,7 +236,6 @@ rules:
   - RULE-SET,Proxy,Proxy
   - RULE-SET,China,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,Lancidr,DIRECT
   - MATCH,Proxy
 
 # 脚本模式
@@ -261,8 +253,7 @@ script:
             "ProxyMedia": "ProxyMedia",
             "Proxy": "Proxy",
             "China": "DIRECT",
-            "cncidr": "DIRECT",   
-            "Lancidr": "DIRECT",   
+            "cncidr": "DIRECT",    
           }
         port = int(metadata["dst_port"])
         if metadata["network"] == "UDP":
@@ -285,7 +276,4 @@ script:
             ctx.log('[Script] Geoip CN')
             return "DIRECT"
         ctx.log('[Script] MATCH')
-        return "Prxoy"
-        
-        
-      
+        return "Prxoy"   

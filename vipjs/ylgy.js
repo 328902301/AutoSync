@@ -7,7 +7,7 @@ T馈群：https://t.me/ioshkj7
 
 *******************************
 
-^https?:\/\/cat-match\.easygame2021\.com\/sheep\/v1\/game\/map_info_new url script-request-header sheep.js
+^https://cat-match\.easygame2021.com/sheep/v1/game/map(.*) url script-response-body ylgy.js
 [mitm] 
 hostname = cat-match.easygame2021.com
 

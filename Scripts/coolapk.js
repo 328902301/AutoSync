@@ -2,14 +2,16 @@
 version     v0.0.1
 updatetime  2022-08-18
 tgchannel   https://t.me/ddgksf2021
-function    酷安去信息流和评论广告
+function    酷安去首页广告、信息流广告、评论广告
 author      kk pp
+
 
 [rewrite_local]
 ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js
 
 [mitm]
 hostname = api.coolapk.com
+
 */
 
 if ($request.url.indexOf('replyList') != -1) {
@@ -18,7 +20,7 @@ if ($request.url.indexOf('replyList') != -1) {
   $done({ body: JSON.stringify(bodyObj) });
 }else if( $request.url.indexOf('indexV8') != -1 ){
     var bodyObj = JSON.parse($response.body);
-  bodyObj.data = Object.values(bodyObj.data).filter(item => !(item["entityTemplate"]=="sponsorCard" || item.entityId==8639 || item.title.indexOf('值得买')!=-1));//去除头条信息流推广和首页轮转
+  bodyObj.data = Object.values(bodyObj.data).filter(item => !(item["entityTemplate"]=="sponsorCard" || item.entityId==8639 || item.entityId==32557 ||item.title.indexOf('值得买')!=-1));//去除头条信息流推广和首页轮转
   $done({ body: JSON.stringify(bodyObj) });
 }else if($request.url.indexOf('dataList') != -1){
     var bodyObj = JSON.parse($response.body);

@@ -1,5 +1,4 @@
 payload:
-
   - PROCESS-NAME,SogouInput
   - PROCESS-NAME,SOgouTaskManager
   - PROCESS-NAME,SogouServices

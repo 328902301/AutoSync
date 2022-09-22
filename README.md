@@ -9,8 +9,7 @@
 
 ## O7Y0
 *  [***𝘫𝘰𝘪𝘯 𝘐 𝘸𝘯𝘢𝘵 𝘺𝘰𝘶***](https://t.me/KAMaid)，第一时间获取最新消息
-*  [![O7Y0's GitHub stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true&count_private=true&theme=vue)](https://github.com/O7Y0/Profiles)
-
+*  [![O7Y0's github stats](https://github-readme-stats.vercel.app/api?username=O7Y0&show_icons=true)](https://github.com/O7Y0)
 ## 1️⃣QuantumultX 半自用折磨UP主帮助他人的易上手配置文件：
 <table>
 <tr>
@@ -38,39 +37,39 @@
 <table>
     <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
-    <td rowspan="5"><strong>规则修正</strong></td>
+    <td rowspan="4"><strong>规则修正</strong></td>
     <td > 1 </td> <td > 规则修正 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list"><em>China.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
-        <td > 2 </td> <td > 字节跳动 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ByteDance/ByteDance.list"><em>ByteDance.list</em></a></td><td>blackmatrix7</td>
-    </tr>	
+        <td > 2 </td> <td > 广告拦截 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"><em>AdvertisingLite.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+    </tr>
     <tr>
-        <td > 3 </td> <td > 广告拦截 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"><em>AdvertisingLite.list</em></a></td><td>blackmatrix7</td>
+        <td > 3 </td> <td > 隐私保护 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"><em>Privacy.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
         <td > 4 </td> <td > 运营劫持 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list"><em>Hijacking.list</em></a></td><td>blackmatrix7</td>
-    </tr>
-    <tr>
-        <td > 5 </td> <td > 隐私保护 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"><em>Privacy.list</em></a></td><td>blackmatrix7</td>
-    </tr>
     <tr>
         <td colspan="5">  </td>
     </tr>
     <tr>
-        <td rowspan="5"><strong>娱乐加速</strong></td>
+        <td rowspan="6"><strong>娱乐加速</strong></td>
         <td > 1 </td> <td > 网易音乐 </td> <td ><a href="https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/NeteaseCloudMusic.list"><em>NeteaseCloudMusic.list</em></a></td><td>O7Y0</td>
     </tr>
     <tr>
-        <td > 2 </td> <td > 国际媒体 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"><em>GlobalMedia.list</em></a></td><td>blackmatrix7</td>
+        <td > 2 </td> <td > 哔哩哔哩 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list"><em>BiliBili.list</em></a></td><td>blackmatrix7</td>  
     </tr>
     <tr>
-        <td > 3 </td> <td > 哔哩哔哩 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list"><em>BiliBili.list</em></a></td><td>blackmatrix7</td>  
+        <td > 3 </td> <td > 字节跳动 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list"><em>DouYin.list</em></a></td><td>blackmatrix7</td>  
     </tr>
     <tr>
-        <td > 4 </td> <td > 港台番剧<br><strong> </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AsianMedia/AsianMedia.list"><em>AsianMedia.list</em></a></td><td>blackmatrix7</td>
+        <td > 4 </td> <td > 亚洲媒体<br><strong> </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AsianMedia/AsianMedia.list"><em>AsianMedia.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
-        <td > 5 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
+        <td > 5 </td> <td > 国际媒体 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"><em>GlobalMedia.list</em></a></td><td>blackmatrix7</td>
+    </tr>
+    <tr>
+        <td > 6 </td> <td > 全球加速 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list"><em>Global.list</em></a></td><td>blackmatrix7</td>  
     </tr>
     <tr>
         <td colspan="5">  </td>
@@ -87,7 +86,7 @@
     </tr>
     <tr>
         <td rowspan="2"><strong>其它优化</strong></td>
-        <td > 1 </td> <td > 追踪列表 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PrivateTracker/PrivateTracker.list"><em>PrivateTracker.list</em></a></td><td>O7Y0</td>
+        <td > 1 </td> <td > 追踪列表 </td> <td ><a href="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PrivateTracker/PrivateTracker.list"><em>PrivateTracker.list</em></a></td><td>blackmatrix7</td>
     </tr>
     <tr>
         <td > 2 </td> <td > 黑白名单 </td> <td ><a href="https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list"><em>ASN.China.list</em></a></td><td>VirgilClyne</td>

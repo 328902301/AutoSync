@@ -1,3 +1,6 @@
+//Top Widgets 万能小组件
+//Widget
+
 {
   "receipt" : {
     "receipt_type" : "Production",

@@ -1,0 +1,9 @@
+payload:
+  - PROCESS-NAME,SogouInput,REJECT
+  - PROCESS-NAME,SOgouTaskManager,REJECT
+  - PROCESS-NAME,SogouServices,REJECT
+  - DOMAIN-SUFFIX,get.sogou.com,REJECT
+  - DOMAIN-SUFFIX,account.sogou.com,REJECT
+  - DOMAIN-SUFFIX,ime.sogou.com,REJECT
+  - DOMAIN-SUFFIX,pinyin.sogou.com,REJECT
+  - DOMAIN-SUFFIX,macime.sogou.com,REJECT

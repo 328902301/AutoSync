@@ -45,6 +45,8 @@ const KEY_PANEL_NOTIFY_DISABLED = `@${namespace}.10010.panelNotifyDisabled`
 const KEY_TILE_NOTIFY_DISABLED = `@${namespace}.10010.tileNotifyDisabled`
 const KEY_NOTIFY_DISABLED = `@${namespace}.10010.notifyDisabled`
 const KEY_BARK = `@${namespace}.10010.bark`
+const KEY_SIGN_IN_RETRY_COUNT = `@${namespace}.10010.signInRetryCount`
+const KEY_DISABLED_UNTIL = `@${namespace}.10010.disabledUntil`
 
 $.setdata(new Date().toLocaleString('zh'), KEY_INITED)
 
@@ -57,7 +59,9 @@ const detail = {}
   //   $.log('ℹ️ 不是 request')
 
   const disabled = $.getdata(KEY_DISABLED)
-  if (String(disabled) === 'true') {
+  const disabledUntil = $.getdata(KEY_DISABLED_UNTIL)
+  
+  if (String(disabled) === 'true' || new Date().getTime() < disabledUntil) {
     $.log('ℹ️ 已禁用')
     return
   }
@@ -87,7 +91,27 @@ const detail = {}
   }
   if (needSign) {
     $.log('ℹ️ 自动登录')
-    const signRes = await sign({ mobile, password, appId })
+    let signRes
+    try {
+      signRes = await sign({ mobile, password, appId })
+    } catch (e) {
+      console.log(e)
+      // console.log('密码登录失败')
+      let signInRetryCount = parseFloat($.getdata(KEY_SIGN_IN_RETRY_COUNT))
+      if (isNaN(signInRetryCount) || signInRetryCount < 0) {
+        signInRetryCount = 0
+      }
+      signInRetryCount += 1
+      $.setdata(signInRetryCount, KEY_SIGN_IN_RETRY_COUNT)
+      // if (signInRetryCount>1) {
+        const disabledHour = 2**(signInRetryCount-1)
+        console.log(`连续第 ${signInRetryCount} 次密码登录失败 自动禁用 ${disabledHour} 小时`)
+        $.setdata(new Date().getTime() + disabledHour * 3600 * 1000, KEY_DISABLED_UNTIL)
+      // }
+      throw e
+    }
+    $.setdata(0, KEY_SIGN_IN_RETRY_COUNT)
+    $.setdata(0, KEY_DISABLED_UNTIL)
     cookie = $.lodash_get(signRes, 'cookie')
     await query({ cookie })
   }
@@ -99,6 +123,13 @@ const detail = {}
     await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `❌`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`, {})
   })
   .finally(() => {
+    if ($.isNode()) {
+      try {
+        require('fs').writeFileSync(namespace === 'xream' ? '10010.txt' : `10010_${namespace}.txt`, $.getdata(KEY_COOKIE), 'utf-8')
+      } catch (e) {
+        console.error(e);
+      }
+    }
     if ($.isV2p()) {
       $.done()
     } else if ($.isPanel()) {

@@ -103,6 +103,12 @@ if (ua.indexOf('MoneyThings') != -1) {
     Body = {"request_date_ms":1662963584281,"request_date":"2022-09-12T06:19:44Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-08-10T05:38:55Z","original_application_version":"318","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.lishaohui.cashflow.monthlysubscription":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"9999-9-9T06:06:52Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"9999-09-12T06:06:53Z","purchase_date":"9999-09-12T06:06:52Z","store":"app_store"}},"entitlements":{"Premium":{"grace_period_expires_date":null,"purchase_date":"2022-09-12T06:06:52Z","product_identifier":"com.lishaohui.cashflow.monthlysubscription","expires_date":"9999-9-9T06:06:52Z"}},"original_purchase_date":"2022-08-09T15:58:31Z","original_app_user_id":"$RCAnonymousID:5a03aabdc1f349a0a719b60399965010","last_seen":"2022-09-12T02:54:04Z"}};
 }
 
+//18 目标地图
+//https://apps.apple.com/cn/app/id1555022550
+if (ua.indexOf('%E7%9B%AE%E6%A0%87%E5%9C%B0%E5%9B%BE') != -1) {
+    Body = {"request_date":"2022-09-22T02:28:50Z","request_date_ms":1663813730272,"subscriber":{"entitlements":{"pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"com.happydogteam.relax.lifetimePro","purchase_date":"2022-09-22T02:19:32Z"}},"first_seen":"2022-09-22T02:12:43Z","last_seen":"2022-09-22T02:12:43Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:fe9dc27c6cd44b908576a7bd2eae8e24","original_application_version":"322","original_purchase_date":"2022-09-10T12:59:20Z","other_purchases":{},"subscriptions":{"com.happydogteam.relax.lifetimePro":{"billing_issues_detected_at":null,"expires_date":null,"grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-22T02:19:33Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-09-22T02:19:32Z","store":"app_store","unsubscribe_detected_at":"2022-09-22T02:21:43Z"}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

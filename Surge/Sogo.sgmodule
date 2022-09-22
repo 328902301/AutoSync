@@ -9,4 +9,5 @@ PROCESS-NAME,SogouServices,REJECT
 USER-AGENT,SogouInput,REJECT
 USER-AGENT,com.sogou.sogouinput.BaseKeyboard,REJECT
 DOMAIN-SUFFIX,get.sogou.com,REJECT
+DOMAIN-SUFFIX,shouji.sogou.com,REJECT
 DOMAIN-SUFFIX,account.sogou.com,REJECT

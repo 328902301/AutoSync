@@ -4,12 +4,12 @@
 
 配置文件链接：
 ```Java
-https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
+https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/QuantumultX.conf
 ```
 
 # 配置说明
 ```
-⚠️⚠️ 本配置纯自用。
+⚠️⚠️ 本配置纯自用，可能并不适合大多数人使用。
 ```
 ```ruby
 ⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
@@ -48,7 +48,7 @@ https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
 ```Java
-resource_parser_url=https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
+resource_parser_url= https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/resource-parser.js
 ```
 ```ruby
 ⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；

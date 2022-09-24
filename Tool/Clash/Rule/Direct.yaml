@@ -9,3 +9,4 @@ payload:
 # EPIC CDN
   - IP-CIDR,23.37.124.19/32
   - IP-CIDR,23.62.46.82/32
+  - IP-CIDR,23.45.51.137/32

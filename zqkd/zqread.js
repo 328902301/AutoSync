@@ -3,11 +3,6 @@
 
 注意：去重排序模式是为了优化刷阅读任务的效率（单个有效视频数据阅读次数上限大，将其排前面，在循环阅读时有更多机会执行；移除中青判断为重复的数据，让阅读数据首次执行时获得更高奖励及避免循环阅读时因达到上限无法获得奖励，浪费一次阅读时间间隔的执行机会）
 
-中青看点数据抓取Loon插件地址（QX开启解析器时可使用）：根据@Sunert大佬的获取中青ck代码改版成支持多账号
-https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zq.plugin
-
-中青看点阅读数据抓取Loon插件地址（QX开启解析器时可使用）：
-https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqread.plugin
 
 */
 

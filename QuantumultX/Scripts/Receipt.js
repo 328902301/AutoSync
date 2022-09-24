@@ -1,7 +1,7 @@
 var obj = JSON.parse($response.body);
 var bundle_id = obj.receipt["bundle_id"];
 
-//
+// 01
 //
 if(bundle_id == "co.bazaart.app"){
 obj = {
@@ -75,7 +75,7 @@ obj = {
 };
 }
 
-//
+//02
 //
 if(bundle_id == "com.heliang.super.widget"){
 obj = {
@@ -148,7 +148,7 @@ obj = {
 };
 }
 
-//
+//03
 //
 if(bundle_id == "com.loveyouchenapps.knockout")
 {

@@ -167,10 +167,10 @@ if (ua.indexOf('bazaart') != -1) {
 
 //15 Fabulous: 每日动力泉源
 //https://apps.apple.com/cn/app/id1203637303
-if (ua.indexOf('Fabulous') != -1) {
+if (ua.indexOf('SuperWidget') != -1) {
     Body = {
   "receipt" : {
-    "receipt_type" : "SuperWidget",
+    "receipt_type" : "Production",
     "app_item_id" : 1569291816,
     "receipt_creation_date" : "2022-01-26 02:55:19 Etc/GMT",
     "bundle_id" : "com.heliang.super.widget",

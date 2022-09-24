@@ -156,8 +156,8 @@ rule-providers:
    Private:
     type: http
     behavior: domain
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Private.yaml
     path: ./Ruleset/iEwha/Private.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Private.yaml
     interval: 86400
 
    Apple:
@@ -219,9 +219,9 @@ rule-providers:
    cncidr:
     type: http
     behavior: ipcidr
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/cncidr.yaml
     path: ./Ruleset/iEwha/cncidr.yaml
-    interval: 36000
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/cncidr.yaml
+    interval: 86400
 
 # 规则模式
 rules:

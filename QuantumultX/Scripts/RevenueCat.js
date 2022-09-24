@@ -109,8 +109,8 @@ if (ua.indexOf('%E7%9B%AE%E6%A0%87%E5%9C%B0%E5%9B%BE') != -1) {
     Body = {"request_date":"2022-09-22T02:28:50Z","request_date_ms":1663813730272,"subscriber":{"entitlements":{"pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"com.happydogteam.relax.lifetimePro","purchase_date":"2022-09-22T02:19:32Z"}},"first_seen":"2022-09-22T02:12:43Z","last_seen":"2022-09-22T02:12:43Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:fe9dc27c6cd44b908576a7bd2eae8e24","original_application_version":"322","original_purchase_date":"2022-09-10T12:59:20Z","other_purchases":{},"subscriptions":{"com.happydogteam.relax.lifetimePro":{"billing_issues_detected_at":null,"expires_date":null,"grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-22T02:19:33Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-09-22T02:19:32Z","store":"app_store","unsubscribe_detected_at":"2022-09-22T02:21:43Z"}}}};
 }
 
-//19
-//https://apps.apple.com/cn/app/id1555022550
+//19 Color Widgets
+//https://apps.apple.com/cn/app/id1531594277
 if (ua.indexOf('WidgetsApp') != -1) {
     Body = {"request_date":"2022-09-24T08:42:42Z","request_date_ms":1664008962171,"subscriber":{"entitlements":{"pro":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"cw_1999_ly_3d0","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-09-24T08:38:47Z","last_seen":"2022-09-24T08:38:47Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:b0f99bc892fa41e9841b9f906ac884ef","original_application_version":"1","original_purchase_date":"2022-09-24T07:44:56Z","other_purchases":{},"subscriptions":{"cw_1999_ly_3d0":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }

@@ -2,6 +2,8 @@
 #!desc=解锁订阅，高级功能
 #!icon= https://raw.githubusercontent.com/iEwha/Profiles/master/icon/Unlock.png
 [Script]
+# > 彩云天气
+http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js, requires-body=true, timeout=10, 
 # > PS Express解锁高级订阅
 http-response ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js, requires-body=true, timeout=10, tag=PS Express
 # > Emby解锁
@@ -15,5 +17,5 @@ http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
 # > 小影
 http-response ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt script-path=https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js, requires-body=true, timeout=10, tag=小影
 [MITM]
-hostname = lcs-mobile-cops.adobe.io, mb3admin.com, mobile-api.adguard.com,spclient.wg.spotify.com,baimiao.uzero.cn,,api-chn.rthdo.com
+hostname = biz.caiyunapp.com,lcs-mobile-cops.adobe.io, mb3admin.com, mobile-api.adguard.com,spclient.wg.spotify.com,baimiao.uzero.cn,,api-chn.rthdo.com
 

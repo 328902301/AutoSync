@@ -6,3 +6,5 @@ payload:
 # Origin CDN
   - DOMAIN,ssl-lvlt.cdn.ea.com
   - DOMAIN,origin-a.akamaihd.net
+# EPIC CDN
+  - IP-CIDR,23.37.124.19/32

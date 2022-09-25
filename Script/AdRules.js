@@ -93,7 +93,6 @@ const configurations = [{
         'Deduplicate',
     ],
 },
-
 ]
 
 function formatRule(rule) {

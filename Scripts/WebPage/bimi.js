@@ -3,5 +3,5 @@
 */
 
 var body = $response.body
-    .replace(/<head>/, '<head><link rel="stylesheet" href="https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/Css/bimi.css" type="text/css">');
+    .replace(/<head>/, '<head><link rel="stylesheet" href="https://gitlab.com/RuCu6/QuanX/-/raw/main/Css/bimi.css" type="text/css">');
 $done({ body });

@@ -50,5 +50,3 @@ https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/css.adblock.co
 2.开启重写按钮/MITM按钮，配置下证书，食用；
 
 3.去广告效果参考：https://t.me/limboprossr/2222
-
-以上。

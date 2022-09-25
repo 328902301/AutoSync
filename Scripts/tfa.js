@@ -1,4 +1,4 @@
-﻿/********************************
+/********************************
 引用地址 https://github.com/NobyDa/Script/blob/master/TestFlight/TestFlightAccount.js
 
 TestFlight账户管理脚本

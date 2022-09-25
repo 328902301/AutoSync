@@ -4,7 +4,7 @@
 
 配置文件链接：
 ```Java
-https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/QuantumultX.conf
+https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 ```
 
 # 配置说明
@@ -18,7 +18,7 @@ https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/Quantumul
 ⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
 ```
 ## 使用方法：
-  0. 复制上面的 [配置文件链接](https://cdn.jsdelivr.net/gh/RuCu6/QuanX@master/QuantumultX.conf) 备用；
+  0. 复制上面的 [配置文件链接](https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf) 备用；
   1. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，输入此前 `复制的链接` ，点击右上角 `保存` ；
   2. 在当前界面，找到 `MitM` 选项卡，先点击 `生成证书` ，再点击 `配置证书` ，在弹出窗口中点击 `允许` ；
   3. 打开 iOS 系统设置，打开 `通用-描述文件` ，点击两次 `安装` ，等待安装完成；
@@ -48,7 +48,7 @@ https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/Quantumul
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
 ```Java
-resource_parser_url= https://ghproxy.com/https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/resource-parser.js
+resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/resource-parser.js
 ```
 ```ruby
 ⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
@@ -59,19 +59,3 @@ resource_parser_url= https://ghproxy.com/https://raw.githubusercontent.com/RuCu6
 ```
 3. 则填入 Quantumult X 的引用链接为 `https://xxx.txt#in=tls+ss&out=http+2` ；
 4. 填入上述链接, 并打开资源解析器开关。
-
-# 更新日志
-
-## 2022-01-12
-- 新增 添加流媒体检测模块
-## 2022-03-27
-- 更改 禁用 geo_location_checker 显示
-- 新增 添加 server_check_timeout 参数
-- 更改 优化 CN & AdBlock 分流规则
-## 2022-03-29
-- 更改 删除 google.com 相关的MITM
-## 2022-04-08
-- 新增 添加 IPv6 的 DNS 解析
-## 2022-04-12
-- 更改 删除 CN 相关的分流规则
-- 新增 添加 GeoIP 数据库

@@ -3,8 +3,7 @@ var bundle_id = obj.receipt["bundle_id"];
 
 // 01
 //
-if(bundle_id == "co.bazaart.app")
-{
+if(bundle_id == "co.bazaart.app"){
 obj = {
       "environment": "Production",
       "receipt": {
@@ -73,13 +72,12 @@ obj = {
             "auto_renew_status": "1"
       }],
       "status": 0
-}
+};
 }
 
 //02
 //
-if(bundle_id == "com.heliang.super.widget")
-{
+if(bundle_id == "com.heliang.super.widget"){
 obj = {
       "receipt": {
             "receipt_type": "Production",
@@ -147,13 +145,12 @@ obj = {
             "original_purchase_date": "2021-11-25 17:07:48 Etc/GMT"
       }],
       "latest_receipt": ""
-}
+};
 }
 
 //03
 //
-if(bundle_id == "com.loveyouchenapps.knockout")
-{
+if(bundle_id == "com.loveyouchenapps.knockout"){
 obj = {
       "environment": "Production",
       "receipt": {
@@ -222,7 +219,79 @@ obj = {
             "auto_renew_status": "1"
       }],
       "status": 0
+};
 }
+
+//04
+//
+if(bundle_id == "solutions.wzp.translator"){
+obj = {
+      "status": 0,
+      "environment": "Production",
+      "receipt": {
+            "receipt_type": "Production",
+            "app_item_id": 1348028646,
+            "receipt_creation_date": "2020-05-21 07:16:10 Etc/GMT",
+            "bundle_id": "solutions.wzp.translator",
+            "original_purchase_date": "2020-05-21 06:59:46 Etc/GMT",
+            "in_app": [{
+                  "quantity": "1",
+                  "purchase_date_ms": "1590044973000",
+                  "expires_date": "2029-05-24 07:09:33 Etc/GMT",
+                  "expires_date_pst": "2029-05-24 00:09:33 America/Los_Angeles",
+                  "is_in_intro_offer_period": "false",
+                  "transaction_id": "20000692208747",
+                  "is_trial_period": "true",
+                  "original_transaction_id": "20000692208747",
+                  "purchase_date": "2020-05-21 07:09:33 Etc/GMT",
+                  "product_id": "solutions.wzp.translator.yearlysubscription",
+                  "original_purchase_date_pst": "2020-05-21 00:09:33 America/Los_Angeles",
+                  "original_purchase_date_ms": "1590044973000",
+                  "web_order_line_item_id": "20000239761063",
+                  "expires_date_ms": "1874301558000",
+                  "purchase_date_pst": "2020-05-21 00:09:33 America/Los_Angeles",
+                  "original_purchase_date": "2020-05-21 07:09:33 Etc/GMT"
+            }],
+            "adam_id": 1348028646,
+            "receipt_creation_date_pst": "2020-05-21 00:16:10 America/Los_Angeles",
+            "request_date": "2020-05-21 07:16:24 Etc/GMT",
+            "request_date_pst": "2020-05-21 00:16:24 America/Los_Angeles",
+            "version_external_identifier": 835524422,
+            "request_date_ms": "1590045384251",
+            "original_purchase_date_pst": "2020-05-20 23:59:46 America/Los_Angeles",
+            "application_version": "3.1.6.1",
+            "original_purchase_date_ms": "1590044386000",
+            "receipt_creation_date_ms": "1590045370000",
+            "original_application_version": "3.1.6.1",
+            "download_id": 9999
+      },
+      "pending_renewal_info": [{
+            "product_id": "solutions.wzp.translator.yearlysubscription",
+            "original_transaction_id": "20000692208747",
+            "auto_renew_product_id": "solutions.wzp.translator.yearlysubscription",
+            "auto_renew_status": "1"
+      }],
+      "latest_receipt_info": [{
+            "quantity": "1",
+            "purchase_date_ms": "1590044973000",
+            "expires_date": "2029-05-24 07:09:33 Etc/GMT",
+            "expires_date_pst": "2029-05-24 00:09:33 America/Los_Angeles",
+            "is_in_intro_offer_period": "false",
+            "transaction_id": "20000692208747",
+            "is_trial_period": "true",
+            "original_transaction_id": "20000692208747",
+            "purchase_date": "2020-05-21 07:09:33 Etc/GMT",
+            "product_id": "solutions.wzp.translator.yearlysubscription",
+            "original_purchase_date_pst": "2020-05-21 00:09:33 America/Los_Angeles",
+            "subscription_group_identifier": "20437314",
+            "original_purchase_date_ms": "1590044973000",
+            "web_order_line_item_id": "20000239761063",
+            "expires_date_ms": "1874301558000",
+            "purchase_date_pst": "2020-05-21 00:09:33 America/Los_Angeles",
+            "original_purchase_date": "2020-05-21 07:09:33 Etc/GMT"
+      }],
+      "latest_receipt": ""
+};
 }
 
 $done({body: JSON.stringify(obj)});

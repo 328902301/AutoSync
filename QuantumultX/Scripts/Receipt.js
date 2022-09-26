@@ -3,7 +3,8 @@ var bundle_id = obj.receipt["bundle_id"];
 
 // 01
 //
-if(bundle_id == "co.bazaart.app"){
+if(bundle_id == "co.bazaart.app")
+{
 obj = {
       "environment": "Production",
       "receipt": {
@@ -72,12 +73,13 @@ obj = {
             "auto_renew_status": "1"
       }],
       "status": 0
-};
+}
 }
 
 //02
 //
-if(bundle_id == "com.heliang.super.widget"){
+if(bundle_id == "com.heliang.super.widget")
+{
 obj = {
       "receipt": {
             "receipt_type": "Production",
@@ -145,7 +147,7 @@ obj = {
             "original_purchase_date": "2021-11-25 17:07:48 Etc/GMT"
       }],
       "latest_receipt": ""
-};
+}
 }
 
 //03
@@ -220,7 +222,7 @@ obj = {
             "auto_renew_status": "1"
       }],
       "status": 0
-}；
+}
 }
 
-$done({body:JSON.stringify(obj)});
+$done({body: JSON.stringify(obj)});

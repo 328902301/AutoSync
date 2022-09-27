@@ -70,6 +70,7 @@ server=8.8.8.8
 #
 [policy]
 url-latency-benchmark=国际网络（自动选择节点）, server-tag-regex=.*, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+static=Shawn, direct, proxy, reject, img-url=pencil.circle.fill.system
 url-latency-benchmark=Netflix, server-tag-regex=新加坡, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 url-latency-benchmark=Disiney, server-tag-regex=新加坡|香港, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
 url-latency-benchmark=HK 香港, server-tag-regex=香港|🇭🇰|HK|湾仔|港仔|九龙, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -117,6 +118,7 @@ url-latency-benchmark=spotify, server-tag-regex=美国|us, check-interval=600, t
 # 你机场的订阅链接
 
 [filter_remote]
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=asn, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppStore/AppStore.list, tag=App store, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Wikimedia/Wikimedia.list, tag=维基百科, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=迪士尼, force-policy=Disiney, update-interval=172800, opt-parser=false, enabled=true

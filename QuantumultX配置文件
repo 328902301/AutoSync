@@ -141,22 +141,21 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 # Params "tag" and "enabled" are optional.
 #
 [rewrite_remote]
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/TV.qxrewrite?raw=true, tag=苹果TV, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Location.qxrewrite?raw=true, tag=苹果定位服务, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/TV.qxrewrite?raw=true, tag=解锁TVTV, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Location.qxrewrite?raw=true, tag=解锁定位服务, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Sunert/Script/master/TaskConf/sina/qx_rewite.txt, tag=微博, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/DisneyPlus-Dualsub.snippet, tag=Disney+双语字幕, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/Netflix-Dualsub.snippet, tag=Netflix双语字幕, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=YouTube去广告, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf, tag=油管机翻字幕, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=Boxjs, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Siri.qxrewrite?raw=true, tag=siri解鎖, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=解鎖, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/qxrewrite/Weather.beta.qxrewrite, tag=解鎖(注意！iOS15、16不可用请手动删除）, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Siri.qxrewrite?raw=true, tag=解鎖Siri, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/qxrewrite/Weather.beta.qxrewrite, tag=解鎖天气(注意！iOS15、16不可用请手动删除）, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=spotify搜索点赞随意播, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf, tag=TF解除锁区, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NoByDa（lhie1 Rewrite）, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Apple_Maps_CN.qxrewrite?raw=true, tag=Apple maps, update-interval=172800, opt-parser=false, enabled=true
-;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
+https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJs, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=Boxjs, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
 
 #
 # Only obfs=http, obfs=ws, obfs=wss can have optional "obfs-uri" field.

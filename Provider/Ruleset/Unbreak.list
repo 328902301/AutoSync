@@ -13,7 +13,6 @@ DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,update.googleapis.com
-DOMAIN,translate.googleapis.com
 # >> Paramount+
 # DOMAIN,pubads.g.doubleclick.net
 # > Tencent

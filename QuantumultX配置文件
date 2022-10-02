@@ -71,6 +71,7 @@ server=8.8.8.8
 #
 [policy]
 url-latency-benchmark=国际网络（自动选择节点）, server-tag-regex=.*, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+static=ASN(此为Asn分流请手动选择后排序到末尾，一般为proxy), direct, proxy, reject, img-url=pencil.circle.fill.system
 url-latency-benchmark=Netflix, server-tag-regex=新加坡, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 url-latency-benchmark=Disiney, server-tag-regex=新加坡|香港, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
 url-latency-benchmark=HK 香港, server-tag-regex=香港|🇭🇰|HK|湾仔|港仔|九龙, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png

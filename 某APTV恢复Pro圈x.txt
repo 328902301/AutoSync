@@ -1,0 +1,12 @@
+#某APTV恢复Pro圈X规则
+
+正经软件
+
+圈X重写：
+圈X右下风车-重写-（旧版：引用丨新版：规则资源）-右上+号-填入下方地址取名即可
+https://gitlab.com/ioshkj/quantumultx/-/raw/main/vipjs/aptvpro.conf
+
+下载地址：商店自行搜索
+
+小火箭圈X独立账号购买：
+http://m.kami.vip/shop/vs3OD2

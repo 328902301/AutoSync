@@ -1,4 +1,5 @@
 /*
+迅游手游加速器解锁
 转载自https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xyjsq.js
 */
 

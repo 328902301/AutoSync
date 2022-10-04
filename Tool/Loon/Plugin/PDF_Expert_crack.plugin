@@ -7,7 +7,7 @@
 
 [Script]
 http-response 
-^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/PDF_Expert/PDF_Expert_crack.js, requires-body=true, timeout=10, tag=PDF_Expert_crack
+^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/PDF_Expert/PDF_Expert_crack.js, requires-body=true, timeout=10, tag=PDF_Expert_crack
 
 [Mitm]
 hostname = license.pdfexpert.com

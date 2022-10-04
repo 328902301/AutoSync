@@ -1,0 +1,12 @@
+#!name = Grow解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = 彭于晏
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Grow.png
+
+[Script]
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ url script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=true, timeout=10, tag=Grow解锁
+
+[Mitm]
+hostname = api.revenuecat.com

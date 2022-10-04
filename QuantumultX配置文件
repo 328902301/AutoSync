@@ -156,6 +156,11 @@ https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1
 https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJs, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=Boxjs, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=毒奶特供, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
+
+
+
 
 #
 # Only obfs=http, obfs=ws, obfs=wss can have optional "obfs-uri" field.

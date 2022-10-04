@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Totofinance.png
 
 [Script]
-http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ url script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Totofinance/Totofinance_crack.js, requires-body=true, timeout=10, tag=搜图神器解锁
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Totofinance/Totofinance_crack.js, requires-body=true, timeout=10, tag=搜图神器解锁
 
 [Mitm]
 hostname = api.revenuecat.com

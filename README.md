@@ -17,5 +17,5 @@
 
 [ygc007](https://github.com/yqc007/QuantumultX)
 
-
+[DecoAri](https://github.com/DecoAri)
 暂时就这些，未提及的后续补上。

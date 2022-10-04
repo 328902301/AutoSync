@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Notability.png
 
 [Script]
-http-response ^https?:\/\/notability\.com\/subscriptions script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Notability/Notability_crack.js, requires-body=true, timeout=10, tag=Notability解锁
+http-response ^https?:\/\/notability\.com\/subscriptions script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Notability/Notability_crack.js, requires-body=1, timeout=10, tag=Notability解锁
 
 [Mitm]
 hostname = api.revenuecat.com

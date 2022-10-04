@@ -1,5 +1,7 @@
 /*
-转载自https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/stsq.js
+搜图神器解锁
+脚本作者：Mr.Eric
+引用地址：https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/SearchArtifact.js
 */
 
 let obj = JSON.parse($response.body);

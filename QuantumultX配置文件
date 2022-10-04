@@ -86,6 +86,7 @@ url-latency-benchmark=SG 新加坡, server-tag-regex=新加坡|🇸🇬|SG|狮�
 url-latency-benchmark=DE德国, server-tag-regex=德国|🇩🇪, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
 url-latency-benchmark=IND印度, server-tag-regex=印度, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
 url-latency-benchmark=TW 台湾, server-tag-regex=台湾|🇹🇼|TW|台北|新竹|台中|桃园|台南|高雄|花莲, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+static=🛑 广告拦截, direct, proxy, reject
 static=Google, direct, 国际网络（自动选择节点）, HK 香港, RU俄罗斯, US 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 static=AppleMusic, direct, 国际网络（自动选择节点）, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
 static=AppStore, direct, 国际网络（自动选择节点）, HK 香港, US 美国, TW 台湾, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
@@ -135,8 +136,9 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Blizzard/Blizzard.list, tag=暴雪, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Discord/Discord.list, tag=discord, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list, tag=bilibili, update-interval=172800, opt-parser=false, enabled=true
-;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.snippet, tag=Sample, force-policy=your-policy-name, enabled=true
-
+https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.snippet, tag=Sample, force-policy=your-policy-name, enabled=true
+https://limbopro.com/Adblock4limbo.list, tag=毒奶特供, force-policy=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=🛑 广告拦截, update-interval=172800, opt-parser=false, enabled=true
 #
 # Params "tag" and "enabled" are optional.
 #
@@ -156,9 +158,10 @@ https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1
 https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJs, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=Boxjs, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
-https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=毒奶特供, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
-
+https://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Applet/QuanX.conf, tag=微信小程序去广告@ddgksf2013, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.qxrewrite, tag=知乎去广告及体验增强@blackmatrix7, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.qxrewrite, tag=开屏去广告, update-interval=172800, opt-parser=false, enabled=true
 
 
 

@@ -11,4 +11,11 @@
 
 [彭于晏](https://github.com/89996462)
 
+[I-am-R-E](https://github.com/I-am-R-E/Functional-Store-Hub)
+
+[litieyin](https://github.com/litieyin/AD_VIP/tree/main/Script)
+
+[ygc007](https://github.com/yqc007/QuantumultX)
+
+
 暂时就这些，未提及的后续补上。

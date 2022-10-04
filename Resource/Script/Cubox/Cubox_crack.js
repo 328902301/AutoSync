@@ -1,5 +1,5 @@
 /*
-转载自彭于晏https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cubox.js
+脚本来自彭于晏https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cubox.js
 */
 
 var body = $response.body;

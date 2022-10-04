@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/GameMaster.png
 
 [Script]
-http-response ^https:\/\/api\.xunyou\.mobi\/api\/v1\/android\/sessions url script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/GameMaster/GameMaster_crack.js, requires-body=true, timeout=10, tag=迅游手游加速器解锁
+http-response ^https:\/\/api\.xunyou\.mobi\/api\/v1\/android\/sessions script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/GameMaster/GameMaster_crack.js, requires-body=true, timeout=10, tag=迅游手游加速器解锁
 
 [Mitm]
 hostname = api.xunyou.mobi

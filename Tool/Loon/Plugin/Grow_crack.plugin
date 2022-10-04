@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Grow.png
 
 [Script]
-http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ url script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=true, timeout=10, tag=Grow解锁
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=true, timeout=10, tag=Grow解锁
 
 [Mitm]
 hostname = api.revenuecat.com

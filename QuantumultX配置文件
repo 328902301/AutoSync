@@ -225,20 +225,20 @@ host-keyword, ttvnw, 国际网络（自动选择节点）
 host-keyword, measurement, 国际网络（自动选择节点）
 host-keyword, battle, 国际网络（自动选择节点）
 host-keyword, taptap, direct
--host-keyword, discord, 国际网络（自动选择节点）
+host-keyword, discord, 国际网络（自动选择节点）
 host-keyword, weibo, 国际网络（自动选择节点）
 host-keyword, mihoyo, direct
 host-keyword, yuanshen, direct
--host-keyword, steam, 国际网络（自动选择节点）
+host-keyword, steam, 国际网络（自动选择节点）
 host-keyword, activision, 国际网络（自动选择节点）
 host-keyword, twitch, 国际网络（自动选择节点）
 host-keyword, blizzard, 国际网络（自动选择节点）
 host-keyword, messenger, 国际网络（自动选择节点）
 host-keyword, instagram, 国际网络（自动选择节点）
 host-keyword, twitter, 国际网络（自动选择节点）
--host-keyword, facebook, 国际网络（自动选择节点）
--host-keyword, telegram, 国际网络（自动选择节点）
--host-keyword, discord, 国际网络（自动选择节点）
+host-keyword, facebook, 国际网络（自动选择节点）
+host-keyword, telegram, 国际网络（自动选择节点）
+host-keyword, discord, 国际网络（自动选择节点）
 host-keyword, playstation, HK 香港
 host-keyword, spotify, spotify
 host-keyword, bing, 国际网络（自动选择节点）

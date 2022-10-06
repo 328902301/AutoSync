@@ -4,6 +4,8 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.t.ssp.hinet.net
+.bb8.aotter.net
 .dmkt.point-ad-game.com
 .tag.dec-connect.decsuite.com
 .internal-analytics.odoo.com
@@ -4666,6 +4668,7 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.trek.powtoon.com
 .biv.gazeta.pl
 .analytics.ngs55.ru
 .dgcollector.evidon.com
@@ -5006,10 +5009,8 @@
 .audience.visiblemeasures.com
 .awsync.yandex.ru
 .b-aws.aol.com
-.b-aws.huffingtonpost.com
 .b.aol.com
 .b.grvcdn.com
-.b.huffingtonpost.com
 .b.oix.net
 .banstat.nadavi.net
 .bat.bing.com
@@ -24014,6 +24015,7 @@
 .int.vlancaa.site
 .int.vlancaa.fun
 .tok.vaicore.xyz
+.logs.gshopper.com
 .airlytics.airlock.twcmobile.weather.com
 .track.midway.run
 .tdid.m.qq.com

@@ -115,6 +115,12 @@ if (ua.indexOf('WidgetsApp') != -1) {
     Body = {"request_date":"2022-09-24T08:42:42Z","request_date_ms":1664008962171,"subscriber":{"entitlements":{"pro":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"cw_1999_ly_3d0","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-09-24T08:38:47Z","last_seen":"2022-09-24T08:38:47Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:b0f99bc892fa41e9841b9f906ac884ef","original_application_version":"1","original_purchase_date":"2022-09-24T07:44:56Z","other_purchases":{},"subscriptions":{"cw_1999_ly_3d0":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//20 Vision 个人 OKR 目标管理工具
+//https://apps.apple.com/cn/app/id1572457968
+if (ua.indexOf('Vision') != -1) {
+    Body = {"request_date":"2022-10-02T04:41:04Z","request_date_ms":1664685664562,"subscriber":{"entitlements":{"pro":{"expires_date":"9999-08-17T12:22:48Z","grace_period_expires_date":null,"product_identifier":"vis_1y_2w_free","purchase_date":"2022-08-03T12:22:48Z"}},"first_seen":"2022-08-03T12:18:43Z","last_seen":"2022-10-02T03:59:06Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:df853b89cacb42f8b14c1012b9b66e6d","original_application_version":"319","original_purchase_date":"2022-08-03T12:17:40Z","other_purchases":{},"subscriptions":{"vis_1y_2w_free":{"billing_issues_detected_at":null,"expires_date":"9999-08-17T12:22:48Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-08-03T12:22:48Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-08-03T12:22:48Z","store":"app_store","unsubscribe_detected_at":"2022-08-03T12:28:20Z"}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

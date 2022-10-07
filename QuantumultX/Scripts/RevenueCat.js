@@ -115,10 +115,16 @@ if (ua.indexOf('WidgetsApp') != -1) {
     Body = {"request_date":"2022-09-24T08:42:42Z","request_date_ms":1664008962171,"subscriber":{"entitlements":{"pro":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"cw_1999_ly_3d0","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-09-24T08:38:47Z","last_seen":"2022-09-24T08:38:47Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:b0f99bc892fa41e9841b9f906ac884ef","original_application_version":"1","original_purchase_date":"2022-09-24T07:44:56Z","other_purchases":{},"subscriptions":{"cw_1999_ly_3d0":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-//20 22222
-//https://apps.apple.com/cn/app/id1531594277
+//20 Planny 3
+//https://apps.apple.com/cn/app/id1289070327
 if (ua.indexOf('Planny/2000 CFNetwork/1335.0.3 Darwin/21.6.0') != -1) {
     Body = {"request_date_ms":"1581750589992","request_date":"2020-02-15T07:09:49Z","subscriber":{"non_subscriptions":{},"first_seen":"2020-02-14T20:28:01Z","original_application_version":"216","other_purchases":{},"subscriptions":{"com.neybox.pillow.premium.year":{"is_sandbox":false,"period_type":"normal","billing_issues_detected_at":null,"unsubscribe_detected_at":null,"expires_date":"2099-09-09T07:07:58Z","original_purchase_date":"2020-02-15T07:07:58Z","purchase_date":"2020-02-15T07:07:58Z","store":"app_store"}},"entitlements":{"premium":{"expires_date":"2099-09-09T07:07:58Z","product_identifier":"com.neybox.pillow.premium.year","purchase_date":"2020-02-15T07:07:58Z"}},"original_purchase_date":"2020-02-14T20:26:59Z","original_app_user_id":"D1D6D98B-EF51-48AF-9876-7352ABCEFD60","last_seen":"2020-02-14T20:28:01Z"}};
+}
+
+//21 Vision 个人OKR目标管理工具
+//https://apps.apple.com/cn/app/id1572457968
+if (ua.indexOf('Vision') != -1) {
+    Body = {"request_date":"2022-10-02T04:41:04Z","request_date_ms":1664685664562,"subscriber":{"entitlements":{"pro":{"expires_date":"9999-08-17T12:22:48Z","grace_period_expires_date":null,"product_identifier":"vis_1y_2w_free","purchase_date":"2022-08-03T12:22:48Z"}},"first_seen":"2022-08-03T12:18:43Z","last_seen":"2022-10-02T03:59:06Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:df853b89cacb42f8b14c1012b9b66e6d","original_application_version":"319","original_purchase_date":"2022-08-03T12:17:40Z","other_purchases":{},"subscriptions":{"vis_1y_2w_free":{"billing_issues_detected_at":null,"expires_date":"9999-08-17T12:22:48Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-08-03T12:22:48Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-08-03T12:22:48Z","store":"app_store","unsubscribe_detected_at":"2022-08-03T12:28:20Z"}}}};
 }
 
 Status = 'HTTP/1.1 200 OK';

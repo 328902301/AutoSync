@@ -111,6 +111,24 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
+  - name: TikTok
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: YouTube
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
   - name: ProxyMedia
     type: select
     proxies:
@@ -190,11 +208,25 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Microsoft.yaml
     interval: 86400
 
+   TikTok:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/TikTok.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/TikTok.yaml
+    interval: 86400
+
    Telegram:
     type: http
     behavior: classical
     path: ./Ruleset/iEwha/Telegram.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Telegram.yaml
+    interval: 86400
+
+   YouTube:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/YouTube.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/YouTube.yaml
     interval: 86400
 
    ProxyMedia:
@@ -232,7 +264,9 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,Meta,Meta
   - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
+  - RULE-SET,YouTube,YouTube
   - RULE-SET,ProxyMedia,ProxyMedia
   - RULE-SET,Proxy,Proxy
   - RULE-SET,China,DIRECT
@@ -249,7 +283,9 @@ script:
             "Emby": "Emby",
             "Meta": "Meta",
             "Microsoft": "DIRECT",
+            "TikTok": "TikTok",
             "Telegram": "Telegram",
+            "YouTube": "YouTube",
             "ProxyMedia": "ProxyMedia",
             "Proxy": "Proxy",
             "China": "DIRECT",

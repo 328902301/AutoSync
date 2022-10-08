@@ -120,7 +120,7 @@ proxy-groups:
       - 韩国节点
       - 日本节点
       - 美国节点
-  - name: Porxy
+  - name: Proxy
     type: select
     proxies:
       - 香港节点

@@ -93,6 +93,15 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - DIRECT
+  - name: Meta
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
   - name: Telegram
     type: select
     proxies:
@@ -153,13 +162,6 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Reject.yaml
     interval: 86400
 
-   Private:
-    type: http
-    behavior: domain
-    path: ./Ruleset/iEwha/Private.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Private.yaml
-    interval: 86400
-
    Apple:
     type: http
     behavior: domain
@@ -167,11 +169,18 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Apple.yaml
     interval: 86400
 
-   icloud:
+   Emby:
     type: http
-    behavior: domain
-    path: ./Ruleset/iEwha/icloud.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/icloud.yaml
+    behavior: classical
+    path: ./Ruleset/Emby.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
+    interval: 86400
+
+   Meta:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Meta.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Meta.yaml
     interval: 86400
 
    Microsoft:
@@ -179,13 +188,6 @@ rule-providers:
     behavior: classical
     path: ./Ruleset/iEwha/Microsoft.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Microsoft.yaml
-    interval: 86400
-
-   Emby:
-    type: http
-    behavior: classical
-    path: ./Ruleset/Emby.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
    Telegram:
@@ -213,7 +215,7 @@ rule-providers:
     type: http
     behavior: domain
     path: ./Ruleset/iEwha/Direct.yaml
-    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Direct.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Domestic.yaml
     interval: 86400
 
    cncidr:
@@ -226,11 +228,10 @@ rule-providers:
 # 规则模式
 rules:
   - RULE-SET,Reject,REJECT
-  - RULE-SET,Private,DIRECT
   - RULE-SET,Apple,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Emby,Emby
+  - RULE-SET,Meta,Meta
+  - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Telegram,Telegram
   - RULE-SET,ProxyMedia,ProxyMedia
   - RULE-SET,Proxy,Proxy
@@ -243,12 +244,11 @@ script:
   code: |
     def main(ctx, metadata):
         ruleset_action = {    
-            "Reject": "REJECT",
-            "Private": "DIRECT", 
+            "Reject": "REJECT", 
             "Apple": "DIRECT",
-            "icloud": "DIRECT",
-            "Microsoft": "DIRECT",
             "Emby": "Emby",
+            "Meta": "Meta",
+            "Microsoft": "DIRECT",
             "Telegram": "Telegram",
             "ProxyMedia": "ProxyMedia",
             "Proxy": "Proxy",

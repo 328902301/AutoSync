@@ -172,7 +172,7 @@ rule-providers:
    Emby:
     type: http
     behavior: classical
-    path: ./Ruleset/Emby.yaml
+    path: ./Ruleset/iEwha/Emby.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
     interval: 86400
 
@@ -276,4 +276,4 @@ script:
             ctx.log('[Script] Geoip CN')
             return "DIRECT"
         ctx.log('[Script] MATCH')
-        return "Prxoy"   
+        return "Proxy"   

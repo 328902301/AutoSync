@@ -1,1 +1,8 @@
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/SearchPicture.png
 
+[Script]
+http-response http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/SearchPicture/SearchPicture_crack.js, requires-body=1, timeout=10, tag=搜图神器解锁
+http-response http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/SearchPicture/SearchPicture_crack.js, requires-body=1, tag=搜图神器解锁
+
+[Mitm]
+hostname = wallpaper.soutushenqi.com

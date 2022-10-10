@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Fileball.png
 
 [script]
-http-request ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, timeout=10, tag=Fileball云盘挂载
+http-request ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, requires-body=true, timeout=120, tag=Fileball云盘挂载
 
 [MITM]
 hostname = *example.com

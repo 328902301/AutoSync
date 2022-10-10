@@ -1,0 +1,12 @@
+#!name = Fileball云盘挂载
+#!desc = Fileball挂载阿里云盘和Alist，用于播放云盘中的音乐和视频文件。
+#!openUrl = 
+#!author = ddgksf2021
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Fileball.png
+
+[script]
+http-request ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, timeout=10, tag=Fileball云盘挂载
+
+[MITM]
+hostname = *example.com

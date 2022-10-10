@@ -175,14 +175,14 @@ proxy-groups:
 rule-providers:
    Reject:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./Ruleset/iEwha/Reject.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Reject.yaml
     interval: 86400
 
    Apple:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./Ruleset/iEwha/Apple.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Apple.yaml
     interval: 86400
@@ -238,14 +238,14 @@ rule-providers:
 
    Proxy:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./Ruleset/iEwha/Proxy.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Proxy.yaml
     interval: 86400
 
    China:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./Ruleset/iEwha/Direct.yaml
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Domestic.yaml
     interval: 86400

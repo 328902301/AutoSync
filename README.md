@@ -10,7 +10,7 @@
 ## 自用配置：
 * *Surge*
     ``` bash
-    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Surge.conf
+    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Sample.conf
 * *QuantumultX*
     ``` bash
     https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/QuantumultX.conf
@@ -34,7 +34,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok.sgmodule
 * YouTube去广告
    ``` bash
-  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
+  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTube.sgmodule
 * 全能搜索
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule

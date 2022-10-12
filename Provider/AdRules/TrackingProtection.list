@@ -4,6 +4,7 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.rtc.dymatrix.cloud
 .tracking.shaadi.com
 .tdbc.redgalaxy.com
 .t.c-rtb.com
@@ -4672,6 +4673,9 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.tracker.remp-beam.golem.de
+.tracking.digitalocean.com
+.events.split.io
 .log.bandi.so
 .ana.bandi.so
 .weblog.dema.mil.kr

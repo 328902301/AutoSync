@@ -62,6 +62,7 @@
 .clickio.mgr.consensu.org
 .cdn.consentmanager.mgr.consensu.org
 .quantcast.mgr.consensu.org
+.flipdish-cookie-consent.s3-eu-west-1.amazonaws.com
 .privacy-sdk.talent-soft.com
 .ccm.abload.de
 .consent.dropbox.com
@@ -694,6 +695,7 @@
 .widget.oncustomer.asia
 .gubagootracking.com
 .cdn.gubagoo.io
+.chatntr.com
 .chatbot-cdn.czso.cz
 .formilla.com
 .app.livechatoo.com

@@ -569,12 +569,23 @@ try {
             },
           });
 
+          window._${prefix}_id77_submit = null;
           toolList.push({
-            name: "submit",
+            name: "抢",
             global: true,
             onClick: function (event) {
-              setInterval(() => document.querySelector('button.submit-btn').click(), 600);
-              _${prefix}_id77_vConsole.hide();
+              if (!window._${prefix}_id77_submit) {
+                window._${prefix}_id77_submit = setInterval(() => {
+                  let dom = document.querySelector('.confirm-button');
+                  if (!dom) {
+                    dom = document.querySelector('button.submit-btn');
+                  }
+                  dom.click();
+                }, 600);
+                _${prefix}_id77_vConsole.hide();
+              } else {
+                clearInterval(window._${prefix}_id77_submit);
+              }
             },
           });
   
@@ -699,19 +710,14 @@ try {
   if (/<script.*v(C|c)onsole(\.min)?\.js.+?script>/i.test(html)) {
     html = html.replace(/<script.*v(C|c)onsole(\.min)?\.js.+?script>/i, ``);
   }
-  if (/(<meta.+?charset="?utf\-?8[^\n]+?>)/i.test(html)) {
+  if (/(<(?:style|link|script)[\s\S]+?<\/head>)/i.test(html)) {
     html = html.replace(
-      /(<meta.+?charset="?utf\-?8[^\n]+?>)/i,
-      `$1${copyObject}${mitmFuckEid}${scriptDoms}${mitmContent}`
-    );
-  } else if (/(<(?:style|link)[\s\S]+?<\/head>)/i.test(html)) {
-    html = html.replace(
-      /(<(?:style|link)[\s\S]+?<\/head>)/i,
+      /(<(?:style|link|script)[\s\S]+?<\/head>)/i,
       `${copyObject}${mitmFuckEid}${scriptDoms}${mitmContent}$1`
     );
   } else {
     html = html.replace(
-      /(<script)/i,
+      /(<\/head>|<script|<div)/i,
       `${copyObject}${mitmFuckEid}${scriptDoms}${mitmContent}$1`
     );
   }

@@ -93,6 +93,16 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - DIRECT
+  - name: Spotify
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
   - name: Meta
     type: select
     proxies:
@@ -208,6 +218,14 @@ rule-providers:
     url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Microsoft.yaml
     interval: 86400
 
+   Spotify:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Spotify.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Spotify.yaml
+    interval: 86400
+
+
    TikTok:
     type: http
     behavior: classical
@@ -264,6 +282,7 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,Meta,Meta
   - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,Spotify,Spotify
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
   - RULE-SET,YouTube,YouTube
@@ -283,6 +302,7 @@ script:
             "Emby": "Emby",
             "Meta": "Meta",
             "Microsoft": "DIRECT",
+            "Spotify": "Spotify",
             "TikTok": "TikTok",
             "Telegram": "Telegram",
             "YouTube": "YouTube",

@@ -580,6 +580,10 @@ try {
                   if (!dom) {
                     dom = document.querySelector('button.submit-btn');
                   }
+                  if (!dom) {
+                    dom = document.querySelector('.free_coupon a.coupon');
+                    document.querySelector('.free_coupon').click();
+                  }
                   dom.click();
                 }, 600);
                 _${prefix}_id77_vConsole.hide();

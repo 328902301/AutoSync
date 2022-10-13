@@ -1,2 +1,3 @@
 DOMAIN-SUFFIX,paste.in
 DOMAIN-SUFFIX,app-site-association.cdn-apple.com
+IP-CIDR,203.107.1.1/24

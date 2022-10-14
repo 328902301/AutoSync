@@ -1,6 +1,12 @@
 var head = $request.headers;
 var ua = head['User-Agent'];
 
+//00 Vision
+//https://apps.apple.com/cn/app/id1289070327
+if (ua.indexOf('Vision') != -1) {
+    Body = {"request_date_ms":1664685664562,"request_date":"2022-10-02T04:41:04Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-08-03T12:18:43Z","original_application_version":"319","other_purchases":{},"management_url":null,"subscriptions":{"vis_1y_2w_free":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"trial","expires_date":"9999-08-17T12:22:48Z","grace_period_expires_date":null,"unsubscribe_detected_at":"2022-08-03T12:28:20Z","original_purchase_date":"2022-08-03T12:22:48Z","purchase_date":"2022-08-03T12:22:48Z","store":"app_store"}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-08-03T12:22:48Z","product_identifier":"vis_1y_2w_free","expires_date":"9999-08-17T12:22:48Z"}},"original_purchase_date":"2022-08-03T12:17:40Z","original_app_user_id":"$RCAnonymousID:df853b89cacb42f8b14c1012b9b66e6d","last_seen":"2022-10-02T03:59:06Z"}};
+}
+
 //01 Filebox
 //https://apps.apple.com/cn/app/id1558391784
 if (ua.indexOf('Fileball') != -1) {

@@ -69,6 +69,14 @@ if (cookies) {
   });
 }
 
+// 提前点亮
+if (
+  $request.url.includes('.com/coupons/show.action') &&
+  /"status":\d+,"togo/.test(html)
+) {
+  html = html.replace(/"status":\d+,"togo/, '"status":999,"togo');
+}
+
 if (!html.includes('</head>')) {
   $.done({ headers: modifiedHeaders });
 }
@@ -585,6 +593,7 @@ try {
                     document.querySelector('.free_coupon').click();
                   }
                   dom.click();
+                  //document.querySelector('.coupon-btns .btn').click();
                 }, 600);
                 _${prefix}_id77_vConsole.hide();
               } else {

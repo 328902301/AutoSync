@@ -1,7 +1,6 @@
 var head = $request.headers;
 var ua = head['User-Agent'];
 
-
 //01 Filebox
 //https://apps.apple.com/cn/app/id1558391784
 if (ua.indexOf('Fileball') != -1) {

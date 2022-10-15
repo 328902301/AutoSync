@@ -1,3 +1,4 @@
+var resp = {};
 var head = $request.headers;
 var ua = head['User-Agent'];
 
@@ -125,4 +126,18 @@ if (typeof $response == "undefined") {
 	delete $request.headers["x-revenuecat-etag"]; // prevent 304 issues
 	delete $request.headers["X-RevenueCat-ETag"];
 	resp.headers = $request.headers;
-} 
+} else if (obj && obj.subscriber) {
+	obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
+	obj.subscriber.entitlement = obj.subscriber.entitlement || {};
+	for (var i in list) {
+		if (new RegExp(`^${i}`, `i`).test(ua)) {
+			obj.subscriber.subscriptions[list[i].id] = data;
+			obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
+			obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
+			break;
+		}
+	}
+	resp.body = JSON.stringify(obj);
+}
+
+$done(resp);

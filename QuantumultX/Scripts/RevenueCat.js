@@ -1,4 +1,3 @@
-var resp = {};
 var head = $request.headers;
 var ua = head['User-Agent'];
 
@@ -122,22 +121,13 @@ if (ua.indexOf('%E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6') != -1) {
     Body = {"request_date":"2022-09-19T14:08:44Z","request_date_ms":1663596524426,"subscriber":{"entitlements":{"Entitlement.Pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"tech.miidii.MDVinyl.lifetime","purchase_date":"2022-09-19T13:58:44Z"}},"first_seen":"2022-09-19T13:57:54Z","last_seen":"2022-09-19T13:57:54Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:d855e7acfaf842a291002eef65924eb8","original_application_version":"599","original_purchase_date":"2022-09-11T05:42:36Z","other_purchases":{},"subscriptions":{"tech.miidii.MDVinyl.lifetime":{"billing_issues_detected_at":null,"expires_date":null,"grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-19T13:58:48Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-09-19T13:58:44Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-if (typeof $response == "undefined") {
-	delete $request.headers["x-revenuecat-etag"]; // prevent 304 issues
-	delete $request.headers["X-RevenueCat-ETag"];
-	resp.headers = $request.headers;
-} else if (obj && obj.subscriber) {
-	obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
-	obj.subscriber.entitlement = obj.subscriber.entitlement || {};
-	for (var i in list) {
-		if (new RegExp(`^${i}`, `i`).test(ua)) {
-			obj.subscriber.subscriptions[list[i].id] = data;
-			obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
-			obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
-			break;
-		}
-	}
-	resp.body = JSON.stringify(obj);
-}
+Status = 'HTTP/1.1 200 OK';
+Headers = {"Content-Type": "application/json"};
 
-$done(resp);
+const Response = {
+    status: Status,
+    headers: Headers,
+    body: JSON.stringify(Body)
+};
+
+$done(Response);

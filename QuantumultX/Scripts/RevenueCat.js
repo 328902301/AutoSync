@@ -115,13 +115,7 @@ if (ua.indexOf('WidgetsApp') != -1) {
     Body = {"request_date":"2022-09-24T08:42:42Z","request_date_ms":1664008962171,"subscriber":{"entitlements":{"pro":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"cw_1999_ly_3d0","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-09-24T08:38:47Z","last_seen":"2022-09-24T08:38:47Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:b0f99bc892fa41e9841b9f906ac884ef","original_application_version":"1","original_purchase_date":"2022-09-24T07:44:56Z","other_purchases":{},"subscriptions":{"cw_1999_ly_3d0":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-//20 Planny 3
-//https://apps.apple.com/cn/app/id1289070327
-if (ua.indexOf('Planny/2000 CFNetwork/1335.0.3 Darwin/21.6.0') != -1) {
-    Body = {"request_date":"2020-02-15T07:09:49Z","request_date_ms":"1581750589992","subscriber":{"entitlements":{"premium":{"expires_date":"2099-09-09T07:07:58Z","product_identifier":"com.neybox.pillow.premium.year","purchase_date":"2020-02-15T07:07:58Z"}},"first_seen":"2020-02-14T20:28:01Z","last_seen":"2020-02-14T20:28:01Z","non_subscriptions":{},"original_app_user_id":"D1D6D98B-EF51-48AF-9876-7352ABCEFD60","original_application_version":"216","original_purchase_date":"2020-02-14T20:26:59Z","other_purchases":{},"subscriptions":{"com.neybox.pillow.premium.year":{"billing_issues_detected_at":null,"expires_date":"2099-09-09T07:07:58Z","is_sandbox":false,"original_purchase_date":"2020-02-15T07:07:58Z","period_type":"normal","purchase_date":"2020-02-15T07:07:58Z","store":"app_store","unsubscribe_detected_at":null}}}};
-}
-
-//21 谜底黑胶
+//20 谜底黑胶
 //https://apps.apple.com/cn/app/id1606306441
 if (ua.indexOf('%E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6') != -1) {
     Body = {"request_date":"2022-09-19T14:08:44Z","request_date_ms":1663596524426,"subscriber":{"entitlements":{"Entitlement.Pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"tech.miidii.MDVinyl.lifetime","purchase_date":"2022-09-19T13:58:44Z"}},"first_seen":"2022-09-19T13:57:54Z","last_seen":"2022-09-19T13:57:54Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:d855e7acfaf842a291002eef65924eb8","original_application_version":"599","original_purchase_date":"2022-09-11T05:42:36Z","other_purchases":{},"subscriptions":{"tech.miidii.MDVinyl.lifetime":{"billing_issues_detected_at":null,"expires_date":null,"grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-19T13:58:48Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-09-19T13:58:44Z","store":"app_store","unsubscribe_detected_at":null}}}};

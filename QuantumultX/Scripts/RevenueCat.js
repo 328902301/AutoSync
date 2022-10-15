@@ -121,6 +121,12 @@ if (ua.indexOf('%E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6') != -1) {
     Body = {"request_date":"2022-09-19T14:08:44Z","request_date_ms":1663596524426,"subscriber":{"entitlements":{"Entitlement.Pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"tech.miidii.MDVinyl.lifetime","purchase_date":"2022-09-19T13:58:44Z"}},"first_seen":"2022-09-19T13:57:54Z","last_seen":"2022-09-19T13:57:54Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:d855e7acfaf842a291002eef65924eb8","original_application_version":"599","original_purchase_date":"2022-09-11T05:42:36Z","other_purchases":{},"subscriptions":{"tech.miidii.MDVinyl.lifetime":{"billing_issues_detected_at":null,"expires_date":null,"grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-19T13:58:48Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-09-19T13:58:44Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//21 Anybox-跨平台书签管理及稍后读
+//https://apps.apple.com/cn/app/id1593408455
+if (ua.indexOf('Anybox') != -1) {
+    Body = {"request_date_ms":1665733801390,"request_date":"2022-10-14T07:50:01Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-10-14T07:45:36Z","original_application_version":"47","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"cc.anybox.Anybox.annual":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"annual","expires_date":"2029-10-14T07:49:44Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-10-14T07:49:45Z","purchase_date":"2022-10-14T07:49:44Z","store":"app_store"}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-10-14T07:49:44Z","product_identifier":"cc.anybox.Anybox.annual","expires_date":"2029-10-14T07:49:44Z"}},"original_purchase_date":"2022-10-14T07:26:13Z","original_app_user_id":"$RCAnonymousID:Eric","last_seen":"2022-10-14T07:45:36Z"}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

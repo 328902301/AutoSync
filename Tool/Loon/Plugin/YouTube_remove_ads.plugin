@@ -1,5 +1,5 @@
 #!name = YouTube去广告
-#!desc = 视频广告通过缩短广告至极短时间来达到跳过广告的效果，瀑布流广告通过脚本完成去除。YouTube版本号需高于15.26.4，Premium订阅用户勿用此插件。
+#!desc = 视频广告通过缩短广告至极短时间来达到跳过广告的效果[来自@小白脸]，瀑布流广告通过脚本完成去除[来自@app2smile]。YouTube版本号需高于15.26.4，Premium订阅用户勿用此插件。
 #!openUrl = 
 #!author = app2smile 小白脸
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

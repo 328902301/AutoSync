@@ -1,23 +1,12 @@
 #!name = YouTube去广告
-#!desc = 视频广告通过缩短广告至极短时间来达到跳过广告的效果[来自@小白脸]，瀑布流广告通过脚本完成去除[来自@app2smile]。YouTube版本号需高于15.26.4，Premium订阅用户勿用此插件。
+#!desc = 通过脚本注入来缩短视频广告至极短时间来达到跳过广告的效果，并过滤瀑布流广告。YouTube版本号需高于15.26.4，Premium订阅用户勿用此插件。
 #!openUrl = 
-#!author = app2smile 小白脸
+#!author = app2smile
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
 
-[Rule]
-URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext,REJECT-IMG
-URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking),REJECT-IMG
-URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads,REJECT-IMG
-URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break,REJECT-IMG
-URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad,REJECT-IMG
-USER-AGENT,"(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+)",REJECT-IMG
-
-[Rewrite]
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
-
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube瀑布流去广告
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
 
 [MITM]
-hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,youtubei.googleapis.com
+hostname = youtubei.googleapis.com

@@ -1,0 +1,17 @@
+#!name = 可莉广告过滤器
+#!desc = 自用的广告过滤器
+#!open= 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/KeLi.png
+
+[Rule]
+
+[Rewrite]
+# 摩托范弹窗广告
+^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk reject
+
+[Script]
+
+[MITM]
+hostname = pangolin-sdk-toutiao.com

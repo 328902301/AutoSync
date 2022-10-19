@@ -20,4 +20,4 @@ generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Scri
 
 generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Discovery_check.js, tag=Discovery解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Discovery.png
 
-generic scriptpath=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, tag=流媒体解锁查询, imgurl=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
+generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Media_check.js, tag=流媒体解锁查询, imgurl=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png

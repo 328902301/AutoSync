@@ -5,7 +5,12 @@
  * 脚本功能：检查节点是否支持以下流媒体服务：NetFlix、Disney、YouTuBe、Dazn、Param
  * For Loon 373+ Only, 小于373版本会有bug
  * 更新于：2022-04-11
+ * 脚本使用方式：将以下配置粘贴于Loon配置文件中的[Script]模块下，也可以进行UI添加脚本，添加后需开启Loon代理，在策略组或者所有节点页面，选择一个节点长按，出现菜单后进行测试
+ * 
+ * [Script]
+ * generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system
  */
+
 const NF_BASE_URL = "https://www.netflix.com/title/81215567";
 const DISNEY_BASE_URL = 'https://www.disneyplus.com';
 const DISNEY_LOCATION_BASE_URL = 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql';
@@ -183,7 +188,7 @@ function ytbTest() {
                     resolve(region);
                 }
             } else {
-                result["Discovery"] = "<b>YouTube Premium: </b>检测失败 ❗️";
+                result["YouTube"] = "<b>YouTube Premium: </b>检测失败 ❗️";
                 resolve(response.status);
             }
         })
@@ -230,7 +235,7 @@ function daznTest() {
                 }
                 resolve(region);
             } else {
-                result["Discovery"] = "<b>Dazn: </b>检测失败 ❗️";
+                result["Dazn"] = "<b>Dazn: </b>检测失败 ❗️";
                 resolve(response.status);
             }
         })

@@ -6,9 +6,9 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
 
 [Script]
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_player.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube_player
 http-request ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, timeout=10, tag=YouTube_fake
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
 
 [MITM]
 hostname = youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com

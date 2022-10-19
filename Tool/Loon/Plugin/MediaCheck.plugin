@@ -1,0 +1,9 @@
+#!name = 流媒体解锁查询
+#!desc = 用于检查节点是否支持NetFlix、Disney、YouTuBe、Dazn、Param解锁。请在策略组或者所有节点页面，选择一个节点长按，出现菜单后进行测试。
+#!openUrl = 
+#!author = Hyseen KOP-XIAO Tartarus2014 Loon0x00
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/MediaCheck.png
+
+[Script]
+generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/MediaCheck/MediaCheck.js, tag=流媒体解锁查询, img-url=checkmark.seal.system

@@ -4,6 +4,7 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.metrics.userguiding.com
 .ptztvpremium.com
 .analyticssystems.net
 .events.il.fi
@@ -4684,6 +4685,12 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.event.csdn.net
+.telem.sre.gopuff.com
+.clarice.streema.com
+.mstm.motorsport.com
+.a.thelocal.com
+.pclog.i4.cn
 .olaplog.smartmediarep.com
 .gateway.cloud.sbs.co.kr
 .adtracking.smartmediarep.com
@@ -6625,7 +6632,6 @@
 .ui.oix.net
 .uid.mavencoalition.io
 .uie.data.cbc.ca
-.user-rating.burda-forward.de
 .ut.gamersyde.com
 .ut.o2.pl
 .veta.naver.com

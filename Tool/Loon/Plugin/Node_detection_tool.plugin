@@ -6,11 +6,11 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
 
 [Script]
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Geo_location.js, tag=GeoIP查询, imgurl=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Domestic.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Youtube_check.js, tag=YouTube解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/YouTube.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Netflix_check.js, tag=Netflix解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Netflix.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Disney+_check.js, tag=Disney+解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Disney+.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Paramount+_check.js, tag=Paramount解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Paramount+.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Dazn_check.js, tag=Dazn解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Dazn.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Discovery_check.js, tag=Discovery解锁查询, imgurl=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Discovery.png
-generic scriptpath=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Media_check.js, tag=流媒体解锁查询, imgurl=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Domestic.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/ytb_check.js, tag=YouTube-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/nf_check.js, tag=Netflix-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/disney_check.js, tag=Disney-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/param_check.js, tag=Paramount-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Paramount.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/dazn_check.js, tag=Dazn-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DAZN_2.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/discovery_check.js, tag=Discovery-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/discovery+.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, tag=流媒体-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png

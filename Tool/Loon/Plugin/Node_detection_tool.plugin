@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = Loon0x00
 #!homepage = https://gitlab.com/lodepuly/vpn_tool//tree/main/Tool/Loon/Plugin
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Node_detection_tool.png
 
 [Script]
 generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Geo_location.js, tag=GeoIP查询, timeout=10, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Geo_location.png

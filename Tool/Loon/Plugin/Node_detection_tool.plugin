@@ -1,5 +1,5 @@
 #!name = 节点检测工具
-#!desc = 适用于Loon的节点检测工具，可进行IP查询、多媒体检测等。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
+#!desc = 适用于Loon的节点检测工具，可进行IP查询、媒体解锁查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
 #!openUrl = 
 #!author = Hyseen KOPXIAO Tartarus2014 Loon0x00
 #!homepage = https://gitlab.com/lodepuly/vpn_tool//tree/main/Tool/Loon/Plugin

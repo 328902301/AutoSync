@@ -1,5 +1,5 @@
 #!name = 代理链路检测
-#!desc = 节点代理链路检测
+#!desc = 需要将节点订阅添加到Sub-Store内，并使用Sub-Store生成的订阅链接添加到Loon订阅内，然后在所有节点内长按节点，在弹出的菜单内操作。
 #!openUrl = 
 #!author = I-am-R-E
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

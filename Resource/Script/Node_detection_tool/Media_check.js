@@ -1,14 +1,12 @@
-/**
- * Thanks to & modified from 
+/*
+ * 感谢并修改自
  * https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js
- * 
+ * 流媒体解锁查询
  * 脚本功能：检查节点是否支持以下流媒体服务：NetFlix、Disney、YouTuBe、Dazn、Param
  * For Loon 373+ Only, 小于373版本会有bug
  * 更新于：2022-04-11
- * 脚本使用方式：将以下配置粘贴于Loon配置文件中的[Script]模块下，也可以进行UI添加脚本，添加后需开启Loon代理，在策略组或者所有节点页面，选择一个节点长按，出现菜单后进行测试
- * 
- * [Script]
- * generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system
+ * 原作者：XIAO_KOP
+ * 现作者：Loon0x00
  */
 
 const NF_BASE_URL = "https://www.netflix.com/title/81215567";

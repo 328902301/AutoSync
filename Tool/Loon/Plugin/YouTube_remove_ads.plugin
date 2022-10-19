@@ -11,4 +11,4 @@ http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-
 http-request ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, timeout=10, tag=YouTube_fake
 
 [MITM]
-hostname = youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com
+hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com

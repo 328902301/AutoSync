@@ -1,9 +1,9 @@
 # ------------------------------------------------
-# |         Clash Config Make by O7Y0            |
+# |          Clash Config Make by O7Y0           |
 # |     TG Channel: https://t.me/REBIRTHOKAY     |
-# |     GitHub主页: https://github.com/O7Y0      |
+# |       GitHub: https://github.com/O7Y0        |
 # |          Update Date: 2022.10.20             |
-# |                   enjoy                      |
+# |                  enjoy                       |
 # ------------------------------------------------
 mixed-port: 7890
     # 本地混合代理端口[http+socks5]

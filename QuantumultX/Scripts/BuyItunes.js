@@ -136,7 +136,7 @@ if (ua.indexOf('Fabulous') != -1) {
     $done({body:JSON.stringify(obj)});
 }
 
-//16 松鼠下载: 每日动力泉源
+//16 松鼠下载-视频解析和文件共享
 //https://apps.apple.com/cn/app/id1554089934
 if (ua.indexOf('FileBrowser') != -1) {
 	url = $request.url;

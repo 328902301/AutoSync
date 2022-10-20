@@ -181,7 +181,7 @@ if (ua.indexOf('ProKnockOut') != -1) {
     $done({body:JSON.stringify(obj)});
 }
 
-//22 Bazaart百色特 - 照片与视频编辑器
+//21 Bazaart百色特-照片与视频编辑器
 //https://apps.apple.com/cn/app/id515094775
 if (ua.indexOf('bazaart') != -1) {
 	url = $request.url;
@@ -190,3 +190,20 @@ if (ua.indexOf('bazaart') != -1) {
     $done({body:JSON.stringify(obj)});
 }
 
+//22 Daylio日记
+//https://apps.apple.com/cn/app/id1194023242
+if (ua.indexOf('Daylio') != -1) {
+	url = $request.url;
+    let obj = JSON.parse($response.body);
+    obj = {"environment":"Production","receipt":{"receipt_type":"Production","adam_id":1194023242,"app_item_id":1194023242,"bundle_id":"net.daylio.Daylio","application_version":"125","download_id":501367756637789842,"version_external_identifier":848294512,"receipt_creation_date":"2022-05-03 15:20:27 Etc/GMT","receipt_creation_date_ms":"1651591227000","receipt_creation_date_pst":"2022-05-03 08:20:27 America/Los_Angeles","request_date":"2022-05-03 15:20:44 Etc/GMT","request_date_ms":"1651591244961","request_date_pst":"2022-05-03 08:20:44 America/Los_Angeles","original_purchase_date":"2022-05-03 07:38:10 Etc/GMT","original_purchase_date_ms":"1651563490000","original_purchase_date_pst":"2022-05-03 00:38:10 America/Los_Angeles","original_application_version":"125","in_app":[{"quantity":"1","product_id":"net.daylio.one_year_pro.offer_initial","transaction_id":"190001282075869","original_transaction_id":"190001282075869","purchase_date":"2022-05-03 15:20:27 Etc/GMT","purchase_date_ms":"1651591227000","purchase_date_pst":"2022-05-03 08:20:27 America/Los_Angeles","original_purchase_date":"2022-05-03 15:20:27 Etc/GMT","original_purchase_date_ms":"1651591227000","original_purchase_date_pst":"2022-05-03 08:20:27 America/Los_Angeles","expires_date":"2029-04-26 17:54:33 Etc/GMT","expires_date_ms":"1871891673000","expires_date_pst":"2029-04-26 10:54:33 America/Los_Angeles","web_order_line_item_id":"190000556938597","is_trial_period":"true","is_in_intro_offer_period":"false","in_app_ownership_type":"PURCHASED"}]},"latest_receipt_info":[{"quantity":"1","product_id":"net.daylio.one_year_pro.offer_initial","transaction_id":"190001282075869","original_transaction_id":"190001282075869","purchase_date":"2022-05-03 15:20:27 Etc/GMT","purchase_date_ms":"1651591227000","purchase_date_pst":"2022-05-03 08:20:27 America/Los_Angeles","original_purchase_date":"2022-05-03 15:20:27 Etc/GMT","original_purchase_date_ms":"1651591227000","original_purchase_date_pst":"2022-05-03 08:20:27 America/Los_Angeles","expires_date":"2029-04-26 17:54:33 Etc/GMT","expires_date_ms":"1871891673000","expires_date_pst":"2029-04-26 10:54:33 America/Los_Angeles","web_order_line_item_id":"190000556938597","is_trial_period":"true","is_in_intro_offer_period":"false","in_app_ownership_type":"PURCHASED","subscription_group_identifier":"20512870"}],"latest_receipt":"","pending_renewal_info":[{"auto_renew_product_id":"net.daylio.one_year_pro.offer_initial","product_id":"net.daylio.one_year_pro.offer_initial","original_transaction_id":"190001282075869","auto_renew_status":"1"}],"status":0};
+    $done({body:JSON.stringify(obj)});
+}
+
+//23 Live Wallpaper Maker-制作动态壁纸工具
+//https://apps.apple.com/cn/app/id1164466761
+if (ua.indexOf('') != -1) {
+	url = $request.url;
+    let obj = JSON.parse($response.body);
+    obj = {"receipt":{"receipt_type":"Production","adam_id":1569291816,"app_item_id":1569291816,"bundle_id":"com.yacea.wallpaper","application_version":"40","download_id":500935934584949171,"version_external_identifier":846821007,"receipt_creation_date":"2022-01-26 02:55:19 Etc/GMT","receipt_creation_date_ms":"1643165719000","receipt_creation_date_pst":"2022-01-25 18:55:19 America/Los_Angeles","request_date":"2022-02-05 17:13:48 Etc/GMT","request_date_ms":"1644081228639","request_date_pst":"2022-02-05 09:13:48 America/Los_Angeles","original_purchase_date":"2021-12-01 19:01:34 Etc/GMT","original_purchase_date_ms":"1638385294000","original_purchase_date_pst":"2021-12-01 11:01:34 America/Los_Angeles","original_application_version":"22","in_app":[{"quantity":"1","product_id":"","transaction_id":"730000766600650","original_transaction_id":"730000766600650","purchase_date":"2021-11-25 17:07:45 Etc/GMT","purchase_date_ms":"1637860065000","purchase_date_pst":"2021-11-25 09:07:45 America/Los_Angeles","original_purchase_date":"2021-11-25 17:07:48 Etc/GMT","original_purchase_date_ms":"1637860068000","original_purchase_date_pst":"2021-11-25 09:07:48 America/Los_Angeles","expires_date":"2099-09-09 17:07:45 Etc/GMT","expires_date_ms":"4092647115000","expires_date_pst":"2099-09-09 09:07:45 America/Los_Angeles","web_order_line_item_id":"730000330755327","is_trial_period":"false","is_in_intro_offer_period":"false","in_app_ownership_type":"PURCHASED"}]},"latest_receipt_info":[{"quantity":"1","product_id":"","transaction_id":"730000766600650","original_transaction_id":"730000766600650","purchase_date":"2021-11-25 17:07:45 Etc/GMT","purchase_date_ms":"1637860065000","purchase_date_pst":"2021-11-25 09:07:45 America/Los_Angeles","original_purchase_date":"2021-11-25 17:07:48 Etc/GMT","original_purchase_date_ms":"1637860068000","original_purchase_date_pst":"2021-11-25 09:07:48 America/Los_Angeles","expires_date":"2099-09-09 17:07:45 Etc/GMT","expires_date_ms":"4092647115000","expires_date_pst":"2099-09-09 09:07:45 America/Los_Angeles","web_order_line_item_id":"730000330755327","is_trial_period":"false","is_in_intro_offer_period":"false","in_app_ownership_type":"PURCHASED","subscription_group_identifier":"20902245"}],"latest_receipt":"","pending_renewal_info":[{"auto_renew_product_id":"","product_id":"","original_transaction_id":"730000766600650","auto_renew_status":"1"}],"status":0};
+    $done({body:JSON.stringify(obj)});
+}

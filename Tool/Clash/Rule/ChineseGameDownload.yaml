@@ -1,6 +1,8 @@
 payload:
-
 # 内容：适用于常见游戏平台的国内下载列表
+# 本列表引用来自:https://github.com/dogfight360/UsbEAm
+# 感谢开发者：dogfight360
+# 开发者主页：https://www.dogfight360.com/blog/
 
 # EPIC游戏下载、更新[中国]
   - DOMAIN,epicgames-download1-1251447533.file.myqcloud.com

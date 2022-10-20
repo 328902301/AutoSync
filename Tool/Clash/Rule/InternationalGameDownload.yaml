@@ -43,9 +43,7 @@ payload:
   - DOMAIN,ssl-lvlt.cdn.ea.com
   - DOMAIN,origin-a.akamaihd.net
 
-# Steam客户端更新、游戏下载、游戏更新、创意工坊下载、Steam.TV直播、社区实况直播[国际]
-  - DOMAIN,media.steampowered.com
-  - DOMAIN,client-download.steampowered.com
+# Steam游戏下载、游戏更新、创意工坊下载、Steam.TV直播、社区实况直播[国际]
   - DOMAIN,cache1-lax1.steamcontent.com
   - DOMAIN,cache2-lax1.steamcontent.com
   - DOMAIN,cache3-lax1.steamcontent.com

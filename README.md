@@ -34,7 +34,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok.sgmodule
 * YouTube去广告
    ``` bash
-  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTube.sgmodule
+  https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
 * 全能搜索
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Q_Search.sgmodule

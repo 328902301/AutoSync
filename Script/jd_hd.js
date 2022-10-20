@@ -530,16 +530,17 @@ try {
               console.log("初始化成功");
               console.info(window.location.href);
               if (${$.seckill}) {
-              console.log('#seckill');
-              let \$seckillSubDom;
-              setInterval(() => { 
-                if (!\$seckillSubDom) \$seckillSubDom = document.querySelector('button.submit-btn');
-                if(\$seckillSubDom) {
-                  \$seckillSubDom.click();
-                  console.count('seckill');
-                }
-              }, 600);
-            }
+                console.log('#seckill');
+                let \$seckillSubDom;
+                setInterval(() => { 
+                  if (!\$seckillSubDom) \$seckillSubDom = document.querySelector('button.submit-btn');
+                  if(\$seckillSubDom) {
+                    \$seckillSubDom.click();
+                    console.count('seckill');
+                  }
+                }, 600);
+              }
+
             },3000);
           }
         }

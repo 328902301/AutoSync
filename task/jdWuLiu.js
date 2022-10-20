@@ -282,7 +282,7 @@ function showMsg(userInfo, wuLiuDetail, k) {
       $.setData(JSON.stringify($.waybillCodeArr), $.WAYBILL_CODE_ARR_KEY);
     }
 
-    $.msg($.name, $.subt, $.desc + '\n' + $.wl, {
+    $.msg($.name, $.subt, $.desc + '\n' + $.wl + `\n📘包含商品：${shopName}`, {
       mediaUrl: $.imgPath,
       'update-pasteboard': `${$.desc}\n${$.phone}${$.info}`,
     });

@@ -4,7 +4,8 @@ payload:
   - DOMAIN-SUFFIX,odysseyplus.site
   - DOMAIN-SUFFIX,misakaf.org
 #  - DOMAINcm.steampowered.com
-  - DOMAIN,clientconfig.akamai.steamstatic.com
+#  - DOMAIN,clientconfig.akamai.steamstatic.com
+  - DOMAIN-SUFFIX,steamserver.net
 #  - DOMAIN,cm.steampowered.com
 #  - DOMAIN,test.steampowered.com
 #  - DOMAIN,api.steampowered.com

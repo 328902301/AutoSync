@@ -64,7 +64,7 @@ if (ua.indexOf('Focos') != -1) {
     $done({body:JSON.stringify(obj)});
 }
 
-//08 QrScan 恢复时间较长
+//08 QrScan
 //https://apps.apple.com/cn/app/id1226650677
 if (ua.indexOf('QrScan') != -1) {
 	url = $request.url;
@@ -73,7 +73,7 @@ if (ua.indexOf('QrScan') != -1) {
     $done({body:JSON.stringify(obj)});
 }
 
-//09 Scanner Air 恢复时间较长
+//09 Scanner Air
 //https://apps.apple.com/cn/app/id1490084790
 if (ua.indexOf('Scanner%20Air') != -1) {
 	url = $request.url;

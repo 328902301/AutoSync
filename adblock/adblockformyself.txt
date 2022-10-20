@@ -1,0 +1,30 @@
+[Adblock Plus 2.0]
+! Title: 自用去广告
+! Description: 测试
+! Last Modified: 2022/10/20
+! Homepage:https://github.com/YAOJIO/
+! Version: 1.0
+sehuatang.net##.js-randomBg
+sehuatang.net##.show-text2
+qwewqq.xyz##.show-text2
+k6.7086xx.org##.tr3.t_two
+115.com##.btn-feature-oopf
+sehuatang.org##.show-text2
+pianyuan.org##p[style="color:green;font-size:20px;text-align:center"]
+115.com##.feature-float
+sehuatang.net##.show-text4.pad-tb-10
+cloud.189.cn##.enterprise-guide-ad-box
+pianyuan.org##.col-md-2.r2-sidebar.hidden-print.hidden-xs.hidden-sm.affix-top
+ghxi.com##.ghxi_wpcom_ad_wrap.ad_single_1
+cloud.189.cn##.advertising-mask
+x18r.com##a[style="cursor:pointer;margin: 0 12px;"]
+rewrfsrewr.xyz##.pad-tb-10
+sehuatang.net##.sign
+pan.baidu.com##.wp-aside-nav-bubble.wp-aside-nav__main-item
+pan.baidu.com##.subscribe-tips
+||pianyuan.org/wechat_donate.gif
+||zmk.pw/sp1.gif
+pan.baidu.com##.nd-operate-guidance__body
+pan.baidu.com##.wp-s-aside-nav-bubble.wp-s-aside-nav__main-item
+||th-sjy.com/wp-content/uploads/2022/09/2022-09-08_214256.png
+pianyuan.org##div[style="padding-top:10px;"]

@@ -1,2 +1,2 @@
-host, raw.githubusercontent.com, DIRECT
-host, gist.githubusercontent.com, DIRECT
+HOST-SUFFIX, raw.githubusercontent.com, Github
+HOST-SUFFIX, gist.githubusercontent.com, Github

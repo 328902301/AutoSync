@@ -346,7 +346,7 @@ if (ua.indexOf('batteryWidget') != -1) {
 }
 
 //38 VPN-Clean super proxy master
-//https://apps.apple.com/cn/app/id1446749209
+//https://apps.apple.com/us/app/id1446749209
 if (ua.indexOf('cleanVpn') != -1) {
 	url = $request.url;
 	let obj = JSON.parse($response.body);
@@ -355,7 +355,7 @@ if (ua.indexOf('cleanVpn') != -1) {
 }
 
 //39 TOR Browser: OrNET Onion + VPN
-//https://apps.apple.com/cn/app/id1177964608
+//https://apps.apple.com/us/app/id1177964608
 if (ua.indexOf('TOR') != -1) {
 	url = $request.url;
 	let obj = JSON.parse($response.body);
@@ -363,7 +363,7 @@ if (ua.indexOf('TOR') != -1) {
 	$done({body:JSON.stringify(obj)});
 }
 
-//40 Unfold: Reels & Story Editor
+//40 Unfold—故事制作器
 //https://apps.apple.com/cn/app/id1247275033
 if (ua.indexOf('Unfold') != -1) {
 	url = $request.url;
@@ -372,7 +372,7 @@ if (ua.indexOf('Unfold') != -1) {
 	$done({body:JSON.stringify(obj)});
 }
 
-//41 Voloco: Vocal Recording Studio
+//41 Voloco：人声录音室
 //https://apps.apple.com/cn/app/id1052970183
 if (ua.indexOf('Voloco') != -1) {
 	url = $request.url;
@@ -381,7 +381,7 @@ if (ua.indexOf('Voloco') != -1) {
 	$done({body:JSON.stringify(obj)});
 }
 
-//42 Water Reminder - Daily Tracker
+//42 水提醒-Water Reminder
 //https://apps.apple.com/cn/app/id1221965482
 if (ua.indexOf('waterReminder') != -1) {
 	url = $request.url;

@@ -1,14 +1,6 @@
 var head = $request.headers;
 var ua = head['User-Agent'];
 
-
-// 00 RevenueCat Demo
-// https://apps.apple.com/cn/app/*****
-// if (ua.indexOf('*****') != -1) {
-// 	Body = *****;
-// }
-
-
 //01 Filebox
 //https://apps.apple.com/cn/app/id1558391784
 if (ua.indexOf('Fileball') != -1) {

@@ -1,6 +1,6 @@
 /******************************
 [rewrite_local]
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body jianying.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/tangxj123/xian/main/jianying.js
 [mitm] 
 hostname = buy.itunes.apple.com
 *******************************/

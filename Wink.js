@@ -1,7 +1,11 @@
-/*******************************
 
-//hostname :api-sub.meitu.com
-//重写链接：^https:\/\/api-sub\.meitu\.com
+/******************************
+
+[rewrite_local]
+^https:\/\/api-sub\.meitu\.com url script-response-body Wink.js
+[mitm] 
+hostname = api-sub.meitu.com
+
 ********************************/
 
 

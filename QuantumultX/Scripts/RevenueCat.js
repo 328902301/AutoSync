@@ -249,12 +249,6 @@ if (ua.indexOf('Focus') != -1) {
     Body = {"request_date":"2022-09-12T06:19:44Z","request_date_ms":1662963584281,"subscriber":{"entitlements":{"Premium":{"expires_date":"9999-9-9T06:06:52Z","grace_period_expires_date":null,"product_identifier":"iap.io.masterbuilders.focus.pro_one_year","purchase_date":"2022-09-12T06:06:52Z"}},"first_seen":"2022-08-10T05:38:55Z","last_seen":"2022-09-12T02:54:04Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:5a03aabdc1f349a0a719b60399965010","original_application_version":"318","original_purchase_date":"2022-08-09T15:58:31Z","other_purchases":{},"subscriptions":{"iap.io.masterbuilders.focus.pro_one_year":{"billing_issues_detected_at":null,"expires_date":"9999-9-9T06:06:52Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"9999-09-12T06:06:53Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"9999-09-12T06:06:52Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-//41 PRO健身
-//https://apps.apple.com/cn/app/id1494319934
-if (ua.indexOf('ProFit') != -1) {
-    Body = {"request_date":"2022-10-20T04:45:44Z","request_date_ms":1666241144415,"subscriber":{"entitlements":{},"first_seen":"2022-10-19T14:25:25Z","last_seen":"2022-10-19T14:25:25Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"34030869-25e2-4ebb-a29c-7a027e6d1568","original_application_version":"7.7","original_purchase_date":"2022-10-19T14:18:11Z","other_purchases":{},"subscriptions":{"com.maxty.gofitness.3monthsplan":{"billing_issues_detected_at":null,"expires_date":"2099-10-23T04:45:30Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-20T04:45:31Z","ownership_type":"PURCHASED","period_type":"yearly","purchase_date":"2022-10-20T04:45:30Z","store":"app_store","unsubscribe_detected_at":null}}}};
-}
-
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

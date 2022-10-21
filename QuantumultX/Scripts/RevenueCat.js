@@ -249,6 +249,12 @@ if (ua.indexOf('Lake') != -1) {
     Body = {"request_date":"2022-04-20T11:54:41Z","request_date_ms":1591358081473,"subscriptions":{"com.premium.yearly":{"billing_issues_detected_at":null,"expires_date":"2030-02-18T07:52:54Z","is_sandbox":false,"original_purchase_date":"2020-02-11T07:52:55Z","period_type":"normal","purchase_date":"2020-02-11T07:52:54Z","store":"app_store","unsubscribe_detected_at":null}},"subscriber":{"entitlements":{"standard":{"expires_date":"2030-02-18T07:52:54Z","product_identifier":"com.premium.yearly","purchase_date":"2020-02-11T07:52:54Z"}},"first_seen":"2020-05-29T07:59:41Z","last_seen":"2020-06-05T11:46:28Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"httpstmeddgksf2021","original_application_version":"5","original_purchase_date":"2020-05-29T07:47:32Z","other_purchases":{}}};
 }
 
+//41 Unfold—故事制作器
+//https://apps.apple.com/cn/app/id1247275033
+if (ua.indexOf('Unfold') != -1) {
+	Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"last_seen":"2022-09-08T01:04:03Z","first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.ddgksf2013.premium.yearly":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2023-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"sub.pro":{"expires_date":"2023-12-18T01:04:17Z","purchase_date":"2022-09-08T01:04:17Z","product_identifier":"com.ddgksf2013.premium.yearly","grace_period_expires_date":null}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:ddgksf2013","non_subscriptions":{}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

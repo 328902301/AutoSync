@@ -243,6 +243,12 @@ if (ua.indexOf('MagicFX') != -1) {
     Body = {"request_date":"2022-10-14T05:09:05Z","request_date_ms":1665724145444,"subscriber":{"entitlements":{"Premium":{"expires_date":"2099-10-21T05:08:53Z","grace_period_expires_date":null,"product_identifier":"halfyearsubscription","purchase_date":"2022-10-14T05:08:53Z"}},"first_seen":"2022-10-14T03:51:07Z","last_seen":"2022-10-14T03:51:07Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:Eric","original_application_version":"2482","original_purchase_date":"2022-10-14T03:41:31Z","other_purchases":{},"subscriptions":{"halfyearsubscription":{"billing_issues_detected_at":null,"expires_date":"2099-10-21T05:08:53Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-14T05:08:54Z","ownership_type":"PURCHASED","period_type":"subscription","purchase_date":"2022-10-14T05:08:53Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//40 PRO健身
+//https://apps.apple.com/cn/app/id1494319934
+if (ua.indexOf('ProFit') != -1) {
+    Body = {"request_date":"2022-10-20T04:45:44Z","request_date_ms":1666241144415,"subscriber":{"entitlements":{},"first_seen":"2022-10-19T14:25:25Z","last_seen":"2022-10-19T14:25:25Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"34030869-25e2-4ebb-a29c-7a027e6d1568","original_application_version":"7.7","original_purchase_date":"2022-10-19T14:18:11Z","other_purchases":{},"subscriptions":{"com.maxty.gofitness.3monthsplan":{"billing_issues_detected_at":null,"expires_date":"2099-10-23T04:45:30Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-20T04:45:31Z","ownership_type":"PURCHASED","period_type":"yearly","purchase_date":"2022-10-20T04:45:30Z","store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

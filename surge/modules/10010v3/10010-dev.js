@@ -107,6 +107,7 @@ const detail = {}
         const disabledHour = 2**(signInRetryCount-1)
         console.log(`连续第 ${signInRetryCount} 次密码登录失败 自动禁用 ${disabledHour} 小时`)
         $.setdata(new Date().getTime() + disabledHour * 3600 * 1000, KEY_DISABLED_UNTIL)
+        await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `❌`, `连续第 ${signInRetryCount} 次密码登录失败 自动禁用 ${disabledHour} 小时`, {})
       // }
       throw e
     }

@@ -235,12 +235,6 @@ if (ua.indexOf('MagicFX') != -1) {
     Body = {"request_date":"2022-10-14T05:09:05Z","request_date_ms":1665724145444,"subscriber":{"entitlements":{"Premium":{"expires_date":"2099-10-21T05:08:53Z","grace_period_expires_date":null,"product_identifier":"halfyearsubscription","purchase_date":"2022-10-14T05:08:53Z"}},"first_seen":"2022-10-14T03:51:07Z","last_seen":"2022-10-14T03:51:07Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:Eric","original_application_version":"2482","original_purchase_date":"2022-10-14T03:41:31Z","other_purchases":{},"subscriptions":{"halfyearsubscription":{"billing_issues_detected_at":null,"expires_date":"2099-10-21T05:08:53Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-14T05:08:54Z","ownership_type":"PURCHASED","period_type":"subscription","purchase_date":"2022-10-14T05:08:53Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-//40 Unfold—故事制作器
-//https://apps.apple.com/cn/app/id1247275033
-if (ua.indexOf('Unfold') != -1) {
-    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"last_seen":"2022-09-08T01:04:03Z","first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.ddgksf2013.premium.yearly":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2023-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"sub.pro":{"expires_date":"2023-12-18T01:04:17Z","purchase_date":"2022-09-08T01:04:17Z","product_identifier":"com.ddgksf2013.premium.yearly","grace_period_expires_date":null}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:ddgksf2013","non_subscriptions":{}}};
-}
-
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

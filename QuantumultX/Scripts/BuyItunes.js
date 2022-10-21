@@ -1,17 +1,6 @@
 var head = $request.headers;
 var ua = head['User-Agent'];
 
-
-// 00 BuyItunes Demo
-// https://apps.apple.com/cn/app/*****
-// if (ua.indexOf('*****') != -1) {
-//	url = $request.url;
-//	let obj = JSON.parse($response.body);
-//	obj = *****;
-//	$done({body:JSON.stringify(obj)});
-// }
-
-
 //01 PrettyUp视频美化-视频修图身材脸部优化
 //https://apps.apple.com/cn/app/id1544211932
 if (ua.indexOf('Prettya') != -1) {

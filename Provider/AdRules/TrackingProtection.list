@@ -4,6 +4,7 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.analytics.126.net
 .metrics.userguiding.com
 .ptztvpremium.com
 .analyticssystems.net
@@ -115,7 +116,6 @@
 .cdn.stroeerdigitalgroup.de
 .uplift-platform.com
 .lmepbq.com
-.tzegilo.com
 .cdn.rlets.com
 .agent.contentsanalyst.com
 .tangerine.io
@@ -4685,6 +4685,9 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.collector.fiverr.com
+.relay.fiverr.com
+.nex.163.com
 .d.post-gazette.com
 .event.csdn.net
 .telem.sre.gopuff.com

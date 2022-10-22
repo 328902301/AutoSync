@@ -289,6 +289,12 @@ if (ua.indexOf('$%7BPRODUCT_NAME%7D') != -1) {
     Body = {"request_date":"2022-10-13T14:22:24Z","request_date_ms":1665670944023,"subscriber":{"entitlements":{"premium":{"expires_date":"9999-10-16T14:16:44Z","grace_period_expires_date":null,"product_identifier":"com.iaftt.flightplusfree.3td5.99week","purchase_date":"2022-10-13T14:16:44Z"}},"first_seen":"2022-10-13T14:15:26Z","last_seen":"2022-10-13T14:15:26Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:36dd899983b9466d9d604f2282dd5447","original_application_version":"6447","original_purchase_date":"2022-10-13T14:06:01Z","other_purchases":{},"subscriptions":{"com.iaftt.flightplusfree.3td5.99week":{"billing_issues_detected_at":null,"expires_date":"9999-10-16T14:16:44Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-13T14:16:45Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-10-13T14:16:44Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//49 Rapchat：制作热门歌曲
+//https://apps.apple.com/cn/app/id804913240
+if (ua.indexOf('Rapchat') != -1) {
+    Body = {"request_date":"2022-10-21T22:29:14Z","request_date_ms":1666391354912,"subscriber":{"entitlements":{"Gold":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"rc_4999_1y_7d_antares","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-10-21T22:28:22Z","last_seen":"2022-10-21T22:28:34Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:1e9e762f4c8f4f53a6e7339db8af267a","original_application_version":"10522","original_purchase_date":"2022-10-21T22:03:00Z","other_purchases":{},"subscriptions":{"rc_4999_1y_7d_antares":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

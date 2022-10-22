@@ -1,14 +1,14 @@
-/*
-aptv恢复购买
+/******************************
 [rewrite_local]
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body url script-response-body https://raw.githubusercontent.com/tangxj123/xian/main/aptv.js
-[mitm]
-hostname = buy.itunes.apple.com,
-*/
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body aptv.js
+[mitm] 
+hostname = buy.itunes.apple.com
+*******************************/
 
-var obj = JSON.parse($response.body);
+var body = $response.body;
+var obj = JSON.parse(body);
 obj = {
-	{
+{
   "environment" : "Production",
   "receipt" : {
     "receipt_type" : "Production",
@@ -85,4 +85,7 @@ obj = {
 }
 
 
-$done({body: JSON.stringify(obj)});
+
+body = JSON.stringify(obj);
+
+$done({body});

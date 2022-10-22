@@ -2,7 +2,7 @@
 完美破解毛豆爱古诗
 日期:2022.10.15
 [rewrite_local]
-^https?:\/\/api\.feihua100\.com url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/mdags.js
+^https?:\/\/api\.feihua100\.com url script-response-body https://raw.githubusercontent.com/tangxj123/xian/main/mdags.js
 hostname = api.feihua100.com
 **************************************/
 var _0x294dde=_0x4de3;function _0x4de3(_0xebdc6,_0x549a9f){var _0x11798e=_0x4b8f();return _0x4de3=function(_0x3de376,_0x41128c){_0x3de376=_0x3de376-(0xd*0x9+0x19e+0x7b*-0x1);

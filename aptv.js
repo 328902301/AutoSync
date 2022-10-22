@@ -1,6 +1,6 @@
 /******************************
 [rewrite_local]
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body aptv.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/tangxj123/xian/main/aptv.js
 [mitm] 
 hostname = buy.itunes.apple.com
 *******************************/

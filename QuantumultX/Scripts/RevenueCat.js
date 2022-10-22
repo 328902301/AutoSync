@@ -241,10 +241,10 @@ if (ua.indexOf('Mojo') != -1) {
     Body = {"request_date":"2022-10-21T22:24:35Z","request_date_ms":1666391075123,"subscriber":{"entitlements":{"pro":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"video.mojo.pro.yearly","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-10-21T22:24:34Z","last_seen":"2022-10-21T22:24:34Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"Yo1uaJ8zqhXNqyH45q2NiiLwIxl2","original_application_version":null,"original_purchase_date":null,"other_purchases":{},"subscriptions":{"video.mojo.pro.yearly":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
-//41 Rapchat：制作热门歌曲
-//https://apps.apple.com/cn/app/id804913240
-if (ua.indexOf('Rapchat') != -1) {
-    Body = {"request_date":"2022-10-21T22:29:14Z","request_date_ms":1666391354912,"subscriber":{"entitlements":{"Gold":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"rc_4999_1y_7d_antares","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-10-21T22:28:22Z","last_seen":"2022-10-21T22:28:34Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:1e9e762f4c8f4f53a6e7339db8af267a","original_application_version":"10522","original_purchase_date":"2022-10-21T22:03:00Z","other_purchases":{},"subscriptions":{"rc_4999_1y_7d_antares":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
+//41 PhotoSync–传输和备份照片与视频
+//https://apps.apple.com/cn/app/id415850124
+if (ua.indexOf('PhotoSync') != -1) {
+    Body = {"request_date":"2022-10-21T22:57:11Z","request_date_ms":1666393031985,"subscriber":{"entitlements":{"premium":{"expires_date":"2029-06-01T13:49:38Z","product_identifier":"com.touchbyte.PhotoSync.PremiumYearly","purchase_date":"2020-05-18T13:49:38Z"}},"first_seen":"2022-10-21T22:57:11Z","last_seen":"2022-10-21T22:57:11Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:647e43f10de247af888d64427e43dce1","original_application_version":null,"original_purchase_date":null,"other_purchases":{},"subscriptions":{"com.touchbyte.PhotoSync.PremiumYearly":{"billing_issues_detected_at":null,"expires_date":"2029-06-01T13:49:38Z","is_sandbox":false,"original_purchase_date":"2020-05-18T13:49:41Z","period_type":"trial","purchase_date":"2020-05-18T13:49:38Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
 //42 经期助手-经期记录和排卵期计算器
@@ -287,12 +287,6 @@ if (ua.indexOf('%E6%98%9F%E5%BA%A7') != -1) {
 //https://apps.apple.com/cn/app/id533365777
 if (ua.indexOf('$%7BPRODUCT_NAME%7D') != -1) {
     Body = {"request_date":"2022-10-13T14:22:24Z","request_date_ms":1665670944023,"subscriber":{"entitlements":{"premium":{"expires_date":"9999-10-16T14:16:44Z","grace_period_expires_date":null,"product_identifier":"com.iaftt.flightplusfree.3td5.99week","purchase_date":"2022-10-13T14:16:44Z"}},"first_seen":"2022-10-13T14:15:26Z","last_seen":"2022-10-13T14:15:26Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:36dd899983b9466d9d604f2282dd5447","original_application_version":"6447","original_purchase_date":"2022-10-13T14:06:01Z","other_purchases":{},"subscriptions":{"com.iaftt.flightplusfree.3td5.99week":{"billing_issues_detected_at":null,"expires_date":"9999-10-16T14:16:44Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-13T14:16:45Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-10-13T14:16:44Z","store":"app_store","unsubscribe_detected_at":null}}}};
-}
-
-//49 PhotoSync–传输和备份照片与视频
-//https://apps.apple.com/cn/app/id415850124
-if (ua.indexOf('PhotoSync') != -1) {
-    Body = {"request_date":"2022-10-21T22:57:11Z","request_date_ms":1666393031985,"subscriber":{"entitlements":{"premium":{"expires_date":"2029-06-01T13:49:38Z","product_identifier":"com.touchbyte.PhotoSync.PremiumYearly","purchase_date":"2020-05-18T13:49:38Z"}},"first_seen":"2022-10-21T22:57:11Z","last_seen":"2022-10-21T22:57:11Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:647e43f10de247af888d64427e43dce1","original_application_version":null,"original_purchase_date":null,"other_purchases":{},"subscriptions":{"com.touchbyte.PhotoSync.PremiumYearly":{"billing_issues_detected_at":null,"expires_date":"2029-06-01T13:49:38Z","is_sandbox":false,"original_purchase_date":"2020-05-18T13:49:41Z","period_type":"trial","purchase_date":"2020-05-18T13:49:38Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
 Status = 'HTTP/1.1 200 OK';

@@ -1,9 +1,9 @@
 /*
 aptv恢复购买
 [rewrite_local]
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body url script-response-body gear.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body url script-response-body https://raw.githubusercontent.com/tangxj123/xian/main/aptv.js
 [mitm]
-hostname = api.revenuecat.com,
+hostname = buy.itunes.apple.com,
 */
 
 var obj = JSON.parse($response.body);

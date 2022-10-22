@@ -461,7 +461,7 @@ if (ua.indexOf('MediaEditor') != -1) {
 }
 
 //52 不咕剪辑｜Cooclip
-//https://apps.apple.com/cn/app/id1455720185
+//https://apps.apple.com/cn/app/id1528288216
 if (ua.indexOf('Cooclip') != -1) {
 	url = $request.url;
 	let obj = JSON.parse($response.body);

@@ -1,14 +1,23 @@
 #!name = YouTube去广告
-#!desc = 采用新的方法过滤视频广告和瀑布流广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。[跟进了最新的代码，源代码修正了iPad上错误显示；更改了广告的过滤方式，可能会遗漏少量广告。]
+#!desc = 采用新的方法过滤视频广告和瀑布流广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。
 #!openUrl = 
-#!author = Choler DivineEngine app2smile Maasea 
+#!author = Choler DivineEngine app2smile ddgksf2013 Maasea 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
 
+[Rule]
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
+
+[Rewrite]
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) 302 $1$2$3
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
-# http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_player.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube_player
-http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, timeout=10, tag=YouTube_fake
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去视频贴片广告
+http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, timeout=10, tag=YouTube去瀑布流及播放页广告
 
 [MITM]
-hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com
+hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com

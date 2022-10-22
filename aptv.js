@@ -7,7 +7,7 @@ hostname = buy.itunes.apple.com,
 */
 
 var obj = JSON.parse($response.body);
-obj={
+obj = {
 	{
   "environment" : "Production",
   "receipt" : {

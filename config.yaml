@@ -67,18 +67,18 @@ dns:
     - '*.msftconnecttest.com'
     # Bilibili CDN
     - '*.mcdn.bilivideo.cn'
-tun:
-  enable: true
-  stack: gvisor
+#tun:
+#  enable: true
+#  stack: gvisor
     # gvisor#或windows
     # 使用 system 需要 Clash Premium 2021.05.08 及更高版本
-  dns-hijack:
-    - 198.18.0.2:53
+#  dns-hijack:
+#    - 198.18.0.2:53
     # 请勿更改
     # 当[假ip范围]为198.18.0.1/16时，应劫持198.18.0.2:53
-  auto-route: true
+#  auto-route: true
     # 为Windows自动设置全局路由
-  auto-detect-interface: true
+#  auto-detect-interface: true
     # 自动检测出口网卡
     
 proxies:

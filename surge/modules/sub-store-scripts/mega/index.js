@@ -362,9 +362,12 @@ function setHost(p, host) {
     } else if (p.network === 'http') {
       $.lodash_set(p, 'http-opts.headers.Host', [host])
       if (method) {
-        $.lodash_set(p, 'http-opts.headers.method', [method])
+        // clash meta 核报错 应该不是数组
+        // $.lodash_set(p, 'http-opts.headers.method', [method])
+        $.lodash_set(p, 'http-opts.headers.method', method)
       }
     } else if (p.network) {
+      // 其他? 谁知道是数组还是字符串...先按数组吧
       $.lodash_set(p, `${p.network}-opts.headers.Host`, [host])
     }
     if (p.network && !p._hostSet) {
@@ -383,6 +386,7 @@ function setPath(p, path) {
     } else if (p.network === 'http') {
       $.lodash_set(p, 'http-opts.path', [path])
     } else if (p.network) {
+      // 其他? 谁知道是数组还是字符串...先按字符串吧
       $.lodash_set(p, `${p.network}-opts.path`, path)
     }
     if (p.network && !p._pathSet) {

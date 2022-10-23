@@ -42,11 +42,14 @@ async function operator(proxies = []) {
         } else if (network === 'http') {
           _.set(p, 'http-opts.headers.Host', [host])
         } else {
+          // 其他? 谁知道是数组还是字符串...先按数组吧
           _.set(p, `${network}-opts.headers.Host`, [host])
         }
       }
       if (method && network === 'http') {
-        _.set(p, 'http-opts.headers.method', [method])
+        // clash meta 核报错 应该不是数组
+        // _.set(p, 'http-opts.headers.method', [method])
+        _.set(p, 'http-opts.headers.method', method)
       }
       if (port) {
         _.set(p, 'port', port)
@@ -72,6 +75,7 @@ async function operator(proxies = []) {
         } else if (network === 'http') {
           _.set(p, 'http-opts.path', [path])
         } else {
+          // 其他? 谁知道是数组还是字符串...先按字符串吧
           _.set(p, `${network}-opts.path`, path)
         }
       }

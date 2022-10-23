@@ -11,7 +11,7 @@ TG频道群：https://t.me/gjwj6
 
 [rewrite_local]
 
-https://integral.dasyibalang.com/User url script-response-body 
+https://integral.dasyibalang.com/User url script-response-body https://raw.githubusercontent.com/gjwj666/jichang/main/zjsg.js
 
 [mitm] 
 

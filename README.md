@@ -48,7 +48,7 @@ https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
 ```Java
-resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/resource-parser.js
+resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/General/resource_parser.js
 ```
 ```ruby
 ⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；

@@ -1,3 +1,5 @@
+// https://github.com/yjqiang/surge_scripts/tree/main/scripts/weibo/weibo_sdkad.js
+
 let body = JSON.parse($response.body.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
 if (body.background_delay_display_time)
     body.background_delay_display_time = 60*60*24*365;

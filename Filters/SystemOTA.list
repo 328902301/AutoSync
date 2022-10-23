@@ -1,0 +1,5 @@
+# Block iOS Update
+HOST, gdmf.apple.com, SystemOTA
+HOST, mesu.apple.com, SystemOTA
+HOST, updates-http.cdn-apple.com, SystemOTA
+HOST, xp.apple.com, SystemOTA

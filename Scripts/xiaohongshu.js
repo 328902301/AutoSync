@@ -1,7 +1,5 @@
-/*
-引用地址 https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.sgmodule
-引用地址 https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.js
-*/
+// https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.sgmodule
+// https://github.com/chouchoui/QuanX/blob/master/Scripts/xiaohongshu/xiaohongshu.ad.js
 
 const scriptName = "小红书开屏广告";
 let magicJS = MagicJS(scriptName, "INFO");

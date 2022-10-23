@@ -1,8 +1,8 @@
-# 2022-09-20 17:59
+# 2022-10-01
 
 # RARBG屏蔽跳转
-HOST, swallowcrockerybless.com, MyBlockAds
 HOST, furiousfar.com, MyBlockAds
+HOST, swallowcrockerybless.com, MyBlockAds
 
 # 工商银行
 HOST, pageviewp.icbc.com.cn, MyBlockAds
@@ -21,7 +21,7 @@ HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
 # 哔哩哔哩自动换区支持
-IP-CIDR, 203.107.1.1/32, MyBlockAds
+IP-CIDR, 203.107.1.1/24, MyBlockAds
 
 # 高德地图
 HOST, awaken.amap.com, MyBlockAds

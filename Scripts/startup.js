@@ -1,3 +1,6 @@
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/startup/startup.qxrewrite
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/startup/startup.js
+
 const scriptName = "去除APP启动广告";
 let magicJS = MagicJS(scriptName, "INFO");
 

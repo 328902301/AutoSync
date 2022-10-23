@@ -1,7 +1,5 @@
-/*
-引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_remove_ads.qxrewrite
-引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_remove_ads.js
-*/
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_remove_ads.qxrewrite
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_remove_ads.js
 
 const scriptName = "什么值得买";
 let magicJS = MagicJS(scriptName, "INFO");

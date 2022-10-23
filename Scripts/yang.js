@@ -1,6 +1,4 @@
-/*
-脚本来自https://github.com/yangdaozhao/ylgy
-*/
+// https://github.com/yangdaozhao/ylgy/blob/master/ylgy.js
 
 var body = $response.body
 var url = $request.url

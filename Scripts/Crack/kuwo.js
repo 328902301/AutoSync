@@ -1,4 +1,6 @@
 /*
+https://github.com/nameking77/Qx/blob/main/rewrite/kw.js
+
 脚本功能：完美解锁酷我音乐
 脚本作者：king
 下载地址：https://is.gd/CWqKMX
@@ -10,7 +12,8 @@
 当前版本:10.2.8
 
 [rewrite_local]
-^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kuwo.js
+# 完美解锁酷我音乐
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
 
 [mitm]
 hostname = *.kuwo.cn, *.lrts.me

@@ -1,4 +1,4 @@
-// 2022-09-01 10:46
+// 2022-10-11 21:15
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -235,10 +235,11 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          if(obj.data.length>=3){
-          delete obj.data[0];
-          delete obj.data[2];
-          }
+          obj.data = {
+            "type": "history",
+            "title": "搜索历史",
+            "search_hotword_revision": 2,
+          };
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`热搜去广告出现异常：${err}`);

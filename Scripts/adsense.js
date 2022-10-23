@@ -1,7 +1,5 @@
-/* 
-引用地址 https://github.com/app2smile/rules/blob/master/module/adsense.conf
-引用地址 https://github.com/app2smile/rules/blob/master/js/adsense.js
-*/
+// https://github.com/app2smile/rules/blob/master/module/adsense.conf
+// https://github.com/app2smile/rules/blob/master/js/adsense.js
 
 const url = $request.url;
 const method = $request.method;

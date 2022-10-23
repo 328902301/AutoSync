@@ -24,7 +24,6 @@ external-controller: 127.0.0.1:9090
     # 控制器监听地址
 secret: 
     # REST ful API UUID密码[在设置-安全里生成,如果用我这配置记得去复制替换密钥]
-    
 dns:
   enable: true
     # DNS开关[false|true]
@@ -38,6 +37,11 @@ dns:
     - 223.5.5.5
   enhanced-mode: fake-ip
     # DNS模式[redir-host|fake-ip]
+  nameserver:
+    # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://dns.pub/dns-query
+    - https://223.6.6.6/dns-query
+    - https://rubyfish.cn/dns-query
   fake-ip-range: 198.18.0.1/16
     # Fake-IP解析地址池
   fake-ip-filter:
@@ -63,13 +67,19 @@ dns:
     - '*.msftconnecttest.com'
     # Bilibili CDN
     - '*.mcdn.bilivideo.cn'
-  nameserver:
-    # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - 119.29.29.29
-    - 223.5.5.5
-    - https://dns.pub/dns-query
-    - https://223.6.6.6/dns-query
-    - https://rubyfish.cn/dns-query
+tun:
+  enable: true
+  stack: gvisor
+    # gvisor#或windows
+    # 使用 system 需要 Clash Premium 2021.05.08 及更高版本
+  dns-hijack:
+    - 198.18.0.2:53
+    # 请勿更改
+    # 当[假ip范围]为198.18.0.1/16时，应劫持198.18.0.2:53
+  auto-route: true
+    # 为Windows自动设置全局路由
+  auto-detect-interface: true
+    # 自动检测出口网卡
     
 proxies:
     # 本地服务器
@@ -205,8 +215,8 @@ proxy-groups:
   - name: 黑白名单
     type: select
     proxies:
-      - 自动选择
       - DIRECT
+      - 自动选择
       - 手动切换
       
 rule-providers:
@@ -303,8 +313,6 @@ rule-providers:
     interval: 86400
     
 rules:
-  - DOMAIN-SUFFIX,*.translate.googleapis.com,全球加速
-  - DOMAIN-SUFFIX,u2.dmhy.org,全球加速
   - RULE-SET,Direct,DIRECT
   - RULE-SET,adblock,广告屏蔽
   - RULE-SET,Google,谷歌服务

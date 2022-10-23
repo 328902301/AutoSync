@@ -3,9 +3,8 @@
 # REPO: https://github.com/O7Y0
 # UPDATED: 2022-10-23 10:08
 # DOMAIN-KEYWORD: 3
-# DOMAIN-SUFFIX: 533
-# TOTAL: 536
-
+# DOMAIN-SUFFIX: 519
+# TOTAL: 522
 payload:
 # Tracker URL
   - DOMAIN-SUFFIX,2f4y.me
@@ -19,7 +18,6 @@ payload:
   - DOMAIN-SUFFIX,acid-lounge.org.uk
   - DOMAIN-SUFFIX,adamsfile.com
   - DOMAIN-SUFFIX,adbt.it.cx
-  - DOMAIN-SUFFIX,aftershock-tracker.net
   - DOMAIN-SUFFIX,aftershock-tracker.net
   - DOMAIN-SUFFIX,aither.cc
   - DOMAIN-SUFFIX,alpharatio.cc
@@ -173,7 +171,6 @@ payload:
   - DOMAIN-SUFFIX,gay-torrents.org
   - DOMAIN-SUFFIX,gaytor.rent
   - DOMAIN-SUFFIX,gaytracker.ru
-  - DOMAIN-SUFFIX,gaytracker.ru
   - DOMAIN-SUFFIX,gazellegames.net
   - DOMAIN-SUFFIX,generation-free.org
   - DOMAIN-SUFFIX,gfxpeers.net
@@ -243,7 +240,6 @@ payload:
   - DOMAIN-SUFFIX,jpopsuki.eu
   - DOMAIN-SUFFIX,jptv.club
   - DOMAIN-SUFFIX,jptvts.us
-  - DOMAIN-SUFFIX,jptvts.us
   - DOMAIN-SUFFIX,justanothermusic.site
   - DOMAIN-SUFFIX,justjerk.me
   - DOMAIN-SUFFIX,kamept.com
@@ -273,11 +269,9 @@ payload:
   - DOMAIN-SUFFIX,locadora.xyz
   - DOMAIN-SUFFIX,losslessclub.com
   - DOMAIN-SUFFIX,lp-bits.com
-  - DOMAIN-SUFFIX,lp-bits.com
   - DOMAIN-SUFFIX,lst.gg
   - DOMAIN-SUFFIX,lztr.me
   - DOMAIN-SUFFIX,madsrevolution.net
-  - DOMAIN-SUFFIX,magic-heaven.info
   - DOMAIN-SUFFIX,magic-heaven.info
   - DOMAIN-SUFFIX,majomparade.eu
   - DOMAIN-SUFFIX,masters-tb.com
@@ -286,7 +280,6 @@ payload:
   - DOMAIN-SUFFIX,mediamaatjes.org
   - DOMAIN-SUFFIX,megamixtracker.hu
   - DOMAIN-SUFFIX,mese-vilag.net
-  - DOMAIN-SUFFIX,metal.iplay.ro
   - DOMAIN-SUFFIX,metal.iplay.ro
   - DOMAIN-SUFFIX,metalguru.me
   - DOMAIN-SUFFIX,microbit.eu
@@ -308,7 +301,6 @@ payload:
   - DOMAIN-SUFFIX,music-vid.com
   - DOMAIN-SUFFIX,muziekfabriek.org
   - DOMAIN-SUFFIX,mycarpathians.net
-  - DOMAIN-SUFFIX,mycarpathians.net
   - DOMAIN-SUFFIX,mywoot.biz
   - DOMAIN-SUFFIX,naftamusic.net
   - DOMAIN-SUFFIX,nanyangpt.com
@@ -320,8 +312,6 @@ payload:
   - DOMAIN-SUFFIX,new-retro.eu
   - DOMAIN-SUFFIX,newage-music.ru
   - DOMAIN-SUFFIX,newheaven.nl
-  - DOMAIN-SUFFIX,newinsane.info
-  - DOMAIN-SUFFIX,newinsane.info
   - DOMAIN-SUFFIX,newinsane.info
   - DOMAIN-SUFFIX,newjds.com
   - DOMAIN-SUFFIX,nextpt.net
@@ -387,14 +377,12 @@ payload:
   - DOMAIN-SUFFIX,pussytorrents.org
   - DOMAIN-SUFFIX,puur-hollands.org
   - DOMAIN-SUFFIX,pwtorrents.net
-  - DOMAIN-SUFFIX,pwtorrents.net
   - DOMAIN-SUFFIX,r3vuk.wtfR3v
   - DOMAIN-SUFFIX,racing4everyone.eu
   - DOMAIN-SUFFIX,rareshare2.me
   - DOMAIN-SUFFIX,red-bits.com
   - DOMAIN-SUFFIX,redacted.ch
   - DOMAIN-SUFFIX,reelflix.xyz
-  - DOMAIN-SUFFIX,renegade-tracker.com
   - DOMAIN-SUFFIX,renegade-tracker.com
   - DOMAIN-SUFFIX,retroflix.club
   - DOMAIN-SUFFIX,revolutiontt.me
@@ -411,10 +399,8 @@ payload:
   - DOMAIN-SUFFIX,scenetime.com
   - DOMAIN-SUFFIX,sdbits.org
   - DOMAIN-SUFFIX,seatracker.ru
-  - DOMAIN-SUFFIX,seatracker.ru
   - DOMAIN-SUFFIX,secret-cinema.pw
   - DOMAIN-SUFFIX,seedfile.io
-  - DOMAIN-SUFFIX,shadowthein.net
   - DOMAIN-SUFFIX,shadowthein.net
   - DOMAIN-SUFFIX,shareisland.org
   - DOMAIN-SUFFIX,sharewood.tv
@@ -466,7 +452,6 @@ payload:
   - DOMAIN-SUFFIX,tigers-dl.net
   - DOMAIN-SUFFIX,tigris-t.net
   - DOMAIN-SUFFIX,tjupt.orgTjupt
-  - DOMAIN-SUFFIX,tlz.digital
   - DOMAIN-SUFFIX,tlz.digital
   - DOMAIN-SUFFIX,tntracker.org
   - DOMAIN-SUFFIX,toptbdev.net

@@ -10,7 +10,7 @@ TG频道群：https://t.me/gjwj6
 
 [rewrite_local]
 
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body 
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/gjwj666/jichang/main/FitnessView.js
 
 [mitm] 
 

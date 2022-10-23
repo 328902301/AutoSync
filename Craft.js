@@ -11,7 +11,7 @@ TG频道群：https://t.me/gjwj6
 
 [rewrite_local]
 
-^https:\/\/api\.craft\.do\/auth\/v2\/profile url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Craft.js
+^https:\/\/api\.craft\.do\/auth\/v2\/profile url script-response-body https://raw.githubusercontent.com/gjwj666/jichang/main/Craft.js
 
 [mitm] 
 

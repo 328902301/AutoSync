@@ -16,8 +16,8 @@ URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext,REJECT
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-img
 
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去视频贴片广告
-http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, timeout=10, tag=YouTube去瀑布流及播放页广告
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去视频贴片广告
+http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, binary-body-mode=true, timeout=10, tag=YouTube去瀑布流及播放页广告
 
 [MITM]
 hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com

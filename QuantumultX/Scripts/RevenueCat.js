@@ -301,6 +301,12 @@ if (ua.indexOf('Harukong') != -1) {
     Body = {"request_date_ms":1663813730272,"request_date":"2022-09-22T02:28:50Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-22T02:12:43Z","original_application_version":"322","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.bluesignum.harukong.lifetime.premium":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"premium","expires_date":null,"grace_period_expires_date":null,"unsubscribe_detected_at":"2022-09-22T02:21:43Z","original_purchase_date":"2022-09-22T02:19:33Z","purchase_date":"2022-09-22T02:19:32Z","store":"app_store"}},"entitlements":{"premium":{"grace_period_expires_date":null,"purchase_date":"2022-09-22T02:19:32Z","product_identifier":"com.bluesignum.harukong.lifetime.premium","expires_date":null}},"original_purchase_date":"2022-09-10T12:59:20Z","original_app_user_id":"$RCAnonymousID:fe9dc27c6cd44b908576a7bd2eae8e24","last_seen":"2022-09-22T02:12:43Z"}};
 }
 
+//51 djay-DJ 应用&混音器
+//https://apps.apple.com/cn/app/id450527929
+if (ua.indexOf('djay') != -1) {
+    Body = {"request_date":"2022-09-22T02:28:50Z","request_date_ms":1663813730272,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-10-14T07:49:44Z","grace_period_expires_date":null,"product_identifier":"com.algoriddim.djay_iphone_free.pro_loyalty_2.yearly","purchase_date":"2022-09-22T02:19:32Z"}},"first_seen":"2022-09-22T02:12:43Z","last_seen":"2022-09-22T02:12:43Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:Eric","original_application_version":"322","original_purchase_date":"2022-09-10T12:59:20Z","other_purchases":{},"subscriptions":{"com.algoriddim.djay_iphone_free.pro_loyalty_2.yearly":{"billing_issues_detected_at":null,"expires_date":"2099-10-14T07:49:44Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-22T02:19:33Z","ownership_type":"PURCHASED","period_type":"pro","purchase_date":"2022-09-22T02:19:32Z","store":"app_store","unsubscribe_detected_at":"2022-09-22T02:21:43Z"}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

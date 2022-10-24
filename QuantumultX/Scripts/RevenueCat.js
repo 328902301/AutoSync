@@ -295,6 +295,12 @@ if (ua.indexOf('Rapchat') != -1) {
     Body = {"request_date":"2022-10-21T22:29:14Z","request_date_ms":1666391354912,"subscriber":{"entitlements":{"Gold":{"expires_date":"2029-05-26T05:05:04Z","product_identifier":"rc_4999_1y_7d_antares","purchase_date":"2022-04-09T05:05:04Z"}},"first_seen":"2022-10-21T22:28:22Z","last_seen":"2022-10-21T22:28:34Z","management_url":null,"non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:1e9e762f4c8f4f53a6e7339db8af267a","original_application_version":"10522","original_purchase_date":"2022-10-21T22:03:00Z","other_purchases":{},"subscriptions":{"rc_4999_1y_7d_antares":{"billing_issues_detected_at":null,"expires_date":"2029-05-26T05:05:04Z","is_sandbox":false,"original_purchase_date":"2022-04-09T05:05:04Z","ownership_type":"PURCHASED","period_type":"normal","purchase_date":"2022-04-09T05:05:04Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//50 天天豆-最简单的日记应用记录一天
+//https://apps.apple.com/cn/app/id1553223828
+if (ua.indexOf('Harukong') != -1) {
+    Body = {"request_date_ms":1663813730272,"request_date":"2022-09-22T02:28:50Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-22T02:12:43Z","original_application_version":"322","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.bluesignum.harukong.lifetime.premium":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"premium","expires_date":null,"grace_period_expires_date":null,"unsubscribe_detected_at":"2022-09-22T02:21:43Z","original_purchase_date":"2022-09-22T02:19:33Z","purchase_date":"2022-09-22T02:19:32Z","store":"app_store"}},"entitlements":{"premium":{"grace_period_expires_date":null,"purchase_date":"2022-09-22T02:19:32Z","product_identifier":"com.bluesignum.harukong.lifetime.premium","expires_date":null}},"original_purchase_date":"2022-09-10T12:59:20Z","original_app_user_id":"$RCAnonymousID:fe9dc27c6cd44b908576a7bd2eae8e24","last_seen":"2022-09-22T02:12:43Z"}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

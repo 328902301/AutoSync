@@ -1,24 +1,15 @@
 #!name = YouTube去广告
-#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。
+#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。⚠️该插件已足够全面，无需其他插件混用，防止复写规则被破坏。
 #!openUrl = 
 #!author = Choler DivineEngine app2smile ddgksf2013 Maasea 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
 
-[Rule]
-#URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break,REJECT
-#URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads,REJECT
-#URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking),REJECT
-#URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext,REJECT
-
-[Rewrite]
-#(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) 302 $1$2$3
-#^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-img
-
 [Script]
+# 该插件已足够全面，无需其他规则混用，防止复写规则被破坏。
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去视频贴片广告
+# 使用脚本直接返回状态码而不是reject， 用于提升视频加载速度。
 http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_fake.js, requires-body=false, binary-body-mode=true, timeout=10, tag=YouTube去瀑布流及播放页广告
 
 [MITM]
-hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com
-#hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com
+hostname = *.googlevideo.com, youtubei.googleapis.com

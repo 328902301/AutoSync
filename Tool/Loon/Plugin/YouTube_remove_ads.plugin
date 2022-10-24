@@ -1,5 +1,5 @@
 #!name = YouTube去广告
-#!desc = 采用新的方法过滤视频广告和瀑布流广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。
+#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的视频广告。YouTube版本号需高于15.26.4，不适Premium订阅用户使用。
 #!openUrl = 
 #!author = Choler DivineEngine app2smile ddgksf2013 Maasea 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

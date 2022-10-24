@@ -4,6 +4,9 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.pixmg.com
+.serveipqs.com
+.insights-collector.newrelic.com
 .analytics.126.net
 .metrics.userguiding.com
 .ptztvpremium.com
@@ -4685,6 +4688,7 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.cryo.socialblade.com
 .sp.welcometothejungle.com
 .analytics.evolution-x.org
 .collector.fiverr.com

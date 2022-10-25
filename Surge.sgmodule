@@ -1,0 +1,353 @@
+#!name=🇨🇳清清情的合集㊙️
+#!desc=自己用，不外传，不负责，不回答，不知道，不了解，不清楚
+#𝑼𝑹𝑳: https://raw.githubusercontent.com/lutqhysky/Surge/Mylove/MySelf/Surge.sgmodule
+[General]
+# > 跳过代理
+skip-proxy = api.maijitv.com, r3.o.lencr.org, ocsp.sectigo.com, http://dps-yq.oss-cn-beijing.aliyuncs.com, englishapi.ellabook.cn, 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com, www.baidu.com, yunbusiness.ccb.com
+######################################
+[Rule]
+# > 知乎 去广告
+DOMAIN,appcloud2.zhihu.com,REJECT
+DOMAIN,m-cloud.zhihu.com,REJECT // 知乎广告
+DOMAIN-SUFFIX,zhenai.com,REJECT // 知乎广告
+# > 去广告 引用@NobyDa
+DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list,REJECT
+# > 去广告 引用@blackmatrix7
+DOMAIN-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/AdvertisingLite/AdvertisingLite.txt,REJECT
+# > 广告拦截
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,Reject
+DOMAIN-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/AdvertisingPlus.list,Reject
+DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,Reject
+# > 知乎 登录框
+URL-REGEX, ^https?://static\.zhihu\.com/[^/]+/(main|column)\.signflow\.[^.]+.js, REJECT
+# > 微信
+URL-REGEX,^https?:\/\/resstatic\.servicewechat\.com\/weapp\/release_,REJECT
+URL-REGEX,^https?:\/\/wxsnsdythumb\.wxs\.qq\.com\/.+\/snscosdownload\/SZ\/reserved,REJECT
+URL-REGEX,^https?:\/\/dlied(.*).cdntips.net,REJECT
+URL-REGEX,^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad),REJECT
+# > 555影视去广告
+URL-REGEX,^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/indexLabelList\,REJECT
+# > appstore+
+DOMAIN-KEYWORD,applovin.com,REJECT // appstore+
+DOMAIN-KEYWORD,applvn.com,REJECT // appstore+
+# > 12306
+DOMAIN-SUFFIX,ad.12306.cn,REJECT // 12306开屏广告
+# ～ 多多视频去开屏广告
+DOMAIN-SUFFIX, bayescom.com, reject//多多视频去开屏广告
+# > 喜马拉雅
+DOMAIN,adbehavior.ximalaya.com, reject
+DOMAIN,adwbs.ximalaya.com, reject
+DOMAIN-SUFFIX,ad.test.ximalaya.com, reject
+DOMAIN-SUFFIX,adse.test.ximalaya.com, reject
+DOMAIN-SUFFIX,adweb.test.ximalaya.com, reject
+DOMAIN-SUFFIX,adweb.ximalaya.com, reject
+DOMAIN-SUFFIX,linkeye.ximalaya.com, reject
+DOMAIN-SUFFIX,location.ximalaya.com, reject
+DOMAIN-SUFFIX,xdcs-collector.ximalaya.com, reject
+DOMAIN-SUFFIX,ad.ximalaya.com, reject
+DOMAIN-SUFFIX,adse.ximalaya.com, reject
+DOMAIN-SUFFIX,adse.wsa.ximalaya.com, reject
+DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com, reject
+DOMAIN-SUFFIX,adsebs.ximalaya.com, reject
+DOMAIN-SUFFIX,adbs.ximalaya.com, reject
+# ～ 去开屏广告
+DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT // Added for: 去广告
+DOMAIN-KEYWORD,ulogs.umengcloud.com,REJECT // Added for: 开屏广告
+DOMAIN-KEYWORD,ulogs.umeng.com,REJECT // Added for: 开屏广告
+
+######################################
+[URL Rewrite]
+^https:\/\/api\.sevenworkouts\.com\/api\/v1\/buyers\/ - reject
+^https:\/\/api\.sevenworkouts\.com\/api\/v1\/account\/subscription-purchases - reject
+# ～ RRTV_屏蔽限時彈窗
+https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON - reject
+# ～ RRTV_屏蔽軟件更新
+^https?:\/\/api\.rr\.tv\/.*?Version - reject
+######################################
+[Map Local]
+# > 知乎
+^https?:\/\/www\.zhihu\.com\/api\/v4\/creators\/extra_card$ data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/www\.zhihu\.com\/api\/v4\/personalized-questioncards data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/www\.zhihu\.com\/api\/v4\/news_specials\/list$ data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/api\.zhihu\.com\/slytherin\/plus_panel_v2$ data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/api\.zhihu\.com\/unlimited\/v2\/people\/self\/card_info$ data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/api\.zhihu\.com\/topseller\/parker\/goods data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+# > 滴答清单
+^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status$ data="https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/didaqingdan/Script/ddqd.json"
+# > agenda
+^https://accounts.agenda.com/users/.*/license data="https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/agenda/Script/agenda.json"
+######################################
+[Script]
+每日一句 = type=cron,cronexp=0 0 */1 * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/One.js,script-update-interval=0
+
+# > 阿里云盘
+推荐 = type=http-response,pattern=^https?:\/\/api\.aliyundrive\.com\/apps\/v1\/users\/apps\/widgets$,requires-body=1,max-size=0,script-path=https://hub.nange.cn/Script/AliDrive/AliDrive.js
+SVIP = type=http-response,pattern=^https?:\/\/api\.aliyundrive\.com\/(v2\/databox\/get_personal_info|business\/.+\/users\/vip\/info),requires-body=1,max-size=0,script-path=https://hub.nange.cn/Script/AliDrive/SVIPInfo.js
+
+# > 广告联盟
+广告联盟 = type=http-response,pattern=^https?:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://hub.nange.cn/Script/Adsense/Adsense.js
+
+# > 001 筑龙学社，需要登陆，解锁vip视频课件，土木工程学习用 【🟢】    
+筑龙学社(2022.08.10) = type=http-response,pattern=^https?:\/\/(www|m).zhulong.com\/(ucenter/prod-api/personal/myinfo/getUserInfo|edu/prod-api/lesson/lesson/getScheduleByLessonId|/ucenter/prod-api/personal/History/lessonview|edu/prod-api/lesson/lesson/getLesson|edu/prod-api/lesson/lesson/play|bbs/prod-api/thread/thread/getThreadForTid),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/zhulong/Script/zhulong.js,script-update-interval=0
+
+# > 002 知音漫客，需要登陆，收费漫画, 【🟢】 
+筑龙学社(2022.08.10) = type=http-response,pattern=^https:\/\/apigate\.zymk\.cn\/(zymk-getuserinfo-api\/v1\/getuserinfo|zymk-userpurchased-api\/v1\/userpurchased\/paychapters)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/zhiyinmanke/Script/zhiyinmanke.js,script-update-interval=0
+
+# > 003 小睡眠 【🟢】
+小睡眠(2022.08.10) = type=http-response,pattern=^https:\/\/api\.psy-1\.com\/cosleep\/user\/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/xiaoshuimian/Script/xiaoshuimian.js,script-update-interval=0
+
+# > 004 云听【🟢】 
+云听（2022-08-10） = type=http-response,pattern=^http:\/\/(getway.radio.cn|39.106.98.80)\/app*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/yunting/Script/yunting.js,script-update-interval=0
+
+# > 005 西窗烛，解锁vip会员，但是不能下载收费字体，会员字体可用，可下载收费书籍,【🟢】 
+西窗烛(2022.08.10) = type=http-response,pattern=^https?:\/\/lchttpapi.xczim.com\/1.1\/(users|functions/checkDidBoughtBook|functions/receiveBookCollectionByProUser|functions/getMyCoins|functions/buyFont),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/xichuangzhu/Script/xichuangzhu.js,script-update-interval=0
+
+# > 006 蜗牛读书，解锁vip会员【🟢】 
+蜗牛读书(2022.08.10) = type=http-response,pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/woniudushu/Script/woniudushu.js,script-update-interval=0
+
+# > 007 扫描全能王，解锁高级会员【🟢】 
+扫描全能王(2022.08.10) = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/CamScanner/Script/CamScanner.js,script-update-interval=0 
+
+# > 008 美区WPS解锁vip【🟢】   
+WPS会员(2022.08.10) = type=http-response,pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WPSOffice/Script/WPS.js,script-update-interval=0
+
+# > 009 配音秀【🟢】 
+配音秀 = type=http-response,pattern=^https?:\/\/iosapi.peiyinxiu.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/peiyinxiu/Script/peiyinxiu.js,script-update-interval=0
+
+# > 010 古诗词【🟢】
+古诗词 = type=http-response,pattern=^https?:\/\/gushici\.91iread.com:8011\/api\/(user\/me|iap\/verifyorder),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/gushichi/Script/gushici.js,script-update-interval=0
+
+# > 011 奥软抠图【🟢】 
+傲软抠图 = type=http-response,pattern=^https?:\/\/awvp\.aoscdn\.com\/base\/vip\/client\/authorizations$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/aoruankoutu/Script/anruankoutu.js,script-update-interval=0 
+ 
+# > 012 番薯小说【🟢】 
+番薯小说 = type=http-response,pattern=^https?:\/\/ggs\.manmeng168\.com\/v1\/(user\/info|ios/user/info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/fanshuxiaoshu/Script/fanshuxiaoshu.js,script-update-interval=0 
+ 
+ # > 013 Libvio播放软件，解锁需要购买账号才能观看【🟢】 
+Libvio播放软件（2022-08-10） = type=http-response,pattern=^https?:\/\/apjson\.nftvio\.space\/xgapp\.php\/v2\/(video_detail|app_config),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Libvio/Script/Libvio.js,script-update-interval=0 
+
+# > 014 解锁人人影视【🟢】 @ddgksf2013
+RRTV_level_info = type=http-response,pattern= ^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_去除首頁廣告 = type=http-response,pattern= https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_去除廣場tab = type=http-response,pattern= ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_去除商城廣告 = type=http-response,pattern= ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_Ad_List = type=http-response,pattern= ^https:\/\/api\.rr\.tv\/user\/privilege\/list,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_Ad_All = type=http-response,pattern= ^https:\/\/api\.rr\.tv\/ad\/getAll,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_Get_Drama = type=http-response,pattern= ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_Watch_V4 = type=http-response,pattern= https://api.rr.tv/watch/v4,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+RRTV_User_Info = type=http-response,pattern= https://api.rr.tv/user/profile,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv_json.js,script-update-interval=0
+
+# > 015 少儿趣配音【🟢】 
+少儿趣配音（2022-08-10） = type=http-response,pattern=^https?:\/\/childapi40\.qupeiyin\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/seqpy.js,script-update-interval=0 
+
+# > 016 语文趣配音【🟢】 
+语文趣配音（2022-08-11） = type=http-response,pattern=^https?:\/\/cnapi\.qupeiyin\.com\/(user\/memberData|member|top\/showTop),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/wenyuqupeiyin/Script/yuwenqupeiyin.js,script-update-interval=0 
+
+# > 017 咿啦看书【🟢】 
+咿啦看书（2022-08-11） = type=http-response,pattern=^https?:\/\/bookapi\.ellabook\.cn\/rest\/api\/service$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/yilakanshu/Script/yilakanshu.js,script-update-interval=0 
+
+# > 018 Not Boring 四件套（天气、习惯、日历、时间）【🟢】 
+Not Boring（2022-08-11） = type=http-response,pattern=^https?:\/\/api-weather\.andy\.works\/v\d\/\w{18}$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/NotBoring/Script/NotBoring.js,script-update-interval=0 
+
+# > 019 儿歌点点【🟢】 
+儿歌点点（2022-08-11） = type=http-response,pattern=http:\/\/gateway\.ergedd\.com\/dduser\/user\/center\/set,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/ergediandian/Script/ergediandian.js,script-update-interval=0 
+
+# > 020 起伏【🟢】 
+起伏（2022-08-12） = type=http-response,pattern=^https?:\/\/api\.risingfalling\.com\/api\/vip\/detail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/qifu/Script/qifu.js,script-update-interval=0 
+
+# > 021 读书笔记【🟢】 
+读书笔记（2022-08-12） = type=http-response,pattern=^https:\/\/xrckeji\.com\/union\/app\/user\/query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/dushubiji/Script/dushubiji.js,script-update-interval=0 
+
+# > 022 斑马海报【🟢】 
+斑马海报（2022-08-13） = type=http-response,pattern=^https://zebra.maka.im/api/user/info,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/banmahaibao/Script/banmahaiba.js,script-update-interval=0
+
+# > 023 Tf中文网【🟢】 
+Ft中文网（2022-08-13） = type=http-response,pattern=^https?:\/\/user\.ftmailbox\.cn\/ios-receipt-validation\.php.*,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Ftchinese/Script/Ftchibese.js,script-update-interval=0
+
+# > 024百度文库@墨鱼 解锁VIP文档阅读权限
+百度文库（2022-08-15） = type=http-response,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,max-size=0,script-path= https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/baidulibrary.js,script-update-interval=0
+
+# > 025 美图秀秀【🟢】 
+美图秀秀（2022-08-15） = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/MeiTuXiuXiu.js,script-update-interval=0
+
+# > 026 WPS(cn)【🟢】 
+WPS(cn)（2022-08-15） = type=http-response,pattern=^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/WPSOffice/Script/WPSCN.js,script-update-interval=0
+
+# > 027 Kuwo(cn)【🟢】酷我音乐高级会员 作者:king
+酷我音乐（2022-08-15） = type=http-response,pattern= ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).*,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js,script-update-interval=0
+
+# > 028 新干线【🟢】 
+新干线（2022-08-15） = type=http-response,pattern=^https?:\/\/api\.fwxgx\.com\/aggregation\/v1\/courses,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/xinganxian/Script/xinganxian.js,script-update-interval=0
+
+# > 029 一言【🟢】转载 Cuttlefish 微信賬號：墨魚手記
+一言（2022-08-15） = type=http-response,pattern=^https:\/\/app\.yiyan\.art\/yiyan\/,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/yiyan/Script/yiyan.js,script-update-interval=0
+
+# > 030 公众号去广告【🟢】转载 Cuttlefish 微信賬號：墨魚手記
+^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
+
+# > 031 绅士【🟢】
+绅士（2022-08-16） = type=http-response,pattern= ^https://(.+).lingdu2019.cn/ios_api/portrait/goods_(detail|detail_comment_list|down_detail),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js,script-update-interval=0
+
+# > 032 你懂得漫画【🟢】脚本作者：Hausd0rff 
+欲漫涩解锁会员视频（2022-08-17） = type=http-response,pattern=^https?:\/\/.*\.com\/api\/app\/user\/info$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornComicsCrack.js,script-update-interval=0
+欲漫涩解锁会员视频（2022-08-17） = type=http-request,pattern=^https?:\/\/.*\.com\/api\/app\/media,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornVideosCrack.js,script-update-interval=0
+
+# > 033 麦秸TV【🟢】 需要跳过代理监测
+麦秸TV（2022-08-18） = type=http-response,pattern=^https?:\/\/api\.maijitv\.com\/(mes|urm)\/(mesIosRechargeList|queryMesUserInfo|getUserInfo),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/maijietv/Script/maijietv.js,script-update-interval=0
+
+# > 034 泼辣修图【🟢】
+泼辣修图（2022-08-18） = type=http-response,pattern= ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js,script-update-interval=0
+
+# > 035 螺畤大语文【🟢】
+螺畤大语文（2022-08-21） = type=http-response,pattern= ^https?:\/\/api8\.luosijiaoyu\.com\/api\/(HZLSJY20200817Controller\/selectFMVideoById\.html|LsjyMyContoller\/selectUserInfo\.html),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/luosidayuwen/Script/luosidayuwen.js,script-update-interval=0
+
+# > 036 财新会员【🟢】解锁财新文章阅读与音频限制 @Functional_Store_Hub
+财新会员 = type=http-request,pattern= ^https?:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/(validateAudioAuth|validate),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/caixin.js,script-update-interval=0
+
+# > 037 财新周刊会员【🟢】解锁财新文章阅读与音频限制 @Functional_Store_Hub
+财新周刊 = type=http-response,pattern=^https?:\/\/ipadcms\.caixin\.com\/(api|tmp|power)\/(articles?|myfree(v\d+)?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXinWeekly/Script/CaiXinWeekly.js,script-update-interval=0
+
+# > 038 大蓝鲸【🟢】
+大蓝鲸（2022-08-21） = type=http-response,pattern=  ^https?:\/\/(publish-dalanjing|publish-dalanjing|user-dalanjing)\.jstv\.com\/(search\/byArticleType|nav\/1554|PassportUser\/userinfo\/get),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/dalanjing/Script/dalanjing.js,script-update-interval=0
+大蓝鲸付费节目（2022-08-21） = type=http-response,pattern=^https?:\/\/publish-dalanjing\.jstv\.com\S+,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/dalanjing/Script/dlj.js,script-update-interval=0
+
+# > 039 白噪音【🟢】
+白噪音（2022-08-21） = type=http-response,pattern=^http:\/\/matrix\.fingerplay\.cn\/user\/fetchUserInfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/baizaoyin/Script/baizaoyin.js,script-update-interval=0
+
+# > 040 Vister看天下【🟢】
+Vister看天下（墨鱼） = type=http-response,pattern= ^https?:\/\/open3\.vistastory\.com\/v\d\/api\/(article\/article_detail|vip\/get_vip|my\/home\/get_home_center),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ktx.js,script-update-interval=0
+
+# > 041 少年得到【🟢】
+少年得到（2022-08-22） = type=http-response,pattern=^https?:\/\/igetcool-gateway\.igetcool\.com\/(app-api-user-server\/oath\/user\/info\.json|app-api-product-server\/option\/course\/audios\.json|app-api-product-server\/white\/course\/videos\.json),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/shaomiandedao/Script/shaoniandedao.js,script-update-interval=0
+
+# > 042 心语听书【🟢】
+心语听书（2022-08-22） = type=http-response,pattern=^https?:\/\/i\.xinyulib\.com\.cn\/api\/querytoken,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/xinyutingshu/Script/xinyutingshu.js,script-update-interval=0
+
+# > 043 石墨文档【🟢】WX: L-190705
+石墨文档（2022-08-22） = type=http-response,pattern=^https:\/\/shimo\.im\/lizard-api\/users\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/smfd/Script/smwd.js,script-update-interval=0
+
+# > 044 句读【🟢】
+句读（2022-08-22） = type=http-response,pattern= ^https?:\/\/judouapp\.com\/api\/v2\/mine\/profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/judu/Script/judu.js,script-update-interval=0
+
+# > 045 精读国学【🟢】
+精读国学（2022-08-22） = type=http-response,pattern=^https?:\/\/47\.104\.228\.152:9100\/api\/apiAppUser\/getUser,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/jingshuguoxue/Script/jingshuguoxue.js,script-update-interval=0
+
+# > 046 PronockOut【🟢】
+PronockOut（2022-08-29） = type=http-response,pattern=https://buy.itunes.apple.com/verifyReceipt,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Proknockout/Script/ProknockOut.js,script-update-interval=0
+
+# > 047 ColorWidget【🟢】
+ColorWidget（2022-08-29） = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/ColorWidget/Script/ColorWidet.js,script-update-interval=0
+
+# > 048 搜图神器【🟢】
+搜图神器（2022-08-29） = type=http-response,pattern=http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/SearchArtifact.js,script-update-interval=0
+
+# > 049 图修影视【🟢】
+图修影视（2022-08-29） = type=http-response,pattern=^https?:\/\/api2\.rinhome\.com\/\/api\/nUser\/getUserInfo\?\w+,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/sout/Script/soutu.js,script-update-interval=0
+
+# > 050 淘图【🟢】
+淘图（2022-09-03） = type=http-response,pattern=^https?:\/\/www\.taotu518\.com\/api\/v2\/(getSwitcher|checkToken|getAlbumDetail),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/taotu/Script/taotu.js,script-update-interval=0
+
+# > 051 SSA【🟢】
+SSA（2022-09-03） = type=http-response,pattern= ^https?:\/\/www\.ssalegs\.store\/cms\/Appapi\/username\/username\/\d+,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/SSA/Script/SSA.js,script-update-interval=0
+
+# > 052 小小影视【🟢】需要自签
+小小影视（2022-09-03） = type=http-response,pattern= ^https?:\/\/.*?\.myxxdq\.com\/ucp\/index$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/xxys/Script/xxys.js,script-update-interval=0
+
+# > 053 B621【🟢】转
+B621（2022-09-03） = type=http-response,pattern= ^https:\/\/user-kaji-api\.b612kaji\.com\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bj.js,script-update-interval=0
+
+# > 054 黄油相机【🟢】转
+黄油相机（2022-09-04） = type=http-response,pattern= ^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/hyxj/Script/hyxj.js,script-update-interval=0
+
+# > 055 cubox【🟢】转
+cubox（2022-09-04） = type=http-response,pattern= ^https:\/\/cubox\.pro\/c\/api\/userInfo,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cubox.js,script-update-interval=0
+
+# > 056 cubox【🟢】转
+cubox（2022-09-04） = type=http-response,pattern= ^https:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/jxydt.js,script-update-interval=0
+
+# > 057 醒图【🟢】转
+醒图（2022-09-13） = type=http-response,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),requires-body=1,max-size=0,script-path= https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/commerce.js,script-update-interval=0
+
+# > 058 movieboxpro【🟢】转
+movieboxpro（2022-09-13） = type=http-response,pattern=^https?:\/\/mbpapi\.shegu\.net\/api\/api_client\/index$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Script/movieboxpro.js,script-update-interval=0
+
+# > 059 驾校一点通【🟢】转
+驾校一点通（2022-09-13） = type=http-response,pattern=^https:\/\/vipapi\.jxedt\.com\/store\/vip\/check,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/jxydt.js,script-update-interval=0
+
+# > 060 最美证件照【🟢】转
+最美证件照（2022-09-15） = type=http-response,pattern=^https:\/\/fufei\.fengyunsoft\.cn\/api\/client\/info,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zmzjz.js,script-update-interval=0
+
+# > 061 移动扫描仪【🟢】
+移动扫描仪（2022-09-16） = type=http-response,pattern=^https?:\/\/saomiao\.34354\.com\/api\/open\/member\/level$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/yidondsaomianyi/Script/jdsmy.js,script-update-interval=0
+
+# > 062 Agenda永久解锁--Eric
+Agenda（2022-09-16） = type=http-response,pattern=^https://accounts.agenda.com/users/.*/license,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/Agenda.js,script-update-interval=0
+
+# > 063 AI换脸【🟢】转
+AI换脸（2022-09-16） = type=http-response,pattern=^https:\/\/changeclothes\.szsszykj\.com\/interface\/GetIosVip.php,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/AIhuanlian/Script/ai.js,script-update-interval=0
+
+# > 064 有道词典【🟢】
+有道词典（2022-09-16） = type=http-response,pattern=^https:\/\/dict\.youdao\.com\/vip\/user\/status,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/wyydcd.js,script-update-interval=0
+
+# > 065 悟饭掌阅【🟢】
+悟饭掌阅（2022-09-16） = type=http-response,pattern=http:\/\/iosv2\.cjapi\.wufan88\.com\/user\/ios_store_pay_edition\/members_login\/get_member_info$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/wfzy/Script/wfzy.js,script-update-interval=0
+
+# > 066 纳米盒【🟢】转
+纳米盒（2022-09-16） = type=http-response,pattern=^https:\/\/namibox\.com\/appnative\/openbook\/initialize,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/namihe.js,script-update-interval=0
+
+# > 067 Javdb【🟢】转
+Javba = type=http-request,pattern=^https?:\/\/.+\/api\/v1\/(movies\/.*\/play|startup),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/JavDBCrack.js,script-update-interval=0
+
+# > 068 白描【🟢】
+白描（2022-9-27） = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/appLaunchWithUser$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/bm/Script/bm.js,script-update-interval=0
+
+# > 069 向日葵【🟢】pyy
+向日葵（2022-9-27） = type=http-response,pattern=^https:\/\/api\.v1\.esread\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xiangrikui.js,script-update-interval=0
+
+# > 070 微信读书【🟢】pyy
+微信读书（2022-9-27） = type=http-response,pattern=^https:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/txwxds.js,script-update-interval=0
+
+# > 071 拼图【🟢】pyy
+拼图（2022-10-01） = type=http-response,pattern=^https:\/\/pgapi\.ksmobile\.com\/v1\/ios\/auth,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/photoGrid.js,script-update-interval=0
+
+# > 072 小组件【🟢】pyy
+小组件（2022-10-01） = type=http-response,pattern=^https:\/\/shared\.lc-cn-n1-shared\.com\/1\.1\/classes\/Users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Quike.js,script-update-interval=0
+
+# > 073 蜗牛读书【🟢】@@Zoo
+蜗牛读书（2022-10-01） = type=http-response,pattern=^https:\/\/music\.snailsleep\.net,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm.js,script-update-interval=0
+
+# > 074 长相思【🟢】建议买正版，非常不错
+长相思（2022-10-04） = type=http-response,pattern=^https?:\/\/poetry\.yuan9\.cn\/api\/(order\/applesuccess|account\/login|User\/loginUserInfo),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/cxs/Script/cxs.js,script-update-interval=0
+
+# > 075 迅雷【🟢】
+迅雷（2022-10-04） = type=http-response,pattern=https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js,script-update-interval=0
+
+# > 076 极速扫描【🟢】转载彭于晏
+极速扫描（2022-10-12） = type=http-response,pattern=^https:\/\/scanner\.jianse\.tv\/api\/users\/loginUser,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/jssm/Script/jssm.js,script-update-interval=0
+
+# > 077 vcus【🟢】
+vcus（2022-10-12） = type=http-response,pattern= ^https:\/\/sdk\.api\.appwheel\.com\/v1\/order\/restore,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Vcus/Script/vcus.js,script-update-interval=0
+
+# > 078 Sorteds【🟢】
+Sorteds（2022-10-12） = type=http-response,pattern=^https:\/\/api\.sortedapp\.com\/receipts\/verify,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Sorteds/Script/Sorteds.js,script-update-interval=0
+
+# > 079 mkl【🟢】
+mkl（2022-10-12） = type=http-response,pattern=^https?:\/\/app\.api\.versa-ai\.com\/pay\/order\/iap\/check.*,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/mkl/Script/mkl.js,script-update-interval=0
+
+# > 080 指尖时光【🟢】
+指尖时光（2022-10-12） = type=http-response,pattern=https://integral.dasyibalang.com/User,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zjsg.js,script-update-interval=0
+
+# > 081 相机【🟢】
+相机（2022-10-12） = type=http-response,pattern=https://zip.jinzitao.com/refreshuinfo,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/ddCamera.js,script-update-interval=0
+
+# > 082 七分钟【🟢】
+七分钟（2022-10-20） = type=http-response,pattern=^https:\/\/api\.sevenworkouts\.com\/api\/v(\d)\/(verify-purchases|account/verify-purchases),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Seven.js,script-update-interval=0
+
+# > 083 HyperWeb【🟢】ddgksf2013
+HyperWeb（2022-10-20） = type=http-response,pattern= ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt,requires-body=1,max-size=0,script-path= https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/hyperweb.js,script-update-interval=0
+
+# > 084 Rss【🟢】
+Rss（2022-10-20） = type=http-response,pattern=^https?:\/\/api\.pxmage\.com\/egoreader\/user\/info,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/rss/Script/Rss.js,script-update-interval=0
+
+[MITM]
+hostname = api.pxmage.com, ypmnkbb.saejeuj.com, fufxtyc.bytebwq.com, lcbnejx.dirptev.com, gcyivjc.qrneryt.com, vip7.fzwdyy.cn:8083, accounts.agenda.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.sevenworkouts.com, %APPEND% zip.jinzitao.com, integral.dasyibalang.com, appwk.baidu.com, ypmnkbb.saejeuj.com, fufxtyc.bytebwq.com, lcbnejx.dirptev.com, gcyivjc.qrneryt.com, api.aliyundrive.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, gateway.caixin.com, app.api.versa-ai.com, api.sortedapp.com, sdk.api.appwheel.com, scanner.jianse.tv, xluser-ssl.xunlei.com, poetry.yuan9.cn, music.snailsleep.net, shared.lc-cn-n1-shared.com, pgapi.ksmobile.com, i.weread.qq.com, englishapi.ellabook.cn, api.vistopia.com.cn, api.v1.esread.com, englishapi.ellabook.cn, baimiao.uzero.cn, shukego.com, yiliang8888.com, 91mingyang.com, mnter.com, f5bc.club, namibox.com, iosv2.cjapi.wufan88.com, dict.youdao.com, changeclothes.szsszykj.com, *.zhulong.com, apigate.zymk.cn, %APPEND% sub.store, *.radio.cn, %APPEND% 39.106.98.80, *.xczim.com, p.du.163.com, ap*.intsig.net, %APPEND% account.wps.cn, *account.wps.com, *.peiyinxiu.com, gushici.91iread.com:8011, *.aoscdn.com, ggs.manmeng168.com, apjson.nftvio.space, api.rr.tv, *.qupeiyin.com, dubbing.csweimei.cn, cnapi.qupeiyin.com, bookapi.ellabook.cn, api-weather.andy.works, gateway.ergedd.com, api.risingfalling.com, xrckeji.com, zebra.maka.im, diary.sxyj.net, user.ftmailbox.cn, dida365.com, ticktick.com, h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com, *account.wps.cn, *account.wps.com, *kuwo*,*lrts*, api.fwxgx.com, app.yiyan.art, mp.weixin.qq.com, *.lingdu2019.cn, zjgeo.eqobc.com, xnour.xonap.com, opzzy.kefsww.com, tqrbq.mpckv.com, api.maijitv.com, api.polaxiong.com, api8.luosijiaoyu.com, *.jstv.com, %APPEND% gateway.caixin.com, %APPEND% ipadcms.caixin.com, %APPEND% biz.caiyunapp.com, %APPEND% zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.psy-1.com, matrix.fingerplay.cn, open3.vistastory.com, igetcool-gateway.igetcool.com, i.xinyulib.com.cn, shimo.im, *.zuowenzhitiao.com, judouapp.com, prod.ukids.cn, 47.104.228.152:9100, buy.itunes.apple.com, %APPEND% api.revenuecat.com, app.mobileto.vip, %APPEND% wallpaper.soutushenqi.com, api.calm.com, api.revenuecat.com, service.ilovepdf.com, api2.rinhome.com, *.taotu518.com, www.ssalegs.store, *.myxxdq.com, user-kaji-api.b612kaji.com, api4.bybutter.com, p40-buy.itunes.apple.com, (ssl|p.*)-(api|buy).(itranslateapp|itunes.apple).com, cubox.pro, api.revenuecat.com, vipapi.jxedt.com, commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com, mbpapi.shegu.net, fufei.fengyunsoft.cn, saomiao.34354.com, h5.t1678.com, curriculum-api.yizhiweixin.com, api.revenuecat.com, h5.t1678.com, license.pdfexpert.com， buy.itunes.apple.com

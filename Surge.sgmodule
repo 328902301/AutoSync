@@ -26,7 +26,7 @@ URL-REGEX,^https?:\/\/wxsnsdythumb\.wxs\.qq\.com\/.+\/snscosdownload\/SZ\/reserv
 URL-REGEX,^https?:\/\/dlied(.*).cdntips.net,REJECT
 URL-REGEX,^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad),REJECT
 # > 555影视去广告
-URL-REGEX, ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/indexLabelList, REJECT
+URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/indexLabelList,REJECT
 # > appstore+
 DOMAIN-KEYWORD,applovin.com,REJECT // appstore+
 DOMAIN-KEYWORD,applvn.com,REJECT // appstore+

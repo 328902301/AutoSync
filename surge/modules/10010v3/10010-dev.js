@@ -45,8 +45,7 @@ const KEY_PANEL_NOTIFY_DISABLED = `@${namespace}.10010.panelNotifyDisabled`
 const KEY_TILE_NOTIFY_DISABLED = `@${namespace}.10010.tileNotifyDisabled`
 const KEY_NOTIFY_DISABLED = `@${namespace}.10010.notifyDisabled`
 const KEY_BARK = `@${namespace}.10010.bark`
-const KEY_SIGN_IN_RETRY_COUNT = `@${namespace}.10010.signInRetryCount`
-const KEY_DISABLED_UNTIL = `@${namespace}.10010.disabledUntil`
+const KEY_TOKEN_ONLINE = `@${namespace}.10010.tokenOnline`
 
 $.setdata(new Date().toLocaleString('zh'), KEY_INITED)
 
@@ -59,9 +58,7 @@ const detail = {}
   //   $.log('ℹ️ 不是 request')
 
   const disabled = $.getdata(KEY_DISABLED)
-  const disabledUntil = $.getdata(KEY_DISABLED_UNTIL)
-  
-  if (String(disabled) === 'true' || new Date().getTime() < disabledUntil) {
+  if (String(disabled) === 'true') {
     $.log('ℹ️ 已禁用')
     return
   }
@@ -69,6 +66,7 @@ const detail = {}
   const appId = $.getdata(KEY_APPID)
   const mobile = $.getdata(KEY_MOBILE)
   const password = $.getdata(KEY_PASSWORD)
+  let tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
 
   if (!cookie && (!appId || !mobile || !password)) {
     throw new Error('⚠️ 请配置 Cookie 或 appId, 手机号(mobile), 密码(password) 记得保存')
@@ -76,7 +74,16 @@ const detail = {}
   let needSign
   if (cookie) {
     $.log('ℹ️ 有 Cookie 尝试使用 Cookie 进行查询')
-    // await info({ cookie })
+    if (tokenOnline) {
+      try {
+        await online({ tokenOnline, appId })
+        cookie = $.getdata(KEY_COOKIE)
+        tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
+      } catch (e) {
+        $.log('ℹ️ 维护在线状态失败')
+        console.log(e)
+      }
+    }
     try {
       await query({ cookie })
     } catch (e) {
@@ -91,28 +98,7 @@ const detail = {}
   }
   if (needSign) {
     $.log('ℹ️ 自动登录')
-    let signRes
-    try {
-      signRes = await sign({ mobile, password, appId })
-    } catch (e) {
-      console.log(e)
-      // console.log('密码登录失败')
-      let signInRetryCount = parseFloat($.getdata(KEY_SIGN_IN_RETRY_COUNT))
-      if (isNaN(signInRetryCount) || signInRetryCount < 0) {
-        signInRetryCount = 0
-      }
-      signInRetryCount += 1
-      $.setdata(signInRetryCount, KEY_SIGN_IN_RETRY_COUNT)
-      // if (signInRetryCount>1) {
-        const disabledHour = 2**(signInRetryCount-1)
-        console.log(`连续第 ${signInRetryCount} 次密码登录失败 自动禁用 ${disabledHour} 小时`)
-        $.setdata(new Date().getTime() + disabledHour * 3600 * 1000, KEY_DISABLED_UNTIL)
-        await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `❌`, `连续第 ${signInRetryCount} 次密码登录失败 自动禁用 ${disabledHour} 小时`, {})
-      // }
-      throw e
-    }
-    $.setdata(0, KEY_SIGN_IN_RETRY_COUNT)
-    $.setdata(0, KEY_DISABLED_UNTIL)
+    const signRes = await sign({ mobile, password, appId })
     cookie = $.lodash_get(signRes, 'cookie')
     await query({ cookie })
   }
@@ -647,6 +633,10 @@ async function sign({ mobile, password, appId }) {
   if ($.lodash_get(body, 'code') !== '0') {
     throw new Error($.lodash_get(body, 'dsc') || '未知错误')
   }
+  const tokenOnline = $.lodash_get(body, 'token_online')
+  console.log(`token_online`)
+  console.log(tokenOnline)
+  $.setdata(tokenOnline, KEY_TOKEN_ONLINE)
   const headers = $.lodash_get(res, 'headers') || {}
   let cookie = $.lodash_get(headers, 'set-cookie') || $.lodash_get(headers, 'Set-Cookie')
   if (Array.isArray(cookie)) {
@@ -656,6 +646,59 @@ async function sign({ mobile, password, appId }) {
   console.log(cookie)
   if (!cookie) {
     throw new Error(`登录 Cookie 为空`)
+  }
+  $.setdata(cookie, KEY_COOKIE)
+  return { cookie }
+
+  // const title = $.lodash_get(body, 'flush_date_time')
+  // const dataList = $.lodash_get(body, 'data.dataList') || []
+  // const content = dataList
+  //   .map(i => `${$.lodash_get(i, 'remainTitle')} ${$.lodash_get(i, 'number')}${$.lodash_get(i, 'unit')}`)
+  //   .join('; ')
+  // console.log(title)
+  // console.log(content)
+}
+async function online({ tokenOnline, appId }) {
+  $.log('〽️ 开始进行在线状态维护')
+  const res = await $.http.post({
+    url: 'https://m.client.10010.com/mobileService/onLine.htm',
+    body: transParams({
+      appId,
+      token_online: tokenOnline,
+      version: 'iphone_c@9.0100',
+    }),
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  })
+  // console.log(res)
+  const status = $.lodash_get(res, 'status')
+  $.log('↓ res status')
+  $.log(status)
+  let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
+  try {
+    body = JSON.parse(body)
+  } catch (e) {}
+  $.log('↓ res body')
+  console.log($.toStr(body))
+  if ($.lodash_get(body, 'code') !== '0') {
+    throw new Error($.lodash_get(body, 'dsc') || '未知错误')
+  }
+  const invalidat = $.lodash_get(body, 'invalidat')
+  console.log(`有效时间: ${invalidat}`)
+  const newTokenOnline = $.lodash_get(body, 'token_online')
+  console.log(`new token_online`)
+  console.log(newTokenOnline)
+  $.setdata(newTokenOnline, KEY_TOKEN_ONLINE)
+  const headers = $.lodash_get(res, 'headers') || {}
+  let cookie = $.lodash_get(headers, 'set-cookie') || $.lodash_get(headers, 'Set-Cookie')
+  if (Array.isArray(cookie)) {
+    cookie = cookie.join('; ')
+  }
+  console.log(`🍪 更新登录 Cookie`)
+  console.log(cookie)
+  if (!cookie) {
+    throw new Error(`更新登录 Cookie 为空`)
   }
   $.setdata(cookie, KEY_COOKIE)
   return { cookie }

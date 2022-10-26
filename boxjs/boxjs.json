@@ -713,6 +713,7 @@
       ],
       "keys": [
         "@xream.10010.disabled",
+        "@xream.10010.debug",
         "@xream.10010.systemNotifyDisabled",
         "@xream.10010.requestNotifyDisabled",
         "@xream.10010.panelNotifyDisabled",

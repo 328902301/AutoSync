@@ -49,7 +49,6 @@ const KEY_BARK = `@${namespace}.10010.bark`
 const KEY_TOKEN_ONLINE = `@${namespace}.10010.tokenOnline`
 
 $.setdata(new Date().toLocaleString('zh'), KEY_INITED)
-$.setdata(true, KEY_DEBUG)
 
 let result
 const detail = {}

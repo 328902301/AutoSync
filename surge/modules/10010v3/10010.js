@@ -24,6 +24,7 @@ $.isTile = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($s
 
 const KEY_INITED = `@${namespace}.10010.inited`
 const KEY_DISABLED = `@${namespace}.10010.disabled`
+const KEY_DEBUG = `@${namespace}.10010.debug`
 const KEY_COOKIE = `@${namespace}.10010.cookie`
 const KEY_APPID = `@${namespace}.10010.appId`
 const KEY_MOBILE = `@${namespace}.10010.mobile`
@@ -58,6 +59,7 @@ const detail = {}
   //   $.log('ℹ️ 不是 request')
 
   const disabled = $.getdata(KEY_DISABLED)
+  const debug = String($.getdata(KEY_DEBUG)) === 'true'
   if (String(disabled) === 'true') {
     $.log('ℹ️ 已禁用')
     return
@@ -74,16 +76,6 @@ const detail = {}
   let needSign
   if (cookie) {
     $.log('ℹ️ 有 Cookie 尝试使用 Cookie 进行查询')
-    if (tokenOnline) {
-      try {
-        await online({ tokenOnline, appId })
-        cookie = $.getdata(KEY_COOKIE)
-        tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
-      } catch (e) {
-        $.log('ℹ️ 维护在线状态失败')
-        console.log(e)
-      }
-    }
     try {
       await query({ cookie })
     } catch (e) {
@@ -92,14 +84,41 @@ const detail = {}
       }
       needSign = true
       $.log('ℹ️ Cookie 无效, 将尝试自动登录')
+      if(debug){
+        await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `❌`, `ℹ️ Cookie 无效, 将尝试自动登录`, {})
+      }
     }
   } else {
     needSign = true
+  }
+  if (needSign && tokenOnline) {
+    $.log('ℹ️ 将使用 tokenOnline 自动登录')
+    if(debug){
+      await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `ℹ️`, `将使用 tokenOnline 自动登录`, {})
+    }
+    try {
+      await online({ tokenOnline, appId })
+      cookie = $.getdata(KEY_COOKIE)
+      tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
+      needSign = false
+      await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `使用 tokenOnline 自动登录`, {})
+    } catch (e) {
+      $.log('❌ 使用 tokenOnline 自动登录失败')
+      console.log(e)
+      if(debug){
+        await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `❌ 使用 tokenOnline 自动登录失败`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`, {})
+      }
+    }
   }
   if (needSign) {
     $.log('ℹ️ 自动登录')
     const signRes = await sign({ mobile, password, appId })
     cookie = $.lodash_get(signRes, 'cookie')
+    if(debug){
+      await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `自动登录`, {})
+    }
+    await query({ cookie })
+  } else {
     await query({ cookie })
   }
 

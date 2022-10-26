@@ -1,6 +1,6 @@
 /*
-脚本作者：
-引用地址：
+脚本作者：DecoAri
+引用地址：https://github.com/DecoAri/JavaScript/blob/main/Surge/TF_keys.js
 */
 $persistentStore.write(null, 'request_id')
 let url = $request.url

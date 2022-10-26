@@ -91,6 +91,7 @@ const detail = {}
   } else {
     needSign = true
   }
+  let needQuery
   if (needSign && tokenOnline) {
     $.log('ℹ️ 将使用 tokenOnline 自动登录')
     if(debug){
@@ -101,6 +102,7 @@ const detail = {}
       cookie = $.getdata(KEY_COOKIE)
       tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
       needSign = false
+      needQuery = true
       await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `使用 tokenOnline 自动登录`, {})
     } catch (e) {
       $.log('❌ 使用 tokenOnline 自动登录失败')
@@ -110,6 +112,9 @@ const detail = {}
       }
     }
   }
+  if (needQuery) {
+    await query({ cookie })
+  }
   if (needSign) {
     $.log('ℹ️ 自动登录')
     const signRes = await sign({ mobile, password, appId })
@@ -117,8 +122,6 @@ const detail = {}
     if(debug){
       await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `自动登录`, {})
     }
-    await query({ cookie })
-  } else {
     await query({ cookie })
   }
 

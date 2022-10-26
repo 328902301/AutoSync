@@ -757,7 +757,14 @@
           "name": "禁用",
           "val": false,
           "type": "boolean",
-          "desc": "默认启用"
+          "desc": "可随时在此处禁用该脚本"
+        },
+        {
+          "id": "@xream.10010.debug",
+          "name": "调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认不开启调试. 开启后将推送自动登录等信息"
         },
         {
           "id": "@xream.10010.mobile",

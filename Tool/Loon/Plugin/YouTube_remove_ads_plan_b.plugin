@@ -1,5 +1,5 @@
 #!name = YouTube去广告（B方案）
-#!desc = 通过所广视频广告至极短时间来达到跳过视频广告的效果，并去除了去首页瀑布流和播放页的推荐广告，此插件不适Premium订阅用户使用，需要iOS 15的支持，YouTube版本需要不低于15.26.4。
+#!desc = 通过所广视频广告至极短时间来达到跳过视频广告的效果，并去除了去首页瀑布流和播放页的推荐广告。此插件不适Premium订阅用户使用，需要iOS 15的支持，YouTube版本需要不低于15.26.4。
 #!openUrl = 
 #!author = app2smile
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

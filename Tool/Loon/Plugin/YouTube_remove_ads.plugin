@@ -1,5 +1,5 @@
 #!name = YouTube去广告（A方案）
-#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，不适Premium订阅用户使用。注意，广告可能因为遗漏而偶现广告。
+#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，不适Premium订阅用户使用。注意，广告可能因为遗漏而偶现广告，且不能与其他具有YouTube广告过滤的插件使用。
 #!openUrl = 
 #!author = Choler DivineEngine app2smile ddgksf2013 Maasea 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin

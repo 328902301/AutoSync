@@ -1,7 +1,7 @@
 #!name = 脚本转换器
 #!desc = 将所有引用的远程脚本自动转换成同时兼容Loon的格式，主要用于签到类脚本中。转换器会根据脚本内容判断是否需要注入格式转换的代码，目的是减少脚本开发者在编写脚本时需要重复适配多平台的冗余代码。
 #!openUrl = 
-#!author = app2smile
+#!author = Peng-YM
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/JavaScriptConverter.png
 

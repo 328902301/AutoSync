@@ -1,3 +1,7 @@
+/*
+脚本作者：DecoAri
+引用地址：https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
+*/
 !(async () => {
 ids = $persistentStore.read('APP_ID')
 if (ids == '') {

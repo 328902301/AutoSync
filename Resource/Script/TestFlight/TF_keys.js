@@ -1,3 +1,7 @@
+/*
+脚本作者：
+引用地址：
+*/
 $persistentStore.write(null, 'request_id')
 let url = $request.url
 let key = url.replace(/(.*accounts\/)(.*)(\/apps)/, '$2')

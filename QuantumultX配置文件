@@ -1,7 +1,7 @@
 # MengRain - Configuration  （QuantumultX）
 # 作者:MengRain
 # 写于2022年8月8日
-# 最后一次更新于2022年10月4日
+# 最后一次更新于2022年10月26日
 # 我的TG频道：https://t.me/mengyulianmian
 # 我的TG聊群：https://t.me/mengdelaochao
 
@@ -137,8 +137,6 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Discord/Discord.list, tag=discord, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list, tag=bilibili, update-interval=172800, opt-parser=false, enabled=true
 https://limbopro.com/Adblock4limbo.list, tag=毒奶特供, force-policy=🛑 广告拦截, enabled=true
-https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=🛑 广告拦截, update-interval=172800, opt-parser=false, enabled=true
-#
 # Params "tag" and "enabled" are optional.
 #
 [rewrite_remote]

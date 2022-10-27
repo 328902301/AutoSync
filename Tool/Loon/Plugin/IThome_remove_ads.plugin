@@ -5,6 +5,9 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/IThome.png
 
+[Rule]
+URL-REGEX,^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao..*,REJECT
+
 [Script]
 http-response https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body=true, tag=IT之家去广告
   

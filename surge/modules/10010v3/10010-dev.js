@@ -103,7 +103,9 @@ const detail = {}
       tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
       needSign = false
       needQuery = true
-      await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `使用 tokenOnline 自动登录`, {})
+      if(debug){
+        await notify(namespace === 'xream' ? '10010' : `10010(${namespace})`, `✅`, `使用 tokenOnline 自动登录`, {})
+      }
     } catch (e) {
       $.log('❌ 使用 tokenOnline 自动登录失败')
       console.log(e)

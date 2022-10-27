@@ -12,4 +12,4 @@ URL-REGEX,^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao..*,REJECT
 http-response https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body=true, tag=IT之家去广告
   
 [MITM]
-hostname = api.ithome.com,napi.ithome.com
+hostname = api.ithome.com,napi.ithome.com,api.zuihuimai.com

@@ -6,8 +6,6 @@
 
 兼容 QuanX, Surge, Loon, Shadowrocket, Stash, [elecV2P](https://github.com/elecV2/elecV2P), [青龙](https://github.com/whyour/qinglong), Termux(Android) 等
 
-> Loon 似乎不支持 http api 在 Box.js 里执行脚本. 故不支持短信验证码登录
-
 无需抓包, 在 Box.js 界面上可以直接配置或进行短信验证码登录.
 
 同时提供了 `http(s)://10010.json` 接口, 直接返回余量信息. 方便和别的工具整合. 请求时的通知可在 Box.js 设置中关闭(禁用作为请求脚本使用时的通知).
@@ -43,7 +41,9 @@
 
 [https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.rewrite.stash.stoverride](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.rewrite.stash.stoverride)
 
-Stash 暂不支持定时任务
+Stash Testflight 版支持定时任务 直接使用覆写即可. 若要自定义定时的规则, 请自己弄一个覆写或者改到自己的配置里
+
+Stash 商店正式版暂不支持定时任务(现在支不支持请自行查看)
 
 可配合下方的 Scriptable 组件 实现伪定时刷新
 

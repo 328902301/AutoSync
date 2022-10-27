@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = I-am-R-E
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Aiinquire.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/爱企查^com.baidu.app.aiinquiry.png
 
 [Script]
-http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire.js, requires-body=1, tag=爱企查解锁
+http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire.js, requires-body=1, tag=爱企查解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/爱企查^com.baidu.app.aiinquiry.png
 
 [Mitm]
 hostname = aiqicha.baidu.com

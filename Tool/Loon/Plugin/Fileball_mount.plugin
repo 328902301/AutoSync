@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = ddgksf2021
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Fileball.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Fileball.png
 
 [script]
-http-response ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, requires-body=true, timeout=120, tag=Fileball云盘挂载
+http-response ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, requires-body=true, tag=Fileball云盘挂载, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Fileball.png
 
 [MITM]
 hostname = *example.com

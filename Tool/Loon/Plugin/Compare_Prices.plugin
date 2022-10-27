@@ -3,12 +3,12 @@
 #!openUrl = 
 #!author = toulanboy
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/JT.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/JT.png
 
 [Script]
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=10, tag=京东比价
-http-request ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=10, tag=比价
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,requires-body=true, timeout=10, tag=淘宝比价
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, tag=京东比价, img-url=
+http-request ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, tag=比价, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/JT.png
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,requires-body=true, tag=淘宝比价, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/JT.png
 
 [MITM]
 hostname = api.m.jd.com,trade-acs.m.taobao.com

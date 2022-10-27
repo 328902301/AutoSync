@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = Marol62926
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Scanner_Pro.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Scanner_Pro^com.readdle.Scanner.png
 
 [Script]
-http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Scanner_Pro/Scanner_Pro_crack.js, requires-body=true, timeout=10, tag=Scanner Pro解锁
+http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Scanner_Pro/Scanner_Pro_crack.js, requires-body=true, timeout=10, tag=Scanner Pro解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Scanner_Pro^com.readdle.Scanner.png
 
 [MITM]
 hostname = api.revenuecat.com

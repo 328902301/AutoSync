@@ -3,11 +3,11 @@
 #!openUrl = 
 #!author = Marol62926
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Audiomack.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Audiomack^com.audiomack.iphone.png
 
 [Script]
 
-http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Audiomack/Audiomack_crack.js, requires-body=true, timeout=10, tag=Audiomack解锁
+http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Audiomack/Audiomack_crack.js, requires-body=true, tag=Audiomack解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Audiomack^com.audiomack.iphone.png
 
 [MITM]
 hostname = api.revenuecat.com

@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = litieyin
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/Notability.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Notability^com.gingerlabs.Notability.png
 
 [Script]
-http-response ^https?:\/\/notability\.com\/subscriptions script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Notability/Notability_crack.js, requires-body=1, tag=Notability解锁
+http-response ^https?:\/\/notability\.com\/subscriptions script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Notability/Notability_crack.js, requires-body=1, tag=Notability解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Notability^com.gingerlabs.Notability.png
 
 [Mitm]
 hostname = notability.com

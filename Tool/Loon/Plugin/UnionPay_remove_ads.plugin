@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/1692041ac44ede9463583810aa715eac8baac694/Resource/Icon/80px/云闪付^com.unionpay.chsp.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/UnionPay.png
 
 [Rule]
 DOMAIN,switch.cup.com.cn,REJECT

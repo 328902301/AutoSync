@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/GitHub^com.github.stormbreaker.prod.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/GitHub.png
 
 [Rewrite]
 ^https?:\/\/raw.githubusercontent.com https://raw.iqiq.io 302

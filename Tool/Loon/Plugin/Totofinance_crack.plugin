@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = Hausd0rff
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/图图记账^com.ziheng.totofinance.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TotoFinance.png
 
 [Script]
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Totofinance/Totofinance_crack.js, requires-body=1, tag=图图记账解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/图图记账^com.ziheng.totofinance.png
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Totofinance/Totofinance_crack.js, requires-body=1, tag=图图记账解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TotoFinance.png
 
 [Mitm]
 hostname = api.revenuecat.com

@@ -3,11 +3,11 @@
 #!openUrl = 
 #!author = I-am-R-E
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow^com.floatingislandapps.grow.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow.png
 
 [Script]
-http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=1, tag=Grow解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow^com.floatingislandapps.grow.png
-http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=1, tag=Grow解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow^com.floatingislandapps.grow.png
+http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=1, tag=Grow解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow.png
+http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Grow/Grow_crack.js, requires-body=1, tag=Grow解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Grow.png
 
 [Mitm]
 hostname = api.revenuecat.com

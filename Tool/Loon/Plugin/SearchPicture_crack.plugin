@@ -3,10 +3,10 @@
 #!openUrl = 
 #!author = 彭于晏
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/搜图神器^com.wander.ios.searchpicture.png
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/SearchPicture.png
 
 [Script]
-http-response http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/SearchPicture/SearchPicture_crack.js, requires-body=1, tag=搜图神器解锁 img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/搜图神器^com.wander.ios.searchpicture.png
+http-response http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/SearchPicture/SearchPicture_crack.js, requires-body=1, tag=搜图神器解锁 img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/SearchPicture.png
 
 [Mitm]
 hostname = wallpaper.soutushenqi.com

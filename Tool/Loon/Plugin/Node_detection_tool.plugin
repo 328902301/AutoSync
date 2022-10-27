@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Node_detection_tool.png
 
 [Script]
-generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Geo_location.js, tag=GeoIP查询, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Geo_location.png
+generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Geo_location.js, tag=GeoIP查询, timeout=10, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Geo_location.png
 generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Youtube_check.js, tag=YouTube解锁查询, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/YouTube.png
 generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Netflix_check.js, tag=Netflix解锁查询, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Netflix.png
 generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Disney+_check.js, tag=Disney+解锁查询, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/icon/Disney+.png

@@ -5,7 +5,7 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Fileball.png
 
-[script]
+[Script]
 http-response ^https?:\/\/.*\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount.js, requires-body=true, tag=Fileball云盘挂载, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Fileball.png
 
 [MITM]

@@ -6,7 +6,6 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Audiomack.png
 
 [Script]
-
 http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Audiomack/Audiomack_crack.js, requires-body=true, tag=Audiomack解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Audiomack.png
 
 [MITM]

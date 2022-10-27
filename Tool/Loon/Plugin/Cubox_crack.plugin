@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Cubox.png
 
 [Script]
-http-response ^https:\/\/cubox\.pro\/c\/api\/userInfo script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cubox/Cubox_crack.js, requires-body=1, tag=Cubox解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Cubox.png
+http-response ^https:\/\/cubox\.pro\/c\/api\/userInfo script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cubox/Cubox_crack.js, requires-body=true, tag=Cubox解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Cubox.png
 
 [Mitm]
 hostname = cubox.pro

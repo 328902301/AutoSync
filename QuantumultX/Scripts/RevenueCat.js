@@ -307,6 +307,12 @@ if (ua.indexOf('djay') != -1) {
     Body = {"request_date":"2022-09-22T02:28:50Z","request_date_ms":1663813730272,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-10-14T07:49:44Z","grace_period_expires_date":null,"product_identifier":"com.algoriddim.djay_iphone_free.pro_loyalty_2.yearly","purchase_date":"2022-09-22T02:19:32Z"}},"first_seen":"2022-09-22T02:12:43Z","last_seen":"2022-09-22T02:12:43Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:Eric","original_application_version":"322","original_purchase_date":"2022-09-10T12:59:20Z","other_purchases":{},"subscriptions":{"com.algoriddim.djay_iphone_free.pro_loyalty_2.yearly":{"billing_issues_detected_at":null,"expires_date":"2099-10-14T07:49:44Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-09-22T02:19:33Z","ownership_type":"PURCHASED","period_type":"pro","purchase_date":"2022-09-22T02:19:32Z","store":"app_store","unsubscribe_detected_at":"2022-09-22T02:21:43Z"}}}};
 }
 
+//52 Anime Karma List
+//https://apps.apple.com/cn/app/id1583497525
+if (ua.indexOf('Anime%20Karma%20List') != -1) {
+    Body = {"request_date":"2022-10-26T05:13:39Z","request_date_ms":1666761219061,"subscriber":{"entitlements":{"allaccess":{"expires_date":"2099-11-02T05:13:34Z","grace_period_expires_date":null,"product_identifier":"akl_1999_1y","purchase_date":"2022-10-26T05:13:34Z"}},"first_seen":"2022-10-26T05:10:13Z","last_seen":"2022-10-26T05:10:13Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:feed7b3189874016913624d960650e0f","original_application_version":"2","original_purchase_date":"2022-10-26T05:09:34Z","other_purchases":{},"subscriptions":{"akl_1999_1y":{"billing_issues_detected_at":null,"expires_date":"2099-11-02T05:13:34Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-26T05:13:35Z","ownership_type":"PURCHASED","period_type":"pro","purchase_date":"2022-10-26T05:13:34Z","store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

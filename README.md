@@ -1,6 +1,6 @@
 ## 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
 
-> [***本库内容禁止公众号、自媒体进行任何形式的转载或发布***](https://github.com/ddgksf2013/Cuttlefish/issues)
+> [***本库内容禁止公众号、自媒体进行任何形式的转载或发布***](https://gitlab.com/ddgksf2013/Cuttlefish)
 
 ## 1️⃣QuantumultX 小白2.0配置：
 * 配置更新时间：2022-09-18

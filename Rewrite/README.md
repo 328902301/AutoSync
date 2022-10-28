@@ -9,8 +9,8 @@
         <th>微信</th>
     </tr>
     <tr>
-        <td><img alt="看不见图片请使用科学上网" src="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Icon/alipay.jpg"></td>
-        <td><img alt="看不见图片请使用科学上网" src="https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Icon/wechat.jpg"></td>
+        <td><img alt="看不见图片请使用科学上网" src="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Icon/alipay.jpg"></td>
+        <td><img alt="看不见图片请使用科学上网" src="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Icon/wechat.jpg"></td>
     </tr>
 </table>
 

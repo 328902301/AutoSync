@@ -122,7 +122,7 @@
     </tr>
 </table>
 
-> 更多的重写请参考 [*@ddgksf2013*](https://github.com/ddgksf2013) 提供的 [***Quantumult X 重写配置***](https://github.com/ddgksf2013/Cuttlefish/tree/master/Rewrite)
+> 更多的重写请参考 [*@ddgksf2013*](https://gitlab.com/ddgksf2013) 提供的 [***Quantumult X 重写配置***](https://gitlab.com/ddgksf2013/Cuttlefish/-/tree/master/Rewrite)
 
 ## 4️⃣QuantumultX 脚本Task：
 - [x] 喵喵记账每日签到 [*mmjz.js*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js)
@@ -148,14 +148,14 @@
 | 8 | [姿势图标库](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fmain%2Fzishi-cs.json%22%0A%5D) | LovedGM | 
 | 9 | [Semporia库 ](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D) | Semporia |
 
-> 更多的图标订阅请参考 [*@ddgksf2013*](https://github.com/ddgksf2013) 集合的 [***Quantumult X 图标库***](https://github.com/ddgksf2013/Cuttlefish/blob/master/Icon/README.md)
+> 更多的图标订阅请参考 [*@ddgksf2013*](https://gitlab.com/ddgksf2013) 集合的 [***Quantumult X 图标库***](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Icon/README.md)
 
 ## 6️⃣Awesome Resource：
 * QuantumultX测试版[***更新日志***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/QX_TestFlight_Update.log)
 * 自用Clash配置 [*Config.yaml*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/Config.yaml)
 * 1080P超清IPTV国内[***直播源***](https://github.com/wonderfvvl/iptv-3/raw/master/国内.m3u)
 * Clash详细教程 [*Documents.md*](https://docs.cfw.lbyczf.com/contents/quickstart.html)
-* [***自用优秀Web网站合集***](https://github.com/ddgksf2013/Cuttlefish/tree/master/Html)：影视、工具、下载、阅读、Porn...
+* [***自用优秀Web网站合集***](https://gitlab.com/ddgksf2013/Cuttlefish/-/tree/master/Html)：影视、工具、下载、阅读、Porn...
 
 
 ## 7️⃣Telegram 通知频道：

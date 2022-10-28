@@ -13,8 +13,6 @@ URL-REGEX,^https?:\/\/mbd\.baidu\.com\/tcbox,REJECT-TINYGIF
 URL-REGEX,^https?:\/\/s\.bdstatic\.com\/common\/openjs\/openBox\.js.*,REJECT-TINYGIF
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
-# > 屏蔽HTTP3/QUIC协议
-AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # > Block iOS Update
 DOMAIN,gdmf.apple.com,REJECT
 

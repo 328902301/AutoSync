@@ -1,7 +1,7 @@
 #!name = QQ音乐广告过滤
 #!desc = 过滤QQ音乐广告
-#!open= 
-#!author = 可莉🅥
+#!openUrl = 
+#!author = 可莉🅥 张军
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/QQMusic.png
 
@@ -10,13 +10,13 @@ DOMAIN,tmeadcomm.y.qq.com,REJECT
 DOMAIN,ad.tencentmusic.com,REJECT
 DOMAIN,adstats.tencentmusic.com,REJECT
 DOMAIN,tmead.y.qq.com,REJECT
-DOMAIN,rqd.qq.com,REJECT
-DOMAIN,wup.imtt.qq.com,REJECT
-DOMAIN,gdt.qq.com,REJECT
-DOMAIN,android.rqd.qq.com,REJECT
-DOMAIN,e.qq.com,REJECT
-DOMAIN,beacon.qq.com,REJECT
-DOMAIN,v.gdt.qq.com,REJECT
+DOMAIN-SUFFIX,rqd.qq.com,REJECT
+DOMAIN-SUFFIX,wup.imtt.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,android.rqd.qq.com,REJECT
+DOMAIN-SUFFIX,e.qq.com,REJECT
+DOMAIN-SUFFIX,beacon.qq.com,REJECT
+DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 
 [Rewrite]
 ^https?:\/\/us\.l\.qq\.com\/exapp - reject
@@ -27,4 +27,4 @@ DOMAIN,v.gdt.qq.com,REJECT
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
 
 [MITM]
-hostname = us.l.qq.com,y.gtimg.cn
+hostname = us.l.qq.com, y.gtimg.cn

@@ -1,0 +1,31 @@
+#!name = 高德地图广告过滤
+#!desc = 过滤高德地图广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Amap.png
+
+[Rule]
+DOMAIN,u51.me,REJECT
+DOMAIN,logs.amap.com,REJECT
+DOMAIN,icloud-amap.com,REJECT
+DOMAIN,apiinit.amap.com,REJECT
+DOMAIN,aboard.apilocate.amap.com,REJECT
+DOMAIN-KEYWORD,ossgw.alicdn.com,REJECT
+DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
+DOMAIN-SUFFIX,logs.amap.com,REJECT
+DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
+DOMAIN-SUFFIX,page.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
+DOMAIN-SUFFIX,shouji.sougou.com,REJECT
+DOMAIN-SUFFIX,adiu.amap.com,REJECT
+DOMAIN-SUFFIX,u51.me,REJECT
+
+[Rewrite]
+^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
+
+[MITM]
+hostname = m*.amap.com, optimus-ads.amap.com

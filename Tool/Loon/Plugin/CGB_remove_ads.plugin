@@ -1,0 +1,14 @@
+#!name = 广发银行广告过滤
+#!desc = 过滤广发银行广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/CGB.png
+
+[Rewrite]
+^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) url reject-200
+# > \d{25}\.(png|jpg) url reject-img 只拦截25位纯数字命名的png和jpg格式图片
+^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) url reject-img
+
+[MITM]
+hostname = static.95508.com, mps.95508.com

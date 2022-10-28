@@ -1,0 +1,23 @@
+#!name = 喜马拉雅广告过滤
+#!desc = 过滤喜马拉雅广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+
+[Rule]
+DOMAIN,adbehavior.ximalaya.com,REJECT
+DOMAIN,adwbs.ximalaya.com,REJECT
+DOMAIN-SUFFIX,ad.test.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.test.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adweb.test.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adweb.ximalaya.com,REJECT
+DOMAIN-SUFFIX,linkeye.ximalaya.com,REJECT
+DOMAIN-SUFFIX,location.ximalaya.com,REJECT
+DOMAIN-SUFFIX,xdcs-collector.ximalaya.com,REJECT
+DOMAIN-SUFFIX,ad.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.wsa.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adsebs.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adbs.ximalaya.com,REJECT

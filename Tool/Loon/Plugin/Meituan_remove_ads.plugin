@@ -1,0 +1,35 @@
+#!name = 美团广告过滤
+#!desc = 过滤美团广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Meituan.png
+
+[Rule]
+DOMAIN,flowplus.meituan.net,REJECT
+DOMAIN-SUFFIX,analytics.meituan.net,REJECT
+DOMAIN-SUFFIX,meituan.xn--io0a7i,REJECT
+DOMAIN-SUFFIX,meituan.yoga,REJECT
+DOMAIN-SUFFIX,meituangov.cn,REJECT
+DOMAIN-SUFFIX,report.meituan.com,REJECT
+DOMAIN-SUFFIX,wmlog.meituan.com,REJECT
+
+[Rewrite]
+^https?+:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$ url reject-200
+^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
+^https?+:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg url reject-200
+^https?+:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp url reject-200
+^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/ url reject
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_a002 url reject-img
+^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\? url reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? url reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d\/startpicture url reject
+^https?:\/\/flowplus\.meituan\.net\/v\d\/\w+\/linglong\/\d+\.(gif|jpg|mp4) url reject
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) url reject
+^https?:\/\/apimobile\.meituan\.com\/appupdate\/mach\/checkUpdate? url reject
+^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp url reject-img
+^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/ url reject
+^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg url reject-200
+
+[MITM]
+hostname = *.meituan.net, *.meituan.com

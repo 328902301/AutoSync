@@ -1,0 +1,73 @@
+#!name = 优酷视频广告过滤
+#!desc = 过滤优酷视频广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/YouKu.png
+
+[Rule]
+DOMAIN-SUFFIX,atm.youku.com,REJECT
+DOMAIN,ad.mobile.youku.com,REJECT
+DOMAIN,iyes.youku.com,REJECT
+DOMAIN,pl.cp31.ott.cibntv.net,REJECT
+DOMAIN-SUFFIX,actives.youku.com,REJECT
+DOMAIN-SUFFIX,ad.api.3g.tudou.com,REJECT
+DOMAIN-SUFFIX,ad.api.3g.youku.com,REJECT
+DOMAIN-SUFFIX,ad.api.mobile.youku.com,REJECT
+DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com,REJECT
+DOMAIN-SUFFIX,b.smartvideo.youku.com,REJECT
+DOMAIN-SUFFIX,c.yes.youku.com,REJECT
+DOMAIN-SUFFIX,das.api.youku.com,REJECT
+DOMAIN-SUFFIX,das.mobile.youku.com,REJECT
+DOMAIN-SUFFIX,dev-push.m.youku.com,REJECT
+DOMAIN-SUFFIX,dl.g.youku.com,REJECT
+DOMAIN-SUFFIX,dmapp.youku.com,REJECT
+DOMAIN-SUFFIX,gamex.mobile.youku.com,REJECT
+DOMAIN-SUFFIX,hudong.pl.youku.com,REJECT
+DOMAIN-SUFFIX,huodong.pl.youku.com,REJECT
+DOMAIN-SUFFIX,huodong.vip.youku.com,REJECT
+DOMAIN-SUFFIX,hz.youku.com,REJECT
+DOMAIN-SUFFIX,iyes.youku.com,REJECT
+DOMAIN-SUFFIX,l.ykimg.com,REJECT
+DOMAIN-SUFFIX,lstat.youku.com,REJECT
+DOMAIN-SUFFIX,m.yes.youku.com,REJECT
+DOMAIN-SUFFIX,mobilemsg.youku.com,REJECT
+DOMAIN-SUFFIX,msg.youku.com,REJECT
+DOMAIN-SUFFIX,myes.youku.com,REJECT
+DOMAIN-SUFFIX,p.l.youku.com,REJECT
+DOMAIN-SUFFIX,passport-log.youku.com,REJECT
+DOMAIN-SUFFIX,p-log.ykimg.com,REJECT
+DOMAIN-SUFFIX,push.m.youku.com,REJECT
+DOMAIN-SUFFIX,r.l.youku.com,REJECT
+DOMAIN-SUFFIX,s.p.youku.com,REJECT
+DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com,REJECT
+DOMAIN-SUFFIX,sdk.m.youku.com,REJECT
+DOMAIN-SUFFIX,stat.youku.com,REJECT
+DOMAIN-SUFFIX,store.tv.api.3g.youku.com,REJECT
+DOMAIN-SUFFIX,store.xl.api.3g.youku.com,REJECT
+DOMAIN-SUFFIX,tdrec.youku.com,REJECT
+DOMAIN-SUFFIX,test.ott.youku.com,REJECT
+DOMAIN-SUFFIX,urchin.lstat.youku.com,REJECT
+DOMAIN-SUFFIX,v.l.youku.com,REJECT
+DOMAIN-SUFFIX,val.api.youku.com,REJECT
+DOMAIN-SUFFIX,wan.youku.com,REJECT
+DOMAIN-SUFFIX,ykatr.youku.com,REJECT
+DOMAIN-SUFFIX,ykrec.youku.com,REJECT
+
+[Rewrite]
+^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku url reject
+^https?:\/\/.+?\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+^https?:\/\/ups\.youku\.com\/.*?needad=1& url reject
+^https?:\/\/r\.l\.youku\.com\/rec_at_click url reject-img
+^https?:\/\/m\.youku\.com\/video\/libs\/iwt\.js url reject-img
+^https?:\/\/api\.mobile\.youku\.com\/layout\/search\/hot\/word url reject-img
+^https?:\/\/ad\.api\.3g\.youku\.com url reject-img
+^https?:\/\/.+?\.atm\.youku\.com url reject
+^https?:\/\/(iyes|(api|hd)\.mobile)\.youku\.com\/(adv|common\/v3\/hudong\/new) url reject-img
+^https?:\/\/[\s\S]*\/youku\/.*?\.mp4 url reject-img
+^http:\/\/ems\.youku\.com\/imp\? url reject
+
+[MITM]
+hostname = ups.youku.com, r.l.youku.com, m.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com, iyes.mobile).youku.com, api.mobile).youku.com, hd.mobile).youku.com

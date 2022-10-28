@@ -1,0 +1,53 @@
+#!name = 淘宝广告过滤
+#!desc = 过滤淘宝广告
+#!openUrl = 
+#!author = 可莉🅥 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Taobao.png
+
+[Rule]
+DOMAIN-SUFFIX,apoll.m.taobao.com,REJECT
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,w.m.taobao.com,REJECT
+DOMAIN,tunion-api.m.taobao.com,REJECT
+DOMAIN-SUFFIX,ai.m.taobao.com,REJECT
+DOMAIN-SUFFIX,re.m.taobao.com,REJECT
+DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT
+DOMAIN-SUFFIX,ai.taobao.com,REJECT
+DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT
+DOMAIN-SUFFIX,dsp.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,fav.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,m.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,mclick.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,re.taobao.com,REJECT
+DOMAIN-SUFFIX,redirect.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,simba.m.taobao.com,REJECT
+DOMAIN-SUFFIX,srd.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,temai.taobao.com,REJECT
+DOMAIN-SUFFIX,textlink.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT
+DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
+DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT
+DOMAIN-SUFFIX,tunion-api.m.taobao.com,REJECT
+DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,stat.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,m-adash.m.taobao.com,REJECT
+DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT
+
+[Rewrite]
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject-200
+^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-200
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ url response-body "ems_etao_advertise" response-body ""
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject-200
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject-200
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
+
+[MITM]
+hostname = acs.m.taobao.com, guide-acs.m.taobao.com

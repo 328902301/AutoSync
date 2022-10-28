@@ -1,5 +1,5 @@
-## 墨魚手記（[自用](https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/README.md "感谢赞助")）
-[![Cuttlefish's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://github.com/ddgksf2013/Cuttlefish)
+## 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
+[![Cuttlefish's GitLab stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://gitlab.com/ddgksf2013/Cuttlefish)
 
 > [***本库内容禁止公众号、自媒体进行任何形式的转载或发布***](https://github.com/ddgksf2013/Cuttlefish/issues)
 

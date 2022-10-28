@@ -1,0 +1,12 @@
+#!name = Agenda解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!open= 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Agenda.png
+
+[Script]
+http-response ^https://accounts.agenda.com/users/.*/license script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Agenda/Agenda_crack.js, requires-body=true, tag=Agenda解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Agenda.png
+
+[MITM]
+hostname = accounts.agenda.com

@@ -23,6 +23,8 @@
 
 [Maasea](https://github.com/Maasea/sgmodule)
 
-[Marol62926](https://raw.githubusercontent.com/Marol62926)
+[Marol62926](https://github.com/Marol62926)
+
+[yichahucha](https://github.com/yichahucha/surge)
 
 暂时就这些，未提及的后续补上。

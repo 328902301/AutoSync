@@ -29,7 +29,7 @@ DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
 ^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
 ^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png url reject
-^http:\/\/msga/.cupid/.iqiyi/.com\/scp2\.gif url reject
+^http:\/\/msga\.cupid\.iqiyi\.com\/scp2\.gif url reject
 https?:\/\/ssports\.iqiyi\.com\/app\/ url reject
 https?:\/\/ssports\.iqiyi\.com/json\/shop\/shopInfo  url reject
 https?:\/\/.+\.iqiyi\.com\/videos\/other\/20$ url reject

@@ -70,4 +70,4 @@ DOMAIN-SUFFIX,ykrec.youku.com,REJECT
 ^http:\/\/ems\.youku\.com\/imp\? url reject
 
 [MITM]
-hostname = ups.youku.com, r.l.youku.com, m.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com, iyes.mobile).youku.com, api.mobile).youku.com, hd.mobile).youku.com
+hostname = *.ott.cibntv.net, *.atm.youku.com, ups.youku.com, r.l.youku.com, m.youku.com, api.mobile.youku.com, ad.api.3g.youku.com, ems.youku.com

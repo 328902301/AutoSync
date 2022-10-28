@@ -4,6 +4,7 @@
 .ib.snssdk.com
 .xlog.snssdk.com
 .log.snssdk.com
+.extole.io
 .tracking3.vnncdn.net
 .analytics.dap-networks.de
 .analytics.algolia.com
@@ -4694,6 +4695,8 @@
 .mkto-*.com
 .ct.pinterest.com
 .telemetry.mozilla.org
+.track1.avplayer.com
+.sgtm.simoahava.com
 .lists.ccmbg.com
 .track-srv.vietnamnet.vn
 .stats.tirexo.blue

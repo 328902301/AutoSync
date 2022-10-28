@@ -1,11 +1,3 @@
-![](https://visitor-badge.glitch.me/badge?page_id=ddgksf2013.Cuttlefish) 
-[![Stars](https://img.shields.io/github/stars/ddgksf2013/Cuttlefish)](https://github.com/ddgksf2013/Cuttlefish/stargazers)
-[![Fork](https://img.shields.io/github/forks/ddgksf2013/Cuttlefish)](https://github.com/ddgksf2013/Cuttlefish/network/members)
-[![Commit](https://img.shields.io/github/commit-activity/m/ddgksf2013/Cuttlefish?label=Commits)](https://github.com/ddgksf2013/Cuttlefish/commits/master)
-[![Telegram](https://img.shields.io/badge/Telegram-Channel-33A8E3)](https://t.me/ddgksf2021)
-[![Issues](https://img.shields.io/github/issues/ddgksf2013/Cuttlefish)](https://github.com/ddgksf2013/Cuttlefish/issues)
-[![](https://img.shields.io/github/followers/ddgksf2013?label=follow&style=social)](https://github.com/ddgksf2013)
-
 ## 墨魚手記（[自用](https://github.com/ddgksf2013/Cuttlefish/blob/master/Rewrite/README.md "感谢赞助")）
 [![Cuttlefish's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://github.com/ddgksf2013/Cuttlefish)
 
@@ -16,7 +8,7 @@
 * 墨鱼自用QX配置 [***Cuttlefish.conf***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/QuantumultX.conf) 
 * 上述配置支持QX商店最新版，包括图标库订阅、网易云音乐解锁教程、旧版应用推荐、IOS更新屏蔽、分流和重写去广告、流媒体解锁查询、什么值得买知乎去广告、各种 [***APP会员解锁***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/UnlockApp.conf)...
 * 可借助 ghproxy 为 GitHub 加速：在 ```https://raw.githubusercontent.com/``` 前添加 ``````
-* 更多懒人配置请狠狠的 [***Click me***](https://github.com/ddgksf2013/Cuttlefish/blob/master/Profile/README.md)
+* 更多懒人配置请狠狠的 [***Click me***](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Profile/README.md)
 > 详细的带图指南请参考 [*@Shawn*](https://t.me/QuanX_API) 提供的 [***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)
 
 ## 2️⃣QuantumultX 分流：

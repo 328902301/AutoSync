@@ -2,11 +2,11 @@
 // @ScriptName        QX自用分流
 // @Author            @ddgksf2013
 // @RelatedGitHub     https://github.com/ddgksf2013/Cuttlefish
-// @WechatID          公眾號墨魚手記
+// @WechatID          公众号墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @UpdateTime        2022-08-12
-// @Function          分流配置（自用，混合policy、proxy、reject、direct，不建議使用）
-// @Suitable          自行觀看 「# ~ 」
+// @Function          分流配置（自用，混合policy、proxy、reject、direct，不建议使用）
+// @Suitable          自行观看 “# ~ ”
 // @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Filter/MyAdRule.list
 // ==/UserScript==
 

@@ -3,7 +3,7 @@
 ```
 In the following disclaimer:
 
-The "Script project" refers specifically to the open source scripts and rules in https://github.com/NobyDa/Script/tree/master
+The "Script project" refers specifically to the open source scripts and rules in https://github.com/YAOJIO/myself
 
 The "YAOJIO" refers specifically to the author and owner in [https://github.com/NobyDa/Script/tree/master](https://github.com/YAOJIO/myself)
 ```

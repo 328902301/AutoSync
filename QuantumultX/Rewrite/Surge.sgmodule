@@ -207,7 +207,7 @@ WPS(cn)（2022-08-15） = type=http-response,pattern=^https?:\/\/[a-z-]*account\
 螺畤大语文（2022-08-21） = type=http-response,pattern= ^https?:\/\/api8\.luosijiaoyu\.com\/api\/(HZLSJY20200817Controller\/selectFMVideoById\.html|LsjyMyContoller\/selectUserInfo\.html),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/luosidayuwen/Script/luosidayuwen.js,script-update-interval=0
 
 # > 036 财新会员【🟢】解锁财新文章阅读与音频限制 @Functional_Store_Hub
-财新会员 = type=http-request,pattern= ^https?:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/(validateAudioAuth|validate),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/caixin.js,script-update-interval=0
+财新会员 = type=http-request,pattern= ^https?:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/(validateAudioAuth|validate),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXin/Script/CaiXin.js,script-update-interval=0
 
 # > 037 财新周刊会员【🟢】解锁财新文章阅读与音频限制 @Functional_Store_Hub
 财新周刊 = type=http-response,pattern=^https?:\/\/ipadcms\.caixin\.com\/(api|tmp|power)\/(articles?|myfree(v\d+)?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXinWeekly/Script/CaiXinWeekly.js,script-update-interval=0
@@ -241,7 +241,7 @@ Vister看天下（墨鱼） = type=http-response,pattern= ^https?:\/\/open3\.vis
 PronockOut（2022-08-29） = type=http-response,pattern=https://buy.itunes.apple.com/verifyReceipt,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/Proknockout/Script/ProknockOut.js,script-update-interval=0
 
 # > 047 ColorWidget【🟢】
-ColorWidget（2022-08-29） = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/ColorWidget/Script/ColorWidet.js,script-update-interval=0
+ColorWidget（2022-08-29） = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/lutqhysky/quantumultx/mylove/ColorWidget/Script/ColorWidet.js,script-update-interval=0
 
 # > 048 搜图神器【🟢】
 搜图神器（2022-08-29） = type=http-response,pattern=http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/SearchArtifact.js,script-update-interval=0

@@ -6,7 +6,7 @@
 > 脚本功能：免输入激活码，自动激活APP，免弹窗
 > 脚本作者：Cuttlefish
 > 微信账号：墨鱼手记
-> 更新时间：2022-10-29
+> 更新时间：2022-10-31
 > 通知频道：https://t.me/ddgksf2021
 > 投稿助手：https://t.me/ddgksf2013_bot
 > 问题反馈：📮 ddgksf2013@163.com 📮
@@ -49,5 +49,5 @@ hostname=api.bspapp.com
 
 
 
-var body = $response.body.replace(/needVerify":true/g, 'needVerify":false');
+var body = $response.body.replace(/needVerify":true/g, 'needVerify":false').replace(/code":\d+/g, 'code":0');
 $done({ body });

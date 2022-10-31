@@ -1,5 +1,6 @@
 ### 引用的项目
-对下面这些无私奉献的大佬表示感谢
+
+感谢下面这些无私奉献的大佬，排名不分先后，在此表示感谢。
 
 [app2smile](https://github.com/app2smile/rules)
 

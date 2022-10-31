@@ -6,7 +6,7 @@
 > 脚本作者：Cuttlefish
 > 微信账号：墨鱼手记
 > 更新时间：2022-10-30
-> 注意事项：先卸载TopWidgets，然后重新下载TopWidgets，挂载本脚本，打开TopWidgets即可
+> 注意事项：先卸载TopWidgets，然后重新下载TopWidgets，挂载本脚本，打开TopWidgets，恢复购买即可
 > 通知频道：https://t.me/ddgksf2021
 > 投稿助手：https://t.me/ddgksf2013_bot
 > 问题反馈：📮 ddgksf2013@163.com 📮

@@ -18,6 +18,8 @@ Fantastical = type=http-response,pattern=^https:\/\/api\.flexibits\.com\/(v1\/au
 Xmind = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Xmind.js,script-update-interval=0
 # Castbox
 Castbox = type=http-response,pattern=^https?:\/\/everest\.castbox\.fm\/auth\/user\/properties\?country=\w+&raw=1,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Castbox.js,script-update-interval=0
+# Shapr3D
+Shapr3D = type=http-response,pattern=^https?:\/\/prod\.api\.shapr3d\.com\/user-management\/profile-with-device,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Shapr3D.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io,api.flexibits.com,*.xmind.*,everest.castbox.fm
+hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io,api.flexibits.com,*.xmind.*,everest.castbox.fm,prod.api.shapr3d.com

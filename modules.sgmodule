@@ -22,4 +22,4 @@ Castbox = type=http-response,pattern=^https?:\/\/everest\.castbox\.fm\/auth\/use
 Shapr3D = type=http-response,pattern=^https?:\/\/prod\.api\.shapr3d\.com\/user-management\/profile-with-device,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Shapr3D.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io,api.flexibits.com,*.xmind.*,everest.castbox.fm,prod.api.shapr3d.com
+hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io,api.flexibits.com,*.xmind.*,everest.castbox.fm,prod.api.shapr3d.com,api.pxmage.com

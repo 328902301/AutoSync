@@ -7,10 +7,8 @@ force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
 [Rule]
 # > 手机百度
-DOMAIN-SUFFIX,boxer.baidu.com,REJECT-TINYGIF
-DOMAIN-SUFFIX,ug.baidu.com,REJECT-TINYGIF
-URL-REGEX,^https?:\/\/mbd\.baidu\.com\/tcbox,REJECT-TINYGIF
-URL-REGEX,^https?:\/\/s\.bdstatic\.com\/common\/openjs\/openBox\.js.*,REJECT-TINYGIF
+DOMAIN-SUFFIX,ug.baidu.com,REJECT
+URL-REGEX,^https?:\/\/mbd\.baidu\.com\/tcbox,REJECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > Block iOS Update

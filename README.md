@@ -9,7 +9,7 @@
 [![Cuttlefish's GitLab stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://gitlab.com/ddgksf2013/Cuttlefish)
 
 
-> [***<font size=5>本库内容禁止公众号、自媒体进行任何形式的转载或发布</font>***](https://gitlab.com/ddgksf2013/Cuttlefish)
+> [***<font size=16>本库内容禁止公众号、自媒体进行任何形式的转载或发布</font>***](https://gitlab.com/ddgksf2013/Cuttlefish)
 
 # 1️⃣QuantumultX 小白2.0配置：
 * 配置更新时间：2022-10-22

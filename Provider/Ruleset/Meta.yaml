@@ -1,6 +1,9 @@
 payload:
-  - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,cdninstagram.com
+  - DOMAIN-SUFFIX,instagr.am
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-KEYWORD,instagram
+  - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,f8.com
   - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,fb.com
@@ -10,7 +13,6 @@ payload:
   - DOMAIN-SUFFIX,fbcdn.net
   - DOMAIN-SUFFIX,fbsbx.com
   - DOMAIN-SUFFIX,fbworkmail.com
-  - DOMAIN-SUFFIX,instagram.com
   - DOMAIN-SUFFIX,m.me
   - DOMAIN-SUFFIX,messenger.com
   - DOMAIN-SUFFIX,oculus.com

@@ -1,8 +1,18 @@
+![](https://visitor-badge.glitch.me/badge?page_id=ddgksf2013.Cuttlefish) 
+[![Stars](https://img.shields.io/gitlab/stars/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com&style=social)](https://gitlab.com/ddgksf2013/Cuttlefish/-/starrers)
+[![Fork](https://img.shields.io/gitlab/forks/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F&style=social)](https://gitlab.com/ddgksf2013/Cuttlefish/-/forks)
+[![Commit](https://img.shields.io/gitlab/last-commit/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://gitlab.com/ddgksf2013/Cuttlefish/-/commits/master)
+[![Telegram](https://img.shields.io/badge/Telegram-Channel-33A8E3)](https://t.me/ddgksf2021)
+[![Issues](https://img.shields.io/gitlab/issues/open/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://gitlab.com/ddgksf2013/Cuttlefish/-/issues)
+[![](https://img.shields.io/github/followers/ddgksf2013?label=follow&style=social)](https://github.com/ddgksf2013)
+
 ## 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
+[![Cuttlefish's GitLab stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://gitlab.com/ddgksf2013/Cuttlefish)
+
 
 > [***本库内容禁止公众号、自媒体进行任何形式的转载或发布***](https://gitlab.com/ddgksf2013/Cuttlefish)
 
-## 1️⃣QuantumultX 小白2.0配置：
+# 1️⃣QuantumultX 小白2.0配置：
 * 配置更新时间：2022-10-22
 * 墨鱼自用QX配置 [***Cuttlefish.conf***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/QuantumultX.conf) 
 * 上述配置支持QX商店最新版，包括图标库订阅、网易云音乐解锁教程、旧版应用推荐、IOS更新屏蔽、分流和重写去广告、流媒体解锁查询、什么值得买知乎去广告、各种 [***APP会员解锁***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/UnlockApp.conf)...

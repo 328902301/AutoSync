@@ -42,9 +42,9 @@
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 
 [Script]
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js requires-body = true, tag=喜马拉雅_屏蔽Tab页滚动_Ad, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
-http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽Tab页滚动_Ad, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
 
 [MITM]
 hostname = *.xima*.*, *.xmcdn.*

@@ -1,7 +1,7 @@
 # APP:TikTok
 # 原作者:GeQ1an
 # 原作者仓库：https://github.com/GeQ1an/Rules
-#更新时间:2022.11.2 18:30
+# 更新时间:2022.11.2 18:30
 USER-AGENT,TikTok*,TikTok
 HOST-KEYWORD,tiktokcdn-,TikTok
 HOST-KEYWORD,musical.ly,TikTok

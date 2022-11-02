@@ -1,8 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,cdninstagram.com
-  - DOMAIN-SUFFIX,instagr.am
   - DOMAIN-SUFFIX,instagram.com
-  - DOMAIN-KEYWORD,instagram
   - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,f8.com
   - DOMAIN-SUFFIX,facebookmail.com

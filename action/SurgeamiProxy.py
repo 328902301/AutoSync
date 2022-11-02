@@ -1,10 +1,11 @@
 import requests
 
-rawMicrosoft = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list").text
-rawGoogle = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list").text
+rawBiliBili = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list").text
+rawBiliBilintl = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBiliIntl/BiliBiliIntl.list").text
+raweb = requests.get("https://gist.githubusercontent.com/futurkk/9246989de0da961983fc17f4fc3d123a/raw/media.list").text
 
 result = list()
-for rawresult in [rawMicrosoft, rawGoogle]:
+for rawresult in [rawBiliBili, rawBiliBilintl, raweb]:
     result.extend([item for item in rawresult.split("\n") if not item.startswith('#')])
 result_text = '\n'.join(result)
 

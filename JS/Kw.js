@@ -3,7 +3,7 @@
 当前版本:10.3.4
 [rewrite_local]
 # 完美解锁酷我音乐
-^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Kw.js
 [mitm] 
 hostname = *.kuwo.cn, *.lrts.me
 ********************************

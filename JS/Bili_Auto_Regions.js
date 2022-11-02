@@ -17,11 +17,8 @@ Use: Surge, QuanX, Loon
 低于以上版本仅显示豆瓣评分.
 
 您需要配置相关规则集:
-Surge、Loon: 
-https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Bilibili.list
 
-QuanX: 
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Bilibili.list
+https://raw.githubusercontent.com/General74110/QuantumultX/master/Rule/Bilibili.list
 
 绑定相关select或static策略组，并且需要具有相关的区域代理服务器纳入您的子策略中，子策略可以是服务器也可以是其他区域策略组．
 最后，您可以通过BoxJs设置策略名和子策略名，或者手动填入脚本.
@@ -34,10 +31,10 @@ QX用户注: 使用切换地区功能请确保您的QX=>其他设置=>温和策�
 Surge 4.7+ 远程脚本配置 :
 ****************************
 [Script]
-Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js
 
 #可选, 适用于搜索指定地区的番剧
-Bili Search = type=http-request,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+Bili Search = type=http-request,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js
 
 [MITM]
 hostname = ap?.bili*i.com, ap?.bili*i.net
@@ -46,10 +43,10 @@ hostname = ap?.bili*i.com, ap?.bili*i.net
 Quantumult X 远程脚本配置 :
 ****************************
 [rewrite_local]
-^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\? url script-response-body https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js
 
 #可选, 适用于搜索指定地区的番剧
-^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js
 
 [mitm]
 hostname = ap?.bili*i.com, ap?.bili*i.net
@@ -62,10 +59,10 @@ ip-cidr, 203.107.1.1/24, reject
 Loon 远程脚本配置 :
 ****************************
 [Script]
-http-response ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js, requires-body=true, tag=bili自动地区
+http-response ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\? script-path=https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js, requires-body=true, tag=bili自动地区
 
 #可选, 适用于搜索指定地区的番剧
-http-request ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js, tag=bili自动地区(搜索)
+http-request ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& script-path=https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/Bili_Auto_Regions.js, tag=bili自动地区(搜索)
 
 [Mitm]
 hostname = ap?.bili*i.com, ap?.bili*i.net

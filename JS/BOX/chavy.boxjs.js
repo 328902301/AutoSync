@@ -44,11 +44,9 @@ $.json = $.name // `接口`类请求的响应体
 $.html = $.name // `页面`类请求的响应体
 
 // 页面源码地址
-$.web = `https://cdn.jsdelivr.net/gh/chavyleung/scripts@${
-  $.version
-}/box/chavy.boxjs.html?_=${new Date().getTime()}`
+$.web = `https://palesmile.cf/https://github.com/General74110/QuantumultX/raw/master/JS/BOX/chavy.boxjs.html?_=${new Date().getTime()}`
 // 版本说明地址 (Release Note)
-$.ver = `https://raw.githubusercontent.com/chavyleung/scripts/master/box/release/box.release.json`
+$.ver = `/https://github.com/General74110/QuantumultX/raw/master/JS/BOX/release/box.release.json`
 
 !(async () => {
   // 勿扰模式
@@ -306,18 +304,18 @@ function getSystemCfgs() {
     version: $.version,
     versionType: $.versionType,
     envs: [
-      { id: 'Surge', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/surge.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/surge.png'] },
-      { id: 'QuanX', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/quanX.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/quantumultx.png'] },
-      { id: 'Loon', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/loon.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/loon.png'] },
-      { id: 'Shadowrocket', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/shadowrocket.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/shadowrocket.png'] },
-      { id: 'Stash', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/stash.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/stash.png'] }
+      { id: 'Surge', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/surgeA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/surge.png'] },
+      { id: 'QuanX', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/quanXA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/quanXB.png'] },
+      { id: 'Loon', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/loonA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/loonB.png'] },
+      { id: 'Shadowrocket', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/shadowrocketA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/shadowrocketB.png'] },
+      { id: 'Stash', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/stashA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/stashB.png'] }
     ],
-    chavy: { id: 'ChavyLeung', icon: 'https://avatars3.githubusercontent.com/u/29748519', repo: 'https://github.com/chavyleung/scripts' },
+    chavy: { id: 'ChavyLeung', icon: 'https://avatars.githubusercontent.com/u/76241047?v=4', repo: 'https://github.com/General74110/QuantumultX' },
     senku: { id: 'GideonSenku', icon: 'https://avatars1.githubusercontent.com/u/39037656', repo: 'https://github.com/GideonSenku' },
     id77: { id: 'id77', icon: 'https://avatars0.githubusercontent.com/u/9592236', repo: 'https://github.com/id77' },
     orz3: { id: 'Orz-3', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Orz-3.png', repo: 'https://github.com/Orz-3/' },
-    boxjs: { id: 'BoxJs', show: false, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/box.png', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/box.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/box.png'], repo: 'https://github.com/chavyleung/scripts' },
-    defaultIcons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/appstore.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/appstore.png']
+    boxjs: { id: 'BoxJs', show: false, icon: 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/boxA.png', icons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/boxB.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/box.png'], repo: 'https://github.com/chavyleung/scripts' },
+    defaultIcons: ['https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/appstoreA.png', 'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/appstoreB.png']
   }
 }
 
@@ -352,34 +350,34 @@ function getSystemApps() {
       scripts: [
         {
           name: "抹掉：所有缓存",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.caches.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.caches.js"
         },
         {
           name: "抹掉：收藏应用",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.favapps.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.usercfgs.favapps.js"
         },
         {
           name: "抹掉：用户偏好",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.usercfgs.js"
         },
         {
           name: "抹掉：所有会话",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.sessions.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.usercfgs.sessions.js"
         },
         {
           name: "抹掉：所有备份",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.baks.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.baks.js"
         },
         {
           name: "抹掉：BoxJs (注意备份)",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.boxjs.js"
+          script: "https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/scripts/boxjs.revert.boxjs.js"
         }
       ],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://github.com/General74110/QuantumultX/blob/master/JS/BOX/switcher/box.switcher.js',
       icons: [
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.mini.png',
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.png'
+        'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/BoxSetting.mini.png',
+        'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/BoxSetting.png'
       ]
     },
     {
@@ -389,12 +387,12 @@ function getSystemApps() {
       keys: [],
       settings: [{ id: 'CFG_BoxSwitcher_isSilent', name: '静默运行', val: false, type: 'boolean', desc: '切换会话时不发出系统通知!' }],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://github.com/General74110/QuantumultX/blob/master/JS/BOX/switcher/box.switcher.js',
       icons: [
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.mini.png',
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.png'
+        'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/BoxSetting.mini.png',
+        'https://raw.githubusercontent.com/General74110/QuantumultX/master/Icon/BoxSwitcher.png'
       ],
-      script: 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js'
+      script: 'https://github.com/General74110/QuantumultX/blob/master/JS/BOX/switcher/box.switcher.js'
     },
     {
       "id": "BoxGist",

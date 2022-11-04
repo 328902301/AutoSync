@@ -1,25 +1,161 @@
-[custom]
+# 为便于识别和指出问题，增加版本号标识。当前版本号v2.1.0。
+[dns]
+no-system
+prefer-doh3
+circumvent-ipv4-answer=127.0.0.1, 0.0.0.0
+circumvent-ipv6-answer=::
+server=114.114.114.114
+server=202.141.176.93 
+server=202.141.178.13
+server=117.50.10.10
+server=223.5.5.5
+server=119.29.29.29:53
+server=119.28.28.28
+doh-server = https://223.5.5.5/dns-query,https://223.6.6.6/dns-query
+doq-server=quic://c.passcloud.xyz:784,quic://i.passcloud.xyz:784
 
-ruleset=全球直连,rules/ACL4SSR/Clash/LocalAreaNetwork.list
-ruleset=全球拦截,rules/ACL4SSR/Clash/BanAD.list
-ruleset=应用净化,rules/ACL4SSR/Clash/BanProgramAD.list
-ruleset=全球直连,rules/ACL4SSR/Clash/GoogleCN.list
-ruleset=全球直连,rules/ACL4SSR/Clash/Ruleset/SteamCN.list
-ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-ruleset=国外媒体,rules/ACL4SSR/Clash/ProxyMedia.list
-ruleset=节点选择,rules/ACL4SSR/Clash/ProxyLite.list
-ruleset=全球直连,rules/ACL4SSR/Clash/ChinaDomain.list
-ruleset=全球直连,rules/ACL4SSR/Clash/ChinaCompanyIp.list
-;ruleset=全球直连,[]GEOIP,LAN
-ruleset=全球直连,[]GEOIP,CN
-ruleset=漏网之鱼,[]FINAL
+[general]
+server_check_url= http://1.1.1.1/generate_204
+dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+profile_img_url=https://github.githubassets.com/images/modules/site/integrators/google.png
+fallback_udp_policy=direct
+udp_whitelist=53, 80-427, 444-65535
 
-custom_proxy_group=节点选择`select`.*
-custom_proxy_group=国外媒体`select`.*
-custom_proxy_group=全球直连`select`[]DIRECT`.*
-custom_proxy_group=全球拦截`select`[]REJECT`[]DIRECT`.*
-custom_proxy_group=应用净化`select`[]REJECT`[]DIRECT`.*
-custom_proxy_group=漏网之鱼`select`.*
 
-enable_rule_generator=true
-overwrite_original_rules=true
+[policy]
+static=Netflix, proxy, 新加坡, 香港, 日本, 美国, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
+static=Disney+, proxy, 香港, 新加坡, 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
+static=PrimeVideo, proxy, 香港, 新加坡, 美国, 英国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Prime_Video_1.png
+static=YouTube, proxy, 香港, 新加坡, 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+static=Paramount+, proxy, 香港, 新加坡, 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Paramount.png
+static=国际流媒体, proxy, direct, 美国, 新加坡, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
+static=Spotify, proxy, direct, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
+static=Telegram, proxy, 新加坡, 香港, 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+static=PayPal, direct, 美国, 香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+static=Apple, direct, 美国, 香港, 新加坡, 日本, 台湾, 韩国, 英国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#static=AppleNews, direct, 美国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+#static=TikTok, direct, 美国, 香港, 英国, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+static=Golbal, proxy, 香港, 新加坡, 美国, 日本, 韩国, 台湾, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+static=香港, server-tag-regex=(?=.*(香港|HK|京港|(?i)Hong))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+static=新加坡, server-tag-regex=(?=.*(新加坡|狮城|SG|(?i)Singapore))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+static=韩国, server-tag-regex=(?=.*(韩国|韓國|南朝鲜|KR|(?i)Korea))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+static=日本, server-tag-regex=(?=.*(日本|JP|京日|(?i)Japan))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+static=台湾, server-tag-regex=(?=.*(台湾|台灣|京台|TW|(?i)Taiwan))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Samoa.png
+static=美国, server-tag-regex=(?=.*(美国|美國|京美|US|(?i)States|American))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+static=英国, server-tag-regex=(?=.*(英国|UK|(?i)Kingdom|Britain))^((?!(专线|手游|游戏|(?i)IPLC|IEPL|game)).)*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+static=漏网之鱼, direct, proxy, 英国, 美国, 新加坡, 香港, img-url=https://raw.githubusercontent.com/Yuanxsxs/QtumultX/master/Icon/Catcat/b2b4e2bf895a2c76.png
+
+[server_remote]
+https://api.fuqing.ch/sub?target=quanx&list=true&emoji=true&tfo=true&udp=true&scv=true&url=https%3A%2F%2Ffuqing.ch%2Fmodules%2Fservers%2Ffuqingsocks%2Fosubscribe.php%3Fsid%3D10000%26token%3DXMI7HLQhEntv#out=Traffic+Expire, tag=WestData, img-url=https://raw.githubusercontent.com/Yuanxsxs/QtumultX/master/Icon/Catcat/6bcf963381a7ef42.png, update-interval=43200, opt-parser=true, enabled=true
+
+[filter_remote]
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=广告拦截, force-policy=reject, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list, tag=运营劫持, force-policy=reject, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list, tag=隐私保护, force-policy=reject, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=Apple, force-policy=Apple, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=Disney+, force-policy=Disney+, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PrimeVideo/PrimeVideo.list, tag=Prime Video, force-policy=PrimeVideo, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=Youtube, force-policy=YouTube, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ParamountPlus/ParamountPlus.list, tag=Paramount+, force-policy=Paramount+, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list, tag=国际流媒体, force-policy=国际流媒体, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PayPal/PayPal.list, tag=PayPal, force-policy=PayPal, update-interval=86400, opt-parser=true, enabled=true
+#https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleNews/AppleNews.list, tag=AppleNews, force-policy=AppleNews, update-interval=86400, opt-parser=true, enabled=true
+#https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=Tiktok, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list, tag=Global, force-policy=Golbal, update-interval=86400, opt-parser=false, enabled=true
+#https://raw.githubusercontent.com/VirgilClyne/VirgilClyne/main/modules/ASN/ASN.China.list, tag=ASN, force-policy=direct, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/China/China.list, tag=China, force-policy=direct, update-interval=86400, opt-parser=true, enabled=true
+
+[rewrite_remote]
+#https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/external/QuantumultX/TikTokUnlock/TikTokUS/TikTokUS.conf, tag=TikTok, update-interval=86400, opt-parser=false, inserted-resource=true, enabled=true
+https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Bilibili.conf, tag=B站去广告, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Weibo.conf, tag=微博去广告, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.qxrewrite, tag=开屏去广告, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://ghproxy.com/https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=神机去广告, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf, tag=神机重定向, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.qxrewrite, tag=知乎助手, update-interval=86400, opt-parser=false, inserted-resource=true, enabled=true
+https://github.com/app2smile/rules/raw/master/module/tieba-qx.conf, tag=贴吧去广告, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+#boxjs规则，强烈建议保持开启
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule, tag=BoxJs, update-interval=86400, opt-parser=true, inserted-resource=true, enabled=true
+#破解软件规则，建议用的时候开启
+
+#获取cookie类重写，现抓ck现启用，且注意我单列的基本是互相冲突的，不要同时开
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.qxrewrite, tag=叮咚买菜Cookie, update-interval=86400, opt-parser=false, inserted-resource=true, enabled=true
+#https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf, tag=获取Cookie（现抓现打勾）, update-interval=86400, opt-parser=false, enabled=true
+
+[server_local]
+#Faker提示您：这个位置用于填写您非机场订阅的固定节点信息（请回车另起一行）
+#自定义本地节点的写法格式如下（抄作业自契阔大佬@orz-3，感谢）
+#http写法
+#http=111.111.111.111:4567, fast-open=false, udp-relay=false, tag=http
+#ssr写法
+#shadowsocks=music.desperadoj.com:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2, fast-open=false, udp-relay=false, tag=ss
+#v2ray写法
+#vmess=v2ray.com:231, method=aes-128-gcm, password=64532b8d-4c4d-3ec9-829b-81720abe314c, obfs=ws, obfs-host=SCDN.71138.QCFTDS.China-nCDN-nRDS.com, obfs-uri=/iso, fast-open=false, udp-relay=false, tag=v2ray
+#trojan写法
+#trojan=example.com:443, password=pwd, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan
+
+[filter_local]
+# 知乎去广告，以下规则请放置在filter_local最顶部
+DOMAIN,118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+HOST,mqtt.zhihu.com,reject
+HOST,sugar.zhihu.com,reject
+USER-AGENT,AVOS*,REJECT
+
+# > 贴吧AD处理
+IP-CIDR,180.76.76.200/32,REJECT
+HOST,im.tieba.baidu.com,REJECT
+
+# > Siri搜索建议
+host,lookup-api.apple.com.edgekey.net,proxy
+host,e16991.b.akamaiedge.net,proxy
+
+# > local
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+ip-cidr, 182.254.116.0/24, direct
+geoip, cn, direct
+final, 漏网之鱼
+
+# 其他
+host-suffix, local, direct
+host-keyword, yattazen, proxy
+host, jdsharedresourcescdn.azureedge.net, proxy
+# Final
+final, 漏网之鱼
+
+[rewrite_local]
+
+
+[task_local]
+0 0 23 1 * https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_config.js, tag=微博配置, img-url=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/imgs/icon/weibo.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/traffic-check.js, tag=策略流量查询, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-google.js, tag=送中 查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png, enabled=true
+20 0 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, tag=叮咚买菜_每日签到, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Diaspora.png, enabled=true
+
+[http_backend]
+#Faker提示您：如您不了解，请不要修改
+#已将boxjs的加载方式修改为http_backend方式，默认浏览器登录boxjs地址为127.0.0.1:9999
+#如果还想用域名方式登录boxjs，先用上面的数字ip登录boxjs，然后点击BoxJs页面最下方的 > 应用按钮(底栏) > 内置应用按钮 > 偏好设置按钮，
+#在新页面`HTTP Backend (Quantumult X)` 中填入 http://127.0.0.1:9999 并保存，就可以继续用域名方式登录boxjs了
+https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, tag=BoxJS, path=^/, enabled=true
+
+[mitm]
+passphrase = 28B699B3
+p12 = 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
+
+hostname = -*.amemv.com,-*.snssdk.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, m.douban.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, api.gotokeep.com
+
+skip_validating_cert = true

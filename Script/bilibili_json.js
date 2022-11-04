@@ -186,7 +186,7 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`直播去广告出现异常：${err}`);
                 }
                 break;
-            // 直播去广告
+            // 右上角活动
             case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(magicJS.response.body);

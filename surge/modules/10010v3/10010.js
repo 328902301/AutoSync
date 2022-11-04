@@ -465,17 +465,23 @@ ${pkgs.join('\n')}
 
   console.log(detailText)
   
-  result = {
-    response: {
-      status: 200,
-      body: JSON.stringify(detail),
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+  const resultBody = JSON.stringify(detail)
+  const resultHeaders = {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+  }
+  if ($.isQuanX()) {
+    result = { status: 'HTTP/1.1 200', headers: resultHeaders, body: resultBody }
+  } else {
+    result = {
+      response: {
+        status: 200,
+        body: resultBody,
+        headers: resultHeaders,
       },
-    },
+    }
   }
   $.setdata(detailText, KEY_DETAIL_TEXT)
   if (durationFree < 0 || durationNotFree < 0) {

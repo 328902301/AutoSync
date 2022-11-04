@@ -82,11 +82,21 @@ hostname = 10010.json
 
 ### QuanX
 
-> 仅供参考 以该 app 最新配置为准 自行配置
+> 以该 app 最新配置的语法为准, 自行配置. 请勿全部复制粘贴然后问为啥不能用.
 
 ```
 [task_local]
 */5 * * * * https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.js
+```
+
+自行配置 MITM, 添加重写
+
+> 以该 app 最新配置的语法为准, 自行配置. 请勿全部复制粘贴然后问为啥不能用.
+
+```
+hostname=10010.json
+
+https?:\/\/10010\.json url script-analyze-echo-response https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.js
 ```
 
 ### Loon

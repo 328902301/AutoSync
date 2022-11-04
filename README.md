@@ -5,13 +5,13 @@
 [![Issues](https://img.shields.io/gitlab/issues/open/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://gitlab.com/ddgksf2013/Cuttlefish/-/issues)
 [![](https://img.shields.io/gitlab/languages/count/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://github.com/ddgksf2013)
 
-# 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
+## 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
 [![Cuttlefish's GitLab stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://gitlab.com/ddgksf2013/Cuttlefish)
 
 
 > [***本库内容禁止公众号、自媒体进行任何形式的转载或发布***](https://gitlab.com/ddgksf2013/Cuttlefish)
 
-# 1️⃣QuantumultX 小白2.0配置： 
+## 1️⃣QuantumultX 小白2.0配置： 
 * 配置更新时间：2022-10-22</font>
 * 墨鱼自用QX配置 [***Cuttlefish.conf***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/QuantumultX.conf) 
 * 上述配置支持QX商店最新版，包括图标库订阅、网易云音乐解锁教程、旧版应用推荐、IOS更新屏蔽、分流和重写去广告、流媒体解锁查询、什么值得买知乎去广告、各种 [***APP会员解锁***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/UnlockApp.conf)...
@@ -19,13 +19,13 @@
 * 更多懒人配置请狠狠的 [***Click me***](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Profile/README.md)
 > 详细的带图指南请参考 [*@Shawn*](https://t.me/QuanX_API) 提供的 [***Quantumult X 不完全指南***](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)
 
-# 2️⃣QuantumultX 分流：
+## 2️⃣QuantumultX 分流：
 * 网易云音乐分流 [*NeteaseMusic.list*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Filter/NeteaseMusic.list)
 * 自用影视广告屏蔽 [*Mybreak.list*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Filter/Mybreak.list)
 * IP隐藏の分流 [*Anti-ip.list*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Filter/anti-ip-attribution.list)
 > 更多的分流请参考 [*@DivineEngine*](https://github.com/DivineEngine) 提供的 [***Quantumult X 分流***](https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter)
 
-# 3️⃣QuantumultX 复写：
+## 3️⃣QuantumultX 复写：
 <table>
     <tr> <th> 类别 </th> <th> 序号 </th> <th> 功能 </th> <th> 链接 </th> <th> 作者 </th> </tr >
     <tr>
@@ -51,7 +51,7 @@
 		<td colspan="5">  </td>
     </tr>
     <tr>
-		<td rowspan="11"><strong>广告屏蔽</strong></td>
+		<td rowspan="12"><strong>广告屏蔽</strong></td>
 		<td > 1 </td> <td > 微信小程序去广告神器 </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Applet.conf"><em>Applet.conf</em></a></td><td>ddgksf2013</td>
     </tr>
     <tr>
@@ -83,6 +83,9 @@
     </tr>
 	<tr>
 		<td > 11 </td> <td > 微博国际版去广告</td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/WeiboLite.conf"><em>WeiboLite.conf</em></a></td><td>ddgksf2013</td>  
+    </tr>
+	<tr>
+		<td > 12 </td> <td > 小红书去广告</td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/XiaoHongShu.conf">XiaoHongShu.conf</a></td><td>ddgksf2013</td>  
     </tr>
 	<tr>
 		<td colspan="5">  </td>
@@ -132,7 +135,7 @@
 
 > 更多的重写请参考 [*@ddgksf2013*](https://gitlab.com/ddgksf2013) 提供的 [***Quantumult X 重写配置***](https://gitlab.com/ddgksf2013/Cuttlefish/-/tree/master/Rewrite)
 
-# 4️⃣QuantumultX 脚本Task：
+## 4️⃣QuantumultX 脚本Task：
 - [x] 喵喵记账每日签到 [*mmjz.js*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js)
 - [x] QX每日色图脚本 [*setu.js*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/setu.js)
 - [x] 得宝小程序签到 [*db.js*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js)
@@ -141,7 +144,7 @@
 - [x] 每天60s读懂世界 [*60s.js*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/60s.js)
 > 更多的签到脚本请参考 [*@Chavyleung*](https://github.com/chavyleung) 提供的 [***Quantumult X 签到脚本***](https://github.com/chavyleung/scripts/blob/master/QuantumultX_Remote_Task.conf)
 
-# 5️⃣QuantumultX 图标库
+## 5️⃣QuantumultX 图标库
 
 
 | 序号 | 点击名称快捷添加图标订阅 | 作者 |
@@ -158,7 +161,7 @@
 
 > 更多的图标订阅请参考 [*@ddgksf2013*](https://gitlab.com/ddgksf2013) 集合的 [***Quantumult X 图标库***](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Icon/README.md)
 
-# 6️⃣Awesome Resource：
+## 6️⃣Awesome Resource：
 * QuantumultX测试版[***更新日志***](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/QX_TestFlight_Update.log)
 * 自用Clash配置 [*Config.yaml*](https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Profile/Config.yaml)
 * 1080P超清IPTV国内[***直播源***](https://github.com/wonderfvvl/iptv-3/raw/master/国内.m3u)
@@ -166,14 +169,14 @@
 * [***自用优秀Web网站合集***](https://gitlab.com/ddgksf2013/Cuttlefish/-/tree/master/Html)：影视、工具、下载、阅读、Porn...
 
 
-# 7️⃣Telegram 通知频道：
+## 7️⃣Telegram 通知频道：
 * 加入[***Cuttlefishの自留地***](https://t.me/ddgksf2021)，第一时间获取最新消息
 * 如有任何关于本库使用的问题可邮件 *ddgksf2013@163.com* 询问
 * 若有需要Crack的应用或小程序可在[***腾讯文档***](https://docs.qq.com/sheet/DYmRTQXpVY0hNcGls?tab=BB08J2) 中反馈
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 8️⃣特别感谢：
+## 8️⃣特别感谢：
 
 以下排名不分先后，如有遗漏可联系[*@ddgksf2013*](https://t.me/ddgksf2013)
 

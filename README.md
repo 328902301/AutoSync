@@ -4,6 +4,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-Channel-33A8E3)](https://t.me/ddgksf2021)
 [![Issues](https://img.shields.io/gitlab/issues/open/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://gitlab.com/ddgksf2013/Cuttlefish/-/issues)
 [![](https://img.shields.io/gitlab/languages/count/ddgksf2013/Cuttlefish?gitlab_url=https%3A%2F%2Fgitlab.com%2F)](https://github.com/ddgksf2013)
+[![](https://img.shields.io/badge/Author-%E5%A2%A8%E9%B1%BC%E6%89%8B%E8%AE%B0-brightgreen)](https://github.com/ddgksf2013)
 
 ## 墨魚手記（[自用](https://gitlab.com/ddgksf2013/Cuttlefish/-/blob/master/Rewrite/README.md "感谢赞助")）
 [![Cuttlefish's GitLab stats](https://github-readme-stats.vercel.app/api?username=ddgksf2013&show_icons=true&count_private=true&theme=vue)](https://gitlab.com/ddgksf2013/Cuttlefish)

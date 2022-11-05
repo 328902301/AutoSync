@@ -9,4 +9,4 @@
 ^https?:\/\/raw.githubusercontent.com https://raw.fastgit.org 302
 
 [MITM]
-hostname=raw.githubusercontent.com
+hostname = raw.githubusercontent.com

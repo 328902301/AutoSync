@@ -83,7 +83,7 @@ if (magicJS.read(blackKey)) {
                     obj.data.teenagers_status = 0;
                     body = JSON.stringify(obj);
                 } catch (err) {
-                    magicJS.logError(`记录Story的aid出现异常：${err}`);
+                    magicJS.logError(`teenagers出现异常：${err}`);
                 }
                 break;
             // 标签页处理，如去除会员购等等

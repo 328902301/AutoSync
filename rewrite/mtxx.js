@@ -2,7 +2,7 @@
 美图秀秀 解锁VIP
 *******************************
 [rewrite_local]
-^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json) url script-response-body https://raw.githubusercontent.com/possessy/qx/main/js/mtxx.js
+^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json) url script-response-body https://raw.githubusercontent.com/possessy/quan/main/rewrite/mtxx.js
 [mitm] 
 hostname = api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com
 *******************************/

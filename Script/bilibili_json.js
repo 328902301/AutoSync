@@ -2,8 +2,8 @@
 应用名称：自用B站去广告脚本
 脚本作者：Cuttlefish
 微信账号：公众号墨鱼手记
-更新时间：2022-11-04
-脚本版本：(71) 
+更新时间：2022-11-05
+脚本版本：(72) 
 通知频道：https://t.me/ddgksf2021
 问题反馈：ddgksf2013@163.com
 */
@@ -61,7 +61,7 @@ if (magicJS.read(blackKey)) {
                 }
                 break;
             // 匹配story模式，用于记录Story的aid
-            case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
+            case /^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(magicJS.response.body);
                     let items = [];
@@ -71,6 +71,16 @@ if (magicJS.read(blackKey)) {
                         }
                     }
                     obj["data"]["items"] = items;
+                    body = JSON.stringify(obj);
+                } catch (err) {
+                    magicJS.logError(`记录Story的aid出现异常：${err}`);
+                }
+                break;
+            //teenagers modified
+            case /^https?:\/\/app\.bilibili\.com\/x\/v\d\/account\/teenagers\/status\?/.test(magicJS.request.url):
+                try {
+                    let obj = JSON.parse(magicJS.response.body);
+                    obj.data.teenagers_status = 0;
                     body = JSON.stringify(obj);
                 } catch (err) {
                     magicJS.logError(`记录Story的aid出现异常：${err}`);

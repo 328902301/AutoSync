@@ -56,7 +56,7 @@
 		<td > 1 </td> <td > 微信小程序去广告神器 </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Applet.conf"><em>Applet.conf</em></a></td><td>✅</td><td>ddgksf2013</td>
     </tr>
     <tr>
-		<td > 2 </td> <td > 开屏广告屏蔽2.0 </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/StartUp.conf"><em>StartUp.conf</em></a></td><td>✅</td><td>ddgksf2013</td>
+		<td > 2 </td> <td > <strong>开屏广告屏蔽2.0 </strong></td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/StartUp.conf"><em>StartUp.conf</em></a></td><td>✅</td><td>ddgksf2013</td>
     </tr>
     <tr>
 		<td > 3 </td> <td > 油管广告屏蔽 </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/YoutubeAds.conf"><em>YoutubeAds.conf</em></a></td><td>✅</td><td>divineEngine</td>  

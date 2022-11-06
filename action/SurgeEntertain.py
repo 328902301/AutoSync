@@ -11,5 +11,5 @@ for rawresult in [rawYouTube, rawSpotify, rawTwitch, rawMicrosoft, rawGoogle]:
     result.extend([item for item in rawresult.split("\n") if not item.startswith('#')])
 result_text = '\n'.join(result)
 
-with open("./SocialMedia.conf", "w") as f:
+with open("./Entertain.conf", "w") as f:
     f.write("\n".join(result))

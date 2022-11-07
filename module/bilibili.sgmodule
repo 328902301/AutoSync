@@ -29,36 +29,36 @@ DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive data="mocks/reject-dict.json"
 [Script]
 
-哔哩哔哩4k = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,max-size=0,timeout=10,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js,script-update-interval=0
+哔哩哔哩4k = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,max-size=0,timeout=10,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1,script-update-interval=0
 
-BiliBili_开屏预加载 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+BiliBili_开屏预加载 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
-BiliBili_我的页面处理@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+BiliBili_我的页面处理@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
-#合并#BiliBili_哔哩哔哩_Proto去广告@app2smile = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
-#合并#BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
-#合并#BiliBili_哔哩哔哩_标签页处理@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+#合并#BiliBili_哔哩哔哩_Proto去广告@app2smile = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili-proto.js
+#合并#BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
+#合并#BiliBili_哔哩哔哩_标签页处理@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
 # 仓库地址 https://github.com/app2smile/rules
 # h2下走grpc.biliapi.net(Surge TF2332以上版本可正常解析) h1时走app.bilibili.com
 #合并上面三条
 #############以下二选一  注释即可
 #不去除动态中最常访问
-bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
+bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili-proto.js,script-update-interval=0
 
 #去除动态中最常访问
-#bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
+#bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili-proto.js,script-update-interval=0
 
-BiliBili_屏蔽首页右上活动[卸载重装]@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+BiliBili_屏蔽首页右上活动[卸载重装]@ddgksf2013 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
-#BiliBili_观影页面去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+#BiliBili_观影页面去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
-BiliBili_热搜发现 = type=http-response,requires-body=1,max-size=0,pattern=^https://app.bilibili.com/x/v2/search/square,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+BiliBili_热搜发现 = type=http-response,requires-body=1,max-size=0,pattern=^https://app.bilibili.com/x/v2/search/square,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
 
-BiliBili_统一设置的皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
+BiliBili_统一设置的皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili_json.js,script-update-interval=-1
 
-bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=-1
+bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/bilibili-json.js,script-update-interval=-1
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.bilibili.com,api.biliapi.net, grpc.biliapi.net, api.vc.bilibili.com

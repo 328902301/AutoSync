@@ -54,6 +54,7 @@ payload:
   - DOMAIN,edge.steam-dns.top.comcast.net
   - DOMAIN,steamusercontent-a.akamaihd.net
   - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN,cdn.akamai.steamstatic.com
 #  - DOMAIN,cache1-lax1.steamcontent.com
 #  - DOMAIN,cache2-lax1.steamcontent.com
 #  - DOMAIN,cache3-lax1.steamcontent.com

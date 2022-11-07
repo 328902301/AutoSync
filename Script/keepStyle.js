@@ -49,32 +49,24 @@ hostname=api.gotokeep.com, kad.gotokeep.com
 ***********************************/
 
 
-if ($request.url.indexOf('athena/v5/people/my') != -1) {
-    let obj = JSON.parse($response.body);
-    obj.data.floatingInfo = {}
-    $done({ body: JSON.stringify(obj) });
-}
-else if( $request.url.indexOf('config/v3/basic') != -1 ){
-    let obj = JSON.parse($response.body);
-    obj.data.bottomBarControl.defaultTab = "home";
-    //obj.data.bottomBarControl.tabs.forEach((e, i) => {if (e.tabType == "entry" || e.tabType == "mall") bottomBarTabs.splice(i--, 1);});
-    obj.data.bottomBarControl.tabs = Object.values(obj.data.bottomBarControl.tabs).filter(item => !(item["tabType"]=="entry"||item["tabType"]=="mall"||item["tabType"]=="prime"));
-    obj.data.homeTabs = Object.values(obj.data.homeTabs).filter(item => !(item["type"]=="uni_web_activity"));
-    if(obj.data.homeTabs.length>1){
-		obj.data.homeTabs[0].schema="keep://homepage/homePrime";
-		obj.data.homeTabs[0].name = "會員";
-		obj.data.homeTabs[0].type = "homePrime"
-	}
-    $done({ body: JSON.stringify(obj) });
-}
-else if( $request.url.indexOf('homepage/v7/tab/find') != -1 ){
-    let obj = JSON.parse($response.body);
-    obj.data.sections = Object.values(obj.data.sections).filter(item => (item["contentStyle"]=="quickEntranceV3"));
-    //obj.data.sections.quickEntrances = obj.data.sections.quickEntrances.filter(item => (item.itemTrackProps.itemPosition==0||item.itemTrackProps.itemPosition==1||item.itemTrackProps.itemPosition==2||item.itemTrackProps.itemPosition==3));
-    $done({ body: JSON.stringify(obj) });
-}
-else if( $request.url.indexOf('preview') != -1 ){
-    let obj = JSON.parse($response.body);
-    obj.data.detailSections = Object.values(obj.data.detailSections).filter(item => !(item["sectionType"]=="recommendation"));
-    $done({ body: JSON.stringify(obj) });
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(-1!=$request.url.indexOf("athena/v5/people/my")){let e=JSON.parse($response.body);e.data.floatingInfo={},$done({body:JSON.stringify(e)})}else if(-1!=$request.url.indexOf("config/v3/basic")){let e=JSON.parse($response.body);e.data.bottomBarControl.defaultTab="home",e.data.bottomBarControl.tabs=Object.values(e.data.bottomBarControl.tabs).filter(e=>!("entry"==e.tabType||"mall"==e.tabType||"prime"==e.tabType)),e.data.homeTabs=Object.values(e.data.homeTabs).filter(e=>!("uni_web_activity"==e.type)),1<e.data.homeTabs.length&&(e.data.homeTabs[0].schema="keep://homepage/homePrime",e.data.homeTabs[0].name="會員",e.data.homeTabs[0].type="homePrime"),$done({body:JSON.stringify(e)})}else if(-1!=$request.url.indexOf("homepage/v7/tab/find")){let e=JSON.parse($response.body);e.data.sections=Object.values(e.data.sections).filter(e=>"quickEntranceV3"==e.contentStyle),e.data.sections[0].quickEntrances=e.data.sections[0].quickEntrances.filter(e=>0==e.itemTrackProps.itemPosition||1==e.itemTrackProps.itemPosition||2==e.itemTrackProps.itemPosition||3==e.itemTrackProps.itemPosition),$done({body:JSON.stringify(e)})}else if(-1!=$request.url.indexOf("preview")){let e=JSON.parse($response.body);e.data.detailSections=Object.values(e.data.detailSections).filter(e=>!("recommendation"==e.sectionType)),$done({body:JSON.stringify(e)})}

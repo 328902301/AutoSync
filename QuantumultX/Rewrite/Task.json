@@ -1,0 +1,3 @@
+{"name":"Sub-Store订阅同步","task":[{"config":"30 */12 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/cron-sync-artifacts.min.js, img-url=https://raw.githubusercontent.com/iEwha/Profiles/master/icon/Sub-Store.png, tag=Sub-Store订阅同步, enabled=true"}
+
+{"name":"哔哩哔哩","task":[{"config":"35 6 * * * https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, img-url=https://raw.githubusercontent.com/iEwha/Profiles/master/icon/Bilibili.png, tag=哔哩哔哩, enabled=true"}

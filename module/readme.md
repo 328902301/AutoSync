@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/Keywos/Rule/main/module/bili.sgmodule

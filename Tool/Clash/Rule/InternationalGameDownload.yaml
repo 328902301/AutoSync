@@ -53,7 +53,6 @@ payload:
   - DOMAIN,level3.cdn.steampipe.steamcontent.com
   - DOMAIN,edge.steam-dns.top.comcast.net
   - DOMAIN,steamusercontent-a.akamaihd.net
-  - DOMAIN,cdn.akamai.steamstatic.com
   - DOMAIN-SUFFIX,steamcontent.com
 #  - DOMAIN,cache1-lax1.steamcontent.com
 #  - DOMAIN,cache2-lax1.steamcontent.com

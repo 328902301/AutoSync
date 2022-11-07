@@ -57,7 +57,7 @@ else if( $request.url.indexOf('config/v3/basic') != -1 ){
 else if( $request.url.indexOf('homepage/v7/tab/find') != -1 ){
     let obj = JSON.parse($response.body);
     obj.data.sections = Object.values(obj.data.sections).filter(item => (item["contentStyle"]=="quickEntranceV3"));
-    obj.data.sections.quickEntrances = obj.data.sections.quickEntrances.filter(item => (item.itemTrackProps.itemPosition==0||item.itemTrackProps.itemPosition==1||item.itemTrackProps.itemPosition==2||item.itemTrackProps.itemPosition==3));
+    //obj.data.sections.quickEntrances = obj.data.sections.quickEntrances.filter(item => (item.itemTrackProps.itemPosition==0||item.itemTrackProps.itemPosition==1||item.itemTrackProps.itemPosition==2||item.itemTrackProps.itemPosition==3));
     $done({ body: JSON.stringify(obj) });
 }
 else if( $request.url.indexOf('preview') != -1 ){

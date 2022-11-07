@@ -1,0 +1,10 @@
+#!name=解锁 pola
+#!desc=泼辣修图vip
+#需要在设置里恢复购买即可
+#!author=Gitclone-keywos
+#!homepage=https://gitclone.com/gogs/Keywos/loon-shadowrocket/src/main/loon
+[Script]
+http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js, requires-body=true, binary-body-mode=true, timeout=10, enabled=false, tag=pola
+[MITM]
+hostname = %APPEND% api.polaxiong.com
+

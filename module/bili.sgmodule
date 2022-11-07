@@ -1,5 +1,5 @@
 #!name=墨鱼 哔哩哔哩
-#!desc=2022.11.6
+#!desc=2022.11.7
 #!system=ios
 #改写自https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Bilibili.conf
 [Rule]

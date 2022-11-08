@@ -3,7 +3,7 @@
 ************************************
 
 [rewrite_local]
-^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/spotifypro.js
+^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/spotifypro.js
 
 [mitm] 
 hostname=spclient.wg.spotify.com

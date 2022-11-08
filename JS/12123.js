@@ -1,61 +1,425 @@
 /*
+
+
 脚本名称：获取12123_token
-更新时间：2022-10-23
+获取方式：打开支付宝 交管12123 【官方版】-> 登录获取
+更新时间：2022-11-08
 ====================================================================================================
 配置 (QuanX)
 [rewrite_local]
-^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_12123_token.js
+^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz url script-request-body https://raw.githubusercontent.com/dompling/Script/master/12123/index.js
 
 [MITM]
-hostname = miniappcsfw.122.gov.cn
+hostname = miniappcsfw.122.gov.cn:8443
 ====================================================================================================
 配置 (Surge)
 [Script]
-12123_Token = type=http-request,pattern=^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_12123_token.js,script-update-interval=0
+12123_Token = type=http-request,pattern=^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/dompling/Script/master/12123/index.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% miniappcsfw.122.gov.cn
+hostname = %APPEND% miniappcsfw.122.gov.cn:8443
 ====================================================================================================
-*/
+ */
 
-const $ = new Env('交管12123');
-$.token_key = 'token_12123';
-$.token = $.getdata($.token_key);
-$.is_debug = $.getdata('is_debug');
+const APIKey = '12123';
+const $ = new API(APIKey, true);
+if ($request) GetCookie();
 
-!(async () => {
-  if (isGetCookie = typeof $request !== `undefined`) {
-    GetCookie();
+function GetCookie() {
+  console.log(`交管 12123：获取 token 开始`);
+  if ($request.url.indexOf('openapi/invokeApi/business/biz') > -1) {
+    const cookie = $request.body;
+    $.log($request.body);
+    if (
+      cookie.indexOf(`unhandledVioCount`) === -1 ||
+      cookie.indexOf(`authToken`) === -1
+    )
+      return $.done();
+    $.write(cookie, '#wx_12123');
+    $.notify('交管 12123', 'cookie 写入成功');
+  }
+  $.done();
+}
+
+function ENV() {
+  const isJSBox = typeof require == 'function' && typeof $jsbox != 'undefined';
+  return {
+    isQX: typeof $task !== 'undefined',
+    isLoon: typeof $loon !== 'undefined',
+    isSurge:
+      typeof $httpClient !== 'undefined' && typeof $utils !== 'undefined',
+    isBrowser: typeof document !== 'undefined',
+    isNode: typeof require == 'function' && !isJSBox,
+    isJSBox,
+    isRequest: typeof $request !== 'undefined',
+    isScriptable: typeof importModule !== 'undefined',
+  };
+}
+
+function HTTP(
+  defaultOptions = {
+    baseURL: '',
+  }
+) {
+  const { isQX, isLoon, isSurge, isScriptable, isNode, isBrowser } = ENV();
+  const methods = ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS', 'PATCH'];
+  const URL_REGEX =
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+
+  function send(method, options) {
+    options =
+      typeof options === 'string'
+        ? {
+            url: options,
+          }
+        : options;
+    const baseURL = defaultOptions.baseURL;
+    if (baseURL && !URL_REGEX.test(options.url || '')) {
+      options.url = baseURL ? baseURL + options.url : options.url;
+    }
+    if (options.body && options.headers && !options.headers['Content-Type']) {
+      options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+    }
+    options = {
+      ...defaultOptions,
+      ...options,
+    };
+    const timeout = options.timeout;
+    const events = {
+      ...{
+        onRequest: () => {},
+        onResponse: (resp) => resp,
+        onTimeout: () => {},
+      },
+      ...options.events,
+    };
+
+    events.onRequest(method, options);
+
+    let worker;
+    if (isQX) {
+      worker = $task.fetch({
+        method,
+        ...options,
+      });
+    } else if (isLoon || isSurge || isNode) {
+      worker = new Promise((resolve, reject) => {
+        const request = isNode ? require('request') : $httpClient;
+        request[method.toLowerCase()](options, (err, response, body) => {
+          if (err) reject(err);
+          else
+            resolve({
+              statusCode: response.status || response.statusCode,
+              headers: response.headers,
+              body,
+            });
+        });
+      });
+    } else if (isScriptable) {
+      const request = new Request(options.url);
+      request.method = method;
+      request.headers = options.headers;
+      request.body = options.body;
+      worker = new Promise((resolve, reject) => {
+        request
+          .loadString()
+          .then((body) => {
+            resolve({
+              statusCode: request.response.statusCode,
+              headers: request.response.headers,
+              body,
+            });
+          })
+          .catch((err) => reject(err));
+      });
+    } else if (isBrowser) {
+      worker = new Promise((resolve, reject) => {
+        fetch(options.url, {
+          method,
+          headers: options.headers,
+          body: options.body,
+        })
+          .then((response) => response.json())
+          .then((response) =>
+            resolve({
+              statusCode: response.status,
+              headers: response.headers,
+              body: response.data,
+            })
+          )
+          .catch(reject);
+      });
+    }
+
+    let timeoutid;
+    const timer = timeout
+      ? new Promise((_, reject) => {
+          timeoutid = setTimeout(() => {
+            events.onTimeout();
+            return reject(
+              `${method} URL: ${options.url} exceeds the timeout ${timeout} ms`
+            );
+          }, timeout);
+        })
+      : null;
+
+    return (
+      timer
+        ? Promise.race([timer, worker]).then((res) => {
+            clearTimeout(timeoutid);
+            return res;
+          })
+        : worker
+    ).then((resp) => events.onResponse(resp));
   }
 
-  function GetCookie() {
-    if ($request && $request.body && $request.body.indexOf("verifyToken") > -1) {
-      debug($request.body);
-      $.rest_body = decodeURIComponent($request.body).replace("params=", "");
-      debug($.rest_body);
-      $.rest_body = JSON.parse($.rest_body);
-      if ($.rest_body.verifyToken !== $.token) {
-        $.token = $.rest_body.verifyToken;
-        debug($.token);
-        $.setdata($.token, $.token_key);
-        $.msg($.name, ``, `🎉 12123_Token获取成功。`);
-        console.log(`🎉 12123_Token获取成功:\n${$.token}`);
-      } else {
-        console.log(`‼️ Token未变动，跳过更新。\n${$.token}`);
+  const http = {};
+  methods.forEach(
+    (method) =>
+      (http[method.toLowerCase()] = (options) => send(method, options))
+  );
+  return http;
+}
+
+function API(name = 'untitled', debug = false) {
+  const { isQX, isLoon, isSurge, isNode, isJSBox, isScriptable } = ENV();
+  return new (class {
+    constructor(name, debug) {
+      this.name = name;
+      this.debug = debug;
+
+      this.http = HTTP();
+      this.env = ENV();
+
+      this.node = (() => {
+        if (isNode) {
+          const fs = require('fs');
+
+          return {
+            fs,
+          };
+        } else {
+          return null;
+        }
+      })();
+      this.initCache();
+
+      const delay = (t, v) =>
+        new Promise(function (resolve) {
+          setTimeout(resolve.bind(null, v), t);
+        });
+
+      Promise.prototype.delay = function (t) {
+        return this.then(function (v) {
+          return delay(t, v);
+        });
+      };
+    }
+
+    // persistence
+    // initialize cache
+    initCache() {
+      if (isQX) this.cache = JSON.parse($prefs.valueForKey(this.name) || '{}');
+      if (isLoon || isSurge)
+        this.cache = JSON.parse($persistentStore.read(this.name) || '{}');
+
+      if (isNode) {
+        // create a json for root cache
+        let fpath = 'root.json';
+        if (!this.node.fs.existsSync(fpath)) {
+          this.node.fs.writeFileSync(
+            fpath,
+            JSON.stringify({}),
+            {
+              flag: 'wx',
+            },
+            (err) => console.log(err)
+          );
+        }
+        this.root = {};
+
+        // create a json file with the given name if not exists
+        fpath = `${this.name}.json`;
+        if (!this.node.fs.existsSync(fpath)) {
+          this.node.fs.writeFileSync(
+            fpath,
+            JSON.stringify({}),
+            {
+              flag: 'wx',
+            },
+            (err) => console.log(err)
+          );
+          this.cache = {};
+        } else {
+          this.cache = JSON.parse(
+            this.node.fs.readFileSync(`${this.name}.json`)
+          );
+        }
       }
-
     }
-  }
 
-  function debug(text) {
-    if ($.is_debug === 'true') {
-      console.log(text);
+    // store cache
+    persistCache() {
+      const data = JSON.stringify(this.cache, null, 2);
+      if (isQX) $prefs.setValueForKey(data, this.name);
+      if (isLoon || isSurge) $persistentStore.write(data, this.name);
+      if (isNode) {
+        this.node.fs.writeFileSync(
+          `${this.name}.json`,
+          data,
+          {
+            flag: 'w',
+          },
+          (err) => console.log(err)
+        );
+        this.node.fs.writeFileSync(
+          'root.json',
+          JSON.stringify(this.root, null, 2),
+          {
+            flag: 'w',
+          },
+          (err) => console.log(err)
+        );
+      }
     }
-  }
 
-})()
-  .catch((e) => $.logErr(e))
-  .finally(() => $.done());
+    write(data, key) {
+      this.log(`SET ${key}`);
+      if (key.indexOf('#') !== -1) {
+        key = key.substr(1);
+        if (isSurge || isLoon) {
+          return $persistentStore.write(data, key);
+        }
+        if (isQX) {
+          return $prefs.setValueForKey(data, key);
+        }
+        if (isNode) {
+          this.root[key] = data;
+        }
+      } else {
+        this.cache[key] = data;
+      }
+      this.persistCache();
+    }
 
-// prettier-ignore
-function Env(t,e){class s{constructor(t){this.env=t}send(t,e="GET"){t="string"==typeof t?{url:t}:t;let s=this.get;return"POST"===e&&(s=this.post),new Promise((e,i)=>{s.call(this,t,(t,s,r)=>{t?i(t):e(s)})})}get(t){return this.send.call(this.env,t)}post(t){return this.send.call(this.env,t,"POST")}}return new class{constructor(t,e){this.name=t,this.http=new s(this),this.data=null,this.dataFile="box.dat",this.logs=[],this.isMute=!1,this.isNeedRewrite=!1,this.logSeparator="\n",this.encoding="utf-8",this.startTime=(new Date).getTime(),Object.assign(this,e),this.log("",`\ud83d\udd14${this.name}, \u5f00\u59cb!`)}isNode(){return"undefined"!=typeof module&&!!module.exports}isQuanX(){return"undefined"!=typeof $task}isSurge(){return"undefined"!=typeof $httpClient&&"undefined"==typeof $loon}isLoon(){return"undefined"!=typeof $loon}isShadowrocket(){return"undefined"!=typeof $rocket}isStash(){return"undefined"!=typeof $environment&&$environment["stash-version"]}toObj(t,e=null){try{return JSON.parse(t)}catch{return e}}toStr(t,e=null){try{return JSON.stringify(t)}catch{return e}}getjson(t,e){let s=e;const i=this.getdata(t);if(i)try{s=JSON.parse(this.getdata(t))}catch{}return s}setjson(t,e){try{return this.setdata(JSON.stringify(t),e)}catch{return!1}}getScript(t){return new Promise(e=>{this.get({url:t},(t,s,i)=>e(i))})}runScript(t,e){return new Promise(s=>{let i=this.getdata("@chavy_boxjs_userCfgs.httpapi");i=i?i.replace(/\n/g,"").trim():i;let r=this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");r=r?1*r:20,r=e&&e.timeout?e.timeout:r;const[o,a]=i.split("@"),n={url:`http://${a}/v1/scripting/evaluate`,body:{script_text:t,mock_type:"cron",timeout:r},headers:{"X-Key":o,Accept:"*/*"}};this.post(n,(t,e,i)=>s(i))}).catch(t=>this.logErr(t))}loaddata(){if(!this.isNode())return{};{this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e);if(!s&&!i)return{};{const i=s?t:e;try{return JSON.parse(this.fs.readFileSync(i))}catch(t){return{}}}}}writedata(){if(this.isNode()){this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e),r=JSON.stringify(this.data);s?this.fs.writeFileSync(t,r):i?this.fs.writeFileSync(e,r):this.fs.writeFileSync(t,r)}}lodash_get(t,e,s){const i=e.replace(/\[(\d+)\]/g,".$1").split(".");let r=t;for(const t of i)if(r=Object(r)[t],void 0===r)return s;return r}lodash_set(t,e,s){return Object(t)!==t?t:(Array.isArray(e)||(e=e.toString().match(/[^.[\]]+/g)||[]),e.slice(0,-1).reduce((t,s,i)=>Object(t[s])===t[s]?t[s]:t[s]=Math.abs(e[i+1])>>0==+e[i+1]?[]:{},t)[e[e.length-1]]=s,t)}getdata(t){let e=this.getval(t);if(/^@/.test(t)){const[,s,i]=/^@(.*?)\.(.*?)$/.exec(t),r=s?this.getval(s):"";if(r)try{const t=JSON.parse(r);e=t?this.lodash_get(t,i,""):e}catch(t){e=""}}return e}setdata(t,e){let s=!1;if(/^@/.test(e)){const[,i,r]=/^@(.*?)\.(.*?)$/.exec(e),o=this.getval(i),a=i?"null"===o?null:o||"{}":"{}";try{const e=JSON.parse(a);this.lodash_set(e,r,t),s=this.setval(JSON.stringify(e),i)}catch(e){const o={};this.lodash_set(o,r,t),s=this.setval(JSON.stringify(o),i)}}else s=this.setval(t,e);return s}getval(t){return this.isSurge()||this.isLoon()?$persistentStore.read(t):this.isQuanX()?$prefs.valueForKey(t):this.isNode()?(this.data=this.loaddata(),this.data[t]):this.data&&this.data[t]||null}setval(t,e){return this.isSurge()||this.isLoon()?$persistentStore.write(t,e):this.isQuanX()?$prefs.setValueForKey(t,e):this.isNode()?(this.data=this.loaddata(),this.data[e]=t,this.writedata(),!0):this.data&&this.data[e]||null}initGotEnv(t){this.got=this.got?this.got:require("got"),this.cktough=this.cktough?this.cktough:require("tough-cookie"),this.ckjar=this.ckjar?this.ckjar:new this.cktough.CookieJar,t&&(t.headers=t.headers?t.headers:{},void 0===t.headers.Cookie&&void 0===t.cookieJar&&(t.cookieJar=this.ckjar))}get(t,e=(()=>{})){if(t.headers&&(delete t.headers["Content-Type"],delete t.headers["Content-Length"]),this.isSurge()||this.isLoon())this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient.get(t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status?s.status:s.statusCode,s.status=s.statusCode),e(t,s,i)});else if(this.isQuanX())this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t&&t.error||"UndefinedError"));else if(this.isNode()){let s=require("iconv-lite");this.initGotEnv(t),this.got(t).on("redirect",(t,e)=>{try{if(t.headers["set-cookie"]){const s=t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();s&&this.ckjar.setCookieSync(s,null),e.cookieJar=this.ckjar}}catch(t){this.logErr(t)}}).then(t=>{const{statusCode:i,statusCode:r,headers:o,rawBody:a}=t,n=s.decode(a,this.encoding);e(null,{status:i,statusCode:r,headers:o,rawBody:a,body:n},n)},t=>{const{message:i,response:r}=t;e(i,r,r&&s.decode(r.rawBody,this.encoding))})}}post(t,e=(()=>{})){const s=t.method?t.method.toLocaleLowerCase():"post";if(t.body&&t.headers&&!t.headers["Content-Type"]&&(t.headers["Content-Type"]="application/x-www-form-urlencoded"),t.headers&&delete t.headers["Content-Length"],this.isSurge()||this.isLoon())this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient[s](t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status?s.status:s.statusCode,s.status=s.statusCode),e(t,s,i)});else if(this.isQuanX())t.method=s,this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t&&t.error||"UndefinedError"));else if(this.isNode()){let i=require("iconv-lite");this.initGotEnv(t);const{url:r,...o}=t;this.got[s](r,o).then(t=>{const{statusCode:s,statusCode:r,headers:o,rawBody:a}=t,n=i.decode(a,this.encoding);e(null,{status:s,statusCode:r,headers:o,rawBody:a,body:n},n)},t=>{const{message:s,response:r}=t;e(s,r,r&&i.decode(r.rawBody,this.encoding))})}}time(t,e=null){const s=e?new Date(e):new Date;let i={"M+":s.getMonth()+1,"d+":s.getDate(),"H+":s.getHours(),"m+":s.getMinutes(),"s+":s.getSeconds(),"q+":Math.floor((s.getMonth()+3)/3),S:s.getMilliseconds()};/(y+)/.test(t)&&(t=t.replace(RegExp.$1,(s.getFullYear()+"").substr(4-RegExp.$1.length)));for(let e in i)new RegExp("("+e+")").test(t)&&(t=t.replace(RegExp.$1,1==RegExp.$1.length?i[e]:("00"+i[e]).substr((""+i[e]).length)));return t}msg(e=t,s="",i="",r){const o=t=>{if(!t)return t;if("string"==typeof t)return this.isLoon()?t:this.isQuanX()?{"open-url":t}:this.isSurge()?{url:t}:void 0;if("object"==typeof t){if(this.isLoon()){let e=t.openUrl||t.url||t["open-url"],s=t.mediaUrl||t["media-url"];return{openUrl:e,mediaUrl:s}}if(this.isQuanX()){let e=t["open-url"]||t.url||t.openUrl,s=t["media-url"]||t.mediaUrl,i=t["update-pasteboard"]||t.updatePasteboard;return{"open-url":e,"media-url":s,"update-pasteboard":i}}if(this.isSurge()){let e=t.url||t.openUrl||t["open-url"];return{url:e}}}};if(this.isMute||(this.isSurge()||this.isLoon()?$notification.post(e,s,i,o(r)):this.isQuanX()&&$notify(e,s,i,o(r))),!this.isMuteLog){let t=["","==============\ud83d\udce3\u7cfb\u7edf\u901a\u77e5\ud83d\udce3=============="];t.push(e),s&&t.push(s),i&&t.push(i),console.log(t.join("\n")),this.logs=this.logs.concat(t)}}log(...t){t.length>0&&(this.logs=[...this.logs,...t]),console.log(t.join(this.logSeparator))}logErr(t,e){const s=!this.isSurge()&&!this.isQuanX()&&!this.isLoon();s?this.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t.stack):this.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t)}wait(t){return new Promise(e=>setTimeout(e,t))}done(t={}){const e=(new Date).getTime(),s=(e-this.startTime)/1e3;this.log("",`\ud83d\udd14${this.name}, \u7ed3\u675f! \ud83d\udd5b ${s} \u79d2`),this.log(),this.isSurge()||this.isQuanX()||this.isLoon()?$done(t):this.isNode()&&process.exit(1)}}(t,e)}
+    read(key) {
+      this.log(`READ ${key}`);
+      if (key.indexOf('#') !== -1) {
+        key = key.substr(1);
+        if (isSurge || isLoon) {
+          return $persistentStore.read(key);
+        }
+        if (isQX) {
+          return $prefs.valueForKey(key);
+        }
+        if (isNode) {
+          return this.root[key];
+        }
+      } else {
+        return this.cache[key];
+      }
+    }
+
+    delete(key) {
+      this.log(`DELETE ${key}`);
+      if (key.indexOf('#') !== -1) {
+        key = key.substr(1);
+        if (isSurge || isLoon) {
+          return $persistentStore.write(null, key);
+        }
+        if (isQX) {
+          return $prefs.removeValueForKey(key);
+        }
+        if (isNode) {
+          delete this.root[key];
+        }
+      } else {
+        delete this.cache[key];
+      }
+      this.persistCache();
+    }
+
+    // notification
+    notify(title, subtitle = '', content = '', options = {}) {
+      const openURL = options['open-url'];
+      const mediaURL = options['media-url'];
+
+      if (isQX) $notify(title, subtitle, content, options);
+      if (isSurge) {
+        $notification.post(
+          title,
+          subtitle,
+          content + `${mediaURL ? '\n多媒体:' + mediaURL : ''}`,
+          {
+            url: openURL,
+          }
+        );
+      }
+      if (isLoon) {
+        let opts = {};
+        if (openURL) opts['openUrl'] = openURL;
+        if (mediaURL) opts['mediaUrl'] = mediaURL;
+        if (JSON.stringify(opts) === '{}') {
+          $notification.post(title, subtitle, content);
+        } else {
+          $notification.post(title, subtitle, content, opts);
+        }
+      }
+      if (isNode || isScriptable) {
+        const content_ =
+          content +
+          (openURL ? `\n点击跳转: ${openURL}` : '') +
+          (mediaURL ? `\n多媒体: ${mediaURL}` : '');
+        if (isJSBox) {
+          const push = require('push');
+          push.schedule({
+            title: title,
+            body: (subtitle ? subtitle + '\n' : '') + content_,
+          });
+        } else {
+          console.log(`${title}\n${subtitle}\n${content_}\n\n`);
+        }
+      }
+    }
+
+    // other helper functions
+    log(msg) {
+      if (this.debug) console.log(`[${this.name}] LOG: ${this.stringify(msg)}`);
+    }
+
+    info(msg) {
+      console.log(`[${this.name}] INFO: ${this.stringify(msg)}`);
+    }
+
+    error(msg) {
+      console.log(`[${this.name}] ERROR: ${this.stringify(msg)}`);
+    }
+
+    wait(millisec) {
+      return new Promise((resolve) => setTimeout(resolve, millisec));
+    }
+
+    done(value = {}) {
+      if (isQX || isLoon || isSurge) {
+        $done(value);
+      } else if (isNode && !isJSBox) {
+        if (typeof $context !== 'undefined') {
+          $context.headers = value.headers;
+          $context.statusCode = value.statusCode;
+          $context.body = value.body;
+        }
+      }
+    }
+
+    stringify(obj_or_str) {
+      if (typeof obj_or_str === 'string' || obj_or_str instanceof String)
+        return obj_or_str;
+      else
+        try {
+          return JSON.stringify(obj_or_str, null, 2);
+        } catch (err) {
+          return '[object Object]';
+        }
+    }
+  })(name, debug);
+}

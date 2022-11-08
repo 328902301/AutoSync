@@ -1,9 +1,8 @@
 /*******************************
-小猿搜题VIP 部分功能
-使用声明：️此脚本仅供学习与交流，禁止转载与贩卖！️️️
+小猿搜题
 *******************************
 [rewrite_local]
-^https:\/\/xyst\.yuanfudao\.com\/solar-vip\/(api|iphone)\/users/* url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/xyst.js
+^https:\/\/xyst\.yuanfudao\.com\/solar-vip\/(api|iphone)\/users/* url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/xyst.js
 [mitm] 
 hostname = xyst.yuanfudao.com
 *******************************/

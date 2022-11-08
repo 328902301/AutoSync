@@ -3,7 +3,7 @@
  Author:Weeek!
 ******************
 [rewrite_local]
-^https:\/\/api-prod\.languagedrops\.com\/syncPurchasesV4$ url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/Drops.js
+^https:\/\/api-prod\.languagedrops\.com\/syncPurchasesV4$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/Drops.js
 [mitm]
 hostname = api-prod.languagedrops.com
 *****************/

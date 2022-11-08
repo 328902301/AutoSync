@@ -1,8 +1,8 @@
 /*****************
-Muscle Booster
+Muscle Booster 
 ******************
 [rewrite_local]
-^https:\/\/menscoach-api\.asqq\.io\/prod\/user$ url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/MuscleBooster.js 
+^https:\/\/menscoach-api\.asqq\.io\/prod\/user$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/MuscleBooster.js 
 [mitm]
 hostname = menscoach-api.asqq.io
 *****************/

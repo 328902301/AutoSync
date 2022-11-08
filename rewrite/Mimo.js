@@ -2,7 +2,7 @@
 *Mimo 解锁Pro*
 *Author:Weeek
 [rewrite_local]
-^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/Mimo.js
+^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/Mimo.js
 [mitm]
 hostname = api.getmimo.com
 */

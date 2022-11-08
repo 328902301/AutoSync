@@ -1,8 +1,8 @@
 /*************************
-普通话测试 永久会员
+普通话测试
 **************************
 [rewrite_local]
-^https:\/\/api\.hcreator\.cn\/wapsPay\/Login\/pthTest\/v3\/getInfo\.do url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/pthcs.js
+^https:\/\/api\.hcreator\.cn\/wapsPay\/Login\/pthTest\/v3\/getInfo\.do url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/pthcs.js
 
 [mitm]
 hostname = api.hcreator.cn

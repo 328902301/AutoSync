@@ -52,7 +52,7 @@
 		<td colspan="5">  </td>
     </tr>
     <tr>
-		<td rowspan="12"><strong>广告屏蔽</strong></td>
+		<td rowspan="13"><strong>广告屏蔽</strong></td>
 		<td > 1 </td> <td > 微信小程序去广告神器 </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/Applet.conf"><em>Applet.conf</em></a></td><td>✅</td><td>ddgksf2013</td>
     </tr>
     <tr>
@@ -87,6 +87,9 @@
     </tr>
 	<tr>
 		<td > 12 </td> <td > 小红书去广告</td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/AdBlock/XiaoHongShu.conf">XiaoHongShu.conf</a></td><td>✅</td><td>ddgksf2013</td>  
+    </tr>
+	<tr>
+		<td > 13 </td> <td > Keep超级净化</td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/keepStyle.js">keepStyle.js</a></td><td>✅</td><td>ddgksf2013</td>  
     </tr>
 	<tr>
 		<td colspan="5">  </td>

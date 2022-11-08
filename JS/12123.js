@@ -10,14 +10,14 @@
 ^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz url script-request-body https://raw.githubusercontent.com/dompling/Script/master/12123/index.js
 
 [MITM]
-hostname = miniappcsfw.122.gov.cn:8443
+hostname = miniappcsfw.122.gov.cn:8553
 ====================================================================================================
 配置 (Surge)
 [Script]
 12123_Token = type=http-request,pattern=^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/dompling/Script/master/12123/index.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% miniappcsfw.122.gov.cn:8443
+hostname = %APPEND% miniappcsfw.122.gov.cn:8553
 ====================================================================================================
  */
 

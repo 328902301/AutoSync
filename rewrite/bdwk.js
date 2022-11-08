@@ -2,7 +2,7 @@
 百度文库
 ************************************
 [rewrite_local]
-^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/bdwk.js
+^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/bdwk.js
 
 [mitm]
 hostname=appwk.baidu.com

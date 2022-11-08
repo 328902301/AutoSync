@@ -49,7 +49,7 @@
 		<td > 6 </td> <td > ForOwnUseVip </td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/ForOwnUse.conf"><em>ForOwnUse.conf</em></a></td><td>✅</td><td>ddgksf2013</td>
     </tr>
 	<tr>
-		<td colspan="5">  </td>
+		<td colspan="6">  </td>
     </tr>
     <tr>
 		<td rowspan="13"><strong>广告屏蔽</strong></td>
@@ -92,7 +92,7 @@
 		<td > 13 </td> <td > Keep超级净化</td> <td ><a href="https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/keepStyle.js">keepStyle.js</a></td><td>✅</td><td>ddgksf2013</td>  
     </tr>
 	<tr>
-		<td colspan="5">  </td>
+		<td colspan="6">  </td>
     </tr>
 	<tr>
 		<td rowspan="8"><strong>应用增强</strong></td>
@@ -120,7 +120,7 @@
 		<td > 8 </td> <td > Testflight共享+解锁区域限制 </td> <td ><a href="https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js"><em>TestFlightAccount.conf</em></a></td><td>✅</td><td>NobyDa</td>
     </tr>
 	<tr>
-		<td colspan="5">  </td>
+		<td colspan="6">  </td>
     </tr>
 	<tr>
 		<td rowspan="4"><strong>网页优化</strong></td>

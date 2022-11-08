@@ -2,7 +2,7 @@
 AI换脸秀
 *******************************
 [rewrite_local]
-^https:\/\/changeclothes\.szsszykj\.com\/interface\/GetIosVip.php url script-response-body https://raw.githubusercontent.com/possessy/quanx/main/rewrite/aihlx.js
+^https:\/\/changeclothes\.szsszykj\.com\/interface\/GetIosVip.php url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/aihlx.js
 
 [mitm]
 hostname = changeclothes.szsszykj.com

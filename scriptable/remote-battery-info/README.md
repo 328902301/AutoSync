@@ -1,5 +1,7 @@
 # 备用机电量
 
+> [免责声明](https://github.com/xream/scripts/blob/main/README.md)
+
 基于 [SmsForwarder-短信转发器](https://github.com/pppscn/SmsForwarder) 的 `主动控制` 和 `Frpc 内网穿透`
 
 - 支持不同电量范围显示不同颜色

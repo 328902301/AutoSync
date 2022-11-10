@@ -1,5 +1,7 @@
 # 联通余量
 
+> [免责声明](https://github.com/xream/scripts/blob/main/README.md)
+
 ## 联通余量(v3) 测试中
 
 无需抓包 使用短信验证码登录 简化操作 增加了通知模板等自定义

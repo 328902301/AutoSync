@@ -1,5 +1,7 @@
 # Sub-Store 外置流量查询脚本
 
+> [免责声明](https://github.com/xream/scripts/blob/main/README.md)
+
 该脚本基于 Sub-Store, 可解决 APP 使用 Sub-Store 链接后, 没有流量通知的问题. 使用前需确认您的机场订阅是否支持流量信息
 
 Sub-Store 订阅管理器: https://github.com/Peng-YM/Sub-Store

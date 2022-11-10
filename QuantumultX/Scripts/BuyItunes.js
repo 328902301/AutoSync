@@ -586,7 +586,7 @@ if (ua.indexOf('%E5%B9%B4%E8%BD%AE3') != -1) {
 	$done({body:JSON.stringify(obj)});
 }
 
-//66 AVOD-边下载边播放&网盘网页同步&视频解析&迅先锋雷
+//66 AVOD-边下载边播放&网盘网页同步&视频解析&迅先锋雷//先试用
 //https://apps.apple.com/cn/app/id1506569683
 if (ua.indexOf('AVOD') != -1) {
 	url = $request.url;

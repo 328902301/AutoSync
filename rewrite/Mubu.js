@@ -1,8 +1,9 @@
 /******************************
- 幕布 
+ @幕布
+ @WeeekWin
 *******************************
 [rewrite_local]
-^https:\/\/api2.mubu.com\/v3\/api\/user/* url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/master/rewrite/mubu.js
+^https:\/\/api2.mubu.com\/v3\/api\/user/* url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/Mubu.js
 [mitm] 
 hostname = api2.mubu.com
 *******************************/

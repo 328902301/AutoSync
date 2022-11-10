@@ -1,9 +1,9 @@
 /*************
-@LightRoom
-@WeeekWin
+@ 解锁Adobe全家桶 -自行测试-
+@ WeeekWin
 **************
 [rewrite_local]
-^https:\/\/photos\.adobe\.io\/v2\/accounts\/* url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/LightRoom.js
+^https:\/\/photos\.adobe\.io\/v2\/accounts\/* url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/rewrite/Adobe.js
 [mitm]
 hostname = photos.adobe.io
 *************/

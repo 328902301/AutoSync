@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 傲软抠图解锁会员权限（2022-09-13）@ddgksf2013
-https?:\/\/.*\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/apowersoft.js
+https?:\/\/.*\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/gujiaming2022/QuantumultX/main/aoruankoutu.js
 
 [mitm] 
 

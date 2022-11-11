@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Picsart.png
 
 [Script]
-http-response ^https:\/\/api\.meiease\.(cn|com)\/shop\/subscription\/apple\/purchases script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Picsart/Picsart_crack.js, requires-body=true, tag=Picsart解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Picsart.png
+http-response ^https:\/\/api.meiease.(cn|com)\/shop\/subscription\/apple\/purchases script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Picsart/Picsart_crack.js, requires-body=true, tag=Picsart解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Picsart.png
 
 [MITM]
 hostname = api.meiease.*

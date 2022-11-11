@@ -44,9 +44,9 @@ $.json = $.name // `接口`类请求的响应体
 $.html = $.name // `页面`类请求的响应体
 
 // 页面源码地址
-$.web = `https://palesmile.cf/https://github.com/General74110/QuantumultX/raw/master/JS/BOX/chavy.boxjs.html?_=${new Date().getTime()}`
+$.web = `https://palesmile.cf/https://raw.githubusercontent.com/General74110/QuantumultX/master/JS/BOX/chavy.boxjs.html?_=${new Date().getTime()}`
 // 版本说明地址 (Release Note)
-$.ver = `/https://github.com/General74110/QuantumultX/raw/master/JS/BOX/release/box.release.json`
+$.ver = `https://github.com/General74110/QuantumultX/raw/master/JS/BOX/release/box.release.json`
 
 !(async () => {
   // 勿扰模式

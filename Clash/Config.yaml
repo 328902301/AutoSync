@@ -1,0 +1,537 @@
+# 请使用最新版Clash
+# 将proxy-providers里面链接中的“你的订阅链接”全部替换即可
+port: 7890
+mixed-port: 7891
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+
+
+proxy-providers:
+
+  #全部节点
+  All:
+    type: http
+    url: "https://api.v1.mk/sub?target=clash&url=你的订阅链接&list=true&udp=true"
+    # 可以使用任意类型的链接替换上面文字，多个链接使用英文符号的竖杠|隔开一起写上即可；也可以将Clash订阅链接替换掉整个引号""内的链接
+    interval: 3600
+    path: ./all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  #香港节点     
+  HK:
+    type: file
+    path: ./all.yaml
+    filter: 香|港|香港|香江|香岛|HK|Hong
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #日本节点
+  JP:
+    type: file
+    path: ./all.yaml
+    filter: 日|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #美国节点
+  US:
+    type: file
+    path: ./all.yaml
+    filter: 美|美国|美利坚合众国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|States|American
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #台湾节点
+  TW:
+    type: file
+    path: ./all.yaml
+    filter: 台|台湾|台北|新北|桃园|台中|台南|高雄|基隆|新竹|嘉义|苗栗|彰化|南投|云林|屏东|台东|花莲|宜兰|澎湖|金门|连江|TW|Taiwan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #狮城节点
+  SG:
+    type: file
+    path: ./all.yaml
+    filter: 新|狮|獅|坡|新加坡|星|星加坡|星洲|狮城|SG|Singapore
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #英国节点
+  UK:
+    type: file
+    path: ./all.yaml
+    filter: 英|英国|英格兰|不列颠|英联邦|日不落帝国|伦敦|伯明翰|利兹|格拉斯哥|谢菲尔德|曼彻斯特|爱丁堡|利物浦|UK|United
+      Kingdom|British|Britisher
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  #韩国节点
+  KR:
+    type: file
+    path: ./all.yaml
+    filter: 韩|韩国|南韩|南朝鲜|高丽|大韩民国|首尔|世宗|济州市|水原|釜山|大邱|仁川|光州|大田|蔚山|KR|Korea|Korean|South
+      Korea
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4:53
+    - 119.28.28.28
+    - 114.114.114.114
+    - 202.141.176.93
+    - 202.141.178.13
+    - 117.50.10.10
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - '+.xboxlive.com'
+    - 'msftconnecttest.com'
+    - 'xbox.*.microsoft.com'
+    - '*.battlenet.com.cn'
+    - '*.battlenet.com'
+    - '*.blzstatic.cn'
+    - '*.battle.net'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://dns.google/dns-query
+    - https://doh.dns.apple.com/dns-query
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.hinet.net/dns-query
+    - https://ordns.he.net/dns-query
+    - https://doh.dns.sb/dns-query
+
+
+proxies:
+
+
+proxy-groups:
+
+  - name: 🚀 节点选择
+    type: select
+    use:
+      - All
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: ♻️ 自动选择
+    type: url-test
+    use:
+      - All
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🎬 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 📹 奈飞娱乐
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 🌏 国外网站
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🛑 全球拦截
+
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 🎶 网易音乐
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🛑 全球拦截
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🛑 全球拦截
+
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 🌏 国内网站
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🛑 全球拦截
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🛑 全球拦截
+
+  - name: 🇭🇰 香港节点
+    type: url-test
+    use:
+      - HK
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    use:
+      - JP
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    use:
+      - TW
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇺🇲 美国节点
+    type: url-test
+    use:
+      - US
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    use:
+      - SG
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇬🇧 英国节点
+    type: url-test
+    use:
+      - UK
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    use:
+      - KR
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+
+rule-providers:
+
+  Lan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: ./ruleset/Lan.yaml
+    interval: 86400
+
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  adblock:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
+    path: ./ruleset/Advertising_Classical.yaml
+    interval: 86400
+
+  Hijacking:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+
+  Privacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    path: ./ruleset/Privacy_Classical.yaml
+    interval: 86400
+
+  EasyPrivacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EasyPrivacy/EasyPrivacy_Classical.yaml"
+    path: ./ruleset/EasyPrivacy_Classical.yaml
+    interval: 86400
+
+  GitHub:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/GitHub.yaml
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.yaml
+    path: ./ruleset/GoogleFCM.yaml
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml"
+    path: ./ruleset/NetEaseMusic.yaml
+    interval: 86400
+
+  BiliBili:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./ruleset/BiliBili.yaml
+    interval: 86400
+
+  ZhihuAds:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ZhihuAds/ZhihuAds.yaml"
+    path: ./ruleset/ZhihuAds.yaml
+    interval: 86400
+
+  Game:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
+    path: ./ruleset/Game.yaml
+    interval: 86400
+
+  China:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml"
+    path: ./ruleset/China_Classical.yaml
+    interval: 86400
+
+  Global_Classical:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Global/Global_Classical.yaml"
+    path: ./ruleset/Global_Classical.yaml
+    interval: 86400
+
+
+rules:
+# 策略组
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,adblock,🆎 AdBlock
+  - RULE-SET,Hijacking,🆎 AdBlock
+  - RULE-SET,Privacy,🆎 AdBlock
+  - RULE-SET,EasyPrivacy,🆎 AdBlock
+  - RULE-SET,GitHub,♻️ 自动选择
+  - RULE-SET,YouTube,🎬 油管视频
+  - RULE-SET,Netflix,📹 奈飞娱乐
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,NetEaseMusic,🎶 网易音乐
+  - RULE-SET,BiliBili,📺 哔哩哔哩
+  - RULE-SET,ZhihuAds,🆎 AdBlock
+  - RULE-SET,Game,🎮 游戏平台
+  - RULE-SET,China,🌏 国内网站
+  - RULE-SET,Global_Classical,🌏 国外网站
+# 自用配置
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,raw.ev2.workers.dev,♻️ 自动选择
+  - DOMAIN-SUFFIX,adtchrome.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,deepl.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,translate.googleapis.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,gitlab.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,github.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,ipm-provider.ff.avast.com,REJECT
+  - DOMAIN-SUFFIX,ccleaner.com,REJECT
+  - DOMAIN-SUFFIX,mypikpak.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,update.aida64.com,REJECT
+  - DOMAIN-SUFFIX,dmm.co.jp,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,rutracker.org,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,zooqle.com,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,byrut.org,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,rarbgprx.org,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,imagehaha.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,98tuch.net,♻️ 自动选择
+  - DOMAIN-SUFFIX,xcimg.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,rysuanaaser.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,update.chuyu.me,REJECT
+  - DOMAIN-SUFFIX,gfwsl.geforce.com,REJECT
+  - DOMAIN-SUFFIX,bugutv.cn,♻️ 自动选择
+  - DOMAIN-SUFFIX,xmkczs.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,oook.xyz,♻️ 自动选择
+  - DOMAIN-SUFFIX,6678888.xyz,♻️ 自动选择
+  - DOMAIN-SUFFIX,0daydown.com,DIRECT
+  - DOMAIN-SUFFIX,license.piriform.com,REJECT
+  - DOMAIN-SUFFIX,115.com,DIRECT
+  - DOMAIN-SUFFIX,pianyuanw.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,yinfans.me,♻️ 自动选择
+  - DOMAIN-SUFFIX,yinfans.net,♻️ 自动选择
+  - DOMAIN-SUFFIX,pianyuan.org,DIRECT
+  - DOMAIN-SUFFIX,aibaipiao01.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,huorong.cn,DIRECT
+  - DOMAIN-SUFFIX,itsk.com,DIRECT
+  - DOMAIN-SUFFIX,y5y4.com,DIRECT
+  - DOMAIN-SUFFIX,mimei520.com,DIRECT
+  - DOMAIN-SUFFIX,pianyuan.la,♻️ 自动选择
+  - DOMAIN-SUFFIX,sehuatang.net,♻️ 自动选择
+  - DOMAIN-SUFFIX,aibaipiao.life,♻️ 自动选择
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  - GEOIP,CN,🌏 国内网站
+  - MATCH,🐟 漏网之鱼

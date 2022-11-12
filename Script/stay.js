@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # ～ Stay（2022-10-17）@ddgksf2013
-^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/stay.js
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/stay.js
 
 [mitm]
 

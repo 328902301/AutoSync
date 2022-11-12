@@ -6,27 +6,27 @@
 * @WechatID          墨鱼手记
 * @UpdateTime        20210308
 * @ScriptFunction    自动化完成领现金自动获得酬劳（一级0.1元；二级0.25元；三级0.55元；四级1.19元；五级1.99元；六级5元；
-* @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cash_reward.js
+* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_reward.js
 * ==/UserScript==
 【QuantumultX】 :
 *************************
 [task_local]
-15 7,15 * * * https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳
+15 7,15 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳
 *************************
 【Loon】 :
 *************************
 [Script]
-cron "15 7,15 * * *" script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cash_reward.js,tag=领现金自动获得酬劳
+cron "15 7,15 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_reward.js,tag=领现金自动获得酬劳
 *************************
 【Surge】 :
 *************************
 [Script]
-领现金自动获得酬劳 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cash_reward.js
+领现金自动获得酬劳 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_reward.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-领现金自动获得酬劳 = type=cron,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cash_reward.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+领现金自动获得酬劳 = type=cron,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_reward.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
 *************************
 [mitm]
 hostname = api.m.jd.com

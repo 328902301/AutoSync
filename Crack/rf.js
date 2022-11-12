@@ -12,7 +12,7 @@
 [rewrite_local]
 
 # ～ RNI解锁高级会员（20220212）@ddgksf2013
-https://pro-status-service-prod.azurewebsites.net/api/item url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/rf.js
+https://pro-status-service-prod.azurewebsites.net/api/item url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/rf.js
 
 [mitm] 
 

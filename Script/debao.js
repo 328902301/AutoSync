@@ -7,32 +7,32 @@
 * @UpdateTime        20210521
 * @ScriptFunction    签到得积分
 * @Attention         Cookie有效期约为7天
-* @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
+* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
 * ==/UserScript==
 【QuantumultX】 :
 *************************
 [rewrite_local]
-https://h5.youzan.com/wscump/checkin/checkin.json\?.+ url script-request-header https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
+https://h5.youzan.com/wscump/checkin/checkin.json\?.+ url script-request-header https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
 [task_local]
-15 7,15 * * * https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js, tag=得宝, img-url=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Icon/debao.png
+15 7,15 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js, tag=得宝, img-url=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Icon/debao.png
 *************************
 【Loon】 :
 *************************
 [Script]
-http-request https://h5.youzan.com/wscump/checkin/checkin.json\?.+ tag=得宝Cookie, script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
-cron "15 7,15 * * *" script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js,tag=得宝
+http-request https://h5.youzan.com/wscump/checkin/checkin.json\?.+ tag=得宝Cookie, script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
+cron "15 7,15 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js,tag=得宝
 *************************
 【Surge】 :
 *************************
 [Script]
-得宝 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
-得宝Cookie = type=http-request,pattern=https://h5.youzan.com/wscump/checkin/checkin.json\?.+,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
+得宝 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
+得宝Cookie = type=http-request,pattern=https://h5.youzan.com/wscump/checkin/checkin.json\?.+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-得宝 = type=cron,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
-得宝Cookie = type=http-request,pattern=https://h5.youzan.com/wscump/checkin/checkin.json\?.+,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/debao.js
+得宝 = type=cron,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+得宝Cookie = type=http-request,pattern=https://h5.youzan.com/wscump/checkin/checkin.json\?.+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/debao.js
 *************************
 [mitm]
 hostname = h5.youzan.com

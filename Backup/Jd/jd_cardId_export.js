@@ -8,12 +8,12 @@
 * @ScriptFunction    导出取消会员的链接，方便在电脑上取消会员，更加快捷
 * @Methods           请手动运行，复制log信息到电脑上取消店铺会员
 * @UpdateLog         0311 [:] 更换个人信息查询的API接口
-* @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cardId_export.js
+* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cardId_export.js
 * ==/UserScript==
 【QuantumultX】 :
 *************************
 [task_local]
-0 0 * * * https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Jd/jd_cardId_export.js, tag=京东店铺会员取消链接导出
+0 0 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cardId_export.js, tag=京东店铺会员取消链接导出
 *************************
 [mitm]
 hostname = api.m.jd.com

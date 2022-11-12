@@ -7,14 +7,14 @@
 * @UpdateTime        2022-02-15
 * @ScriptFunction    自动领取3天会员
 * @Attention         低调使用       
-* @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/block100.js
+* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/block100.js
 * ==/UserScript==
 【QuantumultX】 :
 *************************
 [rewrite_local]
-https://tagit.hyhuo.com/cypt/block100/gain_vip url script-request-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/block100.js
+https://tagit.hyhuo.com/cypt/block100/gain_vip url script-request-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/block100.js
 [task_local]
-15 7 * * * https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/block100.js, tag=拦截100自动领取会员
+15 7 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/block100.js, tag=拦截100自动领取会员
 [mimt]
 hostname=tagit.hyhuo.com
 *************************

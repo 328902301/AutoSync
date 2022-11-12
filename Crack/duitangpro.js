@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # ～ 堆糖解鎖會員權限（2022-05-05）@ddgksf2013
-^https?:\/\/api\.duitang\.com\/napi\/vienna\/graphic\/template url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/duitangpro.js
+^https?:\/\/api\.duitang\.com\/napi\/vienna\/graphic\/template url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/duitangpro.js
 
 [mitm]
 

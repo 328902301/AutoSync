@@ -7,33 +7,33 @@
 * @UpdateTime        20210106
 * @Attention         因消息体被加密，故简化通知
 * @ScriptFunction    自动化签到获取喵粮、喵饼、鱼干，及每天五次的免费抽奖
-* @ScriptURL         https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
+* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
 * ==/UserScript==
 
 【QuantumultX】 :
 *************************
 [rewrite_local]
-https://meow-api.sxyj.net/api/Member/SignNew url script-request-header https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
+https://meow-api.sxyj.net/api/Member/SignNew url script-request-header https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
 [task_local]
-15 7,15 * * * https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js, tag=喵喵记账, img-url=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Icon/mmjz.png
+15 7,15 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js, tag=喵喵记账, img-url=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Icon/mmjz.png
 *************************
 【Loon】 :
 *************************
 [Script]
-http-request https://meow-api.sxyj.net/api/Member/SignNew tag=喵喵记账Cookie, script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
-cron "15 7,15 * * *" script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js,tag=喵喵记账
+http-request https://meow-api.sxyj.net/api/Member/SignNew tag=喵喵记账Cookie, script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
+cron "15 7,15 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js,tag=喵喵记账
 *************************
 【Surge】 :
 *************************
 [Script]
-喵喵记账 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
-喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
+喵喵记账 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
+喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-喵喵记账 = type=cron,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
-喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/mmjz.js
+喵喵记账 = type=cron,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/mmjz.js
 *************************
 
 [mitm]

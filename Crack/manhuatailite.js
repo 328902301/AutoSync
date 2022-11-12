@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 漫画台Lite(微信小程序)解鎖會員權限（2022-03-11）@ddgksf2013
-^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/manhuatailite.js
+^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/manhuatailite.js
 
 [mitm] 
 

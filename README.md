@@ -1,92 +1,61 @@
-# QuanX
+# Quantumult X
 
+全部资源来源于互联网，纯自用，如侵删。
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/RuCu6/QuanX.git
-git branch -M main
-git push -uf origin main
+配置文件链接：
+```Java
+https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 ```
 
-## Integrate with your tools
+# 配置说明
+```
+⚠️⚠️ 本配置纯自用，可能并不适合大多数人使用。
+```
+```ruby
+⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
+```
+```ruby
+⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
+```
+## 使用方法：
+  0. 复制上面的 [配置文件链接](https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf) 备用；
+  1. 打开 Quantumult X 主界面，点击 `右下角风车` ，然后找到 `配置文件` 选项卡，点击 `下载` ，输入此前 `复制的链接` ，点击右上角 `保存` ；
+  2. 在当前界面，找到 `MitM` 选项卡，先点击 `生成证书` ，再点击 `配置证书` ，在弹出窗口中点击 `允许` ；
+  3. 打开 iOS 系统设置，打开 `通用-描述文件` ，点击两次 `安装` ，等待安装完成；
+  4. 安装完成后，打开 `关于本机-证书信任设置` ，对 `Quantumult X CA` 启用根证书完全信任；
+  5. 回到 Quantumult X 主界面，点击 `右下角风车` ，打开 `重写` 和 `MitM` ；
+  6. 在当前界面，找到 `节点` 选项卡，点击 `引用(订阅)` 添加自己的 `订阅链接` ；
+  7. 配置国内 IP 数据库；
+  8. 大功告成，开始使用。
 
-- [ ] [Set up project integrations](https://gitlab.com/RuCu6/QuanX/-/settings/integrations)
+## 配置国内 IP 数据库：
+```ruby
+⚠️⚠️ 在此之前，先执行 `前6步` ，并打开 Quantumult X 总开关。
+```
+```ruby
+⚠️⚠️ 数据库配置完成之后，重启 Quantumult X 总开关，使之生效。
+```
+``` ruby
+❗️❗️❗️ 注意！不是退出后台。
+```
+  0. 复制 [此链接](https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/Country.mmdb) 备用；
+  1. 在 Quantumult X 主界面，点击 `右下角风车` ；
+  2. 滑到底部，点击 `其他设置` ；
+  3. 滑到底部，找到 `GeoLite2` 选项卡，点击右上角的 `来源` ；
+  4. 输入此前 `复制的链接` ，点击 `好的` 保存，之后点击 `立即更新` 即可。
 
-## Collaborate with your team
+# 资源解析器使用说明
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
+```Java
+resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/General/resource_parser.js
+```
+```ruby
+⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；
+```
+2. 假设原始订阅链接为 `https://xxx.txt` ，你想要保留的参数为 `in=tls+ss` ，想要过滤的参数为 `out=http+2` ；
+```ruby
+⚠️⚠️ 请注意下面订阅链接后一定要加 `#` 符号；
+```
+3. 则填入 Quantumult X 的引用链接为 `https://xxx.txt#in=tls+ss&out=http+2` ；
+4. 填入上述链接, 并打开资源解析器开关。

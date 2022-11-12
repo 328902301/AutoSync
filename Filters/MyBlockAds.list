@@ -1,0 +1,52 @@
+# 2022-10-01
+
+# RARBG屏蔽跳转
+HOST, furiousfar.com, MyBlockAds
+HOST, swallowcrockerybless.com, MyBlockAds
+
+# 工商银行
+HOST, pageviewp.icbc.com.cn, MyBlockAds
+
+# Clue智库
+HOST, api.helloclue.com, MyBlockAds
+HOST, brahe.apptimize.com, MyBlockAds
+HOST, mapi.apptimize.com, MyBlockAds
+HOST, md-i-s.apptimize.com, MyBlockAds
+HOST, collector.clue.run, MyBlockAds
+HOST, images.ctfassets.net, MyBlockAds
+
+# 解除安全浏览限制
+HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds
+HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
+HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
+
+# 哔哩哔哩自动换区支持
+IP-CIDR, 203.107.1.1/24, MyBlockAds
+
+# 高德地图
+HOST, awaken.amap.com, MyBlockAds
+HOST, amap-aos-info-nogw.amap.com, MyBlockAds
+HOST, free-aos-cdn-image.amap.com, MyBlockAds
+
+# 知乎
+HOST, appcloud2.in.zhihu.com, MyBlockAds
+HOST, mqtt.zhihu.com, MyBlockAds
+HOST, sugar.zhihu.com, MyBlockAds
+USER-AGENT, AVOS*, MyBlockAds
+IP-CIDR, 118.89.204.198/32, MyBlockAds
+IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, MyBlockAds
+
+# 云闪付
+HOST, ads.95516.com, MyBlockAds
+HOST, cm-10-138.getui.com, MyBlockAds
+HOST, tysdk.95516.com, MyBlockAds
+HOST, sdk-conf.getui.com, MyBlockAds
+HOST, sdk.open.talk.getui.net, MyBlockAds
+HOST, switch.cup.com.cn, MyBlockAds
+
+# 美颜相机
+HOST, adui.tg.meitu.com, MyBlockAds
+HOST, aaid.uyunad.com, MyBlockAds
+
+# 铁路12306
+HOST, ad.12306.cn, MyBlockAds

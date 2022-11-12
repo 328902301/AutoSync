@@ -78,8 +78,7 @@ proxy-providers:
   UK:
     type: file
     path: ./all.yaml
-    filter: 英|英国|英格兰|不列颠|英联邦|日不落帝国|伦敦|伯明翰|利兹|格拉斯哥|谢菲尔德|曼彻斯特|爱丁堡|利物浦|UK|United
-      Kingdom|British|Britisher
+    filter: 英|英国|英格兰|不列颠|英联邦|日不落帝国|伦敦|伯明翰|利兹|格拉斯哥|谢菲尔德|曼彻斯特|爱丁堡|利物浦|UK|United Kingdom|British|Britisher
     health-check:
       enable: true
       interval: 120
@@ -89,8 +88,7 @@ proxy-providers:
   KR:
     type: file
     path: ./all.yaml
-    filter: 韩|韩国|南韩|南朝鲜|高丽|大韩民国|首尔|世宗|济州市|水原|釜山|大邱|仁川|光州|大田|蔚山|KR|Korea|Korean|South
-      Korea
+    filter: 韩|韩国|南韩|南朝鲜|高丽|大韩民国|首尔|世宗|济州市|水原|釜山|大邱|仁川|光州|大田|蔚山|KR|Korea|Korean|South Korea
     health-check:
       enable: true
       interval: 120

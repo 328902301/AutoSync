@@ -1,14 +1,16 @@
 /*
-https://github.com/chouchoui/QuanX/blob/master/Scripts/ithome/ithome.ad.js
+引用地址 https://github.com/chouchoui/QuanX/blob/master/Scripts/ithome/ithome.ad.js
 
-hostname = m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com
-
+[rewrite_local]
 # IT之家移动Web与APP新闻列表广告
-^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
 ^https?:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
 ^https?:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
-^https?:\/\/api\.zuihuimai\.com url reject
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao
+^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
 ^https?:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index) url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+
+[mitm]
+hostname = api.ithome.com, api.zuihuimai.com, m.ithome.com, napi.ithome.com
 */
 
 const mobileWebRegex = /^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/;
@@ -43,4 +45,4 @@ if (mobileWebRegex.test($request.url)) {
 }
 
 body = JSON.stringify(body);
-$done({ body });
+$done({ body: body });

@@ -60,9 +60,7 @@ runs()
         const ret = {
             ...{
                 status: 200,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+                headers: {'Content-Type': 'application/json'}
             },
             ...rsp
         };

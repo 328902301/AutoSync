@@ -19,7 +19,7 @@ let magicJS = MagicJS(scriptName, "INFO");
             element.unix_end_date = "1924358399";
             element.is_show_ad = "0";
           });
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`去除APP启动广告出现异常：${err}`);
         }
@@ -56,7 +56,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           });
 
           obj.data.component = component;
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`首页去广告出现异常：${err}`);
         }
@@ -78,7 +78,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           // 不显示皮肤
           // obj.data.banner.skin = {};
           obj.data.rows = rows;
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`好价去广告出现异常：${err}`);
         }
@@ -88,7 +88,7 @@ let magicJS = MagicJS(scriptName, "INFO");
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.data.lanmu_qikan = {};
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`好价详情页去广告出现异常：${err}`);
         }
@@ -100,7 +100,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           obj.data.rows = obj.data.rows.filter((element) => {
             return !element.hasOwnProperty("ad_banner_id") || element.ad_banner_id == "";
           });
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`百科去广告出现异常：${err}`);
         }
@@ -110,7 +110,7 @@ let magicJS = MagicJS(scriptName, "INFO");
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj.data.hongbao = {};
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`搜索标签去广告出现异常：${err}`);
         }
@@ -122,7 +122,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           obj.data.rows = obj.data.rows.filter((element) => {
             return element.article_tag !== "广告";
           });
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`搜索结果去广告出现异常：${err}`);
         }
@@ -134,7 +134,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           obj.data.big_banner = obj.data.big_banner.filter((element) => {
             return element.logo_title !== "广告";
           });
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`值会员权益中心banner去广告出现异常：${err}`);
         }

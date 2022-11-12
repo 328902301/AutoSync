@@ -11,8 +11,8 @@ $done({body});
 let rHead = '<head>'
 let newStyle = '<head><link rel=\"stylesheet\" href=\"https://gitlab.com/RuCu6/QuanX/-/raw/main/Css/baidu.index.css\" type=\"text/css\">'
 var rBody = '</body>'
-var newJavaScript = '<script type="text/javascript" async="async" src="https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Limbo/baidu.index.js"></script>'
+var newJavaScript = '<script type="text/javascript" async="async" src="https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/limbo/baidu.index.js"></script>'
 let body = $response.body
     .replace(rHead, newStyle)
     .replace(rBody, newJavaScript);
-$done({ body });
+$done({body});

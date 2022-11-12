@@ -50,10 +50,10 @@
 // 一些常量
 const imax = {
     js: {
-        functionx: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Limbo/Adblock4limbo.function.js", // 全局js
-        duboku: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Limbo/duboku.js", // 独播库
-        avple: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Limbo/avple.js", // avple
-        contentFarm: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Limbo/contentFarm/contentFarm.js", // 内容农场
+        functionx: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/limbo/Adblock4limbo.function.js", // 全局js
+        duboku: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/limbo/duboku.js", // 独播库
+        avple: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/limbo/avple.js", // avple
+        contentFarm: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/limbo/contentFarm/contentFarm.js", // 内容农场
     },
     css: {
         globalcss: "https://gitlab.com/RuCu6/QuanX/-/raw/main/Css/Adblock4limbo.user.css", // 全局
@@ -103,7 +103,6 @@ function values() {
         "nbys",
         "zhihu"
     ]
-
     var url = document.location.href;
     //console.log("URL : " + url); // 看看当前 URL
     var i;

@@ -13,8 +13,7 @@ obj = {
   "code" : 0,
   "data" : {
     "skip_splash" : true,
-    "splash" : {
-    }
-  }
+    "splash" : {},
+  },
 }
-$done({ body: JSON.stringify(obj) });
+$done({body: JSON.stringify(obj)});

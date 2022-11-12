@@ -42,9 +42,7 @@ if (cgiData.type === "gray" || cgiData.type === "newgray" || cgiData.type === "e
         if (forceRedirect) {
             let redirect = {
                 status: redirectStatus,
-                headers: {
-                    Location: trueURL,
-                },
+                headers: {Location: trueURL},
             };
             if (isQuanX) redirect.body = respBody;
             $done(redirect);
@@ -63,10 +61,7 @@ if (cgiData.type === "gray" || cgiData.type === "newgray" || cgiData.type === "e
         await get(url).then((resp) => {
             let obj = JSON.parse(resp.body);
             if (obj.hasOwnProperty("btns")) {
-                let trueURL = decodeURIComponent(/url=(.*)/.exec(obj.btns[0].url)[1]).replace(
-                    /&block_?type(.*)/,
-                    ""
-                );
+                let trueURL = decodeURIComponent(/url=(.*)/.exec(obj.btns[0].url)[1]).replace(/&block_?type(.*)/, "");
                 trueURL = trueURL.includes(".") ? trueURL : Base64.decode(trueURL);
                 trueURL = trueURL.indexOf("http") == 0 ? trueURL : "http://" + trueURL;
                 if (!trueURL.includes("web.archive.org/web")) {
@@ -75,9 +70,7 @@ if (cgiData.type === "gray" || cgiData.type === "newgray" || cgiData.type === "e
                         let cacheLink = cacheURL + trueURL;
                         let redirect = {
                             status: redirectStatus,
-                            headers: {
-                                Location: cacheLink,
-                            },
+                            headers: {Location: cacheLink},
                         };
                         if (isQuanX) redirect.body = respBody;
                         $done(redirect);
@@ -146,4 +139,3 @@ function read(key) {
         return JSON.parse($persistentStore.read(key) || "{}");
     }
 }
-

@@ -171,7 +171,7 @@ function removeMarketingMsg() {
       }
     }
     obj["data"] = newItems;
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
   } catch (err) {
     $.logger.error(`知乎屏蔽官方营销消息出现异常：${err}`);
   }
@@ -267,7 +267,7 @@ function unlockBlockedKeywords() {
             };
           } else {
             response = {
-              response: { body: body, headers: headers, status: 200 },
+              response: {body: body, headers: headers, status: 200},
             };
           }
           $.logger.debug(`添加本地脚本屏蔽关键词“${keyword}”`);
@@ -286,7 +286,7 @@ function unlockBlockedKeywords() {
             };
           } else {
             response = {
-              response: { body: body, headers: headers, status: 400 },
+              response: {body: body, headers: headers, status: 400},
             };
           }
         }
@@ -305,8 +305,7 @@ function unlockBlockedKeywords() {
       });
       $.data.write(keywordBlockKey, keywords, userInfo.id);
       let headers = {
-        "Cache-Control":
-          "no-cache, no-store, must-revalidate, private, max-age=0",
+        "Cache-Control": "no-cache, no-store, must-revalidate, private, max-age=0",
         Connection: "keep-alive",
         "Content-Type": "application/json;charset=utf-8",
         Pragma: "no-cache",
@@ -318,9 +317,9 @@ function unlockBlockedKeywords() {
       };
       let body = JSON.stringify({ success: true });
       if ($.env.isQuanX) {
-        response = { body: body, headers: headers, status: "HTTP/1.1 200 OK" };
+        response = {body: body, headers: headers, status: "HTTP/1.1 200 OK"};
       } else {
-        response = { response: { body: body, headers: headers, status: 200 } };
+        response = {response: {body: body, headers: headers, status: 200}};
       }
       $.logger.debug(`删除本地脚本屏蔽关键词：“${keyword}”`);
     }
@@ -342,7 +341,7 @@ function removeHotSearchAds() {
     if (!!$.response.body) {
       let obj = JSON.parse($.response.body);
       obj["commercial_data"] = [];
-      response = { body: JSON.stringify(obj) };
+      response = {body: JSON.stringify(obj)};
     }
   } catch (err) {
     $.logger.error(`去除知乎热搜广告出现异常：${err}`);
@@ -390,7 +389,7 @@ function modifyAppConfig() {
           "ZHHTTPSessionManager_setupZHHTTPHeaderField"
         ] = "1";
       }
-      response = { body: JSON.stringify(obj) };
+      response = {body: JSON.stringify(obj)};
     }
   } catch (err) {
     $.logger.error(`优化知乎软件配置出现异常：${err}`);
@@ -415,7 +414,7 @@ function removeKeywordAds() {
           return element["type"] !== "ad";
         });
         obj["preset_words"]["words"] = words;
-        response = { body: JSON.stringify(obj) };
+        response = {body: JSON.stringify(obj)};
       }
     }
   } catch (err) {
@@ -445,7 +444,7 @@ function removeSysMsgAds() {
       return sysmsg_blacklist.indexOf(element["content"]["title"]) < 0;
     });
     obj["data"] = data;
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
   } catch (err) {
     $.logger.error(`知乎拦截官方账号推广消息出现异常：${err}`);
   }
@@ -471,7 +470,7 @@ function removeHotListAds() {
         });
         obj["data"] = data;
       }
-      response = { body: JSON.stringify(obj) };
+      response = {body: JSON.stringify(obj)};
     }
   } catch (err) {
     $.logger.error(`去除知乎热榜广告出现异常：${err}`);
@@ -579,7 +578,7 @@ function removeCommentAds() {
         });
         obj.data = newData;
       }
-      response = { body: JSON.stringify(obj) };
+      response = {body: JSON.stringify(obj)};
     }
   } catch (err) {
     $.logger.error(`去除知乎评论广告出现异常：${err}`);
@@ -696,7 +695,7 @@ function removeCommentV5Ads() {
         });
         obj.data = newComments;
       }
-      response = { body: JSON.stringify(obj) };
+      response = {body: JSON.stringify(obj)};
     }
   } catch (err) {
     $.logger.error(`去除知乎评论广告出现异常：${err}`);
@@ -798,7 +797,7 @@ function removeMomentsAds() {
       }
     }
     obj["data"] = data;
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
   } catch (err) {
     $.logger.error(`知乎关注列表去广告出现异常：${err}`);
   }
@@ -845,9 +844,7 @@ function removeRecommendAds() {
       // 是否为流媒体
       let isStream =
         isAd != true &&
-        elementStr.search(
-          /"(type|style)+"\s?:\s?"(drama|zvideo|Video|BIG_IMAGE)+"/i
-        ) >= 0;
+        elementStr.search(/"(type|style)+"\s?:\s?"(drama|zvideo|Video|BIG_IMAGE)+"/i) >= 0;
       let removeStream = isStream && settings_recommend_stream;
       // 是否为文章
       let isArticle =
@@ -865,8 +862,7 @@ function removeRecommendAds() {
                 element.common_card.feed_content.content.panel_text;
               let actionUrl = "";
               try {
-                actionUrl =
-                  element.common_card.feed_content.title.action.intent_url;
+                actionUrl = element.common_card.feed_content.title.action.intent_url;
               } catch {}
               $.logger.debug(
                 `匹配关键字：\n${keywords[i]}\n标题：\n${elementTitle}\n内容：\n${elementContent}`
@@ -910,7 +906,7 @@ function removeRecommendAds() {
       $.response.body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"')
     );
     obj["data"] = obj["data"].filter(dataFilter);
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
   } catch (err) {
     $.logger.error(`知乎推荐列表去广告出现异常：${err}`);
   }
@@ -929,7 +925,7 @@ function autoInsertBlackList() {
     let obj = JSON.parse($.response.body);
     // 删除MCN信息
     delete obj["mcn_user_info"];
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
     // 如已是黑名单用户，但不在脚本黑名单中，则自动加入
     if (obj.name && obj.id && obj.is_blocking === true) {
       const userInfo = getUserInfo();
@@ -1031,7 +1027,7 @@ function processUserInfo() {
           jump_url: "zhihu://vip/my",
           button_text: "查看权益",
         };
-        response = { body: JSON.stringify(obj) };
+        response = {body: JSON.stringify(obj)};
       }
     } else {
       $.logger.warning(
@@ -1278,29 +1274,13 @@ function removeFeedSections() {
     obj.guess_like_sections = [];
     obj.selected_sections = [];
     obj.more_sections = [];
-    response = { body: JSON.stringify(obj) };
+    response = {body: JSON.stringify(obj)};
   } catch (err) {
     $.logger.error(`知乎移除推荐页顶部项出现异常：${err}`);
   }
   return response;
 }
 
-// prettier-ignore
-/**
- *
- * $$\      $$\                     $$\             $$$$$\  $$$$$$\         $$$$$$\
- * $$$\    $$$ |                    \__|            \__$$ |$$  __$$\       $$ ___$$\
- * $$$$\  $$$$ | $$$$$$\   $$$$$$\  $$\  $$$$$$$\      $$ |$$ /  \__|      \_/   $$ |
- * $$\$$\$$ $$ | \____$$\ $$  __$$\ $$ |$$  _____|     $$ |\$$$$$$\          $$$$$ /
- * $$ \$$$  $$ | $$$$$$$ |$$ /  $$ |$$ |$$ /     $$\   $$ | \____$$\         \___$$\
- * $$ |\$  /$$ |$$  __$$ |$$ |  $$ |$$ |$$ |     $$ |  $$ |$$\   $$ |      $$\   $$ |
- * $$ | \_/ $$ |\$$$$$$$ |\$$$$$$$ |$$ |\$$$$$$$\\$$$$$$  |\$$$$$$  |      \$$$$$$  |
- * \__|     \__| \_______| \____$$ |\__| \_______|\______/  \______/        \______/
- *                        $$\   $$ |
- *                        \$$$$$$  |
- *                         \______/
- *
- */
 // prettier-ignore
 function MagicJS(e="MagicJS",t="INFO"){const i=()=>{const e=typeof $loon!=="undefined";const t=typeof $task!=="undefined";const n=typeof module!=="undefined";const i=typeof $httpClient!=="undefined"&&!e;const s=typeof $storm!=="undefined";const r=typeof $environment!=="undefined"&&typeof $environment["stash-build"]!=="undefined";const o=i||e||s||r;const u=typeof importModule!=="undefined";return{isLoon:e,isQuanX:t,isNode:n,isSurge:i,isStorm:s,isStash:r,isSurgeLike:o,isScriptable:u,get name(){if(e){return"Loon"}else if(t){return"QuantumultX"}else if(n){return"NodeJS"}else if(i){return"Surge"}else if(u){return"Scriptable"}else{return"unknown"}},get build(){if(i){return $environment["surge-build"]}else if(r){return $environment["stash-build"]}else if(s){return $storm.buildVersion}},get language(){if(i||r){return $environment["language"]}},get version(){if(i){return $environment["surge-version"]}else if(r){return $environment["stash-version"]}else if(s){return $storm.appVersion}else if(n){return process.version}},get system(){if(i){return $environment["system"]}else if(n){return process.platform}},get systemVersion(){if(s){return $storm.systemVersion}},get deviceName(){if(s){return $storm.deviceName}}}};const s=(n,e="INFO")=>{let i=e;const s={SNIFFER:6,DEBUG:5,INFO:4,NOTIFY:3,WARNING:2,ERROR:1,CRITICAL:0,NONE:-1};const r={SNIFFER:"",DEBUG:"",INFO:"",NOTIFY:"",WARNING:"❗ ",ERROR:"❌ ",CRITICAL:"❌ ",NONE:""};const t=(e,t="INFO")=>{if(!(s[i]<s[t.toUpperCase()]))console.log(`[${t}] [${n}]\n${r[t.toUpperCase()]}${e}\n`)};const o=e=>{i=e};return{setLevel:o,sniffer:e=>{t(e,"SNIFFER")},debug:e=>{t(e,"DEBUG")},info:e=>{t(e,"INFO")},notify:e=>{t(e,"NOTIFY")},warning:e=>{t(e,"WARNING")},error:e=>{t(e,"ERROR")},retry:e=>{t(e,"RETRY")}}};return new class{constructor(e,t){this._startTime=Date.now();this.version="3.0.0";this.scriptName=e;this.env=i();this.logger=s(e,t);this.http=typeof MagicHttp==="function"?MagicHttp(this.env,this.logger):undefined;this.data=typeof MagicData==="function"?MagicData(this.env,this.logger):undefined;this.notification=typeof MagicNotification==="function"?MagicNotification(this.scriptName,this.env,this.logger):undefined;this.utils=typeof MagicUtils==="function"?MagicUtils(this.env,this.logger):undefined;this.qinglong=typeof MagicQingLong==="function"?MagicQingLong(this.env,this.data,this.logger):undefined;if(typeof this.data!=="undefined"){let e=this.data.read("magic_loglevel");const n=this.data.read("magic_bark_url");if(e){this.logger.setLevel(e.toUpperCase())}if(n){this.notification.setBark(n)}}}get isRequest(){return typeof $request!=="undefined"&&typeof $response==="undefined"}get isResponse(){return typeof $response!=="undefined"}get isDebug(){return this.logger.level==="DEBUG"}get request(){if(typeof $request!=="undefined"){this.logger.sniffer(`RESPONSE:\n${JSON.stringify($request)}`);return $request}}get response(){if(typeof $response!=="undefined"){if($response.hasOwnProperty("status"))$response["statusCode"]=$response["status"];if($response.hasOwnProperty("statusCode"))$response["status"]=$response["statusCode"];this.logger.sniffer(`RESPONSE:\n${JSON.stringify($response)}`);return $response}else{return undefined}}done=(e={})=>{this._endTime=Date.now();let t=(this._endTime-this._startTime)/1e3;/*this.logger.info(`SCRIPT COMPLETED: ${t} S.`);*/if(typeof $done!=="undefined"){$done(e)}}}(e,t)}
 // prettier-ignore

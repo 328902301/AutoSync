@@ -26,7 +26,7 @@ if ($request.url.indexOf('/Users/') != -1) {
     $util.write(query['X-Emby-Client'], 'X-Emby-Client');
     $util.write(query['X-Emby-Device-Id'], 'X-Emby-Device-Id');
     $util.write(query['X-Emby-Client-Version'], 'X-Emby-Client-Version');
-    $util.done({status: "HTTP/1.1 200 OK", headers: $response.headers, body: JSON.stringify(body) });
+    $util.done({status: "HTTP/1.1 200 OK", headers: $response.headers, body: JSON.stringify(body)});
   }else{
     $util.done({});
   }

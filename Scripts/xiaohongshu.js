@@ -24,7 +24,7 @@ if (splashReg.test($request.url)) {
       });
     });
     body = JSON.stringify(body);
-    $done({ body });
+    $done({body});
   } catch (err) {
     magicJS.logError(`小红书开屏去广告出现异常：${err}`);
     $done({});
@@ -34,7 +34,7 @@ if (splashReg.test($request.url)) {
     let body = JSON.parse(magicJS.response.body);
     body.data = body.data.filter((d) => !d.ads_info);
     body = JSON.stringify(body);
-    $done({ body });
+    $done({body});
   } catch (error) {
     magicJS.logError(`小红书推荐流出现异常：${error}`);
     $done({});

@@ -24,7 +24,7 @@ let magicJS = MagicJS(scriptName, "INFO");
               startupPages.push(element);
             });
             obj.startupPages = startupPages;
-            response = { body: JSON.stringify(obj) };
+            response = {body: JSON.stringify(obj)};
           }
         } catch (err) {
           magicJS.logError(`嘀嗒出行开屏去广告出现异常：${err}`);
@@ -37,7 +37,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           let obj = JSON.parse(magicJS.response.body);
           obj.data.startpicture.ad = [];
           obj.data.startpicture.mk = [];
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`美团外卖开屏去广告出现异常：${err}`);
         }
@@ -57,7 +57,7 @@ let magicJS = MagicJS(scriptName, "INFO");
             data.push(ad);
           }
           obj.data = data;
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`小爱音箱开屏去广告出现异常：${err}`);
         }
@@ -79,7 +79,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           }
           obj.countdown = 100;
           obj.showTimesDaily = 0;
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`京东开屏去广告出现异常：${err}`);
         }
@@ -93,7 +93,7 @@ let magicJS = MagicJS(scriptName, "INFO");
           obj.reqinterval = 0;
           delete obj.last_ads;
           delete obj.data;
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`联享家开屏去广告出现异常：${err}`);
         }
@@ -106,7 +106,7 @@ let magicJS = MagicJS(scriptName, "INFO");
             obj["data"]["welcomePage"][i]["onlineTime"] = 1915027200000;
             obj["data"]["welcomePage"][i]["offlineTime"] = 1924272000000;
           }
-          response = { body: JSON.stringify(obj) };
+          response = {body: JSON.stringify(obj)};
         } catch (err) {
           magicJS.logError(`多点开屏广告处理出现异常：${err}`);
         }

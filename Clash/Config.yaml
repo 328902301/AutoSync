@@ -467,6 +467,7 @@ rule-providers:
     interval: 86400
 
 
+rules:
 # 自用配置
   - DOMAIN-SUFFIX,raw.githubusercontent.com,♻️ 自动选择
   - DOMAIN-SUFFIX,raw.ev2.workers.dev,♻️ 自动选择

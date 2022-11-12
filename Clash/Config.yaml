@@ -467,27 +467,6 @@ rule-providers:
     interval: 86400
 
 
-rules:
-# 策略组
-  - RULE-SET,Lan,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,adblock,🆎 AdBlock
-  - RULE-SET,Hijacking,🆎 AdBlock
-  - RULE-SET,Privacy,🆎 AdBlock
-  - RULE-SET,EasyPrivacy,🆎 AdBlock
-  - RULE-SET,GitHub,♻️ 自动选择
-  - RULE-SET,YouTube,🎬 油管视频
-  - RULE-SET,Netflix,📹 奈飞娱乐
-  - RULE-SET,Telegram,📲 电报信息
-  - RULE-SET,GoogleFCM,📢 谷歌FCM
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,NetEaseMusic,🎶 网易音乐
-  - RULE-SET,BiliBili,📺 哔哩哔哩
-  - RULE-SET,ZhihuAds,🆎 AdBlock
-  - RULE-SET,Game,🎮 游戏平台
-  - RULE-SET,China,🌏 国内网站
-  - RULE-SET,Global_Classical,🌏 国外网站
 # 自用配置
   - DOMAIN-SUFFIX,raw.githubusercontent.com,♻️ 自动选择
   - DOMAIN-SUFFIX,raw.ev2.workers.dev,♻️ 自动选择
@@ -530,6 +509,26 @@ rules:
   - DOMAIN-SUFFIX,pianyuan.la,♻️ 自动选择
   - DOMAIN-SUFFIX,sehuatang.net,♻️ 自动选择
   - DOMAIN-SUFFIX,aibaipiao.life,♻️ 自动选择
+# 策略组
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,adblock,🆎 AdBlock
+  - RULE-SET,Hijacking,🆎 AdBlock
+  - RULE-SET,Privacy,🆎 AdBlock
+  - RULE-SET,EasyPrivacy,🆎 AdBlock
+  - RULE-SET,GitHub,♻️ 自动选择
+  - RULE-SET,YouTube,🎬 油管视频
+  - RULE-SET,Netflix,📹 奈飞娱乐
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,NetEaseMusic,🎶 网易音乐
+  - RULE-SET,BiliBili,📺 哔哩哔哩
+  - RULE-SET,ZhihuAds,🆎 AdBlock
+  - RULE-SET,Game,🎮 游戏平台
+  - RULE-SET,China,🌏 国内网站
+  - RULE-SET,Global_Classical,🌏 国外网站
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT

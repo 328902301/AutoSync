@@ -189,8 +189,6 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           let obj = JSON.parse(magicJS.response.body);
           if (obj.data) {
             obj.data.hash = "";
-          }
-          if (obj.data && obj.data.online) {
             obj.data.online.icon = "";
           }
           body = JSON.stringify(obj);

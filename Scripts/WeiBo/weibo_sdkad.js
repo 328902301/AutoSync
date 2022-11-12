@@ -1,18 +1,19 @@
 // https://github.com/yjqiang/surge_scripts/tree/main/scripts/weibo/weibo_sdkad.js
 
-var ngchen = $response.body;
-if (ngchen && ngchen.match(/({.*})OK/) && ngchen.match(/({.*})OK/)[1]) {
-  let body = JSON.parse(ngchen.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
-  if (body.background_delay_display_time)
-    body.background_delay_display_time = 60*60*24*365;
-  for (let item of body['ads']) {
+let obj = $response.body;
+if (obj.match(/({.*})OK/) && obj.match(/({.*})OK/)[1]) {
+  let bodyObj = JSON.parse(obj.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
+  if (bodyObj.background_delay_display_time) {
+    bodyObj.background_delay_display_time = 60*60*24*365;
+  }
+  for (let item of bodyObj['ads']) {
     // console.log(`${item['begintime']} -- ${item['endtime']}`);
     item['displaytime'] = 0;  // 显示时间
     // 2040 年
     item['begintime'] = '2040-12-27 00:00:01';
     item['endtime'] = '2040-12-27 23:59:59';
   }
-  $done({ body: `${JSON.stringify(body)}OK` });
+  $done({ body: `${JSON.stringify(bodyObj)}OK` });
 } else {
-  $done({ ngchen });
+  $done({ obj });
 }

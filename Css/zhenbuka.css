@@ -9,3 +9,4 @@ img#buka888{display: none! important}
 iframe[id^=buffer]{display: none! important}
 span.more.text-muted.pull-right{display: none! important}
 ul.more-btn{display: none! important}
+a[target^="_blank"]{display:none!important}

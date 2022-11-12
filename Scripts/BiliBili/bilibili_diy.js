@@ -1,4 +1,4 @@
-// 2022-10-11 21:15
+// 2022-11-04 08:50
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -80,6 +80,16 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           magicJS.logError(`开屏广告处理出现异常：${err}`);
         }
         break;
+      // 青少年守护
+      case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/teenagers\/status\?/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          obj.data.teenagers_status = 0;
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`青少年守护出现异常：${err}`);
+        }
+          break;
       // 标签页处理，如去除会员购等等
       case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(magicJS.request.url):
         try {
@@ -171,6 +181,21 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`我的页面处理出现异常：${err}`);
+        }
+        break;
+      // 去除右上角活动入口
+      case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test(magicJS.request.url):
+        try {
+          let obj = JSON.parse(magicJS.response.body);
+          if (obj.data) {
+            obj.data.hash = "";
+          }
+          if (obj.data && obj.data.online) {
+            obj.data.online.icon = "";
+          }
+          body = JSON.stringify(obj);
+        } catch (err) {
+          magicJS.logError(`去除活动入口出现异常：${err}`);
         }
         break;
       // 直播去广告

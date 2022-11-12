@@ -48,6 +48,7 @@ HOST-SUFFIX,staticfile.org,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
 HOST-SUFFIX,upaiyun.com,Direct
 HOST-KEYWORD,wb_ad,Direct
+IP-ASN, 132203, Direct
 USER-AGENT,Coffee%20Corp*,Direct
 USER-AGENT,archero*,Direct
 USER-AGENT,coffeecorp*,Direct

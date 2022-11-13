@@ -1,6 +1,5 @@
 # 引用地址 - AppUnlock.conf
 ```
-https://github.com/Semporia/TikTok-Unlock/blob/master/Quantumult%20X/TikTok-JP.conf
 https://github.com/qiangxinglin/Emby/blob/main/QuantumultX/emby.conf
 https://github.com/I-am-R-E/Functional-Store-Hub/blob/Master/KuWoMusic/KuWoMusic.QuantumultX.snippet
 https://github.com/yqc007/QuantumultX/blob/master/NotabilityProCrack.js

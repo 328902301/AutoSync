@@ -3,7 +3,7 @@
 let obj = JSON.parse($response.body);
 if (obj.blockTypeData) {
   obj.blockTypeData = {};
-  $done({body: JSON.stringify(obj)})
+  $done({body: JSON.stringify(obj)});
 } else {
-  $done({})
+  $done({});
 }

@@ -1,4 +1,7 @@
-# 2022-10-01
+# 2022-11-13
+
+# 贴吧
+IP-CIDR, 180.76.76.200/32, MyBlockAds
 
 # RARBG屏蔽跳转
 HOST, furiousfar.com, MyBlockAds
@@ -21,7 +24,7 @@ HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
 # 哔哩哔哩自动换区支持
-IP-CIDR, 203.107.1.1/24, MyBlockAds
+IP-CIDR, 203.107.1.1/32, MyBlockAds
 
 # 高德地图
 HOST, awaken.amap.com, MyBlockAds

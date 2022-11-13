@@ -1,0 +1,56 @@
+hostname = list-app-m.i4.cn, *.baidu.com, *.chelaile.net.cn, cdn.*.chelaileapp.cn, m5.amap.com, sns.amap.com, p*.meituan.net, home.mi.com, zconfig.alibabausercontent.com,  api.m.mi.com, app.58.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, api.bspapp.com,  duckduckgo.com
+
+#爱思助手, list-app-m.i4.cn
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
+
+#百度网盘, *.baidu.com
+^https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
+^https?:\/\/update\.pan\.baidu\.com\/statistics url reject
+
+#车来了, *.chelaile.net.cn, cdn.*.chelaileapp.cn
+^https?:\/\/api.chelaile.net.cn\/adpub\/ url reject
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub url reject-dict
+^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?adpublish url reject
+
+#高德地图, m5.amap.com, sns.amap.com
+^https?:\/\/m5.amap.com\/ws\/valueadded\/ url reject
+^https?://m\d\.amap\.com/ws/message/notice/list? url reject-200
+^https?://sns\.amap\.com/ws/msgbox/pull? url reject-200
+
+#美团, p*.meituan.net
+^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/ url reject
+
+#米家, home.mi.com
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner url reject
+
+#闲鱼, zconfig.alibabausercontent.com
+^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig url reject
+
+#小米商城,  api.m.mi.com
+^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject
+
+#58同城, app.58.com
+^https?:\/\/app\.58\.com\/api\/log\/ url reject
+
+#Youtube, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
+;视频广告请求
+#^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
+；瀑布流|搜索|播放页|短视频|贴片 广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+;通用广告请求
+#^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
+
+#音乐弹幕@ddgksf2013, api.bspapp.com
+^https?:\/\/api\.bspapp\.com\/client url script-response-body https://raw.githubusercontent.com/changle66/changle/main/Script/qtmusic.js
+
+#超级搜索@ddgksf2013,  duckduckgo.com
+;bd,百度搜索
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1
+^https:\/\/duckduckgo.com\/\?q=((.(?!bd))+)\+bd.+ url 302 https://www.baidu.com/s?wd=$1
+;无指令默认为 Google
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://www.google.com/search?q=$1

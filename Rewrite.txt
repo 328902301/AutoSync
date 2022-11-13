@@ -46,7 +46,7 @@ hostname = list-app-m.i4.cn, *.baidu.com, *.chelaile.net.cn, cdn.*.chelaileapp.c
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
 
 #音乐弹幕@ddgksf2013, api.bspapp.com
-^https?:\/\/api\.bspapp\.com\/client url script-response-body https://raw.githubusercontent.com/changle66/changle/main/Script/qtmusic.js
+^https?:\/\/api\.bspapp\.com\/client url script-response-body https://codeberg.org/changle/changle/raw/branch/main/Script/qtmusic.js
 
 #超级搜索@ddgksf2013,  duckduckgo.com
 ;bd,百度搜索

@@ -1,8 +1,8 @@
 // https://github.com/yangdaozhao/ylgy/blob/master/ylgy.js
 
-if ($response.body) {
-  var obj = JSON.parse($response.body)
-  obj.blockTypeData = {}
+let obj = JSON.parse($response.body);
+if (obj.blockTypeData) {
+  obj.blockTypeData = {};
   $done({body: JSON.stringify(obj)})
 } else {
   $done({})

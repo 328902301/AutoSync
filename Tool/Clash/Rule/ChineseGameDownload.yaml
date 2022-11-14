@@ -31,6 +31,7 @@ payload:
   - DOMAIN,dl.steam.clngaa.com
   - DOMAIN,st.dl.eccdnx.com
   - DOMAIN,st.dl.bscstorage.net
+  - DOMAIN,trts.baishancdnx.cn
   - DOMAIN,cdn-ws.content.steamchina.com
   - DOMAIN,cdn-ali.content.steamchina.com
   - DOMAIN,xz.pphimalayanrt.com

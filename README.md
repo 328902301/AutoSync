@@ -31,7 +31,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Aweme.sgmodule
 * TikTok解锁
    ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok.sgmodule
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok-JP.sgmodule
 * YouTube去广告
    ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule
@@ -57,7 +57,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/Aweme.conf 
 * TikTok解锁 
    ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok.conf
+   https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/TikTok-JP.conf
 * YouTube去广告 
    ``` bash
    https://raw.githubusercontent.com/iEwha/Profiles/master/QuantumultX/Rewrite/YouTubeAds.conf

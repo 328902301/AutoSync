@@ -1,0 +1,65 @@
+# Relay
+# reject,direct,proxy
+
+
+
+# reject
+# 运营商本机一键登录
+# 电信
+host-suffix,id6.me,reject
+host-suffix,e.189.cn,reject
+# 移动
+host-suffix,cmpassport.com,reject
+# 联通
+host-suffix,opencloud.wostore.cn,reject
+host-suffix,nishub1.10010.com,reject
+host-suffix,hmrz.wo.cn,reject
+# 极验SDK
+host-suffix,onepass.geetest.com,reject
+# ADmobile SDK
+host-suffix,114dev.com,reject
+
+# apple 苹果拒绝更新
+#host,appldnld.apple.com,reject
+#host,gdmf.apple.com,reject
+#host,mesu.apple.com,reject
+#host,ns.itunes.apple.com,reject
+#host,xp.apple.com,reject
+# 绕过企业证书过期,要清空safari历史记录与网站数据
+#host,ocsp.apple.com,reject
+
+
+
+# direct
+# Apple
+#host-suffix,courier.push.apple.com,direct
+# Audiomack
+host-suffix,audiomack.com,direct
+
+
+
+# proxy
+# discord
+host-suffix,discord.com,proxy
+host-suffix,discord.gg,proxy
+host-suffix,discordapp.com,proxy
+host-suffix,discordapp.net,proxy
+host-suffix,discord.media,proxy
+# diyi
+host-suffix,diyihuisuo.com,proxy
+# exhentai
+host-suffix,exhentai.org,proxy
+host-suffix,e-hentai.org,proxy
+# rsshub
+host-suffix,rsshub.app,proxy
+# spotify 不跳出验证解决
+host,www.google.com,proxy
+host,www.gstatic.com,proxy
+host,captcha.com,proxy
+host,recaptcha.net,proxy
+# tap
+host-suffix,tap.io,proxy
+
+# Potato 先蒙一下试试
+#IP-CIDR,3.1.247.0/22,proxy
+#IP-CIDR,101.32.73.0/22,proxy

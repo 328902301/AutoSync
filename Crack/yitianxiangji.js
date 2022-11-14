@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 一甜相機解鎖會員權限（2022-02-27）@ddgksf2013
-https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v\d\/vip\/vipUserInfo url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/yitianxiangji.js
+https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v\d\/vip\/vipUserInfo url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/yitianxiangji.js
 
 [mitm] 
 

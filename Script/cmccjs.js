@@ -8,33 +8,33 @@
 * @ScriptFunction    自动化签到获取流量、签到后的抽奖
 * @DataAmount        每天签到可获取20~200M流量，其中满签最后一天可获取1~2G流量，可下个月领取使用
 * @Attention         脚本公开后，官方做了处理，Cookie有效期2天，太短，本脚本弃用
-* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
+* @ScriptURL         https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
 * ==/UserScript==
 
 【QuantumultX】 :
 *************************
 [rewrite_local]
-http://wap.js.10086.cn/nact/action.do url script-request-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
+http://wap.js.10086.cn/nact/action.do url script-request-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
 [task_local]
-15 7,15 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js, tag=江苏移动, img-url=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Icon/cmcc.png
+15 7,15 * * * https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js, tag=江苏移动, img-url=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Icon/cmcc.png
 *************************
 【Loon】 :
 *************************
 [Script]
-http-request http://wap.js.10086.cn/nact/action.do tag=江苏移动Cookie, script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
-cron "15 7,15 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js,tag=江苏移动
+http-request http://wap.js.10086.cn/nact/action.do tag=江苏移动Cookie, script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
+cron "15 7,15 * * *" script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js,tag=江苏移动
 *************************
 【Surge】 :
 *************************
 [Script]
-江苏移动 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
-江苏移动Cookie = type=http-request,pattern=http://wap.js.10086.cn/nact/action.do,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
+江苏移动 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
+江苏移动Cookie = type=http-request,pattern=http://wap.js.10086.cn/nact/action.do,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-江苏移动 = type=cron,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
-江苏移动Cookie = type=http-request,pattern=http://wap.js.10086.cn/nact/action.do,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/cmccjs.js
+江苏移动 = type=cron,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+江苏移动Cookie = type=http-request,pattern=http://wap.js.10086.cn/nact/action.do,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/cmccjs.js
 *************************
 [mitm]
 hostname = wap.js.10086.cn

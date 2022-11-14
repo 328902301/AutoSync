@@ -12,10 +12,10 @@
 // hostname=api.m.jd.com
 
 // [rewrite_local]
-// ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign url script-request-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/liwo.js
+// ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign url script-request-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/liwo.js
 
 // [local_tasK]
-// 5 0 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/liwo.js, tag=梨涡签到得现金
+// 5 0 * * * https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/liwo.js, tag=梨涡签到得现金
 
 // ----------------------------------------------------------------------------
 // Loon
@@ -24,8 +24,8 @@
 // hostname=api.m.jd.com
 
 // [Script]
-// http-request ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/liwo.js, requires-body=true, timeout=10, tag=梨涡签到Cookie
-// cron "7 0 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/liwo.js,tag=梨涡签到
+// http-request ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/liwo.js, requires-body=true, timeout=10, tag=梨涡签到Cookie
+// cron "7 0 * * *" script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/liwo.js,tag=梨涡签到
 
 // ----------------------------------------------------------------------------
 

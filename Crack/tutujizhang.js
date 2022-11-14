@@ -14,7 +14,7 @@
 [rewrite_local]
 
 # ～ 圖圖記賬解鎖會員權限（2022-03-03）@ddgksf2013
-^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers\/(\$RCAnonymousID%3A)?\w{32})$ url script-echo-response https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/tutujizhang.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers\/(\$RCAnonymousID%3A)?\w{32})$ url script-echo-response https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/tutujizhang.js
 
 [mitm] 
 

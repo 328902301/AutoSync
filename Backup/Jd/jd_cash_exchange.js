@@ -7,27 +7,27 @@
 * @UpdateTime        20210309
 * @ScriptFunction    红包的有效期只有3天（72小时）
 * @UpdateLog         0311 [:] 更换个人信息查询的API接口
-* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_exchange.js
+* @ScriptURL         https://gitlab.com/fmz200/cuttlefish/-/raw/master/Jd/jd_cash_exchange.js
 * ==/UserScript==
 【QuantumultX】 :
 *************************
 [task_local]
-0,1,2 0 * * * https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_exchange.js, tag=领现金兑换红包
+0,1,2 0 * * * https://gitlab.com/fmz200/cuttlefish/-/raw/master/Jd/jd_cash_exchange.js, tag=领现金兑换红包
 *************************
 【Loon】 :
 *************************
 [Script]
-cron "0,1,2 0 * * *" script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_exchange.js,tag=领现金兑换红包
+cron "0,1,2 0 * * *" script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Jd/jd_cash_exchange.js,tag=领现金兑换红包
 *************************
 【Surge】 :
 *************************
 [Script]
-领现金兑换红包 = type=cron,cronexp="0,1,2 0 * * *",wake-system=1,timeout=120,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_exchange.js
+领现金兑换红包 = type=cron,cronexp="0,1,2 0 * * *",wake-system=1,timeout=120,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Jd/jd_cash_exchange.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-领现金兑换红包 = type=cron,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Jd/jd_cash_exchange.js, cronexpr="0,1,2 0 * * *", timeout=500, enable=true
+领现金兑换红包 = type=cron,script-path=https://gitlab.com/fmz200/cuttlefish/-/raw/master/Jd/jd_cash_exchange.js, cronexpr="0,1,2 0 * * *", timeout=500, enable=true
 *************************
 [mitm]
 hostname = api.m.jd.com

@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 小打卡(微信小程序)解鎖會員權限（2022-03-12）@ddgksf2013
-^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/xiaodaka.js
+^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/xiaodaka.js
 
 [mitm] 
 

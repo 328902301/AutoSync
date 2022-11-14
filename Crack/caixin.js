@@ -19,7 +19,7 @@
 [rewrite_local]
 
 # ～ 财新（2022-10-17）@ddgksf2013
-^https?:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/(validate|validateAudioAuth) url script-request-header https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/caixin.js
+^https?:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/(validate|validateAudioAuth) url script-request-header https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/caixin.js
 
 [mitm]
 

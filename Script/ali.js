@@ -12,13 +12,13 @@
 * @Attention         如需引用请注明出处，谢谢合作！
 * @Version           v0.0.10
 * @Suit              脚本已使用Env做了兼容处理，理论适配多个工具，请自行测试
-* @ScriptURL         https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/ali.js
+* @ScriptURL         https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/ali.js
 * ==/UserScript==
 
 
 [rewrite_local]
 
-^https?:\/\/.*\.example\.com url script-analyze-echo-response https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Script/ali.js
+^https?:\/\/.*\.example\.com url script-analyze-echo-response https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/ali.js
 
 [mitm]
 

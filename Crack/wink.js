@@ -12,7 +12,7 @@
 [rewrite_local]
 
 # ～ Wink解锁会员权限（2022-03-04）@ddgksf2013
-https?:\/\/api-sub\.meitu\.com\/v\d\/user\/vip_info\.json url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/master/Crack/wink.js
+https?:\/\/api-sub\.meitu\.com\/v\d\/user\/vip_info\.json url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/wink.js
 
 [mitm]
 

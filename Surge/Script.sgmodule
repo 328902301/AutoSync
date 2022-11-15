@@ -20,7 +20,7 @@ AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 
 [URL Rewrite]
 # > Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.(cn|hk) https://www.google.com 302
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 # > Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 # > IGN China to IGN Global

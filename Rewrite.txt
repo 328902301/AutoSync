@@ -43,10 +43,6 @@ hostname = list-app-m.i4.cn, *.baidu.com, *.chelaile.net.cn, cdn.*.chelaileapp.c
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
 ；瀑布流|搜索|播放页|短视频|贴片 广告
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? url script-response-body url https://raw.githubusercontent.com/app2smile/rules/master/js/youtube.js
-#^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
 
 #音乐弹幕@ddgksf2013, api.bspapp.com
 ^https?:\/\/api\.bspapp\.com\/client url script-response-body https://raw.githubusercontent.com/changle66/changle/main/Script/qtmusic.js

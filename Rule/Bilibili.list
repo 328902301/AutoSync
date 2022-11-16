@@ -5,12 +5,9 @@ host,api.bilibili.com,Bilibili
 host,app.biliapi.com,Bilibili
 host,app.biliapi.net,Bilibili
 host,app.bilibili.com,Bilibili
-#host,data.bilibili.com,Bilibili
 host,grpc.biliapi.net,Bilibili
 host,m.bilibili.com,Bilibili
 host,upos-hz-mirrorakam.akamaized.net,Bilibili
 host,www.bilibili.com,Bilibili
-#host-suffix, bilibili.com,Bilibili
-#host-suffix, bilibili.net,Bilibili
 host-keyword,cn-hk-eq-bcache-,Bilibili
 ip-cidr,121.11.192.0/24,Bilibili

@@ -1,7 +1,7 @@
 # MengRain - Configuration  （QuantumultX）
 # 作者:MengRain
 # 写于2022年8月8日
-# 最后一次更新于2022年10月26日
+# 最后一次更新于2022年11月17日
 # 我的TG频道：https://t.me/mengyulianmian
 # 我的TG聊群：https://t.me/mengdelaochao
 
@@ -148,7 +148,6 @@ https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/Netflix-
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=YouTube去广告, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf, tag=油管机翻字幕, update-interval=172800, opt-parser=false, enabled=true
 https://github.com/VirgilClyne/iRingo/blob/main/qxrewrite/Siri.qxrewrite?raw=true, tag=解鎖Siri, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/qxrewrite/Weather.beta.qxrewrite, tag=解鎖天气(注意！iOS15、16不可用请手动删除）, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=spotify搜索点赞随意播, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf, tag=TF解除锁区, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NoByDa（lhie1 Rewrite）, update-interval=172800, opt-parser=false, enabled=true

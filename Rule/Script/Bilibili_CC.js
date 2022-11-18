@@ -3,7 +3,7 @@
 @ WeeekWin
 ************************************
 [rewrite_local]
-^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/Rule/Bilibili_.js
+^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://raw.githubusercontent.com/WeeekWin/quanx/main/Rule/Script/Bilibili_.js
 
 [mitm]
 hostname = i0.hdslb.com

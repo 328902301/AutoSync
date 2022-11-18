@@ -1,17 +1,20 @@
 /**
  * Telescope节点获取
  * 数据来自 https://t.me/yqc_123/1484 据说有效期90天
+ * 账号 yqcrack@gmail.com @yqc_123
  * 
  * @fan 2022.11.14
- * 2022.11.18 up:更新token
+ * 2022.11.18 up:更新token (如令牌失效可自行mitapp替换请求token)
  * 
  * 
- * 添加如下内容即可
+ * 添加如下 节点订阅 重写订阅
  * [server_remote]
 https://fan.github.com/telescope#aead=-1&sort=1&rename=[$emoji1]@+香港@[HK]+澳门@[MO]+台湾@[TW]+日本@[JP]+韩国@[KR]+菲律宾@[PH]+新加坡@[SGP]+泰国@[TH]+澳大利亚@[AU]+加拿大@[CA]+德国@[DE]+法国@[FR]+英国@[GB]+荷兰@[NL]+俄罗斯@[RU]+美国@[US], opt-parser=true, update-interval=86400, tag=Telescope
- * 
  * [rewrite_remote]
-https://raw.githubusercontent.com/bv5204978/QXRelay/master/Rewrite_Server.conf#type=list, tag=Relay Rewrite_Server, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/bv5204978/QXRelay/master/Rewrite_Server.conf, tag=Relay Rewrite_Server, update-interval=-1, enabled=true
+ *
+ * or 访问此链接直接导入 注: 务必 先更新重写订阅 再更新节点订阅
+ * https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22server_remote%22%3A%5B%22https%3A%2F%2Ffan.github.com%2Ftelescope%23aead%3D-1%26sort%3D1%26rename%3D%5B%24emoji1%5D%40%2B%E9%A6%99%E6%B8%AF%40%5BHK%5D%2B%E6%BE%B3%E9%97%A8%40%5BMO%5D%2B%E5%8F%B0%E6%B9%BE%40%5BTW%5D%2B%E6%97%A5%E6%9C%AC%40%5BJP%5D%2B%E9%9F%A9%E5%9B%BD%40%5BKR%5D%2B%E8%8F%B2%E5%BE%8B%E5%AE%BE%40%5BPH%5D%2B%E6%96%B0%E5%8A%A0%E5%9D%A1%40%5BSGP%5D%2B%E6%B3%B0%E5%9B%BD%40%5BTH%5D%2B%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%40%5BAU%5D%2B%E5%8A%A0%E6%8B%BF%E5%A4%A7%40%5BCA%5D%2B%E5%BE%B7%E5%9B%BD%40%5BDE%5D%2B%E6%B3%95%E5%9B%BD%40%5BFR%5D%2B%E8%8B%B1%E5%9B%BD%40%5BGB%5D%2B%E8%8D%B7%E5%85%B0%40%5BNL%5D%2B%E4%BF%84%E7%BD%97%E6%96%AF%40%5BRU%5D%2B%E7%BE%8E%E5%9B%BD%40%5BUS%5D%2C%20opt-parser%3Dtrue%2C%20update-interval%3D86400%2C%20tag%3DTelescope%22%5D%2C%22filter_remote%22%3A%5B%22filter_remote%E5%86%85%E5%AE%B9%22%5D%2C%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2Fbv5204978%2FQXRelay%2Fmaster%2FRewrite_Server.conf%2C%20tag%3DRelay%20Rewrite_Server%2C%20update-interval%3D-1%2C%20enabled%3Dtrue%22%5D%7D
  * 
  */
 
@@ -28,11 +31,11 @@ async function start() {
   headers['Content-Type'] = 'text/plain; charset=utf-8'
 
   var body = await getServers()
-  
-  console.log(`Telescope节点 请求结果: \n${body}`)
-  console.log(body.length == 0 ? 'Telescope节点获取失败' : 'Telescope节点获取成功')
 
-  $done({ status: 'HTTP/1.1 200 OK', headers: headers, body: body })
+  const isSuccess = body.match(/ssr:\/\/[A-Za-z0-9+\/\-_]*/) != null
+  console.log(isSuccess ? `Telescope节点 获取成功\n${body}` : `Telescope节点 获取失败\n${body}`)
+
+  $done({ status: 'HTTP/1.1 200 OK', headers: headers, body: isSuccess ? body : ''})
 }
 
 

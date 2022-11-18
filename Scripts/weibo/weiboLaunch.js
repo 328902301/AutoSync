@@ -1,5 +1,10 @@
 const path1 = "/interface/sdk/sdkad.php";
 const path2 = "/wbapplua/wbpullad.lua";
+
+if (!$response.body) {
+    $done({});
+}
+
 var url = $request.url;
 var body = $response.body;
 
@@ -17,9 +22,7 @@ if (url.indexOf(path1) != -1) {
   }
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {
-  if (body) {
-    var obj = JSON.parse(body);
-  }
+  var obj = JSON.parse(body);
   if (obj.cached_ad && obj.cached_ad.ads) {
     for (let item of obj['cached_ad']) {
       item['ads']['start_date'] = 2239372800;

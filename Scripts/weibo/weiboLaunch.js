@@ -18,10 +18,12 @@ if (url.indexOf(path1) != -1) {
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);
-  for (let item of obj['cached_ad']) {
-    item['ads']['start_date'] = 2239372800;
-    item['ads']['duration'] = 0;
-    item['ads']['end_date'] = 2239459199;
+  if (obj.cached_ad && obj.cached_ad.ads) {
+    for (let item of obj['cached_ad']) {
+      item['ads']['start_date'] = 2239372800;
+      item['ads']['duration'] = 0;
+      item['ads']['end_date'] = 2239459199;
+    }
   }
   $done({body: JSON.stringify(obj)});
 } else {

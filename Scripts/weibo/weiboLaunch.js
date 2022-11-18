@@ -1,5 +1,12 @@
 // 鸣谢 @yichahucha, @yjqiang
 
+const path1 = '/interface/sdk/sdkad.php';
+const path2 = '/wbapplua/wbpullad.lua';
+
+if (!$response.body) {
+  $done({});
+}
+
 var url = $request.url;
 var body = $response.body;
 
@@ -11,8 +18,8 @@ if (url.indexOf(path1) != -1) {
     }
     if (obj.ads) {
       obj.ads.displaytime = 0;
-      obj.ads.begintime = "2040-12-18 00:00:00";
-      obj.ads.endtime = "2040-12-18 23:59:59";
+      obj.ads.begintime = '2040-12-18 00:00:00';
+      obj.ads.endtime = '2040-12-18 23:59:59';
     }
   }
   $done({body: `${JSON.stringify(obj)}OK`});

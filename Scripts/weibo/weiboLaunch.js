@@ -1,18 +1,28 @@
-// https://github.com/yjqiang/surge_scripts/tree/main/scripts/weibo/weibo_sdkad.js
+const path1 = "/interface/sdk/sdkad.php";
+const path2 = "/wbapplua/wbpullad.lua";
+var url = $request.url;
+var body = $response.body;
 
-if ($response.body.match(/({.*})OK/) && $response.body.match(/({.*})OK/)[1]) {
-  let obj = JSON.parse($response.body.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
-  if (obj.background_delay_display_time) {
-    obj.background_delay_display_time = 60*60*24*365;
-  }
-  for (let item of obj['ads']) {
-    // console.log(`${item['begintime']} -- ${item['endtime']}`);
-    item['displaytime'] = 0;  // 显示时间
-    // 2040 年
-    item['begintime'] = '2040-12-27 00:00:01';
-    item['endtime'] = '2040-12-27 23:59:59';
+if (url.indexOf(path1) != -1) {
+  if (body.match(/({.*})OK/) && body.match(/({.*})OK/)[1]) {
+    var obj = JSON.parse(body.match(/({.*})OK/)[1]);
+    if (obj.background_delay_display_time) {
+      obj.background_delay_display_time = 60*60*24*366;
+    }
+    for (let item of obj['ads']) {
+      item['displaytime'] = 0;
+      item['begintime'] = '2040-12-27 00:00:01';
+      item['endtime'] = '2040-12-27 23:59:59';
+    }
   }
   $done({body: `${JSON.stringify(obj)}OK`});
+} else if (url.indexOf(path2) != -1) {
+  var obj = JSON.parse(body);
+  for (let item of obj['cached_ad']) {
+    item['ads']['start_date'] = 2239372800;
+    item['ads']['duration'] = 0;
+    item['ads']['end_date'] = 2239459199;
+  }
+  $done({body: JSON.stringify(obj)});
 } else {
-  $done({});
-}
+$done({});

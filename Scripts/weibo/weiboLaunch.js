@@ -14,6 +14,7 @@ if (url.indexOf(path1) != -1) {
       item['begintime'] = '2040-12-27 00:00:01';
       item['endtime'] = '2040-12-27 23:59:59';
     }
+  }
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);
@@ -22,6 +23,6 @@ if (url.indexOf(path1) != -1) {
     item['ads']['duration'] = 0
     item['ads']['end_date'] = 2239459199;
   }
-  body = JSON.stringify(obj);
+  $done({body: JSON.stringify(obj)});
 } else {
 $done({});

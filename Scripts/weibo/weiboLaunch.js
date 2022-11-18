@@ -14,10 +14,10 @@ if (url.indexOf(path1) != -1) {
     if (obj.background_delay_display_time) {
       obj.background_delay_display_time = 60*60*24*366;
     }
-    for (let item of obj['ads']) {
-      item['displaytime'] = 0;
-      item['begintime'] = '2040-12-27 00:00:01';
-      item['endtime'] = '2040-12-27 23:59:59';
+    if (obj.ads) {
+      obj.ads.displaytime = 0;
+      obj.ads.begintime = "2040-12-18 00:00:00";
+      obj.ads.endtime = "2040-12-18 23:59:59";
     }
   }
   $done({body: `${JSON.stringify(obj)}OK`});

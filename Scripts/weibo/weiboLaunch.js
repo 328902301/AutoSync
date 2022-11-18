@@ -1,5 +1,10 @@
 const path1 = "/interface/sdk/sdkad.php";
 const path2 = "/wbapplua/wbpullad.lua";
+
+if (!$response.body) {
+  $done({});
+}
+
 var url = $request.url;
 var body = $response.body;
 

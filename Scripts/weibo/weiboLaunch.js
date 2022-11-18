@@ -24,11 +24,9 @@ if (url.indexOf(path1) != -1) {
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);
   if (obj.cached_ad && obj.cached_ad.ads) {
-    for (let item of obj['cached_ad']) {
-      item['ads']['start_date'] = 2239372800;
-      item['ads']['duration'] = 0;
-      item['ads']['end_date'] = 2239459199;
-    }
+    obj.cached_ad.ads.start_date = 2239372800;
+    obj.cached_ad.ads.duration = 0;
+    obj.cached_ad.ads.end_date = 2239459199;
   }
   $done({body: JSON.stringify(obj)});
 } else {

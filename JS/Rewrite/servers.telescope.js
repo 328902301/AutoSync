@@ -3,10 +3,10 @@
  * 数据来自 https://t.me/yqc_123/1484 据说有效期90天
  * 
  * @fan 2022.11.14
- * https://raw.githubusercontent.com/bv5204978/QXRelay/master/Rewrite_Server.conf
+ * 2022.11.18 up:更新token
  * 
  * 
- * 添加
+ * 添加如下内容即可
  * [server_remote]
 https://fan.github.com/telescope#aead=-1&sort=1&rename=[$emoji1]@+香港@[HK]+澳门@[MO]+台湾@[TW]+日本@[JP]+韩国@[KR]+菲律宾@[PH]+新加坡@[SGP]+泰国@[TH]+澳大利亚@[AU]+加拿大@[CA]+德国@[DE]+法国@[FR]+英国@[GB]+荷兰@[NL]+俄罗斯@[RU]+美国@[US], opt-parser=true, update-interval=86400, tag=Telescope
  * 
@@ -29,6 +29,7 @@ async function start() {
 
   var body = await getServers()
   
+  console.log(`Telescope节点 请求结果: \n${body}`)
   console.log(body.length == 0 ? 'Telescope节点获取失败' : 'Telescope节点获取成功')
 
   $done({ status: 'HTTP/1.1 200 OK', headers: headers, body: body })
@@ -46,8 +47,8 @@ function getServers() {
       'channel': `GW`,
       'User-Agent': `Telescope/212 CFNetwork/1335.0.3 Darwin/21.6.0`,
       'platform': `ios`,
-      'imei': `510fae92f96f4decabff098da60a60c9`,
-      'Authorization': `Token 3e4559ad6f94d232e903e0ea378023ed6cecd2d6`,
+      'imei': `b701879655ba4615ad07dccea06d1ef0`,
+      'Authorization': `Token 9ca3dd2f4e84af2a190ed8775d3aa543585fe62c`,
       'systemVersion': `15.6.1`,
       'Host': `api-2.quickg.cc`,
       'appVersion': `2.1.1`,
@@ -94,15 +95,15 @@ function getServers() {
           }
           resolve(servers.join('\n'))
         } catch (error) {
-          resolve(``)
+          resolve(`${error}`)
         }
 
       } else {
-        resolve(``)
+        resolve(`${response.body}`)
       }
 
     }, reason => {
-      resolve(``)
+      resolve(`${reason.error}`)
     })
 
   })

@@ -1,9 +1,4 @@
-const path1 = "/interface/sdk/sdkad.php";
-const path2 = "/wbapplua/wbpullad.lua";
-
-if (!$response.body) {
-  $done({});
-}
+// 鸣谢 @yichahucha, @yjqiang
 
 var url = $request.url;
 var body = $response.body;

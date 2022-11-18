@@ -20,7 +20,7 @@ if (url.indexOf(path1) != -1) {
   var obj = JSON.parse(body);
   for (let item of obj['cached_ad']) {
     item['ads']['start_date'] = 2239372800;
-    item['ads']['duration'] = 0
+    item['ads']['duration'] = 0;
     item['ads']['end_date'] = 2239459199;
   }
   $done({body: JSON.stringify(obj)});

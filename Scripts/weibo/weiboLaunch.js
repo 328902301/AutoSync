@@ -13,6 +13,9 @@ if ($response.body.match(/({.*})OK/) && $response.body.match(/({.*})OK/)[1]) {
     item['endtime'] = '2040-12-27 23:59:59';
   }
   $done({body: `${JSON.stringify(obj)}OK`});
+} else if (obj.cached_ad && obj.cached_ad.ads) {
+  obj.cached_ad.ads = [];
+  $done({body: `${JSON.stringify(obj)}OK`});
 } else {
   $done({});
 }

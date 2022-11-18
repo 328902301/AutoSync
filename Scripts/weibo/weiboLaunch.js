@@ -4,8 +4,6 @@ if ($response.body.match(/({.*})OK/) && $response.body.match(/({.*})OK/)[1]) {
   let obj = JSON.parse($response.body.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
   if (obj.background_delay_display_time) {
     obj.background_delay_display_time = 60*60*24*365;
-  } else if (obj.cached_ad && obj.cached_ad.ads) {
-    obj.cached_ad.ads = [];
   }
   for (let item of obj['ads']) {
     // console.log(`${item['begintime']} -- ${item['endtime']}`);

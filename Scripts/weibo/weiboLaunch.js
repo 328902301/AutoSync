@@ -3,12 +3,12 @@
 const path1 = '/interface/sdk/sdkad.php';
 const path2 = '/wbapplua/wbpullad.lua';
 
+var url = $request.url;
+var body = $response.body;
+
 if (!$response.body) {
   $done({});
 }
-
-var url = $request.url;
-var body = $response.body;
 
 if (url.indexOf(path1) != -1) {
   if (body.match(/({.*})OK/) && body.match(/({.*})OK/)[1]) {

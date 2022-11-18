@@ -4,6 +4,8 @@ if ($response.body.match(/({.*})OK/) && $response.body.match(/({.*})OK/)[1]) {
   let obj = JSON.parse($response.body.match(/({.*})OK/)[1]);  // $response.body： {json..,}OK
   if (obj.background_delay_display_time) {
     obj.background_delay_display_time = 60*60*24*365;
+  } else if (obj.cached_ad && obj.cached_ad.ads) {
+    obj.cached_ad.ads = [];
   }
   for (let item of obj['ads']) {
     // console.log(`${item['begintime']} -- ${item['endtime']}`);
@@ -12,9 +14,6 @@ if ($response.body.match(/({.*})OK/) && $response.body.match(/({.*})OK/)[1]) {
     item['begintime'] = '2040-12-27 00:00:01';
     item['endtime'] = '2040-12-27 23:59:59';
   }
-  $done({body: `${JSON.stringify(obj)}OK`});
-} else if (obj.cached_ad && obj.cached_ad.ads) {
-  obj.cached_ad.ads = [];
   $done({body: `${JSON.stringify(obj)}OK`});
 } else {
   $done({});

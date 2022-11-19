@@ -149,8 +149,7 @@ function unlockBlockedKeywords() {
         keywords = [];
       }
       let headers = {
-        "Cache-Control":
-          "no-cache, no-store, must-revalidate, private, max-age=0",
+        "Cache-Control": "no-cache, no-store, must-revalidate, private, max-age=0",
         Connection: "keep-alive",
         "Content-Type": "application/json;charset=utf-8",
         Pragma: "no-cache",
@@ -218,10 +217,7 @@ function unlockBlockedKeywords() {
           $.logger.debug(`添加本地脚本屏蔽关键词“${keyword}”`);
         } else {
           let body = JSON.stringify({
-            error: {
-              message: "关键词已存在",
-              code: 100002,
-            },
+            error: {message: "关键词已存在", code: 100002},
           });
           if ($.env.isQuanX) {
             response = {body: body, headers: headers, status: "HTTP/1.1 400 Bad Request"};
@@ -302,9 +298,7 @@ function modifyAppConfig() {
       let tab_infos = obj["config"]["homepage_feed_tab"]["tab_infos"].filter(
         (e) => {
           if (e.tab_type === "activity_tab") {
-            e.end_time = (Date.parse(new Date()) - 120000)
-              .toString()
-              .substr(0, 10);
+            e.end_time = (Date.parse(new Date()) - 120000).toString().substr(0, 10);
             return true;
           } else {
             return false;

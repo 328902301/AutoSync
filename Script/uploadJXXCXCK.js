@@ -1,120 +1,32 @@
-/**
- 打开App，点击右上角的消息图标，自动捕抓 wskey 上传
- 注：如有变更才会上传，如果 wskey 没变，不会重复上传；新人需要联系我，我手动确认一次才会入库。然后自己申请telegram bot，提供该bot token给我，以接收脚本通知。
- https://t.me/id77_GitHub
+const $ = new Env('🍪上传 JXXCXCK');
 
- hostname = api-dd.jd.com
+let cookie = $request.headers['Cookie'] || $request.headers['cookie'];
+// const modifiedHeaders = $response.headers;
+// const body = JSON.parse($response.body);
+// let key = 'Set-Cookie';
+// let cookies = $response.headers[key];
+// if (!cookies) {
+//   key = 'set-cookie';
+//   cookies = $response.headers[key];
+// }
 
-【Surge脚本配置】:
-===================
-[Script]
-自动上车-id77 = type=http-request,pattern=^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/uploadJDWSKey.js,script-update-interval=0
-===================
-【Loon脚本配置】:
-===================
-[Script]
-http-request ^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog tag=自动上车-id77, script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/uploadJDWSKey.js,requires-body=1
-===================
-【 QX  脚本配置 】:
-===================
-[rewrite_local]
-^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog url script-request-header https://raw.githubusercontent.com/id77/QuantumultX/master/Script/uploadJDWSKey.js
- */
-
-const $ = new Env('🍪上传 wskey');
-const UA = $request.headers['User-Agent'] || $request.headers['user-agent'];
-let CK = $request.headers['Cookie'] || $request.headers['cookie'];
-$.user = 'id77';
-let pin, key;
-
-if (!UA.includes('JD4iPhone')) {
-  console.log(`需要在京东App触发`);
-
-  $.done();
-}
-
-if (!CK) {
-  console.log(`没有找到CK`);
-
-  $.done();
-}
-
-try {
-  pin = CK.match(/pin=([^=;]+?);/)[1];
-  key = CK.match(/wskey=([^=;]+?);/)[1];
-} catch (error) {
-  console.log(error);
-
-  $.done();
-}
+// if (!cookies) {
+//   $.msg('失败', '', '没有cookie ⚠️');
+//   $.done();
+// }
 
 !(async () => {
-  if (!pin || !key) {
-    $.desc = '未找到 wskey';
-    $.msg($.name, $.subt, $.desc);
-
-    $.done();
-  }
-
   try {
-    const cookie = `pin=${pin};wskey=${key};`;
-    const userName = pin;
-    const decodeName = decodeURIComponent(userName);
-    const cookiesData = JSON.parse($.getData('wskeyList') || '[]');
-    let updateIndex;
-    let cookieName = '【账号】';
-    const existCookie = cookiesData.find((item, index) => {
-      const ck = item.cookie;
-      const Account = ck
-        ? ck.match(/pin=.+?;/)
-          ? ck.match(/pin=(.+?);/)[1]
-          : null
-        : null;
-      const verify = userName === Account;
-      if (verify) {
-        updateIndex = index;
-        if (ck !== cookie) {
-          $.needUpload = true;
-        }
-      }
-      return verify;
-    });
-    let tipPrefix = '';
-    if (existCookie) {
-      cookiesData[updateIndex].cookie = cookie;
-      cookieName = '【账号' + (updateIndex + 1) + '】';
-      tipPrefix = '更新京东 wskey';
-      $.tips = '';
-    } else {
-      cookiesData.push({
-        userName: decodeName,
-        cookie: cookie,
-      });
-      cookieName = '【账号' + cookiesData.length + '】';
-      tipPrefix = '首次写入京东 wskey';
-      $.needUpload = true;
-      $.tips = `\n如果误用此脚本，App退出账号即可。\n如需上车，联系 https://t.me/id77_GitHub`;
-    }
-    // $.msg(
-    //   '用户名: ' + decodeName,
-    //   '',
-    //   tipPrefix + cookieName + 'Cookie成功 🎉'
-    // );
-    if ($.needUpload) {
-      await updateCookie(cookie);
-      if ($.uploadState) {
-        $.setData(JSON.stringify(cookiesData, null, 2), 'wskeyList');
-      }
-      await showMsg();
-    } else {
-      console.log(`🍪wskey 没有改变`);
-    }
+    // console.log(JSON.stringify(cookies));
+    // let cookie = cookies.replace(/\sEXPIRES=.+?DOMAIN.+?.com;,?/g, '');
+    // if (body?.info?.skey) cookie += ` wq_skey=${body.info.skey};`;
+    await updateCookie(cookie);
   } catch (error) {
-    $.msg('写入京东 wskey 失败', '', '请重试 ⚠️');
+    $.msg('失败', '', '请重试 ⚠️');
     console.log(
-      `\n写入京东 wskey 出现错误 ‼️\n${JSON.stringify(
-        error
-      )}\n\n${error}\n\n${JSON.stringify($request.headers)}\n`
+      `\n出现错误 ‼️\n${JSON.stringify(error)}\n\n${error}\n\n${JSON.stringify(
+        $response.headers
+      )}\n`
     );
   }
 })()
@@ -139,8 +51,8 @@ function updateCookie(cookie) {
           data = JSON.parse(data);
           if (data.ok) {
             $.uploadState = true;
-            console.log(`已发送 wskey 给 ${$.user}🎉。\n`);
-            $.resData = `已发送 wskey 给 ${$.user}🎉。`;
+            console.log(`已发送 JXXCXCK 给 ${$.user}🎉。\n`);
+            $.resData = `已发送 JXXCXCK 给 ${$.user}🎉。`;
           } else if (data.error_code === 400) {
             console.log(`发送失败，请联系 ${$.user}。\n`);
             $.resData = `发送失败，请联系 ${$.user}。`;

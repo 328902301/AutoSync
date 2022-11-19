@@ -142,7 +142,7 @@ try {
       `</div>`;
   }
 
-  let copyObject = `<script>
+  let copyObject = `<script ignore>
     // 复制一份
     if(window.localStorage) {
       window.localStorageCopy = window.localStorage
@@ -153,7 +153,7 @@ try {
     const _${prefix}_id77_Map = Map;
   </script>`;
 
-  let mitmFuckEid = `<script>
+  let mitmFuckEid = `<script ignore>
    function _${prefix}_id77_upsetArr(arr){
       return arr.sort(function(){ return Math.random() - 0.5});
     }
@@ -181,10 +181,10 @@ try {
     };
   </script>`;
 
-  let scriptDoms = `<script src="https://unpkg.com/vconsole@3.14.6/dist/vconsole.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>`;
+  let scriptDoms = `<script src="https://unpkg.com/vconsole@3.14.6/dist/vconsole.min.js" ignore></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js" ignore></script>`;
 
-  let mitmFixContent = `<script>
+  let mitmFixContent = `<script ignore>
     if (Map !== _${prefix}_id77_Map) {
       // 兼容保价页面
       if(!Map.prototype.set &&((Map.toString && Map.toString()) || '').includes('this.elements')){
@@ -306,7 +306,7 @@ try {
       display: none !important;
     }
   </style>
-  <script>
+  <script ignore>
     const _${prefix}_id77_cookies_tool = Cookies;
     const _${prefix}_id77_domain = window.location.origin;
     const _${prefix}_id77_currentPin = _${prefix}_id77_cookies_tool.get('pt_pin');

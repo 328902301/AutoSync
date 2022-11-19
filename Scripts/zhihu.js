@@ -119,7 +119,6 @@ const $ = MagicJS(scriptName, "INFO");
         manageBlackUser();
         break;
       default:
-        break;
     }
   } else if ($.isRequest) {
     // 知乎屏蔽关键词解锁

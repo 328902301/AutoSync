@@ -16,10 +16,13 @@ if (url.indexOf(path1) != -1) {
     if (obj.background_delay_display_time) {
       obj.background_delay_display_time = 60*60*24*366;
     }
-    if (obj.show_push_splash_ad && obj.ads) {
+    if (obj.show_push_splash_ad) {
       obj.show_push_splash_ad = false;
+    }
+    if (obj.ads) {
       obj.ads = [];
     }
+  }
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);

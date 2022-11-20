@@ -5,7 +5,6 @@ obj = {
   'code': 0,
   'data': {
     'skip_splash': true,
-    'splash': {}
     'preload_plugins': '249,101,102,109',
     'clear_apis': [
       'http:\/\/api.m.mi.com\/v1\/home\/appInfov2',

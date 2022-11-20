@@ -1,5 +1,3 @@
-// 鸣谢 @githubacct001
-
 let obj = JSON.parse($response.body);
 
 obj.code = 0;

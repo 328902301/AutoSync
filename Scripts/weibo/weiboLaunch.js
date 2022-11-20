@@ -16,12 +16,9 @@ if (url.indexOf(path1) != -1) {
     if (obj.background_delay_display_time) {
       obj.background_delay_display_time = 60*60*24*366;
     }
-    if (obj.show_push_splash_ad) {
+    if (obj.show_push_splash_ad && obj.ads) {
       obj.show_push_splash_ad = false;
-    }
-    if (obj.ads) {
       obj.ads = [];
-    }
   }
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {

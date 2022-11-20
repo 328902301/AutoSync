@@ -13,11 +13,11 @@ if (!$response.body) {
 if (url.indexOf(path1) != -1) {
   if (body.match(/({.*})OK/) && body.match(/({.*})OK/)[1]) {
     var obj = JSON.parse(body.match(/({.*})OK/)[1]);
-    if (obj.background_delay_display_time) {
-      obj.background_delay_display_time = 60*60*24*366;
-    }
     if (obj.show_push_splash_ad) {
       obj.show_push_splash_ad = false;
+    }
+    if (obj.background_delay_display_time) {
+      obj.background_delay_display_time = 60*60*24*366;
     }
     if (obj.ads) {
       obj.ads = [];

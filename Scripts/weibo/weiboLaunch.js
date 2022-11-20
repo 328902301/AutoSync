@@ -29,6 +29,9 @@ if (url.indexOf(path1) != -1) {
   if (obj.cached_ad && obj.cached_ad.ads) {
     obj.cached_ad.ads = [];
   }
+  if (obj.delete_days) {
+    obj.delete_days = 0;
+  }
   $done({body: JSON.stringify(obj)});
 } else {
   $done({});

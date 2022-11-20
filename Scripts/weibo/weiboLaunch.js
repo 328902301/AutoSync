@@ -19,7 +19,7 @@ if (url.indexOf(path1) != -1) {
     if (obj.show_push_splash_ad && obj.ads) {
       obj.show_push_splash_ad = false;
       obj.ads = [];
-  }
+    }
   $done({body: `${JSON.stringify(obj)}OK`});
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);

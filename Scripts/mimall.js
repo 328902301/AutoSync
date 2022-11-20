@@ -10,10 +10,10 @@ hostname = api.m.mi.com
 
 let obj = JSON.parse($response.body);
 obj = {
-  "code" : 0,
-  "data" : {
-    "skip_splash" : true,
-    "splash" : {},
-  },
+  'code': 0,
+  'data': {
+    'skip_splash': true,
+    'splash': {},
+  }
 }
 $done({body: JSON.stringify(obj)});

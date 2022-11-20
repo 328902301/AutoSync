@@ -26,6 +26,7 @@ if (url.indexOf(path1) != -1) {
 } else if (url.indexOf(path2) != -1) {
   var obj = JSON.parse(body);
   if (obj.cached_ad && obj.cached_ad.ads) {
+    obj.cached_ad = '';
     obj.cached_ad.ads.start_date = 2239372800;
     obj.cached_ad.ads.duration = 0;
     obj.cached_ad.ads.end_date = 2239459199;

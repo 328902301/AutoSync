@@ -300,11 +300,8 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         }
         break;
       default:
-        magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
-        break;
     }
   } else {
-    magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
   }
   if (body) {
     magicJS.done({body});

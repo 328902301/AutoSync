@@ -23,9 +23,9 @@ function modifyMain(url, data) {
   }
   if (url.indexOf(launchAdUrl2) > -1) {
     data = JSON.parse(data);
-    if (data.cached_ad && data.cached_ad.ads && obj.cached_ad.delete_days) {
+    if (data.cached_ad && data.cached_ad.ads && data.cached_ad.delete_days) {
       data.cached_ad.ads = [];
-      obj.cached_ad.delete_days = 1;
+      data.cached_ad.delete_days = 1;
     }
     return JSON.stringify(data);
   }

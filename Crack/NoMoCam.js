@@ -2,7 +2,7 @@
 NOMO CAM 解锁订阅
 *******************************
 [rewrite_local]
-^https?:\/\/nomo\.dafork\.com\/api\/v2\/iap\/ios_verify$ url script-request-body https://raw.githubusercontent.com/WeeekWin/QuanX/main/NoMoCam.js
+^https?:\/\/nomo\.dafork\.com\/api\/v2\/iap\/ios_verify$ url script-request-body https://raw.githubusercontent.com/WeeekWin/QuanX/main/Crack/NoMoCam.js
 
 [mitm] 
 hostname = nomo.dafork.com

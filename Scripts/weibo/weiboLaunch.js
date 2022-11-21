@@ -1,30 +1,37 @@
-// 鸣谢 @yichahucha, @yjqiang
+// 鸣谢 @yichahucha, @zmqcherish
 
-const path1 = '/interface/sdk/sdkad.php';
-const path2 = '/wbapplua/wbpullad.lua';
+const launchAdUrl1 = '/interface/sdk/sdkad.php';
+const launchAdUrl2 = '/wbapplua/wbpullad.lua';
 
-var url = $request.url;
 var body = $response.body;
+var url = $request.url;
 
-if (!$response.body) {
-  $done({});
+function modifyMain(url, data) {
+  if (url.indexOf(launchAdUrl1) > -1) {
+    let temp = data.match(/\{.*\}/);
+    if (!temp) return data;
+    data = JSON.parse(temp);
+    if (data.needlocation) data.needlocation = false;
+    if (data.show_push_splash_ad) data.show_push_splash_ad = false;
+    if (data.code) data.code = 200;
+    if (data.background_delay_display_time) data.background_delay_display_time = 60 * 60 * 24 * 366;
+    if (data.lastAdShow_delay_display_time) data.lastAdShow_delay_display_time = 60 * 60 * 24 * 366;
+    if (data.realtime_ad_video_stall_time) data.realtime_ad_video_stall_time = 60 * 60 * 24 * 366;
+    if (data.realtime_ad_timeout_duration) data.realtime_ad_timeout_duration = 60 * 60 * 24 * 366;
+    if (data.ads) data.ads = [];
+    return JSON.stringify(data) + 'OK';
+  }
+  if (url.indexOf(launchAdUrl2) > -1) {
+    data = JSON.parse(data);
+    if (data.cached_ad && data.cached_ad.ads && obj.cached_ad.delete_days) {
+      data.cached_ad.ads = [];
+      obj.cached_ad.delete_days = 1;
+    }
+    return JSON.stringify(data);
+  }
+  return data;
 }
 
-if (url.indexOf(path1) != -1) {
-  if (body.match(/({.*})OK/) && body.match(/({.*})OK/)[1]) {
-    var obj = JSON.parse(body.match(/({.*})OK/)[1]);
-    if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
-    if (obj.background_delay_display_time) obj.background_delay_display_time = 60 * 60 * 24 * 366;
-    if (obj.ads) obj.ads = [];
-  }
-  $done({body: `${JSON.stringify(obj)}OK`});
-} else if (url.indexOf(path2) != -1) {
-  var obj = JSON.parse(body);
-  if (obj.cached_ad && obj.cached_ad.ads && obj.cached_ad.delete_days) {
-    obj.cached_ad.ads = [];
-    obj.cached_ad.delete_days = 1;
-  }
-  $done({body: JSON.stringify(obj)});
-} else {
-  $done({});
-}
+body = modifyMain(url, body);
+
+$done({body});

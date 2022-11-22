@@ -7,7 +7,7 @@ var body = $response.body;
 var url = $request.url;
 
 function modifyMain(url, data) {
-  if (url.indexOf(launchAdUrl1) > -1) {
+  if (url.indexOf(launchAdUrl1) != -1) {
     let temp = data.match(/\{.*\}/);
     if (!temp) return data;
     data = JSON.parse(temp);
@@ -21,7 +21,7 @@ function modifyMain(url, data) {
     if (data.ads) data.ads = [];
     return JSON.stringify(data) + 'OK';
   }
-  if (url.indexOf(launchAdUrl2) > -1) {
+  if (url.indexOf(launchAdUrl2) != -1) {
     data = JSON.parse(data);
     if (data.cached_ad && data.cached_ad.ads && data.cached_ad.delete_days) {
       data.cached_ad.ads = [];

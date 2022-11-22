@@ -40,7 +40,7 @@ if (url.indexOf(path2) != -1) {
     obj.cached_ad.delete_days = 1;
   }
   */
-    for (let item of obj['cached_ad']['ads']) {
+  for (let item of obj['cached_ad']['ads']) {
     item['start_date'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     item['show_count'] = 0;
     item['duration'] = 31536000; // 60 * 60 * 24 * 365 = 31536000

@@ -68,12 +68,12 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         try {
           let obj = JSON.parse(magicJS.response.body);
           obj['data']['max_time'] = 0;
-          obj['data']['min_interval'] = 31536000;
-          obj['data']['pull_interval'] = 31536000;
+          obj['data']['min_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+          obj['data']['pull_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
           for (let i = 0; i < obj['data']['list'].length; i++) {
             obj['data']['list'][i]['duration'] = 0;
-            obj['data']['list'][i]['begin_time'] = 1915027200;
-            obj['data']['list'][i]['end_time'] = 1924272000;
+            obj['data']['list'][i]['begin_time'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+            obj['data']['list'][i]['end_time'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
           }
           body = JSON.stringify(obj);
         } catch (err) {

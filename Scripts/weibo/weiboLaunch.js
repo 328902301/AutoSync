@@ -1,36 +1,37 @@
 // 鸣谢 @yichahucha, @zmqcherish
 
-const launchAdUrl1 = '/interface/sdk/sdkad.php';
-const launchAdUrl2 = '/wbapplua/wbpullad.lua';
-
-var body = $response.body;
 var url = $request.url;
+var body = $response.body;
 
-function modifyMain(url, data) {
-  if (url.indexOf(launchAdUrl1) != -1) {
-    let temp = data.match(/\{.*\}/);
-    if (!temp) return data;
-    data = JSON.parse(temp);
-    if (data.needlocation) data.needlocation = false;
-    if (data.show_push_splash_ad) data.show_push_splash_ad = false;
-    if (data.code) data.code = 200;
-    if (data.background_delay_display_time) data.background_delay_display_time = 60 * 60 * 24 * 366;
-    if (data.lastAdShow_delay_display_time) data.lastAdShow_delay_display_time = 60 * 60 * 24 * 366;
-    if (data.realtime_ad_video_stall_time) data.realtime_ad_video_stall_time = 60 * 60 * 24 * 366;
-    if (data.realtime_ad_timeout_duration) data.realtime_ad_timeout_duration = 60 * 60 * 24 * 366;
-    if (data.ads) data.ads = [];
-    return JSON.stringify(data) + 'OK';
-  }
-  if (url.indexOf(launchAdUrl2) != -1) {
-    data = JSON.parse(data);
-    if (data.cached_ad && data.cached_ad.ads && data.cached_ad.delete_days) {
-      data.cached_ad.ads = [];
-      data.cached_ad.delete_days = 1;
-    }
-    return JSON.stringify(data);
-  }
-  return data;
+const path1 = '/interface/sdk/sdkad.php';
+const path2 = '/wbapplua/wbpullad.lua';
+
+if (!$response.body) {
+  $done({});
 }
 
-body = modifyMain(url, body);
+if (url.indexOf(path1) != -1) {
+  let tmp = /\{.*\}/;
+  body = body.match(tmp);
+  let obj = JSON.parse(body);
+  if (obj.needlocation) obj.needlocation = false;
+  if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
+  if (obj.code) obj.code = 200;
+  if (obj.background_delay_display_time) obj.background_delay_display_time = 60 * 60 * 24 * 366;
+  if (obj.lastAdShow_delay_display_time) obj.lastAdShow_delay_display_time = 60 * 60 * 24 * 366;
+  if (obj.realtime_ad_video_stall_time) obj.realtime_ad_video_stall_time = 60 * 60 * 24 * 366;
+  if (obj.realtime_ad_timeout_duration) obj.realtime_ad_timeout_duration = 60 * 60 * 24 * 366;
+  if (obj.ads) obj.ads = [];
+  body = JSON.stringify(obj) + 'OK';
+}
+
+if (url.indexOf(path2) != -1) {
+  let obj = JSON.parse(body);
+  if (obj.cached_ad && obj.cached_ad.ads && obj.cached_ad.delete_days) {
+    obj.cached_ad.ads = [];
+    obj.cached_ad.delete_days = 1;
+  }
+  body = JSON.stringify(obj);
+}
+
 $done({body});

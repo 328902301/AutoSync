@@ -2,8 +2,8 @@
 
 const version = 'v1024.1';
 const $ = new Env("微博去广告");
-var body = $response.body;
 var url = $request.url;
+var body = $response.body;
 let storeMainConfig = $.getdata('mainConfig');
 let storeItemMenusConfig = $.getdata('itemMenusConfig');
 

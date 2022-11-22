@@ -22,7 +22,7 @@ if (url.indexOf(path1) != -1) {
   if (obj.realtime_ad_video_stall_time) obj.realtime_ad_video_stall_time = 31536000;
   if (obj.realtime_ad_timeout_duration) obj.realtime_ad_timeout_duration = 31536000;
   /*
-  for (let item of body['ads']) {
+  for (let item of obj['ads']) {
     item['displaytime'] = 0;
     item['begintime'] = '2040-01-01 00:00:00';
     item['endtime'] = '2040-01-01 23:59:59';

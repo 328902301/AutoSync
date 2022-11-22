@@ -1,4 +1,4 @@
-// 鸣谢 @yichahucha, @zmqcherish
+// 鸣谢 @yichahucha, @yjqiang
 
 var url = $request.url;
 var body = $response.body;
@@ -17,10 +17,17 @@ if (url.indexOf(path1) != -1) {
   if (obj.needlocation) obj.needlocation = false;
   if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
   if (obj.code) obj.code = 200;
-  if (obj.background_delay_display_time) obj.background_delay_display_time = 60 * 60 * 24 * 366;
-  if (obj.lastAdShow_delay_display_time) obj.lastAdShow_delay_display_time = 60 * 60 * 24 * 366;
-  if (obj.realtime_ad_video_stall_time) obj.realtime_ad_video_stall_time = 60 * 60 * 24 * 366;
-  if (obj.realtime_ad_timeout_duration) obj.realtime_ad_timeout_duration = 60 * 60 * 24 * 366;
+  if (obj.background_delay_display_time) obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
+  if (obj.lastAdShow_delay_display_time) obj.lastAdShow_delay_display_time = 31536000;
+  if (obj.realtime_ad_video_stall_time) obj.realtime_ad_video_stall_time = 31536000;
+  if (obj.realtime_ad_timeout_duration) obj.realtime_ad_timeout_duration = 31536000;
+  /*
+  for (let item of body['ads']) {
+    item['displaytime'] = 0;
+    item['begintime'] = '2040-01-01 00:00:00';
+    item['endtime'] = '2040-01-01 23:59:59';
+  }
+  */
   if (obj.ads) obj.ads = [];
   body = JSON.stringify(obj) + 'OK';
 }

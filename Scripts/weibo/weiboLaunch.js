@@ -10,7 +10,7 @@ if (!$response.body) {
   $done({});
 }
 
-if (url.indexOf(path1) != -1) {
+if (url.indexOf(path1) > -1) {
   let tmp = /\{.*\}/;
   body = body.match(tmp);
   let obj = JSON.parse(body);
@@ -32,7 +32,7 @@ if (url.indexOf(path1) != -1) {
   body = JSON.stringify(obj) + 'OK';
 }
 
-if (url.indexOf(path2) != -1) {
+if (url.indexOf(path2) > -1) {
   let obj = JSON.parse(body);
   /*
   if (obj.cached_ad && obj.cached_ad.ads && obj.cached_ad.delete_days) {

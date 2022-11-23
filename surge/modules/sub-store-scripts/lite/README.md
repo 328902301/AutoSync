@@ -12,6 +12,8 @@
 
 - 兼容 QuanX, Surge, Loon, Shadowrocket, Stash 等客户端和 Node.js 环境
 
+- Sub-Store 内部暂时并不支持 `http-opts` 里的 `host`, `path` 为数组. 本脚本增加了一个选择来控制数组的输出.
+
 ## Sub-Store 脚本使用方法
 
 打开 Sub-Store => 订阅 => 编辑 => 节点操作+ => 脚本操作 => 链接 => 粘贴 [https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js) => 保存

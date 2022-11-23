@@ -33,8 +33,10 @@ function Env(name, opts) {
       this.http = new Http(this)
       this.data = null
       this.dataFile = 'box.dat'
+      this.logs = []
       this.isMute = false
       this.isNeedRewrite = false
+      this.logSeparator = '\n'
       this.encoding = 'utf-8'
       this.startTime = new Date().getTime()
       Object.assign(this, opts)
@@ -119,7 +121,7 @@ function Env(name, opts) {
           headers: { 'X-Key': key, 'Accept': '*/*' }
         }
         this.post(opts, (err, resp, body) => resolve(body))
-      }).catch()
+      }).catch((e) => this.logErr(e))
     }
 
     loaddata() {
@@ -305,7 +307,9 @@ function Env(name, opts) {
                 }
                 nextOpts.cookieJar = this.ckjar
               }
-            } catch (e) {}
+            } catch (e) {
+              this.logErr(e)
+            }
             // this.ckjar.setCookieSync(resp.headers['set-cookie'].map(Cookie.parse).toString())
           })
           .then(
@@ -420,8 +424,93 @@ function Env(name, opts) {
       return queryString
     }
 
+    /**
+     * 系统通知
+     *
+     * > 通知参数: 同时支持 QuanX 和 Loon 两种格式, EnvJs根据运行环境自动转换, Surge 环境不支持多媒体通知
+     *
+     * 示例:
+     * $.msg(title, subt, desc, 'twitter://')
+     * $.msg(title, subt, desc, { 'open-url': 'twitter://', 'media-url': 'https://github.githubassets.com/images/modules/open_graph/github-mark.png' })
+     * $.msg(title, subt, desc, { 'open-url': 'https://bing.com', 'media-url': 'https://github.githubassets.com/images/modules/open_graph/github-mark.png' })
+     *
+     * @param {*} title 标题
+     * @param {*} subt 副标题
+     * @param {*} desc 通知详情
+     * @param {*} opts 通知参数
+     *
+     */
+    msg(title = name, subt = '', desc = '', opts) {
+      const toEnvOpts = (rawopts) => {
+        if (!rawopts) return rawopts
+        if (typeof rawopts === 'string') {
+          if (this.isLoon()) return rawopts
+          else if (this.isQuanX()) return { 'open-url': rawopts }
+          else if (this.isSurge()) return { url: rawopts }
+          else return undefined
+        } else if (typeof rawopts === 'object') {
+          if (this.isLoon()) {
+            let openUrl = rawopts.openUrl || rawopts.url || rawopts['open-url']
+            let mediaUrl = rawopts.mediaUrl || rawopts['media-url']
+            return { openUrl, mediaUrl }
+          } else if (this.isQuanX()) {
+            let openUrl = rawopts['open-url'] || rawopts.url || rawopts.openUrl
+            let mediaUrl = rawopts['media-url'] || rawopts.mediaUrl
+            let updatePasteboard = rawopts['update-pasteboard'] || rawopts.updatePasteboard
+            return { 'open-url': openUrl, 'media-url': mediaUrl, 'update-pasteboard': updatePasteboard }
+          } else if (this.isSurge()) {
+            let openUrl = rawopts.url || rawopts.openUrl || rawopts['open-url']
+            return { url: openUrl }
+          }
+        } else {
+          return undefined
+        }
+      }
+      if (!this.isMute) {
+        if (this.isSurge() || this.isLoon()) {
+          $notification.post(title, subt, desc, toEnvOpts(opts))
+        } else if (this.isQuanX()) {
+          $notify(title, subt, desc, toEnvOpts(opts))
+        }
+      }
+      if (!this.isMuteLog) {
+        let logs = ['', '==============📣系统通知📣==============']
+        logs.push(title)
+        subt ? logs.push(subt) : ''
+        desc ? logs.push(desc) : ''
+        console.log(logs.join('\n'))
+        this.logs = this.logs.concat(logs)
+      }
+    }
+
+    log(...logs) {
+      if (logs.length > 0) {
+        this.logs = [...this.logs, ...logs]
+      }
+      console.log(logs.join(this.logSeparator))
+    }
+
+    logErr(err, msg) {
+      const isPrintSack = !this.isSurge() && !this.isQuanX() && !this.isLoon()
+      if (!isPrintSack) {
+        this.log('', `❗️${this.name}, 错误!`, err)
+      } else {
+        this.log('', `❗️${this.name}, 错误!`, err.stack)
+      }
+    }
+
     wait(time) {
       return new Promise((resolve) => setTimeout(resolve, time))
+    }
+
+    done(val = {}) {
+      const endTime = new Date().getTime()
+      const costTime = (endTime - this.startTime) / 1000
+      if (this.isSurge() || this.isQuanX() || this.isLoon()) {
+        $done(val)
+      } else if (this.isNode()) {
+        process.exit(1)
+      }
     }
   })(name, opts)
 }

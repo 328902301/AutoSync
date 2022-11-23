@@ -407,7 +407,6 @@ function Env(name, opts) {
      */
     queryStr(options) {
       let queryString = ''
-
       for (const key in options) {
         let value = options[key]
         if (value != null && value !== '') {
@@ -418,30 +417,11 @@ function Env(name, opts) {
         }
       }
       queryString = queryString.substring(0, queryString.length - 1)
-    
       return queryString
     }
-
-    /**
-     * 系统通知
-     *
-     * > 通知参数: 同时支持 QuanX 和 Loon 两种格式, EnvJs根据运行环境自动转换, Surge 环境不支持多媒体通知
-     *
-     * 示例:
-     * $.msg(title, subt, desc, 'twitter://')
-     * $.msg(title, subt, desc, { 'open-url': 'twitter://', 'media-url': 'https://github.githubassets.com/images/modules/open_graph/github-mark.png' })
-     * $.msg(title, subt, desc, { 'open-url': 'https://bing.com', 'media-url': 'https://github.githubassets.com/images/modules/open_graph/github-mark.png' })
-     *
-     * @param {*} title 标题
-     * @param {*} subt 副标题
-     * @param {*} desc 通知详情
-     * @param {*} opts 通知参数
-     *
-     */
 
     wait(time) {
       return new Promise((resolve) => setTimeout(resolve, time))
     }
-
   })(name, opts)
 }

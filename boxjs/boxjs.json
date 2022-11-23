@@ -712,6 +712,11 @@
         "<a onClick=\"window.location.reload(true);\">刷新</a>"
       ],
       "keys": [
+        "@xream.10010.mobile",
+        "@xream.10010.password",
+        "@xream.10010.cookie",
+        "@xream.10010.tokenOnline",
+        "@xream.10010.appId",
         "@xream.10010.disabled",
         "@xream.10010.debug",
         "@xream.10010.systemNotifyDisabled",
@@ -719,11 +724,6 @@
         "@xream.10010.panelNotifyDisabled",
         "@xream.10010.tileNotifyDisabled",
         "@xream.10010.notifyDisabled",
-        "@xream.10010.cookie",
-        "@xream.10010.tokenOnline",
-        "@xream.10010.mobile",
-        "@xream.10010.password",
-        "@xream.10010.appId",
         "@xream.10010.excludeRemainPkg",
         "@xream.10010.freePkg",
         "@xream.10010.otherPkg",
@@ -803,6 +803,13 @@
           "val": "",
           "type": "text",
           "desc": "Cookie"
+        },
+        {
+          "id": "@xream.10010.tokenOnline",
+          "name": "TokenOnline(不需要手动填 自动续登录用的)",
+          "val": "",
+          "type": "text",
+          "desc": "TokenOnline"
         },
         {
           "id": "@xream.10010.excludeRemainPkg",

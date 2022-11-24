@@ -1404,6 +1404,8 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 url reject-200
 #> 简讯 本规则由豆豆分享
 ^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad url reject-img
+# > 全民K歌
+HOST-SUFFIX,gdc.kg.qq.com, reject
 # > 其他广告
 
 

@@ -1,0 +1,6 @@
+#!name=Spark
+#!desc=Spark
+[Script]
+Spark = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Spark.js,script-update-interval=-1
+[MITM]
+hostname = %APPEND% api.revenuecat.com

@@ -34,7 +34,7 @@ if (url.indexOf(path1) > -1) {
 
 if (url.indexOf(path2) > -1) {
   let obj = JSON.parse(body);
-  /*
+  /**
   if (obj.cached_ad && obj.cached_ad.ads && obj.cached_ad.delete_days) {
     obj.cached_ad.ads = [];
     obj.cached_ad.delete_days = 1;

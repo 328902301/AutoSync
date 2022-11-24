@@ -1,6 +1,6 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 
-const version = 'v1125.1';
+const version = 'v1125.2';
 
 const $ = new Env('微博去广告');
 let storeMainConfig = $.getdata('mainConfig');
@@ -247,7 +247,7 @@ function removeMsgAd(data) {
 function removePage(data){
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
-    if (data.cards[0].card_group && data.cards[0].card_group.itemid) {
+    if (data.cards[0].card_group && data.cards.card_group.itemid) {
        data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes('t:51'));
      }
   }

@@ -15,7 +15,7 @@ https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 ⚠️⚠️ 下面的操作操作会替换整个配置文件，如果想保留自己原来的配置，请 `导出` 并 `保存` 。
 ```
 ```ruby
-⚠️⚠️ 此配置文件没有国内 IP 分流，请配置 `国内 IP 数据库` (参考下文即可)。
+⚠️⚠️ 此配置文件已配置国内 IP 分流，可以跳过配置 `国内 IP 数据库` 部分。
 ```
 ## 使用方法：
   0. 复制上面的 [配置文件链接](https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf) 备用；
@@ -48,7 +48,7 @@ https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 
 1. 在 Quantumult X 配置文件中 `general` 部分，加入下列代码；
 ```Java
-resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/General/resource_parser.js
+resource_parser_url=https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/general/resourceParser.js
 ```
 ```ruby
 ⚠️⚠️  如提示 `没有自定义解析器` ，请 `长按` 右下角风车后，点击左侧 `刷新` 按钮，然后重新运行 Quantumult X ；

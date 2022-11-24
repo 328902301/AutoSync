@@ -7,6 +7,17 @@
 - 😄 Pronouns: ...
 - ⚡ Fun fact: I ❤️ 🎵
 
+### Hi I am Alkai 👋
+
+📄| Rules | 规矩  |
+|  ----  | ----  | --- |
+⛔️| Fork is prohibited from any repository | 任何仓库都禁止Fork |
+❌| Otherwise, you will be blocked | 否则会被绝情Block |
+✅| But you have the right to use it | 但是您拥有使用权 |
+🔠| For learning reference only | 仅供学习参考 |
+🚫| never delete library | 绝不会删库 |
+📣| Good Luck | 祝好 |
+
 ## 特别声明
 
 1. 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。

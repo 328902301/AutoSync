@@ -38,6 +38,14 @@
 
 `https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js#hostPrefix=[钉钉]&host=tms.dingtalk.com&path=/&method=GET&defaultNetwork=http`
 
+### 注意
+
+部分用户的环境拉取不到脚本
+
+建议套一下 github 加速服务, 例如
+
+`https://ghproxy.com/https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js`
+
 ## 参数列表
 
 `host` 修改 Host 混淆. 默认为空 不修改. 例 a.189.cn

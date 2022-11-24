@@ -1,3 +1,12 @@
+### Hi there 👋
+
+- 🔭 I’m currently studying on a not bad university 
+- 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
+- 💬 Ask me about: JavaScript/Web Spidder 
+- 📫 How to reach me
+- 😄 Pronouns: ...
+- ⚡ Fun fact: I ❤️ 🎵
+
 ## 特别声明
 
 1. 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。

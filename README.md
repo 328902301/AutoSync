@@ -1,12 +1,3 @@
-### Hi there 👋
-
-- 🔭 I’m currently studying on a not bad university 
-- 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
-- 💬 Ask me about: JavaScript/Web Spidder 
-- 📫 How to reach me
-- 😄 Pronouns: ...
-- ⚡ Fun fact: I ❤️ 🎵
-
 ### Hi I am Alkai 👋
 
 📄| Rules | 规矩  |
@@ -17,6 +8,15 @@
 🔠| For learning reference only | 仅供学习参考 |
 🚫| never delete library | 绝不会删库 |
 📣| Good Luck | 祝好 |
+
+### Hi there 👋
+
+- 🔭 I’m currently studying on a not bad university 
+- 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
+- 💬 Ask me about: JavaScript/Web Spidder 
+- 📫 How to reach me
+- 😄 Pronouns: ...
+- ⚡ Fun fact: I ❤️ 🎵
 
 ## 特别声明
 

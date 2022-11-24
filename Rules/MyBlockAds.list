@@ -1,4 +1,4 @@
-# 2022-11-13
+# 2022-11-24
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
@@ -19,6 +19,7 @@ HOST, collector.clue.run, MyBlockAds
 HOST, images.ctfassets.net, MyBlockAds
 
 # 解除安全浏览限制
+HOST-SUFFIX, u3.ucweb.com, MyBlockAds
 HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds
 HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds

@@ -25,6 +25,5 @@ Spark = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=
 # Spotify
 Spotify = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/zhiyicai/Surge/main/Scripts/Spotify.js,script-update-interval=0
 
-
 [MITM]
 hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,photos.adobe.io,lcs-mobile-cops.adobe.io,api.flexibits.com,*.xmind.*,everest.castbox.fm,prod.api.shapr3d.com,api.pxmage.com,api.revenuecat.com,spclient.wg.spotify.com

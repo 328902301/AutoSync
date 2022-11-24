@@ -247,12 +247,10 @@ function removeMsgAd(data) {
 function removePage(data){
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
-    if (!data.card[0].card_group)
+    if (!data.card[0].card_group.itemid) {
       return data;
-    if (!data.card[0].card_group.itemid)
-      return data;
-    if (data.cards[0].card_group && data.cards[0].card_group.itemid) {
-       data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes('t:51'));
+    } else {
+      data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes('t:51'));
      }
   }
   return data;

@@ -897,6 +897,8 @@ https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body h
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg url reject-200
 # > 美团众包
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage url reject-200
+# > 小米商城开屏广告
+^https?:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/mimall.js
 # > 小米
 ^https?+:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
 ^https?+:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200

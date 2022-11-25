@@ -47,20 +47,7 @@ if (url.includes('wmapi.meituan.com/api/v7/loadInfo')) {
   body = JSON.stringify(obj);   
 }
 
-// 小米商城
-if (url.includes('mi.com/v1/app/start')) {
-  let obj = JSON.parse(body);
-  obj.code = 0;
-  if (obj.data.skip_splash && obj.data.splash) {
-    obj.data.skip_splash = true;
-    obj.data.splash = [];
-  }
-  obj.info = 'ok';
-  obj.desc = '成功';
-  body = JSON.stringify(obj);
-}
-
-// 微博
+// 微博 skd
 if (url.includes('uve.weibo.com/interface/sdk/sdkad.php')) {
   let tmp = /\{.*\}/;
   body = body.match(tmp);
@@ -83,7 +70,7 @@ if (url.includes('uve.weibo.com/interface/sdk/sdkad.php')) {
   body = JSON.stringify(obj) + 'OK';
 }
 
-// 微博
+// 微博 lua
 if (url.includes('uve.weibo.com/wbapplua/wbpullad.lua')) {
   let obj = JSON.parse(body);
   /**
@@ -98,6 +85,19 @@ if (url.includes('uve.weibo.com/wbapplua/wbpullad.lua')) {
     item['duration'] = 31536000; // 60 * 60 * 24 * 365 = 31536000
     item['end_date'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
   }
+  body = JSON.stringify(obj);
+}
+
+// 小米商城
+if (url.includes('mi.com/v1/app/start')) {
+  let obj = JSON.parse(body);
+  obj.code = 0;
+  if (obj.data.skip_splash && obj.data.splash) {
+    obj.data.skip_splash = true;
+    obj.data.splash = [];
+  }
+  obj.info = 'ok';
+  obj.desc = '成功';
   body = JSON.stringify(obj);
 }
 

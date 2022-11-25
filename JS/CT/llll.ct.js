@@ -79,7 +79,7 @@ function sign() {
 
             const url = 'https://llhb.ah163.net/ah_red_come/app/userSign'
 
-            const para = { 'queryDate': timeStr(), 'phone': tokenVal }
+            const para = { 'queryDate': timeStr(), 'phone': tokenValue }
             const body = { 'para': $.Encrypt(JSON.stringify(para)) }
 
             const req = {

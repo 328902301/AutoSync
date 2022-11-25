@@ -40,7 +40,7 @@ function getToken() {
     const cookieValue = $request.headers['Cookie']
     const bodyValue = $request.body
 
-    if (cookieVal != null && bodyVal != null) {
+    if (cookieValue != null && bodyValue != null) {
 
         const ahdxValue = { 'cookie': cookieValue, 'body': bodyValue }
         const ahdxStr = JSON.stringify(ahdxValue)
@@ -66,8 +66,8 @@ function sign() {
         if (ahdxStr != null) {
             const ahdxValue = JSON.parse(ahdxStr)
 
-            const cookieVal = ahdxValue['cookie']
-            const bodyVal = ahdxValue['body']
+            const cookieValue = ahdxValue['cookie']
+            const bodyValue = ahdxValue['body']
 
 
             const url = 'http://wx.ah.189.cn/AhdxTjyl/qd.do'
@@ -76,9 +76,9 @@ function sign() {
                 url: url,
                 method: 'POST',
                 headers: {
-                    'Cookie': cookieVal
+                    'Cookie': cookieValue
                 },
-                body: bodyVal
+                body: bodyValue
             }
 
             $task.fetch(req).then(response => {
@@ -103,61 +103,3 @@ function sign() {
         }
     })
 }
-
-
-
-
-
-
-//分开写
-
-// const name = '安徽电信公众号.签到'
-
-// const cookieKey = 'fan_10000_cookie'
-// const bodyKey = 'fan_10000_body'
-
-// const cookieVal = $request.headers['Cookie']
-// const bodyVal = $request.body
-
-// if (cookieVal != null && bodyVal != null) {
-
-//     let cookie = $prefs.setValueForKey(cookieVal, cookieKey)
-//     let body = $prefs.setValueForKey(bodyVal, bodyKey)
-
-//     if (cookie && body) {
-//         $notify(name,'cookie写入成功','详见日志')
-//         console.log(name)
-//         console.log(`${cookieVal}\n${bodyVal}`)
-//     }
-// }
-// $done({})
-
-
-// const name = '安徽电信公众号.签到'
-
-// const cookieKey = 'fan_10000_cookie'
-// const bodyKey = 'fan_10000_body'
-
-// const cookieVal = $prefs.valueForKey(cookieKey)
-// const bodyVal = $prefs.valueForKey(bodyKey)
-
-// if (cookieVal != null && bodyVal != null) {
-//     const url = 'http://wx.ah.189.cn/AhdxTjyl/qd.do'
-
-//     const req = {
-//         url: url,
-//         method: 'POST',
-//         headers: {
-//             'Cookie': cookieVal
-//         },
-//         body: bodyVal
-//     }
-
-//     $task.fetch(req).then(response => {
-//         console.log(response.body)
-//         $done()
-//     }, reason => {
-//         console.log(reason.error)
-//         $done()
-//     })
-// }

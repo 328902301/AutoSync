@@ -1,7 +1,7 @@
 /**
- * 微信公众号.安徽电信.个人中心.签到
+ * 安徽电信.个人中心.签到(微信公众号)
  * 
- * @fan 2022.10.14
+ * @fan 2022.11.25
  * https://github.com/bv5204978/QXRelay/blob/master/JS/CT/10000.ct.js
  * 
  * 
@@ -14,23 +14,22 @@
 
 
 const taskName = '安徽电信公众号.签到'
-
-const cookieKey = 'fan_10000_cookie'
-const bodyKey = 'fan_10000_body'
+const ahdxKey = 'FAN_10000'
 
 const isRequest = typeof $request != "undefined"
 
 
 start()
-
 async function start() {
     if (isRequest) {
-        getToken()
+        const msg = getToken()
+        console.log(`${taskName}\n${msg}`)
+        $notify(taskName, '', msg)
         $done({})
     } else {
-        const r = await sign()
-        $notify(taskName, "", r)
-        console.log(`${taskName}\n${r}`)
+        const msg = await sign()
+        console.log(`${taskName}\n${msg}`)
+        $notify(taskName, "", msg)
         $done()
     }
 }
@@ -38,24 +37,23 @@ async function start() {
 
 // token
 function getToken() {
-    const cookieVal = $request.headers['Cookie']
-    const bodyVal = $request.body
+    const cookieValue = $request.headers['Cookie']
+    const bodyValue = $request.body
 
     if (cookieVal != null && bodyVal != null) {
 
-        let cookie = $prefs.setValueForKey(cookieVal, cookieKey)
-        let body = $prefs.setValueForKey(bodyVal, bodyKey)
+        const ahdxValue = { 'cookie': cookieValue, 'body': bodyValue }
+        const ahdxStr = JSON.stringify(ahdxValue)
+        const ahdx = $prefs.setValueForKey(ahdxStr, ahdxKey)
 
-        if (cookie && body) {
-            $notify(taskName, 'cookie写入成功', '详见日志')
-            console.log(`${taskName}\nCookie: ${cookieVal}\nBody: ${bodyVal}`)
-        } else {
-            $notify(taskName, 'cookie写入失败', '详见日志')
-            console.log(`${taskName}\nCookie: ${cookieVal}\nBody: ${bodyVal}`)
-        }
+        console.log(`${taskName}\ncookie: ${cookieValue}\nbody: ${bodyValue}`)
+
+        return ahdx ? 'cookie&body写入成功' : 'cookie&body写入失败'
     } else {
-        $notify(taskName, 'cookie获取失败', '详见日志')
-        console.log(`${taskName}\nCookie: ${cookieVal}\nBody: ${bodyVal}`)
+
+        console.log(`${taskName}\ncookie: ${cookieValue}\nbody: ${bodyValue}`)
+
+        return 'cookie&body获取失败'
     }
 }
 
@@ -63,10 +61,15 @@ function getToken() {
 function sign() {
     return new Promise((resolve) => {
 
-        const cookieVal = $prefs.valueForKey(cookieKey)
-        const bodyVal = $prefs.valueForKey(bodyKey)
+        const ahdxStr = $prefs.valueForKey(ahdxKey)
 
-        if (cookieVal != null && bodyVal != null) {
+        if (ahdxStr != null) {
+            const ahdxValue = JSON.parse(ahdxStr)
+
+            const cookieVal = ahdxValue['cookie']
+            const bodyVal = ahdxValue['body']
+
+
             const url = 'http://wx.ah.189.cn/AhdxTjyl/qd.do'
 
             const req = {
@@ -89,14 +92,14 @@ function sign() {
                         resolve(`签到失败: ${body.obj}`)
                     }
                 } else {
-                    resolve(`签到失败: \nresponse.status: ${response.status}`)
+                    resolve(`签到失败: \nstatus: ${response.status}`)
                 }
 
             }, reason => {
                 resolve(`请求失败: ${reason.error}`)
             })
         } else {
-            resolve(`请先获取Cookie`)
+            resolve(`请先获取cookie&body`)
         }
     })
 }

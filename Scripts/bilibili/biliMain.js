@@ -1,4 +1,4 @@
-// 2022-11-12 08:50
+// 2022-11-25 13:56
 
 const scriptName = 'BiliBili';
 const storyAidKey = 'bilibili_story_aid';
@@ -137,7 +137,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
           // 622为会员购中心 425开始为概念版id
           const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
-          obj['data']['sections_v2'].forEach((element, index) => {
+          obj['data']['sections_v2']?.forEach((element, index) => {
             let items = element['items'].filter((e) => {
               return itemList.has(e.id);
             });

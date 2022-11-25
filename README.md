@@ -9,13 +9,17 @@
 🚫| never delete library | 绝不会删库 |
 📣| Good Luck | 祝好 |
 
+### Scripts
+
+- Scripts for QuantumultX, Loon, Surge, JSBox and Node.
+
 ### Hi there 👋
 
 - 🔭 I’m currently studying on a not bad university 
 - 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
 - 💬 Ask me about: JavaScript/Web Spidder 
 - 📫 How to reach me
-- 😄 Pronouns: ...
+- 😄 Pronouns: 💬📪📬
 - ⚡ Fun fact: I ❤️ 🎵
 
 ## 特别声明
@@ -39,19 +43,19 @@
 
 ### Privacy
 
-1. Any user who indirectly uses any of the scripts in "Script project", including but not limited to violating relevant laws and regulations or establishing VPS to spread, **Nobody is not responsible for any privacy breach or other consequences arising therefrom.**
+- Any user who indirectly uses any of the scripts in "Script project", including but not limited to violating relevant laws and regulations or establishing VPS to spread, **Nobody is not responsible for any privacy breach or other consequences arising therefrom.**
 
 ### Commercial
 
-1. Do not use any scripts of "Script project" for commercial or illegal purposes, **otherwise you will be responsible for the consequences.**
+- Do not use any scripts of "Script project" for commercial or illegal purposes, **otherwise you will be responsible for the consequences.**
 
 ### Infringement
 
-1. If any company or individual believes that the scripts in "Script project" may be infringe on rights, you should promptly notify and provide proof of **identity** and proof of **ownership**, and we will delete the relevant scripts upon receipt of the relevant documents.
+- If any company or individual believes that the scripts in "Script project" may be infringe on rights, you should promptly notify and provide proof of **identity** and proof of **ownership**, and we will delete the relevant scripts upon receipt of the relevant documents.
 
 ### Liability
 
-1. Nobody is not responsible for any scripts problems, **including but not limited to any loss or damage caused by any scripting errors.**
+- Nobody is not responsible for any scripts problems, **including but not limited to any loss or damage caused by any scripting errors.**
 
 ### Change
 

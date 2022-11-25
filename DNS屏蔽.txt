@@ -1,0 +1,15 @@
+# > 屏蔽苹果系统更新
+host, ns.itunes.apple.com
+host, appldnld.apple.com
+host, mesu.apple.com
+host, xp.apple.com
+host, gdmf.apple.com
+HOST-SUFFIX,iadsdk.apple.com
+HOST-SUFFIX,ads.internal.unity3d.com
+HOST-SUFFIX,ads.prd.ie.internal.unity3d.com
+HOST-SUFFIX,unityads.unity3d.com
+# > 深圳通微信小程序
+DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
+# > 全民K歌
+DOMAIN-SUFFIX,gdc.kg.qq.com
+DOMAIN-suffix, u3.ucweb.com

@@ -1,6 +1,6 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 
-const version = 'v1024.1';
+const version = 'v1125.1';
 
 const $ = new Env('微博去广告');
 let storeMainConfig = $.getdata('mainConfig');

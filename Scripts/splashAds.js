@@ -1,4 +1,4 @@
-// 2022-11-25 18:05
+// 2022-11-25 19:23
 
 var url = $request.url;
 var body = $response.body;
@@ -47,7 +47,7 @@ if (url.includes('wmapi.meituan.com/api/v7/loadInfo')) {
   body = JSON.stringify(obj);   
 }
 
-// 微博 skd
+// 微博 php
 if (url.includes('uve.weibo.com/interface/sdk/sdkad.php')) {
   let tmp = /\{.*\}/;
   body = body.match(tmp);

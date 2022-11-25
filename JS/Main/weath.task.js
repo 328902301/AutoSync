@@ -15,15 +15,15 @@
 // 🌦🌩
 
 
-// 经纬度
-const lat_lon = $prefs.valueForKey('weath.latlon')
+const weathStr = $prefs.valueForKey('FAN_WEATH')
+const weathValue = JSON.parse(weathStr)
 
-// apikey
-const api_key = $prefs.valueForKey('weath.apikey')
+const LAT_LON = weathValue['LAT_LON'] // 经纬度
+const API_KEY = weathValue['API_KEY'] // apikey
 
 
 var url = {
-    url: `https://api.darksky.net/forecast/${api_key}/${lat_lon}?lang=zh&units=si&exclude=currently,minutely,alerts,flags`
+    url: `https://api.darksky.net/forecast/${API_KEY}/${LAT_LON}?lang=zh&units=si&exclude=currently,minutely,alerts,flags`
 }
 
 let weathIcon = {"clear":"☀️", "rain":"🌧", "snow":"🌨", "sleet":"🌨", "wind":"🌬", "fog":"🌫", "cloudy_max":"☁️", "cloudy_mid1":"🌥", "cloudy_mid2":"⛅️", "cloudy_min":"🌤", "hail":"雹", "thunderstorm":"⛈", "tornado":"🌪"}

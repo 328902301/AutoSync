@@ -1,4 +1,4 @@
-// 鸣谢 @yichahucha, @yjqiang
+// 2022-11-25 18:05
 
 var url = $request.url;
 var body = $response.body;
@@ -51,6 +51,19 @@ if (url.includes('mi.com/v1/app/start')) {
   }
   obj.info = 'ok';
   obj.desc = '成功';
+  body = JSON.stringify(obj);
+}
+
+if (url.includes('app.bilibili.com/x/v2/splash/list')) {
+  let obj = JSON.parse(body);
+  obj['data']['max_time'] = 0;
+  obj['data']['min_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+  obj['data']['pull_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+  for (let i = 0; i < obj['data']['list'].length; i++) {
+    obj['data']['list'][i]['duration'] = 0;
+    obj['data']['list'][i]['begin_time'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    obj['data']['list'][i]['end_time'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+  }
   body = JSON.stringify(obj);
 }
 

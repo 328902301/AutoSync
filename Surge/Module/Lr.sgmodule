@@ -7,7 +7,7 @@
 
 
 [Script]
-Lr Adobe Lightroom+解锁订阅 = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/lightroom.js
+Lightroom Pro = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/lightroom.js
 
 
 [MITM]

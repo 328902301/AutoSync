@@ -3,8 +3,7 @@
 #!system=ios
 
 [Script]
-# > xmind思维导图 解锁
-思维导图 = type=http-response,pattern=^https:\/\/www\.xmind\.cn\/_res\/devices,requires-body=1,max-size=0,script-path=Script/xmind.js,script-update-interval=0
+Xmind Pro = type=http-response,pattern=^https:\/\/www\.xmind\.cn\/_res\/devices,requires-body=1,max-size=0,script-path=Script/xmind.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% www.xmind.cn

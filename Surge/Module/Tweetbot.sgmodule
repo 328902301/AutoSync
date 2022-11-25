@@ -1,0 +1,8 @@
+#!name=Tweetbot
+#!desc=Tweetbot Premium
+
+[Script]
+Tweetbot = type=http-response,requires-body=1,pattern=https://push.tapbots.com/tweetbot/5/verify_subscription,script-path=Script/tweetbot.js
+
+[MITM]
+hostname= %APPEND% *.tapbots.com

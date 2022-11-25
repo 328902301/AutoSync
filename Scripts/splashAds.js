@@ -3,6 +3,64 @@
 var url = $request.url;
 var body = $response.body;
 
+if (!body) {
+  $done({});
+}
+
+// 哔哩哔哩
+if (url.includes('app.bilibili.com/x/v2/splash/list')) {
+  let obj = JSON.parse(body);
+  obj['data']['max_time'] = 0;
+  obj['data']['min_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+  obj['data']['pull_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+  for (let i = 0; i < obj['data']['list'].length; i++) {
+    obj['data']['list'][i]['duration'] = 0;
+    obj['data']['list'][i]['begin_time'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    obj['data']['list'][i]['end_time'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+  }
+  body = JSON.stringify(obj);
+}
+
+// 京东
+if (url.includes('jd.com/client.action?functionId=start')) {
+  let obj = JSON.parse(body);
+  for (let i = 0; i < obj.images.length; i++) {
+    for (let j = 0; j < obj.images[i].length; j++) {
+      if (obj.images[i][j].showTimes) {
+        obj.images[i][j].showTimes = 0;
+        obj.images[i][j].onlineTime = "2030-12-24 00:00:00";
+        obj.images[i][j].referralsTime = "2030-12-25 00:00:00";
+        obj.images[i][j].time = 0;
+      }
+    }
+  }
+  obj.countdown = 100;
+  obj.showTimesDaily = 0;
+  body = JSON.stringify(obj);
+}
+
+// 美团外卖
+if (url.includes('wmapi.meituan.com/api/v7/loadInfo')) {
+  let obj = JSON.parse(body);
+  obj.data.startpicture.ad = [];
+  obj.data.startpicture.mk = [];
+  body = JSON.stringify(obj);   
+}
+
+// 小米商城
+if (url.includes('mi.com/v1/app/start')) {
+  let obj = JSON.parse(body);
+  obj.code = 0;
+  if (obj.data.skip_splash && obj.data.splash) {
+    obj.data.skip_splash = true;
+    obj.data.splash = [];
+  }
+  obj.info = 'ok';
+  obj.desc = '成功';
+  body = JSON.stringify(obj);
+}
+
+// 微博
 if (url.includes('uve.weibo.com/interface/sdk/sdkad.php')) {
   let tmp = /\{.*\}/;
   body = body.match(tmp);
@@ -25,6 +83,7 @@ if (url.includes('uve.weibo.com/interface/sdk/sdkad.php')) {
   body = JSON.stringify(obj) + 'OK';
 }
 
+// 微博
 if (url.includes('uve.weibo.com/wbapplua/wbpullad.lua')) {
   let obj = JSON.parse(body);
   /**
@@ -38,31 +97,6 @@ if (url.includes('uve.weibo.com/wbapplua/wbpullad.lua')) {
     item['show_count'] = 0;
     item['duration'] = 31536000; // 60 * 60 * 24 * 365 = 31536000
     item['end_date'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-  }
-  body = JSON.stringify(obj);
-}
-
-if (url.includes('mi.com/v1/app/start')) {
-  let obj = JSON.parse(body);
-  obj.code = 0;
-  if (obj.data.skip_splash && obj.data.splash) {
-    obj.data.skip_splash = true;
-    obj.data.splash = [];
-  }
-  obj.info = 'ok';
-  obj.desc = '成功';
-  body = JSON.stringify(obj);
-}
-
-if (url.includes('app.bilibili.com/x/v2/splash/list')) {
-  let obj = JSON.parse(body);
-  obj['data']['max_time'] = 0;
-  obj['data']['min_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
-  obj['data']['pull_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
-  for (let i = 0; i < obj['data']['list'].length; i++) {
-    obj['data']['list'][i]['duration'] = 0;
-    obj['data']['list'][i]['begin_time'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-    obj['data']['list'][i]['end_time'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
   }
   body = JSON.stringify(obj);
 }

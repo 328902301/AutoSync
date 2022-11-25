@@ -1,70 +1,0 @@
-#!name=Script Collection
-#!desc=Last update time 2022-11-23
-#!system=ios
-
-[Rule]
-# 阻止所有UDP流量进入443端口，使HTTP3请求回落到TCP流量。
-AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
-
-# 屏蔽YouTube的UDP
-AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
-
-# 腾讯 WeChat
-IP-ASN,132203,DIRECT
-
-# > Safari 防跳转
-DOMAIN,app-site-association.cdn-apple.com,REJECT
-
-# > 12123 - gab.122.gov.cn
-URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
-
-# > 云闪付
-URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
-
-# > 招商银行 - pic1cdn.cmbchina.com, resource.cmbchina.com, s3gw.cmbimg.comURL-REGEX,^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECTURL-REGEX,^https?:\/\/resource.cmbchina.com\/fsp\/File\/ClientFacePublic\/.+.gif,REJECT# > gif url reject 只拦截gif格式的图片URL-REGEX,^https:\/\/s3gw.cmbimg.com\/mbappinitads\/.*.(jpg|png),REJECT
-
-# > 高德地图 - m*.amap.com, URL-REGEX,^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/,REJECTURL-REGEX,^https?:\/\/m5\.amap\.com\/ws\/valueadded\/,REJECTURL-REGEX,^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/,REJECT
-
-# > 去除微信公众号商品推广URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action,REJECT
-
-# > Ameritrade
-DOMAIN-SUFFIX,tdameritrade.com,US
-
-# > Pornhub
-URL-REGEX,^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads,REJECT
-
-# > 简讯
-URL-REGEX,^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad,REJECT
-
-# > BOC
-URL-REGEX,^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg,REJECT
-
-# 分割线——————————————————————————
-
-[Script]
-# ～ WeChat
-WeChat ad = type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-
-# ～ Tweetbot
-Tweetbot = type=http-response,requires-body=1,pattern=https://push.tapbots.com/tweetbot/5/verify_subscription,script-path=Script/tweetbot.js
-
-# ～ Alidrive
-AliDrive = type=http-response,requires-body=1,pattern=^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$,script-path=Script/alidrive.js
-
-# ～ Stay
-Stay = type=http-response,requires-body=1,pattern=^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$,script-path=Script/stay.js
-
-# ～ Pornhub
-Pornhub = type=http-response,pattern=^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$),requires-body=1,max-size=0,script-path=Script/pornhub.js,script-update-interval=0
-
-# ～ 充电助手
-charge = type=http-response,pattern=^https:\/\/api\.yonekura\.cn\/3\.7\.0\/uicommon\/getuser,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cdzs.js,script-update-interval=0
-
-# ～ 简讯
-简讯——解锁VIP = type=http-response,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/JX.js
-
-# ～ NotePlan - api.revenuecat.com
-//NotePlan3解锁永久订阅 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotePlan3ProCrack.js
-
-[MITM]
-hostname = %APPEND% mp.weixin.qq.com, btrace.qq.com, security.wechat.com, gab.122.gov.cn, wallet.95516.com, pgdt.gtimg.cn, c.l.qq.com, m*.amap.com, *.tapbots.com, api.aliyundrive.com, api.shenyin.name, cn.pornhub.com, api.yonekura.cn, api.tipsoon.com, mbs.boc.cn, pic1cdn.cmbchina.com, resource.cmbchina.com, s3gw.cmbimg.com

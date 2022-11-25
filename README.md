@@ -1,3 +1,16 @@
+### This project is based on the scripting capabilities of several excellent iOS proxy tools (e.g. Surge, Quantumult X)
+
+[![YAOJIO's github stats](https://github-readme-stats.vercel.app/api?username=YAOJIO&show_icons=true&include_all_commits=true&hide_border=true)](https://github.com/YAOJIO)
+
+### Hi there 👋
+
+- 🔭 I’m currently studying on a not bad university 
+- 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
+- 💬 Ask me about: JavaScript/Web Spidder 
+- 📫 How to reach me
+- 😄 Pronouns: 💬📪📬
+- ⚡ Fun fact: I ❤️ 🎵
+
 ### Hi I am Alkai 👋
 
 📄| Rules | 规矩  |
@@ -9,20 +22,17 @@
 🚫| never delete library | 绝不会删库 |
 📣| Good Luck | 祝好 |
 
-### Scripts
+### Use must indicate the source/使用需注明出处
 
-- Scripts for QuantumultX, Loon, Surge, JSBox and Node.
+⚠️ By using, you agree to this agreement | ⚠️ 使用则同意本协议
+ | ----  | --- |
+⚠️ For learning communication and testing only, please do not use for other purposes | ⚠️ 仅供学习交流和测试使用,绝不用于其他用途
+⚠️ Can Star but Fork is forbidden, Fork will be blocked | ⚠️ 可以Star 但是禁止Fork,Fork将会被拉黑
+⚠️ If you have any questions, you can raise issues or join the group | ⚠️ 有问题可以提issues,或者加入群组
+⚠️ Will not delete the library, but you can not share | ⚠️ 不会删库,但你不可以分享
+⚠️ Please respect the author, thank you | ⚠️ 请尊重作者,谢谢
 
-### Hi there 👋
-
-- 🔭 I’m currently studying on a not bad university 
-- 🌱 I’m currently learning JavaScript/TypeScript/Vue3/Vite...
-- 💬 Ask me about: JavaScript/Web Spidder 
-- 📫 How to reach me
-- 😄 Pronouns: 💬📪📬
-- ⚡ Fun fact: I ❤️ 🎵
-
-## 特别声明
+### 特别声明
 
 1. 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 2. 编写本项目主要目的为学习和研究，无法保证项目内容的合法性、准确性、完整性和有效性。
@@ -32,6 +42,10 @@
 6. 所有基于本项目源代码，进行的任何修改，为其他个人或组织的自发行为，与本项目没有任何直接或间接的关系，所造成的一切后果亦与本项目无关。
 7. 所有直接或间接使用本项目的个人和组织，应24小时内完成学习和研究，并及时删除本项目中的所有内容。如对本项目的功能有需求，应自行开发相关功能。
 8. 本项目保留随时对免责声明进行补充或更改的权利，直接或间接使用本项目内容的个人或组织，视为接受本项目的特别声明。
+
+### Functional
+
+- Functional scripts, agent node, configurations for Surge, QuantumultX, Loon, Stash ,Egern , ShadowRocket and HTTPCatcher.
 
 ### Decrypt
 

@@ -5,16 +5,16 @@
 Panel = title=Obsidian, content=GitHub:https://github.com/Obsidian99,icon=aqi.medium,icon-color=#5AC8FA
 
 # YouTube Premium Check
-ytb_check = script-name=ytb_check, title="YouTube Premium Check", update-interval=10
+YouTube_check = script-name=ytb_check, title="YouTube Premium Check", update-interval=10
 
 # IP Info
-ipcheck = script-name=ipcheck, title="IP Info", content="Refresh", style=info, update-interval=1
+IP info = script-name=ipcheck, title="IP Info", content="Refresh", style=info, update-interval=1
 
 
 [Script]
 # YouTube Premium Check
-ytb_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
+YouTube_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
 
 # IP Info
-ipcheck = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/IP-Check/Moore/IP-Check.js
+IP Info = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/IP-Check/Moore/IP-Check.js
 

@@ -36,5 +36,7 @@ switch (body) {
       $done({body});
       break;
     default:
-      $done();
+      $done({});
 }
+
+$done({});

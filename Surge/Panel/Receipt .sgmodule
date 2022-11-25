@@ -1,8 +1,0 @@
-#!name=Receipt
-#!desc=Receipt
-
-[Script]
-Receipt = type=http-response,pattern=https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=Script/test.js
-
-[MITM]
-hostname= %APPEND% buy.itunes.apple.com

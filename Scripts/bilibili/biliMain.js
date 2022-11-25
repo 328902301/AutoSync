@@ -29,14 +29,14 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         try {
           let obj = JSON.parse(magicJS.response.body);
           let items = [];
-          for (let item of obj.data.items) {
+          for (let item of obj['data']['items']) {
             if (item.hasOwnProperty('banner_item')) {
               continue;
             } else if (
               !item.hasOwnProperty('ad_info') &&
-              !blacklist.includes(item.args.up_name) &&
+              !blacklist.includes(item['args']['up_name']) &&
               item.card_goto.indexOf('ad') === -1 &&
-              (item.card_type === 'small_cover_v2' || item.card_type === 'large_cover_v1')
+              (item['card_type'] === 'small_cover_v2' || item['card_type'] === 'large_cover_v1')
             ) {
               if (disableIndexStory) {
                 if (item.uri.includes('bilibili://story')) {
@@ -46,7 +46,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
               items.push(item);
             }
           }
-          obj.data.items = items;
+          obj['data']['items'] = items;
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`推荐去广告出现异常：${err}`);
@@ -56,8 +56,8 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          let lastItem = obj.data.items.pop();
-          let aid = lastItem.stat.aid.toString();
+          let lastItem = obj['data']['items'].pop();
+          let aid = lastItem['stat']['aid'].toString();
           magicJS.write(storyAidKey, aid);
         } catch (err) {
           magicJS.logError(`记录Story的aid出现异常：${err}`);
@@ -67,13 +67,13 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          obj.data.max_time = 0;
-          obj.data.min_interval = 31536000; // Unix 时间戳 1971-01-01 08:00:00
-          obj.data.pull_interval = 31536000; // Unix 时间戳 1971-01-01 08:00:00
-          for (let i = 0; i < obj.data.list.length; i++) {
-            obj.data.list.i.duration = 0;
-            obj.data.list.i.begin_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-            obj.data.list.i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+          obj['data']['max_time'] = 0;
+          obj['data']['min_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+          obj['data']['pull_interval'] = 31536000; // Unix 时间戳 1971-01-01 08:00:00
+          for (let i = 0; i < obj['data']['list'].length; i++) {
+            obj['data']['list'][i]['duration'] = 0;
+            obj['data']['list'][i]['begin_time'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+            obj['data']['list'][i]['end_time'] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
           }
           body = JSON.stringify(obj);
         } catch (err) {
@@ -99,23 +99,23 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           // 102开始为概念版id
           const bottomList = new Set([177, 179, 181, 102, 104, 106, 486, 488, 490]);
           let obj = JSON.parse(magicJS.response.body);
-          if (obj.data.tab) {
-            let tab = obj.data.tab.filter((e) => {
+          if (obj['data']['tab']) {
+            let tab = obj['data']['tab'].filter((e) => {
               return tabNameList.has(e.name) || tabList.has(e.id);
             });
-            obj.data.tab = tab;
+            obj['data']['tab'] = tab;
           }
-          if (obj.data.top) {
-            let top = obj.data.top.filter((e) => {
+          if (obj['data']['top']) {
+            let top = obj['data']['top'].filter((e) => {
               return topList.has(e.id);
             });
-            obj.data.top = top;
+            obj['data']['top'] = top;
           }
-          if (obj.data.bottom) {
-            let bottom = obj.data.bottom.filter((e) => {
+          if (obj['data']['bottom']) {
+            let bottom = obj['data']['bottom'].filter((e) => {
               return bottomList.has(e.id);
             });
-            obj.data.bottom = bottom;
+            obj['data']['bottom'] = bottom;
           }
           body = JSON.stringify(obj);
         } catch (err) {
@@ -137,15 +137,15 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
           // 622为会员购中心 425开始为概念版id
           const itemList = new Set([396, 397, 398, 399, 534, 8, 4, 428, 352, 1, 405, 407, 410, 425, 426, 427, 428, 431, 432, 494, 495, 496, 497, 500, 501]);
-          obj.data?.sections_v2?.forEach((element, index) => {
-            let items = element.items.filter((e) => {
+          obj['data']['sections_v2']?.forEach((element, index) => {
+            let items = element['items'].filter((e) => {
               return itemList.has(e.id);
             });
-            obj.data.sections_v2.index.button = {};
-            delete obj.data.sections_v2.index.be_up_title;
-            delete obj.data.sections_v2.index.tip_icon;
-            delete obj.data.sections_v2.index.tip_title;
-            obj.data.sections_v2.index.items = items;
+            obj['data']['sections_v2'][index].button = {};
+            delete obj['data']['sections_v2'][index].be_up_title;
+            delete obj['data']['sections_v2'][index].tip_icon;
+            delete obj['data']['sections_v2'][index].tip_title;
+            obj['data']['sections_v2'][index]['items'] = items;
             if (element.title === '更多服务' && enableMall) {
               element.items.unshift({
                 id: 999,
@@ -156,13 +156,13 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
               });
             }
             // 开启本地会员标识 2022-03-05 add by ddgksf2013
-            if (obj.data.hasOwnProperty('live_tip')) obj.data.live_tip = {};
-            if (obj.data.hasOwnProperty('answer')) obj.data.answer = {};
-            obj.data.vip_type = 2;
-            obj.data.vip.type = 2;
-            obj.data.vip.status = 1;
-            obj.data.vip.vip_pay_type = 1;
-            obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+            if (obj.data.hasOwnProperty('live_tip')) obj['data']['live_tip'] = {};
+            if (obj.data.hasOwnProperty('answer')) obj['data']['answer'] = {};
+            obj['data']['vip_type'] = 2;
+            obj['data']['vip']['type'] = 2;
+            obj['data']['vip']['status'] = 1;
+            obj['data']['vip']['vip_pay_type'] = 1;
+            obj['data']['vip']['due_date'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
           });
           body = JSON.stringify(obj);
         } catch (err) {
@@ -186,7 +186,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
       case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          obj.data.activity_banner_info = null;
+          obj['data']['activity_banner_info'] = null;
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`直播去广告出现异常：${err}`);
@@ -215,10 +215,10 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
           obj.data.cards.forEach((element) => {
             if (element.hasOwnProperty('display') && element.card.indexOf('ad_ctx') <= 0) {
               // 解决number类型精度问题导致B站动态中图片无法打开的问题
-              element.desc.dynamic_id = element.desc.dynamic_id_str;
-              element.desc.pre_dy_id = element.desc.pre_dy_id_str;
-              element.desc.orig_dy_id = element.desc.orig_dy_id_str;
-              element.desc.rid = element.desc.rid_str;
+              element['desc']['dynamic_id'] = element['desc']['dynamic_id_str'];
+              element['desc']['pre_dy_id'] = element['desc']['pre_dy_id_str'];
+              element['desc']['orig_dy_id'] = element['desc']['orig_dy_id_str'];
+              element['desc']['rid'] = element['desc']['rid_str'];
               cards.push(element);
             }
           });
@@ -233,7 +233,7 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         try {
           let obj = JSON.parse(magicJS.response.body);
           if (obj && obj.hasOwnProperty('data')) {
-            obj.data.common_equip = {};
+            obj['data']['common_equip'] = {};
           }
           body = JSON.stringify(obj);
         } catch (err) {
@@ -274,10 +274,10 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
         try {
           let obj = JSON.parse(magicJS.response.body);
           //magicJS.logInfo(`已解锁1080p高码率`);
-          obj.data.vip.type = 2;
-          obj.data.vip.status = 1;
-          obj.data.vip.vip_pay_type = 1;
-          obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+          obj['data']['vip']['type'] = 2;
+          obj['data']['vip']['status'] = 1;
+          obj['data']['vip']['vip_pay_type'] = 1;
+          obj['data']['vip']['due_date'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`解锁1080p高码率出现异常：${err}`);

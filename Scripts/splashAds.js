@@ -1,8 +1,12 @@
 var url = $request.url;
 var body = $response.body;
 
-switch (body) {
-  case url.indexOf('/interface/sdk/sdkad.php') > -1 :
+if (!body) {
+  $done({});
+}
+
+switch (url) {
+  case '^https?:\/\/sdkapp\.uve\.weibo\.com\/interface/sdk/sdkad.php':
       let tmp = /\{.*\}/;
       body = body.match(tmp);
       let obj = JSON.parse(body);
@@ -24,7 +28,7 @@ switch (body) {
       body = JSON.stringify(obj) + 'OK';
       $done({body});
       break;
-    case url.indexOf('/wbapplua/wbpullad.lua') > -1 :
+    case '^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad.lua':
       let obj = JSON.parse(body);
       for (let item of obj['cached_ad']['ads']) {
         item['start_date'] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
@@ -38,5 +42,3 @@ switch (body) {
     default:
       $done({});
 }
-
-$done({});

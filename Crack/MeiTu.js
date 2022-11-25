@@ -2,7 +2,7 @@
 美图秀秀
 *******************************
 [rewrite_local]
-^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json) url script-response-body https://raw.githubusercontent.com/WeeekWin/QuanX/main/Crack/MeiTu.js
+^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ url script-response-body https://raw.githubusercontent.com/WeeekWin/QuanX/main/Crack/MeiTu.js
 [mitm] 
 hostname = api.xiuxiu.meitu.com,h5.xiuxiu.meitu.com
 *******************************/

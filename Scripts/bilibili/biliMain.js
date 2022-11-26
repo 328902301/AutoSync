@@ -88,9 +88,15 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
       if (obj.data.sections_v2[i].title === '推荐服务') {
         delete obj.data.sections_v2[i].title;
+        delete obj.data.sections_v2[i].type;
+      }      
+      if (obj.data.sections_v2[i].title === '更多服务') {
+        delete obj.data.sections_v2[i].title;
+        delete obj.data.sections_v2[i].type;
       }
       if (obj.data.sections_v2[i].title === '创作中心') {
         delete obj.data.sections_v2[i].title;
+        delete obj.data.sections_v2[i].type;
       }
     }
     delete obj.data.vip_section_v2;
@@ -118,8 +124,21 @@ if (url.includes('app.bilibili.com/x/v2/account/myinfo?')) {
   body = JSON.stringify(obj);
 }
 
-// 瀑布流推荐广告处理
+// 推荐广告处理 最后问号不能去掉 以免匹配到story模式
 if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
+  let obj = JSON.parse(body);
+  let items = [];
+  for (let item of obj["data"]["items"]) {
+    if (item.hasOwnProperty("banner_item")) {
+      continue;
+    } else if (!item.hasOwnProperty("ad_info") && item.card_goto.indexOf("ad") === -1 && (item["card_type"] === "small_cover_v2" || item["card_type"] === "large_cover_v1")) {
+      items.push(item);
+    }
+  }
+  obj["data"]["items"] = items;
+  body = JSON.stringify(obj);
+}
+/* if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
   if (body.data && body.data.items?.length) {
     // 推荐页 items字段
     body.data.items = body.data.items.filter(i => {
@@ -152,7 +171,7 @@ if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
       return true;
     });
   }
-}
+} */
 
 // 开屏广告处理
 if (url.includes('app.bilibili.com/x/v2/splash/list')) {

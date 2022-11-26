@@ -26,8 +26,6 @@ HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
 # 哔哩哔哩自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
-# 哔哩哔哩 proto 强制走h1
-HOST, grpc.biliapi.net, MyBlockAds
 
 # 高德地图
 HOST, awaken.amap.com, MyBlockAds

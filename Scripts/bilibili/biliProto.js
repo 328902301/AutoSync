@@ -11,9 +11,9 @@ const isQuanX = typeof $task !== "undefined";
 const binaryBody = isQuanX ? new Uint8Array($response.bodyBytes) : $response.body;
 let gzipStrName = 'grpc-encoding';
 if (!headers[gzipStrName]) {
-  // Loon QX做调整
-  // console.log('响应头首字母大写');
-  gzipStrName = 'Grpc-Encoding';
+    // Loon QX做调整
+    // console.log('响应头首字母大写');
+    gzipStrName = 'Grpc-Encoding';
 }
 const isGzipCompress = headers[gzipStrName] === 'gzip';
 // console.log(`isGzipCompress:${isGzipCompress}`);
@@ -24,131 +24,128 @@ const biliRoot = protobuf.Root.fromJSON(biliJson);
 let needProcessFlag = false;
 
 if (url.includes("Dynamic/DynAll")) {
-  // console.log('动态DynAll');
-  const dynAllReplyType = biliRoot.lookupType("bilibili.app.dynamic.DynAllReply");
-  let dynAllReplyObj = dynAllReplyType.decode(unGzipBody);
-  if (dynAllReplyObj.topicList) {
-    needProcessFlag = true;
-    dynAllReplyObj.topicList = null;
-    // console.log('推荐话题topicList去除');
-  }
-  if (dynAllReplyObj.upList) {
-    needProcessFlag = true;
-    dynAllReplyObj.upList = null;
-    // console.log('最常访问upList去除');
-  }
-  if (dynAllReplyObj.dynamicList?.list?.length) {
-    let adCount = 0;
-    dynAllReplyObj.dynamicList.list = dynAllReplyObj.dynamicList.list.filter(item => {
-      if (item.cardType !== 15) {
-        return true;
-      }
-      adCount++;
-      return false;
-    });
-    if (adCount) {
-      needProcessFlag = true;
+    // console.log('动态DynAll');
+    const dynAllReplyType = biliRoot.lookupType("bilibili.app.dynamic.DynAllReply");
+    let dynAllReplyObj = dynAllReplyType.decode(unGzipBody);
+    if (dynAllReplyObj.topicList) {
+        needProcessFlag = true;
+        dynAllReplyObj.topicList = null;
+        // console.log('推荐话题topicList去除');
     }
-    // console.log(`动态列表广告数量:${adCount}`);
-  }
-  if (needProcessFlag) {
-    body = processNewBody(dynAllReplyType.encode(dynAllReplyObj).finish());
-  }
-}
-
-if (url.includes("View/View")) {
-  // console.log('视频播放页View/View');
-  const viewReplyType = biliRoot.lookupType("bilibili.app.view.ViewReply");
-  let viewReplyObj = viewReplyType.decode(unGzipBody);
-  if (viewReplyObj.cms?.length) {
-    let adCount = 0;
-    const sourceContentDtoType = biliRoot.lookupType("bilibili.ad.v1.SourceContentDto");
-    for(let i = 0; i < viewReplyObj.cms.length; i++) {
-      let item = viewReplyObj.cms[i];
-      if (item.sourceContent?.value) {
-        // 注意这里虽然proto没有属性value  但是viewReplyMessage解析的有
-        const sourceContentDtoObj = sourceContentDtoType.decode(item.sourceContent.value);
-        if (sourceContentDtoObj.adContent) {
-          adCount++;
+    if (dynAllReplyObj.upList) {
+        needProcessFlag = true;
+        dynAllReplyObj.upList = null;
+        // console.log('最常访问upList去除');
+    }
+    if (dynAllReplyObj.dynamicList?.list?.length) {
+        let adCount = 0;
+        dynAllReplyObj.dynamicList.list = dynAllReplyObj.dynamicList.list.filter(item => {
+            if (item.cardType !== 15) {
+                return true;
+            }
+            adCount++;
+            return false;
+        });
+        if (adCount) {needProcessFlag = true}
+        // console.log(`动态列表广告数量:${adCount}`);
+    }
+    if (needProcessFlag) {body = processNewBody(dynAllReplyType.encode(dynAllReplyObj).finish())}
+} else if (url.includes("View/View")) {
+    // console.log('视频播放页View/View');
+    const viewReplyType = biliRoot.lookupType("bilibili.app.view.ViewReply");
+    let viewReplyObj = viewReplyType.decode(unGzipBody);
+    if (viewReplyObj.cms?.length) {
+        let adCount = 0;
+        const sourceContentDtoType = biliRoot.lookupType("bilibili.ad.v1.SourceContentDto");
+        for(let i = 0; i < viewReplyObj.cms.length; i++) {
+            let item = viewReplyObj.cms[i];
+            if (item.sourceContent?.value) {
+                // 注意这里虽然proto没有属性value  但是viewReplyMessage解析的有
+                const sourceContentDtoObj = sourceContentDtoType.decode(item.sourceContent.value);
+                if (sourceContentDtoObj.adContent) {
+                    adCount++;
+                }
+            }
         }
-      }
+        viewReplyObj.cms = [];
+        // console.log(`up主推荐广告:${adCount}`);
+        if (adCount) {
+            needProcessFlag = true;
+        }
     }
-    viewReplyObj.cms = [];
-    // console.log(`up主推荐广告:${adCount}`);
-    if (adCount) {
-      needProcessFlag = true;
+    if (viewReplyObj.relates?.length) {
+        let adCount = 0;
+        viewReplyObj.relates = viewReplyObj.relates.filter(item => {
+            if (item.goto === 'cm') {
+                adCount++;
+                return false;
+            }
+            return true;
+        });
+        // console.log(`相关推荐广告:${adCount}`);
+        if (adCount) {
+            needProcessFlag = true;
+        }
     }
-  }
-  if (viewReplyObj.relates?.length) {
-    let adCount = 0;
-    viewReplyObj.relates = viewReplyObj.relates.filter(item => {
-      if (item.goto === 'cm') {
-        adCount++;
-        return false;
-      }
-      return true;
-    });
-    // console.log(`相关推荐广告:${adCount}`);
-    if (adCount) {
-      needProcessFlag = true;
+    const adsControlValue = viewReplyObj.cmConfig?.adsControl?.value;
+    if (adsControlValue) {
+        const adsControlDtoType = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto");
+        const adsControlDtoObj = adsControlDtoType.decode(adsControlValue);
+        if (adsControlDtoObj?.hasDanmu === 1 || adsControlDtoObj?.cids?.length > 0) {
+            // console.log(`up主推荐广告-弹幕. ${adsControlDtoObj?.hasDanmu}, ${adsControlDtoObj?.cids}`);
+            viewReplyObj.cmConfig = null;
+            needProcessFlag = true;
+        }
     }
-  }
-  const adsControlValue = viewReplyObj.cmConfig?.adsControl?.value;
-  if (adsControlValue) {
-    const adsControlDtoType = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto");
-    const adsControlDtoObj = adsControlDtoType.decode(adsControlValue);
-    if (adsControlDtoObj?.hasDanmu === 1 || adsControlDtoObj?.cids?.length > 0) {
-      // console.log(`up主推荐广告-弹幕. ${adsControlDtoObj?.hasDanmu}, ${adsControlDtoObj?.cids}`);
-      viewReplyObj.cmConfig = null;
-      needProcessFlag = true;
+    if (needProcessFlag) {
+        let tIconMap = viewReplyObj.tIcon;
+        for (const i in tIconMap) {
+            if (tIconMap[i] === null) {
+                // 解决tIcon的null is not an object问题
+                // console.log(`tIconMap:${i}`);
+                delete tIconMap[i];
+            }
+        }
+        body = processNewBody(viewReplyType.encode(viewReplyObj).finish());
     }
-  }
-  if (needProcessFlag) {
-    let tIconMap = viewReplyObj.tIcon;
-    for (const i in tIconMap) {
-      if (tIconMap[i] === null) {
-        // 解决tIcon的null is not an object问题
-        // console.log(`tIconMap:${i}`);
-        delete tIconMap[i];
-      }
+} else if (url.includes("PlayURL/PlayView")) {
+    // console.log('PlayURL/PlayView/View');
+    const playViewReplyType = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply");
+    let playViewReplyObj = playViewReplyType.decode(unGzipBody);
+    const oldBackgroundConf = playViewReplyObj.playArc?.backgroundPlayConf;
+    if (oldBackgroundConf && (!oldBackgroundConf.isSupport || oldBackgroundConf.disabled)) {
+        // console.log(`后台播放限制去除`);
+        playViewReplyObj.playArc.backgroundPlayConf.isSupport = true;
+        playViewReplyObj.playArc.backgroundPlayConf.disabled = false;
+        playViewReplyObj.playArc.backgroundPlayConf.extraContent = null;
+        needProcessFlag = true;
+        body = processNewBody(playViewReplyType.encode(playViewReplyObj).finish());
     }
-    body = processNewBody(viewReplyType.encode(viewReplyObj).finish());
-  }
+} else {}
 
-if (url.includes("PlayURL/PlayView")) {
-  // console.log('PlayURL/PlayView/View');
-  const playViewReplyType = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply");
-  let playViewReplyObj = playViewReplyType.decode(unGzipBody);
-  const oldBackgroundConf = playViewReplyObj.playArc?.backgroundPlayConf;
-  if (oldBackgroundConf && (!oldBackgroundConf.isSupport || oldBackgroundConf.disabled)) {
-    // console.log(`后台播放限制去除`);
-    playViewReplyObj.playArc.backgroundPlayConf.isSupport = true;
-    playViewReplyObj.playArc.backgroundPlayConf.disabled = false;
-    playViewReplyObj.playArc.backgroundPlayConf.extraContent = null;
-    needProcessFlag = true;
-    body = processNewBody(playViewReplyType.encode(playViewReplyObj).finish());
-  }
-}
 if (needProcessFlag) {
-  // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
-  if (isQuanX) {
-    $done({bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset), headers});
-  } else {
-    $done({body, headers});
-  }
+    // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
+    if (isQuanX) {
+        $done({bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset), headers});
+    } else {
+        $done({body, headers});
+    }
+} else {
+    // console.log('无需处理');
+    $done({});
 }
 
 function processNewBody(unGzipBody) {
-  const length = unGzipBody.length;
-  let merge = new Uint8Array(5 + length);
-  merge.set(intToUint8Array(length), 1);
-  merge.set(unGzipBody, 5);
-  return merge;
+    const length = unGzipBody.length;
+    let merge = new Uint8Array(5 + length);
+    merge.set(intToUint8Array(length), 1);
+    merge.set(unGzipBody, 5);
+    return merge;
 }
 
 function intToUint8Array (num) {
-  let arr = new ArrayBuffer(4); // an Int32 takes 4 bytes
-  let view = new DataView(arr);
-  view.setUint32(0, num, false); // byteOffset = 0; litteEndian = false
-  return new Uint8Array(arr);
+    let arr = new ArrayBuffer(4); // an Int32 takes 4 bytes
+    let view = new DataView(arr);
+    view.setUint32(0, num, false); // byteOffset = 0; litteEndian = false
+    return new Uint8Array(arr);
 }

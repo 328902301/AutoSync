@@ -1,4 +1,4 @@
-// 2022-11-25 13:56
+// 2022-11-26 13:56
 
 const scriptName = 'BiliBili';
 const storyAidKey = 'bilibili_story_aid';
@@ -24,6 +24,18 @@ const enableMall = Boolean(magicJS.read(bilibili_enable_mall));
   let body = null;
   if (magicJS.isResponse) {
     switch (true) {
+    // 开屏广告处理
+    case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
+      try {
+        let obj = JSON.parse(magicJS.response.body);
+        if (obj.data.show) {
+          delete obj.data.show;
+        }
+        body = JSON.stringify(obj);
+      } catch (err) {
+        magicJS.logError(`开屏广告处理出现异常：${err}`);
+      }
+      break;
       // 推荐去广告，最后问号不能去掉，以免匹配到story模式
       case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(magicJS.request.url):
         try {

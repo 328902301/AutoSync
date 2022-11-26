@@ -52,66 +52,6 @@ if (url.includes("Dynamic/DynAll")) {
   if (needProcessFlag) {body = processNewBody(dynAllReplyType.encode(dynAllReplyObj).finish())}
 }
 
-if (url.includes("View/View")) {
-  // console.log('视频播放页View/View');
-  const viewReplyType = biliRoot.lookupType("bilibili.app.view.ViewReply");
-  let viewReplyObj = viewReplyType.decode(unGzipBody);
-  if (viewReplyObj.cms?.length) {
-    let adCount = 0;
-    const sourceContentDtoType = biliRoot.lookupType("bilibili.ad.v1.SourceContentDto");
-    for(let i = 0; i < viewReplyObj.cms.length; i++) {
-      let item = viewReplyObj.cms[i];
-      if (item.sourceContent?.value) {
-        // 注意这里虽然proto没有属性value  但是viewReplyMessage解析的有
-        const sourceContentDtoObj = sourceContentDtoType.decode(item.sourceContent.value);
-        if (sourceContentDtoObj.adContent) {
-          adCount++;
-        }
-      }
-    }
-    viewReplyObj.cms = [];
-    // console.log(`up主推荐广告:${adCount}`);
-    if (adCount) {
-      needProcessFlag = true;
-    }
-  }
-  if (viewReplyObj.relates?.length) {
-    let adCount = 0;
-    viewReplyObj.relates = viewReplyObj.relates.filter(item => {
-      if (item.goto === 'cm') {
-        adCount++;
-        return false;
-      }
-      return true;
-    });
-    // console.log(`相关推荐广告:${adCount}`);
-    if (adCount) {
-      needProcessFlag = true;
-    }
-  }
-  const adsControlValue = viewReplyObj.cmConfig?.adsControl?.value;
-  if (adsControlValue) {
-    const adsControlDtoType = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto");
-    const adsControlDtoObj = adsControlDtoType.decode(adsControlValue);
-    if (adsControlDtoObj?.hasDanmu === 1 || adsControlDtoObj?.cids?.length > 0) {
-      // console.log(`up主推荐广告-弹幕. ${adsControlDtoObj?.hasDanmu}, ${adsControlDtoObj?.cids}`);
-      viewReplyObj.cmConfig = null;
-      needProcessFlag = true;
-    }
-  }
-  if (needProcessFlag) {
-    let tIconMap = viewReplyObj.tIcon;
-    for (const i in tIconMap) {
-      if (tIconMap[i] === null) {
-        // 解决tIcon的null is not an object问题
-        // console.log(`tIconMap:${i}`);
-        delete tIconMap[i];
-      }
-    }
-    body = processNewBody(viewReplyType.encode(viewReplyObj).finish());
-  }
-}
-
 if (needProcessFlag) {
   // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
   if (isQuanX) {

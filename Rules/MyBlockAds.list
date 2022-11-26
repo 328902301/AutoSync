@@ -1,16 +1,16 @@
-# 2022-11-24
+# 2022-11-26
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
 
-# RARBG屏蔽跳转
+# 屏蔽 RARBG 跳转
 HOST, furiousfar.com, MyBlockAds
 HOST, swallowcrockerybless.com, MyBlockAds
 
 # 工商银行
 HOST, pageviewp.icbc.com.cn, MyBlockAds
 
-# Clue智库
+# 屏蔽 Clue 智库
 HOST, api.helloclue.com, MyBlockAds
 HOST, brahe.apptimize.com, MyBlockAds
 HOST, mapi.apptimize.com, MyBlockAds
@@ -26,6 +26,8 @@ HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
 # 哔哩哔哩自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
+# 哔哩哔哩 proto 强制走h1
+HOST, grpc.biliapi.net, MyBlockAds
 
 # 高德地图
 HOST, awaken.amap.com, MyBlockAds

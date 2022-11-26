@@ -112,21 +112,6 @@ if (url.includes("View/View")) {
   }
 }
 
-if (url.includes("PlayURL/PlayView")) {
-  // console.log('PlayURL/PlayView/View');
-  const playViewReplyType = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply");
-  let playViewReplyObj = playViewReplyType.decode(unGzipBody);
-  const oldBackgroundConf = playViewReplyObj.playArc?.backgroundPlayConf;
-  if (oldBackgroundConf && (!oldBackgroundConf.isSupport || oldBackgroundConf.disabled)) {
-    // console.log(`后台播放限制去除`);
-    playViewReplyObj.playArc.backgroundPlayConf.isSupport = true;
-    playViewReplyObj.playArc.backgroundPlayConf.disabled = false;
-    playViewReplyObj.playArc.backgroundPlayConf.extraContent = null;
-    needProcessFlag = true;
-    body = processNewBody(playViewReplyType.encode(playViewReplyObj).finish());
-  }
-}
-
 if (needProcessFlag) {
   // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
   if (isQuanX) {

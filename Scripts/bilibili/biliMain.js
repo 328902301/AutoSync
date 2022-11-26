@@ -1,4 +1,4 @@
-// 2022-11-26 14:02
+// 2022-11-26 14:18
 
 var url = $request.url;
 var body = $response.body;
@@ -99,8 +99,6 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
         delete obj.data.sections_v2[i].type;
       }
     }
-    delete obj.data.vip_section_v2;
-    delete obj.data.vip_section;
     obj['data']['sections_v2'][index]['items'] = items;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
     if (obj.data.hasOwnProperty('live_tip')) delete obj['data']['live_tip'];
@@ -138,40 +136,6 @@ if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
   obj["data"]["items"] = items;
   body = JSON.stringify(obj);
 }
-/* if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
-  if (body.data && body.data.items?.length) {
-    // 推荐页 items字段
-    body.data.items = body.data.items.filter(i => {
-      const {card_type: cardType, card_goto: cardGoto} = i;
-      if (cardType && cardGoto) {
-        if (cardType === 'banner_v8' && cardGoto === 'banner') {
-          if (i.banner_item) {
-            // 推荐页 banner_item
-            for (const v of i.banner_item) {
-              if (v.type) {
-                // 推荐页 type
-                if (v.type === 'ad') {
-                  // banner广告
-                  return false;
-                }
-              }
-            }
-          }
-        } else if (cardType === 'cm_v2' && ['ad_web_s', 'ad_av', 'ad_web_gif', 'ad_player', 'ad_inline_3d'].includes(cardGoto)) {
-          // cardGoto广告 ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告 ad_inline_3d 上方大的视频3d广告
-          return false;
-        } else if (cardType === 'small_cover_v10' && cardGoto === 'game') {
-          // 游戏广告
-          return false;
-        } else if (cardType === 'cm_double_v9' && cardGoto === 'ad_inline_av') {
-          // 创作推广-大视频广告
-          return false;
-        }
-      }
-      return true;
-    });
-  }
-} */
 
 // 开屏广告处理
 if (url.includes('app.bilibili.com/x/v2/splash/list')) {

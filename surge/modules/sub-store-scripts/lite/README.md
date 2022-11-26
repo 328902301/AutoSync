@@ -83,7 +83,10 @@ async function operator(proxies = []) {
     const host = _.get($arguments, 'host') || 'dm.toutiao.com'
     const hostPrefix = _.get($arguments, 'hostPrefix')
     const hostSuffix = _.get($arguments, 'hostSuffix') || '[头条]'
+    // 注意我这里没改端口
+    // 要改的话 是这样改 const port = _.get($arguments, 'port') || 80
     const port = _.get($arguments, 'port')
+
     const portPrefix = _.get($arguments, 'portPrefix')
     const portSuffix = _.get($arguments, 'portSuffix')
     const path = _.get($arguments, 'path') || '/'

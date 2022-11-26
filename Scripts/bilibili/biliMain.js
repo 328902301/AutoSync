@@ -96,8 +96,8 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
         delete obj.data.sections_v2[i].title;
       }
     }
-    // delete obj.data.vip_section_v2;
-    // delete obj.data.vip_section;
+    delete obj.data.vip_section_v2;
+    delete obj.data.vip_section;
     obj['data']['sections_v2'][index]['items'] = items;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
     if (obj.data.hasOwnProperty('live_tip')) delete obj['data']['live_tip'];
@@ -123,7 +123,7 @@ if (url.includes('app.bilibili.com/x/v2/account/myinfo?')) {
 
 // 瀑布流推荐广告处理
 if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
-  if (body.data.items?.length) {
+  if (body.data && body.data.items?.length) {
     // 推荐页 items字段
     body.data.items = body.data.items.filter(i => {
       const {card_type: cardType, card_goto: cardGoto} = i;

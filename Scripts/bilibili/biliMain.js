@@ -60,7 +60,7 @@ if (url.includes('app.bilibili.com/x/resource/show/tab')) {
 }
 
 // 去除右上角活动入口
-if (url.includes('app.bilibili.com/x/resource/top/activity')) {
+if (url.includes('app.bilibili.com/x/resource/top/activity?')) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.hash && obj.data.online.icon) {
     obj.data.hash = '';
@@ -70,7 +70,7 @@ if (url.includes('app.bilibili.com/x/resource/top/activity')) {
 }
 
 // 我的页面处理，去除一些推广按钮
-if (url.includes('app.bilibili.com/x/v2/account/mine')) {
+if (url.includes('app.bilibili.com/x/v2/account/mine?')) {
   let obj = JSON.parse(body);
   // 标准版：
   // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
@@ -146,28 +146,16 @@ if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
 }
 
 // 开屏广告处理
-if (url.includes('app.bilibili.com/x/v2/splash/list')) {
+if (url.includes('app.bilibili.com/x/v2/splash/list?')) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.show) delete obj.data.show;
   body = JSON.stringify(obj);
 }
 
 // 热搜去广告
-if (url.includes('app.bilibili.com/x/v2/search/square')) {
+if (url.includes('app.bilibili.com/x/v2/search/square?')) {
   let obj = JSON.parse(body);
   if (obj.data) delete obj.data;
-  body = JSON.stringify(obj);
-}
-
-// 追番去广告
-if (url.includes('api.bilibili.com/pgc/page/bangumi')) {
-  let obj = JSON.parse(body);
-  obj.result.modules?.forEach((module) => {
-    // 头部banner
-    if (module.style.startsWith('banner')) {
-      module.items = module.items.filter((i) => !(i.source_content && i.source_content.ad_content));
-    }
-  });
   body = JSON.stringify(obj);
 }
 
@@ -187,24 +175,6 @@ if (url.includes('api.bilibili.com/pgc/page/cinema/tab?')) {
 if (url.includes('api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom')) {
   let obj = JSON.parse(body);
   if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
-  body = JSON.stringify(obj);
-}
-
-// 动态去广告
-if (url.includes('api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_')) {
-  let obj = JSON.parse(body);
-  let cards = [];
-  obj.data.cards?.forEach((element) => {
-    if (element.hasOwnProperty('display') && element.card.indexOf('ad_ctx') <= 0) {
-      // 解决number类型精度问题导致B站动态中图片无法打开的问题
-      element['desc']['dynamic_id'] = element['desc']['dynamic_id_str'];
-      element['desc']['pre_dy_id'] = element['desc']['pre_dy_id_str'];
-      element['desc']['orig_dy_id'] = element['desc']['orig_dy_id_str'];
-      element['desc']['rid'] = element['desc']['rid_str'];
-      cards.push(element);
-    }
-  });
-  obj.data.cards = cards;
   body = JSON.stringify(obj);
 }
 

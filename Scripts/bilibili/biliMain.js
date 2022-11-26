@@ -1,4 +1,4 @@
-// 2022-11-26 14:18
+// 2022-11-26 14:25
 
 var url = $request.url;
 var body = $response.body;
@@ -101,6 +101,8 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
     }
     obj['data']['sections_v2'][index]['items'] = items;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
+    delete obj.data.vip_section_v2;
+    delete obj.data.vip_section;
     if (obj.data.hasOwnProperty('live_tip')) delete obj['data']['live_tip'];
     if (obj.data.hasOwnProperty('answer')) delete obj['data']['answer'];
     obj['data']['vip_type'] = 2;

@@ -10,7 +10,7 @@ if (!body) {
 // 去除强制设置的皮肤
 if (url.includes('app.bilibili.com/x/resource/show/skin?')) {
   let obj = JSON.parse(body);
-  if (obj && obj.hasOwnProperty('data')) delete obj['data']['common_equip'];
+  if (obj && obj.hasOwnProperty('data')) obj['data']['common_equip'] = {};
   body = JSON.stringify(obj);
 }
 
@@ -20,7 +20,13 @@ if (url.includes('app.bilibili.com/x/resource/show/tab')) {
   // 442开始为概念版id，适配港澳台代理模式
   const tabList = new Set([39, 40, 41, 151]);
   // 尝试使用tab name直观修改
-  const tabNameList = new Set(['直播', '推荐', '热门', '影视']);
+  // const tabNameList = new Set(['直播', '推荐', '热门', '影视']);
+  // if (obj['data']['tab']) {
+  //   let tab = obj['data']['tab'].filter((e) => {
+  //     return tabNameList.has(e.name) || tabList.has(e.id);
+  //   });
+  //   obj['data']['tab'] = tab;
+  // }
   // 222游戏中心 107概念版游戏中心 176消息中心
   const topList = new Set([176]);
   // 标准版
@@ -34,7 +40,7 @@ if (url.includes('app.bilibili.com/x/resource/show/tab')) {
   let obj = JSON.parse(body);
   if (obj['data']['tab']) {
     let tab = obj['data']['tab'].filter((e) => {
-      return tabNameList.has(e.name) || tabList.has(e.id);
+      return tabList.has(e.id);
     });
     obj['data']['tab'] = tab;
   }
@@ -57,8 +63,8 @@ if (url.includes('app.bilibili.com/x/resource/show/tab')) {
 if (url.includes('app.bilibili.com/x/resource/top/activity')) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.hash && obj.data.online.icon) {
-    delete obj.data.hash;
-    delete obj.data.online.icon;
+    obj.data.hash = '';
+    obj.data.online.icon = '';
   }
   body = JSON.stringify(obj);
 }
@@ -81,7 +87,7 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
     let items = element['items'].filter((e) => {
       return itemList.has(e.id);
     });
-    delete obj['data']['sections_v2'][index].button;
+    obj["data"]["sections_v2"][index].button = {};
     delete obj['data']['sections_v2'][index].be_up_title;
     delete obj['data']['sections_v2'][index].tip_icon;
     delete obj['data']['sections_v2'][index].tip_title;
@@ -103,8 +109,8 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
     delete obj.data.vip_section_v2;
     delete obj.data.vip_section;
-    if (obj.data.hasOwnProperty('live_tip')) delete obj['data']['live_tip'];
-    if (obj.data.hasOwnProperty('answer')) delete obj['data']['answer'];
+    if (obj.data.hasOwnProperty('live_tip')) obj["data"]["live_tip"] = {};
+    if (obj.data.hasOwnProperty('answer')) obj["data"]["answer"] = {};
     obj['data']['vip_type'] = 2;
     obj['data']['vip']['type'] = 2;
     obj['data']['vip']['status'] = 1;
@@ -180,7 +186,7 @@ if (url.includes('api.bilibili.com/pgc/page/cinema/tab?')) {
 // 直播去广告
 if (url.includes('api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom')) {
   let obj = JSON.parse(body);
-  if (obj.data.activity_banner_info) delete obj.data.activity_banner_info;
+  if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
   body = JSON.stringify(obj);
 }
 

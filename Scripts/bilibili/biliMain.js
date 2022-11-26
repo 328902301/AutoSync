@@ -1,4 +1,4 @@
-// 2022-11-26 13:53
+// 2022-11-26 14:02
 
 var url = $request.url;
 var body = $response.body;
@@ -87,9 +87,6 @@ if (url.includes('app.bilibili.com/x/v2/account/mine')) {
     delete obj['data']['sections_v2'][index].tip_title;
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
       if (obj.data.sections_v2[i].title === '推荐服务') {
-        delete obj.data.sections_v2[i].title;
-      }
-      if (obj.data.sections_v2[i].title === '更多服务') {
         delete obj.data.sections_v2[i].title;
       }
       if (obj.data.sections_v2[i].title === '创作中心') {

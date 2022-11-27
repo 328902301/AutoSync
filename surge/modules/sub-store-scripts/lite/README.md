@@ -74,7 +74,37 @@
 
 ## 如果怕拉不下来脚本导致没改成成功...可以不使用链接, 而是复制修改代码
 
-> 以下为举例 不一定会按最新代码更新
+> 可能你的需求很简单 根本不需要用这么复杂的逻辑 先看看这俩脚本吧:
+
+### VMESS WS 脚本最简示例
+
+```JavaScript
+async function operator(proxies = []) {
+    const _ = lodash
+    return proxies.map((p = {}) => {
+        _.set(p, 'name', `${_.get(p, 'name')}-西瓜`) // 名称添加后缀
+        _.set(p, 'port', 80)  // 改端口
+        _.set(p, 'ws-opts.headers.Host', 'v9-dy.ixigua.com') // 改混淆
+        return p
+    })
+}
+```
+
+### TROJAN 脚本最简示例
+
+```JavaScript
+async function operator(proxies = []) {
+    const _ = lodash
+    return proxies.map((p = {}) => {
+        _.set(p, 'name', `${_.get(p, 'name')}-西瓜`) // 名称添加后缀
+        _.set(p, 'skip-cert-verify', true)  // 改跳过证书验证
+        _.set(p, 'sni', 'v9-dy.ixigua.com') // 改混淆
+        return p
+    })
+}
+```
+
+> 以下为完整脚本的举例 不一定会按最新代码更新
 
 ```JavaScript
 async function operator(proxies = []) {

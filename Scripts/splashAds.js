@@ -18,8 +18,8 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
     if (obj.advertParam.showSkipBtn) obj.advertParam.showSkipBtn = 0;
     if (obj.advertParam.skipTimeAgain) obj.advertParam.skipTimeAgain = 0;
     if (obj.advertParam.index) obj.advertParam.index = 0;
-    body = JSON.stringify(obj);
   }
+  body = JSON.stringify(obj);
 }
 
 // 京东

@@ -12,16 +12,17 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
   obj.code = '00';
   if (obj.materialsList) obj.materialsList = [];
-  for (let item of obj['advertParam']) {
-    item['fixedscreen'] = -1;
-    item['displayNumDi'] = 0;
-    item['isDefault'] = 0;
-    item['skipTime'] = 0;
-    item['chacheTime'] = 600000;
-    item['showSkipBtn'] = 0;
-    item['skipTimeAgain'] = 0;
-    item['index'] = 0;
+  if (obj.advertParam) {
+    obj.advertParam.fixedscreen = -1;
+    obj.advertParam.displayNumDi = 0;
+    obj.advertParam.isDefault = 0;
+    obj.advertParam.skipTime = 0;
+    obj.advertParam.chacheTime = 600000;
+    obj.advertParam.showSkipBtn = 0;
+    obj.advertParam.skipTimeAgain = 0;
+    obj.advertParam.index = 0;
   }
+  body = JSON.stringify(obj);
 }
 
 // 京东

@@ -10,7 +10,6 @@ if (!body) {
 // 12306
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
-  obj.code = '00';
   if (obj.materialsList) {
     if (obj.materialsList.length == 1) {
       obj.materialsList[0].filePath = '';

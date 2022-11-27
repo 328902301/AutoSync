@@ -1,5 +1,3 @@
-// ^https:\/\/llhb\.ah163\.net\/ah_red_come\/app\/getJscode2Session url script-response-body llll.ct.js
-// https://raw.githubusercontent.com/bv5204978/QXRelay/master/JS/CT/ llll.ct.js
 /**
  * 流量来啦.签到(小程序)
  * 
@@ -8,7 +6,7 @@
  * 
  * 
  * MITM = llhb.ah163.net
- * ^https:\/\/llhb\.ah163\.net\/ah_red_come\/app\/getJscode2Session url script-request-body https://raw.githubusercontent.com/bv5204978/QXRelay/master/JS/CT/llll.ct.js
+ * ^https:\/\/llhb\.ah163\.net\/ah_red_come\/app\/getJscode2Session url script-response-body https://raw.githubusercontent.com/bv5204978/QXRelay/master/JS/CT/llll.ct.js
  * 
  * 5 0 * * * https://raw.githubusercontent.com/bv5204978/QXRelay/master/JS/CT/llll.ct.js, tag=流量来啦, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10000.png, enabled=true
  * 
@@ -51,7 +49,7 @@ async function start() {
 
 
 function getToken() {
-    const body = $request.body
+    const body = $response.body
 
     const bodystr = $.Decrypt(body)
     const body2 = JSON.parse(bodystr)

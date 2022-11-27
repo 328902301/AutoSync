@@ -12,15 +12,23 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
   obj.code = '00';
   if (obj.materialsList) obj.materialsList = [];
-  if (obj.advertParam) {
-    obj.advertParam.fixedscreen = 3;
+  if (obj.advertParam.fixedscreen = 3) {
     obj.advertParam.displayNumDi = 1;
     obj.advertParam.isDefault = 0;
-    obj.advertParam.skipTime = 0;
+    obj.advertParam.skipTime = 3000;
     obj.advertParam.chacheTime = 600000;
     obj.advertParam.showSkipBtn = 0;
     obj.advertParam.skipTimeAgain = 0;
     obj.advertParam.index = 5;
+  }
+  if (obj.advertParam.fixedscreen = -1) {
+    obj.advertParam.displayNumDi = 1;
+    obj.advertParam.isDefault = 0;
+    obj.advertParam.skipTime = 1000;
+    obj.advertParam.chacheTime = 600000;
+    obj.advertParam.showSkipBtn = 0;
+    obj.advertParam.skipTimeAgain = 0;
+    obj.advertParam.index = 0;
   }
   body = JSON.stringify(obj);
 }

@@ -51,7 +51,7 @@ async function start() {
 
 
 function getToken() {
-    const body = $response.body
+    const body = $request.body
 
     const bodystr = $.Decrypt(body)
     const body2 = JSON.parse(bodystr)

@@ -1,10 +1,27 @@
-// 2022-11-26 19:23
+// 2022-11-27 23:58
 
 var url = $request.url;
 var body = $response.body;
 
 if (!body) {
   $done({});
+}
+
+// 12306
+if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
+  let obj = JSON.parse(body);
+  obj.code = '00';
+  if (obj.materialsList) obj.materialsList = [];
+  for (let item of obj['advertParam']) {
+    item['fixedscreen'] = -1;
+    item['displayNumDi'] = 0;
+    item['isDefault'] = 0;
+    item['skipTime'] = 0;
+    item['chacheTime'] = 600000;
+    item['showSkipBtn'] = 0;
+    item['skipTimeAgain'] = 0;
+    item['index'] = 0;
+  }
 }
 
 // 京东

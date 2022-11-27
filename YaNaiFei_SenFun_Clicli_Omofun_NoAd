@@ -1,0 +1,13 @@
+# > 鸭奈飞
+^http?:\/\/pipi\.4kya\.com/\/xgapp\.php\/v3\/advert.position.[^2](?<=position..) url reject
+
+# > senfun稀饭
+^https?:\/\/pzoap\.moedot\.net\/xgapp\.php\/v2\/top_notice? url reject
+
+# > clicli
+^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/top_notice? url reject
+
+# > omofun
+^https?:\/\/103\.91\.210\.141:2515\/xgapp\.php\/v2\/top_notice? url reject
+
+hostname =  pipi.4kya.com, pzoap.moedot.net,  js-ad.ayximgss.com, 103.91.210.141:2515,

@@ -1,4 +1,4 @@
-// 2022-11-27 23:58
+// 2022-11-28 01:18
 
 var url = $request.url;
 var body = $response.body;
@@ -10,17 +10,16 @@ if (!body) {
 // 12306
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
-  if (obj.materialsList) {
-    if (obj.materialsList.length == 1) {
-      obj.materialsList[0].filePath = '';
-      obj.advertParam.skipTime = 0;
-      obj.advertParam.skipTimeAgain = 0;
-      obj.advertParam.showSkipBtn = -1;
-    } else if (obj.materialsList.length > 1) {
-      obj.materialsList = [];
-    }
+  obj.code = 00;
+  if (obj.materialsList) obj.materialsList = [];
+  if (obj.advertParam) {
+    if (obj.advertParam.skipTime) obj.advertParam.skipTime = 0;
+    if (obj.advertParam.chacheTime) obj.advertParam.chacheTime = 0;
+    if (obj.advertParam.showSkipBtn) obj.advertParam.showSkipBtn = 0;
+    if (obj.advertParam.skipTimeAgain) obj.advertParam.skipTimeAgain = 0;
+    if (obj.advertParam.index) obj.advertParam.index = 0;
+    body = JSON.stringify(obj);
   }
-  body = JSON.stringify(obj);
 }
 
 // 京东
@@ -89,7 +88,7 @@ if (url.includes('mi.com/v1/app/start')) {
   obj.code = 0;
   if (obj.data.skip_splash && obj.data.splash) {
     obj.data.skip_splash = true;
-    delete obj.data.splash;
+    obj.data.splash = [];
   }
   obj.info = 'ok';
   obj.desc = '成功';

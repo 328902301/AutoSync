@@ -10,14 +10,14 @@ class searchRes$Type extends MessageType{constructor(){super("searchRes",[{no:4,
 class playerRes$Type extends MessageType{constructor(){super("playerRes",[{no:7,name:"b1f7",kind:"message",jsonName:"b1f7",repeat:1,T:()=>b1f7}])}create(e){var n={b1F7:[]};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(7===l)a.b1F7.push(b1f7.internalBinaryRead(e,e.uint32(),r));else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){for(let t=0;t<e.b1F7.length;t++)b1f7.internalBinaryWrite(e.b1F7[t],n.tag(7,WireType.LengthDelimited).fork(),r).join();var t=r.writeUnknownFields;return!1!==t&&(1==t?UnknownFieldHandler.onWrite:t)(this.typeName,e,n),n}}const playerRes=new playerRes$Type;class b1f7$Type extends MessageType{constructor(){super("b1f7",[{no:84813246,name:"b2f84813246",kind:"message",jsonName:"b2f84813246",T:()=>b2f84813246}])}create(e){var n={};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(84813246===l)a.b2F84813246=b2f84813246.internalBinaryRead(e,e.uint32(),r,a.b2F84813246);else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){return e.b2F84813246&&b2f84813246.internalBinaryWrite(e.b2F84813246,n.tag(84813246,WireType.LengthDelimited).fork(),r).join(),!1!==(r=r.writeUnknownFields)&&(1==r?UnknownFieldHandler.onWrite:r)(this.typeName,e,n),n}}const b1f7=new b1f7$Type;class b2f84813246$Type extends MessageType{constructor(){super("b2f84813246",[{no:3,name:"v",kind:"scalar",T:5}])}create(e){var n={v:0};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(3===l)a.v=e.int32();else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){return 0!==e.v&&n.tag(3,WireType.Varint).int32(e.v),!1!==(r=r.writeUnknownFields)&&(1==r?UnknownFieldHandler.onWrite:r)(this.typeName,e,n),n}}const b2f84813246=new b2f84813246$Type;
 
 const url = $request.url;
-const isQuanX = typeof $task !== "undefined";
+const isQuanX = typeof $task !== 'undefined';
 const binaryBody = isQuanX ? new Uint8Array($response.bodyBytes) : $response.body;
 let needProcessFlag = false;
 let body;
 
-if (url.includes("/v1/browse")) {
-  //console.log("browse");
-  let browseMessage = browseRes.fromBinary(binaryBody);
+if (url.includes('/v1/browse')) {
+  //console.log('browse');
+  let browseMessage = browseRes.fromBinary(binaryBody, {readUnknownField: true});
   mapItems(browseMessage.n1F10?.n2F49399797?.n3F1);
   mapItems(browseMessage.n1F9?.m2F58173949?.m3F1?.m4F58174010?.n1F10?.n2F49399797?.n3F1);
   if (needProcessFlag) {
@@ -25,9 +25,9 @@ if (url.includes("/v1/browse")) {
   }
 }
 
-if (url.includes("/v1/guide")) {
-  //console.log("guide");
-  let guideMessage = guideRes.fromBinary(binaryBody);
+if (url.includes('/v1/guide')) {
+  //console.log('guide');
+  let guideMessage = guideRes.fromBinary(binaryBody, {readUnknownField: true});
   mapItems(guideMessage.g1F4, true);
   mapItems(guideMessage.g1F6, true);
   if (needProcessFlag) {
@@ -35,9 +35,9 @@ if (url.includes("/v1/guide")) {
   }
 }
 
-if (url.includes("/v1/next")) {
-  //console.log("next");
-  let nextMessage = nextRes.fromBinary(binaryBody);
+if (url.includes('/v1/next')) {
+  //console.log('next');
+  let nextMessage = nextRes.fromBinary(binaryBody, {readUnknownField: true});
   mapItems(nextMessage.a1F7?.a2F51779735?.a3F1?.n2F49399797?.n3F1);
   mapItems(nextMessage.a1F8?.n2F49399797?.n3F1);
   if (needProcessFlag) {
@@ -45,9 +45,9 @@ if (url.includes("/v1/next")) {
   }
 }
 
-if (url.includes("/v1/reel/reel_watch_sequence")) {
-  //console.log("shorts");
-  let shortsMessage = shortsRes.fromBinary(binaryBody);
+if (url.includes('/v1/reel/reel_watch_sequence')) {
+  //console.log('shorts');
+  let shortsMessage = shortsRes.fromBinary(binaryBody, {readUnknownField: true});
   let shortsRawLength = shortsMessage.t1F2?.length;
   if (shortsMessage.t1F2) {
     shortsMessage.t1F2 = shortsMessage.t1F2?.filter?.((io) => io.n2F1?.n3F139608561?.n4F8);
@@ -58,9 +58,9 @@ if (url.includes("/v1/reel/reel_watch_sequence")) {
   }
 }
 
-if (url.includes("/v1/search")) {
-  //console.log("search");
-  let searchMessage = searchRes.fromBinary(binaryBody);
+if (url.includes('/v1/search')) {
+  //console.log('search');
+  let searchMessage = searchRes.fromBinary(binaryBody, {readUnknownField: true});
   mapItems(searchMessage.s1F4?.n2F49399797?.n3F1);
   mapItems(searchMessage.s1F7?.n2F49399797?.n3F1);
   removeAd(searchMessage.s1F7?.n4F50195462);
@@ -69,9 +69,9 @@ if (url.includes("/v1/search")) {
   }
 }
 
-if (url.includes("/v1/player")) {
-  //console.log("player");
-  let playerMessage = playerRes.fromBinary(binaryBody);
+if (url.includes('/v1/player')) {
+  //console.log('player');
+  let playerMessage = playerRes.fromBinary(binaryBody, {readUnknownField: true});
   if (playerMessage.b1F7?.length) {
     playerMessage.b1F7 = [];
     needProcessFlag = true;
@@ -80,14 +80,14 @@ if (url.includes("/v1/player")) {
 }
 
 if (needProcessFlag) {
-  //console.log("已处理");
+  //console.log('已处理');
   if (isQuanX) {
     $done({bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset)});
   } else {
     $done({body});
   }
 } else {
-  //console.log("无需处理");
+  //console.log('无需处理');
   $done({});
 }
 

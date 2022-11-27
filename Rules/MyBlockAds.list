@@ -1,4 +1,4 @@
-# 2022-11-26
+# 2022-11-27
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
@@ -51,9 +51,6 @@ HOST, switch.cup.com.cn, MyBlockAds
 # 美颜相机
 HOST, adui.tg.meitu.com, MyBlockAds
 HOST, aaid.uyunad.com, MyBlockAds
-
-# 铁路12306
-HOST, ad.12306.cn, MyBlockAds
 
 # 屏蔽迅雷版权
 ;HOST, hub5btmain.v6.shub.sandai.net, MyBlockAds

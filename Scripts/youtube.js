@@ -15,10 +15,6 @@ const binaryBody = isQuanX ? new Uint8Array($response.bodyBytes) : $response.bod
 let needProcessFlag = false;
 let body;
 
-if ($request.method !== "POST") {
-  //$notification.post("youtube-proto去广告脚本错误", "请求方法不为POST:", url);
-}
-
 if (url.includes("/v1/browse")) {
   //console.log("browse");
   let browseMessage = browseRes.fromBinary(binaryBody);
@@ -27,7 +23,9 @@ if (url.includes("/v1/browse")) {
   if (needProcessFlag) {
     body = browseRes.toBinary(browseMessage);
   }
-} else if (url.includes("/v1/guide")) {
+}
+
+if (url.includes("/v1/guide")) {
   //console.log("guide");
   let guideMessage = guideRes.fromBinary(binaryBody);
   mapItems(guideMessage.g1F4, true);
@@ -35,7 +33,9 @@ if (url.includes("/v1/browse")) {
   if (needProcessFlag) {
     body = guideRes.toBinary(guideMessage);
   }
-} else if (url.includes("/v1/next")) {
+}
+
+if (url.includes("/v1/next")) {
   //console.log("next");
   let nextMessage = nextRes.fromBinary(binaryBody);
   mapItems(nextMessage.a1F7?.a2F51779735?.a3F1?.n2F49399797?.n3F1);
@@ -43,7 +43,9 @@ if (url.includes("/v1/browse")) {
   if (needProcessFlag) {
     body = nextRes.toBinary(nextMessage);
   }
-} else if (url.includes("/v1/reel/reel_watch_sequence")) {
+}
+
+if (url.includes("/v1/reel/reel_watch_sequence")) {
   //console.log("shorts");
   let shortsMessage = shortsRes.fromBinary(binaryBody);
   let shortsRawLength = shortsMessage.t1F2?.length;
@@ -54,7 +56,9 @@ if (url.includes("/v1/browse")) {
       body = shortsRes.toBinary(shortsMessage);
     }
   }
-} else if (url.includes("/v1/search")) {
+}
+
+if (url.includes("/v1/search")) {
   //console.log("search");
   let searchMessage = searchRes.fromBinary(binaryBody);
   mapItems(searchMessage.s1F4?.n2F49399797?.n3F1);
@@ -63,7 +67,9 @@ if (url.includes("/v1/browse")) {
   if (needProcessFlag) {
     body = searchRes.toBinary(searchMessage);
   }
-} else if (url.includes("/v1/player")) {
+}
+
+if (url.includes("/v1/player")) {
   //console.log("player");
   let playerMessage = playerRes.fromBinary(binaryBody);
   if (playerMessage.b1F7?.length) {
@@ -71,8 +77,6 @@ if (url.includes("/v1/browse")) {
     needProcessFlag = true;
     body = playerRes.toBinary(playerMessage);
   }
-} else {
-  //$notification.post("youtube-proto脚本匹配错误", "可能需要更新脚本资源", url);
 }
 
 if (needProcessFlag) {

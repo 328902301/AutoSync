@@ -1,0 +1,10 @@
+大师兄影视最近出了开屏倒计时广告
+来自Boss Aaa分享的去广告规则：
+
+
+
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v3\/top_notice? url reject
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v3\/advert.position.[^2](?<=position..) url reject
+
+
+hostname = sdk.alibaba.com.ailbaba.me

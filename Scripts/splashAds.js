@@ -14,9 +14,9 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   if (obj.materialsList) obj.materialsList = [];
   if (obj.advertParam) {
     obj.advertParam.fixedscreen = -1;
-    obj.advertParam.displayNumDi = 0;
-    obj.advertParam.isDefault = 0;
-    obj.advertParam.skipTime = 0;
+    obj.advertParam.displayNumDi = 1;
+    obj.advertParam.isDefault = 1;
+    obj.advertParam.skipTime = 500;
     obj.advertParam.chacheTime = 600000;
     obj.advertParam.showSkipBtn = 0;
     obj.advertParam.skipTimeAgain = 0;

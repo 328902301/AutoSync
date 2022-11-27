@@ -36,7 +36,7 @@ start()
 async function start() {
     if (isRequest) {
         const msg = getToken()
-        console.log(`${taskName}\n${tokenValue}`)
+        console.log(`${taskName}\n${msg}`)
         $notify(taskName, '', msg)
         $done({})
     } else {

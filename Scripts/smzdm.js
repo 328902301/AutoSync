@@ -1,4 +1,5 @@
-// 2022-11-28 17:10
+// 2022-11-28 17:41
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_remove_ads.qxrewrite
 
 var url = $request.url;
 var body = $response.body;

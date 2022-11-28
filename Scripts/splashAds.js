@@ -10,20 +10,7 @@ if (!body) {
 // 12306
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
-  if (obj.materialsList) {
-    if (obj.materialsList.length == 1) {
-      obj.materialsList[0].clickUrlList = '';
-      obj.materialsList[0].viewUrlList = '';
-      obj.materialsList[0].linkUri = '';
-      obj.materialsList[0].filePath = '';
-      obj.advertParam.skipTime = 1;
-      obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 200;
-    } else if (obj.materialsList.length > 1) {
-      obj.materialsList = [];
-      obj.advertParam.skipTime = 1;
-    }
-  }
+  obj = {'message':'无广告返回', 'code':'00'}
   body = JSON.stringify(obj);
 }
 

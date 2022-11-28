@@ -1,4 +1,4 @@
-// 2022-11-28 01:18
+// 2022-11-28 17:30
 
 var url = $request.url;
 var body = $response.body;
@@ -10,22 +10,44 @@ if (!body) {
 // 12306
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
-  if (obj.materialsList) {
-    if (obj.materialsList.length == 1) {
-      obj.materialsList[0].filePath = '';
+    if (obj.materialsList) {
+      for (let i = 0; i < obj.materialsList.length; i++) {
+      obj.materialsList[i].filePath = '';
       obj.advertParam.skipTime = 500;
       obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 1;
-    } else if (obj.materialsList.length > 1) {
-      obj.materialsList = [];
-      obj.advertParam.skipTime = 500;
-      obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 0;
+      obj.advertParam.skipTimeAgain = 5;
     }
   }
   body = JSON.stringify(obj);
 }
 
+// 嘀嗒出行
+if (url.includes('didapinche.com/ad/cx/startup?')) {
+  let obj = JSON.parse(body);
+  if (obj.hasOwnProperty("startupPages") == true) {
+    obj.show_time = 1;
+    obj.full_screen = 0;
+    let startupPages = [];
+    obj.startupPages.forEach((element) => {
+      element["width"] = 1;
+      element["height"] = 1;
+      element["page_url"] = "#";
+      startupPages.push(element);
+    });
+    obj.startupPages = startupPages;
+    body = JSON.stringify(obj);
+  }
+}
+
+// 多点
+if (url.includes('cmsapi.dmall.com/app/home/homepageStartUpPic')) {
+  let obj = JSON.parse(body);
+  for (let i = 0; i < obj["data"]["welcomePage"].length; i++) {
+    obj["data"]["welcomePage"][i]["onlineTime"] = 2208960000000;
+    obj["data"]["welcomePage"][i]["offlineTime"] = 2209046399000;
+  }
+  body = JSON.stringify(obj);
+}
 
 // 京东
 if (url.includes('jd.com/client.action?functionId=start')) {
@@ -34,14 +56,24 @@ if (url.includes('jd.com/client.action?functionId=start')) {
     for (let j = 0; j < obj.images[i].length; j++) {
       if (obj.images[i][j].showTimes) {
         obj.images[i][j].showTimes = 0;
-        obj.images[i][j].onlineTime = "2040-01-01 00:00:00";
-        obj.images[i][j].referralsTime = "2040-01-02 00:00:00";
+        obj.images[i][j].onlineTime = '2040-01-01 00:00:00';
+        obj.images[i][j].referralsTime = '2040-01-01 23:59:59';
         obj.images[i][j].time = 0;
       }
     }
   }
   obj.countdown = 100;
   obj.showTimesDaily = 0;
+  body = JSON.stringify(obj);
+}
+
+// 联享家
+if (url.includes('mi.gdt.qq.com/gdt_mview.fcg')) {
+  let obj = JSON.parse(body);
+  obj.seq = "0";
+  obj.reqinterval = 0;
+  delete obj.last_ads;
+  delete obj.data;
   body = JSON.stringify(obj);
 }
 
@@ -87,14 +119,28 @@ if (url.includes('uve.weibo.com/wbapplua/wbpullad.lua')) {
   body = JSON.stringify(obj);
 }
 
+// 小爱音箱
+if (url.includes('hd.mina.mi.com/splashscreen/alert')) {
+  let obj = JSON.parse(body);
+  let data = [];
+  for (let i = 0; i < obj.data.length; i++) {
+    let ad = obj.data[i];
+    ad.start = "2208960000000";
+    ad.end = "2209046399000";
+    ad.stay = 1;
+    ad.maxTimes = 1;
+    data.push(ad);
+  }
+  obj.data = data;
+  body = JSON.stringify(obj);
+}
+
 // 小米商城
 if (url.includes('mi.com/v1/app/start')) {
   let obj = JSON.parse(body);
   obj.code = 0;
-  if (obj.data.skip_splash && obj.data.splash) {
-    obj.data.skip_splash = true;
-    obj.data.splash = [];
-  }
+  obj.data.skip_splash = true;
+  delete obj.data.splash;
   obj.info = 'ok';
   obj.desc = '成功';
   body = JSON.stringify(obj);

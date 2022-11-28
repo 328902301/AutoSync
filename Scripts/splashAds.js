@@ -10,7 +10,12 @@ if (!body) {
 // 12306
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
-  obj = {'message':'无广告返回', 'code':'00'}
+  if (obj.materialsList) {
+    obj.materialsList = [];
+  }
+  obj.advertParam.skipTime = 0;
+  obj.advertParam.showSkipBtn = 0;
+  obj.advertParam.skipTimeAgain = 0;
   body = JSON.stringify(obj);
 }
 

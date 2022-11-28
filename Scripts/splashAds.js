@@ -11,13 +11,21 @@ if (!body) {
 if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
   if (obj.materialsList) {
-    obj.materialsList = [];
-    obj.advertParam.skipTime = 500;
-    obj.advertParam.showSkipBtn = 0;
-    obj.advertParam.skipTimeAgain = 0;
+    if (obj.materialsList.length == 1) {
+      obj.materialsList = [];
+      obj.advertParam.skipTime = 1000;
+      obj.advertParam.showSkipBtn = 0;
+      obj.advertParam.skipTimeAgain = 0;
+    } else if (obj.materialsList.length == 6) {
+      obj.materialsList = [];
+      obj.advertParam.skipTime = 1;
+      obj.advertParam.showSkipBtn = 0;
+      obj.advertParam.skipTimeAgain = 0;
+    }
   }
   body = JSON.stringify(obj);
 }
+
 
 // 京东
 if (url.includes('jd.com/client.action?functionId=start')) {

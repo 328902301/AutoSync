@@ -18,7 +18,7 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
       obj.advertParam.skipTimeAgain = 0;
     } else if (obj.materialsList.length == 6) {
       obj.materialsList = [];
-      obj.advertParam.skipTime = 1;
+      obj.advertParam.skipTime = 1000;
       obj.advertParam.showSkipBtn = 0;
       obj.advertParam.skipTimeAgain = 0;
     }

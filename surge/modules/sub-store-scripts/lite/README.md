@@ -70,7 +70,13 @@
 
 `array` 是否把 `host`, `path` 设为数组. 默认不是数组. 如果要用于 Clash 系的客户端输出, 应设为 `true`. 不需要的时候, 请不要传这个字段
 
-`defaultNetwork` 默认的 `network`. 有的订阅默认没有 `network`, 一般这种情况都是 `http`. 所以需要设置为 `http`
+`defaultNetwork` 默认的 `network`. 节点无 `network` 时, 将设置为此值. 最新版已默认为 `http`
+
+当 `network` 为 `http` 时:
+
+`defaultPath` 默认的 `path`. 节点无 `network` 时, 将设置为此值. 最新版已默认为 `/`
+
+`defaultMethod` 默认的 `method`. 节点无 `method` 时, 将设置为此值. 最新版已默认为 `GET`
 
 ## 如果怕拉不下来脚本导致没改成成功...可以不使用链接, 而是复制修改代码
 

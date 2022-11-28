@@ -133,6 +133,12 @@ async function operator(proxies = []) {
     const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
 
     return proxies.map((p = {}) => {
+        // 沃音乐 公免
+        // 名称判断 _.includes(p.name, '沃音乐') || _.includes(p.name, '公免')
+        // 或 path 判断
+        if(_.chain(p).get('ws-opts.path').includes('gd.unicommusic.gtimg.com').value()){
+            return p
+        }
         let network = _.get(p, 'network')
         const type = _.get(p, 'type')
         /* 只修改 vmess 和 vless */

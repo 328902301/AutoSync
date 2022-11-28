@@ -28,15 +28,15 @@
 
 ### vmess `http` 节点(即所谓的 `tcp` 节点)
 
-订阅同时包含了 `network` 为 `ws` 和 `http` 的节点. 你想统一设置混淆为 `tms.dingtalk.com`, 端口为 `80`.兼顾 `http` 节点的 `path` -> `/`, `method` -> `GET`. 没给 `network` 的 默认为 `http`
+订阅同时包含了 `network` 为 `ws` 和 `http` 的节点. 你想统一设置混淆为 `tms.dingtalk.com`, 端口为 `80`
 
 1. 输出给 Clash 系的客户端, 请加上 `array` `true`
 
-`https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js#hostPrefix=[钉钉]&host=tms.dingtalk.com&path=/&method=GET&defaultNetwork=http&array=true`
+`https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js#hostPrefix=[钉钉]&host=tms.dingtalk.com&port=80&array=true`
 
 2. 输出给 非 Clash 系的客户端, 应该不用加上 `array`
 
-`https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js#hostPrefix=[钉钉]&host=tms.dingtalk.com&path=/&method=GET&defaultNetwork=http`
+`https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/lite/index.js#hostPrefix=[钉钉]&host=tms.dingtalk.com&port=80`
 
 ### 注意
 

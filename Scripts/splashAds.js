@@ -13,9 +13,10 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   if (obj.materialsList) {
     if (obj.materialsList.length == 1) {
       obj.materialsList[0].filePath = '';
-      obj.advertParam.skipTime = 1000;
+      obj.advertParam.displayNumDi = 0;
+      obj.advertParam.skipTime = 1;
       obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 20;
+      obj.advertParam.skipTimeAgain = 0;
     } else if (obj.materialsList.length > 1) {
       obj.materialsList = [];
     }

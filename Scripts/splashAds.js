@@ -12,13 +12,13 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
   let obj = JSON.parse(body);
   if (obj.materialsList) {
     if (obj.materialsList.length == 1) {
-      obj.materialsList = [];
-      obj.advertParam.skipTime = 1000;
+      obj.materialsList[0].filePath = '';
+      obj.advertParam.skipTime = 500;
       obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 0;
-    } else if (obj.materialsList.length == 6) {
+      obj.advertParam.skipTimeAgain = 1000;
+    } else if (obj.materialsList.length > 1) {
       obj.materialsList = [];
-      obj.advertParam.skipTime = 1000;
+      obj.advertParam.skipTime = 500;
       obj.advertParam.showSkipBtn = 0;
       obj.advertParam.skipTimeAgain = 0;
     }

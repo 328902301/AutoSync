@@ -15,9 +15,14 @@ if (url.includes('ad.12306.cn/ad/ser/getAdList')) {
       obj.materialsList[0].filePath = '';
       obj.advertParam.skipTime = 1;
       obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 1;
+      obj.advertParam.skipTimeAgain = 5;
     } else if (obj.materialsList.length > 1) {
-      obj.materialsList = [];
+      for (let i = 0; i < obj.materialsList.length; i++) {
+        obj.materialsList[i].filePath = '';
+        obj.advertParam.skipTime = 1;
+        obj.advertParam.showSkipBtn = 0;
+        obj.advertParam.skipTimeAgain = 5;
+      }
     }
   }
   body = JSON.stringify(obj);

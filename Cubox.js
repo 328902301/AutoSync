@@ -30,6 +30,7 @@ if (url.indexOf(vip) != -1) {
     chxm1023.data.thirdNickName = "chxm1023";
     chxm1023.data.isExpire = false;
     chxm1023.data.active = true;
+    chxm1023.data.isThirdUser = true;
     chxm1023.data.payTime = 1660006006;
     body = JSON.stringify(chxm1023);
 }

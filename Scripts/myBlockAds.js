@@ -15,7 +15,7 @@ function isresponse() {
   }
 }
 
-switch (isresponse) {
+switch (true) {
   // 12306 开屏广告
   case /^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url):
     try {

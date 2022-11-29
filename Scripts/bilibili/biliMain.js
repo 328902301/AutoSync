@@ -16,7 +16,7 @@ function isresponse() {
 }
 
 if (isresponse = true) {
-  switch (Boolean) {
+  switch (true) {
     // 去除强制设置的皮肤
     case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url):
       try {

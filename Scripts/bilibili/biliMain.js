@@ -8,14 +8,14 @@ if (!body) {
 }
 
 // 去除强制设置的皮肤
-if (url.includes('app.bilibili.com/x/resource/show/skin?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
   let obj = JSON.parse(body);
   if (obj && obj.hasOwnProperty('data')) obj['data']['common_equip'] = {};
   body = JSON.stringify(obj);
 }
 
 // 标签页处理，如去除会员购等等
-if (url.includes('app.bilibili.com/x/resource/show/tab')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
   // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
   // 442开始为概念版id，适配港澳台代理模式
   const tabList = new Set([39, 40, 41, 151]);
@@ -60,7 +60,7 @@ if (url.includes('app.bilibili.com/x/resource/show/tab')) {
 }
 
 // 去除右上角活动入口
-if (url.includes('app.bilibili.com/x/resource/top/activity?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.hash && obj.data.online.icon) {
     obj.data.hash = '';
@@ -70,7 +70,7 @@ if (url.includes('app.bilibili.com/x/resource/top/activity?')) {
 }
 
 // 我的页面处理，去除一些推广按钮
-if (url.includes('app.bilibili.com/x/v2/account/mine?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   let obj = JSON.parse(body);
   // 标准版：
   // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
@@ -121,7 +121,7 @@ if (url.includes('app.bilibili.com/x/v2/account/mine?')) {
 }
 
 // 解锁1080p高码率 2022-03-05 add by ddgksf2013
-if (url.includes('app.bilibili.com/x/v2/account/myinfo?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
   let obj = JSON.parse(body);
   obj['data']['vip']['type'] = 2;
   obj['data']['vip']['status'] = 1;
@@ -131,7 +131,7 @@ if (url.includes('app.bilibili.com/x/v2/account/myinfo?')) {
 }
 
 // 推荐广告处理 最后问号不能去掉 以免匹配到story模式
-if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
+if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(url)) {
   let obj = JSON.parse(body);
   let items = [];
   for (let item of obj["data"]["items"]) {
@@ -146,21 +146,21 @@ if (url.includes('app.bilibili.com/x/v2/feed/index?')) {
 }
 
 // 开屏广告处理
-if (url.includes('app.bilibili.com/x/v2/splash/list?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.show) delete obj.data.show;
   body = JSON.stringify(obj);
 }
 
 // 热搜去广告
-if (url.includes('app.bilibili.com/x/v2/search/square?')) {
+if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data) delete obj.data;
   body = JSON.stringify(obj);
 }
 
 // 观影页去广告
-if (url.includes('api.bilibili.com/pgc/page/cinema/tab?')) {
+if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url)) {
   let obj = JSON.parse(body);
   obj.result.modules?.forEach((module) => {
     // 头部banner
@@ -172,7 +172,7 @@ if (url.includes('api.bilibili.com/pgc/page/cinema/tab?')) {
 }
 
 // 直播去广告
-if (url.includes('api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom')) {
+if (/^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
   body = JSON.stringify(obj);

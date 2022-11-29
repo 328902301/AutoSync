@@ -1,7 +1,3 @@
-/*
- *Progcessed By JSDec in 0.03s
- *JSDec - JSDec.js.org
- */
 // 2022-11-29 14:30
 
 var url = url;

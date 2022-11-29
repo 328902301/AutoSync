@@ -22,7 +22,6 @@ switch (isresponse) {
       let obj = JSON.parse(body);
       if (obj && obj.hasOwnProperty("data")) obj["data"]["common_equip"] = {};
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 标签页处理，如去除会员购等等
@@ -69,7 +68,6 @@ switch (isresponse) {
         obj["data"]["bottom"] = bottom;
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 去除右上角活动入口
@@ -81,7 +79,6 @@ switch (isresponse) {
         obj.data.online.icon = "";
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 我的页面处理，去除一些推广按钮
@@ -134,7 +131,6 @@ switch (isresponse) {
         obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 解锁1080p高码率 2022-03-05 add by ddgksf2013
@@ -146,7 +142,6 @@ switch (isresponse) {
       obj["data"]["vip"]["vip_pay_type"] = 1;
       obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 推荐广告处理 最后问号不能去掉 以免匹配到story模式
@@ -168,7 +163,6 @@ switch (isresponse) {
       }
       obj["data"]["items"] = items;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 开屏广告处理
@@ -177,7 +171,6 @@ switch (isresponse) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.show) delete obj.data.show;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 热搜去广告
@@ -186,7 +179,6 @@ switch (isresponse) {
       let obj = JSON.parse(body);
       if (obj.data) delete obj.data;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 观影页去广告
@@ -202,7 +194,6 @@ switch (isresponse) {
         }
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   // 直播去广告
@@ -214,9 +205,9 @@ switch (isresponse) {
       if (obj.data.activity_banner_info)
         obj["data"]["activity_banner_info"] = null;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch {}
     break;
   default:
-    $done({ body });
 }
+
+$done({ body });

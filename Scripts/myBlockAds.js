@@ -1,6 +1,6 @@
-// 2022-11-29 14:30
+// 2022-11-29 14:40
 
-var url = url;
+var url = $request.url;
 var body = $response.body;
 
 function isresponse() {

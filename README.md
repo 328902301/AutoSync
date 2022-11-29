@@ -2,8 +2,7 @@
 [CMJ781](https://github.com/CMJ781)
 
 # 配置文件链接
-Quantumult X 
-全部资源来源于互联网，纯自用，如侵删。
+Quantumult X
 ```Java
 https://raw.githubusercontent.com/RuCu6/QuanX/main/QuantumultX.conf
 ```

@@ -1,6 +1,6 @@
-// 2022-11-29 14:30
+// 2022-11-29 14:40
 
-var url = url;
+var url = $request.url;
 var body = $response.body;
 
 function isresponse() {
@@ -12,7 +12,7 @@ function isresponse() {
 }
 
 if (isresponse = true) {
-  switch (true) {
+  switch (Boolean) {
     // 去除强制设置的皮肤
     case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url):
       try {

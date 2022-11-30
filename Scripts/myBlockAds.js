@@ -1,4 +1,4 @@
-// 2022-11-30 11:25
+// 2022-11-30 12:12
 
 var url = $request.url;
 var body = $response.body;
@@ -123,8 +123,8 @@ switch (addFlag) {
           }
           if (obj.data.sections_v2[i].title === "创作中心") {
             delete obj.data.sections_v2[i].title;
-            delete obj.data.sections_v2[i].type;
           }
+          delete obj.data.sections_v2[i].type;
         }
         obj["data"]["sections_v2"][index]["items"] = items;
         // 开启本地会员标识 2022-03-05 add by ddgksf2013

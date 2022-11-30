@@ -1,4 +1,4 @@
-// 2022-11-29 17:20
+// 2022-11-30 17:20
 
 var url = $request.url;
 var body = $response.body;
@@ -11,7 +11,7 @@ function isresponse() {
   }
 }
 
-if (isresponse = true) {
+if (isresponse == true) {
   switch (true) {
     // 12306 开屏广告
     case /^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url):

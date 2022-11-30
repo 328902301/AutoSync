@@ -325,6 +325,18 @@ if (ua.indexOf('GoodThing') != -1) {
     Body = {"request_date_ms":1668519721073,"request_date":"2022-11-15T13:42:01Z","subscriber":{"last_seen":"2022-11-15T13:37:45Z","first_seen":"2022-11-15T13:37:45Z","original_application_version":"12","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"goodhappens_basic_forever":{"unsubscribe_detected_at":null,"expires_date":"2099-11-22T13:41:30Z","is_sandbox":false,"refunded_at":null,"auto_resume_date":null,"grace_period_expires_date":null,"period_type":"trial","purchase_date":"2022-11-15T13:41:30Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","original_purchase_date":"2022-11-15T13:41:31Z"}},"entitlements":{"pro":{"expires_date":"2099-11-22T13:41:30Z","purchase_date":"2022-11-15T13:41:30Z","product_identifier":"goodhappens_basic_forever","grace_period_expires_date":null}},"original_purchase_date":"2022-11-15T13:36:14Z","original_app_user_id":"$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69","non_subscriptions":{}}};
 }
 
+//55 StaySleep 睡着了- 熬夜热力图、睡眠计时器
+//https://apps.apple.com/cn/app/id1640290061
+if (ua.indexOf('SleepDown') != -1) {
+    Body = {"request_date_ms":1668519721073,"request_date":"2022-11-15T13:42:01Z","subscriber":{"last_seen":"2022-11-15T13:37:45Z","first_seen":"2022-11-15T13:37:45Z","original_application_version":"12","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"pro_standard_0926":{"unsubscribe_detected_at":null,"expires_date":null,"is_sandbox":false,"refunded_at":null,"auto_resume_date":null,"grace_period_expires_date":null,"period_type":"Pro","purchase_date":"2022-11-15T13:41:30Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","original_purchase_date":"2022-11-15T13:41:31Z"}},"entitlements":{"Pro":{"expires_date":null,"purchase_date":"2022-11-15T13:41:30Z","product_identifier":"pro_standard_0926","grace_period_expires_date":null}},"original_purchase_date":"2022-11-15T13:36:14Z","original_app_user_id":"$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69","non_subscriptions":{}}};
+}
+
+//56 Noteplan - Agenda & Planner
+//https://apps.apple.com/cn/app/id1505432629
+if (ua.indexOf('NotePlan%203') != -1) {
+    Body = {"request_date_ms":1668519721073,"request_date":"2022-11-15T13:42:01Z","subscriber":{"last_seen":"2022-11-15T13:37:45Z","first_seen":"2022-11-15T13:37:45Z","original_application_version":"12","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"co.noteplan.subscription.personal.annual3":{"unsubscribe_detected_at":null,"expires_date":null,"is_sandbox":false,"refunded_at":null,"auto_resume_date":null,"grace_period_expires_date":null,"period_type":"Pro","purchase_date":"2022-11-15T13:41:30Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","original_purchase_date":"2022-11-15T13:41:31Z"}},"entitlements":{"Pro":{"expires_date":null,"purchase_date":"2022-11-15T13:41:30Z","product_identifier":"co.noteplan.subscription.personal.annual3","grace_period_expires_date":null}},"original_purchase_date":"2022-11-15T13:36:14Z","original_app_user_id":"$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69","non_subscriptions":{}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

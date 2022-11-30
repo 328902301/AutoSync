@@ -1,6 +1,6 @@
 /****************************************
 
-项目功能：Cubox-收藏阅读 解锁VIP
+项目名称：Cubox-收藏阅读
 下载地址：https://t.cn/A6x4qhyJ
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/cubox\.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontents.com/chxm1023/script/main/Rewrite/Cubox.js
+^https:\/\/cubox\.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Cb.js
 
 [mitm]
 

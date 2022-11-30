@@ -102,8 +102,8 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
       return itemList.has(e.id);
     });
     obj["data"]["sections_v2"][index].button = {};
-    delete obj["data"]["sections_v2"][index].be_up_title;
     delete obj["data"]["sections_v2"][index].tip_icon;
+    delete obj["data"]["sections_v2"][index].be_up_title;
     delete obj["data"]["sections_v2"][index].tip_title;
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
       if (obj.data.sections_v2[i].title === "推荐服务") {

@@ -1,6 +1,6 @@
 /****************************************
 
-项目功能：布丁锁屏 解锁VIP
+项目名称：布丁锁屏
 下载地址：https://t.cn/A6o11VGR
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
@@ -8,7 +8,7 @@
  
 [rewrite_local]
 
-https?:\/\/screen-lock\.51wnl-cq\.com\/userApi\/saveUser url script-echo-response https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/bdsp.js
+https?:\/\/screen-lock\.51wnl-cq\.com\/userApi\/saveUser url script-echo-response https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdsp.js
 
 [mitm] 
 

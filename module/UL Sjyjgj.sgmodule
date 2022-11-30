@@ -1,5 +1,5 @@
-#!name=解锁 手机硬件管家
-#!desc=Revenuecat手机硬件管家
+#!name=手机硬件管家
+#!desc=Revenuecat
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com

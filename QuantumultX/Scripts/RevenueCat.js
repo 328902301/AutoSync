@@ -313,6 +313,12 @@ if (ua.indexOf('Anime%20Karma%20List') != -1) {
     Body = {"request_date":"2022-10-26T05:13:39Z","request_date_ms":1666761219061,"subscriber":{"entitlements":{"allaccess":{"expires_date":"2099-11-02T05:13:34Z","grace_period_expires_date":null,"product_identifier":"akl_1999_1y","purchase_date":"2022-10-26T05:13:34Z"}},"first_seen":"2022-10-26T05:10:13Z","last_seen":"2022-10-26T05:10:13Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:feed7b3189874016913624d960650e0f","original_application_version":"2","original_purchase_date":"2022-10-26T05:09:34Z","other_purchases":{},"subscriptions":{"akl_1999_1y":{"billing_issues_detected_at":null,"expires_date":"2099-11-02T05:13:34Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-10-26T05:13:35Z","ownership_type":"PURCHASED","period_type":"pro","purchase_date":"2022-10-26T05:13:34Z","store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//53 Happy:Days
+//https://apps.apple.com/cn/app/id1564858029
+if (ua.indexOf('Happy%3ADays') != -1) {
+    Body = {"request_date_ms":1669641661475,"request_date":"2022-11-28T13:21:01Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-11-28T13:19:27Z","original_application_version":"928","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"happy_449_1y":{"original_purchase_date":"2022-11-28T13:20:03Z","expires_date":"9999-12-01T13:20:01Z","is_sandbox":false,"refunded_at":null,"unsubscribe_detected_at":null,"grace_period_expires_date":null,"period_type":"trial","purchase_date":"2022-11-28T13:20:01Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","auto_resume_date":null}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-11-28T13:20:01Z","product_identifier":"happy_449_1y","expires_date":"9999-12-01T13:20:01Z"}},"original_purchase_date":"2022-11-28T13:17:43Z","original_app_user_id":"$RCAnonymousID:f5625b9525954920b90c88c1cd1500e9","last_seen":"2022-11-28T13:19:27Z"}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

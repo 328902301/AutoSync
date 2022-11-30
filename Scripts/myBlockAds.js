@@ -1,4 +1,4 @@
-// 2022-11-30 16:30
+// 2022-11-30 16:33
 
 var url = $request.url;
 var body = $response.body;
@@ -191,8 +191,7 @@ if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url)) {
 }
 
 // 哔哩哔哩 直播去广告
-if (
-  /^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url)) {
+if (/^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
   body = JSON.stringify(obj);
@@ -249,8 +248,7 @@ if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(url)) {
 }
 
 // IT之家 newAppFeed
-if (
-  /^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(url)) {
+if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(url)) {
   let list = obj.data.list;
   const newList = [];
   for (const item of list) {
@@ -394,8 +392,7 @@ if (/^https?:\/\/haojia-api\.smzdm\.com\/home\/list/.test(url)) {
 }
 
 // 什么值得买 去除好价详情页广告
-if (
-  /^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(url)) {
+if (/^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(url)) {
   let obj = JSON.parse(body);
   obj.data.lanmu_qikan = {};
   body = JSON.stringify(obj);
@@ -458,8 +455,7 @@ if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(url)) {
 }
 
 // 微博 开屏广告 php
-if (
-  /^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(url)) {
+if (/^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(url)) {
   let tmp = /\{.*\}/;
   body = body.match(tmp);
   let obj = JSON.parse(body);
@@ -485,8 +481,7 @@ if (
 }
 
 // 微博 开屏广告 lua
-if (
-  /^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/wbapplua\/wbpullad.lua/.test(url)) {
+if (/^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/wbapplua\/wbpullad.lua/.test(url)) {
   let obj = JSON.parse(body);
   for (let item of obj["cached_ad"]["ads"]) {
     item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
@@ -514,8 +509,7 @@ if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(url)) {
 }
 
 // 小红书 开屏广告
-if (
-  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
   let obj = JSON.parse(body);
   const nextTime = dayjs().add(20, "year");
   //console.log(`小红书开屏广告去除开始：总计${obj.data.ads_groups.length}组，每组广告数量${JSON.stringify(obj.data.ads_groups.map((i) => i.ads.length))}，下次再见${nextTime.format('YYYY/MM/DD')}`);
@@ -531,8 +525,7 @@ if (
 }
 
 // 小红书 处理信息流广告
-if (
-  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url)) {
   let obj = JSON.parse(body);
   obj.data = obj.data.filter((d) => !d.ads_info);
   body = JSON.stringify(obj);

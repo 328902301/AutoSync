@@ -1,17 +1,16 @@
-// 2022-11-30 17:20
+// 2022-11-30 09:40
 
 var url = $request.url;
 var body = $response.body;
+let addFlag = false;
 
-function isresponse() {
-  if (!body) {
-    return false;
-  } else {
-    return true;
-  }
+if (!body) {
+  $done({});
+} else {
+  addFlag = true;
 }
 
-switch (true) {
+switch (addFlag) {
   // 12306 开屏广告
   case /^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url):
     try {
@@ -601,7 +600,6 @@ switch (true) {
     } catch {}
     break;
   default:
-    $done({});
 }
 
 $done({body});

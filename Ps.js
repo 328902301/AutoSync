@@ -1,6 +1,6 @@
 /****************************************
 
-项目名称：Photoshop Express 高级版
+项目名称：PS 图片编辑
 下载地址：https://t.cn/A6ou0oGd
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/Photoshop.js
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ps.js
 
 [mitm] 
 

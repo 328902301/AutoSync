@@ -1,4 +1,4 @@
-// 2022-11-30 16:33
+// 2022-11-30 17:05
 
 var url = $request.url;
 var body = $response.body;
@@ -96,27 +96,25 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   // 国际版：
   // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
   // 622为会员购中心 425开始为概念版id
-  const itemList = new Set([396, 397, 398, 399]);
+  const itemList = new Set([396, 397, 398, 399, 410]);
   obj["data"]["sections_v2"]?.forEach((element, index) => {
     let items = element["items"].filter((e) => {
       return itemList.has(e.id);
     });
     obj["data"]["sections_v2"][index].button = {};
-    delete obj["data"]["sections_v2"][index].be_up_title;
     delete obj["data"]["sections_v2"][index].tip_icon;
+    delete obj["data"]["sections_v2"][index].be_up_title;
     delete obj["data"]["sections_v2"][index].tip_title;
-    for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
-      if (obj.data.sections_v2[i].title === "推荐服务") {
-        delete obj.data.sections_v2[i].title;
-      }
-      if (obj.data.sections_v2[i].title === "更多服务") {
-        delete obj.data.sections_v2[i].title;
-      }
-      if (obj.data.sections_v2[i].title === "创作中心") {
-        delete obj.data.sections_v2[i].title;
-      }
-      delete obj.data.sections_v2[i].type;
+    if (obj["data"]["sections_v2"][index].title === "推荐服务") {
+      delete obj["data"]["sections_v2"][index].title;
     }
+    if (obj["data"]["sections_v2"][index].title === "更多服务") {
+      delete obj["data"]["sections_v2"][index].title;
+    }
+    if (obj["data"]["sections_v2"][index].title === "创作中心") {
+      delete obj["data"]["sections_v2"][index].title;
+    }
+    delete obj["data"]["sections_v2"][index].type;
     obj["data"]["sections_v2"][index]["items"] = items;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
     delete obj.data.vip_section_v2;

@@ -1,4 +1,4 @@
-// 2022-11-30 09:40
+// 2022-11-30 10:40
 
 var url = $request.url;
 var body = $response.body;
@@ -26,7 +26,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 去除强制设置的皮肤
+  // 哔哩哔哩 去除强制设置的皮肤
   case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -34,7 +34,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 标签页处理，如去除会员购等等
+  // 哔哩哔哩 标签页处理，如去除会员购等等
   case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url):
     try {
       // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
@@ -80,7 +80,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 去除右上角活动入口
+  // 哔哩哔哩 去除右上角活动入口
   case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -91,7 +91,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 我的页面处理，去除一些推广按钮
+  // 哔哩哔哩 我的页面处理，去除一些推广按钮
   case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -143,7 +143,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
+  // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
   case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -154,7 +154,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 推荐广告处理 最后问号不能去掉 以免匹配到story模式
+  // 哔哩哔哩 推荐广告处理 最后问号不能去掉 以免匹配到story模式
   case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -175,7 +175,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 开屏广告处理
+  // 哔哩哔哩 开屏广告处理
   case /^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -183,7 +183,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 热搜去广告
+  // 哔哩哔哩 热搜去广告
   case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -191,7 +191,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 观影页去广告
+  // 哔哩哔哩 观影页去广告
   case /^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -206,7 +206,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 哔哩哔哩 直播去广告
+  // 哔哩哔哩 直播去广告
   case /^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -215,7 +215,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 嘀嗒出行 开屏广告
+  // 嘀嗒出行 开屏广告
   case /^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -234,7 +234,7 @@ switch (addFlag) {
       }
     } catch {}
     break;
-    // 多点 开屏广告
+  // 多点 开屏广告
   case /^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -245,7 +245,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // IT之家 mobileWebRegex
+  // IT之家 mobileWebRegex
   case /^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(url):
     try {
       obj.Result = obj.Result.filter((r) =>
@@ -254,14 +254,14 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // IT之家 appRegex
+  // IT之家 appRegex
   case /^https?:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(url):
     try {
       obj.newslist = obj.newslist.filter((n) => !n.aid);
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // IT之家 appSlideRegex
+  // IT之家 appSlideRegex
   case /^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(url):
     try {
       const newList = obj.filter((i) => !i.isad);
@@ -270,7 +270,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // IT之家 newAppFeed
+  // IT之家 newAppFeed
   case /^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(url):
     try {
       let list = obj.data.list;
@@ -283,7 +283,9 @@ switch (addFlag) {
           continue;
         }
         if (item.feedContent.focusNewsData) {
-          const newNewsData = item.feedContent.focusNewsData.filter((n) => !n.isAd);
+          const newNewsData = item.feedContent.focusNewsData.filter(
+            (n) => !n.isAd
+          );
           item.feedContent.focusNewsData = newNewsData;
         }
         newList.push(item);
@@ -292,7 +294,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 京东 开屏广告
+  // 京东 开屏广告
   case /^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -311,22 +313,20 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 酷安 replyList
+  // 酷安 replyList
   case /^https?:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(url):
     try {
       let obj = JSON.parse(body);
-      obj.data = Object.values(obj.data)
-        .filter((item) => item.id);
+      obj.data = Object.values(obj.data).filter((item) => item.id);
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 酷安 index
+  // 酷安 index
   case /^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(url):
     try {
       let obj = JSON.parse(body);
-      obj.data = Object.values(obj.data)
-        .filter(
-          (item) =>
+      obj.data = Object.values(obj.data).filter(
+        (item) =>
           !(
             item["entityTemplate"] == "sponsorCard" ||
             item.entityId == 8639 ||
@@ -334,36 +334,34 @@ switch (addFlag) {
             item.entityId == 32557 ||
             item.title.indexOf("值得买") != -1
           )
-        );
+      );
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 酷安 dataList
+  // 酷安 dataList
   case /^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(url):
     try {
       let obj = JSON.parse(body);
-      obj.data = Object.values(obj.data)
-        .filter(
-          (item) =>
+      obj.data = Object.values(obj.data).filter(
+        (item) =>
           !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件")
-        );
+      );
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 酷安 detail
+  // 酷安 detail
   case /^https?:\/\/api.coolapk.com\/v6\/feed\/detail/.test(url):
     try {
       let obj = JSON.parse(body);
-      obj.data.hotReplyRows = Object.values(obj.data.hotReplyRows)
-        .filter(
-          (item) => item["id"]
-        );
+      obj.data.hotReplyRows = Object.values(obj.data.hotReplyRows).filter(
+        (item) => item["id"]
+      );
       obj.data.include_goods_ids = [];
       obj.data.include_goods = [];
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 联享家 开屏广告
+  // 联享家 开屏广告
   case /^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -374,7 +372,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 美团外卖 开屏广告
+  // 美团外卖 开屏广告
   case /^https?:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -383,7 +381,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 处理开屏广告
+  // 什么值得买 处理开屏广告
   case /^https?:\/\/app-api\.smzdm\.com\/util\/loading/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -397,7 +395,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除百科广告
+  // 什么值得买 去除百科广告
   case /^https?:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -409,7 +407,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除好价广告
+  // 什么值得买 去除好价广告
   case /^https?:\/\/haojia-api\.smzdm\.com\/home\/list/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -429,7 +427,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除好价详情页广告
+  // 什么值得买 去除好价详情页广告
   case /^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -437,7 +435,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 处理首页广告
+  // 什么值得买 处理首页广告
   case /^https?:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -469,7 +467,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除搜索标签广告
+  // 什么值得买 去除搜索标签广告
   case /^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -477,7 +475,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除搜索结果广告
+  // 什么值得买 去除搜索结果广告
   case /^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -487,7 +485,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 什么值得买 去除值会员权益中心banner广告
+  // 什么值得买 去除值会员权益中心banner广告
   case /^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -498,7 +496,7 @@ switch (addFlag) {
     } catch {}
     break;
 
-    // 微博 开屏广告 php
+  // 微博 开屏广告 php
   case /^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(url):
     try {
       let tmp = /\{.*\}/;
@@ -525,7 +523,7 @@ switch (addFlag) {
       body = JSON.stringify(obj) + "OK";
     } catch {}
     break;
-    // 微博 开屏广告 lua
+  // 微博 开屏广告 lua
   case /^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/wbapplua\/wbpullad.lua/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -538,7 +536,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 小爱音箱 开屏广告
+  // 小爱音箱 开屏广告
   case /^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -555,31 +553,24 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 小红书 开屏广告
+  // 小红书 开屏广告
   case /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url):
     try {
       let obj = JSON.parse(body);
-      const nextTime = dayjs()
-        .add(20, "year");
+      const nextTime = dayjs().add(20, "year");
       //console.log(`小红书开屏广告去除开始：总计${obj.data.ads_groups.length}组，每组广告数量${JSON.stringify(obj.data.ads_groups.map((i) => i.ads.length))}，下次再见${nextTime.format('YYYY/MM/DD')}`);
       obj.data.ads_groups.forEach((i) => {
-        i.start_time = nextTime.valueOf()
-          .toString();
-        i.end_time = nextTime.add(1, "day")
-          .valueOf()
-          .toString();
+        i.start_time = nextTime.valueOf().toString();
+        i.end_time = nextTime.add(1, "day").valueOf().toString();
         i.ads.forEach((j) => {
-          j.start_time = nextTime.valueOf()
-            .toString();
-          j.end_time = nextTime.add(1, "day")
-            .valueOf()
-            .toString();
+          j.start_time = nextTime.valueOf().toString();
+          j.end_time = nextTime.add(1, "day").valueOf().toString();
         });
       });
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 小红书 处理信息流广告
+  // 小红书 处理信息流广告
   case /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -587,7 +578,7 @@ switch (addFlag) {
       body = JSON.stringify(obj);
     } catch {}
     break;
-    // 小米商城 开屏广告
+  // 小米商城 开屏广告
   case /^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(url):
     try {
       let obj = JSON.parse(body);
@@ -602,4 +593,4 @@ switch (addFlag) {
   default:
 }
 
-$done({body});
+$done({ body });

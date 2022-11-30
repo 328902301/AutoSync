@@ -319,6 +319,12 @@ if (ua.indexOf('Happy%3ADays') != -1) {
     Body = {"request_date_ms":1669641661475,"request_date":"2022-11-28T13:21:01Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-11-28T13:19:27Z","original_application_version":"928","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"happy_449_1y":{"original_purchase_date":"2022-11-28T13:20:03Z","expires_date":"9999-12-01T13:20:01Z","is_sandbox":false,"refunded_at":null,"unsubscribe_detected_at":null,"grace_period_expires_date":null,"period_type":"trial","purchase_date":"2022-11-28T13:20:01Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","auto_resume_date":null}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-11-28T13:20:01Z","product_identifier":"happy_449_1y","expires_date":"9999-12-01T13:20:01Z"}},"original_purchase_date":"2022-11-28T13:17:43Z","original_app_user_id":"$RCAnonymousID:f5625b9525954920b90c88c1cd1500e9","last_seen":"2022-11-28T13:19:27Z"}};
 }
 
+//54 好事发生-记录并珍藏每个小幸福
+//https://apps.apple.com/cn/app/id1612021829
+if (ua.indexOf('GoodThing') != -1) {
+    Body = {"request_date_ms":1668519721073,"request_date":"2022-11-15T13:42:01Z","subscriber":{"last_seen":"2022-11-15T13:37:45Z","first_seen":"2022-11-15T13:37:45Z","original_application_version":"12","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"goodhappens_basic_forever":{"unsubscribe_detected_at":null,"expires_date":"2099-11-22T13:41:30Z","is_sandbox":false,"refunded_at":null,"auto_resume_date":null,"grace_period_expires_date":null,"period_type":"trial","purchase_date":"2022-11-15T13:41:30Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","original_purchase_date":"2022-11-15T13:41:31Z"}},"entitlements":{"pro":{"expires_date":"2099-11-22T13:41:30Z","purchase_date":"2022-11-15T13:41:30Z","product_identifier":"goodhappens_basic_forever","grace_period_expires_date":null}},"original_purchase_date":"2022-11-15T13:36:14Z","original_app_user_id":"$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69","non_subscriptions":{}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

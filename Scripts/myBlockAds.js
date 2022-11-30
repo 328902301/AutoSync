@@ -1,4 +1,4 @@
-// 2022-11-30 10:40
+// 2022-11-30 11:25
 
 var url = $request.url;
 var body = $response.body;
@@ -117,11 +117,9 @@ switch (addFlag) {
         for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
           if (obj.data.sections_v2[i].title === "推荐服务") {
             delete obj.data.sections_v2[i].title;
-            delete obj.data.sections_v2[i].type;
           }
           if (obj.data.sections_v2[i].title === "更多服务") {
             delete obj.data.sections_v2[i].title;
-            delete obj.data.sections_v2[i].type;
           }
           if (obj.data.sections_v2[i].title === "创作中心") {
             delete obj.data.sections_v2[i].title;

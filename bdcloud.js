@@ -1,6 +1,6 @@
 /****************************************
 
-项目功能：百度网盘 解锁SVIP会员部分功能-不完整
+项目名称：百度网盘_在线视频倍率/清晰度
 下载地址：http://mtw.so/5IhM60
 使用说明：非一次性解锁，每次解锁需打开脚本
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
@@ -9,7 +9,7 @@
 
 [rewrite_local]
 
-https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/bdcloud.js
+https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
 
 [mitm]
 

@@ -23,7 +23,5 @@ var chxm1023 = JSON.parse(body);
 chxm1023.data.is_vip = true;
 chxm1023.data.wps_size = 999;
 chxm1023.data.vip_expiration_time = 4092599350;
-chxm1023.data.oss_size = 999;
-
 
 $done({body : JSON.stringify(chxm1023)});

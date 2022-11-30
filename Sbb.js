@@ -1,6 +1,6 @@
 /****************************************
 
-项目功能：Symbolab 解锁高级功能 (需登录)
+项目名称：Symbolab (需要登录)
 下载地址：https://t.cn/A6cE1x9u
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/Symbolab.js
+^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/Sbb.js
 
 [mitm]
 

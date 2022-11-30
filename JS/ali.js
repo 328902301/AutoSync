@@ -1,5 +1,7 @@
 /*
-
+* ==UserScript==
+* @ScriptName        FileBall挂载阿里云盘、Alist
+* ==/UserScript==
 [rewrite_local]
 
 ^https?:\/\/.*\.example\.com url script-analyze-echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/ali.js

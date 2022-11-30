@@ -337,6 +337,12 @@ if (ua.indexOf('NotePlan%203') != -1) {
     Body = {"request_date_ms":1668519721073,"request_date":"2022-11-15T13:42:01Z","subscriber":{"last_seen":"2022-11-15T13:37:45Z","first_seen":"2022-11-15T13:37:45Z","original_application_version":"12","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"co.noteplan.subscription.personal.annual3":{"unsubscribe_detected_at":null,"expires_date":null,"is_sandbox":false,"refunded_at":null,"auto_resume_date":null,"grace_period_expires_date":null,"period_type":"Pro","purchase_date":"2022-11-15T13:41:30Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","original_purchase_date":"2022-11-15T13:41:31Z"}},"entitlements":{"Pro":{"expires_date":null,"purchase_date":"2022-11-15T13:41:30Z","product_identifier":"co.noteplan.subscription.personal.annual3","grace_period_expires_date":null}},"original_purchase_date":"2022-11-15T13:36:14Z","original_app_user_id":"$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69","non_subscriptions":{}}};
 }
 
+//57 PastePal - Clipboard Manager
+//https://apps.apple.com/cn/app/id1503446680
+if (ua.indexOf('PastePal') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"last_seen":"2022-09-08T01:04:03Z","first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.onmyway133.PastePal.pro":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"default","expires_date":"2099-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"premium":{"expires_date":"2099-12-18T01:04:17Z","purchase_date":"2022-09-08T01:04:17Z","product_identifier":"com.onmyway133.PastePal.pro","grace_period_expires_date":null}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Eric","non_subscriptions":{}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

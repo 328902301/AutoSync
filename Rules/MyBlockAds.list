@@ -1,4 +1,4 @@
-# 2022-11-30
+# 2022-12-01
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
@@ -28,6 +28,8 @@ HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 IP-CIDR, 203.107.1.1/32, MyBlockAds
 # 屏蔽会员购
 HOST, mall.bilibili.com, MyBlockAds
+# 屏蔽游戏
+HOST-SUFFIX, api.biligame.com, MyBlockAds
 
 # 高德地图
 HOST, awaken.amap.com, MyBlockAds

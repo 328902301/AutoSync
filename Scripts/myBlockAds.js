@@ -1,4 +1,4 @@
-// 2022-11-30 22:00
+// 2022-12-01 09:18
 
 var url = $request.url;
 var body = $response.body;
@@ -11,12 +11,20 @@ if (!body) {
 if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.materialsList) {
-    for (let i = 0; i < obj.materialsList.length; i++) {
-      obj.materialsList[i].filePath = "";
-      obj.advertParam.skipTime = 1000;
-      obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 20;
+    if (obj.materialsList.length == 1) {
+      obj.materialsList[0].filePath = "";
+      obj.advertParam.skipTime = 1;
+      obj.advertParam.showSkipBtn = -1;
+      obj.advertParam.skipTimeAgain = 5;
+    } else if (obj.materialsList.length > 1) {
+      obj.materialsList = [];
     }
+    // for (let i = 0; i < obj.materialsList.length; i++) {
+    //   obj.materialsList[i].filePath = "";
+    //   obj.advertParam.skipTime = 500;
+    //   obj.advertParam.showSkipBtn = 0;
+    //   obj.advertParam.skipTimeAgain = 5;
+    // }
   }
   body = JSON.stringify(obj);
 }

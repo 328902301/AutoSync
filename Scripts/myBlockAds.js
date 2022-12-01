@@ -1,4 +1,4 @@
-// 2022-12-01 09:40
+// 2022-12-01 09:45
 
 var url = $request.url;
 var body = $response.body;
@@ -18,9 +18,9 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
     //   obj.advertParam.skipTimeAgain = 5;
     // }
     obj.materialsList[0].filePath = "";
-    obj.advertParam.skipTime = 1;
+    obj.advertParam.skipTime = 1000;
     obj.advertParam.showSkipBtn = 0;
-    obj.advertParam.skipTimeAgain = 5;
+    obj.advertParam.skipTimeAgain = 20;
   } else {
     obj.materialsList = [];
   }

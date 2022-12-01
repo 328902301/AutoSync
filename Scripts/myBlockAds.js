@@ -1,4 +1,4 @@
-// 2022-12-01 09:18
+// 2022-12-01 09:30
 
 var url = $request.url;
 var body = $response.body;
@@ -14,9 +14,16 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
     if (obj.materialsList.length == 1) {
       obj.materialsList[0].filePath = "";
       obj.advertParam.skipTime = 1;
-      obj.advertParam.showSkipBtn = -1;
-      obj.advertParam.skipTimeAgain = 5;
-    } else if (obj.materialsList.length > 1) {
+      obj.advertParam.showSkipBtn = 0;
+      obj.advertParam.skipTimeAgain = 20;
+    } else if (obj.materialsList.length == 6) {
+      for (let i = 0; i < obj.materialsList.length; i++) {
+        obj.materialsList[i].filePath = "";
+      }
+      obj.advertParam.skipTime = 1;
+      obj.advertParam.showSkipBtn = 0;
+      obj.advertParam.skipTimeAgain = 20;
+    } else if (obj.materialsList.length > 6) {
       obj.materialsList = [];
     }
     // for (let i = 0; i < obj.materialsList.length; i++) {

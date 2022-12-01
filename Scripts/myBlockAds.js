@@ -1,4 +1,4 @@
-// 2022-12-01 09:30
+// 2022-12-01 09:40
 
 var url = $request.url;
 var body = $response.body;
@@ -10,28 +10,19 @@ if (!body) {
 // 12306 开屏广告
 if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
   let obj = JSON.parse(body);
-  if (obj.materialsList) {
-    if (obj.materialsList.length == 1) {
-      obj.materialsList[0].filePath = "";
-      obj.advertParam.skipTime = 1;
-      obj.advertParam.showSkipBtn = -1;
-      obj.advertParam.skipTimeAgain = 5;
-    } else if (obj.materialsList.length == 6) {
-      for (let i = 0; i < obj.materialsList.length; i++) {
-        obj.materialsList[i].filePath = "";
-      }
-      obj.advertParam.skipTime = 1;
-      obj.advertParam.showSkipBtn = -1;
-      obj.advertParam.skipTimeAgain = 0;
-    } else if (obj.materialsList.length > 6) {
-      obj.materialsList = [];
-    }
+  if (obj.materialsList && obj.materialsList.length == 1) {
     // for (let i = 0; i < obj.materialsList.length; i++) {
     //   obj.materialsList[i].filePath = "";
     //   obj.advertParam.skipTime = 500;
     //   obj.advertParam.showSkipBtn = 0;
     //   obj.advertParam.skipTimeAgain = 5;
     // }
+    obj.materialsList[0].filePath = "";
+    obj.advertParam.skipTime = 1;
+    obj.advertParam.showSkipBtn = 0;
+    obj.advertParam.skipTimeAgain = 5;
+  } else {
+    obj.materialsList = [];
   }
   body = JSON.stringify(obj);
 }

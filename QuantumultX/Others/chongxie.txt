@@ -438,6 +438,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 # > 超星学习通
 ^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\? url reject
 # > 当当
+^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init url reject-200
 ^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init url reject
 ^https?:\/\/e\.dangdang\.com\/media\/api.+?\?action=getDeviceStartPage url reject
 ^https?+:\/\/mapi\.dangdang\.com\/index\.php\?action=init url reject-200

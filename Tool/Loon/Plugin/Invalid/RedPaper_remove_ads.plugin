@@ -1,12 +1,35 @@
 #!name = 小红书广告过滤
-#!desc = 过滤喜小红书广告
-#!openUrl = 
-#!author = 可莉🅥
+#!desc = 过滤小红书广告
+#!open= 
+#!author = ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
 
-[Rule]
-DOMAIN,ads-img-qc.xhscdn.com,REJECT
-DOMAIN,ads-video-al.xhscdn.com,REJECT
-DOMAIN,ads-video-qc.xhscdn.com,REJECT
-DOMAIN,t-ads.xiaohongshu.com,REJECT
+[Rewrite]
+# 小红书_热词删除
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list response-body items":\[.+\] response-body items":[]
+# 小红书_热搜删除
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending response-body queries":\[.+\] response-body queries":[]
+# 小红书_AdEngage
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/tag\/ads_engage reject-dict
+# 小红书_AdRecord
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/apple\/record reject-dict
+# 小红书_AdResource
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/resource reject-dict
+# 小红书_Report
+^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport reject-dict
+# 小红书_Switches
+^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches reject-dict
+# 小红书_Teenager
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status reject-dict
+
+[Script]
+# 小红书_开屏广告
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去开屏广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+# 小红书_瀑布流
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去瀑布流广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+# 小红书_启动处理
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书启动处理, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+
+[Mitm]
+hostname = edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com

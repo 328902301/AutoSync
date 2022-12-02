@@ -1,0 +1,28 @@
+name: Zhuliyer-adgai-nai-gitlab-sync
+on:
+  schedule:
+    - cron: '31 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Zhuliyer-adgai-nai-gitlab
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Zhuliyer-adgai-nai-gitlab
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://gitlab.com/Zhuliyer/adgai-nai.git"
+          source_branch: "main"
+          destination_branch: "Zhuliyer-adgai-nai-gitlab"
+          github_token: ${{ secrets.PAT }}

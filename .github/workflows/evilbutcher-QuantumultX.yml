@@ -1,0 +1,28 @@
+name: evilbutcher-QuantumultX-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-evilbutcher-QuantumultX
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync evilbutcher-QuantumultX
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/evilbutcher/QuantumultX.git"
+          source_branch: "main"
+          destination_branch: "evilbutcher-QuantumultX"
+          github_token: ${{ secrets.PAT }}

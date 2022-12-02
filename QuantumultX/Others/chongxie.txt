@@ -424,6 +424,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 # >> 全民K歌
 ^https?+:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.+?\d{3,4}+x\d{4} url reject-200
 # > 追书神器
+^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-200
 ^https?+:\/\/(?>api|b)\.zhuishushenqi\.com\/advert url reject-200
 ^https?+:\/\/api\.zhuishushenqi\.com\/splashes\/ios url reject-200
 ^https?+:\/\/api\.zhuishushenqi\.com\/notification\/shelfMessage url reject-200

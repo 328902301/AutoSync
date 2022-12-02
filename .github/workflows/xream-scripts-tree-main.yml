@@ -1,0 +1,28 @@
+name: xream-scripts-tree-main-sync
+on:
+  schedule:
+    - cron: '31 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-xream-scripts-tree-main
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync xream-scripts-tree-main
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/xream/scripts.git"
+          source_branch: "main"
+          destination_branch: "xream-scripts-tree-main"
+          github_token: ${{ secrets.PAT }}

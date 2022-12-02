@@ -1,0 +1,28 @@
+name: VirgilClyne-GetSomeFries-sync
+on:
+  schedule:
+    - cron: '19 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-VirgilClyne-GetSomeFries
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync VirgilClyne-GetSomeFries
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/VirgilClyne/GetSomeFries.git"
+          source_branch: "main"
+          destination_branch: "VirgilClyne-GetSomeFries"
+          github_token: ${{ secrets.PAT }}

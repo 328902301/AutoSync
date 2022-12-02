@@ -1,0 +1,28 @@
+name: Softlyx-QuantumultX-sync
+on:
+  schedule:
+    - cron: '11 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Softlyx-QuantumultX
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Softlyx-QuantumultX
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Softlyx/QuantumultX.git"
+          source_branch: "main"
+          destination_branch: "Softlyx-QuantumultX"
+          github_token: ${{ secrets.PAT }}

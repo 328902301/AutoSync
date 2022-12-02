@@ -1,0 +1,28 @@
+name: yichahucha-surge-sync
+on:
+  schedule:
+    - cron: '33 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-yichahucha-surge
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync yichahucha-surge
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/yichahucha/surge.git"
+          source_branch: "master"
+          destination_branch: "yichahucha-surge"
+          github_token: ${{ secrets.PAT }}

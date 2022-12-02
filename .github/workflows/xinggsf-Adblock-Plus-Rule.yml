@@ -1,0 +1,28 @@
+name: xinggsf-Adblock-Plus-Rule-sync
+on:
+  schedule:
+    - cron: '56 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-xinggsf-Adblock-Plus-Rule
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync xinggsf-Adblock-Plus-Rule
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/xinggsf/Adblock-Plus-Rule.git"
+          source_branch: "master"
+          destination_branch: "xinggsf-Adblock-Plus-Rule"
+          github_token: ${{ secrets.PAT }}

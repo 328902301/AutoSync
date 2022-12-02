@@ -1,0 +1,28 @@
+name: tangxj123-xian-sync
+on:
+  schedule:
+    - cron: '35 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-tangxj123-xian
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync tangxj123-xian
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/tangxj123/xian.git"
+          source_branch: "main"
+          destination_branch: "tangxj123-xian"
+          github_token: ${{ secrets.PAT }}

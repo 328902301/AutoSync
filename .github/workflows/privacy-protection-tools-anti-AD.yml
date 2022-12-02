@@ -1,0 +1,28 @@
+name: privacy-protection-tools-anti-AD-sync
+on:
+  schedule:
+    - cron: '56 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-privacy-protection-tools-anti-AD
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync privacy-protection-tools-anti-AD
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/privacy-protection-tools/anti-AD.git"
+          source_branch: "master"
+          destination_branch: "privacy-protection-tools-anti-AD"
+          github_token: ${{ secrets.PAT }}

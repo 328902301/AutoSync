@@ -1,0 +1,28 @@
+name: lwd-temp-anti-ip-attribution-sync
+on:
+  schedule:
+    - cron: '39 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-lwd-temp-anti-ip-attribution
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync lwd-temp-anti-ip-attribution
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/lwd-temp/anti-ip-attribution.git"
+          source_branch: "main"
+          destination_branch: "lwd-temp-anti-ip-attribution"
+          github_token: ${{ secrets.PAT }}

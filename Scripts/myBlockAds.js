@@ -1,4 +1,4 @@
-// 2022-12-01 10:00
+// 2022-12-02 18:05
 
 var url = $request.url;
 var body = $response.body;
@@ -13,9 +13,6 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
   if (obj.materialsList) {
     for (let i = 0; i < obj.materialsList.length; i++) {
       obj.materialsList[i].filePath = "";
-      obj.advertParam.skipTime = 1000;
-      obj.advertParam.showSkipBtn = 0;
-      obj.advertParam.skipTimeAgain = 0;
     }
   }
   body = JSON.stringify(obj);
@@ -106,21 +103,19 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     delete obj["data"]["sections_v2"][index].be_up_title;
     delete obj["data"]["sections_v2"][index].tip_title;
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
-      if (obj.data.sections_v2[i].title === "推荐服务") {
+      if (
+        obj.data.sections_v2[i].title === "推荐服务" ||
+        obj.data.sections_v2[i].title === "更多服务" ||
+        obj.data.sections_v2[i].title === "创作中心"
+      ) {
         delete obj.data.sections_v2[i].title;
+        delete obj.data.sections_v2[i].type;
       }
-      if (obj.data.sections_v2[i].title === "更多服务") {
-        delete obj.data.sections_v2[i].title;
-      }
-      if (obj.data.sections_v2[i].title === "创作中心") {
-        delete obj.data.sections_v2[i].title;
-      }
-      delete obj.data.sections_v2[i].type;
     }
     obj["data"]["sections_v2"][index]["items"] = items;
-    // 开启本地会员标识 2022-03-05 add by ddgksf2013
     delete obj.data.vip_section_v2;
     delete obj.data.vip_section;
+    // 开启本地会员标识 2022-03-05 add by ddgksf2013
     if (obj.data.hasOwnProperty("live_tip")) obj["data"]["live_tip"] = {};
     if (obj.data.hasOwnProperty("answer")) obj["data"]["answer"] = {};
     obj["data"]["vip_type"] = 2;

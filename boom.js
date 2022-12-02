@@ -1,6 +1,6 @@
 /****************************************
 
-项目功能：boom 解锁VIP
+项目名称：Boom
 下载地址：https://t.cn/A6f1C1rG
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/boom.js
+^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/boom.js
 
 [mitm]
 

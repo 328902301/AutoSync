@@ -1,0 +1,28 @@
+name: Johnshall-Shadowrocket-ADBlock-Rules-Forever-sync
+on:
+  schedule:
+    - cron: '31 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Johnshall-Shadowrocket-ADBlock-Rules-Forever
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Johnshall-Shadowrocket-ADBlock-Rules-Forever
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever.git"
+          source_branch: "release"
+          destination_branch: "Johnshall-Shadowrocket-ADBlock-Rules-Forever"
+          github_token: ${{ secrets.PAT }}

@@ -1,0 +1,28 @@
+name: Loyalsoldier-surge-rules-tree-release-sync
+on:
+  schedule:
+    - cron: '31 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Loyalsoldier-surge-rules-tree-release
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Loyalsoldier-surge-rules-tree-release
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Loyalsoldier/surge-rules.git"
+          source_branch: "release"
+          destination_branch: "Loyalsoldier-surge-rules-tree-release"
+          github_token: ${{ secrets.PAT }}

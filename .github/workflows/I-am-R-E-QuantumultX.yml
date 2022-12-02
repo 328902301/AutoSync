@@ -1,0 +1,28 @@
+name: I-am-R-E-QuantumultX-sync
+on:
+  schedule:
+    - cron: '36 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-I-am-R-E-QuantumultX
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync I-am-R-E-QuantumultX
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/I-am-R-E/QuantumultX.git"
+          source_branch: "main"
+          destination_branch: "I-am-R-E-QuantumultX"
+          github_token: ${{ secrets.PAT }}

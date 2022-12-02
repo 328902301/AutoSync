@@ -1,0 +1,28 @@
+name: ChuheGit-1-sync
+on:
+  schedule:
+    - cron: '49 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-ChuheGit-1
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync ChuheGit-1-master
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/ChuheGit/1.git"
+          source_branch: "main"
+          destination_branch: "ChuheGit-1"
+          github_token: ${{ secrets.PAT }}

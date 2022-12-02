@@ -1,0 +1,28 @@
+name: LiangYi520-QuantumultX-Script-sync
+on:
+  schedule:
+    - cron: '14 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-LiangYi520-QuantumultX-Script
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync LiangYi520-QuantumultX-Script
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/LiangYi520/QuantumultX-Script.git"
+          source_branch: "main"
+          destination_branch: "LiangYi520-QuantumultX-Script"
+          github_token: ${{ secrets.PAT }}

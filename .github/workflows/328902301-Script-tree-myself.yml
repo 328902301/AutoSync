@@ -1,0 +1,28 @@
+name: 328902301-Script-sync
+on:
+  schedule:
+    - cron: '31 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-328902301-Script
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync 328902301-Script
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/328902301/Script.git"
+          source_branch: "myself"
+          destination_branch: "328902301-Script"
+          github_token: ${{ secrets.PAT }}

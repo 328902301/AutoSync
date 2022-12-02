@@ -1,0 +1,28 @@
+name: Aoyt520-jiumeiquanX-sync
+on:
+  schedule:
+    - cron: '26 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Aoyt520-jiumeiquanX
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Aoyt520-jiumeiquanX
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Aoyt520/jiumeiquanX.git"
+          source_branch: "master"
+          destination_branch: "Aoyt520-jiumeiquanX"
+          github_token: ${{ secrets.PAT }}

@@ -1,0 +1,28 @@
+name: KOP-XIAO-QuantumultX-sync
+on:
+  schedule:
+    - cron: '46 */12 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-KOP-XIAO-QuantumultX
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync KOP-XIAO-QuantumultX
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/KOP-XIAO/QuantumultX.git"
+          source_branch: "master"
+          destination_branch: "KOP-XIAO-QuantumultX"
+          github_token: ${{ secrets.PAT }}

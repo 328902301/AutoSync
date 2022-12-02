@@ -1,0 +1,28 @@
+name: h2y-Shadowrocket-ADBlock-Rules-sync
+on:
+  schedule:
+    - cron: '56 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-h2y-Shadowrocket-ADBlock-Rules
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync h2y-Shadowrocket-ADBlock-Rules
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/h2y/Shadowrocket-ADBlock-Rules.git"
+          source_branch: "master"
+          destination_branch: "h2y-Shadowrocket-ADBlock-Rules"
+          github_token: ${{ secrets.PAT }}

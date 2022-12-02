@@ -1,0 +1,28 @@
+name: gaoyifan-china-operator-ip-tree-ip-lists-sync
+on:
+  schedule:
+    - cron: '34 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-gaoyifan-china-operator-ip-tree-ip-lists
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync gaoyifan-china-operator-ip-tree-ip-lists
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/gaoyifan/china-operator-ip.git"
+          source_branch: "ip-lists"
+          destination_branch: "gaoyifan-china-operator-ip-tree-ip-lists"
+          github_token: ${{ secrets.PAT }}

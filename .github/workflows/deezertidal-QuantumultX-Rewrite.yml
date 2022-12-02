@@ -1,0 +1,28 @@
+name: deezertidal-QuantumultX-Rewrite-sync
+on:
+  schedule:
+    - cron: '41 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-deezertidal-QuantumultX-Rewrite
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync deezertidal-QuantumultX-Rewrite
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/deezertidal/QuantumultX-Rewrite.git"
+          source_branch: "master"
+          destination_branch: "deezertidal-QuantumultX-Rewrite"
+          github_token: ${{ secrets.PAT }}

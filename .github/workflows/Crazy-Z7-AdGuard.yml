@@ -1,0 +1,28 @@
+name: Crazy-Z7-AdGuard-sync
+on:
+  schedule:
+    - cron: '32 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-Crazy-Z7-AdGuard
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Crazy-Z7-AdGuard
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Crazy-Z7/AdGuard.git"
+          source_branch: "main"
+          destination_branch: "Crazy-Z7-AdGuard"
+          github_token: ${{ secrets.PAT }}

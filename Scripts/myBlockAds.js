@@ -1,4 +1,4 @@
-// 2022-12-03 10:00
+// 2022-12-03 10:15
 
 var url = $request.url;
 var body = $response.body;
@@ -533,7 +533,7 @@ if (
 }
 
 // 小红书 处理信息流广告
-if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url)) {
   let obj = JSON.parse(body);
   obj.data = obj.data.filter((d) => !d.ads_info);
   body = JSON.stringify(obj);

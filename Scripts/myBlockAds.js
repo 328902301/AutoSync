@@ -1,4 +1,4 @@
-// 2022-12-02 18:05
+// 2022-12-03 10:00
 
 var url = $request.url;
 var body = $response.body;
@@ -503,24 +503,37 @@ if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(url)) {
   body = JSON.stringify(obj);
 }
 
-// 小红书 开屏广告
-if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
+// 小红书 开屏广告 config
+if (
+  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(url)) {
+  let obj = JSON.parse($response.body);
+  //obj.data.tabbar.tabs = Object.values(obj.data.tabbar.tabs).filter((item) => !item.title == "购买");
+  delete obj.data.store;
+  delete obj.data.splash;
+  delete obj.data.loading_img;
+  $done({
+    body: JSON.stringify(obj)
+  });
+}
+
+// 小红书 开屏广告 splash_config
+if (
+  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
   let obj = JSON.parse(body);
-  const nextTime = dayjs().add(20, "year");
   //console.log(`小红书开屏广告去除开始：总计${obj.data.ads_groups.length}组，每组广告数量${JSON.stringify(obj.data.ads_groups.map((i) => i.ads.length))}，下次再见${nextTime.format('YYYY/MM/DD')}`);
   obj.data.ads_groups.forEach((i) => {
-    i.start_time = nextTime.valueOf().toString();
-    i.end_time = nextTime.add(1, "day").valueOf().toString();
+    i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
     i.ads.forEach((j) => {
-      j.start_time = nextTime.valueOf().toString();
-      j.end_time = nextTime.add(1, "day").valueOf().toString();
+      j.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      j.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
     });
   });
   body = JSON.stringify(obj);
 }
 
 // 小红书 处理信息流广告
-if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed/.test(url)) {
   let obj = JSON.parse(body);
   obj.data = obj.data.filter((d) => !d.ads_info);
   body = JSON.stringify(obj);

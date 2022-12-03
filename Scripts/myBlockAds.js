@@ -1,4 +1,4 @@
-// 2022-12-03 17:50
+// 2022-12-03 10:15
 
 var url = $request.url;
 var body = $response.body;
@@ -10,25 +10,10 @@ if (!body) {
 // 12306 开屏广告
 if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
   let obj = JSON.parse(body);
-  obj = {
-    "code":"00",
-    "materialsList":[
-      {
-        "filePath":"https://raw.githubusercontent.com/jingluo625/QuantumultX/main/picture/F2BA249F-61E1-4CA4-8404-1FD5863E1FE4.jpeg"
-      }
-    ]
-  // }if (obj.materialsList) {
-  //   // if (obj.materialsList.length == 1) {
-  //   //   obj.materialsList[0].filePath = "https://raw.githubusercontent.com/jingluo625/QuantumultX/main/picture/F2BA249F-61E1-4CA4-8404-1FD5863E1FE4.jpeg";
-  //   // } else if (obj.materialsList.length > 1) {
-  //   //   obj.materialsList = [];
-  //   // }
-  //   for (let i = 0; i < obj.materialsList.length; i++) {
-  //     obj.materialsList[i].filePath = "https://raw.githubusercontent.com/jingluo625/QuantumultX/main/picture/F2BA249F-61E1-4CA4-8404-1FD5863E1FE4.jpeg";
-  //     delete obj.materialsList.clickUrlList;
-  //     delete obj.materialsList.title;
-  //     delete obj.materialsList.linkUrl;
-  //   }
+  if (obj.materialsList) {
+    for (let i = 0; i < obj.materialsList.length; i++) {
+      obj.materialsList[i].filePath = "";
+    }
   }
   body = JSON.stringify(obj);
 }

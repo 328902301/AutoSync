@@ -12,7 +12,7 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.materialsList) {
     if (obj.materialsList.length == 1) {
-      obj.materialsList[0].filePath = "https://raw.githubusercontent.com//jingluo625/QuantumultX/main/picture/F2BA249F-61E1-4CA4-8404-1FD5863E1FE4.jpeg";
+      obj.materialsList[0].filePath = "'https://raw.githubusercontent.com/jingluo625/QuantumultX/main/picture/F2BA249F-61E1-4CA4-8404-1FD5863E1FE4.jpeg'";
     } else if (obj.materialsList.length > 1) {
       obj.materialsList = [];
     }

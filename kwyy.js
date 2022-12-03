@@ -1,8 +1,9 @@
 /****************************************
 
-项目名称：极速扫描仪
-下载地址：http://mtw.so/5ukhax
+项目名称：酷我音乐
+下载地址：https://t.cn/AipWyJvV
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
+脚本来源：https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
 
 *****************************************
 

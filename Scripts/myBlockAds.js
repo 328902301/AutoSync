@@ -71,51 +71,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
   body = JSON.stringify(obj);
 }
 
-// // bilibil
-// if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
-//   // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
-//   // 442开始为概念版id，适配港澳台代理模式
-//   const tabList = new Set([39, 40, 41, 151]);
-//   // 尝试使用tab name直观修改
-//   // const tabNameList = new Set(['直播', '推荐', '热门', '影视']);
-//   // if (obj['data']['tab']) {
-//   //   let tab = obj['data']['tab'].filter((e) => {
-//   //   return tabNameList.has(e.name) || tabList.has(e.id);
-//   //   });
-//   //   obj['data']['tab'] = tab;
-//   // }
-//   // 222游戏中心 107概念版游戏中心 176消息中心
-//   const topList = new Set([176]);
-//   // 标准版
-//   // 177首页 178频道 179动态 181我的
-//   // 概念版
-//   // 102首页 103频道 104动态 106我的
-//   // 港澳台
-//   // 486首页 487频道 488动态 490我的
-//   // 102开始为概念版id
-//   //const bottomList = new Set([177, 179, 181]);
-//   let obj = JSON.parse(body);
-//   if (obj.data && obj.data.tab) {
-//     let tab = obj.data.tab.filter((e) => {
-//       return tabList.has(e.id);
-//     });
-//     obj.data.tab = tab;
-//   }
-//   if (obj["data"]["top"]) {
-//     let top = obj["data"]["top"].filter((e) => {
-//       return topList.has(e.id);
-//     });
-//     obj["data"]["top"] = top;
-//   }
-//   if (obj["data"]["bottom"]) {
-//     let bottom = obj["data"]["bottom"].filter((e) => {
-//       return bottomList.has(e.id);
-//     });
-//     obj["data"]["bottom"] = bottom;
-//   }
-//   body = JSON.stringify(obj);
-// }
-
 // 哔哩哔哩 去除右上角活动入口
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
   let obj = JSON.parse(body);

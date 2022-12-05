@@ -1,4 +1,4 @@
-// 2022-12-05 17:05
+// 2022-12-05 17:25
 
 var url = $request.url;
 var body = $response.body;
@@ -21,7 +21,15 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 // 哔哩哔哩 去除强制设置的皮肤
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
   let obj = JSON.parse(body);
-  if (obj && obj.hasOwnProperty("data")) obj["data"]["common_equip"] = {};
+  if (obj.data && obj.data.common_equip) obj.data.common_equip = {};
+  if (obj.data && obj.data.skin_colors) {
+    obj.data.skin_colors = obj.data.skin_colors.filter((item) => {
+      if (item.name === "简洁白") {
+        return true;
+      }
+      return false;
+    });
+  }
   body = JSON.stringify(obj);
 }
 

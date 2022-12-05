@@ -1,4 +1,4 @@
-// 2022-12-05 17:25
+// 2022-12-05 17:40
 
 var url = $request.url;
 var body = $response.body;
@@ -21,7 +21,7 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 // 哔哩哔哩 去除强制设置的皮肤
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
   let obj = JSON.parse(body);
-  if (obj.data && obj.data.common_equip) obj.data.common_equip = {};
+  if (obj && obj.hasOwnProperty("data")) obj["data"]["common_equip"] = {};
   body = JSON.stringify(obj);
 }
 
@@ -115,12 +115,13 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     delete obj.data.vip_section_v2;
     delete obj.data.vip_section;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
-    if (obj.data.hasOwnProperty("live_tip")) obj.data.live_tip = {};
-    if (obj.data.hasOwnProperty("answer")) obj.data.answer = {};
-    obj.data.vip.type = 2;
-    obj.data.vip.status = 1;
-    obj.data.vip.vip_pay_type = 1;
-    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    if (obj.data.hasOwnProperty("live_tip")) obj["data"]["live_tip"] = {};
+    if (obj.data.hasOwnProperty("answer")) obj["data"]["answer"] = {};
+    obj["data"]["vip_type"] = 2;
+    obj["data"]["vip"]["type"] = 2;
+    obj["data"]["vip"]["status"] = 1;
+    obj["data"]["vip"]["vip_pay_type"] = 1;
+    obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   });
   body = JSON.stringify(obj);
 }
@@ -128,10 +129,10 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
 // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
   let obj = JSON.parse(body);
-  obj.data.vip.type = 2;
-  obj.data.vip.status = 1;
-  obj.data.vip.vip_pay_type = 1;
-  obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+  obj["data"]["vip"]["type"] = 2;
+  obj["data"]["vip"]["status"] = 1;
+  obj["data"]["vip"]["vip_pay_type"] = 1;
+  obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   body = JSON.stringify(obj);
 }
 

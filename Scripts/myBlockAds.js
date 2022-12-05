@@ -1,4 +1,4 @@
-// 2022-12-05 17:40
+// 2022-12-05 17:45
 
 var url = $request.url;
 var body = $response.body;
@@ -118,7 +118,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     if (obj.data.hasOwnProperty("live_tip")) obj["data"]["live_tip"] = {};
     if (obj.data.hasOwnProperty("answer")) obj["data"]["answer"] = {};
     obj["data"]["vip_type"] = 2;
-    obj["data"]["vip"]["type"] = 8;
+    obj["data"]["vip"]["type"] = 2;
     obj["data"]["vip"]["status"] = 1;
     obj["data"]["vip"]["vip_pay_type"] = 1;
     obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
@@ -129,7 +129,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
 // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
   let obj = JSON.parse(body);
-  obj["data"]["vip"]["type"] = 8;
+  obj["data"]["vip"]["type"] = 2;
   obj["data"]["vip"]["status"] = 1;
   obj["data"]["vip"]["vip_pay_type"] = 1;
   obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00

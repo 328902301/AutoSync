@@ -1,8 +1,8 @@
-# Quantumult X
+# 访问量
+![](http://profile-counter.glitch.me/RuCu6-QuanX/count.svg)
 
-全部资源来源于互联网，纯自用，如侵删。
-
-配置文件链接：
+# 配置文件链接：
+Quantumult X
 ```Java
 https://gitlab.com/RuCu6/QuanX/-/raw/main/QuantumultX.conf
 ```

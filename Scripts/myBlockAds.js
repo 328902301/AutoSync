@@ -19,11 +19,11 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 }
 
 // 哔哩哔哩 去除强制设置的皮肤
-// if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
-//   let obj = JSON.parse(body);
-//   if (obj.data && obj.data.common_equip) obj.data.common_equip = {};
-//   body = JSON.stringify(obj);
-// }
+if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
+  let obj = JSON.parse(body);
+  delete obj.data.common_equip;
+  body = JSON.stringify(obj);
+}
 
 // 哔哩哔哩 标签页处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {

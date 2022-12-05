@@ -22,14 +22,6 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
   let obj = JSON.parse(body);
   if (obj.data && obj.data.common_equip) obj.data.common_equip = {};
-  if (obj.data && obj.data.skin_colors) {
-    obj.data.skin_colors = obj.data.skin_colors.filter((item) => {
-      if (item.name === "简洁白") {
-        return true;
-      }
-      return false;
-    });
-  }
   body = JSON.stringify(obj);
 }
 

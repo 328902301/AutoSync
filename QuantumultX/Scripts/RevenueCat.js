@@ -349,6 +349,30 @@ if (ua.indexOf('Brass') != -1) {
     Body = {"request_date_ms":1668519721073,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"brass.pro.annual":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"brass.pro.annual","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:ddgksf2013","last_seen":"2022-09-08T01:04:03Z"}};
 }
 
+//59 我的番茄-极简自律治愈番茄钟
+//https://apps.apple.com/cn/app/id1528322796
+if (ua.indexOf('Pomodoro') != -1) {
+    Body = {"request_date":"2022-12-03T13:21:10Z","request_date_ms":1670073670452,"subscriber":{"entitlements":{"lifetime":{"expires_date":"2099-12-06T13:20:46Z","grace_period_expires_date":null,"product_identifier":"com.MINE.PomodoroTimer.plus.lifetime","purchase_date":"2022-12-03T13:20:46Z"},"Plus":{"expires_date":"2099-12-06T13:20:46Z","grace_period_expires_date":null,"product_identifier":"com.MINE.PomodoroTimer.plus.lifetime","purchase_date":"2022-12-03T13:20:46Z"}},"first_seen":"2022-12-03T13:10:20Z","last_seen":"2022-12-03T13:10:20Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:Eric","original_application_version":"11427","original_purchase_date":"2022-12-03T12:55:42Z","other_purchases":{},"subscriptions":{"com.MINE.PomodoroTimer.plus.lifetime":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2099-12-06T13:20:46Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-12-03T13:20:47Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-12-03T13:20:46Z","refunded_at":null,"store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
+//60 Thiro
+//https://apps.apple.com/cn/app/id1555982483
+if (ua.indexOf('Thiro') != -1) {
+    Body = {"request_date":"2022-12-04T05:11:18Z","request_date_ms":1670130678887,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-12-04T05:02:43Z","grace_period_expires_date":null,"product_identifier":"atelerix_pro_lifetime","purchase_date":"2022-12-04T05:02:43Z"}},"first_seen":"2022-12-04T04:44:10Z","last_seen":"2022-12-04T04:44:10Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"B7E133A5-62CC-4D3B-9F77-FC0D0B325B05","original_application_version":"470","original_purchase_date":"2021-12-29T09:04:00Z","other_purchases":{},"subscriptions":{"atelerix_pro_lifetime":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2099-12-04T05:02:43Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-12-04T05:02:44Z","ownership_type":"PURCHASED","period_type":"default","purchase_date":"2022-12-04T05:02:43Z","refunded_at":null,"store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
+//61 高级表盘商店 - 智能关怀
+//https://apps.apple.com/cn/app/id1617064080
+if (ua.indexOf('%E8%A1%A8%E7%9B%98') != -1) {
+    Body = {"request_date":"2022-12-04T05:11:18Z","request_date_ms":1670130678887,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"product_identifier":"com.kudos.yearly2","purchase_date":"2022-12-04T05:02:43Z"}},"first_seen":"2022-12-04T04:44:10Z","last_seen":"2022-12-04T04:44:10Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"B7E133A5-62CC-4D3B-9F77-FC0D0B325B05","original_application_version":"470","original_purchase_date":"2021-12-29T09:04:00Z","other_purchases":{},"subscriptions":{"com.kudos.yearly2":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-12-04T05:02:44Z","ownership_type":"PURCHASED","period_type":"default","purchase_date":"2022-12-04T05:02:43Z","refunded_at":null,"store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
+//62 手表表盘 - Watch Faces
+//https://apps.apple.com/cn/app/id1535470665
+if (ua.indexOf('Facess') != -1) {
+    Body = {"request_date":"2022-12-04T05:11:18Z","request_date_ms":1670130678887,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"product_identifier":"wf_1449_1y","purchase_date":"2022-12-04T05:02:43Z"}},"first_seen":"2022-12-04T04:44:10Z","last_seen":"2022-12-04T04:44:10Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"B7E133A5-62CC-4D3B-9F77-FC0D0B325B05","original_application_version":"470","original_purchase_date":"2021-12-29T09:04:00Z","other_purchases":{},"subscriptions":{"wf_1449_1y":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-12-04T05:02:44Z","ownership_type":"PURCHASED","period_type":"default","purchase_date":"2022-12-04T05:02:43Z","refunded_at":null,"store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

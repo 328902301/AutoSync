@@ -1,4 +1,4 @@
-// 2022-12-05 16:55
+// 2022-12-05 17:00
 
 var url = $request.url;
 var body = $response.body;
@@ -82,10 +82,20 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
 // 哔哩哔哩 我的页面处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   let obj = JSON.parse(body);
-  const itemName = new Set("离线缓存", "历史记录", "我的收藏", "稍后再看");
+  // 标准版：
+  // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+  // 港澳台：
+  // 534离线缓存 8历史记录 4我的收藏 428稍后再看
+  // 352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
+  // 概念版：
+  // 425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
+  // 国际版：
+  // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
+  // 622为会员购中心 425开始为概念版id
+  const itemList = new Set([396, 397, 398, 399]);
   obj["data"]["sections_v2"]?.forEach((element, index) => {
     let items = element["items"].filter((e) => {
-      return itemName.has(e.name);
+      return itemList.has(e.id);
     });
     obj["data"]["sections_v2"][index].button = {};
     delete obj["data"]["sections_v2"][index].tip_icon;
@@ -105,8 +115,8 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     delete obj.data.vip_section_v2;
     delete obj.data.vip_section;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
-    if (obj.data.hasOwnProperty("live_tip")) obj["data"]["live_tip"] = {};
-    if (obj.data.hasOwnProperty("answer")) obj["data"]["answer"] = {};
+    if (obj.data.hasOwnProperty("live_tip")) obj.data.live_tip = {};
+    if (obj.data.hasOwnProperty("answer")) obj.data.answer = {};
     obj.data.vip.type = 2;
     obj.data.vip.status = 1;
     obj.data.vip.vip_pay_type = 1;

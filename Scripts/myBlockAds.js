@@ -1,4 +1,4 @@
-// 2022-12-05 09:30
+// 2022-12-05 10:25
 
 var url = $request.url;
 var body = $response.body;
@@ -71,6 +71,51 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
   body = JSON.stringify(obj);
 }
 
+// // bilibil
+// if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
+//   // 39直播 40推荐 41热门 545追番 151影视 442动画, 99直播 100推荐 101热门 554动画
+//   // 442开始为概念版id，适配港澳台代理模式
+//   const tabList = new Set([39, 40, 41, 151]);
+//   // 尝试使用tab name直观修改
+//   // const tabNameList = new Set(['直播', '推荐', '热门', '影视']);
+//   // if (obj['data']['tab']) {
+//   //   let tab = obj['data']['tab'].filter((e) => {
+//   //   return tabNameList.has(e.name) || tabList.has(e.id);
+//   //   });
+//   //   obj['data']['tab'] = tab;
+//   // }
+//   // 222游戏中心 107概念版游戏中心 176消息中心
+//   const topList = new Set([176]);
+//   // 标准版
+//   // 177首页 178频道 179动态 181我的
+//   // 概念版
+//   // 102首页 103频道 104动态 106我的
+//   // 港澳台
+//   // 486首页 487频道 488动态 490我的
+//   // 102开始为概念版id
+//   //const bottomList = new Set([177, 179, 181]);
+//   let obj = JSON.parse(body);
+//   if (obj.data && obj.data.tab) {
+//     let tab = obj.data.tab.filter((e) => {
+//       return tabList.has(e.id);
+//     });
+//     obj.data.tab = tab;
+//   }
+//   if (obj["data"]["top"]) {
+//     let top = obj["data"]["top"].filter((e) => {
+//       return topList.has(e.id);
+//     });
+//     obj["data"]["top"] = top;
+//   }
+//   if (obj["data"]["bottom"]) {
+//     let bottom = obj["data"]["bottom"].filter((e) => {
+//       return bottomList.has(e.id);
+//     });
+//     obj["data"]["bottom"] = bottom;
+//   }
+//   body = JSON.stringify(obj);
+// }
+
 // 哔哩哔哩 去除右上角活动入口
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
   let obj = JSON.parse(body);
@@ -84,71 +129,57 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
 // 哔哩哔哩 我的页面处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   let obj = JSON.parse(body);
-  if (obj.data && obj.data.sections_v2) {
-    obj.data.sections_v2 = obj.data.sections_v2.filter((item) => {
-      if (item.title === "推荐服务" || item.title === "更多服务" || item.title === "创作中心") {
-        return false;
-      }
-      if (item.name != "离线缓存" || item.name != "历史记录" || item.name != "我的收藏" || item.name != "稍后再看") {
-        return false;
-      }
-      return true;
+  // 标准版：
+  // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+  // 港澳台：
+  // 534离线缓存 8历史记录 4我的收藏 428稍后再看
+  // 352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
+  // 概念版：
+  // 425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
+  // 国际版：
+  // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
+  // 622为会员购中心 425开始为概念版id
+  const itemList = new Set([396, 397, 398, 399]);
+  obj["data"]["sections_v2"]?.forEach((element, index) => {
+    let items = element["items"].filter((e) => {
+      return itemList.has(e.id);
     });
-    obj.data.sections_v2.button = {};
-    delete obj.data.sections_v2.tip_icon;
-    delete obj.data.sections_v2.be_up_title;
-    delete obj.data.sections_v2.tip_title;
+    obj["data"]["sections_v2"][index].button = {};
+    delete obj["data"]["sections_v2"][index].tip_icon;
+    delete obj["data"]["sections_v2"][index].be_up_title;
+    delete obj["data"]["sections_v2"][index].tip_title;
+    for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
+      if (
+        obj.data.sections_v2[i].title === "推荐服务" ||
+        obj.data.sections_v2[i].title === "更多服务" ||
+        obj.data.sections_v2[i].title === "创作中心"
+      ) {
+        delete obj.data.sections_v2[i].title;
+        delete obj.data.sections_v2[i].type;
+      }
+    }
+    obj["data"]["sections_v2"][index]["items"] = items;
     delete obj.data.vip_section_v2;
     delete obj.data.vip_section;
     // 开启本地会员标识 2022-03-05 add by ddgksf2013
-    if (obj.data.hasOwnProperty("live_tip")) obj.data.live_tip = {};
-    if (obj.data.hasOwnProperty("answer")) obj.data.answer = {};
-    obj.data.vip_type = 2;
-    obj.data.vip.type = 2;
-    obj.data.vip.status = 1;
-    obj.data.vip.vip_pay_type = 1;
-    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-  }
+    if (obj.data.hasOwnProperty("live_tip")) obj["data"]["live_tip"] = {};
+    if (obj.data.hasOwnProperty("answer")) obj["data"]["answer"] = {};
+    obj["data"]["vip_type"] = 2;
+    obj["data"]["vip"]["type"] = 2;
+    obj["data"]["vip"]["status"] = 1;
+    obj["data"]["vip"]["vip_pay_type"] = 1;
+    obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+  });
   body = JSON.stringify(obj);
 }
-  // // 标准版：
-  // // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
-  // // 港澳台：
-  // // 534离线缓存 8历史记录 4我的收藏 428稍后再看
-  // // 352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
-  // // 概念版：
-  // // 425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
-  // // 国际版：
-  // // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
-  // // 622为会员购中心 425开始为概念版id
-  // const itemList = new Set([396, 397, 398, 399]);
-  // obj["data"]["sections_v2"]?.forEach((element, index) => {
-  //   let items = element["items"].filter((e) => {
-  //     return itemList.has(e.id);
-  //   });
-  //   obj["data"]["sections_v2"][index].button = {};
-  //   delete obj["data"]["sections_v2"][index].tip_icon;
-  //   delete obj["data"]["sections_v2"][index].be_up_title;
-  //   delete obj["data"]["sections_v2"][index].tip_title;
-  //   for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
-  //     if (
-  //       obj.data.sections_v2[i].title === "推荐服务" ||
-  //       obj.data.sections_v2[i].title === "更多服务" ||
-  //       obj.data.sections_v2[i].title === "创作中心"
-  //     ) {
-  //       delete obj.data.sections_v2[i].title;
-  //       delete obj.data.sections_v2[i].type;
-  //     }
-  //   }
-  //   obj["data"]["sections_v2"][index]["items"] = items;
 
 // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
   let obj = JSON.parse(body);
-  obj.data.vip.type = 2;
-  obj.data.vip.status = 1;
-  obj.data.vip.vip_pay_type = 1;
-  obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+  obj["data"]["vip"]["type"] = 2;
+  obj["data"]["vip"]["status"] = 1;
+  obj["data"]["vip"]["vip_pay_type"] = 1;
+  obj["data"]["vip"]["due_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   body = JSON.stringify(obj);
 }
 

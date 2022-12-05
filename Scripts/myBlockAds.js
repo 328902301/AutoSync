@@ -82,7 +82,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
 // 哔哩哔哩 我的页面处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   let obj = JSON.parse(body);
-  const itemName = new Set([离线缓存, 历史记录, 我的收藏, 稍后再看]);
+  const itemName = new Set("离线缓存", "历史记录", "我的收藏", "稍后再看");
   obj["data"]["sections_v2"]?.forEach((element, index) => {
     let items = element["items"].filter((e) => {
       return itemName.has(e.name);

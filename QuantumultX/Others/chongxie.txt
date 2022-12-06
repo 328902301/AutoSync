@@ -140,6 +140,7 @@ hostname = ad.ysepay.com, m.jd.com, www.zhihu.com, api.zhihu.com, appcloud2.zhih
 # > 银盛通
 ^https?:\/\/ad\.ysepay\.com\/yst-ad\/ST101001\/[0-9]{11}\.jpg url reject
 # > 兴业证券优理宝（3秒倒计时,任意位置点一下即可跳过）
+^https?:\/\/estock\.xyzq\.cn\/rest\/app\/splash\/imgurl url reject-200
 ^https:\/\/static.xyzq.cn\/image\/splash\/opera3.*.jpg url reject-200
 # > 涨乐财富通
 ^https?+:\/\/d\.zhangle\.com\/pic\/cft\/interaction\/\d{13}-1242-2248\.jpg url reject-200
@@ -514,6 +515,7 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https?+:\/\/\w+?\.kingsoft-office-service\.com\/ad url reject-200
 ^https?:\/\/.+?\.kingsoft-office-service\.com url reject
 # > 快看
+^https?:\/\/api\.kkmh\.com\/v\d\/ad\/show url reject-200
 ^https?+:\/\/api\.kkmh\.com\/.+?ad(?:vertisement)?+\/ url reject-200
 ^https?:\/\/api\.kkmh\.com\/v\d+\/(ad|advertisement)\/ url reject
 # > 盛趣游戏
@@ -677,6 +679,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # > 喜马拉雅_去除我的页面Ad_Tag
 ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
 # > 小红书
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style)\? url reject-array
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/apple\/record* url reject
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/tag\/ads_engage* url reject

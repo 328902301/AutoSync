@@ -1,4 +1,4 @@
-// 2022-12-05 18:05
+// 2022-12-06 13:30
 
 var url = $request.url;
 var body = $response.body;
@@ -21,7 +21,7 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 // 哔哩哔哩 去除强制设置的皮肤
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
   let obj = JSON.parse(body);
-  delete obj.data.common_equip;
+  if (obj.data && obj.data.common_equip) delete obj.data.common_equip;
   body = JSON.stringify(obj);
 }
 

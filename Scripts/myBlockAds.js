@@ -1,4 +1,4 @@
-// 2022-12-06 18:05
+// 2022-12-06 18:15
 
 var url = $request.url;
 var body = $response.body;
@@ -104,7 +104,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
       if (
         obj.data.sections_v2[i].title === "推荐服务" ||
-        obj.data.sections_v2[i].title === "更多服务" ||
         obj.data.sections_v2[i].title === "创作中心"
       ) {
         delete obj.data.sections_v2[i].title;

@@ -28,8 +28,7 @@ https://raw.githubusercontent.com/RuCu6/QuanX/main/QuantumultX.conf
   4. 安装完成后，打开 `关于本机-证书信任设置` ，对 `Quantumult X CA` 启用根证书完全信任；
   5. 回到 Quantumult X 主界面，点击 `右下角风车` ，打开 `重写` 和 `MitM` ；
   6. 在当前界面，找到 `节点` 选项卡，点击 `引用(订阅)` 添加自己的 `订阅链接` ；
-  7. 配置国内 IP 数据库；
-  8. 大功告成，开始使用。
+  7. 大功告成，开始使用。
 
 ## 配置国内 IP 数据库：
 ```ruby

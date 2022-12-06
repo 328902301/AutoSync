@@ -1,5 +1,6 @@
-### This project is based on the scripting capabilities of several excellent iOS proxy tools (e.g. Surge, Quantumult X)
+### This project is based on the scripting capabilities of several excellent iOS proxy tools (e.g. Surge, Quantumult X, Loon)
 
+![](https://raw.githubusercontent.com/mymoonyue/mymoonyue/master/assets/github-contribution-grid-snake.svg)
 [![YAOJIO's github stats](https://github-readme-stats.vercel.app/api?username=YAOJIO&show_icons=true&include_all_commits=true&hide_border=true)](https://github.com/YAOJIO)
 
 ### Hi there 👋
@@ -42,6 +43,19 @@
 6. 所有基于本项目源代码，进行的任何修改，为其他个人或组织的自发行为，与本项目没有任何直接或间接的关系，所造成的一切后果亦与本项目无关。
 7. 所有直接或间接使用本项目的个人和组织，应24小时内完成学习和研究，并及时删除本项目中的所有内容。如对本项目的功能有需求，应自行开发相关功能。
 8. 本项目保留随时对免责声明进行补充或更改的权利，直接或间接使用本项目内容的个人或组织，视为接受本项目的特别声明。
+
+### Quantumult X, Surge, Loon is a powerful network debugging tool.
+
+- Support ss,ssr,vmess,trojan protocol
+- Capture all HTTP/HTTPS/TCP/UDP traffic on your device, and redirect to your proxy server.
+- Record HTTP/HTTPS request and response header and body.
+- Custom proxy rules.
+- Block ads by domain rules.
+- Measure traffic usage.
+- IPv6 support.
+- Async DNS Request.
+- Record DNS Result.
+- Use javaScripts to extend proxy functionality
 
 ### Functional
 

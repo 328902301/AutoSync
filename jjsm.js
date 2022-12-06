@@ -21,7 +21,7 @@ var chxm1023 = JSON.parse($response.body);
   "msg" : "Success",
   "body" : {
     "vipStartOn" : null,
-    "remainingVip" : 3,
+    "remainingVip" : 766496,
     "vipEndOn" : "2099-09-09 09:09:09",
     "invitationCount" : 0,
     "svipEndOn" : "2099-09-09 09:09:09",

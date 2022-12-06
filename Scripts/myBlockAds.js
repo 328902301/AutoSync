@@ -1,4 +1,4 @@
-// 2022-12-06 15:30
+// 2022-12-06 16:05
 
 var url = $request.url;
 var body = $response.body;
@@ -600,76 +600,76 @@ if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
   body = JSON.stringify(obj);
 }
 
-// 知乎 推荐列表
-if (/^https?:\/\/api\.zhihu\.com\/topstory\/recommend/.test(url)) {
-  function getUrlParamValue(url, queryName) {
-    return Object.fromEntries(
-      url
-        .substring(url.indexOf("?") + 1)
-        .split("&")
-        .map((pair) => pair.split("="))
-    )[queryName];
-  }
-  let obj = JSON.parse(body);
-  if (obj.data) {
-    obj.data = obj.data.filter((item) => {
-      if (item.extra?.type === "zvideo") {
-        let videoUrl = item.common_card.feed_content.video.customized_page_url;
-        let videoID = getUrlParamValue(videoUrl, "videoID");
-        if (videoID) item.common_card.feed_content.video.id = videoID;
-      } else if (
-        item.type === "market_card" &&
-        item.fields?.header?.url &&
-        item.fields.body?.video?.id
-      ) {
-        let videoID = getUrlParamValue(item.fields.header.url, "videoID");
-        if (videoID) item.fields.body.video.id = videoID;
-      } else if (item.common_card?.feed_content?.video?.id) {
-        let search = '"feed_content":{"video":{"id":';
-        let str = $response.body.substring(
-          $response.body.indexOf(search) + search.length
-        );
-        let videoID = str.substring(0, str.indexOf(","));
-        item.common_card.feed_content.video.id = videoID;
-      }
-      return item.type !== "feed_advert";
-    });
-  }
-  body = JSON.stringify(obj);
-}
+// // 知乎 推荐列表
+// if (/^https?:\/\/api\.zhihu\.com\/topstory\/recommend/.test(url)) {
+//   function getUrlParamValue(url, queryName) {
+//     return Object.fromEntries(
+//       url
+//         .substring(url.indexOf("?") + 1)
+//         .split("&")
+//         .map((pair) => pair.split("="))
+//     )[queryName];
+//   }
+//   let obj = JSON.parse(body);
+//   if (obj.data) {
+//     obj.data = obj.data.filter((item) => {
+//       if (item.extra?.type === "zvideo") {
+//         let videoUrl = item.common_card.feed_content.video.customized_page_url;
+//         let videoID = getUrlParamValue(videoUrl, "videoID");
+//         if (videoID) item.common_card.feed_content.video.id = videoID;
+//       } else if (
+//         item.type === "market_card" &&
+//         item.fields?.header?.url &&
+//         item.fields.body?.video?.id
+//       ) {
+//         let videoID = getUrlParamValue(item.fields.header.url, "videoID");
+//         if (videoID) item.fields.body.video.id = videoID;
+//       } else if (item.common_card?.feed_content?.video?.id) {
+//         let search = '"feed_content":{"video":{"id":';
+//         let str = $response.body.substring(
+//           $response.body.indexOf(search) + search.length
+//         );
+//         let videoID = str.substring(0, str.indexOf(","));
+//         item.common_card.feed_content.video.id = videoID;
+//       }
+//       return item.type !== "feed_advert";
+//     });
+//   }
+//   body = JSON.stringify(obj);
+// }
 
-// 知乎 appcloud2 config 配置
-if (/^https?:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(url)) {
-  let obj = JSON.parse(body);
-  if (obj.config?.zhcnh_thread_sync?.ZHBackUpIP_Switch_Open === "1") {
-    obj.config.zhcnh_thread_sync.ZHBackUpIP_Switch_Open = "0";
-  }
-  body = JSON.stringify(obj);
-}
+// // 知乎 appcloud2 config 配置
+// if (/^https?:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(url)) {
+//   let obj = JSON.parse(body);
+//   if (obj.config?.zhcnh_thread_sync?.ZHBackUpIP_Switch_Open === "1") {
+//     obj.config.zhcnh_thread_sync.ZHBackUpIP_Switch_Open = "0";
+//   }
+//   body = JSON.stringify(obj);
+// }
 
-// 知乎 回答下的广告
-if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(url)) {
-  let obj = JSON.parse(body);
-  if (obj.paging) body.paging = null;
-  if (obj.data) body.data = null;
-  body = JSON.stringify(obj);
-}
+// // 知乎 回答下的广告
+// if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(url)) {
+//   let obj = JSON.parse(body);
+//   if (obj.paging) body.paging = null;
+//   if (obj.data) body.data = null;
+//   body = JSON.stringify(obj);
+// }
 
-// 知乎 文章 articles 回答下广告
-if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(url)) {
-  let obj = JSON.parse(body);
-  if (obj.ad_info) obj.ad_info = null;
-  body = JSON.stringify(obj);
-}
+// // 知乎 文章 articles 回答下广告
+// if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(url)) {
+//   let obj = JSON.parse(body);
+//   if (obj.ad_info) obj.ad_info = null;
+//   body = JSON.stringify(obj);
+// }
 
-// 知乎 问题回答列表
-if (/^https?:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(url)) {
-  let obj = JSON.parse(body);
-  if (obj.data.ad_info && obj.ad_info) {
-    obj.data.ad_info = null;
-    obj.ad_info = null;
-  }
-  body = JSON.stringify(obj);
-}
+// // 知乎 问题回答列表
+// if (/^https?:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(url)) {
+//   let obj = JSON.parse(body);
+//   if (obj.data.ad_info && obj.ad_info) {
+//     obj.data.ad_info = null;
+//     obj.ad_info = null;
+//   }
+//   body = JSON.stringify(obj);
+// }
 
 $done({ body });

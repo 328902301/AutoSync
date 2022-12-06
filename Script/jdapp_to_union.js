@@ -39,7 +39,7 @@ sku = arr[1];
 
 $.log(`👾SKU：${sku}`);
 
-const msgOpts = JSON.parse($.getData('id77_JDMsgOpts_Cache')) || {};
+const msgOpts = JSON.parse($.getData('id77_JDMsgOpts_Cache') || '{}');
 if ($.getData('id77_JDSkuId_Cache') === sku && msgOpts.openUrl) {
   let appSchemeName = '';
 

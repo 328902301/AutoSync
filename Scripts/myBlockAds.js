@@ -1,4 +1,4 @@
-// 2022-12-06 13:30
+// 2022-12-06 14:05
 
 var url = $request.url;
 var body = $response.body;
@@ -136,23 +136,60 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
   body = JSON.stringify(obj);
 }
 
-// 哔哩哔哩 推荐广告处理 最后问号不能去掉 以免匹配到story模式
-if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(url)) {
+// 哔哩哔哩 推荐广告处理
+if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) {
   let obj = JSON.parse(body);
-  let items = [];
-  for (let item of obj["data"]["items"]) {
-    if (item.hasOwnProperty("banner_item")) {
-      continue;
-    } else if (
-      !item.hasOwnProperty("ad_info") &&
-      item.card_goto.indexOf("ad") === -1 &&
-      (item["card_type"] === "small_cover_v2" ||
-        item["card_type"] === "large_cover_v1")
-    ) {
-      items.push(item);
-    }
+  if (obj.data.items?.length) {
+    obj.data.items = obj.data.items.filter((i) => {
+      const { card_type: cardType, card_goto: cardGoto } = i;
+      if (cardType && cardGoto) {
+        if (cardType === "banner_v8" && cardGoto === "banner") {
+          if (i.banner_item) {
+            for (const v of i.banner_item) {
+              if (v.type) {
+                if (v.type === "ad") {
+                  return false;
+                }
+              }
+            }
+          }
+        } else if (
+          cardType === "cm_v2" &&
+          [
+            "ad_web_s",
+            "ad_av",
+            "ad_web_gif",
+            "ad_player",
+            "ad_inline_3d"
+          ].includes(cardGoto)
+        ) {
+          // ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告 ad_inline_3d 上方大的视频3d广告
+          return false;
+        } else if (cardType === "small_cover_v10" && cardGoto === "game") {
+          // 游戏广告
+          return false;
+        } else if (cardType === "cm_double_v9" && cardGoto === "ad_inline_av") {
+          // 创作推广-大视频广告
+          return false;
+        }
+      }
+      return true;
+    });
   }
-  obj["data"]["items"] = items;
+  // let items = [];
+  // for (let item of obj["data"]["items"]) {
+  //   if (item.hasOwnProperty("banner_item")) {
+  //     continue;
+  //   } else if (
+  //     !item.hasOwnProperty("ad_info") &&
+  //     item.card_goto.indexOf("ad") === -1 &&
+  //     (item["card_type"] === "small_cover_v2" ||
+  //       item["card_type"] === "large_cover_v1")
+  //   ) {
+  //     items.push(item);
+  //   }
+  // }
+  // obj["data"]["items"] = items;
   body = JSON.stringify(obj);
 }
 
@@ -546,6 +583,13 @@ if (/^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(url)) {
   delete obj.data.splash;
   obj.info = "ok";
   obj.desc = "成功";
+  body = JSON.stringify(obj);
+}
+
+// 知乎 开屏广告
+if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\?/.test(url)) {
+  let obj = JSON.parse(body);
+  if (obj.launch && obj.launch.ads) obj.launch.ads = [];
   body = JSON.stringify(obj);
 }
 

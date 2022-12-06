@@ -1,4 +1,4 @@
-// 2022-12-06 18:15
+// 2022-12-06 22:55
 
 var url = $request.url;
 var body = $response.body;
@@ -92,7 +92,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
   // 国际版：
   // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
   // 622为会员购中心 425开始为概念版id
-  const itemList = new Set([396, 397, 398, 399, 407, 410]);
+  const itemList = new Set([396, 397, 398, 399]);
   obj["data"]["sections_v2"]?.forEach((element, index) => {
     let items = element["items"].filter((e) => {
       return itemList.has(e.id);
@@ -104,6 +104,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
     for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
       if (
         obj.data.sections_v2[i].title === "推荐服务" ||
+        obj.data.sections_v2[i].title === "更多服务" ||
         obj.data.sections_v2[i].title === "创作中心"
       ) {
         delete obj.data.sections_v2[i].title;

@@ -1,7 +1,7 @@
 #!name = 自动加入TF
 #!desc = 自动监控TF名额，一旦有新的名额即刻加入。
 #!openUrl = 
-#!author = DecoAri
+#!author = DecoAri 佚名
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TestFlight.png
 #!input = APP_ID

@@ -137,6 +137,13 @@ async function operator(proxies = []) {
         // 名称判断 _.includes(p.name, '沃音乐') || _.includes(p.name, '公免')
         // 或 path 判断
         if(_.chain(p).get('ws-opts.path').includes('gd.unicommusic.gtimg.com').value()){
+            // 沃音乐的好像有点问题
+            // 我看了 "host":"1.1.1.1\nUser-Agent:ANDROIDQQMUSIC" 这种格式
+            // shadowrocket支持 可用
+            // 但是 clash 不支持
+            // clash需要这样的
+            // "headers":{ "Host": "1.1.1.1", "User-Agent": "ANDROIDQQMUSIC" }
+            _.set(p, 'ws-opts.headers.User-Agent', 'ANDROIDQQMUSIC')
             return p
         }
         let network = _.get(p, 'network')

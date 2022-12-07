@@ -143,7 +143,22 @@ async function operator(proxies = []) {
             // 但是 clash 不支持
             // clash需要这样的
             // "headers":{ "Host": "1.1.1.1", "User-Agent": "ANDROIDQQMUSIC" }
+
+            // 以下方式二选一
+
+            // 方式一: 强制设置 User-Agent 为 ANDROIDQQMUSIC
             _.set(p, 'ws-opts.headers.User-Agent', 'ANDROIDQQMUSIC')
+
+            // 方式二: Sub-Store 编辑订阅, User-Agent 设为  Shadowrocket/1598 CFNetwork/1331.0.7 Darwin/21.4.0
+            // 以下逻辑将自动转换并添加字段
+            _.chain(p).get('ws-opts.headers.Host').split('\n').each(i => {
+                const [key, value] = _.split(i, ':')
+                if(_.isNil(value)){
+                _.set(p, ['ws-opts', 'headers', 'Host'], key)
+                } else {
+                _.set(p, ['ws-opts', 'headers', key], value)
+                }
+            }).value()
             return p
         }
         let network = _.get(p, 'network')

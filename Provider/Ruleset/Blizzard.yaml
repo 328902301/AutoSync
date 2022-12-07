@@ -6,3 +6,13 @@ payload:
   - DOMAIN,blzddist1-a.akamaihd.net
   - DOMAIN,blzddistkr1-a.akamaihd.net
   - DOMAIN,bnetproduct-a.akamaihd.net
+
+  # Diablo-III-Korea
+  - IP-CIDR,182.162.135.1/32
+  # Diablo-III-North America
+  - IP-CIDR,24.105.30.129/32
+  # Diablo-III-Americas
+  - IP-CIDR,54.94.196.47/32
+  # Diablo-III-Europe
+  - IP-CIDR,185.60.112.157/32
+  - IP-CIDR,185.60.112.158/32

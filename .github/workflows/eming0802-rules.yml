@@ -1,0 +1,28 @@
+name: eming0802-rules-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-eming0802-rules
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync eming0802-rules
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/eming0802/rules.git"
+          source_branch: "main"
+          destination_branch: "eming0802-rules"
+          github_token: ${{ secrets.PAT }}

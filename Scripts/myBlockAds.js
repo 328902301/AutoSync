@@ -1,4 +1,4 @@
-// 2022-12-06 22:55
+// 2022-12-07 10:00
 
 var url = $request.url;
 var body = $response.body;
@@ -50,9 +50,7 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
   }
   if (obj.data && obj.data.top) {
     obj.data.top = obj.data.top.filter((item) => {
-      if (item.name === "游戏中心") {
-        return false;
-      }
+      if (item.name === "游戏中心") return false;
       return true;
     });
     fixPos(obj.data.top);
@@ -147,9 +145,7 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) {
           if (i.banner_item) {
             for (const v of i.banner_item) {
               if (v.type) {
-                if (v.type === "ad") {
-                  return false;
-                }
+                if (v.type === "ad") return false;
               }
             }
           }
@@ -487,20 +483,23 @@ if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(url)) {
 
 // 微博 开屏广告 php
 if (/^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(url)) {
-  let tmp = /\{.*\}/;
-  body = body.match(tmp);
+  body = body.match(/\{.*\}/);
   let obj = JSON.parse(body);
   if (obj.needlocation) obj.needlocation = false;
   if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
   if (obj.code) obj.code = 200;
-  if (obj.background_delay_display_time)
+  if (obj.background_delay_display_time) {
     obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
-  if (obj.lastAdShow_delay_display_time)
+  }
+  if (obj.lastAdShow_delay_display_time) {
     obj.lastAdShow_delay_display_time = 31536000;
-  if (obj.realtime_ad_video_stall_time)
+  }
+  if (obj.realtime_ad_video_stall_time) {
     obj.realtime_ad_video_stall_time = 31536000;
-  if (obj.realtime_ad_timeout_duration)
+  }
+  if (obj.realtime_ad_timeout_duration) {
     obj.realtime_ad_timeout_duration = 31536000;
+  }
   for (let item of obj["ads"]) {
     item["displaytime"] = 0;
     item["displayintervel"] = 31536000;
@@ -540,8 +539,7 @@ if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(url)) {
 }
 
 // 小红书 开屏广告 config
-if (
-  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(url)) {
   let obj = JSON.parse($response.body);
   //obj.data.tabbar.tabs = Object.values(obj.data.tabbar.tabs).filter((item) => !item.title == "购买");
   delete obj.data.store;
@@ -553,8 +551,7 @@ if (
 }
 
 // 小红书 开屏广告 splash_config
-if (
-  /^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
+if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
   let obj = JSON.parse(body);
   //console.log(`小红书开屏广告去除开始：总计${obj.data.ads_groups.length}组，每组广告数量${JSON.stringify(obj.data.ads_groups.map((i) => i.ads.length))}，下次再见${nextTime.format('YYYY/MM/DD')}`);
   obj.data.ads_groups.forEach((i) => {

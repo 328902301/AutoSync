@@ -1,11 +1,18 @@
 /*
 脚本作者：DecoAri
 引用地址：https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
+感谢某位大佬将改写为Loon版脚本！
 */
 !(async () => {
-ids = $persistentStore.read('APP_ID')
+var ids = $persistentStore.read('APP_ID')
+if (ids == null) {
+    $notification.post('请填写要加入的TestFlight App ID','','')
+    $done()
+    return
+}
+
 if (ids == '') {
-	$notification.post('所有TF已加入完毕','模块已自动关闭','')
+	$notification.post('所有TF已加入完毕','请禁用插件','')
 	$done()
 } else {
 	ids = ids.split(',')
@@ -22,8 +29,10 @@ function autoPost(ID) {
   let header = {
     'X-Session-Id': `${$persistentStore.read('session_id')}`,
     'X-Session-Digest': `${$persistentStore.read('session_digest')}`,
-    'X-Request-Id': `${$persistentStore.read('request_id')}`
+    'X-Request-Id': `${$persistentStore.read('request_id')}`,
+    'User-Agent': `iOS Loon`
   }
+  console.log('testurl' + testurl)
   return new Promise(function(resolve) {
     $httpClient.get({url: testurl + ID,headers: header}, function(error, resp, data) {
       if (error === null) {

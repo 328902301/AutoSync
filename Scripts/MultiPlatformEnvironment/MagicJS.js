@@ -1,3 +1,5 @@
+// https://github.com/blackmatrix7/MagicJS/blob/main/src/magic.js
+
 function MagicJS(scriptName = "MagicJS", logLevel = "INFO") {
   return new (class {
     constructor() {

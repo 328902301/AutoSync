@@ -3,8 +3,8 @@
 
 // 主要的选项配置
 const mainConfig = {
-  isDebug: false, // 开启调试，会打印运行中部分日志
-  // 个人中心配置，其中多数是可以直接在更多功能里直接移除
+  isDebug: false, // 开启调试 会打印运行中部分日志
+  // 个人中心配置 其中多数是可以直接在更多功能里直接移除
   removeHomeVip: true, // 个人中心的 vip 栏
   removeHomeCreatorTask: true, // 个人中心创作者中心下方的轮播图
 
@@ -28,11 +28,11 @@ const mainConfig = {
   removeUnusedPart: true, // 超话 乱七八糟没用的部分
 
   removeLvZhou: true, // 绿洲模块
-  removeSearchWindow: true, // 搜索页滑动窗口，有的不是广告
+  removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
 
   profileSkin1: null, // 用户页 自定义图标1
   profileSkin2: null, // 用户页 自定义图标2
-  tabIconVersion: 0, // 配置大于100的数
+  tabIconVersion: 0, // 配置大于 100 的数
   tabIconPath: "" // 配置图标路径
 };
 
@@ -90,7 +90,7 @@ const otherUrls = {
   "/search/container_discover": "removeSearch",
   "/2/messageflow": "removeMsgAd",
   "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
-  "/statuses/unread_topic_timeline": "topicHandler", // 超话tab
+  "/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
   "/statuses/container_timeline": "removeMain" // 新版主页广告
 };
 
@@ -189,9 +189,7 @@ function removeSearchMain(data) {
 function checkSearchWindow(item) {
   if (!mainConfig.removeSearchWindow) return false;
   if (item.category != "card") return false;
-  return (
-    item.data?.itemid == "finder_window" || item.data?.itemid == "more_frame"
-  );
+  return (item.data?.itemid == "finder_window" || item.data?.itemid == "more_frame");
 }
 
 // 发现页

@@ -1,4 +1,8 @@
-# 2022-12-01
+# 2022-12-08
+
+# 网易云
+HOST, p1.music.126.net, MyBlockAds
+HOST, p2.music.126.net, MyBlockAds
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds

@@ -1,12 +1,11 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-
-const version = "v1207.1";
+// 2022-12-08 19:20
 
 // 主要的选项配置
 const mainConfig = {
   isDebug: false, // 开启调试，会打印运行中部分日志
   // 个人中心配置，其中多数是可以直接在更多功能里直接移除
-  removeHomeVip: true, // 个人中心的vip栏
+  removeHomeVip: true, // 个人中心的 vip 栏
   removeHomeCreatorTask: true, // 个人中心创作者中心下方的轮播图
 
   // 微博详情页配置
@@ -22,17 +21,17 @@ const mainConfig = {
   removeNextVideo: true, // 关闭自动播放下一个视频
   removePinedTrending: true, // 删除热搜列表置顶条目
 
-  removeInterestFriendInTopic: true, // 超话：超话里的好友
-  removeInterestTopic: true, // 超话：可能感兴趣的超话 + 好友关注
-  removeInterestUser: true, // 用户页：可能感兴趣的人
-  removeUnfollowTopic: true, // 超话：未关注的
-  removeUnusedPart: true, // 超话：乱七八糟没用的部分
+  removeInterestFriendInTopic: true, // 超话 超话里的好友
+  removeInterestTopic: true, // 超话 可能感兴趣的超话 + 好友关注
+  removeInterestUser: true, // 用户页 可能感兴趣的人
+  removeUnfollowTopic: true, // 超话 未关注的
+  removeUnusedPart: true, // 超话 乱七八糟没用的部分
 
   removeLvZhou: true, // 绿洲模块
   removeSearchWindow: true, // 搜索页滑动窗口，有的不是广告
 
-  profileSkin1: null, // 用户页：自定义图标1
-  profileSkin2: null, // 用户页：自定义图标2
+  profileSkin1: null, // 用户页 自定义图标1
+  profileSkin2: null, // 用户页 自定义图标2
   tabIconVersion: 0, // 配置大于100的数
   tabIconPath: "" // 配置图标路径
 };
@@ -41,7 +40,7 @@ const mainConfig = {
 const itemMenusConfig = {
   creator_task: false, // 转发任务
   mblog_menus_custom: false, // 寄微博
-  mblog_menus_video_later: false, // 可能是稍后再看？没出现过
+  mblog_menus_video_later: false, // 可能是稍后再看 没出现过
   mblog_menus_comment_manager: false, // 评论管理
   mblog_menus_avatar_widget: false, // 头像挂件
   mblog_menus_card_bg: false, // 卡片背景
@@ -297,13 +296,11 @@ function removeTimeLine(data) {
 
 function removeHomeVip(data) {
   if (!data.header) return data;
-  /**
-  let vipCenter = data.header.vipCenter;
-  if (vipCenter) {
-    vipCenter.icon = '';
-    vipCenter.title.content = '会员中心';
-  }
-*/
+  // let vipCenter = data.header.vipCenter;
+  // if (vipCenter) {
+  //   vipCenter.icon = '';
+  //   vipCenter.title.content = '会员中心';
+  // }
   if (data.header.vipView) {
     data.header.vipView = null;
   }
@@ -430,7 +427,8 @@ function removeHome(data) {
         "100505_-_hongbao2022",
         "100505_-_adphoto"
       ].indexOf(itemId) > -1
-    ) {      continue;
+    ) {
+      continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
       continue;
     } else {

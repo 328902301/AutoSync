@@ -32,8 +32,8 @@ const llllKey = 'FAN_LLLL'
 
 const isRequest = typeof $request != "undefined"
 
-start()
-async function start() {
+
+!(async function () {
     if (isRequest) {
         const msg = getToken()
         console.log(`${taskName}\n${msg}`)
@@ -45,7 +45,7 @@ async function start() {
         $notify(taskName, "", msg)
         $done()
     }
-}
+})()
 
 
 function getToken() {

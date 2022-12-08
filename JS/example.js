@@ -83,12 +83,12 @@ script - echo - response script - echo.js
 
 /** 一般使用
 const isRequest = typeof $request != "undefined"
+const isResponse = typeof $response != "undefined"
 
 const taskName = ''
 const xxxKey = 'FAN_XXX'
-// (async function () { xxx })(); // qx不支持匿名函数
-start（）
-async function start() {
+
+!(async function () {
     if (isRequest) {
         const msg = getToken()
         console.log(`${taskName}\n${msg}`)
@@ -100,7 +100,7 @@ async function start() {
         $notify(taskName, "", msg)
         $done()
     }
-}
+})()
 
 
 // token
@@ -151,7 +151,7 @@ function sign() {
                 } else {
                     resolve(`签到失败: \nstatus: ${response.status}`)
                 }
-
+                try { throw new Error('')} catch {}
             }, reason => {
                 resolve(`请求失败: ${reason.error}`)
             })
@@ -160,4 +160,60 @@ function sign() {
         }
     })
 }
+
+
+
+
+
+//多任务
+
+!(async function () {
+  console.log('kaishi')
+
+  //
+  await Promise.all([
+    func1(),
+    func2()
+  ]).then((values) => {
+    console.log(values)
+  })
+  
+  //
+  const msg = await func3()
+  console.log(msg)
+  
+  //
+  console.log('jieshu')
+  $done()
+})()
+
+
+
+//
+function func1() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('111111')
+    }, 2000)
+  })
+}
+
+
+function func2() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('222222')
+    }, 2000)
+  })
+}
+
+function func3() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('333333')
+    }, 3000)
+  })
+}
+
+
 */

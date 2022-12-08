@@ -1,4 +1,4 @@
-// 2022-12-07 10:00
+// 2022-12-08 16:00
 
 var url = $request.url;
 var body = $response.body;
@@ -553,7 +553,6 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?
 // 小红书 开屏广告 splash_config
 if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
   let obj = JSON.parse(body);
-  //console.log(`小红书开屏广告去除开始：总计${obj.data.ads_groups.length}组，每组广告数量${JSON.stringify(obj.data.ads_groups.map((i) => i.ads.length))}，下次再见${nextTime.format('YYYY/MM/DD')}`);
   obj.data.ads_groups.forEach((i) => {
     i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
@@ -662,10 +661,8 @@ if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
 // // 知乎 问题回答列表
 // if (/^https?:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(url)) {
 //   let obj = JSON.parse(body);
-//   if (obj.data.ad_info && obj.ad_info) {
-//     obj.data.ad_info = null;
-//     obj.ad_info = null;
-//   }
+//   if (obj.data.ad_info) obj.data.ad_info = null;
+//   if (obj.ad_info) obj.ad_info = null;
 //   body = JSON.stringify(obj);
 // }
 

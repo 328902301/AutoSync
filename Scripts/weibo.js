@@ -1,6 +1,6 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 
-const version = "v1207.1";
+const version = "v1208.1";
 
 // 主要的选项配置
 const mainConfig = {
@@ -12,6 +12,7 @@ const mainConfig = {
   // 微博详情页配置
   removeRelate: true, // 相关推荐
   removeGood: true, // 微博主好物种草
+  removeShopwindow: true, // 商品推广
   removeFollow: true, // 关注博主
   modifyMenus: true, // 编辑上下文菜单
   removeRelateItem: true, // 评论区相关内容
@@ -336,6 +337,15 @@ function itemExtendHandler(data) {
       }
     }
   }
+
+  if (mainConfig.removeShopwindow) {
+    let objShop = data.datas.data.feeds.mblog;
+    if (objShop.extend_info.shopwindow_card) {
+      delete objShop.extend_info;
+      delete objShop.topic_struct;
+    }
+  }
+
   if (mainConfig.removeFollow) {
     if (data.follow_data) data.follow_data = null;
   }

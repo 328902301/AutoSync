@@ -1,6 +1,6 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
 
-const version = "v1208.1";
+const version = "v1207.1";
 
 // 主要的选项配置
 const mainConfig = {
@@ -12,7 +12,6 @@ const mainConfig = {
   // 微博详情页配置
   removeRelate: true, // 相关推荐
   removeGood: true, // 微博主好物种草
-  removeShopwindow: true, // 商品推广
   removeFollow: true, // 关注博主
   modifyMenus: true, // 编辑上下文菜单
   removeRelateItem: true, // 评论区相关内容
@@ -160,12 +159,22 @@ function topicHandler(data) {
         let cGroup = c.card_group;
         if (!cGroup) continue;
         let cGroup0 = cGroup[0];
-        if (['guess_like_title', 'cats_top_title' ,'chaohua_home_readpost_samecity_title'].indexOf(cGroup0.itemid) > -1) {
+        if (
+          [
+            "guess_like_title",
+            "cats_top_title",
+            "chaohua_home_readpost_samecity_title"
+          ].indexOf(cGroup0.itemid) > -1
+        ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
           for (let cg of cGroup) {
-            if (['chaohua_discovery_banner_1', 'bottom_mix_activity'].indexOf(cg.itemid) == -1) {
+            if (
+              ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
+                cg.itemid
+              ) == -1
+            ) {
               newCardGroup.push(cg);
             }
           }
@@ -195,7 +204,9 @@ function removeSearchMain(data) {
 function checkSearchWindow(item) {
   if (!mainConfig.removeSearchWindow) return false;
   if (item.category != "card") return false;
-  return (item.data?.itemid == "finder_window" || item.data?.itemid == "more_frame");
+  return (
+    item.data?.itemid == "finder_window" || item.data?.itemid == "more_frame"
+  );
 }
 
 // 发现页
@@ -230,7 +241,9 @@ function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c?.itemid?.includes('t:51'));
+      data.cards[0].card_group = data.cards[0].card_group.filter(
+        (c) => !c?.itemid?.includes("t:51")
+      );
     }
   }
   return data;
@@ -337,15 +350,6 @@ function itemExtendHandler(data) {
       }
     }
   }
-
-  if (mainConfig.removeShopwindow) {
-    let objShop = data.datas.data.feeds.mblog;
-    if (objShop.extend_info.shopwindow_card) {
-      delete objShop.extend_info;
-      delete objShop.topic_struct;
-    }
-  }
-
   if (mainConfig.removeFollow) {
     if (data.follow_data) data.follow_data = null;
   }
@@ -384,7 +388,10 @@ function updateFollowOrder(item) {
     for (let d of item.items) {
       if (d.itemId === "mainnums_friends") {
         let s = d.click.modules[0].scheme;
-        d.click.modules[0].scheme = s.replace('231093_-_selfrecomm', '231093_-_selffollowed');
+        d.click.modules[0].scheme = s.replace(
+          "231093_-_selfrecomm",
+          "231093_-_selffollowed"
+        );
         log("updateFollowOrder success");
         return;
       }
@@ -433,10 +440,16 @@ function removeHome(data) {
       } else {
         if (!mainConfig.removeHomeCreatorTask) newItems.push(item);
       }
-    } else if ([
-      'mine_attent_title', '100505_-_meattent_pic',
-      '100505_-_newusertask', '100505_-_vipkaitong',
-      '100505_-_hongbao2022', '100505_-_adphoto'].indexOf(itemId) > -1) {
+    } else if (
+      [
+        "mine_attent_title",
+        "100505_-_meattent_pic",
+        "100505_-_newusertask",
+        "100505_-_vipkaitong",
+        "100505_-_hongbao2022",
+        "100505_-_adphoto"
+      ].indexOf(itemId) > -1
+    ) {
       continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
       continue;

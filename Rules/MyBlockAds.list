@@ -1,16 +1,16 @@
-# 2022-12-01
+# 2022-12-08
 
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
 
-# 屏蔽 RARBG 跳转
+# RARBG 跳转广告
 HOST, furiousfar.com, MyBlockAds
 HOST, swallowcrockerybless.com, MyBlockAds
 
-# 工商银行
+# 工商银行 开屏广告
 HOST, pageviewp.icbc.com.cn, MyBlockAds
 
-# 屏蔽 Clue 智库
+# Clue 智库
 HOST, api.helloclue.com, MyBlockAds
 HOST, brahe.apptimize.com, MyBlockAds
 HOST, mapi.apptimize.com, MyBlockAds
@@ -24,14 +24,10 @@ HOST-SUFFIX, safebrowsing.urlsec.qq.com, MyBlockAds
 HOST-SUFFIX, safebrowsing.googleapis.com, MyBlockAds
 HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 
-# 哔哩哔哩自动换区支持
+# 哔哩哔哩 自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
-# 屏蔽会员购
-HOST, mall.bilibili.com, MyBlockAds
-# 屏蔽游戏
-HOST-SUFFIX, api.biligame.com, MyBlockAds
 
-# 高德地图
+# 高德地图 开屏广告
 HOST, awaken.amap.com, MyBlockAds
 HOST, amap-aos-info-nogw.amap.com, MyBlockAds
 HOST, free-aos-cdn-image.amap.com, MyBlockAds
@@ -56,7 +52,7 @@ HOST, switch.cup.com.cn, MyBlockAds
 HOST, adui.tg.meitu.com, MyBlockAds
 HOST, aaid.uyunad.com, MyBlockAds
 
-# 屏蔽迅雷版权
+# 迅雷 解除版权限制
 ;HOST, hub5btmain.v6.shub.sandai.net, MyBlockAds
 ;HOST, hub5emu.v6.shub.sandai.net, MyBlockAds
 ;HOST, hub5idx.v6.shub.sandai.net, MyBlockAds

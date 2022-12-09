@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-08 19:20
+// 2022-12-09 20:55
 
 // 主要的选项配置
 const mainConfig = {
@@ -77,7 +77,7 @@ const otherUrls = {
   "/statuses/extend": "itemExtendHandler", // 微博详情页
   "/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知
   "/checkin/show": "removeCheckin", // 签到任务
-  "/live/media_homelist": "removeMediaHomelist", // 首页直播
+  "/!/live/media_homelist": "removeMediaHomelist", // 首页直播
   "/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
   "/container/get_item": "containerHandler", // 列表相关
   "/profile/container_timeline": "userHandler", // 用户主页
@@ -423,7 +423,9 @@ function removeHome(data) {
         "100505_-_newusertask",
         "100505_-_vipkaitong",
         "100505_-_hongbao2022",
-        "100505_-_adphoto"
+        "100505_-_adphoto",
+        "100505_-_advideo",
+        "2022pk_game_tonglan"
       ].indexOf(itemId) > -1
     ) {
       continue;
@@ -447,7 +449,9 @@ function removeCheckin(data) {
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
     log("remove 首页直播");
-    data.data = {};
+    for (let i = 0; i < data["data"].length; i++) {
+      delete data.data[i];
+    }
   }
 }
 

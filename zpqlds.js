@@ -18,6 +18,24 @@ hostname = www2.tigeroom.com
 ****************************************/
 
 
-body = $response.body.replace(/\"isVip":"\d+"/g, '\"isVip":"1"').replace(/\"viptime":"(.*?)"/g, '\"viptime":"2099-09-09"')
+var chxm1023 = JSON.parse($response.body);
 
-$done({body});
+chxm1023 = {
+  "message" : "",
+  "data" : {
+    "phone" : null,
+    "viptime" : "2099-09-09",
+    "stafftype" : "02",
+    "isperfect" : 0,
+    "username" : null,
+    "staffid" : "1601256577462566913",
+    "photo" : "https://fff-kangxizidian.oss-cn-hangzhou.aliyuncs.com/image/photo/default/default-photo.png",
+    "email" : null,
+    "isvip" : 1,
+    "appleid" : null
+  },
+  "code" : 200
+};
+
+
+$done({body : JSON.stringify(chxm1023)});

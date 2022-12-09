@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-09 20:25
+// 2022-12-09 20:35
 
 // 主要的选项配置
 const mainConfig = {
@@ -423,7 +423,9 @@ function removeHome(data) {
         "100505_-_newusertask",
         "100505_-_vipkaitong",
         "100505_-_hongbao2022",
-        "100505_-_adphoto"
+        "100505_-_adphoto",
+        "100505_-_advideo",
+        "2022pk_game_tonglan"
       ].indexOf(itemId) > -1
     ) {
       continue;

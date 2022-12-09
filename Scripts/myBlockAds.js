@@ -1,4 +1,4 @@
-// 2022-12-08 16:00
+// 2022-12-09 19:45
 
 var url = $request.url;
 var body = $response.body;
@@ -556,10 +556,12 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_c
   obj.data.ads_groups.forEach((i) => {
     i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-    i.ads.forEach((j) => {
-      j.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      j.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-    });
+    if (i.ads) {
+      i.ads.forEach((j) => {
+        j.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+        j.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      });
+    }
   });
   body = JSON.stringify(obj);
 }

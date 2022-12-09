@@ -449,7 +449,9 @@ function removeCheckin(data) {
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
     log("remove 首页直播");
-    data.data = [];
+    for (let i = 0; i < data["data"].length; i++) {
+      delete data.data[i];
+    }
   }
 }
 

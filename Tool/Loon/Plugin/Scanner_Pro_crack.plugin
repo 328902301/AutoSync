@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Scanner_Pro.png
 
 [Script]
-http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Scanner_Pro/Scanner_Pro_crack.js, requires-body=true, tag=Scanner Pro解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Scanner_Pro.png
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers)\/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Scanner_Pro/Scanner_Pro_crack.js, requires-body=true, tag=Scanner Pro解锁, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Scanner_Pro.png
 
 [MITM]
 hostname = api.revenuecat.com

@@ -23,7 +23,7 @@ DOMAIN-SUFFIX,adiu.amap.com,REJECT
 DOMAIN-SUFFIX,u51.me,REJECT
 
 [Rewrite]
-^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
+^https?:\/\/md\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
 

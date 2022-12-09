@@ -9,7 +9,7 @@
 
 [Rewrite]
 # 摩托范弹窗广告
-^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk reject
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk reject
 
 [Script]
 

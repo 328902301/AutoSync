@@ -4,7 +4,7 @@
  *
 脚本功能：Antv解锁
 脚本作者：King
-网站地址：https://an2.somi7.xyz/?antvinvite=PdRopDqVeG
+网站地址：https://is.gd/10Yf0H
 更新时间：2022.12.6
 2022.10.31
 脚本发布：https://t.me/yqc_123

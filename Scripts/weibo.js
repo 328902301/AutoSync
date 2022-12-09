@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-09 20:55
+// 2022-12-09 21:10
 
 // 主要的选项配置
 const mainConfig = {
@@ -154,7 +154,7 @@ function topicHandler(data) {
         let cGroup = c.card_group;
         if (!cGroup) continue;
         let cGroup0 = cGroup[0];
-        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) > -1) {
+        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) != -1) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
@@ -426,7 +426,7 @@ function removeHome(data) {
         "100505_-_adphoto",
         "100505_-_advideo",
         "2022pk_game_tonglan"
-      ].indexOf(itemId) > -1
+      ].indexOf(itemId) != -1
     ) {
       continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
@@ -449,8 +449,8 @@ function removeCheckin(data) {
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
     log("remove 首页直播");
-    for (let i = 0; i < data["data"].length; i++) {
-      delete data.data[i];
+    if (data.data && data.data.is_top) {
+      data.data.is_top = 0;
     }
   }
 }

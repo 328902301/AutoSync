@@ -1,10 +1,7 @@
-## /*  
-## Written by limbopro  
-## https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.list
-## Last updated at 06.25.2022
-## */  
+# 引用地址 https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.list
+# 2022-11-21
 
-##### https://javmost.xyz/  
+##### https://javmost.xyz/
 ;HOST, delivery-node-aziz.voe-network.net, limbo
 ;HOST, inspiringaccurate.com, limbo
 ;HOST, track.aso1.net, limbo
@@ -27,13 +24,13 @@ HOST-SUFFIX, 9e77b6e6e2.2e3f31faae.com, limbo
 HOST-SUFFIX, playersb.com, limbo
 ;HOST-SUFFIX, dood.la, limbo
 
-##### https://www.tvc.cc/  
+##### https://www.tvc.cc/
 HOST-SUFFIX, 42yenxh.cn, limbo
 HOST-SUFFIX, dwyhup.cn, limbo
 HOST-SUFFIX, netdjs.net, limbo
 HOST-SUFFIX, pc.stgowan.com, limbo
 
-##### https://avple.tv/  
+##### https://avple.tv/
 HOST-SUFFIX, tapioni.com, limbo
 ;HOST-SUFFIX, 107iwh.cn:4032, limbo
 ;HOST-SUFFIX, qinhemuye.com:443, limbo
@@ -46,7 +43,7 @@ HOST-SUFFIX, trafforsrv.com, limbo
 HOST-SUFFIX, trafficforce.com, limbo
 HOST-SUFFIX, s.csyfe.com, limbo
 
-##### https://www.tvn.cc/ 韩剧TV  
+##### https://www.tvn.cc/ 韩剧TV
 HOST-SUFFIX, qw2v.changshuohr.net, limbo
 HOST-SUFFIX, wss.haoyundmn.com, limbo
 
@@ -62,14 +59,13 @@ HOST-SUFFIX, designslicensedeep.com, limbo
 HOST-SUFFIX, a.bestcontentfood.top, limbo
 HOST-SUFFIX, tsyndicate.com, limbo
 HOST-SUFFIX, cashewsforlife208.com, limbo
-HOST-SUFFIX, mc7clurd09pla4nrtat7ion.com, limbo
 HOST-SUFFIX, e67repidwnfu7gcha.com, limbo
 HOST-SUFFIX, mc7clurd09pla4nrtat7ion.com, limbo
 HOST-SUFFIX, e67repidwnfu7gcha.com, limbo
 HOST-SUFFIX, wuzbhjpvsf.com, limbo
 HOST-SUFFIX, a.realsrv.com, limbo
 
-#####Jable.tv av吃到饱  
+#####Jable.tv av吃到饱
 HOST-SUFFIX, a.shukriya90.com, limbo
 HOST-SUFFIX, a.shukriya90.com, limbo
 HOST-SUFFIX, creative.xlviirdr.com, limbo
@@ -84,13 +80,13 @@ HOST-KEYWORD, asewlfjqwlflkew, limbo
 HOST-SUFFIX, tyrantdb.com, limbo
 HOST-SUFFIX, adserve.work, limbo
 
-#####nfmovies.com 奈菲影视  
+#####nfmovies.com 奈菲影视
 HOST-KEYWORD, brushshopy, limbo
 HOST-KEYWORD, onenews, limbo
 HOST-SUFFIX, s96.cnzz.com, limbo
 ;HOST-SUFFIX, yabo729.com, limbo
 
-######m.pianku.me/ 手机片库网  
+######m.pianku.me/ 手机片库网
 ;HOST-SUFFIX, xn--xhq9mt12cf5v.xn--io0a7i:4443, limbo
 ;HOST-KEYWORD, xn--2qux23c9ziyrq, limbo
 HOST-SUFFIX, xn--3bs795g.zone, limbo
@@ -106,7 +102,7 @@ HOST-SUFFIX, mm9842.com, limbo
 HOST-KEYWORD, e2wysbacctt1, limbo
 ;HOST-SUFFIX, streamtape.com, limbo
 
-#####netflav.com Netflav  
+#####netflav.com Netflav
 HOST-SUFFIX, maphuahin.com, limbo
 HOST-SUFFIX, ggsfq.com, limbo
 HOST-SUFFIX, ad.pornimg.xyz, limbo
@@ -126,47 +122,47 @@ HOST-SUFFIX, regulationprivilegescan.top, limbo
 HOST-SUFFIX, in-page-push.com, limbo
 HOST-SUFFIX, farmcrapsubsist.com, limbo
 
-#####avgle.me  
+#####avgle.me
 HOST-SUFFIX, jads.co, limbo
 HOST-SUFFIX, adxadserv.com, limbo
 HOST-SUFFIX, moatads.com, limbo
 HOST-SUFFIX, juicyads.in, limbo
 HOST-SUFFIX, dtscout.com, limbo
 
-#####dilili.tv  
+#####dilili.tv
 HOST-SUFFIX, 51.la, limbo
 HOST-SUFFIX, 51daeka.com, limbo
 
-######porn  
+######porn
 HOST-SUFFIX, trafficjunky.com, limbo
 
-#####xvideos  
+#####xvideos
 
-##### ja.nyahentai.com  
+##### ja.nyahentai.com
 HOST-SUFFIX, adserver.juicyads.com, limbo
 HOST-SUFFIX, poweredby.jads.co, limbo
 HOST-SUFFIX, jads.co, limbo
 
-##### www.cocomanhua.com  
+##### www.cocomanhua.com
 HOST-SUFFIX, exdynsrv.com, limbo
 ;HOST-SUFFIX, cloudfront.net, limbo
 HOST-SUFFIX, d227cncaprzd7y.cloudfront.net, limbo
 HOST-SUFFIX, d10lumateci472.cloudfront.net, limbo
 
-##### www.mfkhm.com  
+##### www.mfkhm.com
 HOST-SUFFIX, new.xiongzhangad.com, limbo
 
-##### m.yhdm.io  
+##### m.yhdm.io
 HOST-SUFFIX, dvzk66.cn, limbo
 HOST-SUFFIX, pu0glv.cn, limbo
 
-##### hmtv.me  
+##### hmtv.me
 HOST-SUFFIX, sentry.io, limbo
 
-##### www.porntrex.com/  
+##### www.porntrex.com/
 ;HOST-SUFFIX, ads.bullionyield.com, limbo
 
-##### https://www.zhenbuka.com/  
+##### https://www.zhenbuka.com/
 HOST-KEYWORD, dlads, limbo
 HOST, dagonghuzhu.com, limbo
 ;HOST-SUFFIX, byteimg.com, limbo
@@ -182,11 +178,11 @@ HOST-KEYWORD, mdapp09, limbo
 HOST-KEYWORD, juruigj, limbo
 ;HOST-KEYWORD, mmiyue, limbo
 
-##### pornhub.com  
+##### pornhub.com
 HOST-SUFFIX, etahub.com, limbo
 HOST-SUFFIX, evtubescms.phncdn.com, limbo
 
-##### www.hptoon.com  
+##### www.hptoon.com
 HOST-SUFFIX, 22c.in, limbo
 HOST-SUFFIX, imgxxx.shunxincar.cn, limbo
 ;HOST-SUFFIX, cc58.oss-cn-beijing.aliyuncs.com, limbo
@@ -199,7 +195,7 @@ HOST-SUFFIX, js.users.51.la, limbo
 HOST-SUFFIX, maxwellsery.com, limbo
 HOST-SUFFIX, annabelleabe.com, limbo
 
-##### https://91mjw.com/  
+##### https://91mjw.com/
 HOST-SUFFIX, jidukeji.com, limbo
 HOST-SUFFIX, atmib.com, limbo
 HOST-SUFFIX, bjzysd.net, limbo
@@ -216,11 +212,11 @@ HOST-SUFFIX, bhichong.com, limbo
 HOST-SUFFIX, tskdfjksldk.sdhsgcj.com, limbo
 HOST-SUFFIX, haoyuntj.com, limbo
 
-##### https://m.biquge.com.cn/  
+##### https://m.biquge.com.cn/
 HOST-SUFFIX, bizhixiang.cn, limbo
 HOST-SUFFIX, jspassport.ssl.qhimg.com, limbo
 
-##### https://gimy.tv/ 剧迷tv  
+##### https://gimy.tv/ 剧迷tv
 HOST-SUFFIX, ads.superad.cc, limbo
 
 ##### https://javfan.one/ JAVFAN
@@ -231,10 +227,10 @@ HOST-SUFFIX, aaacompany.net, limbo
 HOST-SUFFIX, d24ak3f2b.top, limbo
 HOST-SUFFIX, blastcahs.com, limbo
 
-##### javtsunami.com  
+##### javtsunami.com
 HOST-SUFFIX, alexametrics.com, limbo
 
-##### https://hpjav.tv/ JAVFAN #NSFW  
+##### https://hpjav.tv/ JAVFAN #NSFW
 HOST-SUFFIX, wpncdn.com, limbo
 HOST-SUFFIX, exosrv.com, limbo
 HOST-SUFFIX, jads.co, limbo
@@ -250,12 +246,12 @@ HOST-KEYWORD, trwl1, limbo
 HOST-KEYWORD, o333o, limbo
 HOST-SUFFIX, ad.pornimg.xyz, limbo
 
-##### https://javgg.net/  
+##### https://javgg.net/
 HOST-SUFFIX, x2sfa.javgg.eu, limbo
 HOST-SUFFIX, xd3r.javgg.eu, limbo
 HOST-SUFFIX, p242.plainwrk.name, limbo
 
-##### https://www5.javmost.com/  
+##### https://www5.javmost.com/
 HOST-KEYWORD, histats, limbo
 HOST-KEYWORD, dtscout, limbo
 HOST-KEYWORD, adform, limbo
@@ -263,7 +259,7 @@ HOST-KEYWORD, mathtag, limbo
 HOST-KEYWORD, pagespeed-mod, limbo
 HOST-KEYWORD, in-page-push, limbo
 
-#### disqus  
+#### disqus
 HOST-SUFFIX, referrer.disqus.com, limbo
 HOST-SUFFIX, links.services.disqus.com, limbo
 HOST-SUFFIX, disqusads.com, limbo

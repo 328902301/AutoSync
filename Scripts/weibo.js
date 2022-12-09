@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-09 21:15
+// 2022-12-09 21:25
 
 // 主要的选项配置
 const mainConfig = {
@@ -449,11 +449,7 @@ function removeCheckin(data) {
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
     log("remove 首页直播");
-    if (data.data && data.data.is_top) {
-      for (let i = 0; i < data.data.length; i++) {
-        data.data.is_top[i] = 0;
-      }
-    }
+    data.data = [];
   }
 }
 

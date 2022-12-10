@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-09 21:25
+// 2022-12-10 11:15
 
 // 主要的选项配置
 const mainConfig = {
@@ -17,7 +17,7 @@ const mainConfig = {
   removeRecommendItem: true, // 评论区推荐内容
   removeRewardItem: true, // 微博详情页打赏模块
 
-  removeLiveMedia: true, // 首页顶部直播
+  // removeLiveMedia: true, // 首页顶部直播
   removeNextVideo: true, // 关闭自动播放下一个视频
   removePinedTrending: true, // 删除热搜列表置顶条目
 
@@ -445,13 +445,13 @@ function removeCheckin(data) {
   data.show = 0;
 }
 
-// 首页直播
-function removeMediaHomelist(data) {
-  if (mainConfig.removeLiveMedia) {
-    log("remove 首页直播");
-    data.data = [];
-  }
-}
+// // 首页直播
+// function removeMediaHomelist(data) {
+//   if (mainConfig.removeLiveMedia) {
+//     log("remove 首页直播");
+//     data.data = [];
+//   }
+// }
 
 // 评论区相关和推荐内容
 function removeComments(data) {

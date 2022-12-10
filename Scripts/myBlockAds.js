@@ -1,4 +1,4 @@
-// 2022-12-10 14:25
+// 2022-12-10 14:45
 
 var url = $request.url;
 var body = $response.body;
@@ -181,7 +181,7 @@ if (!body) {
       } catch (error) {
         console.log(`哔哩哔哩-我的页面, 出现异常`);
       }
-        break;
+      break;
     case "哔哩哔哩-会员清晰度":
       try {
         let obj = JSON.parse(body);
@@ -609,6 +609,7 @@ if (!body) {
       } catch (error) {
         console.log(`微博-开屏广告-sdkad, 出现异常`);        
       }
+      break;
     case "微博-开屏广告-wbpullad":
       try {
         let obj = JSON.parse(body);
@@ -652,6 +653,7 @@ if (!body) {
       } catch (error) {
         console.log(`小红书-开屏广告-config, 出现异常`);
       }
+      break;
     case "小红书-开屏广告-splash_config":
       try {
         let obj = JSON.parse(body);
@@ -749,6 +751,7 @@ if (!body) {
     //   } catch (error) {
     //     console.log(`知乎-推荐列表, 出现异常`);
     //   }
+    //   break;
     // case "知乎-appcloud2_config":
     //   try {
     //     let obj = JSON.parse(body);
@@ -759,6 +762,7 @@ if (!body) {
     //   } catch (error) {
     //     console.log(`知乎-appcloud2_config, 出现异常`);
     //   }
+    //   break;
     // case "知乎-回答下方广告":
     //   try {
     //     let obj = JSON.parse(body);
@@ -768,6 +772,7 @@ if (!body) {
     //   } catch (error) {
     //     console.log(`知乎-回答下方广告, 出现异常`);
     //   }
+    //   break;
     // case "知乎-文章回答下方广告":
     //   try {
     //     let obj = JSON.parse(body);
@@ -776,6 +781,7 @@ if (!body) {
     //   } catch (error) {
     //     console.log(`知乎-文章回答下方广告, 出现异常`);
     //   }
+    //   break;
     // case "知乎-问题回答列表":
     //   try {
     //     let obj = JSON.parse(body);
@@ -785,7 +791,7 @@ if (!body) {
     //   } catch (error) {
     //     console.log(`知乎-问题回答列表, 出现异常`);
     //   }
-
+    //   break;
     default:
       break;
   }

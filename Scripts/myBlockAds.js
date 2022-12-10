@@ -1,15 +1,16 @@
-// 2022-12-10 11:30
+// 2022-12-10 11:35
 
 var url = $request.url;
 var body = $response.body;
 
 if (!body) {
   $done({});
+} else {
+  var obj = JSON.parse(body);
 }
 
 // 12306 开屏广告
 if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.materialsList) {
     for (let i = 0; i < obj.materialsList.length; i++) {
       obj.materialsList[i].filePath = "";
@@ -19,7 +20,6 @@ if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(url)) {
 
 // 哔哩哔哩 去除强制设置的皮肤
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data && obj.data.common_equip) delete obj.data.common_equip;
 }
 
@@ -31,7 +31,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
       arr[i].pos = i + 1;
     }
   }
-  let obj = JSON.parse(body);
   if (obj.data && obj.data.tab) {
     obj.data.tab = obj.data.tab.filter((item) => {
       if (
@@ -66,7 +65,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(url)) {
 
 // 哔哩哔哩 去除右上角活动入口
 if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data && obj.data.hash && obj.data.online.icon) {
     obj.data.hash = "";
     obj.data.online.icon = "";
@@ -75,7 +73,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) {
 
 // 哔哩哔哩 我的页面处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
-  let obj = JSON.parse(body);
   // 标准版：
   // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
   // 港澳台：
@@ -121,7 +118,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) {
 
 // 哔哩哔哩 解锁1080p高码率 2022-03-05 add by ddgksf2013
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.vip.type = 2;
   obj.data.vip.status = 1;
   obj.data.vip.vip_pay_type = 1;
@@ -130,7 +126,6 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
 
 // 哔哩哔哩 推荐广告处理
 if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data.items?.length) {
     obj.data.items = obj.data.items.filter((i) => {
       const { card_type: cardType, card_goto: cardGoto } = i;
@@ -170,19 +165,16 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) {
 
 // 哔哩哔哩 开屏广告处理
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data && obj.data.show) delete obj.data.show;
 }
 
 // 哔哩哔哩 热搜去广告
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data) delete obj.data;
 }
 
 // 哔哩哔哩 观影页去广告
 if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url)) {
-  let obj = JSON.parse(body);
   obj.result.modules?.forEach((module) => {
     // 头部banner
     if (module.style.startsWith("banner")) {
@@ -195,13 +187,11 @@ if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url)) {
 
 // 哔哩哔哩 直播去广告
 if (/^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
 }
 
 // 嘀嗒出行 开屏广告
 if (/^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.hasOwnProperty("startupPages") == true) {
     obj.show_time = 1;
     obj.full_screen = 0;
@@ -218,7 +208,6 @@ if (/^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(url)) {
 
 // 多点 开屏广告
 if (/^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(url)) {
-  let obj = JSON.parse(body);
   for (let i = 0; i < obj["data"]["welcomePage"].length; i++) {
     obj["data"]["welcomePage"][i]["onlineTime"] = 2208960000000;
     obj["data"]["welcomePage"][i]["offlineTime"] = 2209046399000;
@@ -266,7 +255,6 @@ if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(u
 
 // 京东 开屏广告
 if (/^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url)) {
-  let obj = JSON.parse(body);
   for (let i = 0; i < obj.images.length; i++) {
     for (let j = 0; j < obj.images[i].length; j++) {
       if (obj.images[i][j].showTimes) {
@@ -283,13 +271,11 @@ if (/^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url)) {
 
 // 酷安 replyList
 if (/^https?:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data = Object.values(obj.data).filter((item) => item.id);
 }
 
 // 酷安 index
 if (/^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data = Object.values(obj.data).filter((item) =>
     !(
       item["entityTemplate"] == "sponsorCard" ||
@@ -303,7 +289,6 @@ if (/^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(url)) {
 
 // 酷安 dataList
 if (/^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data = Object.values(obj.data).filter((item) =>
     !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件")
   );
@@ -311,7 +296,6 @@ if (/^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(url)) {
 
 // 酷安 detail
 if (/^https?:\/\/api.coolapk.com\/v6\/feed\/detail/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.hotReplyRows = Object.values(obj.data.hotReplyRows).filter(
     (item) => item["id"]
   );
@@ -321,7 +305,6 @@ if (/^https?:\/\/api.coolapk.com\/v6\/feed\/detail/.test(url)) {
 
 // 联享家 开屏广告
 if (/^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(url)) {
-  let obj = JSON.parse(body);
   obj.seq = "0";
   obj.reqinterval = 0;
   delete obj.last_ads;
@@ -330,14 +313,12 @@ if (/^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(url)) {
 
 // 美团外卖 开屏广告
 if (/^https?:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(url)) {
-  let obj = JSON.parse(body);
   delete obj.data.startpicture.ad;
   delete obj.data.startpicture.mk;
 }
 
 // 什么值得买 处理开屏广告
 if (/^https?:\/\/app-api\.smzdm\.com\/util\/loading/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.forEach((element) => {
     element.start_date = "2040-01-01 00:00:00";
     element.end_date = "2040-01-01 23:59:59";
@@ -349,7 +330,6 @@ if (/^https?:\/\/app-api\.smzdm\.com\/util\/loading/.test(url)) {
 
 // 什么值得买 去除百科广告
 if (/^https?:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.rows = obj.data.rows.filter((element) => {
     return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id == "");
   });
@@ -357,7 +337,6 @@ if (/^https?:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(url)) {
 
 // 什么值得买 去除好价广告
 if (/^https?:\/\/haojia-api\.smzdm\.com\/home\/list/.test(url)) {
-  let obj = JSON.parse(body);
   let bigBanner = obj.data.banner.big_banner.filter((element) => {
     return element.ad_banner_id == "";
   });
@@ -375,13 +354,11 @@ if (/^https?:\/\/haojia-api\.smzdm\.com\/home\/list/.test(url)) {
 
 // 什么值得买 去除好价详情页广告
 if (/^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.lanmu_qikan = {};
 }
 
 // 什么值得买 处理首页广告
 if (/^https?:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(url)) {
-  let obj = JSON.parse(body);
   let component = [];
   obj.data.component.forEach((element) => {
     if (element.zz_type === "banner") {
@@ -411,13 +388,11 @@ if (/^https?:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(url)) {
 
 // 什么值得买 去除搜索标签广告
 if (/^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.hongbao = {};
 }
 
 // 什么值得买 去除搜索结果广告
 if (/^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.rows = obj.data.rows.filter((element) => {
     return element.article_tag !== "广告";
   });
@@ -425,7 +400,6 @@ if (/^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(url)) {
 
 // 什么值得买 去除值会员权益中心banner广告
 if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.big_banner = obj.data.big_banner.filter((element) => {
     return element.logo_title !== "广告";
   });
@@ -433,55 +407,44 @@ if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(url)) {
 
 // 微博 开屏广告 sdkad
 if (/^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(url)) {
-  try {
-    body = body.match(/\{.*\}/);
-    let obj = JSON.parse(body);
-    if (obj.needlocation) obj.needlocation = false;
-    if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
-    if (obj.code) obj.code = 200;
-    if (obj.background_delay_display_time) {
-      obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
-    }
-    if (obj.lastAdShow_delay_display_time) {
-      obj.lastAdShow_delay_display_time = 31536000;
-    }
-    if (obj.realtime_ad_video_stall_time) {
-      obj.realtime_ad_video_stall_time = 31536000;
-    }
-    if (obj.realtime_ad_timeout_duration) {
-      obj.realtime_ad_timeout_duration = 31536000;
-    }
-    for (let item of obj["ads"]) {
-      item["displaytime"] = 0;
-      item["displayintervel"] = 31536000;
-      item["allowdaydisplaynum"] = 0;
-      item["begintime"] = "2040-01-01 00:00:00";
-      item["endtime"] = "2040-01-01 23:59:59";
-    }
-    obj = obj + "OK";
-  } catch (error) {
-    console.log(`微博 开屏广告 sdkad 异常`);
+  body = body.match(/\{.*\}/);
+  if (obj.needlocation) obj.needlocation = false;
+  if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
+  if (obj.code) obj.code = 200;
+  if (obj.background_delay_display_time) {
+    obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
   }
+  if (obj.lastAdShow_delay_display_time) {
+    obj.lastAdShow_delay_display_time = 31536000;
+  }
+  if (obj.realtime_ad_video_stall_time) {
+    obj.realtime_ad_video_stall_time = 31536000;
+  }
+  if (obj.realtime_ad_timeout_duration) {
+    obj.realtime_ad_timeout_duration = 31536000;
+  }
+  for (let item of obj["ads"]) {
+    item["displaytime"] = 0;
+    item["displayintervel"] = 31536000;
+    item["allowdaydisplaynum"] = 0;
+    item["begintime"] = "2040-01-01 00:00:00";
+    item["endtime"] = "2040-01-01 23:59:59";
+  }
+  obj = obj + "OK";
 }
 
 // 微博 开屏广告 wbpullad
 if (/^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad.lua/.test(url)) {
-  try {
-    let obj = JSON.parse(body);
-    for (let item of obj["cached_ad"]["ads"]) {
-      item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      item["show_count"] = 0;
-      item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
-      item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-    }
-  } catch (error) {
-    console.log(`微博 开屏广告 wbpullad 异常`);
+  for (let item of obj["cached_ad"]["ads"]) {
+    item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    item["show_count"] = 0;
+    item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
+    item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
   }
 }
 
 // 小爱音箱 开屏广告
 if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(url)) {
-  let obj = JSON.parse(body);
   let data = [];
   for (let i = 0; i < obj.data.length; i++) {
     let ad = obj.data[i];
@@ -508,7 +471,6 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?
 
 // 小红书 开屏广告 splash_config
 if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data.ads_groups.forEach((i) => {
     i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
@@ -523,13 +485,11 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_c
 
 // 小红书 处理信息流广告
 if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(url)) {
-  let obj = JSON.parse(body);
   obj.data = obj.data.filter((d) => !d.ads_info);
 }
 
 // 小米商城 开屏广告
 if (/^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(url)) {
-  let obj = JSON.parse(body);
   obj.code = 0;
   obj.data.skip_splash = true;
   delete obj.data.splash;
@@ -539,13 +499,11 @@ if (/^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(url)) {
 
 // 知乎 开屏广告
 if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(url)) {
-  let obj = JSON.parse(body);
   if (obj.launch && obj.launch.ads) obj.launch.ads = [];
 }
 
 // 知乎 首页右下角悬浮框
 if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
-  let obj = JSON.parse(body);
   if ("feed_egg" in obj) obj = {};
 }
 
@@ -559,7 +517,6 @@ if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
 //         .map((pair) => pair.split("="))
 //     )[queryName];
 //   }
-//   let obj = JSON.parse(body);
 //   if (obj.data) {
 //     obj.data = obj.data.filter((item) => {
 //       if (item.extra?.type === "zvideo") {
@@ -588,7 +545,6 @@ if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
 
 // // 知乎 appcloud2 config 配置
 // if (/^https?:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(url)) {
-//   let obj = JSON.parse(body);
 //   if (obj.config?.zhcnh_thread_sync?.ZHBackUpIP_Switch_Open === "1") {
 //     obj.config.zhcnh_thread_sync.ZHBackUpIP_Switch_Open = "0";
 //   }
@@ -596,20 +552,17 @@ if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(url)) {
 
 // // 知乎 回答下的广告
 // if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(url)) {
-//   let obj = JSON.parse(body);
 //   if (obj.paging) body.paging = null;
 //   if (obj.data) body.data = null;
 // }
 
 // // 知乎 文章 articles 回答下广告
 // if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(url)) {
-//   let obj = JSON.parse(body);
 //   if (obj.ad_info) obj.ad_info = null;
 // }
 
 // // 知乎 问题回答列表
 // if (/^https?:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(url)) {
-//   let obj = JSON.parse(body);
 //   if (obj.data.ad_info) obj.data.ad_info = null;
 //   if (obj.ad_info) obj.ad_info = null;
 // }

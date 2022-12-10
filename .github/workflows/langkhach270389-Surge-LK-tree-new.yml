@@ -1,0 +1,28 @@
+name: langkhach270389-Surge-LK-tree-new-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-langkhach270389-Surge-LK-tree-new
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync langkhach270389-Surge-LK-tree-new
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/langkhach270389/Surge-LK.git"
+          source_branch: "new"
+          destination_branch: "langkhach270389-Surge-LK-tree-new"
+          github_token: ${{ secrets.PAT }}

@@ -1,4 +1,4 @@
-// 2022-12-10 14:45
+// 2022-12-10 14:55
 
 var url = $request.url;
 var body = $response.body;
@@ -11,21 +11,21 @@ if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(url)) ad
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(url)) adAppName = "哔哩哔哩-我的页面";
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) adAppName = "哔哩哔哩-会员清晰度";
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) adAppName = "哔哩哔哩-推荐广告";
-if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) adAppName = "哔哩哔哩-开屏广告";
 if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(url)) adAppName = "哔哩哔哩-热搜广告";
+if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) adAppName = "哔哩哔哩-开屏广告";
 if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(url)) adAppName = "哔哩哔哩-观影页广告";
 if (/^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(url)) adAppName = "哔哩哔哩-直播广告";
 if (/^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(url)) adAppName = "嘀嗒出行-开屏广告";
 if (/^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(url)) adAppName = "多点-开屏广告";
-if (/^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(url)) adAppName = "IT之家-mobileWeb";
 if (/^https?:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(url)) adAppName = "IT之家-appList";
 if (/^https?:\/\/api\.ithome\.com\/json\/slide\/index/.test(url)) adAppName = "IT之家-appSlide";
+if (/^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(url)) adAppName = "IT之家-mobileWeb";
 if (/^https?:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(url)) adAppName = "IT之家-newAppFeed";
 if (/^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url)) adAppName = "京东-开屏广告"
-if (/^https?:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(url)) adAppName = "酷安-replyList";
-if (/^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(url)) adAppName = "酷安-index";
-if (/^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(url)) adAppName = "酷安-dataList";
 if (/^https?:\/\/api.coolapk.com\/v6\/feed\/detail/.test(url)) adAppName = "酷安-detail";
+if (/^https?:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(url)) adAppName = "酷安-replyList";
+if (/^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(url)) adAppName = "酷安-dataList";
+if (/^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(url)) adAppName = "酷安-index";
 if (/^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(url)) adAppName = "联享家-开屏广告";
 if (/^https?:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(url)) adAppName = "美团外卖-开屏广告";
 if (/^https?:\/\/app-api\.smzdm\.com\/util\/loading/.test(url)) adAppName = "什么值得买-开屏广告";
@@ -237,15 +237,6 @@ if (!body) {
         console.log(`哔哩哔哩-推荐广告, 出现异常`);
       }
       break;
-    case "哔哩哔哩-开屏广告":
-      try {
-        let obj = JSON.parse(body);
-        if (obj.data && obj.data.show) delete obj.data.show;
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`哔哩哔哩-开屏广告, 出现异常`);
-      }
-      break;
     case "哔哩哔哩-热搜广告":
       try {
         let obj = JSON.parse(body);
@@ -253,6 +244,15 @@ if (!body) {
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`哔哩哔哩-热搜广告, 出现异常`);
+      }
+      break;
+    case "哔哩哔哩-开屏广告":
+      try {
+        let obj = JSON.parse(body);
+        if (obj.data && obj.data.show) delete obj.data.show;
+        body = JSON.stringify(obj);
+      } catch (error) {
+        console.log(`哔哩哔哩-开屏广告, 出现异常`);
       }
       break;
     case "哔哩哔哩-观影页广告":
@@ -312,17 +312,6 @@ if (!body) {
         console.log(`多点-开屏广告, 出现异常`);
       }
       break;
-    case "IT之家-mobileWeb":
-      try {
-        let obj = JSON.parse(body);
-        obj.Result = obj.Result.filter((r) =>
-          r.NewsTips.every((t) => t.TipName !== "广告")
-        );
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`IT之家-mobileWebx, 出现异常`);
-      }
-      break;
     case "IT之家-appList":
       try {
         let obj = JSON.parse(body);
@@ -341,6 +330,17 @@ if (!body) {
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`IT之家-appSlide, 出现异常`);
+      }
+      break;
+    case "IT之家-mobileWeb":
+      try {
+        let obj = JSON.parse(body);
+        obj.Result = obj.Result.filter((r) =>
+          r.NewsTips.every((t) => t.TipName !== "广告")
+        );
+        body = JSON.stringify(obj);
+      } catch (error) {
+        console.log(`IT之家-mobileWebx, 出现异常`);
       }
       break;
     case "IT之家-newAppFeed":
@@ -396,6 +396,30 @@ if (!body) {
         console.log(`酷安-replyList, 出现异常`);
       }
       break;
+    case "酷安-detail":
+      try {
+        let obj = JSON.parse(body);
+        obj.data.hotReplyRows = Object.values(obj.data.hotReplyRows).filter(
+          (item) => item["id"]
+        );
+        obj.data.include_goods_ids = [];
+        obj.data.include_goods = [];
+        body = JSON.stringify(obj);
+      } catch (error) {
+        console.log(`酷安-detail, 出现异常`);
+      }
+      break;
+    case "酷安-dataList":
+      try {
+        let obj = JSON.parse(body);
+        obj.data = Object.values(obj.data).filter((item) =>
+          !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件")
+        );
+        body = JSON.stringify(obj);
+      } catch (error) {
+        console.log(`酷安-dataList, 出现异常`);
+      }
+      break;
     case "酷安-index":
       try {
         let obj = JSON.parse(body);
@@ -411,30 +435,6 @@ if (!body) {
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`酷安-index, 出现异常`);
-      }
-      break;
-    case "酷安-dataList":
-      try {
-        let obj = JSON.parse(body);
-        obj.data = Object.values(obj.data).filter((item) =>
-          !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件")
-        );
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`酷安-dataList, 出现异常`);
-      }
-      break;
-    case "酷安-detail":
-      try {
-        let obj = JSON.parse(body);
-        obj.data.hotReplyRows = Object.values(obj.data.hotReplyRows).filter(
-          (item) => item["id"]
-        );
-        obj.data.include_goods_ids = [];
-        obj.data.include_goods = [];
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`酷安-detail, 出现异常`);
       }
       break;
     case "联享家-开屏广告":

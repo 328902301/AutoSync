@@ -329,7 +329,6 @@ function itemExtendHandler(data) {
       }
     }
   }
-
   if (mainConfig.removeFollow) {
     if (data.follow_data) data.follow_data = null;
   }
@@ -345,8 +344,6 @@ function itemExtendHandler(data) {
   try {
     let picUrl = data.trend.extra_struct.extBtnInfo.btn_picurl;
     if (picUrl.indexOf("timeline_icon_ad_delete") != -1) delete data.trend;
-    let shopWindowCard = data.statuses.common_struct.actionlog.source;
-    if (shopWindowCard.includes("ad")) delete data.statuses.common_struct;
   } catch (error) {}
   if (mainConfig.modifyMenus && data.custom_action_list) {
     let newActions = [];

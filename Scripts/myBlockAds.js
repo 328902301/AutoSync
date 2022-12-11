@@ -1,4 +1,4 @@
-// 2022-12-11 12:44
+// 2022-12-11 12:46
 
 var url = $request.url;
 var body = $response.body;
@@ -579,7 +579,7 @@ switch (adAppName) {
     break;
   case "微博-开屏广告-sdkad":
     try {
-      body = body.match(/\{.*\}OK/);
+      body = body.match(/\{.*\}/);
       let obj = JSON.parse(body);
       if (obj.needlocation) obj.needlocation = false;
       if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;

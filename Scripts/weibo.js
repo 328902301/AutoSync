@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-10 11:15
+// 2022-12-11 17:10
 
 // 主要的选项配置
 const mainConfig = {
@@ -113,6 +113,7 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type == "ad") return true;
+  if (data.actionlog && data.actionlog.source == "ad") return true;
   return false;
 }
 

@@ -203,11 +203,13 @@ switch (adAppName(url)) {
           if (cardType && cardGoto) {
             if (cardType === "banner_v8" && cardGoto === "banner") {
               if (i.banner_item) {
-                for (const v of i.banner_item) {
-                  if (v.type) {
-                    if (v.type === "ad") return false;
-                  }
-                }
+                // 去除判断条件 首页横版内容全部去掉
+                // for (const v of i.banner_item) {
+                //   if (v.type) {
+                //     if (v.type === "ad") return false;
+                //   }
+                // }
+                return false;
               }
             } else if (
               cardType === "cm_v2" &&

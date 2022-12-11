@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-11 17:40
+// 2022-12-11 17:55
 
 // 主要的选项配置
 const mainConfig = {
@@ -113,7 +113,6 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type == "ad") return true;
-  if (data.statuses && data.statuses.common_struct.actionlog.source === "ad") return true;
   return false;
 }
 
@@ -278,6 +277,17 @@ function isBlock(data) {
   return false;
 }
 
+function removeShopWindow(data) {
+  if (!data) return;
+  let struct = data.statuses.common_struct;
+  if (!struct) return;
+  let newStruct = [];
+  for (const s of struct) {
+    if (s.actionlog.source != "ad") newStruct.push(s);
+  }
+  data.statuses.common_struct = newStruct;
+}
+
 function removeTimeLine(data) {
   for (const s of ["ad", "advertises", "trends"]) {
     if (data[s]) delete data[s];
@@ -287,6 +297,7 @@ function removeTimeLine(data) {
   for (const s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
+      removeShopWindow(s);
       if (!isBlock(s)) newStatuses.push(s);
     }
   }

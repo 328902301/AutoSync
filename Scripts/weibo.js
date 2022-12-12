@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-12 19:49
+// 2022-12-12 21:23
 
 // 主要的选项配置
 const mainConfig = {
@@ -94,23 +94,23 @@ const otherUrls = {
 
 function getModifyMethod(url) {
   for (const s of modifyCardsUrls) {
-    if (url.indexOf(s) != -1) return "removeCards";
+    if (url.indexOf(s) !== -1) return "removeCards";
   }
   for (const s of modifyStatusesUrls) {
-    if (url.indexOf(s) != -1) return "removeTimeLine";
+    if (url.indexOf(s) !== -1) return "removeTimeLine";
   }
   for (const [path, method] of Object.entries(otherUrls)) {
-    if (url.indexOf(path) != -1) return method;
+    if (url.indexOf(path) !== -1) return method;
   }
   return null;
 }
 
 function isAd(data) {
   if (!data) return false;
-  if (data.mblogtypename == "广告" || data.mblogtypename == "热推") {
+  if (data.mblogtypename === "广告" || data.mblogtypename === "热推") {
     return true;
   }
-  if (data.promotion && data.promotion.type == "ad") return true;
+  if (data.promotion && data.promotion.type === "ad") return true;
   return false;
 }
 
@@ -119,7 +119,7 @@ function isBlock(data) {
   if (blockIds.length === 0) return false;
   let uid = data.user.id;
   for (const blockId of blockIds) {
-    if (blockId == uid) return true;
+    if (blockId === uid) return true;
   }
   return false;
 }
@@ -152,22 +152,22 @@ function topicHandler(data) {
       }
     } else {
       if (!mainConfig.removeUnusedPart) continue;
-      if (c.itemid == "bottom_mix_activity") {
+      if (c.itemid === "bottom_mix_activity") {
         addFlag = false;
-      } else if (c?.top?.title == "正在活跃") {
+      } else if (c?.top?.title === "正在活跃") {
         addFlag = false;
-      } else if (c.card_type == 200 && c.group) {
+      } else if (c.card_type === 200 && c.group) {
         addFlag = false;
       } else {
         let cGroup = c.card_group;
         if (!cGroup) continue;
         let cGroup0 = cGroup[0];
-        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) != -1) {
+        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) !== -1) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
           for (let cg of cGroup) {
-            if (["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(cg.itemid) == -1) {
+            if (["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(cg.itemid) === -1) {
               newCardGroup.push(cg);
             }
           }
@@ -196,8 +196,8 @@ function removeSearchMain(data) {
 
 function checkSearchWindow(item) {
   if (!mainConfig.removeSearchWindow) return false;
-  if (item.category != "card") return false;
-  return (item.data?.itemid == "finder_window" || item.data?.itemid == "more_frame");
+  if (item.category !== "card") return false;
+  return (item.data?.itemid === "finder_window" || item.data?.itemid === "more_frame");
 }
 
 // 发现页
@@ -205,7 +205,7 @@ function removeSearch(data) {
   if (!data.items) return data;
   let newItems = [];
   for (let item of data.items) {
-    if (item.category == "feed") {
+    if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
     } else {
       if (!checkSearchWindow(item)) newItems.push(item);
@@ -247,13 +247,13 @@ function removeCards(data) {
       let newGroup = [];
       for (const group of cardGroup) {
         let cardType = group.card_type;
-        if (cardType != 118) newGroup.push(group);
+        if (cardType !== 118) newGroup.push(group);
       }
       card.card_group = newGroup;
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165].indexOf(cardType) != -1) {
+      if ([9, 165].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) newCards.push(card);
       } else {
         newCards.push(card);
@@ -270,7 +270,7 @@ function lvZhouHandler(data) {
   if (!struct) return;
   let newStruct = [];
   for (const s of struct) {
-    if (s.name != "绿洲") newStruct.push(s);
+    if (s.name !== "绿洲") newStruct.push(s);
   }
   data.common_struct = newStruct;
 }
@@ -338,7 +338,7 @@ function itemExtendHandler(data) {
   // 广告 暂时判断逻辑根据图片  https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
   try {
     let picUrl = data.trend.extra_struct.extBtnInfo.btn_picurl;
-    if (picUrl.indexOf("timeline_icon_ad_delete") != -1) delete data.trend;
+    if (picUrl.indexOf("timeline_icon_ad_delete") !== -1) delete data.trend;
   } catch (error) {}
   if (mainConfig.modifyMenus && data.custom_action_list) {
     let newActions = [];
@@ -381,7 +381,7 @@ function updateProfileSkin(item, k) {
       if (!d.image) continue;
       try {
         dm = d.image.style.darkMode;
-        if (dm != "alpha") d.image.style.darkMode = "alpha";
+        if (dm !== "alpha") d.image.style.darkMode = "alpha";
         d.image.iconUrl = profileSkin[i++];
         if (d.dot) d.dot = [];
       } catch (error) {}
@@ -397,15 +397,15 @@ function removeHome(data) {
   let newItems = [];
   for (let item of data.items) {
     let itemId = item.itemId;
-    if (itemId == "profileme_mine") {
+    if (itemId === "profileme_mine") {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
       updateFollowOrder(item);
       newItems.push(item);
-    } else if (itemId == "100505_-_top8") {
+    } else if (itemId === "100505_-_top8") {
       updateProfileSkin(item, "profileSkin1");
       newItems.push(item);
-    } else if (itemId == "100505_-_newcreator") {
-      if (item.type == "grid") {
+    } else if (itemId === "100505_-_newcreator") {
+      if (item.type === "grid") {
         updateProfileSkin(item, "profileSkin2");
         newItems.push(item);
       } else {
@@ -421,7 +421,7 @@ function removeHome(data) {
         "100505_-_adphoto",
         "100505_-_advideo",
         "2022pk_game_tonglan"
-      ].indexOf(itemId) != -1
+      ].indexOf(itemId) !== -1
     ) {
       continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
@@ -459,7 +459,7 @@ function removeComments(data) {
   let newItems = [];
   for (const item of items) {
     let adType = item.adType || "";
-    if (delType.indexOf(adType) == -1) {
+    if (delType.indexOf(adType) === -1) {
       newItems.push(item);
     }
   }
@@ -476,10 +476,10 @@ function containerHandler(data) {
     }
   }
   if (mainConfig.removeInterestTopic && data.itemid) {
-    if (data.itemid.indexOf("infeed_may_interest_in") != -1) {
+    if (data.itemid.indexOf("infeed_may_interest_in") !== -1) {
       log("remove 感兴趣的超话");
       data.card_group = [];
-    } else if (data.itemid.indexOf("infeed_friends_recommend") != -1) {
+    } else if (data.itemid.indexOf("infeed_friends_recommend") !== -1) {
       log("remove 超话好友关注");
       data.card_group = [];
     }
@@ -494,9 +494,9 @@ function userHandler(data) {
   let newItems = [];
   for (let item of data.items) {
     let isAdd = true;
-    if (item.category == "group") {
+    if (item.category === "group") {
       try {
-        if (item.items[0]["data"]["desc"] == "可能感兴趣的人") isAdd = false;
+        if (item.items[0]["data"]["desc"] === "可能感兴趣的人") isAdd = false;
       } catch (error) {}
     }
     if (isAdd) newItems.push(item);

@@ -1,4 +1,4 @@
-// 2022-12-12 19:49
+// 2022-12-12 21:23
 
 var url = $request.url;
 var body = $response.body;
@@ -415,7 +415,7 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       obj.data = Object.values(obj.data).filter((item) =>
-        !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件")
+        !(item["entityTemplate"] === "sponsorCard" || item.title === "精选配件")
       );
       body = JSON.stringify(obj);
     } catch (error) {
@@ -427,11 +427,11 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.data = Object.values(obj.data).filter((item) =>
         !(
-          item["entityTemplate"] == "sponsorCard" ||
-          item.entityId == 8639 ||
-          item.entityId == 33066 ||
-          item.entityId == 32557 ||
-          item.title.indexOf("值得买") != -1
+          item["entityTemplate"] === "sponsorCard" ||
+          item.entityId === 8639 ||
+          item.entityId === 33066 ||
+          item.entityId === 32557 ||
+          item.title.indexOf("值得买") !== -1
         )
       );
       body = JSON.stringify(obj);
@@ -480,7 +480,7 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       obj.data.rows = obj.data.rows.filter((element) => {
-        return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id == "");
+        return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "");
       });
       body = JSON.stringify(obj);
     } catch (error) {
@@ -491,7 +491,7 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       let bigBanner = obj.data.banner.big_banner.filter((element) => {
-        return element.ad_banner_id == "";
+        return element.ad_banner_id === "";
       });
       obj.data.banner.big_banner = bigBanner;
       let rows = obj.data.rows.filter((element) => {
@@ -647,7 +647,7 @@ switch (adAppName(url)) {
   case "小红书-开屏广告-config":
     try {
       let obj = JSON.parse($response.body);
-      //obj.data.tabbar.tabs = Object.values(obj.data.tabbar.tabs).filter((item) => !item.title == "购买");
+      //obj.data.tabbar.tabs = Object.values(obj.data.tabbar.tabs).filter((item) => !item.title === "购买");
       delete obj.data.store;
       delete obj.data.splash;
       delete obj.data.loading_img;

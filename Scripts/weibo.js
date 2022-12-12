@@ -63,7 +63,10 @@ const itemMenusConfig = {
   mblog_menus_apeal: false, // 申诉
   mblog_menus_home: false // 返回首页
 };
-
+const modifySplashUrls = [
+  "sdkapp.uve.weibo.com/interface/sdk/sdkad.php",
+  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua"
+];
 const modifyCardsUrls = ["/cardlist", "video/community_tab", "/searchall"];
 const modifyStatusesUrls = [
   "statuses/friends/timeline",
@@ -71,7 +74,6 @@ const modifyStatusesUrls = [
   "statuses/unread_hot_timeline",
   "groups/timeline"
 ];
-
 const otherUrls = {
   "/profile/me": "removeHome", // 个人页模块
   "/statuses/extend": "itemExtendHandler", // 微博详情页
@@ -100,6 +102,9 @@ function getModifyMethod(url) {
   }
   for (const s of modifyStatusesUrls) {
     if (url.indexOf(s) != -1) return "removeTimeLine";
+  }
+  for (const s of modifySplashUrls) {
+    if (url.indexOf(s) != -1) return "removeSplashAds";
   }
   for (const [path, method] of Object.entries(otherUrls)) {
     if (url.indexOf(path) != -1) return method;

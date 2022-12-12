@@ -1,4 +1,4 @@
-# 2022-12-09 11:35
+# 2022-12-12 22:29
 
 # ======= 0 ======= #
 # 解除安全浏览限制
@@ -11,7 +11,7 @@ HOST-SUFFIX, lookup.api.bsb.baidu.com, MyBlockAds
 # 哔哩哔哩 自动换区支持
 IP-CIDR, 203.107.1.1/32, MyBlockAds
 # 哔哩哔哩 proto 支持
-HOST, grpc.biliapi.net, MyBlockAds
+;HOST, grpc.biliapi.net, MyBlockAds
 
 # ======= C ======= #
 # Clue 智库

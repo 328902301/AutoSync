@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-10 11:15
+// 2022-12-12 17:28
 
 // 主要的选项配置
 const mainConfig = {
@@ -63,7 +63,6 @@ const itemMenusConfig = {
   mblog_menus_apeal: false, // 申诉
   mblog_menus_home: false // 返回首页
 };
-
 const modifyCardsUrls = ["/cardlist", "video/community_tab", "/searchall"];
 const modifyStatusesUrls = [
   "statuses/friends/timeline",
@@ -71,8 +70,9 @@ const modifyStatusesUrls = [
   "statuses/unread_hot_timeline",
   "groups/timeline"
 ];
-
 const otherUrls = {
+  "sdkapp.uve.weibo.com/interface/sdk/sdkad.php": "removeSplashPhp", // 开屏广告 sdkad
+  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua": "removeSplashLua", // // 开屏广告 wbpullad
   "/profile/me": "removeHome", // 个人页模块
   "/statuses/extend": "itemExtendHandler", // 微博详情页
   "/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知
@@ -114,6 +114,46 @@ function isAd(data) {
   }
   if (data.promotion && data.promotion.type == "ad") return true;
   return false;
+}
+
+// 开屏广告 php
+function removeSplashPhp(data) {
+  if (!data.ads) return data;
+  if (data.needlocation) data.needlocation = false;
+  if (data.show_push_splash_ad) data.show_push_splash_ad = false;
+  if (data.code) data.code = 200;
+  if (data.background_delay_display_time) {
+    data.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
+  }
+  if (data.lastAdShow_delay_display_time) {
+    data.lastAdShow_delay_display_time = 31536000;
+  }
+  if (data.realtime_ad_video_stall_time) {
+    data.realtime_ad_video_stall_time = 31536000;
+  }
+  if (data.realtime_ad_timeout_duration) {
+    data.realtime_ad_timeout_duration = 31536000;
+  }
+  for (let item of data["ads"]) {
+    item["displaytime"] = 0;
+    item["displayintervel"] = 31536000;
+    item["allowdaydisplaynum"] = 0;
+    item["begintime"] = "2040-01-01 00:00:00";
+    item["endtime"] = "2040-01-01 23:59:59";
+  }
+  return data + "OK";
+}
+
+// 开屏广告 lua
+function removeSplashLua(data) {
+  if (!data.cached_ad) return data;
+  for (let item of data["cached_ad"]["ads"]) {
+    item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    item["show_count"] = 0;
+    item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
+    item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+  }
+  return data;
 }
 
 // 新版主页广告
@@ -561,7 +601,7 @@ let method = getModifyMethod(url);
 if (method) {
   log(method);
   var func = eval(method);
-  let data = JSON.parse(body);
+  let data = JSON.parse(body.match(/\{.*\}/)[0]);
   new func(data);
   body = JSON.stringify(data);
 }

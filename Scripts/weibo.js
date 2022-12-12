@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-12 17:28
+// 2022-12-12 17:37
 
 // 主要的选项配置
 const mainConfig = {
@@ -72,7 +72,7 @@ const modifyStatusesUrls = [
 ];
 const otherUrls = {
   "sdkapp.uve.weibo.com/interface/sdk/sdkad.php": "removeSplashPhp", // 开屏广告 sdkad
-  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua": "removeSplashLua", // // 开屏广告 wbpullad
+  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua": "removeSplashLua", // 开屏广告 wbpullad
   "/profile/me": "removeHome", // 个人页模块
   "/statuses/extend": "itemExtendHandler", // 微博详情页
   "/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知

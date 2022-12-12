@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-12 17:37
+// 2022-12-12 19:49
 
 // 主要的选项配置
 const mainConfig = {
@@ -71,8 +71,6 @@ const modifyStatusesUrls = [
   "groups/timeline"
 ];
 const otherUrls = {
-  "sdkapp.uve.weibo.com/interface/sdk/sdkad.php": "removeSplashPhp", // 开屏广告 sdkad
-  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua": "removeSplashLua", // 开屏广告 wbpullad
   "/profile/me": "removeHome", // 个人页模块
   "/statuses/extend": "itemExtendHandler", // 微博详情页
   "/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知
@@ -116,44 +114,14 @@ function isAd(data) {
   return false;
 }
 
-// 开屏广告 php
-function removeSplashPhp(data) {
-  if (!data.ads) return data;
-  if (data.needlocation) data.needlocation = false;
-  if (data.show_push_splash_ad) data.show_push_splash_ad = false;
-  if (data.code) data.code = 200;
-  if (data.background_delay_display_time) {
-    data.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
+function isBlock(data) {
+  let blockIds = mainConfig.blockIds || [];
+  if (blockIds.length === 0) return false;
+  let uid = data.user.id;
+  for (const blockId of blockIds) {
+    if (blockId == uid) return true;
   }
-  if (data.lastAdShow_delay_display_time) {
-    data.lastAdShow_delay_display_time = 31536000;
-  }
-  if (data.realtime_ad_video_stall_time) {
-    data.realtime_ad_video_stall_time = 31536000;
-  }
-  if (data.realtime_ad_timeout_duration) {
-    data.realtime_ad_timeout_duration = 31536000;
-  }
-  for (let item of data["ads"]) {
-    item["displaytime"] = 0;
-    item["displayintervel"] = 31536000;
-    item["allowdaydisplaynum"] = 0;
-    item["begintime"] = "2040-01-01 00:00:00";
-    item["endtime"] = "2040-01-01 23:59:59";
-  }
-  return data + "OK";
-}
-
-// 开屏广告 lua
-function removeSplashLua(data) {
-  if (!data.cached_ad) return data;
-  for (let item of data["cached_ad"]["ads"]) {
-    item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-    item["show_count"] = 0;
-    item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
-    item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-  }
-  return data;
+  return false;
 }
 
 // 新版主页广告
@@ -307,16 +275,6 @@ function lvZhouHandler(data) {
   data.common_struct = newStruct;
 }
 
-function isBlock(data) {
-  let blockIds = mainConfig.blockIds || [];
-  if (blockIds.length === 0) return false;
-  let uid = data.user.id;
-  for (const blockId of blockIds) {
-    if (blockId == uid) return true;
-  }
-  return false;
-}
-
 function removeTimeLine(data) {
   for (const s of ["ad", "advertises", "trends"]) {
     if (data[s]) delete data[s];
@@ -372,14 +330,11 @@ function itemExtendHandler(data) {
   if (mainConfig.removeFollow) {
     if (data.follow_data) data.follow_data = null;
   }
-
   if (mainConfig.removeRewardItem) {
     if (data.reward_info) data.reward_info = null;
   }
-
   // 删除超话新帖和新用户通知
   if (data.page_alerts) data.page_alerts = null;
-
   // 广告 暂时判断逻辑根据图片  https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
   try {
     let picUrl = data.trend.extra_struct.extBtnInfo.btn_picurl;
@@ -601,7 +556,7 @@ let method = getModifyMethod(url);
 if (method) {
   log(method);
   var func = eval(method);
-  let data = JSON.parse(body.match(/\{.*\}/)[0]);
+  let data = JSON.parse(body);
   new func(data);
   body = JSON.stringify(data);
 }

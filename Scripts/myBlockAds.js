@@ -1,4 +1,4 @@
-// 2022-12-12 21:16
+// 2022-12-12 21:23
 
 var url = $request.url;
 var body = $response.body;
@@ -38,7 +38,6 @@ function adAppName(adUrls) {
   if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(adUrls)) return "什么值得买-会员权益中心banner广告";
   if (/^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php/.test(adUrls)) return "微博-开屏广告-sdkad";
   if (/^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua/.test(adUrls)) return "微博-开屏广告-wbpullad";
-  if (/^https?:\/\/api\.weibo\.cn\/2\/statuses\/unread_friends_timeline\?gsid=/.test(url)) return "微博-商品橱窗";
   if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"
@@ -627,38 +626,6 @@ switch (adAppName(url)) {
       console.log(`微博-开屏广告-wbpullad, 出现异常`);
     }
     break;
-  case "微博-商品橱窗":
-    try {
-      let obj = JSON.parse(body);
-      if (obj.statuses && obj.statuses.common_struct) {
-        obj.statuses.common_struct = obj.statuses.common_struct.filter((item) => {
-          if (item.actionlog.source === "ad") {
-            return false;
-          }
-          return true;
-        });
-      }
-      body = JSON.stringify(obj);
-    } catch (error) {
-      console.log(`微博-商品橱窗, 出现异常`);
-    }
-    break;
-/*   case "微博-首页直播":
-    try {
-      let obj = JSON.parse(body);
-      if (obj.data) {
-        obj.data = obj.data.filter((item) => {
-          if (item.actionlog.cardid === "230283_-_WEIBO_INDEX_PROFILE_LIVE_MEDIA") {
-            return false;
-          }
-          return true;
-        });
-      }
-      body = JSON.stringify(obj);
-    } catch (error) {
-      console.log(`微博-首页直播, 出现异常`);
-    }
-    break; */
   case "小爱音箱-开屏广告":
     try {
       let obj = JSON.parse(body);

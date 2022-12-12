@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-10 11:15
+// 2022-12-11 11:16
 
 // 主要的选项配置
 const mainConfig = {
@@ -123,9 +123,8 @@ function isAd(data) {
 
 // 开屏广告
 function removeSplashAds(data) {
-  if (!data.match(/\{.*\}/) || !data.cached_ad) return data;
+  if (!data.ads || !data.cached_ad) return data;
   if (url.includes("sdkapp.uve.weibo.com/interface/sdk/sdkad.php")) {
-    data = data.match(/\{.*\}/);
     let obj = JSON.parse(data);
     if (obj.needlocation) obj.needlocation = false;
     if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;

@@ -12,4 +12,4 @@
 * 1.5目前阿里云盘仅支持单账户
 * 1.6连接&Enjoy
 * 1.7如需更换账户，请删除原aliyun列表，重新按照1.1-1.4步骤添加
-* https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
+

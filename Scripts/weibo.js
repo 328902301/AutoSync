@@ -63,7 +63,10 @@ const itemMenusConfig = {
   mblog_menus_apeal: false, // 申诉
   mblog_menus_home: false // 返回首页
 };
-
+const modifySplashUrls = [
+  "sdkapp.uve.weibo.com/interface/sdk/sdkad.php",
+  "wbapp.uve.weibo.com/wbapplua/wbpullad.lua"
+];
 const modifyCardsUrls = ["/cardlist", "video/community_tab", "/searchall"];
 const modifyStatusesUrls = [
   "statuses/friends/timeline",
@@ -71,7 +74,6 @@ const modifyStatusesUrls = [
   "statuses/unread_hot_timeline",
   "groups/timeline"
 ];
-
 const otherUrls = {
   "/profile/me": "removeHome", // 个人页模块
   "/statuses/extend": "itemExtendHandler", // 微博详情页
@@ -101,6 +103,9 @@ function getModifyMethod(url) {
   for (const s of modifyStatusesUrls) {
     if (url.indexOf(s) != -1) return "removeTimeLine";
   }
+  for (const s of modifySplashUrls) {
+    if (url.indexOf(s) != -1) return "removeSplashAds";
+  }
   for (const [path, method] of Object.entries(otherUrls)) {
     if (url.indexOf(path) != -1) return method;
   }
@@ -114,6 +119,49 @@ function isAd(data) {
   }
   if (data.promotion && data.promotion.type == "ad") return true;
   return false;
+}
+
+// 开屏广告
+function removeSplashAds(data) {
+  if (!data.match(/\{.*\}/) || !data.cached_ad) return data;
+  if (url.includes("sdkapp.uve.weibo.com/interface/sdk/sdkad.php")) {
+    data = data.match(/\{.*\}/);
+    let obj = JSON.parse(data);
+    if (obj.needlocation) obj.needlocation = false;
+    if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
+    if (obj.code) obj.code = 200;
+    if (obj.background_delay_display_time) {
+      obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
+    }
+    if (obj.lastAdShow_delay_display_time) {
+      obj.lastAdShow_delay_display_time = 31536000;
+    }
+    if (obj.realtime_ad_video_stall_time) {
+      obj.realtime_ad_video_stall_time = 31536000;
+    }
+    if (obj.realtime_ad_timeout_duration) {
+      obj.realtime_ad_timeout_duration = 31536000;
+    }
+    for (let item of obj["ads"]) {
+      item["displaytime"] = 0;
+      item["displayintervel"] = 31536000;
+      item["allowdaydisplaynum"] = 0;
+      item["begintime"] = "2040-01-01 00:00:00";
+      item["endtime"] = "2040-01-01 23:59:59";
+    }
+    return JSON.stringify(obj) + "OK";
+  }
+  if (url.includes("wbapp.uve.weibo.com/wbapplua/wbpullad.lua")) {
+    let obj = JSON.parse(data);
+    for (let item of obj["cached_ad"]["ads"]) {
+      item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      item["show_count"] = 0;
+      item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
+      item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+    }
+    return JSON.stringify(obj);
+  }
+  return data;
 }
 
 // 新版主页广告

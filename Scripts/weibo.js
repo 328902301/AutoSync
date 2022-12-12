@@ -121,6 +121,16 @@ function isAd(data) {
   return false;
 }
 
+// 开屏广告
+function removeSplashAds(data) {
+  if (!data.match(/\{.*\}/) || !data.cached_ad) return data;
+  if(url.includes("sdkapp.uve.weibo.com/interface/sdk/sdkad.php")) {
+  }
+  if(url.includes("wbapp.uve.weibo.com/wbapplua/wbpullad.lua")) {
+  }
+  return data;
+}
+
 // 新版主页广告
 function removeMain(data) {
   if (!data.items) return data;

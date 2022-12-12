@@ -1,4 +1,4 @@
-// 2022-12-11 15:28
+// 2022-12-12 17:25
 
 var url = $request.url;
 var body = $response.body;
@@ -36,8 +36,8 @@ function adAppName(adUrls) {
   if (/^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(adUrls)) return "什么值得买-搜索标签广告";
   if (/^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(adUrls)) return "什么值得买-搜索结果广告";
   if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(adUrls)) return "什么值得买-会员权益中心banner广告";
-  if (/^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad.php/.test(adUrls)) return "微博-开屏广告-sdkad";
-  if (/^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad.lua/.test(adUrls)) return "微博-开屏广告-wbpullad";
+  if (/^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php/.test(adUrls)) return "微博-开屏广告-sdkad";
+  if (/^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua/.test(adUrls)) return "微博-开屏广告-wbpullad";
   if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"

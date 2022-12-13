@@ -1,4 +1,0 @@
-# Google 重定向至 .com 域名
-hostname = *.google.com.cn,*.google.com.hk
-
-^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) url 302 https://www.google.com

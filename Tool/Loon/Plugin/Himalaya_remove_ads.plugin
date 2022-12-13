@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Himalaya.png
 
 [Rule]
 URL-REGEX,^https?:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
@@ -12,7 +12,7 @@ DOMAIN,gslbali.ximalaya.com,REJECT
 DOMAIN,gslbtx.ximalaya.com,REJECT
 
 [Script]
-http-response ^https?:\/\/mobile\.ximalaya\.com\/(discovery-(feed|category)|mobile-user)\/v\d\/(mix|category|homePage) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag=喜马拉雅去广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Himalaya.png
+http-response ^https?:\/\/mobile\.ximalaya\.com\/(discovery-(feed|category)|mobile-user)\/v\d\/(mix|category|homePage) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag=喜马拉雅去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Himalaya.png
 
 [MITM]
 hostname = mobile.ximalaya.com

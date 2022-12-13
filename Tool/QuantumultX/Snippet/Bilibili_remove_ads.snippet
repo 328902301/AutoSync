@@ -26,7 +26,7 @@ cm.bilibili.com url reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash url reject-dict
 # 切换至腾讯CDN以提高视频加载速度
-^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net url 307 https://upos-sz-mirrorcos.bilivideo.com
 
 # BiliBili_推荐去广告
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/script/bilibili/bilibili_plus.js

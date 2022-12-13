@@ -8,4 +8,4 @@ hostname = api.ithome.com,napi.ithome.com,api.zuihuimai.com
 
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao.* url reject
 
-^https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js

@@ -1,4 +1,4 @@
-// 2022-12-12 21:23
+// 2022-12-13 18:23
 
 var url = $request.url;
 var body = $response.body;
@@ -43,8 +43,8 @@ function adAppName(adUrls) {
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"
   if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(adUrls)) return "小红书-信息流广告";
   if (/^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
-  if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(adUrls)) return "知乎-开屏广告";
   if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
+  // if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(adUrls)) return "知乎-开屏广告";
   // if (/^https?:\/\/api\.zhihu\.com\/topstory\/recommend/.test(adUrls)) return "知乎-推荐列表";
   // if (/^https?:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(adUrls)) return "知乎-appcloud2_config"
   // if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(adUrls)) return "知乎-回答下方广告";
@@ -696,15 +696,6 @@ switch (adAppName(url)) {
       console.log(`小米商城-开屏广告, 出现异常`);
     }
     break;
-  case "知乎-开屏广告":
-    try {
-      let obj = JSON.parse(body);
-      if (obj.launch && obj.launch.ads) obj.launch.ads = [];
-      body = JSON.stringify(obj);
-    } catch (error) {
-      console.log(`知乎-开屏广告, 出现异常`);
-    }
-    break;
   case "知乎-首页右下角悬浮框":
     try {
       let obj = JSON.parse(body);
@@ -714,6 +705,15 @@ switch (adAppName(url)) {
       console.log(`知乎-首页右下角悬浮框, 出现异常`);
     }
     break;
+  // case "知乎-开屏广告":
+  //   try {
+  //     let obj = JSON.parse(body);
+  //     if (obj.launch && obj.launch.ads) obj.launch.ads = [];
+  //     body = JSON.stringify(obj);
+  //   } catch (error) {
+  //     console.log(`知乎-开屏广告, 出现异常`);
+  //   }
+  //   break;
   // case "知乎-推荐列表":
   //   try {
   //     function getUrlParamValue(url, queryName) {

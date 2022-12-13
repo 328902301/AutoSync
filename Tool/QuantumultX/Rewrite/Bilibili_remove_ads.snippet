@@ -2,10 +2,7 @@
 #!desc = 精简多余功能并过滤广告，同时重定向至腾讯CDN，以提高视频加载速度。
 #!openUrl = 
 #!author = blackmatrix7
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
-
-hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, grpc.biliapi.net, upos-hz-mirrorakam.akamaized.net
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
 cm.bilibili.com url reject
 ^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad url reject
@@ -13,7 +10,6 @@ cm.bilibili.com url reject
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? url reject
 # BiliBili漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash url reject
-
 # 去除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words url reject-dict
 # 去除动态中的话题
@@ -27,7 +23,6 @@ cm.bilibili.com url reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash url reject-dict
 # 切换至腾讯CDN以提高视频加载速度
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net url 307 https://upos-sz-mirrorcos.bilivideo.com
-
 # BiliBili_推荐去广告
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/script/bilibili/bilibili_plus.js
 # BiliBili_追番去广告
@@ -46,3 +41,5 @@ cm.bilibili.com url reject
 # ^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index)|resource\/show\/tab\/v2) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js
 # bili-proto
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
+
+hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, grpc.biliapi.net, upos-hz-mirrorakam.akamaized.net

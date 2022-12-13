@@ -6,7 +6,7 @@
 
 使用了 [chavyleung 大佬的 Env.js](https://github.com/chavyleung/scripts/blob/master/Env.js)
 
-兼容 QuanX, Surge, Loon, Shadowrocket, Stash 等
+兼容 Surge, Stash
 
 <table>
   <tr>

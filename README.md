@@ -28,4 +28,6 @@
 
 [yichahucha](https://github.com/yichahucha/surge)
 
+[xOS](https://github.com/xOS/Config/tree/Her/Module/General)
+
 暂时就这些，未提及的后续补上。

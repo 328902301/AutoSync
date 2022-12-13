@@ -1,4 +1,4 @@
-# 2022-12-12 22:29
+# 2022-12-13 08:27
 
 # ======= 0 ======= #
 # 解除安全浏览限制
@@ -61,9 +61,10 @@ HOST, switch.cup.com.cn, MyBlockAds
 
 # ======= Z ======= #
 # 知乎
+HOST, appcloud.zhihu.com, MyBlockAds
 HOST, appcloud2.in.zhihu.com, MyBlockAds
+HOST, crash2.zhihu.com, MyBlockAds
 HOST, mqtt.zhihu.com, MyBlockAds
 HOST, sugar.zhihu.com, MyBlockAds
-USER-AGENT, AVOS*, MyBlockAds
 IP-CIDR, 118.89.204.198/32, MyBlockAds
 IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, MyBlockAds

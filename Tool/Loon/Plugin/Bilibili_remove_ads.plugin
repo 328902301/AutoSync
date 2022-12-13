@@ -26,7 +26,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
 # 切换至腾讯CDN以提高视频加载速度
-^https:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
 
 [Script]
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index requires-body=true,script-path=https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/script/bilibili/bilibili_plus.js,tag=BiliBili_推荐去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png

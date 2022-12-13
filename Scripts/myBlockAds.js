@@ -4,52 +4,52 @@ var url = $request.url;
 var body = $response.body;
 
 function adAppName(adUrls) {
-  if (/^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(adUrls)) return "12306-开屏广告";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(adUrls)) return "哔哩哔哩-强制设置的皮肤";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(adUrls)) return "哔哩哔哩-标签页";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(adUrls)) return "哔哩哔哩-右上角活动入口";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(adUrls)) return "哔哩哔哩-我的页面";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(adUrls)) return "哔哩哔哩-会员清晰度";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(adUrls)) return "哔哩哔哩-推荐广告";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(adUrls)) return "哔哩哔哩-热搜广告";
-  if (/^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(adUrls)) return "哔哩哔哩-开屏广告";
-  if (/^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(adUrls)) return "哔哩哔哩-观影页广告";
-  if (/^https?:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
-  if (/^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
-  if (/^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
-  if (/^https?:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(adUrls)) return "IT之家-appList";
-  if (/^https?:\/\/api\.ithome\.com\/json\/slide\/index/.test(adUrls)) return "IT之家-appSlide";
-  if (/^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(adUrls)) return "IT之家-mobileWeb";
-  if (/^https?:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(adUrls)) return "IT之家-newAppFeed";
-  if (/^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告"
-  if (/^https?:\/\/api.coolapk.com\/v6\/feed\/detail/.test(adUrls)) return "酷安-detail";
-  if (/^https?:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(adUrls)) return "酷安-replyList";
-  if (/^https?:\/\/api.coolapk.com\/v6\/main\/dataList/.test(adUrls)) return "酷安-dataList";
-  if (/^https?:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(adUrls)) return "酷安-index";
-  if (/^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(adUrls)) return "联享家-开屏广告";
-  if (/^https?:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(adUrls)) return "美团外卖-开屏广告";
-  if (/^https?:\/\/app-api\.smzdm\.com\/util\/loading/.test(adUrls)) return "什么值得买-开屏广告";
-  if (/^https?:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(adUrls)) return "什么值得买-百科广告";
-  if (/^https?:\/\/haojia-api\.smzdm\.com\/home\/list/.test(adUrls)) return "什么值得买-好价广告";
-  if (/^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(adUrls)) return "什么值得买-好价详情页广告";
-  if (/^https?:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(adUrls)) return "什么值得买-首页广告";
-  if (/^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(adUrls)) return "什么值得买-搜索标签广告";
-  if (/^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(adUrls)) return "什么值得买-搜索结果广告";
-  if (/^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(adUrls)) return "什么值得买-会员权益中心banner广告";
-  if (/^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php/.test(adUrls)) return "微博-开屏广告-sdkad";
-  if (/^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua/.test(adUrls)) return "微博-开屏广告-wbpullad";
-  if (/^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
-  if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
-  if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"
-  if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(adUrls)) return "小红书-信息流广告";
-  if (/^https?:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
-  if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
-  // if (/^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(adUrls)) return "知乎-开屏广告";
-  // if (/^https?:\/\/api\.zhihu\.com\/topstory\/recommend/.test(adUrls)) return "知乎-推荐列表";
-  // if (/^https?:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(adUrls)) return "知乎-appcloud2_config"
-  // if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(adUrls)) return "知乎-回答下方广告";
-  // if (/^https?:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(adUrls)) return "知乎-文章回答下方广告";
-  // if (/^https?:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(adUrls)) return "知乎-问题回答列表";
+  if (/^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(adUrls)) return "12306-开屏广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(adUrls)) return "哔哩哔哩-强制设置的皮肤";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(adUrls)) return "哔哩哔哩-标签页";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(adUrls)) return "哔哩哔哩-右上角活动入口";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(adUrls)) return "哔哩哔哩-我的页面";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(adUrls)) return "哔哩哔哩-会员清晰度";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(adUrls)) return "哔哩哔哩-推荐广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(adUrls)) return "哔哩哔哩-热搜广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(adUrls)) return "哔哩哔哩-开屏广告";
+  if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(adUrls)) return "哔哩哔哩-观影页广告";
+  if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
+  if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
+  if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
+  if (/^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(adUrls)) return "IT之家-appList";
+  if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(adUrls)) return "IT之家-appSlide";
+  if (/^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(adUrls)) return "IT之家-mobileWeb";
+  if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(adUrls)) return "IT之家-newAppFeed";
+  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告"
+  if (/^https:\/\/api.coolapk.com\/v6\/feed\/detail/.test(adUrls)) return "酷安-detail";
+  if (/^https:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(adUrls)) return "酷安-replyList";
+  if (/^https:\/\/api.coolapk.com\/v6\/main\/dataList/.test(adUrls)) return "酷安-dataList";
+  if (/^https:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(adUrls)) return "酷安-index";
+  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(adUrls)) return "联享家-开屏广告";
+  if (/^https:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(adUrls)) return "美团外卖-开屏广告";
+  if (/^https:\/\/app-api\.smzdm\.com\/util\/loading/.test(adUrls)) return "什么值得买-开屏广告";
+  if (/^https:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(adUrls)) return "什么值得买-百科广告";
+  if (/^https:\/\/haojia-api\.smzdm\.com\/home\/list/.test(adUrls)) return "什么值得买-好价广告";
+  if (/^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(adUrls)) return "什么值得买-好价详情页广告";
+  if (/^https:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(adUrls)) return "什么值得买-首页广告";
+  if (/^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(adUrls)) return "什么值得买-搜索标签广告";
+  if (/^https:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(adUrls)) return "什么值得买-搜索结果广告";
+  if (/^https:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(adUrls)) return "什么值得买-会员权益中心banner广告";
+  if (/^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$/.test(adUrls)) return "微博-开屏广告-sdkad";
+  if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(adUrls)) return "微博-开屏广告-wbpullad";
+  if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(adUrls)) return "小红书-信息流广告";
+  if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
+  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
+  // if (/^https:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(adUrls)) return "知乎-开屏广告";
+  // if (/^https:\/\/api\.zhihu\.com\/topstory\/recommend/.test(adUrls)) return "知乎-推荐列表";
+  // if (/^https:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(adUrls)) return "知乎-appcloud2_config"
+  // if (/^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(adUrls)) return "知乎-回答下方广告";
+  // if (/^https:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(adUrls)) return "知乎-文章回答下方广告";
+  // if (/^https:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(adUrls)) return "知乎-问题回答列表";
   return "";
 }
 

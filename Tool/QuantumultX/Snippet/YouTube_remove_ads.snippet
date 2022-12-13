@@ -1,0 +1,15 @@
+#!name = YouTube去广告
+#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，并删除底部的上传按钮，Premium订阅用户请勿使用。注意，此方案可能会偶现广告，且不能与其他具有YouTube广告过滤能力的插件使用。
+#!openUrl = 
+#!author = Choler DivineEngine app2smile ddgksf2013 Maasea 
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Snippet
+
+# 该片段已足够全面，无需其他规则混用，防止复写规则被破坏。
+
+hostname = *.googlevideo.com, youtubei.googleapis.com
+
+# 使用reject-img减少开销
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
+
+# YouTube去视频贴片广告
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js

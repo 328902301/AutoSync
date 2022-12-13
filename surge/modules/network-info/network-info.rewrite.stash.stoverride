@@ -1,0 +1,16 @@
+name: 网络信息
+desc: https://github.com/xream/scripts/tree/main/surge/modules/network-info
+
+tiles:
+  - name: "network-info-tile"
+    interval: 300
+    title: "网络信息"
+    content: ""
+    argument: "icon=antenna.radiowaves.left.and.right.circle.fill&color=#5d84f8"
+    # icon: "arrow.up.arrow.down.circle"
+    # backgroundColor: "#663399"
+
+script-providers:
+  "network-info-tile":
+    url: "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/index.js"
+    interval: 86400

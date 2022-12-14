@@ -1,4 +1,4 @@
-// 2022-12-14 13:27
+// 2022-12-14 14:21
 
 var url = $request.url;
 var body = $response.body;
@@ -12,7 +12,7 @@ function adAppName(adUrls) {
   if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(adUrls)) return "哔哩哔哩-会员清晰度";
   if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(adUrls)) return "哔哩哔哩-推荐广告";
   if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(adUrls)) return "哔哩哔哩-热搜广告";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(adUrls)) return "哔哩哔哩-开屏广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)\?/.test(adUrls)) return "哔哩哔哩-开屏广告";
   if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(adUrls)) return "哔哩哔哩-观影页广告";
   if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
   if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";

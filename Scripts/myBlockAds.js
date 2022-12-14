@@ -63,7 +63,7 @@ switch (adAppName(url)) {
           obj.materialsList[0].filePath = "";
           obj.advertParam.skipTime = 1000;
           obj.advertParam.showSkipBtn = 0;
-          obj.advertParam.skipTimeAgain = 20;    
+          obj.advertParam.skipTimeAgain = 20;
         } else {
           obj.materialsList = {};
         }

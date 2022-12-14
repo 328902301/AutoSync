@@ -1,4 +1,4 @@
-#!name= Startup
+#!name= StartupAds
 #!desc= 去除大部份软件开屏广告
 #https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Startup.conf
 [Url Rewrite]

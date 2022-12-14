@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-14 23:22
+// 2022-12-14 23:37
 
 // 主要的选项配置
 const mainConfig = {
@@ -227,10 +227,8 @@ function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards.card_group) {
-      data.cards.card_group = data.cards.card_group.filter((c) => !c?.itemid?.includes("ads_word"));
-      if (data.cards[0].card_group) {
-        data.cards[0].card_group = data.cards[0].card_group.filter((c) => !c?.itemid?.includes("t:51"));
-      }
+      data.cards.card_group = data.cards.card_group.filter((a) => !a?.actionlog?.ext?.includes("ads_word"));
+      data.cards[0].card_group = data.cards[0].card_group.filter((c) => !c?.itemid?.includes("t:51"));
     }
   }
   return data;

@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-12 21:23
+// 2022-12-14 13:39
 
 // 主要的选项配置
 const mainConfig = {
@@ -29,11 +29,6 @@ const mainConfig = {
 
   removeLvZhou: true, // 绿洲模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
-
-  profileSkin1: null, // 用户页 自定义图标1
-  profileSkin2: null, // 用户页 自定义图标2
-  tabIconVersion: 0, // 配置大于 100 的数
-  tabIconPath: "" // 配置图标路径
 };
 
 // 菜单配置
@@ -63,33 +58,30 @@ const itemMenusConfig = {
   mblog_menus_apeal: false, // 申诉
   mblog_menus_home: false // 返回首页
 };
-const modifyCardsUrls = ["/cardlist", "video/community_tab", "/searchall"];
+const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
 const modifyStatusesUrls = [
-  "statuses/friends/timeline",
-  "statuses/unread_friends_timeline",
-  "statuses/unread_hot_timeline",
-  "groups/timeline"
+  "/2/groups/timeline",
+  "/2/statuses/friends/timeline",
+  "/2/statuses/unread_friends_timeline",
+  "/2/statuses/unread_hot_timeline"
 ];
 const otherUrls = {
-  "/profile/me": "removeHome", // 个人页模块
-  "/statuses/extend": "itemExtendHandler", // 微博详情页
-  "/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知
-  "/checkin/show": "removeCheckin", // 签到任务
-  "/!/live/media_homelist": "removeMediaHomelist", // 首页直播
-  "/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
-  "/container/get_item": "containerHandler", // 列表相关
-  "/profile/container_timeline": "userHandler", // 用户主页
-  "/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
-  "/!/client/light_skin": "tabSkinHandler",
-  "/littleskin/preview": "skinPreviewHandler",
-  "/search/finder": "removeSearchMain",
-  "/search/container_timeline": "removeSearch",
-  "/search/container_discover": "removeSearch",
+  "/2/checkin/show": "removeCheckin", // 签到任务
+  "/2/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
+  "/2/container/get_item": "containerHandler", // 列表相关
   "/2/messageflow": "removeMsgAd",
   "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
-  "/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
-  "/statuses/container_timeline": "removeMain" // 新版主页广告
+  "/2/profile/container_timeline": "userHandler", // 用户主页
+  "/2/profile/me": "removeHome", // 个人页模块
+  "/2/search/container_discover": "removeSearch",
+  "/2/search/container_timeline": "removeSearch",
+  "/2/search/finder": "removeSearchMain",
+  "/2/statuses/container_timeline": "removeMain", // 新版主页广告
+  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
+  "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
+  "/2/statuses/extend": "itemExtendHandler", // 微博详情页
+  "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
+  "/2/video/remind_info": "removeVideoRemind" // tab2 菜单上的假通知
 };
 
 function getModifyMethod(url) {

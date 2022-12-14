@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2022-12-14 21:37
+# 2022-12-14 21:50
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
@@ -21,15 +21,15 @@
 ^https:\/\/api\.weibo\.cn\/2\/searchall\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline_topicsub\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline_topic\?taskType= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/extend\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_friends_timeline\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_topic_timeline url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/video_mixtimeline url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/extend\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_friends_timeline\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/video\/community_tab url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/video\/remind_info url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 
 # 去除顶部直播 //api.weibo.cn
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\?gsid= url reject-dict

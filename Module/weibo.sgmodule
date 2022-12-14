@@ -1,5 +1,6 @@
 #!name=微博去广告
 #!desc=删除多数微博广告
+#https://github.com/zmqcherish
 [Script]
 
 # 微博去广告以及去除各部分推广模块 - cherish

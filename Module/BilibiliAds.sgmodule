@@ -1,5 +1,5 @@
-#!name= Bilibili 去广告
-#!desc=去除 Bilibili 广告
+#!name= Bilibili Ads
+#!desc= 去除 Bilibili 广告
 #https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Bilibili.conf
 
 [Url Rewrite]

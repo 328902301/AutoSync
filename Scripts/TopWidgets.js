@@ -6,7 +6,7 @@
 [rewrite_local]
 
 # TopWidgets☆永久VIP
-^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/topwidgets.js
+^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/JupiterH/Surge/main/Scripts/TopWidgets.js
 
 [mitm]
 hostname=*xiaozujian.com

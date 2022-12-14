@@ -506,30 +506,6 @@ function nextVideoHandler(data) {
   }
 }
 
-function tabSkinHandler(data) {
-  try {
-    let iconVersion = mainConfig.tabIconVersion;
-    data["data"]["canUse"] = 1;
-    if (!iconVersion || !mainConfig.tabIconPath) return;
-    if (iconVersion < 100) return;
-    let skinList = data["data"]["list"];
-    for (let skin of skinList) {
-      // if (skin.usetime) {
-      //   skin['usetime'] = 330
-      // }
-      skin["version"] = iconVersion;
-      skin["downloadlink"] = mainConfig.tabIconPath;
-    }
-    log("tabSkinHandler success");
-  } catch (error) {
-    log("tabSkinHandler fail");
-  }
-}
-
-function skinPreviewHandler(data) {
-  data["data"]["skin_info"]["status"] = 1;
-}
-
 // function unreadCountHandler(data) {
 //   let ext = data.ext_new;
 //   if (!ext) return;

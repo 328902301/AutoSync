@@ -1,5 +1,5 @@
-#!name=Unlock Revenuecat
-#!desc=Revenuecat
+#!name=Revenuecat
+#!desc= Unlock Revenuecat
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com

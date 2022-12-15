@@ -4,14 +4,14 @@
 #!author = zmqcherish Cuttlefish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
-# 微博_请手动添加以下分流至本地
+# 微博请手动添加以下分流至本地
 #host, sdkapp.uve.weibo.com, direct
 
-# 微博_自定义标签皮肤
+# 微博自定义标签皮肤
 ^https?:\/\/api\.weibo\.cn\/2\/!\/client\/light_skin url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
-# 微博_非会员设置标签皮肤
+# 微博非会员设置标签皮肤
 ^https?:\/\/new\.vip\.weibo\.cn\/littleskin\/preview url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
-# 微博_去广告以及去除各部分推广模块
+# 微博去广告以及去除各部分推广模块
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
@@ -22,23 +22,23 @@
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 
-# 微博国际版_热搜
+# 微博国际版热搜
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
-# 微博国际版_热推荐
+# 微博国际版热推荐
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
-# 微博国际版_屏蔽search_suggest
+# 微博国际版屏蔽搜索建议
 # ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
-# 微博国际版_屏蔽searching_info
+# 微博国际版屏蔽搜索信息
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Info.json
-# 微博国际版_屏蔽search_topic 
+# 微博国际版屏蔽搜索主题
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Topic.json
-# 微博国际版_屏蔽开屏广告 
+# 微博国际版屏蔽开屏广告 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
-# 微博&国际版_sdkad
+# 微博及微博国际版SDK广告
 ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad\.lua) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
-# 微博国际版_趋势顶部卡片去广告
+# 微博国际版趋势顶部卡片去广告
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
-# 微博国际版_用户中心
+# 微博国际版用户中心
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 
 hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn

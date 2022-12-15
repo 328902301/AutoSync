@@ -7,6 +7,7 @@ https://github.com/mieqq/mieqq/blob/master/sub_info.js
 
 [Proxy Group]
 Kuromis = select, policy-path=http://sub.info?url=https%3A%2F%2Fkuromisubs.shop%2F2Nx-AZmTe6jR1ZmtqYJrA%3Ftype%3Dsurge4%26protocol%3Dtrojan%26rule%3Dnodelist&reset_day=11&alert=1&title=Kuromis, update-interval=3600
+
 [Script]
 机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/JupiterH/Surge/main/Scripts/Sub_info.js,timeout=10
 ----------------------------------------

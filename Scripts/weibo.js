@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-15 07:47
+// 2022-12-15 09:23
 
 // 主要的选项配置
 const mainConfig = {
@@ -29,6 +29,8 @@ const mainConfig = {
 
   removeLvZhou: true, // 绿洲模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
+  profileSkin1: null, // 自定义图标1
+  profileSkin2: null //自定义图标2
 };
 
 // 菜单配置

@@ -14,8 +14,8 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
     //微博详情页配置
     removeRelate: true, //相关推荐
     removeGood: true, //微博主好物种草
-    removeFollow: false, //关注博主
-    modifyMenus: false, //编辑上下文菜单
+    removeFollow: true, //关注博主
+    modifyMenus: true, //编辑上下文菜单
     removeRelateItem: true, //评论区相关内容
     removeRecommendItem: true, //评论区推荐内容
     removeRewardItem: true, //微博详情页打赏模块
@@ -27,7 +27,7 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
     removeInterestTopic: true, //超话：可能感兴趣的超话 + 好友关注
     removeInterestUser: true, //用户页：可能感兴趣的人
 
-    removeLvZhou: false, //绿洲模块
+    removeLvZhou: true, //绿洲模块
     profileSkin1: null, //用户页：自定义图标1
     profileSkin2: null, //用户页：自定义图标2
     tabIconVersion: 0, //配置大于100的数

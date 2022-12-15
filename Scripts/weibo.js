@@ -4,6 +4,7 @@
 // 主要的选项配置
 const mainConfig = {
   isDebug: false, // 开启调试 会打印运行中部分日志
+
   // 个人中心配置 其中多数是可以直接在更多功能里直接移除
   removeHomeVip: true, // 个人中心的 vip 栏
   removeHomeCreatorTask: true, // 个人中心创作者中心下方的轮播图
@@ -17,7 +18,6 @@ const mainConfig = {
   removeRecommendItem: true, // 评论区推荐内容
   removeRewardItem: true, // 微博详情页打赏模块
 
-  // removeLiveMedia: true, // 首页顶部直播
   removeNextVideo: true, // 关闭自动播放下一个视频
   removePinedTrending: true, // 删除热搜列表置顶条目
 
@@ -29,6 +29,7 @@ const mainConfig = {
 
   removeLvZhou: true, // 绿洲模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
+
   profileSkin1: null, // 自定义图标1
   profileSkin2: null //自定义图标2
 };

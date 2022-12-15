@@ -12,4 +12,4 @@
 Sub_info = script-name=Sub_info,update-interval=3600
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/JupiterH/Surge/main/Scripts/Sub_info.js,script-update-interval=0,argument=url=https://kuromisubs.shop/2Nx-AZmTe6jR1ZmtqYJrA?type=surge4&protocol=trojan&rule=nodelist&reset_day=11&title=Kuromis&icon=externaldrive.fill.badge.icloud=#007aff
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/JupiterH/Surge/main/Scripts/Sub_info.js,script-update-interval=0,argument=url=订阅链接encode&reset_day=11&title=Kuromis&icon=externaldrive.fill.badge.icloud=#007aff

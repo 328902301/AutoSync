@@ -90,14 +90,14 @@ URL-REGEX, ^https?:\/\/wx[0-9]\.sinaimg\.cn\/large\/.+\.gif$, REJECT
 [Script]
 # > 微博个人信息
 # 个人信息
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(profile\/userinfo|statuses\/send|statuses\/destroy|comments\/destroy|profile|users\/(show|relation)|direct_messages\/user_list|messageflow\/notice)\? requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Profile.js, tag = 微博, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(profile\/userinfo|statuses\/send|statuses\/destroy|comments\/destroy|profile|users\/(show|relation)|direct_messages\/user_list|messageflow\/notice)\? requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Profile.js, tag = 微博个人信息去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 # 会员中心
-http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/(vipcenter\/home|avatargj\/mall|activity\/userinfo|cardbackground\/index) requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/VIPCenter.js, tag = 微博, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/(vipcenter\/home|avatargj\/mall|activity\/userinfo|cardbackground\/index) requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/VIPCenter.js, tag = 微博会员中心, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 # > 微博去广告
 # 微博
-http-response ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses|container_timeline)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item|search/container_discover) requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, tag = 微博, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses|container_timeline)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item|search/container_discover) requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, tag = 微博去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 # 微博开屏去广告
 http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body = true, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Launch.js, tag = 微博开屏去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png

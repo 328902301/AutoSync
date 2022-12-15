@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-15 09:31
+// 2022-12-15 09:35
 
 // 主要的选项配置
 const mainConfig = {
@@ -286,11 +286,6 @@ function removeTimeLine(data) {
 
 function removeHomeVip(data) {
   if (!data.header) return data;
-  // let vipCenter = data.header.vipCenter;
-  // if (vipCenter) {
-  //   vipCenter.icon = '';
-  //   vipCenter.title.content = '会员中心';
-  // }
   if (data.header.vipView) {
     data.header.vipView = null;
   }

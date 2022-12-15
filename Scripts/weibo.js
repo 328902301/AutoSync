@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-15 07:47
+// 2022-12-15 09:15
 
 // 主要的选项配置
 const mainConfig = {
@@ -368,26 +368,6 @@ function updateFollowOrder(item) {
   }
 }
 
-function updateProfileSkin(item, k) {
-  try {
-    let profileSkin = mainConfig[k];
-    if (!profileSkin) return;
-    let i = 0;
-    for (let d of item.items) {
-      if (!d.image) continue;
-      try {
-        dm = d.image.style.darkMode;
-        if (dm !== "alpha") d.image.style.darkMode = "alpha";
-        d.image.iconUrl = profileSkin[i++];
-        if (d.dot) d.dot = [];
-      } catch (error) {}
-    }
-    log("updateProfileSkin success");
-  } catch (error) {
-    log("updateProfileSkin fail");
-  }
-}
-
 function removeHome(data) {
   if (!data.items) return data;
   let newItems = [];
@@ -397,16 +377,6 @@ function removeHome(data) {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
       updateFollowOrder(item);
       newItems.push(item);
-    } else if (itemId === "100505_-_top8") {
-      updateProfileSkin(item, "profileSkin1");
-      newItems.push(item);
-    } else if (itemId === "100505_-_newcreator") {
-      if (item.type === "grid") {
-        updateProfileSkin(item, "profileSkin2");
-        newItems.push(item);
-      } else {
-        if (!mainConfig.removeHomeCreatorTask) newItems.push(item);
-      }
     } else if (
       [
         "mine_attent_title",

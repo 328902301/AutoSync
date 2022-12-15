@@ -1,7 +1,7 @@
 #!name = 微博去广告
 #!desc = 过滤微博广告及去除各部分推广模块
 #!openUrl = 
-#!author = zmqcherish Cuttlefish
+#!author = xOS
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
@@ -110,8 +110,7 @@ http-response (^https?:\/\/js\.t\.sinajs\.cn\/c2p\/sam\/frontend\/assets\/wallet
 
 # 微博配置注入
 # 微博去广告配置注入
-# type=cron,cronexp="0 0 1 ? * MON",debug=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Resource/Script/Weibo/Config.js
-
+# type=cron,cronexp="0 0 1 ? * MON",debug=1, script-path = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Resource/Script/Weibo/Config.js
 
 [MITM]
 hostname = *.uve.weibo.com, *api.weibo.cn, *api.weibo.com, h5.sinaimg.cn, new.vip.weibo.cn, *.sc.weibo.com, captcha.weibo.com, wx*.sinaimg.cn, js.t.sinajs.cn, *.e.weibo.com

@@ -27,7 +27,7 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
     removeInterestTopic: true, //超话：可能感兴趣的超话 + 好友关注
     removeInterestUser: true, //用户页：可能感兴趣的人
 
-    removeLvZhou: true, //绿洲模块
+    removeLvZhou: false, //绿洲模块
     profileSkin1: null, //用户页：自定义图标1
     profileSkin2: null, //用户页：自定义图标2
     tabIconVersion: 0, //配置大于100的数
@@ -41,8 +41,8 @@ const itemMenusConfig = storeItemMenusConfig ? JSON.parse(storeItemMenusConfig) 
     mblog_menus_custom: false, //寄微博
     mblog_menus_video_later: false, //可能是稍后再看？没出现过
     mblog_menus_comment_manager: false, //评论管理
-    mblog_menus_avatar_widget: false, //头像挂件
-    mblog_menus_card_bg: false, //卡片背景
+    mblog_menus_avatar_widget: true, //头像挂件
+    mblog_menus_card_bg: true, //卡片背景
     mblog_menus_long_picture: false, //生成长图
     mblog_menus_delete: false, //删除
     mblog_menus_edit: false, //编辑

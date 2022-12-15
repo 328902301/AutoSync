@@ -45,8 +45,8 @@ const itemMenusConfig = {
 	mblog_menus_custom: false,				//寄微博
 	mblog_menus_video_later: true,			//可能是稍后再看？没出现过
 	mblog_menus_comment_manager: false,		//评论管理
-	mblog_menus_avatar_widget: true,		//头像挂件
-	mblog_menus_card_bg: true,			//卡片背景
+	mblog_menus_avatar_widget: false,		//头像挂件
+	mblog_menus_card_bg: false,			//卡片背景
 	mblog_menus_long_picture: false,		//生成长图
 	mblog_menus_delete: false,				//删除
 	mblog_menus_edit: false,				//编辑

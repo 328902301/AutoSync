@@ -1,0 +1,28 @@
+# ======= YouTube ======= #
+# 2022-12-15 16:33
+
+# ⚠️⚠️
+# Quantumult X 必须在 [general] 部分加入以下代码: `udp_drop_list=443`
+
+# 去除首页瀑布流广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除上传按钮
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/guide\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除播放页广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/next\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除短视频瀑布流广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/reel\/reel_watch_sequence\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除搜索页面广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/search\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除播放过程插播广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 去除播放器贴片广告
+^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad url reject-img
+
+hostname = r*.googlevideo.com, youtubei.googleapis.com

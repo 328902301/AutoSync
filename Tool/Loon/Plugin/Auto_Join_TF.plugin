@@ -7,7 +7,7 @@
 #!input = APP_ID
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps\$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, tag=TF信息获取, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TestFlight.png
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, tag=TF信息获取, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TestFlight.png
 http-request ^https://testflight.apple.com/join/(.*) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_keys.js, tag=APP_ID获取, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TestFlight.png
 cron "*/1 * * * * *" script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/Auto_join_TF.js, tag=自动加入TF, timeout=180, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TestFlight.png
 

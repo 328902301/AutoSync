@@ -86,14 +86,14 @@
 
 
 # > 微博个人信息
-个人信息
+# 个人信息
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(profile\/userinfo|statuses\/send|statuses\/destroy|comments\/destroy|profile|users\/(show|relation)|direct_messages\/user_list|messageflow\/notice)\? url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Profile.js
 
-会员中心
+# 会员中心
 ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/(vipcenter\/home|avatargj\/mall|activity\/userinfo|cardbackground\/index) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/VIPCenter.js
 
 # > 微博去广告
-微博
+# 微博
 ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses|container_timeline)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item|search/container_discover) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 
 # 微博开屏去广告

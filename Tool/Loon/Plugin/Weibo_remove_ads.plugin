@@ -43,10 +43,10 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path = http
 
 
 
-# > 微博国际版_屏蔽searching_info@ddgksf2013
+# > 微博国际版_屏蔽searching_info
 #^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Info.json
 
-# > 微博国际版_屏蔽search_topic@ddgksf2013 
+# > 微博国际版_屏蔽search_topic
 #^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Topic.json
 
 
@@ -56,8 +56,10 @@ http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coope
 
 # 微博及微博国际版去SDK广告
 http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad\.php|\/wbapplua\/wbpullad\.lua) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博及微博国际版去SDK广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+
 # 微博国际版趋势顶部卡片去广告
 http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版趋势顶部卡片去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+
 # 微博国际版用户中心
 http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版用户中心, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
 

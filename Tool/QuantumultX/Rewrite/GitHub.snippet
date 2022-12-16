@@ -4,6 +4,8 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
+#[rewrite_local]
 ^https?:\/\/raw.githubusercontent.com url 302 https://raw.fastgit.org
 
+#[mitm]
 hostname = raw.githubusercontent.com

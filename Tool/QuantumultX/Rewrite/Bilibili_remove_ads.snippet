@@ -4,6 +4,8 @@
 #!author = blackmatrix7
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
+
+#[rewrite_local]
 cm.bilibili.com url reject
 ^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad url reject
 # 可能的一些推广(beta)
@@ -42,4 +44,5 @@ cm.bilibili.com url reject
 # bili-proto
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
 
+#[mitm]
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, grpc.biliapi.net, upos-hz-mirrorakam.akamaized.net

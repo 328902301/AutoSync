@@ -4,6 +4,8 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
+#[rewrite_local]
 ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) url 302 https://www.google.com
 
+#[mitm]
 hostname = *.google.com.cn,*.google.com.hk

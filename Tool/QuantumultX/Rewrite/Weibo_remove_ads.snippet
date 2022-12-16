@@ -7,6 +7,9 @@
 # 微博请手动添加以下分流至本地
 #host, sdkapp.uve.weibo.com, direct
 
+
+#[rewrite_local]
+
 # 微博国际版_hot_search
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
 # 微博国际版_热推荐
@@ -57,4 +60,5 @@
 # 微博国际版_用户中心
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads_for_qx.js
 
+#[mitm]
 hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn

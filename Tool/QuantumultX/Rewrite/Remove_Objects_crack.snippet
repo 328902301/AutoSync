@@ -1,0 +1,11 @@
+#!name = Remove Objects解锁
+#!desc = 点击恢复购买即可解锁
+#!openUrl = 
+#!author = 89996462
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_Objects/Remove_Objects_crack.js
+
+#[mitm]
+hostname = buy.itunes.apple.com

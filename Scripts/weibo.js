@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-16 15:58
+// 2022-12-16 20:18
 
 // 主要的选项配置
 const mainConfig = {
@@ -202,6 +202,7 @@ function removeSearch(data) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
     } else {
+      if (item.category === "group") continue;
       if (!checkSearchWindow(item)) newItems.push(item);
     }
   }
@@ -230,8 +231,8 @@ function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter(
-        (c) => !(
+      data.cards[0].card_group = data.cards[0].card_group.filter((c) =>
+        !(
           c?.actionlog?.ext?.includes("ads_word") ||
           c?.itemid?.includes("t:51") ||
           c?.itemid?.includes("ads_word")
@@ -409,26 +410,17 @@ function removeCheckin(data) {
   data.show = 0;
 }
 
-// // 首页直播
-// function removeMediaHomelist(data) {
-//   if (mainConfig.removeLiveMedia) {
-//     log("remove 首页直播");
-//     data.data = [];
-//   }
-// }
-
 // 评论区相关和推荐内容
 function removeComments(data) {
   let delType = ["广告"];
   if (mainConfig.removeRelateItem) delType.push("相关内容");
   if (mainConfig.removeRecommendItem) delType.push(...["推荐", "热推"]);
-  // if (delType.length === 0) return;
   let items = data.datas || [];
   if (items.length === 0) return;
   let newItems = [];
   for (const item of items) {
     let adType = item.adType || "";
-    if (delType.indexOf(adType) === -1) {
+    if (delType.indexOf(adType) === -1 && item.type !== 6) {
       newItems.push(item);
     }
   }
@@ -487,7 +479,7 @@ function nextVideoHandler(data) {
 //   let ext = data.ext_new;
 //   if (!ext) return;
 //   if (!ext.creator_task) return;
-//   ext.creator_task.text = '';
+//   ext.creator_task.text = "";
 // }
 
 function log(data) {

@@ -1,0 +1,12 @@
+#!name = 微信公众号去广告
+#!desc = 过滤微信公众号广告
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/WeChat.png
+
+[Script]
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/WeChat/WeChat_Official_Accounts_remove_ads.js, requires-body=true, tag=微信公众号去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/WeChat.png
+
+[Mitm]
+hostname = mp.weixin.qq.com

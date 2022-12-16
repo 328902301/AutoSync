@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/HappyDays.png
 
 [Script]
-http-response ^https:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers)\/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/HappyDays/HappyDays_crack.js, requires-body=true, tag=Emby解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/HappyDays.png
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers)\/* script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/HappyDays/HappyDays_crack.js, requires-body=true, tag=HappyDays解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/HappyDays.png
 
 [Mitm]
 hostname = api.revenuecat.com

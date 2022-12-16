@@ -1,0 +1,11 @@
+#!name = 微信公众号去广告
+#!desc = 过滤微信公众号广告
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/WeChat/WeChat_Official_Accounts_remove_ads.js
+
+#[mitm]
+hostname = mp.weixin.qq.com

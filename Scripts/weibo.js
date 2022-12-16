@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-15 09:35
+// 2022-12-16 13:03
 
 // 主要的选项配置
 const mainConfig = {
@@ -270,7 +270,7 @@ function lvZhouHandler(data) {
 }
 
 function removeTimeLine(data) {
-  for (const s of ["ad", "advertises", "trends"]) {
+  for (const s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) delete data[s];
   }
   if (!data.statuses) return;

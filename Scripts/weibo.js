@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-16 20:18
+// 2022-12-16 20:21
 
 // 主要的选项配置
 const mainConfig = {
@@ -420,7 +420,7 @@ function removeComments(data) {
   let newItems = [];
   for (const item of items) {
     let adType = item.adType || "";
-    if (delType.indexOf(adType) === -1 && item.type !== 6) {
+    if (delType.indexOf(adType) === -1) {
       newItems.push(item);
     }
   }

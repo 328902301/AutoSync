@@ -1,7 +1,7 @@
 #!name = Remove Objects解锁
 #!desc = 点击恢复购买即可解锁
 #!openUrl = 
-#!author = 可莉🅥
+#!author = 彭于晏
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Remove_Objects.png
 
@@ -9,4 +9,4 @@
 http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_Objects/Remove_Objects_crack.js, requires-body=true, tag=Remove Objects解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Remove_Objects.png
 
 [Mitm]
-hostname = mb3admin.com
+hostname = buy.itunes.apple.com

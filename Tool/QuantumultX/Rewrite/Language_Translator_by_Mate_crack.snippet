@@ -1,0 +1,11 @@
+#!name = Mate解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = 彭于晏
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/asia\.gikken\.co\/matesync\/(subscription|login|check_user) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Language_Translator_by_Mate/Language_Translator_by_Mate_crack.js
+
+#[mitm]
+hostname = asia.gikken.co

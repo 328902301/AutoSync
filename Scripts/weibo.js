@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-16 13:03
+// 2022-12-16 15:48
 
 // 主要的选项配置
 const mainConfig = {
@@ -187,7 +187,11 @@ function removeSearchMain(data) {
 function checkSearchWindow(item) {
   if (!mainConfig.removeSearchWindow) return false;
   if (item.category !== "card") return false;
-  return (item.data?.itemid === "finder_window" || item.data?.itemid === "more_frame");
+  return (
+    item.data?.itemid === "finder_window" ||
+    item.data?.itemid === "more_frame" ||
+    item.data?.card_type === 208
+  );
 }
 
 // 发现页
@@ -221,12 +225,18 @@ function removeMsgAd(data) {
   return data;
 }
 
-// 删除热搜列表置顶条目
+// 删除热搜列表置顶项目,删除推广项目
 function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter((c) => !c?.itemid?.includes("t:51"));
+      data.cards[0].card_group = data.cards[0].card_group.filter(
+        (c) => !(
+          e?.actionlog?.ext?.includes("ads_wor") ||
+          c?.itemid?.includes("t:51") ||
+          c?.itemid?.includes("ads_word")
+        )
+      );
     }
   }
   return data;

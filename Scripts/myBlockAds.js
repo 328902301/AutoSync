@@ -1,4 +1,4 @@
-// 2022-12-14 14:21
+// 2022-12-17 17:00
 
 var url = $request.url;
 var body = $response.body;
@@ -59,13 +59,8 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.materialsList) {
-        if (obj.materialsList.length === 1) {
-          obj.materialsList[0].filePath = "";
-          obj.advertParam.skipTime = 1;
-          obj.advertParam.showSkipBtn = 0;
-          obj.advertParam.skipTimeAgain = 5;
-        } else {
-          obj.materialsList = {};
+        for (let i = 0; i < obj.materialsList.length; i++) {
+          obj.materialsList[i].filePath = "";
         }
       }
       body = JSON.stringify(obj);

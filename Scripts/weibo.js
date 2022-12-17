@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-17 08:58
+// 2022-12-17 08:52
 
 // 主要的选项配置
 const mainConfig = {
@@ -225,12 +225,18 @@ function removeMsgAd(data) {
   return data;
 }
 
-// 删除热搜列表置顶项目
+// 删除热搜列表置顶项目,删除推广项目
 function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter((c) => !c?.itemid?.includes("t:51"));
+      data.cards[0].card_group = data.cards[0].card_group.filter((c) =>
+        !(
+          c?.actionlog?.ext?.includes("ads_word") ||
+          c?.itemid?.includes("t:51") ||
+          c?.itemid?.includes("ads_word")
+        )
+      );
     }
   }
   return data;
@@ -467,6 +473,13 @@ function nextVideoHandler(data) {
     log("nextVideoHandler");
   }
 }
+
+// function unreadCountHandler(data) {
+//   let ext = data.ext_new;
+//   if (!ext) return;
+//   if (!ext.creator_task) return;
+//   ext.creator_task.text = "";
+// }
 
 function log(data) {
   if (mainConfig.isDebug) console.log(data);

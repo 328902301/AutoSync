@@ -2,8 +2,8 @@ payload:
 # Plex
   - DOMAIN-SUFFIX,plex.tv
 #Emby公益服
-  - DOMAIN-SUFFIX,odysseyplus.site
-  - DOMAIN-SUFFIX,misakaf.org
+#  - DOMAIN-SUFFIX,odysseyplus.site
+#  - DOMAIN-SUFFIX,misakaf.org
 #Steam用于判断用户地区分配下载CDN的地址
   - DOMAIN-SUFFIX,steamserver.net
   - DOMAIN,cm.steampowered.com

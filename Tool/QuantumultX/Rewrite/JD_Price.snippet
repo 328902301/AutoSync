@@ -1,0 +1,11 @@
+#!name = 京东比价
+#!desc = 在京东应用内嵌入比价信息，点击商品标题即可查看。
+#!openUrl = 
+#!author = toulanboy
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js
+  
+#[mitm]
+hostname = api.m.jd.com

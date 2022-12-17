@@ -1,0 +1,16 @@
+#!name = 喜马拉雅去广告
+#!desc = 过滤喜马拉雅广告
+#!openUrl = 
+#!author = ddgksf2013
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/adse\.ximalaya\.com\/(?!.*preSale) url reject
+^https?:\/\/mobile\.ximalaya\.com\/discovery-feed\/focus url reject
+gslbali.ximalaya.com url reject
+gslbtx.ximalaya.com url reject
+
+^https?:\/\/mobile\.ximalaya\.com\/(discovery-(feed|category)|mobile-user)\/v\d\/(mix|category|homePage) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Himalaya/Himalaya_remove_ads.js
+
+#[mitm]
+hostname = mobile.ximalaya.com

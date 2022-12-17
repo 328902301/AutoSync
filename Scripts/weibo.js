@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-17 08:42
+// 2022-12-17 08:52
 
 // 主要的选项配置
 const mainConfig = {
@@ -202,7 +202,6 @@ function removeSearch(data) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
     } else {
-      // if (item.category === "group") continue;
       if (!checkSearchWindow(item)) newItems.push(item);
     }
   }

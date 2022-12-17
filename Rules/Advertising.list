@@ -1,6 +1,6 @@
 # 引用地址 https://github.com/blackmatrix7/ios_rule_script/blob/release/rule/QuantumultX/Advertising/Advertising.list
-# 2022-09-14 23:00:41
-# 已排除以下域名 ad.12306.cn, sdkapp.uve.weibo.com
+# 2022-09-17 17:03
+# 已排除以下域名 ad.12306.cn, api.jr.mi.com, sdkapp.uve.weibo.com
 
 HOST, ad.xy2013.cn, Advertising
 HOST, ads.play.cbsi.video, Advertising
@@ -66951,7 +66951,6 @@ HOST-SUFFIX, api.iapps.ifeng.com, Advertising
 HOST-SUFFIX, api.iimedia.cn, Advertising
 HOST-SUFFIX, api.ijunhai.com, Advertising
 HOST-SUFFIX, api.joybj.com, Advertising
-HOST-SUFFIX, api.jr.mi.com, Advertising
 HOST-SUFFIX, api.ketedata.com, Advertising
 HOST-SUFFIX, api.koudaikj.com, Advertising
 HOST-SUFFIX, api.mp.uc.cn, Advertising

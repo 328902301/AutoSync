@@ -1,6 +1,9 @@
 #规则修正
 
 
+# 微博
+IP-CIDR,0.0.0.0/32,no-resolve
+
 # https://javmost.xyz/
 #DOMAIN, delivery-node-aziz.voe-network.net
 #DOMAIN, inspiringaccurate.com

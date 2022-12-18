@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Documents.png
 
 [Script]
-http-response ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Documents/Documents_crack.js, requires-body=true, tag=Documents解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Documents.png
+http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Documents/Documents_crack.js, requires-body=true, tag=Documents解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Documents.png
 
 [MITM]
 hostname = license.pdfexpert.com

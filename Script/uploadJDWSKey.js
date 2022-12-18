@@ -27,7 +27,7 @@ let CK = $request.headers['Cookie'] || $request.headers['cookie'];
 $.user = 'id77';
 let pin, key;
 
-if (!UA.includes('JD4iPhone')) {
+if (!UA.includes('JD4iPhone') && !UA.includes('%E4%BA%AC%E4%B8%9C2')) {
   console.log(`需要在京东App触发`);
 
   $.done();

@@ -1,0 +1,11 @@
+#!name = 爱企查解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = I-am-R-E
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire_crack.js
+
+#[mitm]
+hostname = aiqicha.baidu.com

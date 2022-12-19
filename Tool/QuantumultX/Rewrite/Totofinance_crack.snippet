@@ -1,0 +1,11 @@
+#!name = 图图记账解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = Hausd0rff
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Totofinance/Totofinance_crack.js
+
+#[mitm]
+hostname = api.revenuecat.com

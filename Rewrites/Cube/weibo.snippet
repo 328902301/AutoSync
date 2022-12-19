@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2022-12-19 15:18
+# 2022-12-19 15:25
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
@@ -37,15 +37,9 @@
 # 去除信息流视频号 //api.weibo.cn
 ^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\?gsid= url reject-dict
 
-# 去除头像挂件 //vip.storage.weibo.com
-^http:\/\/vip\.storage\.weibo\.com\/feed_cover\/star_\d+_mobile_new\.png\?version= url reject-img
-^https:\/\/vip\.storage\.weibo\.com\/feed_cover\/star_\d+_thumbrectangle_mobile\.png$ url reject-img
-^https?:\/\/vip\.storage\.weibo\.com\/feed_cover\/flag_\d+_mobile_new\.png\?version= url reject-img
-^https?:\/\/vip\.storage\.weibo\.com\/avatargj_img\/gj_vip_\d+_cover\.png\?version= url reject-img
-
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
 ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 ^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 
-hostname = sdkapp.uve.weibo.com, wbapp.uve.weibo.com, api.weibo.cn, vip.storage.weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+hostname = sdkapp.uve.weibo.com, wbapp.uve.weibo.com, api.weibo.cn, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn

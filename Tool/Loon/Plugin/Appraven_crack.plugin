@@ -1,12 +1,12 @@
-#!name = Appraven解锁
+#!name = AppRaven解锁
 #!desc = 点击恢复购买即可解锁订阅
 #!openUrl = 
 #!author = ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Appraven.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/AppRaven.png
 
 [Script]
-http-response ^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Appraven/Appraven_crack.js, requires-body=true, tag=Appraven解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Appraven.png
+http-response ^https?:\/\/AppRaven\.net\/AppRaven\/(app|social|buy) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/AppRaven/AppRaven_crack.js, requires-body=true, tag=AppRaven解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/AppRaven.png
 
 [MITM]
-hostname = appraven.net
+hostname = AppRaven.net

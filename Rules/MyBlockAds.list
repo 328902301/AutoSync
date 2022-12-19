@@ -1,4 +1,4 @@
-# 2022-12-13 08:27
+# 2022-12-19 15:25
 
 # ======= 0 ======= #
 # 解除安全浏览限制
@@ -43,6 +43,11 @@ HOST, swallowcrockerybless.com, MyBlockAds
 # ======= T ======= #
 # 贴吧
 IP-CIDR, 180.76.76.200/32, MyBlockAds
+
+# ======= W ======= #
+# 微博 头像挂件
+HOST, vip.storage.weibo.com, MyBlockAds
+HOST, new.vip.weibo.cn, MyBlockAds
 
 # ======= X ======= #
 # 迅雷 解除版权限制

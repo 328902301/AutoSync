@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2022-12-19 15:12
+# 2022-12-19 15:18
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
@@ -39,6 +39,7 @@
 
 # 去除头像挂件 //vip.storage.weibo.com
 ^http:\/\/vip\.storage\.weibo\.com\/feed_cover\/star_\d+_mobile_new\.png\?version= url reject-img
+^https:\/\/vip\.storage\.weibo\.com\/feed_cover\/star_\d+_thumbrectangle_mobile\.png$ url reject-img
 ^https?:\/\/vip\.storage\.weibo\.com\/feed_cover\/flag_\d+_mobile_new\.png\?version= url reject-img
 ^https?:\/\/vip\.storage\.weibo\.com\/avatargj_img\/gj_vip_\d+_cover\.png\?version= url reject-img
 

@@ -7,10 +7,12 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_
     obj.data.ads_groups.forEach((item) => {
         item.start_time = "2208963661";
         item.end_time = "2209050061";
-        item.ads.forEach((i) => {
-            i.start_time = "2208963661";
-            i.end_time = "2209050061";
-        });
+        if(item.ads){
+            item.ads.forEach((i) => {
+                i.start_time = "2208963661";
+                i.end_time = "2209050061";
+            });
+        }
     });
     $done({
         body: JSON.stringify(obj),

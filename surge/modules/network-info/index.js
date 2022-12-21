@@ -36,30 +36,10 @@ console.log(`arg`, arg)
   })
 
 async function getIP() {
-  try {
-    const res = await $.http.get({
-      url: 'http://mip.chinaz.com',
-      headers: { 'User-Agent': 'curl/7.16.3 (powerpc-apple-darwin9.0) libcurl/7.16.3' },
-    })
-    let body = res.body
-    console.log(body)
-    let ip
-    let name
-    try {
-      ip = body.match(/您的IP.*?>(.*?)<\//)[1]
-    } catch (e) {}
-    try {
-      name = body.match(/地址.*?>(.*?)<\//)[1].replace('中国', '').replace('上海上海', '上海')
-    } catch (e) {}
-    console.log({ ip, name })
-    return { ip, name }
-  } catch (e) {
-    console.error(e)
-    return {}
-  }
+  
   // try {
   //   const res = await $.http.get({
-  //     url: 'http://cip.cc',
+  //     url: 'http://mip.chinaz.com',
   //     headers: { 'User-Agent': 'curl/7.16.3 (powerpc-apple-darwin9.0) libcurl/7.16.3' },
   //   })
   //   let body = res.body
@@ -67,10 +47,10 @@ async function getIP() {
   //   let ip
   //   let name
   //   try {
-  //     ip = body.match(/IP\s*(:|：)\s*(.*?)\s/)[2]
+  //     ip = body.match(/您的IP.*?>(.*?)<\//)[1]
   //   } catch (e) {}
   //   try {
-  //     name = body.match(/地址\s*(:|：)\s*(.*)/)[2].replace(/中国\s*/, '')
+  //     name = body.match(/地址.*?>(.*?)<\//)[1].replace('中国', '').replace('上海上海', '上海')
   //   } catch (e) {}
   //   console.log({ ip, name })
   //   return { ip, name }
@@ -78,6 +58,27 @@ async function getIP() {
   //   console.error(e)
   //   return {}
   // }
+  try {
+    const res = await $.http.get({
+      url: 'http://cip.cc',
+      headers: { 'User-Agent': 'curl/7.16.3 (powerpc-apple-darwin9.0) libcurl/7.16.3' },
+    })
+    let body = res.body
+    console.log(body)
+    let ip
+    let name
+    try {
+      ip = body.match(/IP\s*(:|：)\s*(.*?)\s/)[2]
+    } catch (e) {}
+    try {
+      name = body.match(/地址\s*(:|：)\s*(.*)/)[2].replace(/中国\s*/, '')
+    } catch (e) {}
+    console.log({ ip, name })
+    return { ip, name }
+  } catch (e) {
+    console.error(e)
+    return {}
+  }
 }
 async function getProxyIP() {
   // try {

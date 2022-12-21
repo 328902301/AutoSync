@@ -71,7 +71,7 @@ async function getIP() {
       ip = body.match(/IP\s*(:|：)\s*(.*?)\s/)[2]
     } catch (e) {}
     try {
-      name = body.match(/地址\s*(:|：)\s*(.*)/)[2].replace(/中国\s*/, '')
+      name = `${body.match(/地址\s*(:|：)\s*(.*)/)[2].replace(/中国\s*/, '') || ''} ${body.match(/运营商\s*(:|：)\s*(.*)/)[2].replace(/中国\s*/, '') || ''}`
     } catch (e) {}
     console.log({ ip, name })
     return { ip, name }

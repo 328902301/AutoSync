@@ -4,7 +4,7 @@ rawNetflix = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_ru
 rawDisney = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list").text
 
 result = list()
-for rawresult in [rawBiliBili, rawBiliBilintl, rawTelegram, rawNetflix, rawDisney, rawpv]:
+for rawresult in [rawNetflix, rawDisney]:
     result.extend([item for item in rawresult.split("\n") if not item.startswith('#')])
 result_text = '\n'.join(result)
 

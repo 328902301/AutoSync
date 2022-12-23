@@ -127,6 +127,14 @@
           ]
         },
         {
+          "id": "id77_JDLM_no_schema",
+          "name": "点击通知是否跳转",
+          "val": "N",
+          "type": "text",
+          "placeholder": "Y/N",
+          "desc": "Y禁止，N不禁止"
+        },
+        {
           "id": "id77_JDLM_NO_LOG",
           "name": "是否禁止输出日志",
           "val": "Y",

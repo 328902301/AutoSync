@@ -16,6 +16,7 @@ const siteId = $.getData('id77_JDLM_siteId'); // 网站或APP的ID
 const app_key = $.getData('id77_JDLM_app_key'); // 网站或APP的 app_key
 const appSecret = $.getData('id77_JDLM_appSecret'); // 网站或APP的 appSecret
 const diyApi = $.getData('id77_JDLM_diy_api'); // 自建服务
+const schemeFlag = $.getData('id77_JDLM_no_schema'); // 禁止scheme跳转
 const diyCopy = $.getData('id77_JDLM_copy'); // copy  文案
 
 $.log(`🔗捕获：\n${$request.url}`);
@@ -218,6 +219,8 @@ function setReqOpts(method, _360buy_param_json) {
               diyData.promotionUrl ||
               diyData.originalContext,
       };
+      if (schemeFlag === 'Y') delete $.msgOpts.openUrl;
+
       $.setData($.subt, 'id77_JDSubt_Cache');
       $.setData($.desc, 'id77_JDDesc_Cache');
       $.setData(JSON.stringify($.msgOpts), 'id77_JDMsgOpts_Cache');
@@ -408,6 +411,8 @@ function setReqOpts(method, _360buy_param_json) {
           : $.convertedLink ||
             `https://item.jd.com/${skuId}.html?${Math.random()}`,
     };
+    if (schemeFlag === 'Y') delete $.msgOpts.openUrl;
+
     $.setData($.subt, 'id77_JDSubt_Cache');
     $.setData($.desc, 'id77_JDDesc_Cache');
     $.setData(JSON.stringify($.msgOpts), 'id77_JDMsgOpts_Cache');

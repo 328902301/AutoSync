@@ -128,7 +128,7 @@
         },
         {
           "id": "id77_JDLM_no_schema",
-          "name": "点击通知是否跳转",
+          "name": "是否禁止点击通知跳转",
           "val": "N",
           "type": "text",
           "placeholder": "Y/N",

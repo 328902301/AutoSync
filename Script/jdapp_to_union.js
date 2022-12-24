@@ -36,7 +36,9 @@ if (url.includes('graphext/draw')) {
   arr = url.match(/\/.*\/(\d+)\.html/);
 }
 
-sku = arr[1];
+if (arr?.length) {
+  sku = arr[1];
+}
 
 $.log(`👾SKU：${sku}`);
 

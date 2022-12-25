@@ -1,4 +1,4 @@
-// 2022-12-17 17:00
+// 2022-12-25 18:42
 
 var url = $request.url;
 var body = $response.body;
@@ -44,12 +44,6 @@ function adAppName(adUrls) {
   if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(adUrls)) return "小红书-信息流广告";
   if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
   if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
-  // if (/^https:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2/.test(adUrls)) return "知乎-开屏广告";
-  // if (/^https:\/\/api\.zhihu\.com\/topstory\/recommend/.test(adUrls)) return "知乎-推荐列表";
-  // if (/^https:\/\/appcloud2\.zhihu\.com\/v3\/config$/.test(adUrls)) return "知乎-appcloud2_config"
-  // if (/^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations/.test(adUrls)) return "知乎-回答下方广告";
-  // if (/^https:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation/.test(adUrls)) return "知乎-文章回答下方广告";
-  // if (/^https:\/\/api\.zhihu\.com\/(questions\/\d+\/feeds|v4\/questions\/\d+\/answers)\?/.test(adUrls)) return "知乎-问题回答列表";
   return "";
 }
 
@@ -705,95 +699,6 @@ switch (adAppName(url)) {
       console.log(`知乎-首页右下角悬浮框, 出现异常`);
     }
     break;
-  // case "知乎-开屏广告":
-  //   try {
-  //     let obj = JSON.parse(body);
-  //     if (obj.launch && obj.launch.ads) obj.launch.ads = [];
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-开屏广告, 出现异常`);
-  //   }
-  //   break;
-  // case "知乎-推荐列表":
-  //   try {
-  //     function getUrlParamValue(url, queryName) {
-  //       return Object.fromEntries(
-  //         url
-  //           .substring(url.indexOf("?") + 1)
-  //           .split("&")
-  //           .map((pair) => pair.split("="))
-  //       )[queryName];
-  //     }
-  //     let obj = JSON.parse(body);
-  //     if (obj.data) {
-  //       obj.data = obj.data.filter((item) => {
-  //         if (item.extra?.type === "zvideo") {
-  //           let videoUrl = item.common_card.feed_content.video.customized_page_url;
-  //           let videoID = getUrlParamValue(videoUrl, "videoID");
-  //           if (videoID) item.common_card.feed_content.video.id = videoID;
-  //         } else if (
-  //           item.type === "market_card" &&
-  //           item.fields?.header?.url &&
-  //           item.fields.body?.video?.id
-  //         ) {
-  //           let videoID = getUrlParamValue(item.fields.header.url, "videoID");
-  //           if (videoID) item.fields.body.video.id = videoID;
-  //         } else if (item.common_card?.feed_content?.video?.id) {
-  //           let search = '"feed_content":{"video":{"id":';
-  //           let str = $response.body.substring(
-  //             $response.body.indexOf(search) + search.length
-  //           );
-  //           let videoID = str.substring(0, str.indexOf(","));
-  //           item.common_card.feed_content.video.id = videoID;
-  //         }
-  //         return item.type !== "feed_advert";
-  //       });
-  //     }
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-推荐列表, 出现异常`);
-  //   }
-  //   break;
-  // case "知乎-appcloud2_config":
-  //   try {
-  //     let obj = JSON.parse(body);
-  //     if (obj.config?.zhcnh_thread_sync?.ZHBackUpIP_Switch_Open === "1") {
-  //       obj.config.zhcnh_thread_sync.ZHBackUpIP_Switch_Open = "0";
-  //     }
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-appcloud2_config, 出现异常`);
-  //   }
-  //   break;
-  // case "知乎-回答下方广告":
-  //   try {
-  //     let obj = JSON.parse(body);
-  //     if (obj.paging) body.paging = null;
-  //     if (obj.data) body.data = null;
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-回答下方广告, 出现异常`);
-  //   }
-  //   break;
-  // case "知乎-文章回答下方广告":
-  //   try {
-  //     let obj = JSON.parse(body);
-  //     if (obj.ad_info) obj.ad_info = null;
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-文章回答下方广告, 出现异常`);
-  //   }
-  //   break;
-  // case "知乎-问题回答列表":
-  //   try {
-  //     let obj = JSON.parse(body);
-  //     if (obj.data.ad_info) obj.data.ad_info = null;
-  //     if (obj.ad_info) obj.ad_info = null;
-  //     body = JSON.stringify(obj);
-  //   } catch (error) {
-  //     console.log(`知乎-问题回答列表, 出现异常`);
-  //   }
-  //   break;
   default:
     break;
 }

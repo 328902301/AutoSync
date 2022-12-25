@@ -8,8 +8,10 @@ payload:
   - DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
 
 # Battle.net 战网游戏下载、更新[中国]
-  - DOMAIN,client05.pdl.wow.battlenet.com.cn
-  - DOMAIN,client02.pdl.wow.battlenet.com.cn
+  - DOMAIN-SUFFIX,pdl.wow.battlenet.com.cn
+#  - DOMAIN,client05.pdl.wow.battlenet.com.cn
+#  - DOMAIN,client02.pdl.wow.battlenet.com.cn
+#  - DOMAIN,client02-cm.pdl.wow.battlenet.com.cn
 
 # GOG游戏下载、更新[中国]
 

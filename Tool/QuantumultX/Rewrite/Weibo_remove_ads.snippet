@@ -16,6 +16,8 @@
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
 # 微博国际版_屏蔽search_suggest
 # ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
+# 微博_Spotlight
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight url reject-dict
 
 # 微博自定义tab皮肤
 ^https?:\/\/api\.weibo\.cn\/2\/!\/client\/light_skin url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js

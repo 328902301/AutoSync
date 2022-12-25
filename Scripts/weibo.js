@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-25 17:50
+// 2022-12-25 18:38
 
 // 主要的选项配置
 const mainConfig = {
@@ -130,8 +130,10 @@ function removeMain(data) {
         ));
         item.items[0].data.hotwords = [{word: "搜索超话", tip: ""}];
         newItems.push(item);
-      } else if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
+      } else {
+        if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
         newItems.push(item);
+      }
     } else if ([200, 202].indexOf(item.data.card_type) === -1) {
       newItems.push(item);
     }

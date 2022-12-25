@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-17 08:52
+// 2022-12-25 17:50
 
 // 主要的选项配置
 const mainConfig = {
@@ -74,7 +74,8 @@ const otherUrls = {
   "/2/search/container_discover": "removeSearch",
   "/2/search/container_timeline": "removeSearch",
   "/2/search/finder": "removeSearchMain",
-  "/2/statuses/container_timeline": "removeMain", // 新版主页广告
+  "/2/statuses/container_timeline": "removeMainTab", // 新版主页广告
+  "/2/statuses/container_timeline_topic": "removeMain", // 新版主页广告
   "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
@@ -114,9 +115,36 @@ function isBlock(data) {
   return false;
 }
 
-// 新版主页广告
 function removeMain(data) {
   if (!data.items) return data;
+  if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
+  let newItems = [];
+  for (let item of data.items) {
+    if (item.category === "feed") {
+      if (!isAd(item.data)) newItems.push(item);
+    } else if (item.category === "group") {
+      if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
+        (item.items = item.items.filter((e) =>
+          e?.data?.itemid?.includes("mine_topics") ||
+          e?.data?.itemid?.includes("search_input")
+        ));
+        item.items[0].data.hotwords = [{word: "搜索超话", tip: ""}];
+        newItems.push(item);
+      } else if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
+        newItems.push(item);
+    } else if ([200, 202].indexOf(item.data.card_type) === -1) {
+      newItems.push(item);
+    }
+  }
+  data.items = newItems;
+  log("removeMain success");
+  return data;
+}
+
+// 新版主页广告
+function removeMainTab(data) {
+  if (!data.items) return data;
+  if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
   for (let item of data.items) {
     if (!isAd(item.data)) newItems.push(item);
@@ -189,8 +217,11 @@ function checkSearchWindow(item) {
   if (item.category !== "card") return false;
   return (
     item.data?.itemid === "finder_window" ||
+    item.data?.itemid === "hot_search_push" ||
     item.data?.itemid === "more_frame" ||
-    item.data?.card_type === 208
+    item.data?.card_type === 19 ||
+    item.data?.card_type === 208 ||
+    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   );
 }
 
@@ -205,11 +236,14 @@ function removeSearch(data) {
       if (!checkSearchWindow(item)) newItems.push(item);
     }
   }
+  data.items = newItems;
   // 去除搜索框填充词
   if (data.loadedInfo) {
     data.loadedInfo.searchBarContent = [];
+    if (data.loadedInfo.headerBack) {
+      data.loadedInfo.headerBack.channelStyleMap = {};
+    }
   }
-  data.items = newItems;
   log("remove_search success");
   return data;
 }
@@ -473,13 +507,6 @@ function nextVideoHandler(data) {
     log("nextVideoHandler");
   }
 }
-
-// function unreadCountHandler(data) {
-//   let ext = data.ext_new;
-//   if (!ext) return;
-//   if (!ext.creator_task) return;
-//   ext.creator_task.text = "";
-// }
 
 function log(data) {
   if (mainConfig.isDebug) console.log(data);

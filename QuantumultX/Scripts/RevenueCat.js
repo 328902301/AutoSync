@@ -373,6 +373,42 @@ if (ua.indexOf('Facess') != -1) {
     Body = {"request_date":"2022-12-04T05:11:18Z","request_date_ms":1670130678887,"subscriber":{"entitlements":{"pro":{"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"product_identifier":"wf_1449_1y","purchase_date":"2022-12-04T05:02:43Z"}},"first_seen":"2022-12-04T04:44:10Z","last_seen":"2022-12-04T04:44:10Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"B7E133A5-62CC-4D3B-9F77-FC0D0B325B05","original_application_version":"470","original_purchase_date":"2021-12-29T09:04:00Z","other_purchases":{},"subscriptions":{"wf_1449_1y":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2099-12-04T04:44:10Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-12-04T05:02:44Z","ownership_type":"PURCHASED","period_type":"default","purchase_date":"2022-12-04T05:02:43Z","refunded_at":null,"store":"app_store","unsubscribe_detected_at":null}}}};
 }
 
+//63 Malloc: Privacy & Security VPN
+//https://apps.apple.com/us/app/id1632814003
+if (ua.indexOf('Malloc') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.Alkaid.premium.yearly":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"IOS_PRO":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"com.Alkaid.premium.yearly","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Alkaid","last_seen":"2022-09-08T01:04:03Z"}};
+}
+
+//64 Mate – 文字和语音的外语词典翻译神器
+//https://apps.apple.com/cn/app/id1073473333
+if (ua.indexOf('Mate') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"mate_sub_a_t4":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"full":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"mate_sub_a_t4","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Alkaid","last_seen":"2022-09-08T01:04:03Z"}};
+}
+
+//65 Email Me -笔记应用
+//https://apps.apple.com/cn/app/id1090744587
+if (ua.indexOf('Email%20Me') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"ventura.media.EmailMe.premium.lifetime":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"ventura.media.EmailMe.premium.lifetime","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Alkaid","last_seen":"2022-09-08T01:04:03Z"}};
+}
+
+//66 Alpenglow: Sunset Forecast
+//https://apps.apple.com/cn/app/id978589174
+if (ua.indexOf('Alpenglow') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"ProLifetime":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"newPro":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"ProLifetime","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Alkaid","last_seen":"2022-09-08T01:04:03Z"}};
+}
+
+//67 Fluid Simulation
+//https://apps.apple.com/us/app/id1443124993
+if (ua.indexOf('Fluid') != -1) {
+    Body = {"request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"premium_iap_id":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2045-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"}},"entitlements":{"premium":{"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"premium_iap_id","expires_date":"2045-12-18T01:04:17Z"}},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:Alkaid","last_seen":"2022-09-08T01:04:03Z"}};
+}
+
+//68 过期啦 - 扫码录入的物品保质期提醒清单
+//https://apps.apple.com/us/app/id1470339754
+if (ua.indexOf('%E8%BF%87%E6%9C%9F%E5%95%A6') != -1) {
+    Body = {"request_date_ms":1671806803146,"request_date":"2022-12-23T14:46:43Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-12-23T10:56:29Z","original_application_version":"788","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{"com.vanemu.oops_expired.pro":{"original_purchase_date":"2022-12-23T11:13:22Z","expires_date":"2999-12-28T11:13:20Z","is_sandbox":false,"refunded_at":null,"unsubscribe_detected_at":"2022-12-23T11:34:58Z","grace_period_expires_date":null,"period_type":"trial","purchase_date":"2022-12-23T11:13:20Z","billing_issues_detected_at":null,"ownership_type":"PURCHASED","store":"app_store","auto_resume_date":null}},"entitlements":{"pro":{"grace_period_expires_date":null,"purchase_date":"2022-12-23T11:13:20Z","product_identifier":"com.vanemu.oops_expired.pro","expires_date":"2999-12-28T11:13:20Z"}},"original_purchase_date":"2022-12-23T10:56:00Z","original_app_user_id":"$RCAnonymousID:fdc1d2576ae14747a8b0d97085684dc0","last_seen":"2022-12-23T10:58:32Z"}};
+}
+
 Status = 'HTTP/1.1 200 OK';
 Headers = {"Content-Type": "application/json"};
 

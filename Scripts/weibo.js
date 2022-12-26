@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-25 18:38
+// 2022-12-26 10:12
 
 // 主要的选项配置
 const mainConfig = {
@@ -241,7 +241,7 @@ function removeSearch(data) {
   data.items = newItems;
   // 去除搜索框填充词
   if (data.loadedInfo) {
-    data.loadedInfo.searchBarContent = [];
+    data.loadedInfo.searchBarContent = {};
     if (data.loadedInfo.headerBack) {
       data.loadedInfo.headerBack.channelStyleMap = {};
     }

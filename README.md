@@ -44,6 +44,22 @@
 7. 所有直接或间接使用本项目的个人和组织，应24小时内完成学习和研究，并及时删除本项目中的所有内容。如对本项目的功能有需求，应自行开发相关功能。
 8. 本项目保留随时对免责声明进行补充或更改的权利，直接或间接使用本项目内容的个人或组织，视为接受本项目的特别声明。
 
+### New Features
+
+- MitM HTTPS decryption and rewrite are both working with traffic through TUN interface.
+- Enable HTTP Analyzer can record whole HTTP request and response including body.
+- Filter works on UDP traffic and UDP destination port can be set as whitelist.
+- Server can have its own server_check_url instead of the global server_check_url.
+- Supports V2Ray websocket and websocket + tls over shadowsocks, read sample configuration for details.
+- Only compatible with server side deployed by V2Ray or shadowsocks v2ray-plugin with mux = 0.
+- User-Agent(lower priority than Host) type of filter works on TUN traffic.
+- Customized DNS setting supports customized port and IPv6 address.
+- Improved the DNS mechanism by enable expired answers and start new query at the same time.
+- Policy status and request history will keep the record of the full policy route like A -> B -> C -> D.
+- The DNS results will be recorded along with the first responded DNS server, response time and the TTL.
+- Modify configuration won't trigger reconnecting anymore.
+- Rewrite HTTP request headers, response status, response headers and response body.
+
 ### Quantumult X, Surge, Loon is a powerful network debugging tool.
 
 - Support ss,ssr,vmess,trojan protocol
@@ -90,3 +106,6 @@
 1. Anyone viewing or using in any way, directly or indirectly, the scripts in "Script project" should read this disclaimer carefully, and Nobody reserves the right to change or supplement this disclaimer at any time. 
 
 2. **Once you view, use or copy any of the related scripts in "Script project", you will be deemed to have accepted this disclaimer.**
+
+# 📃LICENSE
+Copyright © 2019-present YAOJIO. This project is GPL licensed.

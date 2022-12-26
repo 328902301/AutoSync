@@ -1,0 +1,335 @@
+mixed-port: 7890
+allow-lan: false
+mode: script
+log-level: debug
+ipv6: false
+tun:
+  enable: true
+  stack: gvisor
+  auto-detect-interfcae: true
+  auto-route: true
+  dns-hijack:
+      - 198.18.0.2:53
+
+proxy-providers:
+  #单个机场订阅AcrossLine&GLADOS，也可以机场组合订阅
+  AcrossLine:
+    type: http
+    url: "这里填写机场订阅链接1，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    path: ./Server/AcrossLine.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  GLADOS:
+    type: http
+    url: "这里填写机场订阅链接2，注意保留双引号和双引号前面的空格"
+    interval: 3600
+    path: ./Server/GLADOS.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  #节点筛选
+  HK:
+    type: file
+    path: ./Server/AcrossLine.yaml
+    filter: '香港|HK|Hong Kong|🇭🇰'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
+  TW:
+    type: file
+    path: ./Server/GLADOS.yaml
+    filter: '台湾|TW|cn'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300 
+  SG:
+    type: file
+    path: ./Server/GLADOS.yaml
+    filter: '新加坡|狮城|SG|Singapore|🇸🇬'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
+  KR:
+    type: file
+    path: ./Server/AcrossLine.yaml
+    filter: '韩国|韓國|南朝鲜|KR|Korean|🇰🇷'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
+  JP:
+    type: file
+    path: ./Server/GLADOS.yaml
+    filter: '日本|JP|Japan|🇯🇵'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300  
+  US:
+    type: file
+    path: ./Server/GLADOS.yaml
+    filter: '美国|US|USA|America|United States|🇺🇸'
+    health-check: 
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
+
+proxy-groups:
+  - name: Emby
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: Spotify
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+      - DIRECT
+  - name: Meta
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: Telegram
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: TikTok
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: YouTube
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: ProxyMedia
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: Proxy
+    type: select
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 韩国节点
+      - 日本节点
+      - 美国节点
+  - name: "香港节点"
+    type: fallback
+    use:
+      - HK
+  - name: "台湾节点"
+    type: fallback
+    use:
+      - TW
+  - name: "狮城节点"
+    type: fallback
+    use:
+      - SG
+  - name: "韩国节点"
+    type: fallback
+    use:
+      - KR
+  - name: "日本节点"
+    type: fallback
+    use:
+      - JP
+  - name: "美国节点"
+    type: fallback
+    use:
+      - US
+
+rule-providers:
+   Reject:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Reject.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Reject.yaml
+    interval: 86400
+
+   Apple:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Apple.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Apple.yaml
+    interval: 86400
+
+   Emby:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Emby.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Emby.yaml
+    interval: 86400
+
+   Meta:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Meta.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Meta.yaml
+    interval: 86400
+
+   Microsoft:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Microsoft.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Microsoft.yaml
+    interval: 86400
+
+   Spotify:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Spotify.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Spotify.yaml
+    interval: 86400
+
+
+   TikTok:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/TikTok.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/TikTok.yaml
+    interval: 86400
+
+   Telegram:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Telegram.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Telegram.yaml
+    interval: 86400
+
+   YouTube:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/YouTube.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/YouTube.yaml
+    interval: 86400
+
+   ProxyMedia:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/ProxyMedia.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/ProxyMedia.yaml
+    interval: 86400
+
+   Proxy:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Proxy.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Proxy.yaml
+    interval: 86400
+
+   China:
+    type: http
+    behavior: classical
+    path: ./Ruleset/iEwha/Direct.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/Domestic.yaml
+    interval: 86400
+
+   cncidr:
+    type: http
+    behavior: ipcidr
+    path: ./Ruleset/iEwha/cncidr.yaml
+    url: https://raw.fastgit.org/iEwha/Profiles/master/Provider/Ruleset/cncidr.yaml
+    interval: 86400
+
+# 规则模式
+rules:
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Meta,Meta
+  - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,ProxyMedia,ProxyMedia
+  - RULE-SET,Proxy,Proxy
+  - RULE-SET,China,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - MATCH,Proxy
+
+# 脚本模式
+script:
+  code: |
+    def main(ctx, metadata):
+        ruleset_action = {    
+            "Reject": "REJECT", 
+            "Apple": "DIRECT",
+            "Emby": "Emby",
+            "Meta": "Meta",
+            "Microsoft": "DIRECT",
+            "Spotify": "Spotify",
+            "TikTok": "TikTok",
+            "Telegram": "Telegram",
+            "YouTube": "YouTube",
+            "ProxyMedia": "ProxyMedia",
+            "Proxy": "Proxy",
+            "China": "DIRECT",
+            "cncidr": "DIRECT",    
+          }
+        port = int(metadata["dst_port"])
+        if metadata["network"] == "UDP":
+            if port == 443:
+                ctx.log('[Script] matched QUIC traffic use reject')
+                return "REJECT"
+        port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8888, 8889]
+        if port not in port_list:
+            ctx.log('[Script] not common port use direct')
+            return "DIRECT"
+        if metadata["dst_ip"] == "":
+            metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
+        if metadata["dst_ip"] == "":
+            return "DIRECT"
+        code = ctx.geoip(metadata["dst_ip"])
+        if code == "CN":
+            ctx.log('[Script] Geoip CN')
+            return "DIRECT"
+        ctx.log('[Script] MATCH')
+        return "Proxy"   

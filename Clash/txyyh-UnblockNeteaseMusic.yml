@@ -1,0 +1,87 @@
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: warning
+external-controller: :9090
+dns:
+  enable: true # 是否启用dns false
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+  default-nameserver:
+    - 223.5.5.5 # 阿里DNS
+    - 119.29.29.29 # 腾讯DNS
+    #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+  nameserver:
+    #- 180.76.76.76 # 百度DNS
+    #- 119.29.29.29 # 腾讯DNS
+    #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+    #- 114.114.114.114 # 114DNS
+    - https://dns.alidns.com/dns-query # 阿里 DoH DNS
+    - https://doh.pub/dns-query #腾讯DNSPod DOH
+    - https://dns.rubyfish.cn/dns-query # 红鱼 DoH DNS
+    #- https://dns.nextdns.io/dns-query # NextDNS DOH
+    #- https://doh.360.cn/dns-query # 360 DoH DNS
+  fallback:
+    #- 8.8.8.8 # Google DNS
+    #- 1.1.1.1 # Cloudflare DNS
+    #- https://dns.alidns.com/dns-query # 阿里 DoH DNS
+    #- https://dns.rubyfish.cn/dns-query # 红鱼 DoH DNS
+    - https://dns.nextdns.io/dns-query # NextDNS DOH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH DNS
+    - https://doh.opendns.com/dns-query # OpenDNS DoH
+    - https://doh.dns.sb/dns-query # DNS.sb DoH
+    #- https://dns.google/dns-query # Google DoH DNS
+  fallback-filter:
+    geoip: true # 默认
+    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+      - 240.0.0.0/4
+  fallback-filter:
+      geoip: true # 默认
+      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+        - 240.0.0.0/4
+proxies:
+  - {name: 🎵 网易云解锁(本地), server: 127.0.0.1, port: 16375, type: http, username: "", password: "", tls: false}
+  - {name: 🎵 网易云解锁(如风), server: music.desperadoj.com, port: 30001, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_x80j}
+  - {name: 🎵 网易云解锁(Aiden), server: taron.top, port: 200, type: http, username: "", password: "", tls: false}
+  - {name: 🎵 网易云解锁(星梦), server: unblock.xmshuju.xyz, port: 1024, type: http, username: "", password: "", tls: false}
+proxy-groups:
+  - name: 🎵 网易云解锁
+    type: select
+    proxies:
+      - 🎵 网易云解锁(本地)
+      - 🎵 网易云解锁(如风)
+      - 🎵 网易云解锁(Aiden)
+      - 🎵 网易云解锁(星梦)
+      - DIRECT
+rules:
+ - DOMAIN-SUFFIX,163yun.com,🎵 网易云解锁
+ - DOMAIN-SUFFIX,api.iplay.163.com,🎵 网易云解锁
+ - DOMAIN-SUFFIX,hz.netease.com,🎵 网易云解锁
+ - DOMAIN-SUFFIX,mam.netease.com,🎵 网易云解锁
+ - DOMAIN-SUFFIX,music.163.com,🎵 网易云解锁
+ - IP-CIDR,39.105.63.80/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,45.254.48.1/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,47.100.127.239/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.21.14/31,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.160.195/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.160.197/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.179.214/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.181.35/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.181.38/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.181.60/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,59.111.238.29/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,101.71.154.241/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,103.126.92.132/31,🎵 网易云解锁,no-resolve
+ - IP-CIDR,112.13.119.17/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,112.13.122.1/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,115.236.118.33/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,115.236.121.1/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,118.24.63.156/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,193.112.159.225/32,🎵 网易云解锁,no-resolve
+ - IP-CIDR,223.252.199.66/31,🎵 网易云解锁,no-resolve
+  - MATCH,DIRECT

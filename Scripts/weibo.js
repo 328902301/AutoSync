@@ -369,7 +369,7 @@ function itemExtendHandler(data) {
     if (data.reward_info) data.reward_info = null;
   }
   if (data.extend_info && data.extend_info.shopwindow_card) {
-    data.extend_info.shopwindow_card = {};
+    delete data.extend_info;
   }
   // 删除超话新帖和新用户通知
   if (data.page_alerts) data.page_alerts = null;

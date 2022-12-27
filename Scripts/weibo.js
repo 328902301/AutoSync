@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-26 10:12
+// 2022-12-27 16:25
 
 // 主要的选项配置
 const mainConfig = {
@@ -219,10 +219,10 @@ function checkSearchWindow(item) {
   if (item.category !== "card") return false;
   return (
     item.data?.itemid === "finder_window" ||
-    item.data?.itemid === "hot_search_push" ||
     item.data?.itemid === "more_frame" ||
     item.data?.card_type === 19 ||
     item.data?.card_type === 208 ||
+    item.data?.card_type === 217 ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   );
 }

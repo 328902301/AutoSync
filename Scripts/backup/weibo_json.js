@@ -1,3 +1,19 @@
+/***********************************
+> 应用名称：墨鱼自用QX微博&微博国际版净化
+> 脚本作者：@Zmqcherish, @Cuttlefish
+> 微信账号：墨鱼手记
+> 更新时间：2022-12-27
+> 通知频道：https://t.me/ddgksf2021
+> 贡献投稿：https://t.me/ddgksf2013_bot
+> 原作者库：https://github.com/zmqcherish
+> 问题反馈：ddgksf2013@163.com
+> 特别提醒：如需转载请注明出处，谢谢合作！
+> 脚本声明：特别感谢Zmqcherish的付出，本脚本只是在他原创脚本的基础上优化QX自用
+> 原创地址：https://github.com/zmqcherish/proxy-script/raw/main/weibo.conf	
+***********************************/
+
+const version = "V2.0.66";
+
 const mainConfig = {
     isDebug: !1,
     removeHomeVip: !0,
@@ -212,13 +228,13 @@ function topicHandler(e) {
         )
           n = !1;
         else if (a.length > 1) {
-          let s = [];
-          for (let d of a)
+          let d = [];
+          for (let s of a)
             -1 ==
               ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
-                d.itemid
-              ) && s.push(d);
-          i.card_group = s;
+                s.itemid
+              ) && d.push(s);
+          i.card_group = d;
         }
       }
     }
@@ -237,10 +253,10 @@ function checkSearchWindow(e) {
   return (
     !!mainConfig.removeSearchWindow &&
     "card" == e.category &&
-    (e.data?.itemid == "hot_search_push" ||
-      e.data?.itemid == "finder_window" ||
+    (e.data?.itemid == "finder_window" ||
       e.data?.itemid == "more_frame" ||
       e.data?.card_type == 208 ||
+      e.data?.card_type == 217 ||
       e.data?.card_type == 19 ||
       e.data?.mblog?.page_info?.actionlog?.source?.includes("ad"))
   );

@@ -1,0 +1,28 @@
+name: SplitGemini-Clash_configuration-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-SplitGemini-Clash_configuration
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync SplitGemini-Clash_configuration
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/SplitGemini/Clash_configuration.git"
+          source_branch: "master"
+          destination_branch: "SplitGemini-Clash_configuration"
+          github_token: ${{ secrets.PAT }}

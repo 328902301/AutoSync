@@ -1,18 +1,17 @@
-/***********************************
+/***********************************************
 > 应用名称：墨鱼自用QX微博&微博国际版净化
 > 脚本作者：@Zmqcherish, @Cuttlefish
 > 微信账号：墨鱼手记
-> 更新时间：2022-12-27
+> 更新时间：2022-12-28
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
 > 问题反馈：ddgksf2013@163.com
 > 特别提醒：如需转载请注明出处，谢谢合作！
-> 脚本声明：特别感谢Zmqcherish的付出，本脚本只是在他原创脚本的基础上优化QX自用
-> 原创地址：https://github.com/zmqcherish/proxy-script/raw/main/weibo.conf	
-***********************************/
+> 脚本声明：本脚本是在Zmqcherish原创基础上优化自用
+***********************************************/
 
-const version = "V2.0.66";
+const version = "V2.0.70";
 
 const mainConfig = {
     isDebug: !1,
@@ -30,7 +29,7 @@ const mainConfig = {
     removePinedTrending: !0,
     removeInterestFriendInTopic: !1,
     removeInterestTopic: !1,
-    removeInterestUser: !1,
+    removeInterestUser: !0,
     removeLvZhou: !0,
     removeSearchWindow: !0,
     profileSkin1: null,
@@ -344,7 +343,9 @@ function removeTimeLine(e) {
   if (!e.statuses) return;
   let o = [];
   for (let i of e.statuses)
-    isAd(i) || (lvZhouHandler(i), isBlock(i) || o.push(i));
+    isAd(i) ||
+      (lvZhouHandler(i),
+      isBlock(i) || (i.common_struct && delete i.common_struct, o.push(i)));
   e.statuses = o;
 }
 function removeHomeVip(e) {
@@ -493,7 +494,7 @@ function containerHandler(e) {
           (log("remove 超话好友关注"), (e.card_group = [])));
 }
 function userHandler(e) {
-  if (((e = removeMain(e)), !mainConfig.removeInterestUser || !e.items))
+  if (((e = removeMainTab(e)), !mainConfig.removeInterestUser || !e.items))
     return e;
   let t = [];
   for (let o of e.items) {
@@ -502,7 +503,7 @@ function userHandler(e) {
       try {
         "可能感兴趣的人" == o.items[0].data.desc && (i = !1);
       } catch (n) {}
-    i && t.push(o);
+    i && (o.data?.common_struct && delete o.data.common_struct, t.push(o));
   }
   return (e.items = t), log("removeMain sub success"), e;
 }

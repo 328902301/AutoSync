@@ -467,7 +467,7 @@ https:\/\/yanxuan.nosdn.127.net\/.*\.mp4 data="https://raw.githubusercontent.com
 # > yingshiyun
 ^https?:\/\/i\.ys7\.com\/api\/ads\/ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > zhangshangshenghuo
-^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+#^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > zhongguoyidong
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"

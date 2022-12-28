@@ -8,9 +8,7 @@ tun:
   stack: gvisor
   auto-detect-interfcae: true
   auto-route: true
-  dns-hijack:
-      - 198.18.0.2:53
-
+  
 proxy-providers:
   #单个机场订阅AcrossLine&GLADOS，也可以机场组合订阅
   AcrossLine:

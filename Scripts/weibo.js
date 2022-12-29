@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 10:20
+// 2022-12-29 10:30
 
 // 主要的选项配置
 const mainConfig = {
@@ -506,7 +506,7 @@ function userHandler(data) {
       } catch (error) {}
     }
     if (isAdd) {
-      if (item.data.common_struct) {
+      if (item.data?.common_struct) {
         delete item.data.common_struct;
       }
       newItems.push(item);

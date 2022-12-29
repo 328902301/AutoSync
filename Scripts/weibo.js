@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 11:32
+// 2022-12-29 10:30
 
 // 主要的选项配置
 const mainConfig = {
@@ -150,14 +150,7 @@ function removeMainTab(data) {
   if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
   for (let item of data.items) {
-    if (!isAd(item.data)) {
-      // 删除 头像挂件
-      if (item.data.user && item.data.user.cardid) {
-        item.data.user.cardid = "";
-        delete item.data.user.avatar_extend_info;
-      }
-      newItems.push(item);
-    }
+    if (!isAd(item.data)) newItems.push(item);
   }
   data.items = newItems;
   log("removeMain success");

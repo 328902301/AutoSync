@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 17:52
+// 2022-12-29 18:00
 
 // 主要的选项配置
 const mainConfig = {
@@ -75,9 +75,8 @@ const otherUrls = {
   "/2/search/container_discover": "removeSearch",
   "/2/search/container_timeline": "removeSearch",
   "/2/search/finder": "removeSearchMain",
-  // "/2/statuses/container_timeline": "removeMainTab", // 新版主页广告
+  "/2/statuses/container_timeline": "removeMainTab", // 新版主页广告
   "/2/statuses/container_timeline_topic": "removeMain", // 新版主页广告
-  "/2/statuses/container_timeline_unread": "removeMain", // 新版主页广告
   "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
@@ -104,6 +103,8 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type === "ad") return true;
+  if (data.items && data.items.type === "horizontal") return true;
+  if (data.items.items && data.items.items.category === "card") return true;
   return false;
 }
 
@@ -124,20 +125,12 @@ function removeMain(data) {
   for (let item of data.items) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
-    } else if (item.items?.category === "card") {
-      item.items = item.items.filter((e) =>
-        !(
-          e?.data?.product?.includes("divideline") ||
-          e?.data?.actionlog?.source?.includes("friends_follows")
-        )
-      );
-      newItems.push(item);
     } else if (item.category === "group") {
       if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
-        item.items = item.items.filter((e) =>
+        (item.items = item.items.filter((e) =>
           e?.data?.itemid?.includes("mine_topics") ||
           e?.data?.itemid?.includes("search_input")
-        );
+        ));
         item.items[0].data.hotwords = [{word: "搜索超话", tip: ""}];
         newItems.push(item);
       } else {

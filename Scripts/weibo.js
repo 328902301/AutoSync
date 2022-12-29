@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 10:53
+// 2022-12-29 10:56
 
 // 主要的选项配置
 const mainConfig = {
@@ -377,7 +377,7 @@ function itemExtendHandler(data) {
   // 删除拓展卡片
   if (mainConfig.removeExtendInfo) {
     if (data.extend_info) delete data.extend_info;
-    if (data.common_data) delete data.common_data;
+    if (data.comment_data) delete data.comment_data;
   }
   // 删除超话新帖和新用户通知
   if (data.page_alerts) data.page_alerts = null;

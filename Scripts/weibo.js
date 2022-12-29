@@ -382,7 +382,6 @@ function updateFollowOrder(item) {
       if (d.itemId === "mainnums_friends") {
         let s = d.click.modules[0].scheme;
         d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
-        log("updateFollowOrder success");
         return;
       }
     }
@@ -423,7 +422,6 @@ function removeHome(data) {
 
 // 移除tab1签到
 function removeCheckin(data) {
-  log("remove tab1签到");
   data.show = 0;
 }
 
@@ -496,7 +494,6 @@ var body = $response.body;
 let method = getModifyMethod(url);
 
 if (method) {
-  log(method);
   var func = eval(method);
   let data = JSON.parse(body);
   new func(data);

@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 10:30
+// 2022-12-29 16:49
 
 // 主要的选项配置
 const mainConfig = {
@@ -77,6 +77,7 @@ const otherUrls = {
   "/2/search/finder": "removeSearchMain",
   "/2/statuses/container_timeline": "removeMainTab", // 新版主页广告
   "/2/statuses/container_timeline_topic": "removeMain", // 新版主页广告
+  "/2/statuses/container_timeline_unread": "removeMain", // 新版主页广告
   "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
@@ -123,7 +124,11 @@ function removeMain(data) {
   for (let item of data.items) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
+    } else if (item.items.category === "card") {
+      item.items.data = {};
+      newItems.push(item);
     } else if (item.category === "group") {
+      if (item.header) delete data.header;
       if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
         (item.items = item.items.filter((e) =>
           e?.data?.itemid?.includes("mine_topics") ||

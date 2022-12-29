@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 18:03
+// 2022-12-29 22:12
 
 // 主要的选项配置
 const mainConfig = {
@@ -7,6 +7,7 @@ const mainConfig = {
 
   // 个人中心配置 其中多数是可以直接在更多功能里直接移除
   removeHomeVip: true, // 个人中心的 vip 栏
+  removeHomeCreatorTask: true, // 个人中心创作者中心下方的轮播图
 
   // 微博详情页配置
   removeRelate: true, // 相关推荐
@@ -28,6 +29,8 @@ const mainConfig = {
 
   removeLvZhou: true, // 绿洲模块
   removeSearchWindow: true // 搜索页滑动窗口 有的不是广告
+  removeUnfollowTopic: true, // 超话 未关注的
+  removeUnusedPart: true, // 超话 乱七八糟没用的部分
 };
 
 // 菜单配置
@@ -103,16 +106,6 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type === "ad") return true;
-  return false;
-}
-
-function isBlock(data) {
-  let blockIds = mainConfig.blockIds || [];
-  if (blockIds.length === 0) return false;
-  let uid = data.user.id;
-  for (const blockId of blockIds) {
-    if (blockId === uid) return true;
-  }
   return false;
 }
 
@@ -325,10 +318,8 @@ function removeTimeLine(data) {
   for (const s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
-      if (!isBlock(s)) {
-        if (s.common_struct) {
-          delete s.common_struct;
-        }
+      if (s.common_struct) {
+        delete s.common_struct;
         newStatuses.push(s);
       }
     }

@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 16:49
+// 2022-12-29 17:00
 
 // 主要的选项配置
 const mainConfig = {
@@ -124,16 +124,17 @@ function removeMain(data) {
   for (let item of data.items) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
-    } else if (item.items.category === "card") {
-      item.items.data = {};
-      newItems.push(item);
     } else if (item.category === "group") {
-      if (item.header) delete data.header;
+      if (item.items.length > 0 && item.items[0].data?.product?.includes("divideline")) {
+        item.items = item.items.filter((e) => !e?.data?.product?.includes("divideline"));
+        item.items[0].data.header = {};
+        newItems.push(item);
+      }
       if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
-        (item.items = item.items.filter((e) =>
+        item.items = item.items.filter((e) =>
           e?.data?.itemid?.includes("mine_topics") ||
           e?.data?.itemid?.includes("search_input")
-        ));
+        );
         item.items[0].data.hotwords = [{word: "搜索超话", tip: ""}];
         newItems.push(item);
       } else {

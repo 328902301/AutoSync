@@ -104,7 +104,6 @@ function isAd(data) {
   }
   if (data.promotion && data.promotion.type === "ad") return true;
   if (data.items && data.items.type === "horizontal") return true;
-  if (data.items.items && data.items.items.category === "card") return true;
   return false;
 }
 

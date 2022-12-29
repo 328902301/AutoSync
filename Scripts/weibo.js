@@ -1,18 +1,12 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 22:35
+// 2022-12-29 22:45
 
 // 主要的选项配置
 const mainConfig = {
-  isDebug: false, // 开启调试 会打印运行中部分日志
-
-  // 个人中心配置 其中多数是可以直接在更多功能里直接移除
-  removeHomeVip: true, // 个人中心的 vip 栏
-  removeHomeCreatorTask: true, // 个人中心创作者中心下方的轮播图
-
-  // 微博详情页配置
   modifyMenus: true, // 编辑上下文菜单
   removeExtendInfo: true, // 删除拓展卡片
   removeFollow: true, // 关注博主
+  removeHomeVip: true, // 个人中心的 vip 栏
   removeGood: true, // 微博主好物种草
   removeInterestFriendInTopic: true, // 超话 超话里的好友
   removeInterestTopic: true, // 超话 可能感兴趣的超话 + 好友关注
@@ -24,9 +18,9 @@ const mainConfig = {
   removeRelateItem: true, // 评论区相关内容
   removeRecommendItem: true, // 评论区推荐内容
   removeRewardItem: true, // 微博详情页打赏模块
-  removeSearchWindow: true // 搜索页滑动窗口 有的不是广告
+  removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
   removeUnfollowTopic: true, // 超话 未关注的
-  removeUnusedPart: true, // 超话 乱七八糟没用的部分
+  removeUnusedPart: true // 超话 乱七八糟没用的部分
 };
 
 // 菜单配置
@@ -129,7 +123,6 @@ function removeMain(data) {
     }
   }
   data.items = newItems;
-  log("removeMain success");
   return data;
 }
 
@@ -142,7 +135,6 @@ function removeMainTab(data) {
     if (!isAd(item.data)) newItems.push(item);
   }
   data.items = newItems;
-  log("removeMain success");
   return data;
 }
 
@@ -188,7 +180,6 @@ function topicHandler(data) {
     if (addFlag) newCards.push(c);
   }
   data.cards = newCards;
-  log("topicHandler success");
   return data;
 }
 
@@ -200,7 +191,6 @@ function removeSearchMain(data) {
     if (!payload) continue;
     removeSearch(payload);
   }
-  log("remove_search main success");
   return data;
 }
 
@@ -236,7 +226,6 @@ function removeSearch(data) {
       data.loadedInfo.headerBack.channelStyleMap = {};
     }
   }
-  log("remove_search success");
   return data;
 }
 
@@ -393,13 +382,10 @@ function updateFollowOrder(item) {
       if (d.itemId === "mainnums_friends") {
         let s = d.click.modules[0].scheme;
         d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
-        log("updateFollowOrder success");
         return;
       }
     }
-  } catch (error) {
-    log("updateFollowOrder fail");
-  }
+  } catch (error) {}
 }
 
 function removeHome(data) {
@@ -436,7 +422,6 @@ function removeHome(data) {
 
 // 移除tab1签到
 function removeCheckin(data) {
-  log("remove tab1签到");
   data.show = 0;
 }
 
@@ -454,7 +439,6 @@ function removeComments(data) {
       newItems.push(item);
     }
   }
-  log("remove 评论区相关和推荐内容");
   data.datas = newItems;
 }
 
@@ -462,16 +446,13 @@ function removeComments(data) {
 function containerHandler(data) {
   if (mainConfig.removeInterestFriendInTopic) {
     if (data.card_type_name === "超话里的好友") {
-      log("remove 超话里的好友");
       data.card_group = [];
     }
   }
   if (mainConfig.removeInterestTopic && data.itemid) {
     if (data.itemid.indexOf("infeed_may_interest_in") !== -1) {
-      log("remove 感兴趣的超话");
       data.card_group = [];
     } else if (data.itemid.indexOf("infeed_friends_recommend") !== -1) {
-      log("remove 超话好友关注");
       data.card_group = [];
     }
   }
@@ -498,7 +479,6 @@ function userHandler(data) {
     }
   }
   data.items = newItems;
-  log("removeMain sub success");
   return data;
 }
 
@@ -506,12 +486,7 @@ function nextVideoHandler(data) {
   if (mainConfig.removeNextVideo) {
     data.statuses = [];
     data.tab_list = [];
-    log("nextVideoHandler");
   }
-}
-
-function log(data) {
-  if (mainConfig.isDebug) console.log(data);
 }
 
 var url = $request.url;
@@ -519,7 +494,6 @@ var body = $response.body;
 let method = getModifyMethod(url);
 
 if (method) {
-  log(method);
   var func = eval(method);
   let data = JSON.parse(body);
   new func(data);

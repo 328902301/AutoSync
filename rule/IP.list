@@ -67,7 +67,7 @@ DOMAIN-SUFFIX,gifshow.com
 DOMAIN-SUFFIX,ksapisrv.com
 
 # ======= 小红书 ======= #
-DOMAIN,edith.xiaohongshu.com
+#DOMAIN,edith.xiaohongshu.com
 
 # ======= 其乐论坛 ======= #
 DOMAIN,keylol.com

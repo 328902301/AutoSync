@@ -151,9 +151,9 @@ function removeMainTab(data) {
   let newItems = [];
   for (let item of data.items) {
     if (!isAd(item.data)) {
-      let userCard = item.data.user.cardid;
-      if (userCard) {
-        userCard = "";
+      // 删除 头像挂件
+      if (item.data.user && item.data.user.cardid) {
+        item.data.user.cardid = "";
         delete item.data.user.avatar_extend_info;
       }
       newItems.push(item);

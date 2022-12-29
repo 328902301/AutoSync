@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-28 18:55
+// 2022-12-29 10:02
 
 // 主要的选项配置
 const mainConfig = {
@@ -13,6 +13,7 @@ const mainConfig = {
   removeGood: true, // 微博主好物种草
   removeFollow: true, // 关注博主
   modifyMenus: true, // 编辑上下文菜单
+  removeExtendInfo: true, // 删除拓展卡片
   removeRelateItem: true, // 评论区相关内容
   removeRecommendItem: true, // 评论区推荐内容
   removeRewardItem: true, // 微博详情页打赏模块
@@ -372,6 +373,10 @@ function itemExtendHandler(data) {
   }
   if (mainConfig.removeRewardItem) {
     if (data.reward_info) data.reward_info = null;
+  }
+  // 删除拓展卡片
+  if (mainConfig.removeExtendInfo) {
+    if (data.extend_info) delete data.extend_info;
   }
   // 删除超话新帖和新用户通知
   if (data.page_alerts) data.page_alerts = null;

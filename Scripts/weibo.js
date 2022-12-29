@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-29 10:56
+// 2022-12-29 11:32
 
 // 主要的选项配置
 const mainConfig = {
@@ -150,7 +150,14 @@ function removeMainTab(data) {
   if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
   for (let item of data.items) {
-    if (!isAd(item.data)) newItems.push(item);
+    if (!isAd(item.data)) {
+      let userCard = item.data.user.cardid;
+      if (userCard) {
+        userCard = "";
+        delete item.data.user.avatar_extend_info;
+      }
+      newItems.push(item);
+    }
   }
   data.items = newItems;
   log("removeMain success");
@@ -377,7 +384,6 @@ function itemExtendHandler(data) {
   // 删除拓展卡片
   if (mainConfig.removeExtendInfo) {
     if (data.extend_info) delete data.extend_info;
-    if (data.comment_data) delete data.comment_data;
   }
   // 删除超话新帖和新用户通知
   if (data.page_alerts) data.page_alerts = null;

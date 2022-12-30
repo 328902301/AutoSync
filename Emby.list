@@ -17,4 +17,6 @@ DOMAIN,bsem.ddns.me
 # Bluesea Music
 DOMAIN,emby-pub1.blueseacdn.com
 DOMAIN-SUFFIX,blueseamusics.com
+# HDOBOX
+DOMAIN-SUFFIX,onthecloudcdn.com
 

@@ -11,7 +11,7 @@
 > 脚本声明：本脚本是在Zmqcherish原创基础上优化自用
 ***********************************************/
 
-const version = "V2.0.75";
+const version = "V2.0.77";
 
 const mainConfig = {
     isDebug: !1,
@@ -165,7 +165,9 @@ function removeMainTab(e) {
   )
     return e;
   let t = [];
-  for (let o of e.items) isAd(o.data) || "feed" != o.category || t.push(o);
+  for (let o of e.items)
+    isAd(o.data) ||
+      (o.category ? "group" != o.category && t.push(o) : t.push(o));
   return (e.items = t), log("removeMainTab success"), e;
 }
 function removeMain(e) {
@@ -345,8 +347,8 @@ function removeTimeLine(e) {
   for (let i of e.statuses)
     isAd(i) ||
       (lvZhouHandler(i),
-      "feed" == i.category &&
-        (i.common_struct && delete i.common_struct, o.push(i)));
+      i.common_struct && delete i.common_struct,
+      i.category ? "group" != i.category && o.push(i) : o.push(i));
   e.statuses = o;
 }
 function removeHomeVip(e) {
@@ -549,6 +551,7 @@ function removePhpScreenAds(e) {
       (t.displayintervel = 86400),
       (t.allowdaydisplaynum = 0),
       (t.displaynum = 0),
+      (t.displaytime = 1),
       (t.begintime = "2029-12-30 00:00:00"),
       (t.endtime = "2029-12-30 23:59:59");
   return e;

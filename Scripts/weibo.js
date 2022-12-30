@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2022-12-30 16:05
+// 2022-12-30 21:00
 
 // 主要的选项配置
 const mainConfig = {
@@ -133,9 +133,7 @@ function removeMainTab(data) {
   let newItems = [];
   for (let item of data.items) {
     if (!isAd(item.data)) {
-      if (item.category === "feed") {
-        newItems.push(item);
-      }
+      if (item.category !== "group") newItems.push(item);
     }
   }
   data.items = newItems;
@@ -307,10 +305,8 @@ function removeTimeLine(data) {
   for (const s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
-      if (s.category === "feed") {
-        if (s.common_struct) delete s.common_struct;
-        newStatuses.push(s);
-      }
+      if (s.common_struct) delete s.common_struct;
+      if (s.category !== "group") newStatuses.push(s);
     }
   }
   data.statuses = newStatuses;

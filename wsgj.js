@@ -1,14 +1,14 @@
 /****************************************
 
 项目功能：网速管家 解锁VIP（美区下载）
-下载地址：http://mtw.so/5XqaXq
+下载地址：https://t.cn/A6ou0r5U
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 *****************************************
 
 [rewrite_local]
 
-^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontents.com/chxm1023/script/main/Rewrite/wsgj.js
+^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/wsgj.js
 
 [mitm]
 

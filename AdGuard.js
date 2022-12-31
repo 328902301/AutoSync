@@ -5,6 +5,7 @@
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 *****************************************
+
 [rewrite_local]
 
 ^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/AdGuard.js

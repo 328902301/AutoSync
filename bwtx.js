@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/bwtx.js
+https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bwtx.js
 
 [mitm]
 

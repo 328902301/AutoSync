@@ -314,16 +314,24 @@ BoxJs 里 `通知正文模板` 是 `body`
 
 代码中对应的是 `const KEY_BODY = `@${namespace}.10010.body``
 
-所以应该使用这样的逻辑 `$.setdata('剩余 [剩] [单] 免流 [总免]\n[详]', KEY_BODY);`
+所以应该使用这样的逻辑 `$.setdata('剩余 [剩] [单] 免流 [总免]', KEY_BODY);`
+
+具体看本文档里 `通知正文模板` 的部分.
+
+例如你想再加上包的详情, 应该设置为 `$.setdata('剩余 [剩] [单] 免流 [总免]\n[详]', KEY_BODY);`
 
 在 `$.setdata(new Date().toLocaleString('zh'), KEY_INITED)` 这一行下面插入
 
-```
+```JavaScript
 $.setdata('appId', KEY_APPID);
 $.setdata('手机号', KEY_MOBILE);
 $.setdata('服务密码', KEY_PASSWORD);
-$.setdata('剩余 [剩] [单] 免流 [总免]\n[详]', KEY_BODY);
+$.setdata('剩余 [剩] [单] 免流 [总免]', KEY_BODY);
 $.setdata(10, KEY_IGNORE_FLOW);
+
+// 手动设置 Cookie 和 tokenOnline
+// $.setdata('Cookie的值', KEY_COOKIE);
+// $.setdata('tokenOnline', KEY_TOKEN_ONLINE);
 
 // 其他配置字段以此类推
 ```

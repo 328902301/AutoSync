@@ -6,9 +6,11 @@
 
 使用了 [chavyleung 大佬的 Env.js](https://github.com/chavyleung/scripts/blob/master/Env.js)
 
-兼容 QuanX, Surge, Loon, Shadowrocket, Stash, [elecV2P](https://github.com/elecV2/elecV2P), [青龙](https://github.com/whyour/qinglong), Termux(Android) 等
+兼容 QuanX, Surge, Loon, Shadowrocket, Stash, [elecV2P](https://github.com/elecV2/elecV2P), [青龙](https://github.com/whyour/qinglong), Termux(Android) 等 JavaScript/Node.js 运行环境
 
 无需抓包, 在 Box.js 界面上可以直接配置或进行短信验证码登录.
+
+🆕 无需抓包, 在 Node.js 环境上可以进行短信验证码登录.
 
 同时提供了 `http(s)://10010.json` 接口, 直接返回余量信息. 方便和别的工具整合. 请求时的通知可在 Box.js 设置中关闭(禁用作为请求脚本使用时的通知).
 
@@ -272,6 +274,8 @@ BoxJs v0.10.0 后 支持一键添加订阅 可点击尝试 [http://boxjs.com/#/s
 
 ## 青龙
 
+> 不会抓包的人可以参考本文档中 [Node.js 环境使用短信验证码登录] 的部分
+
 拉取单独文件 `ql raw https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.js`
 
 设置定时任务
@@ -318,7 +322,6 @@ BoxJs 里 `通知正文模板` 是 `body`
 $.setdata('appId', KEY_APPID);
 $.setdata('手机号', KEY_MOBILE);
 $.setdata('服务密码', KEY_PASSWORD);
-$.setdata('服务密码', KEY_PASSWORD);
 $.setdata('剩余 [剩] [单] 免流 [总免]\n[详]', KEY_BODY);
 $.setdata(10, KEY_IGNORE_FLOW);
 
@@ -355,6 +358,28 @@ process.env.BARK_PUSH="https://api.day.app/123456789"
 意思是清除默认的钉钉的环境变量, 并设置 Bark 的环境变量
 
 脚本会尝试加载同目录下的 `_ABC_10010_sendNotify.js` 文件, 再尝试加载 `10010_sendNotify.js`, 最后尝试加载 `sendNotify.js`. 所以你可以创建一个 `_ABC_10010_sendNotify.js` 文件实现通知的自定义逻辑.
+
+## Node.js 环境使用短信验证码登录
+
+### 发送短信验证码
+
+将尝试从环境变量中读取手机号
+
+```console
+XREAM_10010_MOBILE=18600000000 node 10010_send_sms.js
+```
+
+### 使用短信验证码登录
+
+将尝试从环境变量中读取手机号和短信验证码
+
+```console
+XREAM_10010_MOBILE=18600000000 XREAM_10010_CODE=1234 node 10010_sms_sign.js
+```
+
+如果你理解多账号的使用 那么此时已经自动存好了 cookie, token_online, appId.
+
+如果你不理解, 那么你可以将上述脚本执行日志里的 cookie, token_online, appId 自己复制出来使用.
 
 ## Termux(Android)
 

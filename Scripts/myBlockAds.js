@@ -1,4 +1,4 @@
-// 2022-12-25 18:42
+// 2023-01-01 14:03
 
 var url = $request.url;
 var body = $response.body;
@@ -425,7 +425,8 @@ switch (adAppName(url)) {
           item.entityId === 8639 ||
           item.entityId === 33066 ||
           item.entityId === 32557 ||
-          item.title.indexOf("值得买") !== -1
+          item.title.indexOf("值得买") !== -1 ||
+          item.title.indexOf("红包") !== -1
         )
       );
       body = JSON.stringify(obj);

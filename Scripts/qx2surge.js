@@ -7,6 +7,11 @@ QX转换 = type=http-request,pattern=qx$,requires-body=1,max-size=0,script-path=
 
 [MITM]
 hostname = %APPEND% github.com:443, raw.githubusercontent.com:443
+
+"http-response" && requires-body=1"            type = "script-response-body"
+"http-response"                                type = "script-response-header"
+"http-request" && requires-body=1              type = "script-request-body"
+"http-request"                                 type = "script-request-header"
 */
 
 let req = $request.url.replace(/qx$/, "");

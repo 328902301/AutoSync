@@ -152,7 +152,8 @@ ${HeaderRewrite}
 ${MapLocal}
 ${MITM}`.replace(/\;/g, "#");
 
-  $done({ response: { status: 200, body: body } });
+  //$done({ response: { status: 200, body: body } });
+  $done({ status: 200, body: body });
 })().catch((e) => {
   $notification.post(`${e}`, "", "");
   $done();

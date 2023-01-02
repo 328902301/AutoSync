@@ -1,8 +1,8 @@
-// 2023-01-02 16:49
+// 2023-01-02 18:00
 
-const body = $response.body;
-const method = $request.method;
-const url = $request.url;
+var body = $response.body;
+var method = $request.method;
+var url = $request.url;
 
 if (!body) $done({});
 

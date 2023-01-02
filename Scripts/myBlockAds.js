@@ -1,7 +1,10 @@
-// 2023-01-01 14:03
+// 2023-01-02 16:49
 
-var url = $request.url;
-var body = $response.body;
+const body = $response.body;
+const method = $request.method;
+const url = $request.url;
+
+if (!body) $done({});
 
 function adAppName(adUrls) {
   if (/^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(adUrls)) return "12306-开屏广告";
@@ -17,11 +20,14 @@ function adAppName(adUrls) {
   if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
   if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
   if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
+  if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(adUrls) && method === "POST") return "广告联盟-穿山甲";
+  if (/^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$/.test(adUrls) && method === "POST") return "广告联盟-快手联盟";
+  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?/.test(adUrls) && method === "GET") return "广告联盟-优量汇";
   if (/^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(adUrls)) return "IT之家-appList";
   if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(adUrls)) return "IT之家-appSlide";
   if (/^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(adUrls)) return "IT之家-mobileWeb";
   if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(adUrls)) return "IT之家-newAppFeed";
-  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告"
+  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告";
   if (/^https:\/\/api.coolapk.com\/v6\/feed\/detail/.test(adUrls)) return "酷安-detail";
   if (/^https:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(adUrls)) return "酷安-replyList";
   if (/^https:\/\/api.coolapk.com\/v6\/main\/dataList/.test(adUrls)) return "酷安-dataList";
@@ -40,14 +46,13 @@ function adAppName(adUrls) {
   if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(adUrls)) return "微博-开屏广告-wbpullad";
   if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
   if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
-  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config"
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config";
   if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories\?/.test(adUrls)) return "小红书-信息流广告";
   if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
   if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
   return "";
 }
 
-if (!body) $done({});
 switch (adAppName(url)) {
   case "12306-开屏广告":
     try {
@@ -306,6 +311,44 @@ switch (adAppName(url)) {
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`多点-开屏广告, 出现异常`);
+    }
+    break;
+  case "广告联盟-穿山甲":
+    try {
+      let obj = JSON.parse(body);
+      if (obj.message) {
+        obj = {
+          "request_id": 'F5617E54-3FF4-4052-9B09-4227D09B5105',
+          "status_code": 20001,
+          "reason": 112,
+          "desc": "该代码位请求量过大且消耗过低，因此填充率控制在10%以内，该策略每日生效，如果当天该代码位的消耗上涨或请求量小于5000，则次日不会命中该策略"
+        };
+      }
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`广告联盟-穿山甲, 出现异常`);
+    }
+    break;
+  case "广告联盟-快手联盟":
+    try {
+      let obj = JSON.parse(body);
+      if (obj.result === 1) {
+        obj.result = 40003;
+      }
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`广告联盟-快手联盟, 出现异常`);
+    }
+    break;
+  case "广告联盟-优量汇":
+    try {
+      let obj = JSON.parse(body);
+      if ('ret' in obj) {
+        if (obj.ret === 0) obj.ret = 102006;
+      }
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`广告联盟-优量汇, 出现异常`);
     }
     break;
   case "IT之家-appList":

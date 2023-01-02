@@ -153,7 +153,7 @@ ${MapLocal}
 ${MITM}`.replace(/\;/g, "#");
 
   //$done({ response: { status: 200, body: body } });
-  $done({ status: 200, body: body });
+  $done({ status: "HTTP/1.1 200 OK", body: body });
 })().catch((e) => {
   $notification.post(`${e}`, "", "");
   $done();

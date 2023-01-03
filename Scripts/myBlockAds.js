@@ -1,4 +1,4 @@
-// 2023-01-03 21:41
+// 2023-01-03 18:04
 
 var body = $response.body;
 var method = $request.method;
@@ -331,9 +331,6 @@ switch (adAppName(url)) {
       let cardList = obj.data.cardList;
       let newCardList = [];
       for (let item of cardList) {
-        if (item?.localCache) {
-          item.localCache = false;
-        }
         if (
           item?.dataKey === "AnnualBillCardV2" || // 年度报告
           item?.dataKey === "DiyMap_function" || // DIY 地图

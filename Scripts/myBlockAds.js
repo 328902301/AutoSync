@@ -1,4 +1,4 @@
-// 2023-01-03 17:25
+// 2023-01-03 17:45
 
 var body = $response.body;
 var method = $request.method;
@@ -333,13 +333,19 @@ switch (adAppName(url)) {
       for (let item of cardList) {
         if (
           item?.dataKey === "AnnualBillCardV2" || // 年度报告
-          item?.dataKey === "GdRecommendCard" || // 高德推荐
-          item?.dataKey === "SceneVehicleCard_recommend" || // 我的车辆
-          item?.dataKey === "PopularActivitiesCard" || // 热门活动
+          item?.dataKey === "DiyMap_function" || // DIY 地图
           item?.dataKey === "GameExcitation" || // 小德爱消除
-          item?.dataKey === "GoodsShelvesCard" // 精选服务
+          item?.dataKey === "GdRecommendCard" || // 高德推荐
+          item?.dataKey === "GoodsShelvesCard" || // 精选服务
+          item?.dataKey === "PopularActivitiesCard" // 热门活动
         ) {
           continue;
+        }
+        if (
+          item?.dataKey === "SceneVehicleCard_function" || // 我的车辆
+          item?.dataKey === "SceneVehicleCard_recommend" // 我的车辆
+        ) {
+          item.content.servs = [];
         }
         newCardList.push(item);
       }

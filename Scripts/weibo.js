@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-03 11:18
+// 2023-01-03 11:35
 
 // 主要的选项配置
 const mainConfig = {
@@ -65,16 +65,16 @@ const otherUrls = {
   "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
   "/2/profile/container_timeline": "userHandler", // 用户主页
   "/2/profile/me": "removeHome", // 个人页模块
-  "/2/search/container_discover": "removeSearch",
-  "/2/search/container_timeline": "removeSearch",
+  "/2/search/container_discover": "removeSearch", // 搜索 tab 信息流
+  "/2/search/container_timeline": "removeSearch", // 搜索 tab 信息流
   "/2/search/finder": "removeSearchMain",
-  "/2/statuses/container_timeline": "removeMainTab", // 新版主页广告
-  "/2/statuses/container_timeline_topic": "removeMain", // 新版主页广告
+  "/2/statuses/container_timeline": "removeMain", // 新版主页广告
+  "/2/statuses/container_timeline_topic": "removeTopic", // 超话 信息流
   "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/video/remind_info": "removeVideoRemind", // tab2 菜单上的假通知
+  "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
   "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab" // 超话 tab 顶部广场
 };
 
@@ -221,7 +221,7 @@ function removePage(data) {
 
 // 可能感兴趣的人
 function userHandler(data) {
-  data = removeMainTab(data);
+  data = removeMain(data);
   if (!mainConfig.removeInterestUser) return data;
   if (!data.items) return data;
   let newItems = [];
@@ -346,7 +346,7 @@ function removeSearchMain(data) {
 }
 
 // 新版主页广告
-function removeMainTab(data) {
+function removeMain(data) {
   if (!data.items) return data;
   if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
@@ -359,7 +359,7 @@ function removeMainTab(data) {
   return data;
 }
 
-function removeMain(data) {
+function removeTopic(data) {
   if (!data.items) return data;
   if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
@@ -378,9 +378,7 @@ function removeMain(data) {
         if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
         newItems.push(item);
       }
-    } else if ([200, 202].indexOf(item.data.card_type) === -1) {
-      newItems.push(item);
-    }
+    } else if (item.data.card_type === 200 || item.data.card_type === 202) continue;
   }
   data.items = newItems;
   return data;

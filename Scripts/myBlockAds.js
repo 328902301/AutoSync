@@ -1,4 +1,4 @@
-// 2023-01-03 17:45
+// 2023-01-03 17:47
 
 var body = $response.body;
 var method = $request.method;
@@ -338,14 +338,10 @@ switch (adAppName(url)) {
           item?.dataKey === "GdRecommendCard" || // 高德推荐
           item?.dataKey === "GoodsShelvesCard" || // 精选服务
           item?.dataKey === "PopularActivitiesCard" // 热门活动
+          // item?.dataKey === "SceneVehicleCard_function" || // 我的车辆
+          // item?.dataKey === "SceneVehicleCard_recommend" // 我的车辆
         ) {
           continue;
-        }
-        if (
-          item?.dataKey === "SceneVehicleCard_function" || // 我的车辆
-          item?.dataKey === "SceneVehicleCard_recommend" // 我的车辆
-        ) {
-          item.content.servs = [];
         }
         newCardList.push(item);
       }

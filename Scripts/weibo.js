@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-03 11:40
+// 2023-01-03 11:52
 
 // 主要的选项配置
 const mainConfig = {
@@ -364,9 +364,11 @@ function removeTopic(data) {
   if (data.loadedInfo && data.loadedInfo.headers) delete data.loadedInfo.headers;
   let newItems = [];
   for (let item of data.items) {
+    if (item.category === "card") continue;
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
-    } else if (item.category === "group") {
+    }
+    if (item.category === "group") {
       if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
         item.items = item.items.filter((e) =>
           e?.data?.itemid?.includes("mine_topics") ||
@@ -378,7 +380,7 @@ function removeTopic(data) {
         if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
         newItems.push(item);
       }
-    } else if (item.category === "card") continue;
+    }
   }
   data.items = newItems;
   return data;

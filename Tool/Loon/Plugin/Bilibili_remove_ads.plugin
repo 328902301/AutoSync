@@ -31,29 +31,29 @@
 
 [Script]
 # BiliBili_屏蔽首页右上活动
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=屏蔽首页右上活动, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=屏蔽首页右上活动, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_观影页面去广告
-http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=观影页面去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=观影页面去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_应用开屏广告预加载
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=应用开屏广告预加载, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=应用开屏广告预加载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_1080P高码率+4K画质(番剧和影视除外)
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=1080P高码率+4K画质, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=1080P高码率+4K画质, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_热搜发现
-http-response ^https://app.bilibili.com/x/v2/search/square script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=热搜发现, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https://app.bilibili.com/x/v2/search/square script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=热搜发现, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_推荐去广告
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=推荐去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=推荐去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_追番去广告
-http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=追番去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=追番去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_直播去广告
-http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=直播去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=直播去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_标签页处理
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=标签页处理, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=标签页处理, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_我的页面处理
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=我的页面处理, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=我的页面处理, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_Proto去广告
-http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body=ture, tag=Proto去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body=ture, tag=Proto去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_去除统一设置的皮肤
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=去除统一设置的皮肤, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=ture, tag=去除统一设置的皮肤, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 
 [MITM]
 hostname = app.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net, api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net

@@ -21,11 +21,11 @@
 
 [Script]
 # 小红书_开屏广告
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去开屏广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去开屏广告, img-url= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/RedPaper.png
 # 小红书_瀑布流
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去瀑布流广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书去瀑布流广告, img-url= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/RedPaper.png
 # 小红书_启动处理
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书启动处理, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag=小红书启动处理, img-url= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/RedPaper.png
 # XiaoHongShu_小红书_热词删除
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url response-body items":\[.+\] response-body items":[]
 # XiaoHongShu_小红书_热搜删除

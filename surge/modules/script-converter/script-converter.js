@@ -101,7 +101,7 @@ var _scriptSonverterDone = (val = {}) => {
       status: 200,
       body,
       headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
+        'Content-Type': 'text/javascript; charset=UTF-8',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
@@ -118,7 +118,7 @@ var _scriptSonverterDone = (val = {}) => {
         status: 500,
         body: msg,
         headers: {
-          'Content-Type': 'text/plain; charset=utf-8',
+          'Content-Type': 'text/javascript; charset=UTF-8',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
           'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',

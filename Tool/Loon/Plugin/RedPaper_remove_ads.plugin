@@ -3,7 +3,7 @@
 #!open= 
 #!author = ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/RedPaper.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/blob/master/App_icon/80px/RedPaper.png
 
 [Rewrite]
 # > XiaoHongShu_小红书_AdEngage@ddgksf2013

@@ -1,4 +1,4 @@
-// 2023-01-03 15:21
+// 2023-01-03 15:30
 
 var body = $response.body;
 var method = $request.method;
@@ -410,8 +410,10 @@ switch (adAppName(url)) {
   case "JavDB":
     try {
       let obj = JSON.parse(body);
-      if (obj.data.splash_ad) delete obj.data.splash_ad;
-      if (obj.data.settings) delete obj.data.settings;
+      if (obj.data.splash_ad) {
+        obj.data.splash_ad.enabled = false;
+        obj.data.splash_ad.overtime = 0;
+      };
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`JavDB, 出现异常`);

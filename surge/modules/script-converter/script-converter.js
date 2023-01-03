@@ -81,7 +81,11 @@ var _scriptSonverterDone = (val = {}) => {
     result = val
   }
   console.log('$done')
-  console.log(result)
+  try {
+    console.log(JSON.stringify(result))
+  } catch (e) {
+    console.log(result)
+  }
   $done(result)
 }
 `

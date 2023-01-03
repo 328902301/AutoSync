@@ -1,4 +1,4 @@
-// 2023-01-03 16:48
+// 2023-01-03 16:56
 
 var body = $response.body;
 var method = $request.method;
@@ -331,10 +331,8 @@ switch (adAppName(url)) {
       let cardList = obj.data.cardList;
       let newCardList = [];
       for (let item of cardList) {
-        if (item?.localCache) {
-          item.localCache = false;
-        }
         if (
+          item?.dataKey === "AnnualBillCardV2" ||
           item?.content?.title === "高德推荐" ||
           item?.content?.title === "热门活动" ||
           item?.content?.title === "精选服务" ||
@@ -344,6 +342,7 @@ switch (adAppName(url)) {
         }
         if (item?.dataKey === "SceneVehicleCard_recommend") {
           item.content.servs = [];
+          newCardList.push(item);
         }
         newCardList.push(item);
       }

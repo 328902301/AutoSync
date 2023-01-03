@@ -1,4 +1,4 @@
-// 2023-01-03 16:00
+// 2023-01-03 16:56
 
 var body = $response.body;
 var method = $request.method;
@@ -21,6 +21,7 @@ function adAppName(adUrls) {
   if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
   if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
   if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(adUrls)) return "高德地图-首页顶部消息横幅";
+  if (/^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/.test(adUrls)) return "高德地图-我的";
   if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(adUrls) && method === "POST") return "广告联盟-穿山甲";
   if (/^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$/.test(adUrls) && method === "POST") return "广告联盟-快手联盟";
   if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?/.test(adUrls) && method === "GET") return "广告联盟-优量汇";
@@ -321,7 +322,34 @@ switch (adAppName(url)) {
       if (obj.msgs) delete obj.msgs;
       body = JSON.stringify(obj);
     } catch (error) {
-      console.log(`高德地图-首页顶部消息横`);
+      console.log(`高德地图-首页顶部消息横幅, 出现异常`);
+    }
+    break;
+  case "高德地图-我的":
+    try {
+      let obj = JSON.parse(body);
+      let cardList = obj.data.cardList;
+      let newCardList = [];
+      for (let item of cardList) {
+        if (
+          item?.dataKey === "AnnualBillCardV2" ||
+          item?.content?.title === "高德推荐" ||
+          item?.content?.title === "热门活动" ||
+          item?.content?.title === "精选服务" ||
+          item?.dataKey === "GameExcitation"
+        ) {
+          continue;
+        }
+        if (item?.dataKey === "SceneVehicleCard_recommend") {
+          item.content.servs = [];
+          newCardList.push(item);
+        }
+        newCardList.push(item);
+      }
+      obj.data.cardList = newCardList;
+      body = JSON.stringify(obj);      
+    } catch (error) {
+      console.log(`高德地图-我的, 出现异常`);
     }
     break;
   case "广告联盟-穿山甲":

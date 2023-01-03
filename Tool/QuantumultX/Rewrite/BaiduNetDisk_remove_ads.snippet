@@ -1,0 +1,30 @@
+#!name = 百度网盘去广告
+#!desc = 过滤百度网盘广告，同时解锁百度网盘内在线视频倍率和清晰度。
+#!openUrl = 
+#!author = ddgksf2013 NobyDa
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+[Rewrite]
+^https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
+^https:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx url reject
+^https:\/\/pan\.baidu\.com\/api\/useractivity\/activity url reject
+^http:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list url reject
+#^https:\/\/pan\.baidu\.com\/api\/certuser\/get url reject
+^https:\/\/pan\.baidu\.com\/component\/view\/1510\?from url reject
+^https:\/\/sofire\.baidu\.com\/ios\/.+ url reject
+^https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js url reject
+^https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html url reject
+^https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
+^https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png url reject
+^http:\/\/rp\.hpplay\.cn\/logouts url reject
+#^https:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/ts_ad\/guanggao\/.+ url reject
+https:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/ts_ad\/ url reject
+https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? url reject
+# https://pan\.baidu\.com\/act\/api\/activityentry\? - reject
+https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip url reject
+
+[Script]
+http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body=true, tag=百度网盘在线视频倍率和清晰度解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/BaiduNetDisk.png
+
+[MITM]
+hostname = sofire.baidu.com, ndstatic.cdn.bcebos.com, pan.baidu.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com

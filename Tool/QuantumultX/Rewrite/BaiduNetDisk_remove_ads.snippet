@@ -1,5 +1,5 @@
 #!name = 百度网盘去广告
-#!desc = 过滤百度网盘广告，同时解锁百度网盘内在线视频倍率和清晰度。
+#!desc = 过滤百度网盘广告
 #!openUrl = 
 #!author = ddgksf2013 NobyDa
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
@@ -22,9 +22,6 @@ https:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/ts_ad\/ url reject
 https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? url reject
 # https://pan\.baidu\.com\/act\/api\/activityentry\? - reject
 https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip url reject
-
-
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js
 
 #[mitm]
 hostname = sofire.baidu.com, ndstatic.cdn.bcebos.com, pan.baidu.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com

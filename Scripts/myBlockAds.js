@@ -1,4 +1,4 @@
-// 2023-01-02 18:00
+// 2023-01-03 15:30
 
 var body = $response.body;
 var method = $request.method;
@@ -27,6 +27,7 @@ function adAppName(adUrls) {
   if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(adUrls)) return "IT之家-appSlide";
   if (/^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(adUrls)) return "IT之家-mobileWeb";
   if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(adUrls)) return "IT之家-newAppFeed";
+  if (/^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(adUrls)) return "JavDB";
   if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告";
   if (/^https:\/\/api.coolapk.com\/v6\/feed\/detail/.test(adUrls)) return "酷安-detail";
   if (/^https:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(adUrls)) return "酷安-replyList";
@@ -404,6 +405,18 @@ switch (adAppName(url)) {
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`IT之家-newAppFeed, 出现异常`);
+    }
+    break;
+  case "JavDB":
+    try {
+      let obj = JSON.parse(body);
+      if (obj.data.splash_ad) {
+        obj.data.splash_ad.enabled = false;
+        obj.data.splash_ad.overtime = 0;
+      };
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`JavDB, 出现异常`);
     }
     break;
   case "京东-开屏广告":

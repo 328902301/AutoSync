@@ -1,4 +1,4 @@
-// 2023-01-03 16:38
+// 2023-01-03 16:48
 
 var body = $response.body;
 var method = $request.method;
@@ -331,6 +331,9 @@ switch (adAppName(url)) {
       let cardList = obj.data.cardList;
       let newCardList = [];
       for (let item of cardList) {
+        if (item?.localCache) {
+          item.localCache = false;
+        }
         if (
           item?.content?.title === "高德推荐" ||
           item?.content?.title === "热门活动" ||

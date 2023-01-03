@@ -1,4 +1,4 @@
-// 2023-01-03 17:47
+// 2023-01-03 18:04
 
 var body = $response.body;
 var method = $request.method;
@@ -346,7 +346,7 @@ switch (adAppName(url)) {
         newCardList.push(item);
       }
       obj.data.cardList = newCardList;
-      body = JSON.stringify(obj);      
+      body = JSON.stringify(obj);
     } catch (error) {
       console.log(`高德地图-我的, 出现异常`);
     }

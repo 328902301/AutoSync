@@ -1,16 +1,9 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-03 10:53
+// 2023-01-03 10:55
 
 var url = $request.url;
 var body = $response.body;
 let method = getModifyMethod(url);
-
-if (method) {
-  var func = eval(method);
-  let data = JSON.parse(body);
-  new func(data);
-  body = JSON.stringify(data);
-}
 
 // 主要的选项配置
 const mainConfig = {
@@ -517,6 +510,13 @@ function removeTopicTab(data) {
     newTab.push(tab);
   }
   return data;
+}
+
+if (method) {
+  var func = eval(method);
+  let data = JSON.parse(body);
+  new func(data);
+  body = JSON.stringify(data);
 }
 
 $done({ body });

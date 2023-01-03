@@ -1,0 +1,14 @@
+#!name = 高德地图广告过滤
+#!desc = 过滤高德地图广告
+#!openUrl = 
+#!author = RuCu6 
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+# 我的页面
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js
+# 首页消息横幅
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js
+
+#[mitm]
+hostname = m5.amap.com, sns.amap.com

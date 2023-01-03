@@ -1,31 +1,15 @@
 #!name = 高德地图广告过滤
 #!desc = 过滤高德地图广告
 #!openUrl = 
-#!author = 可莉🅥
+#!author = RuCu6 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
-[Rule]
-DOMAIN,u51.me,REJECT
-DOMAIN,logs.amap.com,REJECT
-DOMAIN,icloud-amap.com,REJECT
-DOMAIN,apiinit.amap.com,REJECT
-DOMAIN,aboard.apilocate.amap.com,REJECT
-DOMAIN-KEYWORD,ossgw.alicdn.com,REJECT
-DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
-DOMAIN-SUFFIX,logs.amap.com,REJECT
-DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
-DOMAIN-SUFFIX,page.amap.com,REJECT
-DOMAIN,optimus-ads.amap.com,REJECT
-DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
-DOMAIN-SUFFIX,shouji.sougou.com,REJECT
-DOMAIN-SUFFIX,adiu.amap.com,REJECT
-DOMAIN-SUFFIX,u51.me,REJECT
-
 [Rewrite]
-^https?:\/\/md\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
-^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
-^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
+# 我的页面
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 我的页面, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+# 首页消息横幅
+http-response ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页消息横幅, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
-[MITM]
-hostname = m*.amap.com, optimus-ads.amap.com
+[Mitm]
+hostname = m5.amap.com, sns.amap.com

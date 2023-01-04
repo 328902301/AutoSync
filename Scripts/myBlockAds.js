@@ -1,4 +1,4 @@
-// 2023-01-04 15:18
+// 2023-01-04 16:25
 
 var body = $response.body;
 var method = $request.method;
@@ -338,15 +338,10 @@ switch (adAppName(url)) {
         });
       } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = obj.data.cardList.filter((item) => {
-          if (
-            item.dataKey === "CombineRecommend" ||
-            item.dataKey === "AmapVoiceCard" ||
-            item.dataKey === "BusinessBanner" ||
-            item.dataKey === "LocalCombineRecommend"
-          ) {
-            return false;
+          if (item.dataKey === "LoginCard") {
+            return true;
           }
-          return true;
+          return false;
         });
       }
       body = JSON.stringify(obj);

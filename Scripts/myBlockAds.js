@@ -1,4 +1,4 @@
-// 2023-01-04 15:04
+// 2023-01-04 15:13
 
 var body = $response.body;
 var method = $request.method;
@@ -348,6 +348,8 @@ switch (adAppName(url)) {
           }
           return true;
         });
+      } else if (obj.data && obj.data.cardList.length === 1) {
+        obj.data.cardList = [];
       }
       body = JSON.stringify(obj);
     } catch (error) {

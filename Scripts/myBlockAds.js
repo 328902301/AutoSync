@@ -1,4 +1,4 @@
-// 2023-01-04 16:25
+// 2023-01-04 16:55
 
 var body = $response.body;
 var method = $request.method;
@@ -21,7 +21,8 @@ function adAppName(adUrls) {
   if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
   if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
   if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\?/.test(adUrls)) return "高德地图-首页卡片";
-  if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(adUrls)) return "高德地图-首页顶部消息横幅";
+  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\?/.test(adUrls)) return "高德地图-首页消息";
+  if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(adUrls)) return "高德地图-首页消息";
   if (/^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/.test(adUrls)) return "高德地图-我的";
   if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(adUrls) && method === "POST") return "广告联盟-穿山甲";
   if (/^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$/.test(adUrls) && method === "POST") return "广告联盟-快手联盟";
@@ -321,8 +322,8 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.mapBizList) {
-        obj.data.mapBizList = obj.data.mapBizList.filter((item) => {
-          if (
+        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
+          return !(
             item.dataKey === "Covid" ||
             item.dataKey === "CovidMerge" ||
             item.dataKey === "SddTileOffsiteHotel" ||
@@ -331,17 +332,11 @@ switch (adAppName(url)) {
             item.dataKey === "Winter" ||
             item.dataKey === "Kids" ||
             item.dataKey === "SpringV2"
-          ) {
-            return false;
-          }
-          return true;
+          );
         });
       } else if (obj.data && obj.data.cardList) {
-        obj.data.cardList = obj.data.cardList.filter((item) => {
-          if (item.dataKey === "LoginCard") {
-            return true;
-          }
-          return false;
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return item.dataKey === "LoginCard";
         });
       }
       body = JSON.stringify(obj);
@@ -349,26 +344,29 @@ switch (adAppName(url)) {
       console.log(`高德地图-首页卡片, 出现异常`);
     }
     break;
-  case "高德地图-首页顶部消息横幅":
+  case "高德地图-首页消息":
     try {
       let obj = JSON.parse(body);
       if (obj.msgs) {
         obj.msgs = [];
+      } else if (obj.pull3 && obj.pull3.msgs) {
+        obj.pull3.msgs = [];
       }
       body = JSON.stringify(obj);
     } catch (error) {
-      console.log(`高德地图-首页顶部消息横幅, 出现异常`);
+      console.log(`高德地图-首页消息, 出现异常`);
     }
     break;
   case "高德地图-我的":
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.cardList) {
+        delete obj.data.tipData;
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = obj.data.cardList.filter((item) => {
-          if (
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告
             item.dataKey === "MyOrderCard" || // 我的订单
             // item.dataKey === "GdRecommendCard" || // 高德推荐
@@ -378,10 +376,7 @@ switch (adAppName(url)) {
             // item.dataKey === "GameExcitation" || // 小德爱消除
             // item.dataKey === "GoodsShelvesCard" || // 精选服务
             // item.dataKey === "DiyMap_function" || // DIY 地图
-          ) {
-            return true;
-          }
-          return false;
+          );
         });
       }
       body = JSON.stringify(obj);

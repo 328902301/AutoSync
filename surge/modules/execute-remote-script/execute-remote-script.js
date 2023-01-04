@@ -44,7 +44,7 @@ let url = ''
   if (!content) throw new Error('未获取脚本文件内容')
   content = content.replace(/\$\.?done\(/g, '$eval_env.resolve(')
   if (content.indexOf('$eval_env.resolve(') === -1) throw new Error('脚本文件内容不包含 $done 的逻辑')
-  $.log('ℹ️ 脚本内容', content)
+  // $.log('ℹ️ 脚本内容', content)
   $.log('ℹ️ 执行脚本')
   await new Promise(resolve => {
     const $eval_env = {
@@ -121,6 +121,12 @@ let url = ''
     }
   })
   .finally(async () => {
+    try {
+      const override = $.lodash_get($.toObj($.lodash_get(result, 'content')), 'execute_remote_script')
+      if (override !== null) {
+        result = { ...result, ...override }
+      }
+    } catch (e) {}
     $.done(result)
   })
 

@@ -8,6 +8,8 @@ desc: >-
   两种执行方式:
   1. 面板 (Tile)
   2. 访问 execute-remote-script.com
+  可以在远程脚本里返回设定的数据结构来覆盖本脚本的返回值:
+  $done({ execute_remote_script: { title: '新标题', content: '新内容', icon: 'arrow.clockwise.icloud' } })
 tiles:
   - name: "execute-remote-script"
     interval: 3153600000

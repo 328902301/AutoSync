@@ -9,10 +9,7 @@
 
 [rewrite_local]
 
-^http:\/\/getway\.radio\.cn url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/yunting.js
-
-^https:\/\/ytapi\.radio\.cn url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/yunting.js
-
+^http.+(getway|ytapi)\.radio\.cn url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/yunting.js
 
 [mitm] 
 

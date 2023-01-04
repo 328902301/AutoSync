@@ -10,7 +10,6 @@
 
 ^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/jsqhd.js
 
-
 [mitm] 
 
 hostname = www.40sishi.com

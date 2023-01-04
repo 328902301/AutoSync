@@ -1,4 +1,4 @@
-// 2023-01-04 12:03
+// 2023-01-04 12:08
 
 var body = $response.body;
 var method = $request.method;
@@ -344,6 +344,9 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.cardList) {
+        for (let i = 0; i < obj.data.cardList.length; i++) {
+          obj.data.cardList.localCache = false;
+        }
         obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
           return (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告

@@ -348,10 +348,6 @@ switch (adAppName(url)) {
           }
           return true;
         });
-      } else if (obj.data && obj.data.cardList.length === 1) {
-        obj.data.cardList.weight = 0;
-        obj.data.cardList.schema = "";
-        obj.data.cardList.cardData = {};
       }
       body = JSON.stringify(obj);
     } catch (error) {

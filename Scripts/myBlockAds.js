@@ -20,7 +20,7 @@ function adAppName(adUrls) {
   if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
   if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
   if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
-  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)\?/.test(adUrls)) return "高德地图-首页卡片";
+  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\?/.test(adUrls)) return "高德地图-首页卡片";
   if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(adUrls)) return "高德地图-首页顶部消息横幅";
   if (/^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/.test(adUrls)) return "高德地图-我的";
   if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(adUrls) && method === "POST") return "广告联盟-穿山甲";

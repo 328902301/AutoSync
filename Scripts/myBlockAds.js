@@ -1,4 +1,4 @@
-// 2023-01-04 12:48
+// 2023-01-04 12:59
 
 var body = $response.body;
 var method = $request.method;
@@ -333,8 +333,7 @@ switch (adAppName(url)) {
             item.dataKey === "SpringV2"
           )
         );
-      }
-      if (obj.data && obj.data.cardList) {
+      } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = Object.values(obj.data.cardList).filter((item) =>
           item.dataKey === "ContinueNavigationCard" ||
           item.dataKey === "LoginCard" ||

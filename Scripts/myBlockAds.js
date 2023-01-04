@@ -1,4 +1,4 @@
-// 2023-01-04 16:58
+// 2023-01-04 17:40
 
 var body = $response.body;
 var method = $request.method;
@@ -321,7 +321,11 @@ switch (adAppName(url)) {
   case "高德地图-首页卡片":
     try {
       let obj = JSON.parse(body);
-      if (obj.data && obj.data.cardList) {
+      if (obj.data && obj.data.mapBizList) {
+        obj.data.mapBizList = obj.data.mapBizList.filter((item) => {
+          return (item.dataKey === "ContinueNavigationCard");
+        });
+      } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = obj.data.cardList.filter((item) => {
           return item.dataKey === "LoginCard";
         });
@@ -336,8 +340,8 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.msgs) {
         obj.msgs = [];
-      } else if (obj.pull3 && obj.pull3.msgs) {
-        obj.pull3.msgs = [];
+      } else if (obj.data.pull3 && obj.data.pull3.msgs) {
+        obj.data.pull3.msgs = [];
       }
       body = JSON.stringify(obj);
     } catch (error) {

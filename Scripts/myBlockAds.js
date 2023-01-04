@@ -1,4 +1,4 @@
-// 2023-01-04 12:38
+// 2023-01-04 12:48
 
 var body = $response.body;
 var method = $request.method;
@@ -321,8 +321,8 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.mapBizList) {
-        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
-          return !(
+        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) =>
+          !(
             item.dataKey === "Covid" ||
             item.dataKey === "CovidMerge" ||
             item.dataKey === "SddTileOffsiteHotel" ||
@@ -331,17 +331,15 @@ switch (adAppName(url)) {
             item.dataKey === "Winter" ||
             item.dataKey === "Kids" ||
             item.dataKey === "SpringV2"
-          );
-        });
+          )
+        );
       }
       if (obj.data && obj.data.cardList) {
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (
-            item.dataKey === "ContinueNavigationCard" ||
-            item.dataKey === "LoginCard" ||
-            item.dataKey === "FrequentLocation"
-          );
-        });
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) =>
+          item.dataKey === "ContinueNavigationCard" ||
+          item.dataKey === "LoginCard" ||
+          item.dataKey === "FrequentLocation"
+        );
       }
       body = JSON.stringify(obj);
     } catch (error) {
@@ -351,7 +349,9 @@ switch (adAppName(url)) {
   case "高德地图-首页顶部消息横幅":
     try {
       let obj = JSON.parse(body);
-      if (obj.msgs) obj.msgs = [];
+      if (obj.msgs) {
+        obj.msgs = [];
+      }
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`高德地图-首页顶部消息横幅, 出现异常`);
@@ -364,19 +364,17 @@ switch (adAppName(url)) {
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (
-            // item.dataKey === "AnnualBillCardV2" || // 年度报告
-            item.dataKey === "MyOrderCard" || // 我的订单
-            // item.dataKey === "GdRecommendCard" || // 高德推荐
-            item.dataKey === "SceneVehicleCard_recommend" || // 我的车辆
-            item.dataKey === "SceneVehicleCard_function" // 我的车辆
-            // item.dataKey === "PopularActivitiesCard" // 热门活动
-            // item.dataKey === "GameExcitation" || // 小德爱消除
-            // item.dataKey === "GoodsShelvesCard" || // 精选服务
-            // item.dataKey === "DiyMap_function" || // DIY 地图
-          );
-        });
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) =>
+          // item.dataKey === "AnnualBillCardV2" || // 年度报告
+          item.dataKey === "MyOrderCard" || // 我的订单
+          // item.dataKey === "GdRecommendCard" || // 高德推荐
+          item.dataKey === "SceneVehicleCard_recommend" || // 我的车辆
+          item.dataKey === "SceneVehicleCard_function" // 我的车辆
+          // item.dataKey === "PopularActivitiesCard" // 热门活动
+          // item.dataKey === "GameExcitation" || // 小德爱消除
+          // item.dataKey === "GoodsShelvesCard" || // 精选服务
+          // item.dataKey === "DiyMap_function" || // DIY 地图
+        );
       }
       body = JSON.stringify(obj);
     } catch (error) {

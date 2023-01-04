@@ -1,4 +1,4 @@
-// 2023-01-04 16:55
+// 2023-01-04 16:58
 
 var body = $response.body;
 var method = $request.method;
@@ -322,7 +322,7 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.cardList) {
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+        obj.data.cardList = obj.data.cardList.filter((item) => {
           return item.dataKey === "LoginCard";
         });
       }
@@ -348,11 +348,10 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.cardList) {
-        delete obj.data.tipData;
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+        obj.data.cardList = obj.data.cardList.filter((item) => {
           return (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告
             item.dataKey === "MyOrderCard" || // 我的订单

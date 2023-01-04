@@ -321,20 +321,7 @@ switch (adAppName(url)) {
   case "高德地图-首页卡片":
     try {
       let obj = JSON.parse(body);
-      if (obj.data && obj.data.mapBizList) {
-        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
-          return !(
-            item.dataKey === "Covid" ||
-            item.dataKey === "CovidMerge" ||
-            item.dataKey === "SddTileOffsiteHotel" ||
-            item.dataKey === "OffsiteHotel" ||
-            item.dataKey === "Offsite" ||
-            item.dataKey === "Winter" ||
-            item.dataKey === "Kids" ||
-            item.dataKey === "SpringV2"
-          );
-        });
-      } else if (obj.data && obj.data.cardList) {
+      if (obj.data && obj.data.cardList) {
         obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
           return item.dataKey === "LoginCard";
         });

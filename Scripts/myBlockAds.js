@@ -1,4 +1,4 @@
-// 2023-01-04 13:43
+// 2023-01-04 13:20
 
 var body = $response.body;
 var method = $request.method;
@@ -334,16 +334,13 @@ switch (adAppName(url)) {
           );
         });
       } else if (obj.data && obj.data.cardList) {
-        for (let i = 0; i < obj.data.cardList.length; i++) {
-          obj.data.cardList.weight = 0;
-        }
-        // obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-        //   return (
-        //     item.dataKey === "ContinueNavigationCard" ||
-        //     item.dataKey === "LoginCard" ||
-        //     item.dataKey === "FrequentLocation"
-        //   );
-        // });
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return (
+            item.dataKey === "ContinueNavigationCard" ||
+            item.dataKey === "LoginCard" ||
+            item.dataKey === "FrequentLocation"
+          );
+        });
       }
       body = JSON.stringify(obj);
     } catch (error) {

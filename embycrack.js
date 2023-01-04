@@ -1,4 +1,4 @@
-/****************************************
+/*************************************
 * @author: KleinerSource
 * 
 * @fileoverview Example to compose response for rewrite of script-echo-response.
@@ -9,7 +9,7 @@
 *
 * Emby 解锁播放权限
 #
-*****************************************
+**************************************
 
 [rewrite_local]
 
@@ -19,7 +19,7 @@
 
 hostname= mb3admin.com
 
-****************************************/
+*************************************/
 
 
 var url = $request.url;

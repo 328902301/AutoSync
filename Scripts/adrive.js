@@ -17,8 +17,8 @@
 hostname=api.aliyundrive.com
 ***********************************/
 
-let ddgksf2013 = JSON.parse($response.body);
-if (ddgksf2013.result) {
-    ddgksf2013.result = Object.values(ddgksf2013.result).filter(item => (item["appCode"]=="file" || item["appCode"]=="video"));
+let obj = JSON.parse($response.body);
+if (obj.result) {
+    obj.result = Object.values(obj.result).filter(item => (item["appCode"]=="file" || item["appCode"]=="video"));
 }
-$done({body: JSON.stringify(ddgksf2013)});
+$done({body: JSON.stringify(obj)});

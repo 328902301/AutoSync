@@ -1,10 +1,10 @@
-/****************************************
+/*************************************
 
 项目名称：极速扫描仪
 下载地址：目前下架了
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
-*****************************************
+**************************************
 
 [rewrite_local]
 ^https:\/\/scanner\.jianse\.tv\/api\/users url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/jssmy.js
@@ -13,7 +13,7 @@
 
 hostname = scanner.jianse.tv
 
-****************************************/
+*************************************/
 
 
 var chxm1023 = JSON.parse($response.body);

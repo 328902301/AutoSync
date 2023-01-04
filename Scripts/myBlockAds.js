@@ -1,4 +1,4 @@
-// 2023-01-04 13:20
+// 2023-01-04 14:06
 
 var body = $response.body;
 var method = $request.method;
@@ -335,10 +335,10 @@ switch (adAppName(url)) {
         });
       } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (
-            item.dataKey === "ContinueNavigationCard" ||
-            item.dataKey === "LoginCard" ||
-            item.dataKey === "FrequentLocation"
+          return !(
+            item.dataKey === "CombineRecommend" || // 异地酒旅融合卡
+            item.dataKey === "AmapVoiceCard" || // 语音引导卡
+            item.dataKey === "BusinessBanner" // 轮播banner卡
           );
         });
       }

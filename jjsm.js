@@ -1,10 +1,10 @@
-/****************************************
+/*************************************
 
 项目名称：极简扫描
 下载地址：https://t.cn/A6KJaeDD
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
-*****************************************
+**************************************
 
 [rewrite_local]
 ^https:\/\/cn\.czur\.cc\/api\/v3\/User\/info?(.*?) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjsm.js
@@ -13,7 +13,7 @@
 
 hostname = cn.czur.cc
 
-****************************************/
+*************************************/
 
 var chxm1023 = JSON.parse($response.body);
 

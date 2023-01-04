@@ -1,4 +1,4 @@
-// 2023-01-04 14:14
+// 2023-01-04 14:34
 
 var body = $response.body;
 var method = $request.method;
@@ -378,6 +378,9 @@ switch (adAppName(url)) {
             // item.dataKey === "DiyMap_function" || // DIY 地图
           );
         });
+        let content = obj.data.cardList.content;
+        if (content && content.servs) delete content.servs;
+        if (content && content.content) content.content.desc = "";
       }
       body = JSON.stringify(obj);
     } catch (error) {

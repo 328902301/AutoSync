@@ -320,52 +320,32 @@ switch (adAppName(url)) {
   case "高德地图-首页卡片":
     try {
       let obj = JSON.parse(body);
-      let cardList = obj.data.cardList;
-      let newCardList = [];
-      for (let item of cardList) {
-        if (
-          item.dataKey === "ContinueNavigationCard" ||
-          item.dataKey === "LoginCard" ||
-          item.dataKey === "FrequentLocation"
-        ) {
-          newCardList.push(item);
-        } else {
-          continue;
-        }
+      if (obj.data && obj.data.mapBizList) {
+        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
+          return !(
+            item.dataKey === "Covid" ||
+            item.dataKey === "CovidMerge" ||
+            item.dataKey === "SddTileOffsiteHotel" ||
+            item.dataKey === "OffsiteHotel" ||
+            item.dataKey === "Offsite" ||
+            item.dataKey === "Winter" ||
+            item.dataKey === "Kids" ||
+            item.dataKey === "SpringV2"
+          );
+        });
+      } else if (obj.data && obj.data.cardList) {
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return (
+            item.dataKey === "ContinueNavigationCard" ||
+            item.dataKey === "LoginCard" ||
+            item.dataKey === "FrequentLocation"
+          );
+        });
       }
-      obj.data.cardList = newCardList;
       body = JSON.stringify(obj);
     } catch (error) {
-      console.log(`高德地图-我的, 出现异常`);
+      console.log(`高德地图-首页卡片, 出现异常`);
     }
-    // try {
-    //   let obj = JSON.parse(body);
-    //   if (obj.data && obj.data.mapBizList) {
-    //     obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
-    //       return !(
-    //         item.dataKey === "Covid" ||
-    //         item.dataKey === "CovidMerge" ||
-    //         item.dataKey === "SddTileOffsiteHotel" ||
-    //         item.dataKey === "OffsiteHotel" ||
-    //         item.dataKey === "Offsite" ||
-    //         item.dataKey === "Winter" ||
-    //         item.dataKey === "Kids" ||
-    //         item.dataKey === "SpringV2"
-    //       );
-    //     });
-    //   } else if (obj.data && obj.data.cardList) {
-    //     obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-    //       return (
-    //         item.dataKey === "ContinueNavigationCard" ||
-    //         item.dataKey === "LoginCard" ||
-    //         item.dataKey === "FrequentLocation"
-    //       );
-    //     });
-    //   }
-    //   body = JSON.stringify(obj);
-    // } catch (error) {
-    //   console.log(`高德地图-首页卡片, 出现异常`);
-    // }
     break;
   case "高德地图-首页顶部消息横幅":
     try {
@@ -385,17 +365,19 @@ switch (adAppName(url)) {
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) =>
-          // item.dataKey === "AnnualBillCardV2" || // 年度报告
-          item.dataKey === "MyOrderCard" || // 我的订单
-          // item.dataKey === "GdRecommendCard" || // 高德推荐
-          item.dataKey === "SceneVehicleCard_recommend" || // 我的车辆
-          item.dataKey === "SceneVehicleCard_function" // 我的车辆
-          // item.dataKey === "PopularActivitiesCard" // 热门活动
-          // item.dataKey === "GameExcitation" || // 小德爱消除
-          // item.dataKey === "GoodsShelvesCard" || // 精选服务
-          // item.dataKey === "DiyMap_function" || // DIY 地图
-        );
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return (
+            // item.dataKey === "AnnualBillCardV2" || // 年度报告
+            item.dataKey === "MyOrderCard" || // 我的订单
+            // item.dataKey === "GdRecommendCard" || // 高德推荐
+            item.dataKey === "SceneVehicleCard_recommend" || // 我的车辆
+            item.dataKey === "SceneVehicleCard_function" // 我的车辆
+            // item.dataKey === "PopularActivitiesCard" // 热门活动
+            // item.dataKey === "GameExcitation" || // 小德爱消除
+            // item.dataKey === "GoodsShelvesCard" || // 精选服务
+            // item.dataKey === "DiyMap_function" || // DIY 地图
+          );
+        });
       }
       body = JSON.stringify(obj);
     } catch (error) {

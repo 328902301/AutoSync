@@ -1,53 +1,56 @@
 const NAMESPACE = `xream`
-const NAME = `network-log`
+const NAME = `debug-script`
 
-const KEY_REMOTE_URL = `@${NAMESPACE}.${NAME}.remote_url`
-const KEY_REMOTE_METHOD = `@${NAMESPACE}.${NAME}.remote_method`
-const KEY_REMOTE_HEADERS = `@${NAMESPACE}.${NAME}.remote_headers`
+const KEY_SCRIPT_URL = `@${NAMESPACE}.${NAME}.script_url`
 
-const $ = new Env(NAME)
+const $$ = new Env(NAME)
 
-$.isRequest = () => typeof $request !== 'undefined'
-$.isResponse = () => typeof $response !== 'undefined'
+$$.isRequest = () => typeof $request !== 'undefined'
+$$.isResponse = () => typeof $response !== 'undefined'
 
 let result = {}
 
 !(async () => {
-  if (!$.isRequest() && !$.isResponse()) throw new Error('不是 request/response')
-  if ($.isRequest()) $.log('ℹ️ 请求 $request', `↑ [${$request.method}] 🔗 ${$request.url}`, $.toStr($request))
-  if ($.isResponse())
-    $.log('ℹ️ 响应 $response', `↓ [${$response.status}] [${$request.method}] 🔗 ${$request.url}`, $.toStr($response))
-  const method = $.getdata(KEY_REMOTE_METHOD) || 'POST'
-  const url = $.getdata(KEY_REMOTE_URL)
-  $.log('🌐 请求', `[${method}] 🔗 ${url}`)
-  const res = await post({
-    method,
-    url,
-    headers: { 'Content-Type': 'application/json; charset=utf-8', ...$.getjson(KEY_REMOTE_HEADERS) },
-    body: $.toStr({ request: $.isRequest() ? $request : {}, response: $.isResponse() ? $response : {} }),
+  let url = $$.getdata(KEY_SCRIPT_URL) || (typeof $argument != 'undefined' ? $argument : undefined)
+  if (!url && $$.isNode()) {
+    try {
+      url = process.env.XREAM_DEBUG_SCRIPT_URL
+      $$.log(`Node 环境, 尝试从环境变量 XREAM_DEBUG_SCRIPT_URL 读取脚本文件链接: ${url}`)
+    } catch (e) {
+      console.error(e)
+    }
+  }
+  $$.log(`🔗 脚本文件链接`, url)
+  if (!url) throw new Error('未提供脚本文件链接')
+  const res = await post({ method: 'GET', url })
+  // $.log('ℹ️ res', $.toStr(res))
+  const status = $$.lodash_get(res, 'status') || $$.lodash_get(res, 'statusCode') || 200
+  $$.log('ℹ️ res status', status)
+  let content = String($$.lodash_get(res, 'body') || $$.lodash_get(res, 'rawBody'))
+  // $.log('ℹ️ res body', content)
+  if (!content) throw new Error('未获取脚本文件内容')
+  content = content.replace(/\$done\(/g, '$eval_env.resolve(')
+  if (content.indexOf('$eval_env.resolve(') === -1) throw new Error('脚本文件内容不包含 $done 的逻辑')
+  // $$.log('ℹ️ 脚本内容', content)
+  $$.log('ℹ️ 执行脚本')
+  await new Promise(resolve => {
+    const $eval_env = { resolve }
+    eval(content)
   })
-  $.log('ℹ️ res', $.toStr(res))
-  // $.log(Object.keys(res))
-  const status = $.lodash_get(res, 'status') || $.lodash_get(res, 'statusCode') || 200
-  $.log('ℹ️ res status', status)
-  let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
-  try {
-    body = JSON.parse(body)
-  } catch (e) {}
-  $.log('ℹ️ res body', body)
+  $$.log('ℹ️ 执行完毕')
 })()
   .catch(async e => {
-    $.logErr(e)
-    await notify(`网络日志`, `❌`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+    $$.logErr(e)
+    await notify(`实时脚本调试`, `❌`, `${$$.lodash_get(e, 'message') || $$.lodash_get(e, 'error') || e}`)
   })
   .finally(async () => {
-    $.done(result)
+    $$.done(result)
   })
 
 // POST
 async function post(opts) {
   return new Promise((resolve, reject) => {
-    $.post(opts, (err, resp, body) => {
+    $$.post(opts, (err, resp, body) => {
       if (err) reject(err)
       else resolve(resp)
     })
@@ -55,7 +58,7 @@ async function post(opts) {
 }
 // 通知
 async function notify(title, subt, desc, opts) {
-  $.msg(title, subt, desc, opts)
+  $$.msg(title, subt, desc, opts)
 }
 
 // prettier-ignore

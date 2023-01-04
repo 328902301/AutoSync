@@ -131,7 +131,7 @@ var _scriptSonverterDone = (val = {}) => {
     }
   })
   .finally(async () => {
-    $done(result)
+    $.done(result)
   })
 
 // POST

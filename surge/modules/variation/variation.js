@@ -4,6 +4,8 @@ const KEY_LAST = `@${NAMESPACE}.${NAME}.last`
 
 const $ = new Env(NAME)
 
+let result = {}
+
 !(async () => {
   const timestamp = new Date().getTime()
 
@@ -35,24 +37,27 @@ const $ = new Env(NAME)
   // $.log(last)
   // $.log($.toStr(last))
   if (!last) {
-    $.log('ℹ️ 找不到上次数据 不继续执行')
-    return
-  }
-  $.log('⌛️ 上次 时间')
-  const lastTimestamp = $.lodash_get(last, 'timestamp')
-  $.log(lastTimestamp)
-  $.log(new Date(lastTimestamp).toLocaleString('zh'))
-  $.log('#️⃣ 上次 value')
-  const lastValue = $.lodash_get(last, 'value')
-  $.log(lastValue)
+    $.log('ℹ️ 找不到上次数据')
+    await notify('变化量', `首次执行无上次数据`, `等待下次执行`)
+  } else {
+    $.log('⌛️ 上次 时间')
+    const lastTimestamp = $.lodash_get(last, 'timestamp')
+    $.log(lastTimestamp)
+    $.log(new Date(lastTimestamp).toLocaleString('zh'))
+    $.log('#️⃣ 上次 value')
+    const lastValue = $.lodash_get(last, 'value')
+    $.log(lastValue)
 
-  let duration = (parseFloat(timestamp) - parseFloat(lastTimestamp)) / 1000
-  if (isNaN(duration) || duration < 0) {
-    duration = 0
+    let duration = (parseFloat(timestamp) - parseFloat(lastTimestamp)) / 1000
+    if (isNaN(duration) || duration < 0) {
+      duration = 0
+    }
+    const variation = value - lastValue
+    $.log('📊 变化量')
+    $.log(variation)
+    await notify('变化量', `${formatDuration(duration)}`, `某个值增加了 ${variation}`)
   }
-  const variation = value - lastValue
-  $.log('📊 变化量')
-  $.log(variation)
+
   $.setjson(
     {
       timestamp,
@@ -60,12 +65,14 @@ const $ = new Env(NAME)
     },
     KEY_LAST
   )
-
-  await notify('变化量', `${formatDuration(duration)}`, `某个值增加了 ${variation}`)
-})().catch(async e => {
-  $.logErr(e)
-  await notify(`变化量`, `❌`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
-})
+})()
+  .catch(async e => {
+    $.logErr(e)
+    await notify(`变化量`, `❌`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+  })
+  .finally(async () => {
+    $.done(result)
+  })
 
 async function notify(title, subtitle, body) {
   $.msg(title, subtitle, body)

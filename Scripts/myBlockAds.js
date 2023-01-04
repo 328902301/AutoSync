@@ -1,4 +1,4 @@
-// 2023-01-04 16:25
+// 2023-01-04 16:31
 
 var body = $response.body;
 var method = $request.method;
@@ -322,7 +322,7 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.mapBizList) {
         obj.data.mapBizList = obj.data.mapBizList.filter((item) => {
-          if (
+          return !(
             item.dataKey === "Covid" ||
             item.dataKey === "CovidMerge" ||
             item.dataKey === "SddTileOffsiteHotel" ||
@@ -331,17 +331,11 @@ switch (adAppName(url)) {
             item.dataKey === "Winter" ||
             item.dataKey === "Kids" ||
             item.dataKey === "SpringV2"
-          ) {
-            return false;
-          }
-          return true;
+          );
         });
       } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = obj.data.cardList.filter((item) => {
-          if (item.dataKey === "LoginCard") {
-            return true;
-          }
-          return false;
+          return item.dataKey === "LoginCard";
         });
       }
       body = JSON.stringify(obj);
@@ -368,7 +362,7 @@ switch (adAppName(url)) {
           obj.data.cardList.localCache = false;
         }
         obj.data.cardList = obj.data.cardList.filter((item) => {
-          if (
+          return (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告
             item.dataKey === "MyOrderCard" || // 我的订单
             // item.dataKey === "GdRecommendCard" || // 高德推荐
@@ -378,10 +372,7 @@ switch (adAppName(url)) {
             // item.dataKey === "GameExcitation" || // 小德爱消除
             // item.dataKey === "GoodsShelvesCard" || // 精选服务
             // item.dataKey === "DiyMap_function" || // DIY 地图
-          ) {
-            return true;
-          }
-          return false;
+          );
         });
       }
       body = JSON.stringify(obj);

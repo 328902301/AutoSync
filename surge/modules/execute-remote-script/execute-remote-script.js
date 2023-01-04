@@ -1,21 +1,27 @@
-const NAMESPACE = `xream`
-const NAME = `debug-script`
+const NAME = `execute-remote-script`
 
-const KEY_SCRIPT_URL = `@${NAMESPACE}.${NAME}.script_url`
+const KEY_EXECUTE_REMOTE_SCRIPT_URL = `execute-remote-script-url`
 
 const $ = new Env(NAME)
 
+// $.isPanel = () => $.isSurge() && typeof $input != 'undefined' && $.lodash_get($input, 'purpose') === 'panel'
+// $.isTile = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($script, 'type') === 'tile'
 $.isRequest = () => typeof $request !== 'undefined'
-$.isResponse = () => typeof $response !== 'undefined'
+// $.isResponse = () => typeof $response !== 'undefined'
+
+let arg
+if (typeof $argument != 'undefined') {
+  arg = Object.fromEntries($argument.split('&').map(item => item.split('=')))
+}
 
 let result = {}
-let url
+let url = ''
 !(async () => {
-  url = $.getdata(KEY_SCRIPT_URL) || (typeof $argument != 'undefined' ? $argument : undefined)
+  url = $.getdata(KEY_EXECUTE_REMOTE_SCRIPT_URL) || $.lodash_get(arg, 'url')
   if (!url && $.isNode()) {
     try {
-      url = process.env.XREAM_DEBUG_SCRIPT_URL
-      $.log(`Node 环境, 尝试从环境变量 XREAM_DEBUG_SCRIPT_URL 读取脚本文件链接: ${url}`)
+      url = process.env.XREAM_EXECUTE_REMOTE_SCRIPT_URL
+      $.log(`Node 环境, 尝试从环境变量 XREAM_EXECUTE_REMOTE_SCRIPT_URL 读取脚本文件链接: ${url}`)
     } catch (e) {
       console.error(e)
     }
@@ -38,11 +44,11 @@ let url
   if (!content) throw new Error('未获取脚本文件内容')
   content = content.replace(/\$\.?done\(/g, '$eval_env.resolve(')
   if (content.indexOf('$eval_env.resolve(') === -1) throw new Error('脚本文件内容不包含 $done 的逻辑')
-  // $$.log('ℹ️ 脚本内容', content)
+  $.log('ℹ️ 脚本内容', content)
   $.log('ℹ️ 执行脚本')
   await new Promise(resolve => {
     const $eval_env = {
-      resolve: (...args) => {
+      resolve: async (...args) => {
         $.log('ℹ️ 执行结果')
         try {
           $.log($.toStr(...args))
@@ -50,15 +56,69 @@ let url
           $.log(...args)
         }
         $.log('ℹ️ 执行完毕')
+        result.title = '✅ 执行远程脚本'
+        try {
+          if (args.length === 1) {
+            if (typeof args[0] !== 'object') {
+              result.content = `${args[0]}`
+            } else {
+              result.content = $.toStr(args[0])
+            }
+          }
+        } catch (e) {
+          try {
+            result.content = $.toStr(args)
+          } catch (e) {}
+        }
+
+        await notify(result.title, `${url || ''}`, result.content, url)
         resolve(...args)
       },
     }
     eval(content)
   })
+  result = { ...result, ...arg }
+  $.log($.toStr(result))
+  if ($.isRequest()) {
+    result._url = url
+    result = {
+      response: {
+        status: 200,
+        body: JSON.stringify(result, null, 2),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        },
+      },
+    }
+  }
 })()
   .catch(async e => {
     $.logErr(e)
-    await notify(`❌ 实时脚本调试`, `${url || ''}`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+    $.logErr($.toStr(e))
+    const msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
+    result.title = '❌ 执行远程脚本'
+    result.content = msg
+    await notify(result.title, `${url || ''}`, result.content, url)
+    result = { ...result, ...arg }
+    $.log($.toStr(result))
+    if ($.isRequest()) {
+      result._url = url
+      result = {
+        response: {
+          status: 500,
+          body: JSON.stringify(result, null, 2),
+          headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+          },
+        },
+      }
+    }
   })
   .finally(async () => {
     $.done(result)

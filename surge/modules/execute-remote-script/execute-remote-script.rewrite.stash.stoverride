@@ -1,0 +1,40 @@
+name: 执行远程脚本
+desc: >-
+  ⚠️ 请勿执行有风险的脚本 不点击面板时也可能会执行!
+  三种设置方式:
+  1. 脚本编辑器/BoxJs 执行 $persistentStore.write('http://1.js', 'execute-remote-script-url'); $done({title:'已设置'})
+  2. 自定义覆写参数 argument:icon=arrowtriangle.right.circle&color=#663399&url=http://1.js
+  3. Node.js 环境变量 XREAM_EXECUTE_REMOTE_SCRIPT_URL=http://1.js
+  两种执行方式:
+  1. 面板 (Tile)
+  2. 访问 execute-remote-script.com
+tiles:
+  - name: "execute-remote-script"
+    interval: 3153600000
+    title: "执行远程脚本"
+    content: ""
+    # argument: "icon=arrowtriangle.right.circle&color=#663399"
+    icon: "number.circle.fill"
+    backgroundColor: "#86A697"
+
+http:
+  force-http-engine:
+    - "execute-remote-script.com:80"
+  mitm:
+    - "execute-remote-script.com"
+
+  script:
+    - match: https?:\/\/execute-remote-script\.com
+      name: execute-remote-script
+      type: request
+      require-body: true
+      timeout: 30
+      max-size: 3145728
+      argument: ""
+      # debug: true
+
+script-providers:
+  execute-remote-script:
+    url: https://raw.githubusercontent.com/xream/scripts/main/surge/modules/execute-remote-script/execute-remote-script.js
+    # interval: 1
+    interval: 86400

@@ -10,7 +10,6 @@
 
 ^https:\/\/www2\.tigeroom\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zpqlds.js
 
-
 [mitm] 
 
 hostname = www2.tigeroom.com

@@ -1,4 +1,4 @@
-// 2023-01-04 14:14
+// 2023-01-04 15:18
 
 var body = $response.body;
 var method = $request.method;
@@ -321,8 +321,8 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.mapBizList) {
-        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
-          return !(
+        obj.data.mapBizList = obj.data.mapBizList.filter((item) => {
+          if (
             item.dataKey === "Covid" ||
             item.dataKey === "CovidMerge" ||
             item.dataKey === "SddTileOffsiteHotel" ||
@@ -331,15 +331,22 @@ switch (adAppName(url)) {
             item.dataKey === "Winter" ||
             item.dataKey === "Kids" ||
             item.dataKey === "SpringV2"
-          );
+          ) {
+            return false;
+          }
+          return true;
         });
       } else if (obj.data && obj.data.cardList) {
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (
-            item.dataKey === "ContinueNavigationCard" ||
-            item.dataKey === "LoginCard" ||
-            item.dataKey === "FrequentLocation"
-          );
+        obj.data.cardList = obj.data.cardList.filter((item) => {
+          if (
+            item.dataKey === "CombineRecommend" ||
+            item.dataKey === "AmapVoiceCard" ||
+            item.dataKey === "BusinessBanner" ||
+            item.dataKey === "LocalCombineRecommend"
+          ) {
+            return false;
+          }
+          return true;
         });
       }
       body = JSON.stringify(obj);
@@ -365,8 +372,8 @@ switch (adAppName(url)) {
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (
+        obj.data.cardList = obj.data.cardList.filter((item) => {
+          if (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告
             item.dataKey === "MyOrderCard" || // 我的订单
             // item.dataKey === "GdRecommendCard" || // 高德推荐
@@ -376,7 +383,10 @@ switch (adAppName(url)) {
             // item.dataKey === "GameExcitation" || // 小德爱消除
             // item.dataKey === "GoodsShelvesCard" || // 精选服务
             // item.dataKey === "DiyMap_function" || // DIY 地图
-          );
+          ) {
+            return true;
+          }
+          return false;
         });
       }
       body = JSON.stringify(obj);

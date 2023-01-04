@@ -1,5 +1,5 @@
 #!name = Bilibili去广告
-#!desc = 精简多余功能并过滤广告
+#!desc = 精简多余功能并过滤广告，同时重定向至腾讯CDN，以提高视频加载速度。
 #!openUrl = 
 #!author = blackmatrix7 app2smile ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
@@ -27,7 +27,7 @@
 # BiliBili_漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) reject-dict
 # 切换至腾讯CDN以提高视频加载速度
-#^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
 
 [Script]
 # BiliBili_屏蔽首页右上活动
@@ -37,7 +37,7 @@ http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\
 # BiliBili_应用开屏广告预加载
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, tag=应用开屏广告预加载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_1080P高码率+4K画质(番剧和影视除外)
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, tag=1080P高码率+4K画质, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+# http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, tag=1080P高码率+4K画质, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_热搜发现
 http-response ^https://app.bilibili.com/x/v2/search/square script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, tag=热搜发现, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # BiliBili_推荐去广告

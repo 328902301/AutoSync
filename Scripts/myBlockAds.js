@@ -1,4 +1,4 @@
-// 2023-01-04 16:50
+// 2023-01-04 16:55
 
 var body = $response.body;
 var method = $request.method;
@@ -321,23 +321,22 @@ switch (adAppName(url)) {
   case "高德地图-首页卡片":
     try {
       let obj = JSON.parse(body);
-      // if (obj.data && obj.data.mapBizList) {
-      //   obj.data.mapBizList = obj.data.mapBizList.filter((item) => {
-      //     return !(
-      //       item.dataKey === "Covid" ||
-      //       item.dataKey === "CovidMerge" ||
-      //       item.dataKey === "SddTileOffsiteHotel" ||
-      //       item.dataKey === "OffsiteHotel" ||
-      //       item.dataKey === "Offsite" ||
-      //       item.dataKey === "Winter" ||
-      //       item.dataKey === "Kids" ||
-      //       item.dataKey === "SpringV2"
-      //     );
-      //   });
-      // }
-      if (obj.data && obj.data.cardList) {
+      if (obj.data && obj.data.mapBizList) {
+        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
+          return !(
+            item.dataKey === "Covid" ||
+            item.dataKey === "CovidMerge" ||
+            item.dataKey === "SddTileOffsiteHotel" ||
+            item.dataKey === "OffsiteHotel" ||
+            item.dataKey === "Offsite" ||
+            item.dataKey === "Winter" ||
+            item.dataKey === "Kids" ||
+            item.dataKey === "SpringV2"
+          );
+        });
+      } else if (obj.data && obj.data.cardList) {
         obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
-          return (item.dataKey === "LoginCard");
+          return item.dataKey === "LoginCard";
         });
       }
       body = JSON.stringify(obj);
@@ -366,7 +365,7 @@ switch (adAppName(url)) {
         for (let i = 0; i < obj.data.cardList.length; i++) {
           obj.data.cardList.localCache = false;
         }
-        obj.data.cardList = obj.data.cardList.filter((item) => {
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
           return (
             // item.dataKey === "AnnualBillCardV2" || // 年度报告
             item.dataKey === "MyOrderCard" || // 我的订单

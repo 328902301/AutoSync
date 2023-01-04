@@ -59,10 +59,19 @@ let url = ''
         result.title = '✅ 执行远程脚本'
         try {
           if (args.length === 1) {
-            if (typeof args[0] !== 'object') {
-              result.content = `${args[0]}`
+            const arg = args[0]
+            if (typeof arg !== 'object') {
+              result.content = `${arg}`
             } else {
-              result.content = $.toStr(args[0])
+              const override = arg['exec1ute_remote_script']
+              console.log('override!!!!!!!!!!!!!!!')
+              console.log(arg)
+              console.log(override)
+              if (override == null) {
+                result.content = $.toStr(arg)
+              } else {
+                result = { ...result, ...override }
+              }
             }
           }
         } catch (e) {
@@ -70,8 +79,17 @@ let url = ''
             result.content = $.toStr(args)
           } catch (e) {}
         }
+        // try {
+        //   const override = $.lodash_get($.toObj(), 'execute_remote_script')
 
-        await notify(result.title, `${url || ''}`, result.content, url)
+        // } catch (e) {}
+
+        await notify(
+          result.title,
+          result.subt == null ? `${url || ''}` : `${result.subt}`,
+          result.content,
+          result.opts == null ? url : result.opts
+        )
         resolve(...args)
       },
     }
@@ -121,12 +139,6 @@ let url = ''
     }
   })
   .finally(async () => {
-    try {
-      const override = $.lodash_get($.toObj($.lodash_get(result, 'content')), 'execute_remote_script')
-      if (override !== null) {
-        result = { ...result, ...override }
-      }
-    } catch (e) {}
     $.done(result)
   })
 

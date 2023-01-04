@@ -5,11 +5,24 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
+[Rule]
+DOMAIN, amdc.m.taobao.com, REJECT
+
+[Rewrite]
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+
 [Script]
-# 我的页面
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 我的页面, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
-# 首页消息横幅
-http-response ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页消息横幅, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+
+http-response ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+
+http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+
+http-response ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+
+http-response ^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
 [Mitm]
-hostname = m5.amap.com, sns.amap.com
+hostname = optimus-ads.amap.com, m5.amap.com, sns.amap.com

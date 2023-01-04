@@ -1,4 +1,4 @@
-// 2023-01-04 12:59
+// 2023-01-04 13:11
 
 var body = $response.body;
 var method = $request.method;
@@ -321,8 +321,8 @@ switch (adAppName(url)) {
     try {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.mapBizList) {
-        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) =>
-          !(
+        obj.data.mapBizList = Object.values(obj.data.mapBizList).filter((item) => {
+          return !(
             item.dataKey === "Covid" ||
             item.dataKey === "CovidMerge" ||
             item.dataKey === "SddTileOffsiteHotel" ||
@@ -331,14 +331,16 @@ switch (adAppName(url)) {
             item.dataKey === "Winter" ||
             item.dataKey === "Kids" ||
             item.dataKey === "SpringV2"
-          )
-        );
+          );
+        });
       } else if (obj.data && obj.data.cardList) {
-        obj.data.cardList = Object.values(obj.data.cardList).filter((item) =>
-          item.dataKey === "ContinueNavigationCard" ||
-          item.dataKey === "LoginCard" ||
-          item.dataKey === "FrequentLocation"
-        );
+        obj.data.cardList = Object.values(obj.data.cardList).filter((item) => {
+          return (
+            item.dataKey === "ContinueNavigationCard" ||
+            item.dataKey === "LoginCard" ||
+            item.dataKey === "FrequentLocation"
+          );
+        });
       }
       body = JSON.stringify(obj);
     } catch (error) {

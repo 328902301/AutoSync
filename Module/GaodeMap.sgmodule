@@ -3,7 +3,7 @@
 
 [Url Rewrite]
 
-^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution - reject
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution - REJECT
 
 [Script]
 

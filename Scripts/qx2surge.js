@@ -15,7 +15,7 @@ hostname = %APPEND% github.com:443, raw.githubusercontent.com:443
 */
 
 let req = $request.url.replace(/qx$/, "");
-let name = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
+let newName = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
 !(async () => {
   let body = await http(req);
 
@@ -144,7 +144,7 @@ let name = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
 
   MapLocal = (MapLocal[0] || "") && `[MapLocal]\n${MapLocal.join("\n")}`;
 
-  body = `${name}
+  body = `${newName}
 
 ${script}
 ${URLRewrite}

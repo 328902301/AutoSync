@@ -1,4 +1,4 @@
-// 2023-01-04 17:42
+// 2023-01-05 08:35
 
 var body = $response.body;
 var method = $request.method;
@@ -495,15 +495,6 @@ switch (adAppName(url)) {
       console.log(`京东-开屏广告, 出现异常`);
     }
     break;
-  case "酷安-replyList":
-    try {
-      let obj = JSON.parse(body);
-      obj.data = Object.values(obj.data).filter((item) => item.id);
-      body = JSON.stringify(obj);
-    } catch (error) {
-      console.log(`酷安-replyList, 出现异常`);
-    }
-    break;
   case "酷安-detail":
     try {
       let obj = JSON.parse(body);
@@ -515,6 +506,15 @@ switch (adAppName(url)) {
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`酷安-detail, 出现异常`);
+    }
+    break;
+  case "酷安-replyList":
+    try {
+      let obj = JSON.parse(body);
+      obj.data = Object.values(obj.data).filter((item) => item.id);
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`酷安-replyList, 出现异常`);
     }
     break;
   case "酷安-dataList":
@@ -781,13 +781,13 @@ switch (adAppName(url)) {
       console.log(`小红书-开屏广告-splash_config, 出现异常`);
     }
     break;
-  case "小红书-处理信息流广告":
+  case "小红书-信息流广告":
     try {
       let obj = JSON.parse(body);
       obj.data = obj.data.filter((d) => !d.ads_info);
       body = JSON.stringify(obj);
     } catch (error) {
-      console.log(`小红书-处理信息流广告, 出现异常`);
+      console.log(`小红书-信息流广告, 出现异常`);
     }
     break;
   case "小米商城-开屏广告":

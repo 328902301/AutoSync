@@ -514,11 +514,7 @@ function removeTopicTab(data) {
 // 移除首页顶部直播
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
-    if (data.data && data.data.is_top) {
-      for (let i = 0; i < data.data.length; i++) {
-        data.data.is_top[i] = 0;
-      }
-    }
+    data.data = [];
   }
 }
 

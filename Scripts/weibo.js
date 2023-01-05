@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-05 19:55
+// 2023-01-05 20:02
 
 // 主要的选项配置
 const mainConfig = {

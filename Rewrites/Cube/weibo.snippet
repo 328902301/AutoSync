@@ -1,7 +1,9 @@
 # ======= 微博 ======= #
-# 2023-01-03 10:58
+# 2023-01-05 12:58
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php\? url reject
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 

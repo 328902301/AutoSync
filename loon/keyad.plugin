@@ -3,6 +3,7 @@
 #!icon=https://raw.githubusercontent.com/Keywos/rule/main/mocks/ad.png
 #!author=Github-Keywos
 #!homepage=https://github.com/Keywos/rule
+
 [Rewrite]
 
 #555横幅
@@ -12,5 +13,35 @@
 #大师兄
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject
 
+#淘宝
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/.+?\.heic$ - reject
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+
+#云闪付
+^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long - reject
+^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+?\.jpg$ - reject
+
+#拼多多
+^https:\/\/commimg-1\.pddpic\.com\/oms_img_ng\/.+?\.jpeg - reject
+^https:\/\/lf3-beecdn\.bytetos\.com\/obj\/.*?\.png$ - reject
+
+#京东
+^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+?\.jpg$ - reject
+
+#松果
+^https:\/\/api.songguo7.com\/(\w{3})?mp\/v2\/misc\/toast - reject
+
+#高德地图
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/ - reject
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ - reject
+#高德横幅
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? reject-dict
+#中国移动
+^https?:\/\/client.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject-200
+
+
+
 [MITM]
-hostname = sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com
+hostname = sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com, client.app.coc.10086.cn,api.songguo7.com, wallet.95516.com,  m.360buyimg.com, commimg-1.pddpic.com,  list-app-m.i4.cn, rescdn.qqmail.com,api.aliyundrive.com, heic.alicdn.com, m*.amap.com, sns.amap.com, optimus-ads.amap.com

@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-05 19:48
+// 2023-01-05 19:53
 
 // 主要的选项配置
 const mainConfig = {
@@ -513,7 +513,11 @@ function removeTopicTab(data) {
 // 移除首页顶部直播
 function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
-    data.data = [];
+    if (data.data && data.data.is_top) {
+      for (let i = 0; i < data.data.length; i++) {
+        data.data.is_top[i] = 0;
+      }
+    }
   }
 }
 

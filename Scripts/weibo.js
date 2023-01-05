@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-05 19:53
+// 2023-01-05 19:55
 
 // 主要的选项配置
 const mainConfig = {
@@ -7,6 +7,7 @@ const mainConfig = {
   removeExtendInfo: true, // 删除拓展卡片
   removeFollow: true, // 关注博主
   removeHomeVip: true, // 个人中心的 vip 栏
+  removeLiveMedia: true, // 首页直播
   removeGood: true, // 微博主好物种草
   removeInterestFriendInTopic: true, // 超话 超话里的好友
   removeInterestTopic: true, // 超话 可能感兴趣的超话 + 好友关注

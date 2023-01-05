@@ -1,4 +1,4 @@
-// 2023-01-05 22:52
+// 2023-01-05 23:06
 
 var body = $response.body;
 var method = $request.method;
@@ -52,7 +52,7 @@ function adAppName(adUrls) {
   if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
   if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
   if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config";
-  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed(\/categories)?\?/.test(adUrls)) return "小红书-信息流广告";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?/.test(adUrls)) return "小红书-信息流广告";
   if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
   if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
   return "";

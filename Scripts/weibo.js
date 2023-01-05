@@ -1,8 +1,11 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-05 20:02
+// 2023-01-05 21:20
 
+// 屏蔽用户id获取方法
+// 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
 // 主要的选项配置
 const mainConfig = {
+  blockIds: [],	//屏蔽的用户id列表
   modifyMenus: true, // 编辑上下文菜单
   removeExtendInfo: true, // 删除拓展卡片
   removeFollow: true, // 关注博主
@@ -140,6 +143,21 @@ function lvZhouHandler(data) {
   data.common_struct = newStruct;
 }
 
+// 屏蔽用户
+function isBlock(data) {
+  let blockIds = mainConfig.blockIds || [];
+  if (blockIds.length === 0) {
+    return false;
+  }
+  let uid = data.user.id;
+  for (const blockId of blockIds) {
+    if (blockId == uid) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function removeTimeLine(data) {
   for (const s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) delete data[s];
@@ -149,6 +167,7 @@ function removeTimeLine(data) {
   for (const s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
+      if (!isBlock(s)) newStatuses.push(s);
       if (s?.common_struct) delete s.common_struct;
       if (s.category !== "group") newStatuses.push(s);
     }

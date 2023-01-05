@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-03 12:30
+// 2023-01-05 20:02
 
 // 主要的选项配置
 const mainConfig = {
@@ -7,6 +7,7 @@ const mainConfig = {
   removeExtendInfo: true, // 删除拓展卡片
   removeFollow: true, // 关注博主
   removeHomeVip: true, // 个人中心的 vip 栏
+  removeLiveMedia: true, // 首页直播
   removeGood: true, // 微博主好物种草
   removeInterestFriendInTopic: true, // 超话 超话里的好友
   removeInterestTopic: true, // 超话 可能感兴趣的超话 + 好友关注
@@ -75,7 +76,8 @@ const otherUrls = {
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab" // 超话 tab 顶部广场
+  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
+  "/2/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
 };
 
 function getModifyMethod(url) {
@@ -97,6 +99,7 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type === "ad") return true;
+  if (data.common_struct && data.common_struct[0]?.actionlog?.source?.includes("ad")) return true;
   return false;
 }
 
@@ -166,9 +169,9 @@ function removeComments(data) {
   let items = data.datas || [];
   if (items.length === 0) return;
   let newItems = [];
-  for (const item of items) {
+  for (let item of items) {
     let adType = item.adType || "";
-    if (delType.indexOf(adType) === -1) {
+    if (delType.indexOf(adType) === -1 && item.type !== 6) {
       newItems.push(item);
     }
   }
@@ -506,6 +509,13 @@ function removeTopicTab(data) {
   }
   data.channelInfo.channel_list = newList;
   return data;
+}
+
+// 移除首页顶部直播
+function removeMediaHomelist(data) {
+  if (mainConfig.removeLiveMedia) {
+    data.data = [];
+  }
 }
 
 var url = $request.url;

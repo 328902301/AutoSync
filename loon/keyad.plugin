@@ -1,11 +1,16 @@
-#!name=555AD
-#!desc=555去广告2022.12.8更新
-#!author=Github-keywos
+#!name=KEYAD
+#!desc=开屏去广告
+#!icon=https://raw.githubusercontent.com/Keywos/rule/main/mocks/ad.png
+#!author=Github-Keywos
+#!homepage=https://github.com/Keywos/rule
 [Rewrite]
 
-#横幅广告
+#555横幅
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
 ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic - reject
 
+#大师兄
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject
+
 [MITM]
-hostname = %APPEND% vip7.fzwdyy.cn, vpic.cms.qq.com
+hostname = sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com

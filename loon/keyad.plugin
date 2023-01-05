@@ -1,0 +1,11 @@
+#!name=555AD
+#!desc=555去广告2022.12.8更新
+#!author=Github-keywos
+[Rewrite]
+
+#横幅广告
+^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
+^https:\/\/vpic\.cms\.qq\.com\/nj_vpic - reject
+
+[MITM]
+hostname = %APPEND% vip7.fzwdyy.cn, vpic.cms.qq.com

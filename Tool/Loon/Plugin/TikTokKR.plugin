@@ -1,0 +1,28 @@
+#!name = TikTok韩区解锁
+#!desc = 解锁韩区TikTok，需要配置此插件至韩国节点。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TikTok.png
+
+[Rule]
+DOMAIN-KEYWORD,-tiktokcdn-com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,ipstatp.com
+DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+USER-AGENT,tiktok*
+
+[Rewrite]
+(?<=&mcc_mnc=)4 2 307
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+(?<=_region=)CN(?=&) KR 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
+
+[MITM]
+hostname = *.byteoversea.com,*.tik-tokapi.com,*.tiktokv.com

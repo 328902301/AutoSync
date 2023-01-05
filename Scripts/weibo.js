@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-03 12:30
+// 2023-01-05 19:35
 
 // 主要的选项配置
 const mainConfig = {
@@ -97,6 +97,7 @@ function isAd(data) {
     return true;
   }
   if (data.promotion && data.promotion.type === "ad") return true;
+  if (data.common_struct && data.common_struct[0]?.actionlog?.source?.includes("ad")) return true;
   return false;
 }
 
@@ -166,9 +167,9 @@ function removeComments(data) {
   let items = data.datas || [];
   if (items.length === 0) return;
   let newItems = [];
-  for (const item of items) {
+  for (let item of items) {
     let adType = item.adType || "";
-    if (delType.indexOf(adType) === -1) {
+    if (delType.indexOf(adType) === -1 && item.type !== 6) {
       newItems.push(item);
     }
   }

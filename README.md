@@ -3,7 +3,7 @@
 ---------------------------
 # 订阅地址
 ### 加速版本适于国内网络
-https://gh.api.99988866.xyz/https://raw.githubusercontent.com/IC58G/QuantumultX/main/quantumult_20230105-cn.conf
+https://gh.api.99988866.xyz/https://raw.githubusercontent.com/IC58G/QuantumultX/main/quantumult_202301-cn.conf
 ---------------------------
 常用定时示例：
 

@@ -1,0 +1,117 @@
+# Block iOS Update
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
+
+# Software Update
+# > macOS updates
+DOMAIN,configuration.apple.com,苹果服务
+DOMAIN,gnf-mdn.apple.com,苹果服务
+DOMAIN,gnf-mr.apple.com,苹果服务
+DOMAIN,gs.apple.com,苹果服务
+DOMAIN,ig.apple.com,苹果服务
+DOMAIN,skl.apple.com,苹果服务
+DOMAIN,swcdn.apple.com,苹果服务
+DOMAIN,swdist.apple.com,苹果服务
+DOMAIN,swdownload.apple.com,苹果服务
+DOMAIN,swpost.apple.com,苹果服务
+DOMAIN,swscan.apple.com,苹果服务
+# > macOS Recovery
+DOMAIN,oscdn.apple.com,苹果服务
+DOMAIN,osrecovery.apple.com,苹果服务
+# > iOS, iPadOS, and watchOS updates
+DOMAIN,appldnld.apple.com,苹果服务
+DOMAIN,ns.itunes.apple.com,苹果服务
+# > iOS, iPadOS, tvOS, watchOS, and macOS updates
+DOMAIN,gg.apple.com,苹果服务
+DOMAIN,gdmf.apple.com,苹果服务
+DOMAIN,mesu.apple.com,苹果服务
+DOMAIN,updates.cdn-apple.com,苹果服务
+DOMAIN,updates-http.cdn-apple.com,苹果服务
+DOMAIN,xp.apple.com,苹果服务
+
+# Apple
+DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,apple.co,Apple
+DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,apple.com.cn,Apple
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+DOMAIN-SUFFIX,apple-livephotoskit.com,Apple
+DOMAIN-SUFFIX,apple-mapkit.com,Apple
+DOMAIN-SUFFIX,applemusic.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,apzones.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud.com.cn,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN-KEYWORD,apple.com.akadns.net,Apple
+DOMAIN-KEYWORD,apple.com.edgekey.net,Apple
+DOMAIN-KEYWORD,apple-support.akadns.net,Apple
+DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+
+# App Store
+# Store content such as apps, books, and music
+DOMAIN-SUFFIX,apps.apple.com,苹果服务
+DOMAIN-SUFFIX,itunes.apple.com,苹果服务
+DOMAIN-SUFFIX,itunes-apple.com.akadns.net,苹果服务
+DOMAIN-SUFFIX,mzstatic.com,苹果服务
+DOMAIN,ppq.apple.com,苹果服务
+
+# > App Store Connect
+DOMAIN,appstoreconnect.apple.com,苹果服务
+DOMAIN,iosapps-ssl.itunes.apple.com,苹果服务
+DOMAIN,itcmobile.itunes.apple.com,苹果服务
+
+# Apple Books
+DOMAIN,buy.itunes.apple.com,苹果服务
+DOMAIN-SUFFIX,books.apple.com,苹果服务
+DOMAIN,books.itunes.apple.com,苹果服务
+DOMAIN,bookkeeper.itunes.apple.com,苹果服务
+DOMAIN,books-analytics-events.apple.com,苹果服务
+
+# Fitness+
+DOMAIN,hls-svod.itunes.apple.com,苹果服务
+DOMAIN,amp-api.fitness.apple.com,苹果服务
+
+# iCloud
+DOMAIN-SUFFIX,apple-cloudkit.com,苹果服务
+DOMAIN-SUFFIX,apple-livephotoskit.com,苹果服务
+DOMAIN-SUFFIX,apzones.com,苹果服务
+DOMAIN-SUFFIX,cdn-apple.com,苹果服务
+DOMAIN-SUFFIX,gc.apple.com,苹果服务
+DOMAIN-SUFFIX,icloud.apple.com,苹果服务
+DOMAIN-SUFFIX,icloud.com,苹果服务
+DOMAIN-SUFFIX,icloud.com.cn,苹果服务
+DOMAIN-SUFFIX,icloud-content.com,苹果服务
+DOMAIN-SUFFIX,iwork.apple.com,苹果服务
+DOMAIN-KEYWORD,icloud.com.akadns.net,苹果服务
+
+# > iCloud email
+DOMAIN-SUFFIX,mail.icloud.com.cn,iCloudMail
+DOMAIN-SUFFIX,mail.me.com,iCloudMail
+
+# > Apple Music
+USER-AGENT,Music*,苹果服务
+DOMAIN-SUFFIX,applemusic.com,苹果服务
+DOMAIN-SUFFIX,music.apple.com,苹果服务
+DOMAIN,aod.itunes.apple.com,苹果服务
+DOMAIN,aod-ssl.itunes.apple.com,苹果服务
+DOMAIN,audio.itunes.apple.com,苹果服务
+DOMAIN,audio-ssl.itunes.apple.com,苹果服务
+DOMAIN,mvod.itunes.apple.com,苹果服务
+DOMAIN,streamingaudio.itunes.apple.com,苹果服务
+DOMAIN-SUFFIX,blobstore.apple.com,苹果服务
+
+# TV
+USER-AGENT,AppleTV*,苹果服务
+USER-AGENT,com.apple.tv*,苹果服务
+DOMAIN-SUFFIX,tv.apple.com,苹果服务
+DOMAIN,hls.itunes.apple.com,苹果服务
+DOMAIN,hls-amt.itunes.apple.com,苹果服务
+DOMAIN,play-edge.itunes.apple.com,苹果服务
+DOMAIN,tv.applemusic.com,苹果服务
+DOMAIN,uts-api.itunes.apple.com,苹果服务

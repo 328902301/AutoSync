@@ -3,8 +3,33 @@
 #!icon=https://raw.githubusercontent.com/Keywos/rule/main/mocks/ad.png
 #!author=Github-Keywos
 #!homepage=https://github.com/Keywos/rule
+[Rule]
+
+#云闪付
+DOMAIN-SUFFIX,switch.cup.com.cn,REJECT
+DOMAIN-SUFFIX,sdk.open.talk.getui.net,REJECT
+DOMAIN-SUFFIX,sdk-conf.getui.com,REJECT
+DOMAIN-SUFFIX,cm-10-138.getui.com,REJECT
+DOMAIN-SUFFIX,ads.95516.com,REJECT
+#高德
+DOMAIN-SUFFIX,amdc.m.taobao.com,REJECT
+DOMAIN-SUFFIX,page.amap.com,REJECT
+DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 
 [Rewrite]
+
+# 网易接的的某宝广告
+^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/.+?\.jpg$ - reject
+# 网易接的的某汐广告
+^http:\/\/images\.pinduoduo\.com\/marketing_api\/202\d-\d\d\-\d\d\/.*?\.jpeg - reject
+# 网易接的的某东广告
+^https:\/\/img2\.360buyimg\.com\/tgx\/jfs\/t1\/.*?\.jpg$ - reject 
+# 网易自己域名的广告
+^https?:\/\/iadmusicmatvideo.music.126.net - reject
+^https?:\/\/iadmusicmat.music.126.net - reject
+
+^https?:\/\/interface(\d)?\.music\.163.com\/eapi\/(ad\/.*|lbs\/gpsStatus\/*) reject-200
+^https?:\/\/clientlog3\.music\.163\.com\/api\/clientlog\/encrypt\/upload* reject-200
 
 #555横幅
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
@@ -44,4 +69,4 @@
 
 
 [MITM]
-hostname = sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com, client.app.coc.10086.cn,api.songguo7.com, wallet.95516.com,  m.360buyimg.com, commimg-1.pddpic.com,  list-app-m.i4.cn, rescdn.qqmail.com,api.aliyundrive.com, heic.alicdn.com, m*.amap.com, sns.amap.com, optimus-ads.amap.com
+hostname = interface*.music.163.com, ossgw.alicdn.com, images.pinduoduo.com, img2.360buyimg.com, sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com, client.app.coc.10086.cn,api.songguo7.com, wallet.95516.com,  m.360buyimg.com, commimg-1.pddpic.com,  list-app-m.i4.cn, rescdn.qqmail.com,api.aliyundrive.com, heic.alicdn.com, m*.amap.com, sns.amap.com, optimus-ads.amap.com

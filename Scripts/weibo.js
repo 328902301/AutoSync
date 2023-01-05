@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-05 19:35
+// 2023-01-05 19:42
 
 // 主要的选项配置
 const mainConfig = {
@@ -75,7 +75,8 @@ const otherUrls = {
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab" // 超话 tab 顶部广场
+  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
+  "/2/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
 };
 
 function getModifyMethod(url) {
@@ -507,6 +508,13 @@ function removeTopicTab(data) {
   }
   data.channelInfo.channel_list = newList;
   return data;
+}
+
+// 移除首页顶部直播
+function removeMediaHomelist(data) {
+  if (mainConfig.removeLiveMedia) {
+    data = [];
+  }
 }
 
 var url = $request.url;

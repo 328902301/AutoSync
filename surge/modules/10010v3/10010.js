@@ -559,7 +559,7 @@ async function notify(title, subtitle, body) {
     if (bark) {
       try {
         $.log(`读取 bark 设置: ${bark}`)
-        const barkTitle = encodeURIComponent(title)
+        const barkTitle = encodeURIComponent(title || '联通余量')
         const barkContent = encodeURIComponent(`${subtitle}\n${body}`)
         $.log(`bark 标题: ${barkTitle}`)
         $.log(`bark 内容: ${barkContent}`)

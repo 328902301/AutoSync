@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用QX微博&微博国际版净化
 > 脚本作者：@Zmqcherish, @Cuttlefish
 > 微信账号：墨鱼手记
-> 更新时间：2022-01-03
+> 更新时间：2022-01-06
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -11,7 +11,7 @@
 > 脚本声明：本脚本是在Zmqcherish原创基础上优化自用
 ***********************************************/
 
-const version = "V2.0.80";
+const version = "V2.0.81";
 
 const mainConfig = {
     isDebug: !1,
@@ -176,7 +176,8 @@ function removeMainTab(e) {
   let t = [];
   for (let o of e.items)
     isAd(o.data) ||
-      (o.category ? "group" != o.category && t.push(o) : t.push(o));
+      (o.data?.common_struct && delete o.data.common_struct,
+      o.category ? "group" != o.category && t.push(o) : t.push(o));
   return (e.items = t), log("removeMainTab success"), e;
 }
 function removeMain(e) {
@@ -447,6 +448,7 @@ function removeHome(e) {
     let i = o.itemId;
     if ("profileme_mine" == i)
       mainConfig.removeHomeVip && (o = removeHomeVip(o)),
+        o.header?.vipIcon && delete o.header.vipIcon,
         updateFollowOrder(o),
         t.push(o);
     else if ("100505_-_top8" == i)

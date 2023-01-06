@@ -1,4 +1,4 @@
-// 2023-01-06 21:12
+// 2023-01-06 21:22
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -8,7 +8,13 @@ if (obj.data) {
   // 哔哩哔哩-强制设置的皮肤
   if (url.includes("/x/resource/show/skin")) {
     if (obj.data.common_equip) delete obj.data.common_equip;
-  } else if (url.includes("/x/resource/show/tab")) {
+  } else if (url.includes("/x/resource/show/tab/v2")) {
+    // 修复pos
+    function fixPos(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].pos = i + 1;
+      }
+    }
     // 哔哩哔哩-标签页
     if (obj.data.tab) {
       obj.data.tab = obj.data.tab.filter((item) => {
@@ -153,13 +159,6 @@ if (obj.data) {
   } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
     // 哔哩哔哩-直播广告
     if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
-  }
-}
-
-// 修复pos
-function fixPos(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].pos = i + 1;
   }
 }
 

@@ -1,4 +1,4 @@
-// 2023-01-06 12:33
+// 2023-01-06 12:39
 
 var body = $response.body;
 var url = $request.url;
@@ -62,20 +62,20 @@ if (!body) {
     case "12306-开屏广告":
       try {
         let obj = JSON.parse(body);
-        if (obj.materialsList) {
-          if (obj.advertParam && obj.materialsList.length === 1) {
-            obj.materialsList[0].billId = "1000005";
-            obj.materialsList[0].billMaterialsId = "2000005";
-            obj.materialsList[0].filePath = "";
-            obj.advertParam.skipTime = 1;
-          } else if (materialsList.length > 1) {
-            obj.materialsList = {};
+        if (obj.advertParam && obj.materialsList.length === 1) {
+          obj.materialsList[0].billId = "1000005";
+          obj.materialsList[0].billMaterialsId = "2000005";
+          obj.materialsList[0].filePath = "";
+          obj.advertParam.skipTime = 1;
+        } else if (obj.materialsList.length > 1) {
+          for (let i = 0; i < obj.materialsList.length; i++) {
+            obj.materialsList[i].filePath = "";
           }
         }
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`12306-开屏广告, 出现异常` + error);
-      }  
+      }
       break;
     case "哔哩哔哩-强制设置的皮肤":
       try {

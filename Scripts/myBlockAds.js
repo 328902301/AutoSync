@@ -1,4 +1,4 @@
-// 2023-01-06 10:28
+// 2023-01-06 10:40
 
 if (!$response.body) $done({});
 var body = $response.body;
@@ -66,7 +66,6 @@ switch (getCube(url)) {
         }
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`12306-开屏广告, 出现异常` + error);
     }
@@ -76,7 +75,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.common_equip) delete obj.data.common_equip;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-强制设置的皮肤, 出现异常` + error);
     }
@@ -121,7 +119,6 @@ switch (getCube(url)) {
         fixPos(obj.data.bottom);
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-标签页, 出现异常` + error);
     }
@@ -134,7 +131,6 @@ switch (getCube(url)) {
         obj.data.online.icon = "";
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-右上角活动入口, 出现异常` + error);
     }
@@ -184,7 +180,6 @@ switch (getCube(url)) {
         obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-我的页面, 出现异常` + error);
     }
@@ -197,7 +192,6 @@ switch (getCube(url)) {
       obj.data.vip.vip_pay_type = 1;
       obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-会员清晰度, 出现异常` + error);
     }
@@ -243,7 +237,6 @@ switch (getCube(url)) {
         });
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-推荐广告, 出现异常` + error);
     }
@@ -253,7 +246,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       if (obj.data) delete obj.data;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-热搜广告, 出现异常` + error);
     }
@@ -263,7 +255,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.show) delete obj.data.show;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-开屏广告, 出现异常` + error);
     }
@@ -280,7 +271,6 @@ switch (getCube(url)) {
         }
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-观影页广告, 出现异常` + error);
     }
@@ -290,7 +280,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`哔哩哔哩-直播广告, 出现异常` + error);
     }
@@ -311,7 +300,6 @@ switch (getCube(url)) {
         obj.startupPages = startupPages;
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`嘀嗒出行-开屏广告, 出现异常` + error);
     }
@@ -324,7 +312,6 @@ switch (getCube(url)) {
         obj["data"]["welcomePage"][i]["offlineTime"] = 2209046399000;
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`多点-开屏广告, 出现异常` + error);
     }
@@ -338,7 +325,6 @@ switch (getCube(url)) {
         });
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`高德地图-首页卡片, 出现异常` + error);
     }
@@ -352,7 +338,6 @@ switch (getCube(url)) {
         obj.data.pull3.msgs = [];
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`高德地图-首页消息, 出现异常` + error);
     }
@@ -379,7 +364,6 @@ switch (getCube(url)) {
         });
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`高德地图-我的, 出现异常` + error);
     }
@@ -396,7 +380,6 @@ switch (getCube(url)) {
         };
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`广告联盟-穿山甲, 出现异常` + error);
     }
@@ -408,7 +391,6 @@ switch (getCube(url)) {
         obj.result = 40003;
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`广告联盟-快手联盟, 出现异常` + error);
     }
@@ -420,7 +402,6 @@ switch (getCube(url)) {
         if (obj.ret === 0) obj.ret = 102006;
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`广告联盟-优量汇, 出现异常` + error);
     }
@@ -430,7 +411,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       obj.newslist = obj.newslist.filter((n) => !n.aid);
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`IT之家-appList, 出现异常` + error);
     }
@@ -442,7 +422,6 @@ switch (getCube(url)) {
       obj.splice(0, obj.length);
       obj.push(...newList);
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`IT之家-appSlide, 出现异常` + error);
     }
@@ -454,7 +433,6 @@ switch (getCube(url)) {
         r.NewsTips.every((t) => t.TipName !== "广告")
       );
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`IT之家-mobileWebx, 出现异常` + error);
     }
@@ -479,7 +457,6 @@ switch (getCube(url)) {
       }
       obj.data.list = newList;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`IT之家-newAppFeed, 出现异常` + error);
     }
@@ -492,7 +469,6 @@ switch (getCube(url)) {
         obj.data.splash_ad.overtime = 0;
       };
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`JavDB, 出现异常` + error);
     }
@@ -513,7 +489,6 @@ switch (getCube(url)) {
       obj.countdown = 100;
       obj.showTimesDaily = 0;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`京东-开屏广告, 出现异常` + error);
     }
@@ -527,7 +502,6 @@ switch (getCube(url)) {
       obj.data.include_goods_ids = [];
       obj.data.include_goods = [];
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`酷安-detail, 出现异常` + error);
     }
@@ -537,7 +511,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       obj.data = Object.values(obj.data).filter((item) => item.id);
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`酷安-replyList, 出现异常` + error);
     }
@@ -549,7 +522,6 @@ switch (getCube(url)) {
         !(item["entityTemplate"] === "sponsorCard" || item.title === "精选配件")
       );
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`酷安-dataList, 出现异常` + error);
     }
@@ -568,7 +540,6 @@ switch (getCube(url)) {
         )
       );
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`酷安-index, 出现异常` + error);
     }
@@ -581,7 +552,6 @@ switch (getCube(url)) {
       delete obj.last_ads;
       delete obj.data;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`联享家-开屏广告, 出现异常` + error);
     }
@@ -592,7 +562,6 @@ switch (getCube(url)) {
       delete obj.data.startpicture.ad;
       delete obj.data.startpicture.mk;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`美团外卖-开屏广告, 出现异常` + error);
     }
@@ -608,7 +577,6 @@ switch (getCube(url)) {
         element.is_show_ad = "0";
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-开屏广告, 出现异常` + error);
     }
@@ -620,7 +588,6 @@ switch (getCube(url)) {
         return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "");
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-百科广告, 出现异常` + error);
     }
@@ -642,7 +609,6 @@ switch (getCube(url)) {
       // 什么值得买 obj.data.banner.skin = {};
       obj.data.rows = rows;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-好价广告, 出现异常` + error);
     }
@@ -652,7 +618,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       obj.data.lanmu_qikan = {};
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-好价详情页广告, 出现异常` + error);
     }
@@ -686,7 +651,6 @@ switch (getCube(url)) {
       });
       obj.data.component = component;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-首页广告, 出现异常` + error);
     }
@@ -696,7 +660,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       obj.data.hongbao = {};
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-搜索标签广告, 出现异常` + error);
     }
@@ -708,7 +671,6 @@ switch (getCube(url)) {
         return element.article_tag !== "广告";
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-搜索结果广告, 出现异常` + error);
     }
@@ -720,7 +682,6 @@ switch (getCube(url)) {
         return element.logo_title !== "广告";
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`什么值得买-会员权益中心banner广告, 出现异常` + error);
     }
@@ -766,7 +727,6 @@ switch (getCube(url)) {
         item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       }
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`微博-开屏广告-wbpullad, 出现异常` + error);
     }
@@ -785,7 +745,6 @@ switch (getCube(url)) {
       }
       obj.data = data;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`小爱音箱-开屏广告, 出现异常` + error);
     }
@@ -798,7 +757,6 @@ switch (getCube(url)) {
       delete obj.data.splash;
       delete obj.data.loading_img;
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`小红书-开屏广告-config, 出现异常` + error);
     }
@@ -817,7 +775,6 @@ switch (getCube(url)) {
         }
       });
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`小红书-开屏广告-splash_config, 出现异常` + error);
     }
@@ -827,7 +784,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       obj.data = obj.data.filter((d) => !d.ads_info);
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`小红书-信息流广告, 出现异常` + error);
     }
@@ -841,7 +797,6 @@ switch (getCube(url)) {
       obj.info = "ok";
       obj.desc = "成功";
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`小米商城-开屏广告, 出现异常` + error);
     }
@@ -851,7 +806,6 @@ switch (getCube(url)) {
       let obj = JSON.parse(body);
       if ("feed_egg" in obj) obj = {};
       body = JSON.stringify(obj);
-      $done({ body });
     } catch (error) {
       console.log(`知乎-首页右下角悬浮框, 出现异常` + error);
     }
@@ -859,3 +813,5 @@ switch (getCube(url)) {
   default:
     break;
 }
+
+$done({ body });

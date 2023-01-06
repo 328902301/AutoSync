@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-06 20:50
+// 2023-01-06 21:47
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -80,9 +80,7 @@ const otherUrls = {
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
   "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
-  "/2/!/live/media_homelist": "removeMediaHomelist", // 首页顶部直播
-  "/wbapplua/wbpullad.lua": "removeLuaAds", // 开屏广告
-  "/interface/sdk/sdkad.php": "removePhpAds" // 开屏广告
+  "/2/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
 };
 
 function getModifyMethod(url) {
@@ -295,6 +293,7 @@ function removeHome(data) {
     let itemId = item.itemId;
     if (itemId === "profileme_mine") {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
+      if (item.header?.vipIcon) delete item.header.vipIcon;
       updateFollowOrder(item);
       newItems.push(item);
     } else if (
@@ -377,7 +376,10 @@ function removeMain(data) {
   let newItems = [];
   for (let item of data.items) {
     if (!isAd(item.data)) {
-      if (item.category !== "group") newItems.push(item);
+      if (item.data?.common_struct) {
+        delete item.data.common_struct;
+        if (item.category !== "group") newItems.push(item);
+      }
     }
   }
   data.items = newItems;
@@ -540,44 +542,6 @@ function removeMediaHomelist(data) {
   }
 }
 
-function removeLuaAds(data) {
-  if (!data.cached_ad) return data;
-  for (let item of obj["cached_ad"]["ads"]) {
-    item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-    item["show_count"] = 0;
-    item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
-    item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-  }
-  return data;
-}
-
-function removePhpAds(data) {
-  if (!data.ads) return data;
-  if (obj.needlocation) obj.needlocation = false;
-  if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
-  if (obj.code) obj.code = 200;
-  if (obj.background_delay_display_time) {
-    obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
-  }
-  if (obj.lastAdShow_delay_display_time) {
-    obj.lastAdShow_delay_display_time = 31536000;
-  }
-  if (obj.realtime_ad_video_stall_time) {
-    obj.realtime_ad_video_stall_time = 31536000;
-  }
-  if (obj.realtime_ad_timeout_duration) {
-    obj.realtime_ad_timeout_duration = 31536000;
-  }
-  for (let item of obj["ads"]) {
-    item["displaytime"] = 0;
-    item["displayintervel"] = 31536000;
-    item["allowdaydisplaynum"] = 0;
-    item["begintime"] = "2040-01-01 00:00:00";
-    item["endtime"] = "2040-01-01 23:59:59";
-  }
-  return data;
-}
-
 var url = $request.url;
 var body = $response.body;
 let method = getModifyMethod(url);
@@ -586,11 +550,7 @@ if (method) {
   var func = eval(method);
   let data = JSON.parse(body);
   new func(data);
-  if (method === "removePhpAds") {
-    body = JSON.stringify(data) + "OK";
-  } else {
-    body = JSON.stringify(data);
-  }
+  body = JSON.stringify(data);
 }
 
 $done({ body });

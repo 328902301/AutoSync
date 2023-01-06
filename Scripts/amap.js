@@ -1,4 +1,4 @@
-// 2023-01-06 19:07
+// 2023-01-06 21:29
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -22,9 +22,6 @@ if (url.includes("/ws/faas/amap-navigation/main-page")) {
     }
   } else if (url.includes("/ws/shield/dsp/profile/index/nodefaasv3")) {
     if (obj.data && obj.data.cardList) {
-      for (let i = 0; i < obj.data.cardList.length; i++) {
-        obj.data.cardList.localCache = false;
-      }
       obj.data.cardList = obj.data.cardList.filter((item) => {
         return (
           // item.dataKey === "AnnualBillCardV2" || // 年度报告

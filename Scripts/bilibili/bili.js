@@ -29,15 +29,13 @@ if (obj.data) {
         return false;
       });
       fixPos(obj.data.tab);
-    }
-    if (obj.data.top) {
+    } else if (obj.data.top) {
       obj.data.top = obj.data.top.filter((item) => {
         if (item.name === "游戏中心") return false;
         return true;
       });
       fixPos(obj.data.top);
-    }
-    if (obj.data.bottom) {
+    } else if (obj.data.bottom) {
       obj.data.bottom = obj.data.bottom.filter((item) => {
         if (item.name === "发布" || item.name === "会员购") {
           return false;

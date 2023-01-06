@@ -35,17 +35,17 @@ http:
     - match: ^https?:\/\/(raw|gist)\.githubusercontent\.com
       name: enhanced-github
       type: request
-      require-body: true
+      require-body: false
       timeout: 30
-      max-size: 5242880 # 5M
+      # max-size: 5242880 # 5M
       argument: ""
       # debug: true
     - match: ^https?:\/\/(raw|gist)\.githubusercontent\.com
       name: enhanced-github
       type: response
-      require-body: true
+      require-body: false
       timeout: 30
-      max-size: 5242880 # 5M
+      # max-size: 5242880 # 5M
       argument: ""
       # debug: true
 

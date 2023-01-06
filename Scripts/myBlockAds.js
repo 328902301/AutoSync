@@ -1,4 +1,4 @@
-// 2023-01-06 12:47
+// 2023-01-06 14:41
 
 var body = $response.body;
 var url = $request.url;
@@ -71,7 +71,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`12306-开屏广告, 出现异常` + error);
+        console.log(`12306-开屏广告, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-强制设置的皮肤":
@@ -80,7 +80,7 @@ if (!body) {
         if (obj.data && obj.data.common_equip) delete obj.data.common_equip;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-强制设置的皮肤, 出现异常` + error);
+        console.log(`哔哩哔哩-强制设置的皮肤, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-标签页":
@@ -124,7 +124,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-标签页, 出现异常` + error);
+        console.log(`哔哩哔哩-标签页, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-右上角活动入口":
@@ -136,7 +136,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-右上角活动入口, 出现异常` + error);
+        console.log(`哔哩哔哩-右上角活动入口, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-我的页面":
@@ -185,7 +185,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-我的页面, 出现异常` + error);
+        console.log(`哔哩哔哩-我的页面, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-会员清晰度":
@@ -197,7 +197,7 @@ if (!body) {
         obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-会员清晰度, 出现异常` + error);
+        console.log(`哔哩哔哩-会员清晰度, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-推荐广告":
@@ -242,7 +242,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-推荐广告, 出现异常` + error);
+        console.log(`哔哩哔哩-推荐广告, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-热搜广告":
@@ -251,7 +251,7 @@ if (!body) {
         if (obj.data) delete obj.data;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-热搜广告, 出现异常` + error);
+        console.log(`哔哩哔哩-热搜广告, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-开屏广告":
@@ -260,7 +260,7 @@ if (!body) {
         if (obj.data && obj.data.show) delete obj.data.show;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-开屏广告, 出现异常` + error);
+        console.log(`哔哩哔哩-开屏广告, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-观影页广告":
@@ -276,7 +276,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-观影页广告, 出现异常` + error);
+        console.log(`哔哩哔哩-观影页广告, 出现异常: ` + error);
       }
       break;
     case "哔哩哔哩-直播广告":
@@ -285,7 +285,7 @@ if (!body) {
         if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`哔哩哔哩-直播广告, 出现异常` + error);
+        console.log(`哔哩哔哩-直播广告, 出现异常: ` + error);
       }
       break;
     case "嘀嗒出行-开屏广告":
@@ -305,7 +305,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`嘀嗒出行-开屏广告, 出现异常` + error);
+        console.log(`嘀嗒出行-开屏广告, 出现异常: ` + error);
       }
       break;
     case "多点-开屏广告":
@@ -317,7 +317,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`多点-开屏广告, 出现异常` + error);
+        console.log(`多点-开屏广告, 出现异常: ` + error);
       }
       break;
     case "高德地图-首页卡片":
@@ -330,7 +330,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`高德地图-首页卡片, 出现异常` + error);
+        console.log(`高德地图-首页卡片, 出现异常: ` + error);
       }
       break;
     case "高德地图-首页消息":
@@ -343,7 +343,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`高德地图-首页消息, 出现异常` + error);
+        console.log(`高德地图-首页消息, 出现异常: ` + error);
       }
       break;
     case "高德地图-我的":
@@ -369,7 +369,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`高德地图-我的, 出现异常` + error);
+        console.log(`高德地图-我的, 出现异常: ` + error);
       }
       break;
     case "广告联盟-穿山甲":
@@ -385,7 +385,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`广告联盟-穿山甲, 出现异常` + error);
+        console.log(`广告联盟-穿山甲, 出现异常: ` + error);
       }
       break;
     case "广告联盟-快手联盟":
@@ -396,7 +396,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`广告联盟-快手联盟, 出现异常` + error);
+        console.log(`广告联盟-快手联盟, 出现异常: ` + error);
       }
       break;
     case "广告联盟-优量汇":
@@ -407,7 +407,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`广告联盟-优量汇, 出现异常` + error);
+        console.log(`广告联盟-优量汇, 出现异常: ` + error);
       }
       break;
     case "IT之家-appList":
@@ -416,7 +416,7 @@ if (!body) {
         obj.newslist = obj.newslist.filter((n) => !n.aid);
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`IT之家-appList, 出现异常` + error);
+        console.log(`IT之家-appList, 出现异常: ` + error);
       }
       break;
     case "IT之家-appSlide":
@@ -427,7 +427,7 @@ if (!body) {
         obj.push(...newList);
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`IT之家-appSlide, 出现异常` + error);
+        console.log(`IT之家-appSlide, 出现异常: ` + error);
       }
       break;
     case "IT之家-mobileWeb":
@@ -438,7 +438,7 @@ if (!body) {
         );
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`IT之家-mobileWebx, 出现异常` + error);
+        console.log(`IT之家-mobileWebx, 出现异常: ` + error);
       }
       break;
     case "IT之家-newAppFeed":
@@ -462,7 +462,7 @@ if (!body) {
         obj.data.list = newList;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`IT之家-newAppFeed, 出现异常` + error);
+        console.log(`IT之家-newAppFeed, 出现异常: ` + error);
       }
       break;
     case "JavDB":
@@ -474,7 +474,7 @@ if (!body) {
         };
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`JavDB, 出现异常` + error);
+        console.log(`JavDB, 出现异常: ` + error);
       }
       break;
     case "京东-开屏广告":
@@ -494,7 +494,7 @@ if (!body) {
         obj.showTimesDaily = 0;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`京东-开屏广告, 出现异常` + error);
+        console.log(`京东-开屏广告, 出现异常: ` + error);
       }
       break;
     case "酷安-detail":
@@ -507,7 +507,7 @@ if (!body) {
         obj.data.include_goods = [];
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`酷安-detail, 出现异常` + error);
+        console.log(`酷安-detail, 出现异常: ` + error);
       }
       break;
     case "酷安-replyList":
@@ -516,7 +516,7 @@ if (!body) {
         obj.data = Object.values(obj.data).filter((item) => item.id);
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`酷安-replyList, 出现异常` + error);
+        console.log(`酷安-replyList, 出现异常: ` + error);
       }
       break;
     case "酷安-dataList":
@@ -527,7 +527,7 @@ if (!body) {
         );
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`酷安-dataList, 出现异常` + error);
+        console.log(`酷安-dataList, 出现异常: ` + error);
       }
       break;
     case "酷安-index":
@@ -545,7 +545,7 @@ if (!body) {
         );
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`酷安-index, 出现异常` + error);
+        console.log(`酷安-index, 出现异常: ` + error);
       }
       break;
     case "联享家-开屏广告":
@@ -557,7 +557,7 @@ if (!body) {
         delete obj.data;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`联享家-开屏广告, 出现异常` + error);
+        console.log(`联享家-开屏广告, 出现异常: ` + error);
       }
       break;
     case "美团外卖-开屏广告":
@@ -567,7 +567,7 @@ if (!body) {
         delete obj.data.startpicture.mk;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`美团外卖-开屏广告, 出现异常` + error);
+        console.log(`美团外卖-开屏广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-开屏广告":
@@ -582,7 +582,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-开屏广告, 出现异常` + error);
+        console.log(`什么值得买-开屏广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-百科广告":
@@ -593,7 +593,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-百科广告, 出现异常` + error);
+        console.log(`什么值得买-百科广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-好价广告":
@@ -614,7 +614,7 @@ if (!body) {
         obj.data.rows = rows;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-好价广告, 出现异常` + error);
+        console.log(`什么值得买-好价广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-好价详情页广告":
@@ -623,7 +623,7 @@ if (!body) {
         obj.data.lanmu_qikan = {};
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-好价详情页广告, 出现异常` + error);
+        console.log(`什么值得买-好价详情页广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-首页广告":
@@ -656,7 +656,7 @@ if (!body) {
         obj.data.component = component;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-首页广告, 出现异常` + error);
+        console.log(`什么值得买-首页广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-搜索标签广告":
@@ -665,7 +665,7 @@ if (!body) {
         obj.data.hongbao = {};
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-搜索标签广告, 出现异常` + error);
+        console.log(`什么值得买-搜索标签广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-搜索结果广告":
@@ -676,7 +676,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-搜索结果广告, 出现异常` + error);
+        console.log(`什么值得买-搜索结果广告, 出现异常: ` + error);
       }
       break;
     case "什么值得买-会员权益中心banner广告":
@@ -687,7 +687,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`什么值得买-会员权益中心banner广告, 出现异常` + error);
+        console.log(`什么值得买-会员权益中心banner广告, 出现异常: ` + error);
       }
       break;
     case "微博-开屏广告-sdkad":
@@ -718,7 +718,7 @@ if (!body) {
         }
         body = JSON.stringify(obj) + "OK";
       } catch (error) {
-        console.log(`微博-开屏广告-sdkad, 出现异常` + error);        
+        console.log(`微博-开屏广告-sdkad, 出现异常: ` + error);        
       }
       break;
     case "微博-开屏广告-wbpullad":
@@ -732,7 +732,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`微博-开屏广告-wbpullad, 出现异常` + error);
+        console.log(`微博-开屏广告-wbpullad, 出现异常: ` + error);
       }
       break;
     case "小爱音箱-开屏广告":
@@ -750,7 +750,7 @@ if (!body) {
         obj.data = data;
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`小爱音箱-开屏广告, 出现异常` + error);
+        console.log(`小爱音箱-开屏广告, 出现异常: ` + error);
       }
       break;
     case "小红书-开屏广告-config":
@@ -764,7 +764,7 @@ if (!body) {
         }
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`小红书-开屏广告-config, 出现异常` + error);
+        console.log(`小红书-开屏广告-config, 出现异常: ` + error);
       }
       break;
     case "小红书-开屏广告-splash_config":
@@ -782,7 +782,7 @@ if (!body) {
         });
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`小红书-开屏广告-splash_config, 出现异常` + error);
+        console.log(`小红书-开屏广告-splash_config, 出现异常: ` + error);
       }
       break;
     case "小红书-信息流广告":
@@ -791,7 +791,7 @@ if (!body) {
         obj.data = obj.data.filter((d) => !d.ads_info);
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`小红书-信息流广告, 出现异常` + error);
+        console.log(`小红书-信息流广告, 出现异常: ` + error);
       }
       break;
     case "小米商城-开屏广告":
@@ -804,7 +804,7 @@ if (!body) {
         obj.desc = "成功";
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`小米商城-开屏广告, 出现异常` + error);
+        console.log(`小米商城-开屏广告, 出现异常: ` + error);
       }
       break;
     case "知乎-首页右下角悬浮框":
@@ -813,7 +813,7 @@ if (!body) {
         if ("feed_egg" in obj) obj = {};
         body = JSON.stringify(obj);
       } catch (error) {
-        console.log(`知乎-首页右下角悬浮框, 出现异常` + error);
+        console.log(`知乎-首页右下角悬浮框, 出现异常: ` + error);
       }
       break;
     default:

@@ -1,64 +1,62 @@
-// 2023-01-05 23:06
+// 2023-01-06 10:28
 
+if (!$response.body) $done({});
 var body = $response.body;
-var method = $request.method;
 var url = $request.url;
 
-if (!body) $done({});
-
-function adAppName(adUrls) {
-  if (/^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(adUrls)) return "12306-开屏广告";
-  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(adUrls)) return "哔哩哔哩-强制设置的皮肤";
-  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(adUrls)) return "哔哩哔哩-标签页";
-  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(adUrls)) return "哔哩哔哩-右上角活动入口";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(adUrls)) return "哔哩哔哩-我的页面";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(adUrls)) return "哔哩哔哩-会员清晰度";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(adUrls)) return "哔哩哔哩-推荐广告";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(adUrls)) return "哔哩哔哩-热搜广告";
-  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)\?/.test(adUrls)) return "哔哩哔哩-开屏广告";
-  if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(adUrls)) return "哔哩哔哩-观影页广告";
-  if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(adUrls)) return "哔哩哔哩-直播广告";
-  if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(adUrls)) return "嘀嗒出行-开屏广告";
-  if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(adUrls)) return "多点-开屏广告";
-  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\?/.test(adUrls)) return "高德地图-首页卡片";
-  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\?/.test(adUrls)) return "高德地图-首页消息";
-  if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(adUrls)) return "高德地图-首页消息";
-  if (/^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/.test(adUrls)) return "高德地图-我的";
-  if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(adUrls) && method === "POST") return "广告联盟-穿山甲";
-  if (/^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$/.test(adUrls) && method === "POST") return "广告联盟-快手联盟";
-  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?/.test(adUrls) && method === "GET") return "广告联盟-优量汇";
-  if (/^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(adUrls)) return "IT之家-appList";
-  if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(adUrls)) return "IT之家-appSlide";
-  if (/^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(adUrls)) return "IT之家-mobileWeb";
-  if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(adUrls)) return "IT之家-newAppFeed";
-  if (/^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(adUrls)) return "JavDB";
-  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(adUrls)) return "京东-开屏广告";
-  if (/^https:\/\/api.coolapk.com\/v6\/feed\/detail/.test(adUrls)) return "酷安-detail";
-  if (/^https:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(adUrls)) return "酷安-replyList";
-  if (/^https:\/\/api.coolapk.com\/v6\/main\/dataList/.test(adUrls)) return "酷安-dataList";
-  if (/^https:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(adUrls)) return "酷安-index";
-  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(adUrls)) return "联享家-开屏广告";
-  if (/^https:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(adUrls)) return "美团外卖-开屏广告";
-  if (/^https:\/\/app-api\.smzdm\.com\/util\/loading/.test(adUrls)) return "什么值得买-开屏广告";
-  if (/^https:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(adUrls)) return "什么值得买-百科广告";
-  if (/^https:\/\/haojia-api\.smzdm\.com\/home\/list/.test(adUrls)) return "什么值得买-好价广告";
-  if (/^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(adUrls)) return "什么值得买-好价详情页广告";
-  if (/^https:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(adUrls)) return "什么值得买-首页广告";
-  if (/^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(adUrls)) return "什么值得买-搜索标签广告";
-  if (/^https:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(adUrls)) return "什么值得买-搜索结果广告";
-  if (/^https:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(adUrls)) return "什么值得买-会员权益中心banner广告";
-  if (/^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$/.test(adUrls)) return "微博-开屏广告-sdkad";
-  if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(adUrls)) return "微博-开屏广告-wbpullad";
-  if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(adUrls)) return "小爱音箱-开屏广告";
-  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(adUrls)) return "小红书-开屏广告-config";
-  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(adUrls)) return "小红书-开屏广告-splash_config";
-  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?/.test(adUrls)) return "小红书-信息流广告";
-  if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(adUrls)) return "小米商城-开屏广告";
-  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(adUrls)) return "知乎-首页右下角悬浮框";
+function getCube(p) {
+  if (/^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/.test(p)) return "12306-开屏广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(p)) return "哔哩哔哩-强制设置的皮肤";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(p)) return "哔哩哔哩-标签页";
+  if (/^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/.test(p)) return "哔哩哔哩-右上角活动入口";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(p)) return "哔哩哔哩-我的页面";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(p)) return "哔哩哔哩-会员清晰度";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(p)) return "哔哩哔哩-推荐广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?/.test(p)) return "哔哩哔哩-热搜广告";
+  if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show)\?/.test(p)) return "哔哩哔哩-开屏广告";
+  if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?/.test(p)) return "哔哩哔哩-观影页广告";
+  if (/^https:\/\/api\.live\.bilibili.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(p)) return "哔哩哔哩-直播广告";
+  if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(p)) return "嘀嗒出行-开屏广告";
+  if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(p)) return "多点-开屏广告";
+  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\?/.test(p)) return "高德地图-首页卡片";
+  if (/^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\?/.test(p)) return "高德地图-首页消息";
+  if (/^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\?/.test(p)) return "高德地图-首页消息";
+  if (/^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/.test(p)) return "高德地图-我的";
+  if (/^https:\/\/(api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads/.test(p)) return "广告联盟-穿山甲";
+  if (/^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$/.test(p)) return "广告联盟-快手联盟";
+  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?/.test(p)) return "广告联盟-优量汇";
+  if (/^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news/.test(p)) return "IT之家-appList";
+  if (/^https:\/\/api\.ithome\.com\/json\/slide\/index/.test(p)) return "IT之家-appSlide";
+  if (/^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget/.test(p)) return "IT之家-mobileWeb";
+  if (/^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index)/.test(p)) return "IT之家-newAppFeed";
+  if (/^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(p)) return "JavDB";
+  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(p)) return "京东-开屏广告";
+  if (/^https:\/\/api.coolapk.com\/v6\/feed\/detail/.test(p)) return "酷安-detail";
+  if (/^https:\/\/api.coolapk.com\/v6\/feed\/replyList/.test(p)) return "酷安-replyList";
+  if (/^https:\/\/api.coolapk.com\/v6\/main\/dataList/.test(p)) return "酷安-dataList";
+  if (/^https:\/\/api.coolapk.com\/v6\/main\/indexV8/.test(p)) return "酷安-index";
+  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(p)) return "联享家-开屏广告";
+  if (/^https:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(p)) return "美团外卖-开屏广告";
+  if (/^https:\/\/app-api\.smzdm\.com\/util\/loading/.test(p)) return "什么值得买-开屏广告";
+  if (/^https:\/\/baike-api\.smzdm\.com\/home_v3\/list/.test(p)) return "什么值得买-百科广告";
+  if (/^https:\/\/haojia-api\.smzdm\.com\/home\/list/.test(p)) return "什么值得买-好价广告";
+  if (/^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/article_releated_modul/.test(p)) return "什么值得买-好价详情页广告";
+  if (/^https:\/\/homepage-api\.smzdm\.com\/v3\/home/.test(p)) return "什么值得买-首页广告";
+  if (/^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags/.test(p)) return "什么值得买-搜索标签广告";
+  if (/^https:\/\/s-api\.smzdm\.com\/sou\/list_v10/.test(p)) return "什么值得买-搜索结果广告";
+  if (/^https:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner/.test(p)) return "什么值得买-会员权益中心banner广告";
+  if (/^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$/.test(p)) return "微博-开屏广告-sdkad";
+  if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(p)) return "微博-开屏广告-wbpullad";
+  if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(p)) return "小爱音箱-开屏广告";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?/.test(p)) return "小红书-开屏广告-config";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$/.test(p)) return "小红书-开屏广告-splash_config";
+  if (/^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?/.test(p)) return "小红书-信息流广告";
+  if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(p)) return "小米商城-开屏广告";
+  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(p)) return "知乎-首页右下角悬浮框";
   return "";
 }
 
-switch (adAppName(url)) {
+switch (getCube(url)) {
   case "12306-开屏广告":
     try {
       let obj = JSON.parse(body);
@@ -68,8 +66,9 @@ switch (adAppName(url)) {
         }
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`12306-开屏广告, 出现异常`);
+      console.log(`12306-开屏广告, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-强制设置的皮肤":
@@ -77,8 +76,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.common_equip) delete obj.data.common_equip;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-强制设置的皮肤, 出现异常`);
+      console.log(`哔哩哔哩-强制设置的皮肤, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-标签页":
@@ -121,8 +121,9 @@ switch (adAppName(url)) {
         fixPos(obj.data.bottom);
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-标签页, 出现异常`);
+      console.log(`哔哩哔哩-标签页, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-右上角活动入口":
@@ -133,8 +134,9 @@ switch (adAppName(url)) {
         obj.data.online.icon = "";
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-右上角活动入口, 出现异常`);
+      console.log(`哔哩哔哩-右上角活动入口, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-我的页面":
@@ -182,8 +184,9 @@ switch (adAppName(url)) {
         obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-我的页面, 出现异常`);
+      console.log(`哔哩哔哩-我的页面, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-会员清晰度":
@@ -194,8 +197,9 @@ switch (adAppName(url)) {
       obj.data.vip.vip_pay_type = 1;
       obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-会员清晰度, 出现异常`);
+      console.log(`哔哩哔哩-会员清晰度, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-推荐广告":
@@ -239,8 +243,9 @@ switch (adAppName(url)) {
         });
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-推荐广告, 出现异常`);
+      console.log(`哔哩哔哩-推荐广告, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-热搜广告":
@@ -248,8 +253,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.data) delete obj.data;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-热搜广告, 出现异常`);
+      console.log(`哔哩哔哩-热搜广告, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-开屏广告":
@@ -257,8 +263,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.data && obj.data.show) delete obj.data.show;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-开屏广告, 出现异常`);
+      console.log(`哔哩哔哩-开屏广告, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-观影页广告":
@@ -273,8 +280,9 @@ switch (adAppName(url)) {
         }
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-观影页广告, 出现异常`);
+      console.log(`哔哩哔哩-观影页广告, 出现异常` + error);
     }
     break;
   case "哔哩哔哩-直播广告":
@@ -282,8 +290,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`哔哩哔哩-直播广告, 出现异常`);
+      console.log(`哔哩哔哩-直播广告, 出现异常` + error);
     }
     break;
   case "嘀嗒出行-开屏广告":
@@ -302,8 +311,9 @@ switch (adAppName(url)) {
         obj.startupPages = startupPages;
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`嘀嗒出行-开屏广告, 出现异常`);
+      console.log(`嘀嗒出行-开屏广告, 出现异常` + error);
     }
     break;
   case "多点-开屏广告":
@@ -314,8 +324,9 @@ switch (adAppName(url)) {
         obj["data"]["welcomePage"][i]["offlineTime"] = 2209046399000;
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`多点-开屏广告, 出现异常`);
+      console.log(`多点-开屏广告, 出现异常` + error);
     }
     break;
   case "高德地图-首页卡片":
@@ -327,8 +338,9 @@ switch (adAppName(url)) {
         });
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`高德地图-首页卡片, 出现异常`);
+      console.log(`高德地图-首页卡片, 出现异常` + error);
     }
     break;
   case "高德地图-首页消息":
@@ -340,8 +352,9 @@ switch (adAppName(url)) {
         obj.data.pull3.msgs = [];
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`高德地图-首页消息, 出现异常`);
+      console.log(`高德地图-首页消息, 出现异常` + error);
     }
     break;
   case "高德地图-我的":
@@ -366,8 +379,9 @@ switch (adAppName(url)) {
         });
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`高德地图-我的, 出现异常`);
+      console.log(`高德地图-我的, 出现异常` + error);
     }
     break;
   case "广告联盟-穿山甲":
@@ -382,8 +396,9 @@ switch (adAppName(url)) {
         };
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`广告联盟-穿山甲, 出现异常`);
+      console.log(`广告联盟-穿山甲, 出现异常` + error);
     }
     break;
   case "广告联盟-快手联盟":
@@ -393,8 +408,9 @@ switch (adAppName(url)) {
         obj.result = 40003;
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`广告联盟-快手联盟, 出现异常`);
+      console.log(`广告联盟-快手联盟, 出现异常` + error);
     }
     break;
   case "广告联盟-优量汇":
@@ -404,8 +420,9 @@ switch (adAppName(url)) {
         if (obj.ret === 0) obj.ret = 102006;
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`广告联盟-优量汇, 出现异常`);
+      console.log(`广告联盟-优量汇, 出现异常` + error);
     }
     break;
   case "IT之家-appList":
@@ -413,8 +430,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.newslist = obj.newslist.filter((n) => !n.aid);
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`IT之家-appList, 出现异常`);
+      console.log(`IT之家-appList, 出现异常` + error);
     }
     break;
   case "IT之家-appSlide":
@@ -424,8 +442,9 @@ switch (adAppName(url)) {
       obj.splice(0, obj.length);
       obj.push(...newList);
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`IT之家-appSlide, 出现异常`);
+      console.log(`IT之家-appSlide, 出现异常` + error);
     }
     break;
   case "IT之家-mobileWeb":
@@ -435,8 +454,9 @@ switch (adAppName(url)) {
         r.NewsTips.every((t) => t.TipName !== "广告")
       );
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`IT之家-mobileWebx, 出现异常`);
+      console.log(`IT之家-mobileWebx, 出现异常` + error);
     }
     break;
   case "IT之家-newAppFeed":
@@ -459,8 +479,9 @@ switch (adAppName(url)) {
       }
       obj.data.list = newList;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`IT之家-newAppFeed, 出现异常`);
+      console.log(`IT之家-newAppFeed, 出现异常` + error);
     }
     break;
   case "JavDB":
@@ -471,8 +492,9 @@ switch (adAppName(url)) {
         obj.data.splash_ad.overtime = 0;
       };
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`JavDB, 出现异常`);
+      console.log(`JavDB, 出现异常` + error);
     }
     break;
   case "京东-开屏广告":
@@ -491,8 +513,9 @@ switch (adAppName(url)) {
       obj.countdown = 100;
       obj.showTimesDaily = 0;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`京东-开屏广告, 出现异常`);
+      console.log(`京东-开屏广告, 出现异常` + error);
     }
     break;
   case "酷安-detail":
@@ -504,8 +527,9 @@ switch (adAppName(url)) {
       obj.data.include_goods_ids = [];
       obj.data.include_goods = [];
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`酷安-detail, 出现异常`);
+      console.log(`酷安-detail, 出现异常` + error);
     }
     break;
   case "酷安-replyList":
@@ -513,8 +537,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.data = Object.values(obj.data).filter((item) => item.id);
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`酷安-replyList, 出现异常`);
+      console.log(`酷安-replyList, 出现异常` + error);
     }
     break;
   case "酷安-dataList":
@@ -524,8 +549,9 @@ switch (adAppName(url)) {
         !(item["entityTemplate"] === "sponsorCard" || item.title === "精选配件")
       );
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`酷安-dataList, 出现异常`);
+      console.log(`酷安-dataList, 出现异常` + error);
     }
     break;
   case "酷安-index":
@@ -542,8 +568,9 @@ switch (adAppName(url)) {
         )
       );
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`酷安-index, 出现异常`);
+      console.log(`酷安-index, 出现异常` + error);
     }
     break;
   case "联享家-开屏广告":
@@ -554,8 +581,9 @@ switch (adAppName(url)) {
       delete obj.last_ads;
       delete obj.data;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`联享家-开屏广告, 出现异常`);
+      console.log(`联享家-开屏广告, 出现异常` + error);
     }
     break;
   case "美团外卖-开屏广告":
@@ -564,8 +592,9 @@ switch (adAppName(url)) {
       delete obj.data.startpicture.ad;
       delete obj.data.startpicture.mk;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`美团外卖-开屏广告, 出现异常`);
+      console.log(`美团外卖-开屏广告, 出现异常` + error);
     }
     break;
   case "什么值得买-开屏广告":
@@ -579,8 +608,9 @@ switch (adAppName(url)) {
         element.is_show_ad = "0";
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-开屏广告, 出现异常`);
+      console.log(`什么值得买-开屏广告, 出现异常` + error);
     }
     break;
   case "什么值得买-百科广告":
@@ -590,8 +620,9 @@ switch (adAppName(url)) {
         return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "");
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-百科广告, 出现异常`);
+      console.log(`什么值得买-百科广告, 出现异常` + error);
     }
     break;
   case "什么值得买-好价广告":
@@ -611,8 +642,9 @@ switch (adAppName(url)) {
       // 什么值得买 obj.data.banner.skin = {};
       obj.data.rows = rows;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-好价广告, 出现异常`);
+      console.log(`什么值得买-好价广告, 出现异常` + error);
     }
     break;
   case "什么值得买-好价详情页广告":
@@ -620,8 +652,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.data.lanmu_qikan = {};
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-好价详情页广告, 出现异常`);
+      console.log(`什么值得买-好价详情页广告, 出现异常` + error);
     }
     break;
   case "什么值得买-首页广告":
@@ -653,8 +686,9 @@ switch (adAppName(url)) {
       });
       obj.data.component = component;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-首页广告, 出现异常`);
+      console.log(`什么值得买-首页广告, 出现异常` + error);
     }
     break;
   case "什么值得买-搜索标签广告":
@@ -662,8 +696,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.data.hongbao = {};
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-搜索标签广告, 出现异常`);
+      console.log(`什么值得买-搜索标签广告, 出现异常` + error);
     }
     break;
   case "什么值得买-搜索结果广告":
@@ -673,8 +708,9 @@ switch (adAppName(url)) {
         return element.article_tag !== "广告";
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-搜索结果广告, 出现异常`);
+      console.log(`什么值得买-搜索结果广告, 出现异常` + error);
     }
     break;
   case "什么值得买-会员权益中心banner广告":
@@ -684,8 +720,9 @@ switch (adAppName(url)) {
         return element.logo_title !== "广告";
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`什么值得买-会员权益中心banner广告, 出现异常`);
+      console.log(`什么值得买-会员权益中心banner广告, 出现异常` + error);
     }
     break;
   case "微博-开屏广告-sdkad":
@@ -716,7 +753,7 @@ switch (adAppName(url)) {
       }
       body = JSON.stringify(obj) + "OK";
     } catch (error) {
-      console.log(`微博-开屏广告-sdkad, 出现异常`);        
+      console.log(`微博-开屏广告-sdkad, 出现异常` + error);        
     }
     break;
   case "微博-开屏广告-wbpullad":
@@ -729,8 +766,9 @@ switch (adAppName(url)) {
         item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       }
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`微博-开屏广告-wbpullad, 出现异常`);
+      console.log(`微博-开屏广告-wbpullad, 出现异常` + error);
     }
     break;
   case "小爱音箱-开屏广告":
@@ -747,8 +785,9 @@ switch (adAppName(url)) {
       }
       obj.data = data;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`小爱音箱-开屏广告, 出现异常`);
+      console.log(`小爱音箱-开屏广告, 出现异常` + error);
     }
     break;
   case "小红书-开屏广告-config":
@@ -759,8 +798,9 @@ switch (adAppName(url)) {
       delete obj.data.splash;
       delete obj.data.loading_img;
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`小红书-开屏广告-config, 出现异常`);
+      console.log(`小红书-开屏广告-config, 出现异常` + error);
     }
     break;
   case "小红书-开屏广告-splash_config":
@@ -777,8 +817,9 @@ switch (adAppName(url)) {
         }
       });
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`小红书-开屏广告-splash_config, 出现异常`);
+      console.log(`小红书-开屏广告-splash_config, 出现异常` + error);
     }
     break;
   case "小红书-信息流广告":
@@ -786,8 +827,9 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       obj.data = obj.data.filter((d) => !d.ads_info);
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`小红书-信息流广告, 出现异常`);
+      console.log(`小红书-信息流广告, 出现异常` + error);
     }
     break;
   case "小米商城-开屏广告":
@@ -799,8 +841,9 @@ switch (adAppName(url)) {
       obj.info = "ok";
       obj.desc = "成功";
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`小米商城-开屏广告, 出现异常`);
+      console.log(`小米商城-开屏广告, 出现异常` + error);
     }
     break;
   case "知乎-首页右下角悬浮框":
@@ -808,12 +851,11 @@ switch (adAppName(url)) {
       let obj = JSON.parse(body);
       if ("feed_egg" in obj) obj = {};
       body = JSON.stringify(obj);
+      $done({ body });
     } catch (error) {
-      console.log(`知乎-首页右下角悬浮框, 出现异常`);
+      console.log(`知乎-首页右下角悬浮框, 出现异常` + error);
     }
     break;
   default:
     break;
 }
-
-$done({ body });

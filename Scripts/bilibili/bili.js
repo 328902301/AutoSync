@@ -1,4 +1,4 @@
-// 2023-01-06 17:52
+// 2023-01-06 21:12
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -8,7 +8,7 @@ if (obj.data) {
   // 哔哩哔哩-强制设置的皮肤
   if (url.includes("/x/resource/show/skin")) {
     if (obj.data.common_equip) delete obj.data.common_equip;
-  } else if (url.includes("/x/resource/show/tab/v2")) {
+  } else if (url.includes("/x/resource/show/tab")) {
     // 哔哩哔哩-标签页
     if (obj.data.tab) {
       obj.data.tab = obj.data.tab.filter((item) => {

@@ -1,4 +1,4 @@
-// 2023-01-06 11:20
+// 2023-01-06 12:47
 
 var body = $response.body;
 var url = $request.url;
@@ -62,10 +62,12 @@ if (!body) {
     case "12306-开屏广告":
       try {
         let obj = JSON.parse(body);
-        if (obj.materialsList) {
-          for (let i = 0; i < obj.materialsList.length; i++) {
-            obj.materialsList[i].filePath = "";
-          }
+        if (obj.advertParam && obj.materialsList && obj.materialsList.length === 1) {
+          obj.materialsList[0].billId = "1000005";
+          obj.materialsList[0].billMaterialsId = "2000005";
+          obj.advertParam.skipTime = 1;
+        } else if (obj.materialsList && obj.materialsList.length > 1) {
+          obj.materialsList = [];
         }
         body = JSON.stringify(obj);
       } catch (error) {

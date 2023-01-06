@@ -1,4 +1,4 @@
-// 2023-01-06 12:32
+// 2023-01-06 12:33
 
 var body = $response.body;
 var url = $request.url;
@@ -69,7 +69,7 @@ if (!body) {
             obj.materialsList[0].filePath = "";
             obj.advertParam.skipTime = 1;
           } else if (materialsList.length > 1) {
-            obj.materialsList = [];
+            obj.materialsList = {};
           }
         }
         body = JSON.stringify(obj);

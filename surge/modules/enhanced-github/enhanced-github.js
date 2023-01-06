@@ -69,11 +69,13 @@ let url
     if (token && username) {
       let shouldAddToken
       try {
-        shouldAddToken = url.match(/https:\/\/(?:raw|gist)\.githubusercontent\.com\/([^\/]+)\//)[1] == username
+        shouldAddToken = url.match(/https?:\/\/(?:raw|gist)\.githubusercontent\.com\/([^\/]+)\//)[1] == username
       } catch (e) {
+        $.log('解析用户名失败')
         $.logErr(e)
         $.logErr($.toStr(e))
-        throw new Error(`解析用户名失败`)
+        // throw new Error(`解析用户名失败`)
+        await notify(`GitHub 增强`, `❌ 解析用户名失败`, url, url)
       }
       if (shouldAddToken) {
         headers = { ...headers, Authorization: `token ${token}` }

@@ -1,4 +1,4 @@
-// 2023-01-06 10:40
+// 2023-01-06 11:14
 
 if (!$response.body) $done({});
 var body = $response.body;
@@ -751,11 +751,13 @@ switch (getCube(url)) {
     break;
   case "小红书-开屏广告-config":
     try {
-      let obj = JSON.parse($response.body);
+      let obj = JSON.parse(body);
       //obj.data.tabbar.tabs = Object.values(obj.data.tabbar.tabs).filter((item) => !item.title === "购买");
-      delete obj.data.store;
-      delete obj.data.splash;
-      delete obj.data.loading_img;
+      if (obj.data) {
+        delete obj.data.store;
+        delete obj.data.splash;
+        delete obj.data.loading_img;
+      }
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`小红书-开屏广告-config, 出现异常` + error);

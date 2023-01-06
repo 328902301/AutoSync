@@ -1,5 +1,5 @@
 name: 脚本转换
-desc: 目前在测试 QX 脚本
+desc: 目前在测试 QX 脚本(二进制请求暂不支持)
 # 修改自 https://github.com/Peng-YM/ScriptConverter
 # 在 QX JS 脚本链接的末尾加上 _script-converter-stash.js
 

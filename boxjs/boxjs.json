@@ -6,6 +6,58 @@
   "repo": "https://github.com/xream/scripts/tree/main",
   "apps": [
     {
+      "id": "xream.enhanced_github",
+      "name": "GitHub 增强",
+      "descs_html": [
+        "原脚本由 <a href='https://github.com/Peng-YM/QuanX' target='_blank'>@Peng-YM</a> 提供, 感谢!",
+        "<br />",
+        "<b>Token</b> 获取方式:",
+        "<span style='margin-left: 40px'>头像菜单 -></span>",
+        "<span style='margin-left: 40px'>Settings -></span>",
+        "<span style='margin-left: 40px'>Developer settings -></span>",
+        "<span style='margin-left: 40px'>Personal access tokens -></span>",
+        "<span style='margin-left: 40px'>Generate new token -></span>",
+        "<span style='margin-left: 40px'>在里面找到 repo 勾选提交</span>",
+        "<a href=\"https://github.com/settings/tokens\">GitHub Personal access tokens 页面</a>",
+        "<a onClick=\"window.location.reload(true);\">刷新</a>"
+      ],
+      "keys": [
+        "@xream.enhanced-github.username",
+        "@xream.enhanced-github.token",
+        "@xream.enhanced-github.cache"
+      ],
+      "author": "@xream",
+      "repo": "https://github.com/xream/scripts/tree/main/surge/modules/enhanced-github",
+      "settings": [
+        {
+          "id": "@xream.enhanced-github.username",
+          "name": "用户名",
+          "val": "",
+          "type": "text",
+          "desc": "你的个人页面是 https://github.com/xream 那么 xream 就是你的用户名"
+        },
+        {
+          "id": "@xream.enhanced-github.token",
+          "name": "Personal access token",
+          "placeholder": "",
+          "val": "",
+          "type": "text",
+          "desc": "获取方式见👆🏻"
+        },
+        {
+          "id": "@xream.enhanced-github.cache",
+          "name": "允许缓存",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭, 表示禁用缓存. 开启后, 将恢复正常缓存逻辑"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/Github_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/Github.png"
+      ]
+    },
+    {
       "id": "xream.sub_store_mega",
       "name": "Sub-Store Mega 请使用 Lite",
       "descs_html": [

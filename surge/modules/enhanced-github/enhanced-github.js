@@ -6,13 +6,33 @@ const KEY_USERNAME = `${NAMESPACE}.${NAME}.username`
 const KEY_TOKEN = `${NAMESPACE}.${NAME}.token`
 const KEY_NO_CACHE = `${NAMESPACE}.${NAME}.no_cache`
 
-const username = $.getdata(KEY_USERNAME) || ''
-const token = $.getdata(KEY_TOKEN) || ''
-const noCache = `${$.getdata(KEY_NO_CACHE)}` !== 'false'
-$.log(`配置: `)
-$.log(`用户名: ${username}`)
-$.log(`token: ${token}`)
-$.log(`禁用缓存: ${noCache}`)
+const KEY_BOXJS_USERNAME = `@${NAMESPACE}.${NAME}.username`
+const KEY_BOXJS_TOKEN = `@${NAMESPACE}.${NAME}.token`
+const KEY_BOXJS_CACHE = `@${NAMESPACE}.${NAME}.cache`
+
+let username = $.getdata(KEY_USERNAME) || ''
+let token = $.getdata(KEY_TOKEN) || ''
+let noCache = `${$.getdata(KEY_NO_CACHE)}` !== 'false'
+
+let usernameBoxJs = $.getdata(KEY_BOXJS_USERNAME) || ''
+let tokenBoxJs = $.getdata(KEY_BOXJS_TOKEN) || ''
+let noCacheBoxJs = !(`${$.getdata(KEY_BOXJS_CACHE)}` === 'true')
+
+if (usernameBoxJs && tokenBoxJs) {
+  let username = usernameBoxJs
+  let token = tokenBoxJs
+  let noCache = noCacheBoxJs
+
+  $.log('使用 BoxJs 中的配置')
+  $.log(`用户名: ${username}`)
+  $.log(`token: ${token}`)
+  $.log(`禁用缓存: ${noCache}`)
+} else {
+  $.log(`使用 持久化存储 persistentStore 中的配置: `)
+  $.log(`用户名: ${username}`)
+  $.log(`token: ${token}`)
+  $.log(`禁用缓存: ${noCache}`)
+}
 
 $.isRequest = () => typeof $request !== 'undefined'
 $.isResponse = () => typeof $response !== 'undefined'

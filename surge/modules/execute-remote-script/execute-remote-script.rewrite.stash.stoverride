@@ -2,6 +2,7 @@ name: 执行远程脚本
 desc: |-
   ⚠️ 请勿执行有风险的脚本 不点击面板时也可能会执行!
   两种执行方式: 1. 面板 (Tile) 2. 访问 execute-remote-script.com
+  具体说明看本覆写的注释
 
 # 三种设置方式:
 # 1. 脚本编辑器/BoxJs 执行 $persistentStore.write('http://1.js', 'execute-remote-script-url'); $done({title:'已设置'})

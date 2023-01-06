@@ -1,4 +1,4 @@
-// 2023-01-06 10:48
+// 2023-01-06 10:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -610,7 +610,6 @@ switch (getCube(url)) {
     break;
   case "微博-开屏广告-sdkad":
     try {
-      body = body.match(/\{.*\}/);
       if (obj.needlocation) obj.needlocation = false;
       if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
       if (obj.code) obj.code = 200;
@@ -633,7 +632,7 @@ switch (getCube(url)) {
         item["begintime"] = "2040-01-01 00:00:00";
         item["endtime"] = "2040-01-01 23:59:59";
       }
-      body = JSON.stringify(obj) + "OK";
+      obj = obj + "OK";
     } catch (error) {
       console.log(`微博-开屏广告-sdkad, 出现异常` + error);        
     }

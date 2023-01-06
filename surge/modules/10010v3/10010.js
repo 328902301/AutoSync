@@ -559,12 +559,15 @@ async function notify(title, subtitle, body) {
     if (bark) {
       try {
         $.log(`读取 bark 设置: ${bark}`)
-        const barkTitle = encodeURIComponent(title || '联通余量')
-        const barkContent = encodeURIComponent(`${subtitle}\n${body}`)
+        let barkTitle = title || '联通余量'
         $.log(`bark 标题: ${barkTitle}`)
+        barkTitle = encodeURIComponent(barkTitle)
+        let barkContent = `${subtitle}\n${body}`
         $.log(`bark 内容: ${barkContent}`)
+        barkContent = encodeURIComponent(barkContent)
         const url = bark.replace('[推送标题]', barkTitle).replace('[推送内容]', barkContent)
-        $.log(`开始 bark 请求: ${url}`)
+        $.log(`开始 bark 请求`)
+        $.log(url)
         $.log(`${title}\n\n${subtitle}\n\n${body}`)
         const res = await $.http.get({ url })
         // console.log(res)

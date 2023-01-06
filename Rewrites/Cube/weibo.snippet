@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-01-05 21:09
+# 2023-01-07 00:11
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
@@ -35,6 +35,9 @@
 ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+
+# 去除侧边栏 //api.weibo.cn
+^https:\/\/api\.weibo\.cn\/2\/ug\/checkin\/list\?gsid= url reject-dict
 
 # 去除信息流视频号 //api.weibo.cn
 ^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\?gsid= url reject-dict

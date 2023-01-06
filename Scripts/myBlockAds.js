@@ -1,4 +1,4 @@
-// 2023-01-06 12:24
+// 2023-01-06 12:27
 
 var body = $response.body;
 var url = $request.url;
@@ -63,6 +63,9 @@ if (!body) {
       try {
         let obj = JSON.parse(body);
         if (obj.materialsList) {
+          for (let i = 0; i < obj.materialsList.length; i++) {
+            obj.materialsList[i].filePath = "";
+          }
           if (obj.materialsList.length === 1) {
             obj.materialsList[0].billId = "1000005";
             obj.materialsList[0].billMaterialsId = "2000005";
@@ -70,9 +73,6 @@ if (!body) {
           } else if (materialsList.length > 1) {
             obj.materialsList = [];
           }
-          // for (let i = 0; i < obj.materialsList.length; i++) {
-          //   obj.materialsList[i].filePath = "";
-          // }
         }
         body = JSON.stringify(obj);
       } catch (error) {

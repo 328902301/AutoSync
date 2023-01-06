@@ -69,7 +69,7 @@ DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 
 [Script]
 #12306
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
+http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://cdn.jsdelivr.net/gh/kokoryh/Script@master/js/12306.js, requires-body=true, timeout=10, tag=12306
 
 
 

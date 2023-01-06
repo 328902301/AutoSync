@@ -1,4 +1,4 @@
-// 2023-01-06 17:52
+// 2023-01-06 18:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -15,6 +15,7 @@ if (url.includes("/ad.12306.cn/ad/ser/getAdList")) {
       obj.materialsList = [];
     }
   }
-  body = JSON.stringify(obj);
-  $done({ body });
 }
+
+body = JSON.stringify(obj);
+$done({ body });

@@ -1,5 +1,5 @@
 #!name=KEYAD
-#!desc=开屏广告,高德地图,中国移动,网易云音乐,云闪付,555,大师兄
+#!desc=开屏广告,高德地图,中国移动,网易云音乐,云闪付,555,大师兄,12306
 #!icon=https://raw.githubusercontent.com/Keywos/rule/main/mocks/ad.png
 #!author=Github-Keywos
 #!homepage=https://github.com/Keywos/rule
@@ -67,6 +67,11 @@ DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject-200
 
 
+[Script]
+
+http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
+
+
 
 [MITM]
-hostname = interface*.music.163.com, ossgw.alicdn.com, images.pinduoduo.com, img2.360buyimg.com, sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com, client.app.coc.10086.cn,api.songguo7.com, wallet.95516.com,  m.360buyimg.com, commimg-1.pddpic.com,  list-app-m.i4.cn, rescdn.qqmail.com,api.aliyundrive.com, heic.alicdn.com, m*.amap.com, sns.amap.com, optimus-ads.amap.com
+hostname = interface*.music.163.com, ossgw.alicdn.com, images.pinduoduo.com, img2.360buyimg.com, sdk.alibaba.com.ailbaba.me, vip7.fzwdyy.cn, vpic.cms.qq.com, client.app.coc.10086.cn,api.songguo7.com, wallet.95516.com,  m.360buyimg.com, commimg-1.pddpic.com,  list-app-m.i4.cn, rescdn.qqmail.com,api.aliyundrive.com, heic.alicdn.com, m*.amap.com, sns.amap.com, optimus-ads.amap.com, ad.12306.cn

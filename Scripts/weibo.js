@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 16:44
+// 2023-01-07 16:57
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -287,23 +287,21 @@ function updateFollowOrder(item) {
   }
 }
 
-function removeMineTop(data) {
+function removeTop8(data) {
   if (!data.items) return data;
-  if (data.items.items) {
-    data.items.items = data.items.items.filter((item) => {
-      return (
-        item.itemId === "100505_-_album" || // 我的相册
-        item.itemId === "100505_-_like" || // 赞/收藏
-        item.itemId === "100505_-_watchhistory" || // 浏览记录
-        item.itemId === "100505_-_draft" // 草稿箱
-        // item.itemId === "100505_-_pay" || // 我的钱包
-        // item.itemId === "100505_-_ordercenter" || // 我的订单
-        // item.itemId === "100505_-_productcenter" || // 创作中心
-        // item.itemId === "100505_-_promote" || // 广告中心
-      );
-    });
-  }
-  if (data.items.images) delete data.items.images;
+  data.itemId = data.itemId.filter((i) => {
+    return (
+      i.itemId === "100505_-_album" || // 我的相册
+      i.itemId === "100505_-_like" || // 赞/收藏
+      i.itemId === "100505_-_watchhistory" || // 浏览记录
+      i.itemId === "100505_-_draft" // 草稿箱
+      // i.itemId === "100505_-_pay" || // 我的钱包
+      // i.itemId === "100505_-_ordercenter" || // 我的订单
+      // i.itemId === "100505_-_productcenter" || // 创作中心
+      // i.itemId === "100505_-_promote" || // 广告中心
+    );
+  });
+  return data;
 }
 
 function removeHome(data) {
@@ -315,8 +313,8 @@ function removeHome(data) {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
       updateFollowOrder(item);
       newItems.push(item);
-    } else if (itemId === "100505_-_top8" || item.category === "mine") {
-      removeMineTop(item);
+    } else if (itemId === "100505_-_top8") {
+      removeTop8(item);
       newItems.push(item);
     } else if (
       [
@@ -332,6 +330,8 @@ function removeHome(data) {
     ) {
       continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
+      continue;
+    } else if (itme.category === "mine") {
       continue;
     } else {
       newItems.push(item);

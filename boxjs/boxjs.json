@@ -24,7 +24,8 @@
       "keys": [
         "@xream.enhanced-github.username",
         "@xream.enhanced-github.token",
-        "@xream.enhanced-github.cache"
+        "@xream.enhanced-github.cache",
+        "@xream.enhanced-github.log_disabled"
       ],
       "author": "@xream",
       "repo": "https://github.com/xream/scripts/tree/main/surge/modules/enhanced-github",
@@ -50,6 +51,13 @@
           "val": false,
           "type": "boolean",
           "desc": "默认关闭, 表示禁用缓存. 开启后, 将恢复正常缓存逻辑"
+        },
+        {
+          "id": "@xream.enhanced-github.log_disabled",
+          "name": "禁用日志",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭, 表示不禁用日志. 开启后, 将禁用日志"
         }
       ],
       "icons": [

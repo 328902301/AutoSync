@@ -2,37 +2,27 @@ const NAMESPACE = `xream`
 const NAME = `enhanced-github`
 
 const $ = new Env(NAME)
-const KEY_USERNAME = `${NAMESPACE}.${NAME}.username`
-const KEY_TOKEN = `${NAMESPACE}.${NAME}.token`
-const KEY_NO_CACHE = `${NAMESPACE}.${NAME}.no_cache`
 
-const KEY_BOXJS_USERNAME = `@${NAMESPACE}.${NAME}.username`
-const KEY_BOXJS_TOKEN = `@${NAMESPACE}.${NAME}.token`
-const KEY_BOXJS_CACHE = `@${NAMESPACE}.${NAME}.cache`
+const KEY_USERNAME = `@${NAMESPACE}.${NAME}.username`
+const KEY_TOKEN = `@${NAMESPACE}.${NAME}.token`
+const KEY_CACHE = `@${NAMESPACE}.${NAME}.cache`
+const KEY_LOG_DISABLED = `@${NAMESPACE}.${NAME}.log_disabled`
 
 let username = $.getdata(KEY_USERNAME) || ''
 let token = $.getdata(KEY_TOKEN) || ''
-let noCache = `${$.getdata(KEY_NO_CACHE)}` !== 'false'
+let noCache = !(`${$.getdata(KEY_CACHE)}` === 'true')
+let logDisabled = `${$.getdata(KEY_LOG_DISABLED)}` === 'true'
 
-let usernameBoxJs = $.getdata(KEY_BOXJS_USERNAME) || ''
-let tokenBoxJs = $.getdata(KEY_BOXJS_TOKEN) || ''
-let noCacheBoxJs = !(`${$.getdata(KEY_BOXJS_CACHE)}` === 'true')
-
-if (usernameBoxJs && tokenBoxJs) {
-  let username = usernameBoxJs
-  let token = tokenBoxJs
-  let noCache = noCacheBoxJs
-
-  $.log('使用 BoxJs 中的配置')
-  $.log(`用户名: ${username}`)
-  $.log(`token: ${token}`)
-  $.log(`禁用缓存: ${noCache}`)
-} else {
-  $.log(`使用 持久化存储 persistentStore 中的配置: `)
-  $.log(`用户名: ${username}`)
-  $.log(`token: ${token}`)
-  $.log(`禁用缓存: ${noCache}`)
+// 禁用日志
+if (logDisabled) {
+  $.log = () => {}
 }
+
+$.log('使用 BoxJs 中的配置')
+$.log(`用户名: ${username}`)
+$.log(`token: ${token}`)
+$.log(`禁用缓存: ${noCache}`)
+$.log(`禁用日志: ${logDisabled}`)
 
 $.isRequest = () => typeof $request !== 'undefined'
 $.isResponse = () => typeof $response !== 'undefined'
@@ -91,6 +81,8 @@ let url
     await notify(`GitHub 增强`, `❌`, msg, url)
   })
   .finally(async () => {
+    result.url = url.replace(/enhanced-github$/i, '')
+    $.log($.toStr(result))
     $.done(result)
   })
 

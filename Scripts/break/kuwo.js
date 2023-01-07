@@ -1,3 +1,5 @@
+/*
+地址：https://github.com/nameking77/Qx/blob/main/rewrite/kw.js
 脚本功能：完美解锁酷我音乐
 脚本作者：king
 下载地址：https://is.gd/CWqKMX

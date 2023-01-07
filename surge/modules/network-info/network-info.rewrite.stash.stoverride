@@ -2,7 +2,7 @@ name: 网络信息
 desc: 包含国内和国外. 自己设置对应域名的分流
 
 tiles:
-  - name: "network-info-tile"
+  - name: "网络信息"
     interval: 300
     title: "网络信息"
     content: ""
@@ -11,6 +11,6 @@ tiles:
     # backgroundColor: "#663399"
 
 script-providers:
-  "network-info-tile":
+  "网络信息":
     url: "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/index.js"
     interval: 86400

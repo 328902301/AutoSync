@@ -1,5 +1,5 @@
 name: 网络信息
-desc: https://github.com/xream/scripts/tree/main/surge/modules/network-info
+desc: 包含国内和国外. 自己设置对应域名的分流
 
 tiles:
   - name: "network-info-tile"

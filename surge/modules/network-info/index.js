@@ -1,7 +1,8 @@
 const $ = new Env('network-info')
 
-// $.isPanel = () => $.isSurge() && typeof $input != 'undefined' && $.lodash_get($input, 'purpose') === 'panel'
-// $.isTile = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($script, 'type') === 'tile'
+$.isPanel = () => $.isSurge() && typeof $input != 'undefined' && $.lodash_get($input, 'purpose') === 'panel'
+$.isTile = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($script, 'type') === 'tile'
+// $.isStashCron = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($script, 'type') === 'cron'
 
 let arg
 if (typeof $argument != 'undefined') {
@@ -11,21 +12,41 @@ if (typeof $argument != 'undefined') {
 let title = ''
 let content = ''
 !(async () => {
+  if($.isTile()) {
+    await notify('网络信息', '面板', '开始查询')
+  }
   const [{ CN_IP = '-', CN_ADDR = '-' }, { PROXY_IP = '-', PROXY_ADDR = '-' }] = await Promise.all([getDirectInfo(), getProxyInfo()])
 
   title = `${CN_ADDR}`
-  content = `${CN_IP}\n${PROXY_ADDR}\n${PROXY_IP}`
+  content = `${CN_IP}\n${PROXY_ADDR}\n${PROXY_IP}\n执行时间: ${new Date().toTimeString().split(' ')[0]}`
+  if ($.isTile()) {
+    await notify('网络信息', '面板', '查询完成')
+  } else if(!$.isPanel()) {
+    await notify('网络信息', title, content)
+  }
 })()
-  .catch(e => {
+  .catch(async e => {
     $.logErr(e)
     $.logErr($.toStr(e))
+    const msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
+    title = `❌`
+    content = msg
+    await notify('网络信息', title, content)
   })
-  .finally(() => {
+  .finally(async () => {
     const result = { title, content, ...arg }
     $.log($.toStr(result))
     $.done(result)
   })
 
+// 通知
+async function notify(title, subt, desc, opts) {
+  if ($.lodash_get(arg, 'notify')) {
+    $.msg(title, subt, desc, opts)
+  } else {
+    $.log('🔕', title, subt, desc, opts)  
+  }
+}
 async function getDirectInfo() {
   let CN_IP
   let CN_ADDR

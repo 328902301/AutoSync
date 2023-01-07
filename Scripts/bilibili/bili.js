@@ -1,4 +1,4 @@
-// 2023-01-07 09:31
+// 2023-01-06 22:30
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -136,12 +136,7 @@ if (obj.data) {
     }
   } else if (url.includes("/x/v2/search/square")) {
     // 哔哩哔哩-热搜广告
-    // delete obj.data;
-    obj.data = {
-      type: "history",
-      title: "搜索历史",
-      search_hotword_revision: 2
-    }
+    delete obj.data;
   } else if (url.includes("/x/v2/splash")) {
     // 哔哩哔哩-开屏广告
     if (obj.data.show) delete obj.data.show;

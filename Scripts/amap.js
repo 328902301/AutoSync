@@ -1,4 +1,4 @@
-// 2023-01-07 11:55
+// 2023-01-07 12:08
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -49,8 +49,8 @@ if (url.includes("/msgbox/pull")) {
     if (obj.data.ad) {
       for (let item of obj.data.ad) {
         item.set.setting.display_time = 0;
-        item.creative.body.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-        item.creative.body.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+        item.creative[0].start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+        item.creative[0].end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       }
     }
   }

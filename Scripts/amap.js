@@ -1,4 +1,4 @@
-// 2023-01-07 12:14
+// 2023-01-07 13:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -17,12 +17,12 @@ if (url.includes("/msgbox/pull")) {
         return item.dataKey === "LoginCard";
       });
     }
-  } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
-    // 高德地图-首页消息
-    if (obj.data.pull3 && obj.data.pull3.msgs) {
-      obj.data.pull3.msgs.starttime = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      obj.data.pull3.msgs.expiretime = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-    }
+    // } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
+    //   // 高德地图-首页消息
+    //   if (obj.data.pull3 && obj.data.pull3.msgs) {
+    //     obj.data.pull3.msgs.starttime = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+    //     obj.data.pull3.msgs.expiretime = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+    //   }
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
     // 高德地图-我的
     if (obj.data.cardList) {

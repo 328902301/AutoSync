@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 17:06
+// 2023-01-07 17:11
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -287,20 +287,23 @@ function updateFollowOrder(item) {
   }
 }
 
-function removeTop8(data) {
+function removeTopMine(data) {
   if (!data) return data;
-  data.items = data.items.filter((i) => {
-    return (
-      i.itemId === "100505_-_album" || // 我的相册
-      i.itemId === "100505_-_like" || // 赞/收藏
-      i.itemId === "100505_-_watchhistory" || // 浏览记录
-      i.itemId === "100505_-_draft" // 草稿箱
-      // i.itemId === "100505_-_pay" || // 我的钱包
-      // i.itemId === "100505_-_ordercenter" || // 我的订单
-      // i.itemId === "100505_-_productcenter" || // 创作中心
-      // i.itemId === "100505_-_promote" || // 广告中心
-    );
-  });
+  if (data.items) {
+    data.items = data.items.filter((i) => {
+      return (
+        i.itemId === "100505_-_album" || // 我的相册
+        i.itemId === "100505_-_like" || // 赞/收藏
+        i.itemId === "100505_-_watchhistory" || // 浏览记录
+        i.itemId === "100505_-_draft" // 草稿箱
+        // i.itemId === "100505_-_pay" || // 我的钱包
+        // i.itemId === "100505_-_ordercenter" || // 我的订单
+        // i.itemId === "100505_-_productcenter" || // 创作中心
+        // i.itemId === "100505_-_promote" || // 广告中心
+      );
+    });
+  }
+  if (data.images) delete data.images;
   return data;
 }
 
@@ -313,8 +316,8 @@ function removeHome(data) {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
       updateFollowOrder(item);
       newItems.push(item);
-    } else if (itemId === "100505_-_top8") {
-      removeTop8(item);
+    } else if (itemId === "100505_-_top8" || item.category === "mine") {
+      removeTopMine(item);
       newItems.push(item);
     } else if (
       [
@@ -330,8 +333,6 @@ function removeHome(data) {
     ) {
       continue;
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
-      continue;
-    } else if (item.category === "mine") {
       continue;
     } else {
       newItems.push(item);

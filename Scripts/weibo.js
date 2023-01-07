@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 17:02
+// 2023-01-07 17:05
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -282,9 +282,26 @@ function updateFollowOrder(item) {
     if (d.itemId === "mainnums_friends") {
       let s = d.click.modules[0].scheme;
       d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
-      return data;
+      return item;
     }
   }
+}
+
+function removeTop8(data) {
+  if (!data) return data;
+  data.items = data.items.filter((i) => {
+    return (
+      i.itemId === "100505_-_album" || // 我的相册
+      i.itemId === "100505_-_like" || // 赞/收藏
+      i.itemId === "100505_-_watchhistory" || // 浏览记录
+      i.itemId === "100505_-_draft" // 草稿箱
+      // i.itemId === "100505_-_pay" || // 我的钱包
+      // i.itemId === "100505_-_ordercenter" || // 我的订单
+      // i.itemId === "100505_-_productcenter" || // 创作中心
+      // i.itemId === "100505_-_promote" || // 广告中心
+    );
+  });
+  return data;
 }
 
 function removeHome(data) {
@@ -297,18 +314,8 @@ function removeHome(data) {
       updateFollowOrder(item);
       newItems.push(item);
     } else if (itemId === "100505_-_top8") {
-      item.items = item.items.filter((i) => {
-        return (
-          i.itemId === "100505_-_album" || // 我的相册
-          i.itemId === "100505_-_like" || // 赞/收藏
-          i.itemId === "100505_-_watchhistory" || // 浏览记录
-          i.itemId === "100505_-_draft" // 草稿箱
-          // i.itemId === "100505_-_pay" || // 我的钱包
-          // i.itemId === "100505_-_ordercenter" || // 我的订单
-          // i.itemId === "100505_-_productcenter" || // 创作中心
-          // i.itemId === "100505_-_promote" || // 广告中心
-        );
-      });
+      removeTop8(item);
+      newItems.push(item);
     } else if (
       [
         "mine_attent_title",

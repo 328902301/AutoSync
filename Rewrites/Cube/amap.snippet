@@ -1,5 +1,5 @@
 # ======= 高德地图 ======= #
-# 2023-01-06 19:07
+# 2023-01-07 11:55
 
 # 首页卡片
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
@@ -11,11 +11,14 @@
 # 我的页面卡片
 ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
+# 搜索框热词
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
+
 # 其他
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 
 # 开屏广告
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
 hostname = m5.amap.com, sns.amap.com

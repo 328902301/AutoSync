@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 15:35
+// 2023-01-07 16:44
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -271,19 +271,39 @@ function removeHomeVip(data) {
   if (data.header.vipView) {
     data.header.vipView = null;
   }
+  if (data.header?.vipIcon) {
+    delete data.header.vipIcon;
+  }
   return data;
 }
 
 function updateFollowOrder(item) {
-  try {
-    for (let d of item.items) {
-      if (d.itemId === "mainnums_friends") {
-        let s = d.click.modules[0].scheme;
-        d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
-        return data;
-      }
+  for (let d of item.items) {
+    if (d.itemId === "mainnums_friends") {
+      let s = d.click.modules[0].scheme;
+      d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
+      return data;
     }
-  } catch (error) {}
+  }
+}
+
+function removeMineTop(data) {
+  if (!data.items) return data;
+  if (data.items.items) {
+    data.items.items = data.items.items.filter((item) => {
+      return (
+        item.itemId === "100505_-_album" || // 我的相册
+        item.itemId === "100505_-_like" || // 赞/收藏
+        item.itemId === "100505_-_watchhistory" || // 浏览记录
+        item.itemId === "100505_-_draft" // 草稿箱
+        // item.itemId === "100505_-_pay" || // 我的钱包
+        // item.itemId === "100505_-_ordercenter" || // 我的订单
+        // item.itemId === "100505_-_productcenter" || // 创作中心
+        // item.itemId === "100505_-_promote" || // 广告中心
+      );
+    });
+  }
+  if (data.items.images) delete data.items.images;
 }
 
 function removeHome(data) {
@@ -293,8 +313,10 @@ function removeHome(data) {
     let itemId = item.itemId;
     if (itemId === "profileme_mine") {
       if (mainConfig.removeHomeVip) item = removeHomeVip(item);
-      if (item.header?.vipIcon) delete item.header.vipIcon;
       updateFollowOrder(item);
+      newItems.push(item);
+    } else if (itemId === "100505_-_top8" || item.category === "mine") {
+      removeMineTop(item);
       newItems.push(item);
     } else if (
       [

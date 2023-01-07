@@ -512,7 +512,7 @@ ${pkgs.join('\n')}
 }
 
 
-async function notify(title, subtitle, body) {
+async function notify(title = '联通余量', subtitle, body) {
   if ($.isNode()) {
     console.log('Node 环境 尝试加载 sendNotify')
     try {
@@ -559,7 +559,7 @@ async function notify(title, subtitle, body) {
     if (bark) {
       try {
         $.log(`读取 bark 设置: ${bark}`)
-        let barkTitle = title || '联通余量'
+        let barkTitle = title
         $.log(`bark 标题: ${barkTitle}`)
         barkTitle = encodeURIComponent(barkTitle)
         let barkContent = `${subtitle}\n${body}`
@@ -600,7 +600,7 @@ async function notify(title, subtitle, body) {
 }
 function renderTpl(tpl, data) {
   return tpl
-    .replace('[套]', data.packageName || '')
+    .replace('[套]', data.packageName || '未知套餐')
     .replace('[总免]', formatFlow(data.free, 2))
     .replace('[总用]', formatFlow(data.sum, 2))
     .replace('[时]', formatDuration(data.duration))

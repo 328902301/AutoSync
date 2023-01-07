@@ -64,9 +64,7 @@ let url = ''
               result.content = `${arg}`
             } else {
               const override = arg['exec1ute_remote_script']
-              console.log('override!!!!!!!!!!!!!!!')
-              console.log(arg)
-              console.log(override)
+
               if (override == null) {
                 result.content = $.toStr(arg)
               } else {

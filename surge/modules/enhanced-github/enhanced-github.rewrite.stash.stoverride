@@ -1,6 +1,6 @@
 name: GitHub 增强
 desc: |-
-  1. 允许使用私库 2. 支持禁用缓存(默认已开启)
+  1. 允许使用私库 2. 支持禁用缓存(默认已禁用缓存)
   具体说明看本覆写的注释
 
 # 感谢 Peng-YM 佬的 https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js

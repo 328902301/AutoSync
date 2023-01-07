@@ -1,11 +1,12 @@
 # ======= 高德地图 ======= #
-# 2023-01-07 11:55
+# 2023-01-07 13:00
 
 # 首页卡片
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
 # 首页顶部消息横幅
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
+;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
 # 我的页面卡片

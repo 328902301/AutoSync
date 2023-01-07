@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 09:12
+// 2023-01-07 15:35
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -107,7 +107,7 @@ function isAd(data) {
 }
 
 function removeCards(data) {
-  if (!data.cards) return;
+  if (!data.cards) return data;
   let newCards = [];
   for (const card of data.cards) {
     let cardGroup = card.card_group;
@@ -132,10 +132,10 @@ function removeCards(data) {
 }
 
 function lvZhouHandler(data) {
-  if (!mainConfig.removeLvZhou) return;
-  if (!data) return;
+  if (!mainConfig.removeLvZhou) return data;
+  if (!data) return data;
   let struct = data.common_struct;
-  if (!struct) return;
+  if (!struct) return data;
   let newStruct = [];
   for (const s of struct) {
     if (s.name !== "绿洲") newStruct.push(s);
@@ -162,7 +162,7 @@ function removeTimeLine(data) {
   for (const s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) delete data[s];
   }
-  if (!data.statuses) return;
+  if (!data.statuses) return data;
   let newStatuses = [];
   for (const s of data.statuses) {
     if (!isAd(s)) {
@@ -187,7 +187,7 @@ function removeComments(data) {
   if (mainConfig.removeRelateItem) delType.push("相关内容");
   if (mainConfig.removeRecommendItem) delType.push(...["推荐", "热推"]);
   let items = data.datas || [];
-  if (items.length === 0) return;
+  if (items.length === 0) return data;
   let newItems = [];
   for (let item of items) {
     let adType = item.adType || "";
@@ -215,7 +215,7 @@ function containerHandler(data) {
 }
 
 function removeMsgAd(data) {
-  if (!data.messages) return;
+  if (!data.messages) return data;
   let newMsgs = [];
   for (let msg of data.messages) {
     if (msg.msg_card?.ad_tag) continue;
@@ -280,7 +280,7 @@ function updateFollowOrder(item) {
       if (d.itemId === "mainnums_friends") {
         let s = d.click.modules[0].scheme;
         d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
-        return;
+        return data;
       }
     }
   } catch (error) {}
@@ -529,7 +529,7 @@ function removeVideoRemind(data) {
 
 // 移除话题 tab 顶部广场
 function removeTopicTab(data) {
-  if (!mainConfig.removeUnusedPart) return;
+  if (!mainConfig.removeUnusedPart) return data;
   let clist = data.channelInfo.channel_list;
   if (!clist) return data;
   let newList = [];

@@ -1,9 +1,10 @@
-# 自用配置文件
+## 自用配置文件
 
 <details>
    <summary>:key:1️⃣QuantumultX</summary>   
    
 * #### 配置：[***QuantumultX.conf***](https://raw.githubusercontent.com/Repcz/Open-Proflies/main/QuantumultX/QuantumultX.conf) 
+* #### 使用方法：
    
 </details>
 

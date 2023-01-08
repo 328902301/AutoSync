@@ -7,6 +7,10 @@ desc: >-
 # 这样会自动转换脚本 以后原作者脚本更新 也可以自动更新
 # https://raw.githubusercontent.com/xream/scripts/main/surge/modules/script-converter/script-converter.rewrite.stash.stoverride
 
+# 此时请务必 更新远程资源 确保远程脚本都 OK
+# 因为后面的脚本需要依赖脚本转换
+# 此时请务必 更新远程资源 确保远程脚本都 OK
+
 # 2. 安装 "获取 TestFlight 信息"
 # https://raw.githubusercontent.com/xream/scripts/main/surge/modules/tf/testflight.key.stoverride
 

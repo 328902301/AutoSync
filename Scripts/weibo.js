@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-08 22:28
+// 2023-01-08 22:58
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -266,10 +266,13 @@ function userHandler(data) {
 
 function removeHomeVip(data) {
   if (!data.header) return data;
-  if (data.header.vipView) {
-    data.header.vipView = null;
+  if (data.header.vipCenter) {
+    delete data.header.vipCenter;
   }
-  if (data.header?.vipIcon) {
+  if (data.header.vipView) {
+    delete data.header.vipView;
+  }
+  if (data.header.vipIcon) {
     delete data.header.vipIcon;
   }
   return data;
@@ -316,33 +319,14 @@ function removeHome(data) {
     } else if (itemId === "100505_-_top8") {
       removeTopMine(item);
       newItems.push(item);
-    } else if (itemId === "100505_-_manage") {
-      if (item.style) delete item.style;
-      if (item.images) delete item.images;
-      newItems.push(item);
-    } else if (
-      [
-        "mine_attent_title",
-        "100505_-_meattent_pic",
-        "100505_-_newusertask",
-        "100505_-_vipkaitong",
-        "100505_-_hongbao2022",
-        "100505_-_adphoto",
-        "100505_-_advideo",
-        "2022pk_game_tonglan"
-      ].indexOf(itemId) !== -1
-    ) {
-      continue;
-    } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
-      continue;
     } else if (item.category === "mine") {
       if (itemId === "100505_-_manage") {
+        if (item.style) delete item.style;
+        if (item.images) delete item.images;
         newItems.push(item);
-      } else {
-        continue;
       }
     } else {
-      newItems.push(item);
+      continue;
     }
   }
   data.items = newItems;

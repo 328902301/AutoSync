@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-07 17:35
+// 2023-01-08 20:02
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -396,9 +396,9 @@ function removeSearchMain(data) {
 // 新版主页广告
 function removeMain(data) {
   if (!data.items) {
-      if (data.loadedInfo && data.loadedInfo.headers) {
-        delete data.loadedInfo.headers;
-      }
+    if (data.loadedInfo && data.loadedInfo.headers) {
+      data.loadedInfo.headers = {};
+    }
     return data;
   }
   let newItems = [];

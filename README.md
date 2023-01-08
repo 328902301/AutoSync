@@ -3,8 +3,9 @@
 <details>
    <summary>:key:1️⃣QuantumultX</summary>   
    
-* #### 配置：[***QuantumultX.conf***](https://raw.githubusercontent.com/Repcz/Open-Proflies/main/QuantumultX/QuantumultX.conf) 
-* #### 使用方法：
+* ### 配置：[***QuantumultX.conf***](https://raw.githubusercontent.com/Repcz/Open-Proflies/main/QuantumultX/QuantumultX.conf) 
+* ### 使用方法
+   #### 添加节点
    
 </details>
 

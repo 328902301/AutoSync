@@ -1,8 +1,7 @@
 # 自用配置文件
 
 ## 1️⃣QuantumultX 配置：
-* [***QX.iPad.conf***](https://github.com/Repcz/Profiles/blob/Master/QuantumultX/QX.iPad.conf) 
-* [***QX.iPhone.conf***](https://github.com/Repcz/Profiles/blob/Master/QuantumultX/QX.iPhone.conf) 
+* [***QuantumultX.conf***](https://github.com/Repcz/Open-Proflies/blob/main/QuantumultX/QuantumultX.conf) 
 
 ## 2️⃣Shadowrocket 配置：
 * [***Shadowrocket.conf***](https://github.com/Repcz/Profiles/blob/Master/Shadowrocket/Shadowrocket.conf) 

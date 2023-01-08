@@ -8,6 +8,7 @@ $.isResponse = () => typeof $response !== 'undefined'
 
 let result = {}
 let body = `
+// 转换时间: ${new Date().toLocaleString('zh')}
 var $task = {
   fetch: url => {
     return new Promise((resolve, reject) => {
@@ -65,6 +66,7 @@ var $notify = (title = '', subt = '', desc = '', opts) => {
       return undefined
     }
   }
+  console.log(title, subt, desc, toEnvOpts(opts))
   $notification.post(title, subt, desc, toEnvOpts(opts))
 }
 var _scriptSonverterDone = (val = {}) => {
@@ -89,16 +91,23 @@ var _scriptSonverterDone = (val = {}) => {
   $done(result)
 }
 `
+let url
 !(async () => {
   if (!$.isRequest()) throw new Error('不是 request')
-  const url = $request.url.replace(/_script-converter-stash\.js$/, '')
+  url = $request.url.replace(/_script-converter-stash\.js$/, '')
   $.log(`🔗 原始文件链接`, url)
-  const res = await post({ method: 'GET', url })
-  $.log('ℹ️ res', $.toStr(res))
+  const res = await $.http.get({
+    url,
+    headers: {
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
+    },
+  })
+  // $.log('ℹ️ res', $.toStr(res))
   const status = $.lodash_get(res, 'status') || $.lodash_get(res, 'statusCode') || 200
   $.log('ℹ️ res status', status)
   let content = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
-  $.log('ℹ️ res body', content)
+  // $.log('ℹ️ res body', content)
   body = `${body}\n${content.replace(/\$done\(/g, '_scriptSonverterDone(')}`
   result = {
     response: {
@@ -116,7 +125,7 @@ var _scriptSonverterDone = (val = {}) => {
   .catch(async e => {
     $.logErr(e)
     const msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
-    await notify(`脚本转换`, `❌`, msg)
+    await notify(`脚本转换`, `❌`, msg, url)
     result = {
       response: {
         status: 500,
@@ -133,16 +142,6 @@ var _scriptSonverterDone = (val = {}) => {
   .finally(async () => {
     $.done(result)
   })
-
-// POST
-async function post(opts) {
-  return new Promise((resolve, reject) => {
-    $.post(opts, (e, resp, body) => {
-      if (e) reject(e)
-      else resolve(resp)
-    })
-  })
-}
 
 // 通知
 async function notify(title, subt, desc, opts) {

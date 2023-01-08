@@ -40,8 +40,6 @@ desc: >-
 
 # 原作者 @chouchoui https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/Auto_join_TF.js
 
-http:
-
 cron:
   script:
     - name: "TestFlight 自动加入"

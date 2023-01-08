@@ -86,15 +86,6 @@ let url
     $.done(result)
   })
 
-// POST
-async function post(opts) {
-  return new Promise((resolve, reject) => {
-    $.post(opts, (err, resp, body) => {
-      if (err) reject(err)
-      else resolve(resp)
-    })
-  })
-}
 // 通知
 async function notify(title, subt, desc, opts) {
   $.msg(title, subt, desc, opts)

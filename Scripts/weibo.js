@@ -412,9 +412,6 @@ function removeTopic(data) {
   for (let item of items) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
-    } else if (item.category === "card") {
-      item.data.group = [];
-      newItems.push(item);
     } else {
       continue;
     }

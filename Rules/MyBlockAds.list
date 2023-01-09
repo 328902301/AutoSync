@@ -1,4 +1,4 @@
-# 2023-01-09 19:06
+# 2023-01-09 19:22
 
 # ======= 0 ======= #
 # 解除安全浏览限制
@@ -32,8 +32,8 @@ HOST, free-aos-cdn-image.amap.com, MyBlockAds
 HOST, pageviewp.icbc.com.cn, MyBlockAds
 
 # ======= K ======= #
-# 酷我音乐 导致设备发热严重
-;HOST, log.kuwo.cn, MyBlockAds
+# 酷我音乐
+HOST, log.kuwo.cn, MyBlockAds
 
 # ======= M ======= #
 # 美颜相机

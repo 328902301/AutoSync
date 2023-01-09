@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用QX微博&微博国际版净化
 > 脚本作者：@Zmqcherish, @Cuttlefish
 > 微信账号：墨鱼手记
-> 更新时间：2022-01-06
+> 更新时间：2022-01-08
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -11,7 +11,7 @@
 > 脚本声明：本脚本是在Zmqcherish原创基础上优化自用
 ***********************************************/
 
-const version = "V2.0.81";
+const version = "V2.0.82";
 
 const mainConfig = {
     isDebug: !1,
@@ -316,7 +316,7 @@ function removePage(e) {
   );
 }
 function removeCards(e) {
-  if (!e.cards) return;
+  if ((e.hotwords && (e.hotwords = []), !e.cards)) return;
   let t = [];
   for (let o of e.cards) {
     let i = o.card_group;

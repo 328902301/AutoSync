@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-09 09:52
+// 2023-01-09 10:14
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -320,7 +320,6 @@ function removeHome(data) {
       removeTop8(item);
       newItems.push(item);
     } else if (item.category === "mine") {
-      // 只保留 更多功能 这个按钮
       if (itemId === "100505_-_manage") {
         if (item.style) delete item.style;
         if (item.images) delete item.images;
@@ -394,13 +393,8 @@ function removeMain(data) {
   }
   let newItems = [];
   for (let item of data.items) {
-    if (!isAd(item.data)) {
-      if (item.category !== "group") {
-        // 首页 最新微博 信息流广告
-        if (!isAd(item.data.data)) {
-          newItems.push(item);
-        }
-      }
+    if (item.category !== "group") {
+      if (!isAd(item.data)) newItems.push(item);
     }
   }
   data.items = newItems;
@@ -429,7 +423,9 @@ function removeTopic(data) {
         if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
         newItems.push(item);
       }
-    } else if (item.category === "card") continue;
+    } else if (item.category === "card") {
+      continue;
+    }
   }
   data.items = newItems;
   return data;

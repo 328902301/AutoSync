@@ -6,7 +6,6 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
 #[General]
-bypass-tun = aliyun.example.com, quark.example.com, pikpak.example.com
 # 要开MPV的话必须添加
 force-http-engine-hosts = aliyun.example.com:0, quark.example.com:0, pikpak.example.com:0
 

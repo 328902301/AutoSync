@@ -774,7 +774,9 @@ function title_random(num){
     5:"今日宜：吃饭饭  忌：减肥",
     6:"躺平中，等放假",
     7:"只有摸鱼才是赚老板的钱",
-    8: "小乌龟慢慢爬"
+    8: nowlunar,
+    9: nowsolar,
+    10: "小乌龟慢慢爬"
   };
   return num==0?"节日快乐，万事大吉":dic[r]
 }

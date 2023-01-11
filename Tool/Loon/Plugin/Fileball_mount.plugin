@@ -11,13 +11,13 @@ force-http-engine-hosts = aliyun.example.com:0, quark.example.com:0, pikpak.exam
 
 [Script]
 # 阿里云盘挂载
-http-request ^http:\/\/aliyun\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_aliyundrive.js, requires-body=true, tag = 阿里云盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
+http-request ^http:\/\/aliyun\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_aliyundrive.js, request-body=true, tag = 阿里云盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
 # 夸克网盘挂载
-http-request ^http:\/\/quark\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_quark.js, requires-body=true, tag = 夸克网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
+http-request ^http:\/\/quark\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_quark.js, request-body=true, tag = 夸克网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
 # PikPak网盘挂载
-http-request ^http:\/\/pikpak\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_pikpak.js, requires-body=true, tag = PikPak网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
+http-request ^http:\/\/pikpak\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_pikpak.js, request-body=true, tag = PikPak网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
 #[MITM]
 #hostname = aliyun.example.com, quark.example.com, pikpak.example.com

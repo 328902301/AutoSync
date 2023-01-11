@@ -19,5 +19,5 @@ http-response ^http:\/\/quark\.example\.com script-path=https://gitlab.com/lodep
 # PikPak网盘挂载
 http-response ^http:\/\/pikpak\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_pikpak.js, requires-body=true, tag = PikPak网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
-[MITM]
-hostname = aliyun.example.com, quark.example.com, pikpak.example.com
+#[MITM]
+#hostname = aliyun.example.com, quark.example.com, pikpak.example.com

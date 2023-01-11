@@ -7,7 +7,7 @@
 
 [General]
 # 要开MPV的话必须添加
-force-http-engine-hosts = aliyun.example.com:0，quark.example.com:0, pikpak.example.com:0
+force-http-engine-hosts = aliyun.example.com:0, quark.example.com:0, pikpak.example.com:0
 
 [Script]
 # 阿里云盘挂载
@@ -20,4 +20,4 @@ http-response ^http:\/\/quark\.example\.com script-path=https://gitlab.com/lodep
 http-response ^http:\/\/pikpak\.example\.com script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Fileball/Fileball_mount_pikpak.js, requires-body=true, tag = PikPak网盘挂载, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
 [MITM]
-hostname = aliyun.example.com， quark.example.com， pikpak.example.com
+hostname = aliyun.example.com, quark.example.com, pikpak.example.com

@@ -1,5 +1,5 @@
 # ======= 知乎 ======= #
-# 2023-01-11 09:23
+# 2023-01-11 20:20
 
 # 知乎的广告拦截，依赖于拦截 118.89.204.198 和 2402:4e00:1200:ed00:0:9089:6dac:96b6 这两个地址的请求，迫使知乎 APP 回退到以 api.zhihu.com 请求数据，才能进行 MITM
 
@@ -74,7 +74,7 @@
 ^https:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
 # 回答信息流 - 移除黑名单用户的回答、去除广告
-^https?:\/\/api\.zhihu\.com\/next-data url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
+^https?:\/\/api\.zhihu\.com\/next-data url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
 # 回答页底部评论摘要 - 移除黑名单用户发表的评论
 ^https:\/\/www\.zhihu\.com\/api\/v4\/comment_v5\/answers\/\d+\/abstract_comment\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js

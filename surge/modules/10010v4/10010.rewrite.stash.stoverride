@@ -14,13 +14,13 @@ http:
       timeout: 60
       # debug: true
 
-# tiles:
-#   - name: "联通余量(v4)"
-#     interval: 300
-#     title: "联通余量"
-#     content: ""
-#     icon: "arrow.up.arrow.down.circle"
-#     backgroundColor: "#663399"
+tiles:
+  - name: "联通余量(v4)"
+    interval: 300
+    title: "联通余量"
+    content: ""
+    icon: "arrow.up.arrow.down.circle"
+    backgroundColor: "#663399"
 
 cron:
   script:

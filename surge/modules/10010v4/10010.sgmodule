@@ -2,9 +2,15 @@
 #!desc=新版测试中 非群内用户勿用 https://t.me/zhetengsha_group
 
 [Script]
-联通余量(v4) = type=cron,cronexp=*/5 * * * *,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js
+10010v4-cron = type=cron,cronexp=*/5 * * * *,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js
 
-联通余量(v4)接口 = type=http-request,pattern=^https?:\/\/10010v4\.com,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,requires-body=false,max-size=0,timeout=60
+10010v4-request = type=http-request,pattern=^https?:\/\/10010v4\.com,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,requires-body=false,max-size=0,timeout=60
+
+# Panel
+10010v4-panel = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
 
 [MITM]
 hostname = %APPEND% 10010v4.com
+
+[Panel]
+10010v4-panel = script-name=10010v4-panel,update-interval=300

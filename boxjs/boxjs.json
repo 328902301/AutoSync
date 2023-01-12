@@ -667,6 +667,7 @@
       "descs_html": [
         "<a href=\"https://github.com/xream/scripts/tree/main/surge/modules/10010v4\">查看文档</a>",
         "<a onClick=\"window.location.reload(true);\"><b style='color: yellow'>点此刷新</b></a>",
+        "<h4 style='color: red'>因为数据会覆盖 请务必先刷新 再修改 再保存</h4>",
         "<b style='color: green'>登录方式一</b>",
         "1. 填写手机号, 保存, 执行发送验证码",
         "2. 填写验证码, 保存, 执行用验证码登录",
@@ -675,8 +676,8 @@
         "仅填写手机号, 服务密码, appId. 保存. 以后即可自动登录",
         "<br/>",
         "<b style='color: green'>额外的配置:</b>",
-        "<b style='color: red'>在完成登录并执行成功一次后</b>",
-        "1. <a href=\"https://10010v4.zhetengsha.eu.org\">点此打开外部配置页</a>",
+        "<b style='color: red'>在完成登录并执行成功一次后 刷新</b>",
+        "1. <a href=\"https://10010v4.zhetengsha.eu.org\">然后点此打开外部配置页</a>",
         "2. 完成配置后 保存",
         "3. 返回此处 刷新",
         "4. 手动执行 查看结果"

@@ -372,12 +372,18 @@ async function parse({ body,cookie }) {
                   $.log(`[主副卡] 检测到主副卡数据`, viceCardlist.length)
                   if(viceCardlist.length <= 1){
                     $.log(`[主副卡] 仅一张卡 不处理`, viceCardlist.length)
-                 }else{
-                  const currentCard = viceCardlist.find(i => `${$.lodash_get(i, 'currentLoginFlag')}` === '1')
-                   $.log(`[主副卡] 找到当前卡`)
-                   $.log($.toStr(currentCard))
-                  use = $.lodash_get(currentCard, 'use')
-                 }
+                  }else{
+                    const currentCard = viceCardlist.find(i => `${$.lodash_get(i, 'currentLoginFlag')}` === '1')
+                    $.log(`[主副卡] 找到当前卡`)
+                    $.log($.toStr(currentCard))
+                    const currentCardUse = $.lodash_get(currentCard, 'use')
+                    if(currentCardUse){
+                      $.log(`[主副卡] 找到当前卡已用`, currentCardUse)
+                      use = currentCardUse
+                    } else {
+                      $.log(`[主副卡] 找到当前卡 但是无已用数据`, currentCardUse)
+                    }
+                  }
                 }
               use = parseNum(use)
               if(use< 0) use = 0

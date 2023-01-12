@@ -70,8 +70,8 @@ $.isRequest = () => typeof $request !== 'undefined'
 $.isResponse = () => typeof $response !== 'undefined'
 $.isPanel = () => $.isSurge() && typeof $input != 'undefined' && $.lodash_get($input, 'purpose') === 'panel'
 $.isTile = () => $.isStash() && typeof $script != 'undefined' && $.lodash_get($script, 'type') === 'tile'
-
-
+$.isV2p = () => typeof $evui !== 'undefined'
+$.isTermux = () => $.isNode() && process.env.TERMUX_VERSION
 
 let result = {}
 !(async () => {
@@ -677,8 +677,8 @@ async function notify(title, subt, desc, opts) {
   $.log(`[通知] 传入参数`, $.toStr({title, subt, desc, opts}))
   const bark = $.getdata(KEY_BARK)
   if (bark){
+    $.log(`读取到 Bark 设置, 将仅使用 Bark 通知`, bark)
     try {
-      $.log(`读取 Bark 设置: ${bark}`)
       let barkTitle = title
       $.log(`Bark 标题: ${barkTitle}`)
       barkTitle = encodeURIComponent(barkTitle)
@@ -710,10 +710,56 @@ async function notify(title, subt, desc, opts) {
       $.logErr(e)
       $.logErr($.toStr(e))
       $.msg(TITLE, `❌ Bark 请求失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
-      $.msg(`${title}`, subt, desc, opts)
+      $.msg(title, subt, desc, opts)
     }
   } else {
-    $.msg(title, subt, desc, opts)
+    $.log(`未读取到 Bark 设置`)
+    if ($.isNode()) {
+      $.log(`Node 环境 尝试加载 sendNotify`)
+      let notify
+      try {
+        const file = require('path').join(__dirname, 'sendNotify.js')
+        $.log(`sendNotify: ${file}`)
+        notify = require(file)
+        if (!notify.sendNotify) {
+          throw new Error('sendNotify 不存在')
+        }
+      } catch (e) {
+        $.logErr(e)
+        $.logErr($.toStr(e))
+      }
+      if (notify){
+        $.log(`Node 环境 将使用 sendNotify`)
+        try {
+          await notify.sendNotify(`${title}`, `${subt}\n${desc}`)
+        } catch (e) {
+          $.logErr(e)
+          $.logErr($.toStr(e))
+          $.msg(TITLE, `❌ sendNotify 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+          $.msg(title, subt, desc, opts)
+        }
+      } else if ($.isV2p()) {
+        $.log(`Node 环境, 无 sendNotify, 为 V2P 环境`)
+        $.msg(title, '', `${subt}\n${desc}`)
+      } else if ($.isTermux()) {
+        $.log(`Node 环境, 无 sendNotify, 为 Termux 环境, 将尝试使用 termux-notification`)
+        try {
+          const { execSync } = require('child_process')
+          console.log(execSync(`termux-notification -t "${title}" -c "${subtitle}\n${body}" --sound`,{encoding: 'utf8', timeout: 3 * 1000}))
+        } catch (e) {
+          $.logErr(e)
+          $.logErr($.toStr(e))
+          $.msg(TITLE, `❌ termux-notification 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+          $.msg(title, subt, desc, opts)
+        }
+      } else {
+        $.log(`Node 环境 发本地通知`)
+        $.msg(title, subt, desc, opts)
+      }
+    } else {
+      $.log(`非 Node 环境 发本地通知`)
+      $.msg(title, subt, desc, opts)
+    }
   }
 }
 function renderTpl(tpl = '', vars = []) {

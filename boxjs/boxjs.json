@@ -662,6 +662,180 @@
       ]
     },
     {
+      "id": "xream.10010v4",
+      "name": "联通余量(v4)",
+      "descs_html": [
+        "<a href=\"https://github.com/xream/scripts/tree/main/surge/modules/10010v4\">查看文档</a>",
+        "<a onClick=\"window.location.reload(true);\"><b style='color: yellow'>点此刷新</b></a>",
+        "<b style='color: green'>登录方式一</b>",
+        "1. 填写手机号, 保存, 执行发送验证码",
+        "2. 填写验证码, 保存, 执行用验证码登录",
+        "3. 先刷新, 再设置密码, 保存. 以后即可自动登录",
+        "<b style='color: green'>登录方式二(⚠️ 此方式可能被联通风控)</b>",
+        "仅填写手机号, 服务密码, appId. 保存. 以后即可自动登录",
+        "<br/>",
+        "<b style='color: green'>额外的配置:</b>",
+        "<b style='color: red'>在完成登录并执行成功一次后</b>",
+        "1. <a href=\"https://10010v4.zhetengsha.eu.org\">点此打开外部配置页</a>",
+        "2. 完成配置后 保存",
+        "3. 返回此处 刷新",
+        "4. 手动执行 查看结果"
+      ],
+      "keys": [
+        "@xream.10010v4.debug",
+        "@xream.10010v4.mobile",
+        "@xream.10010v4.password",
+        "@xream.10010v4.appId",
+        "@xream.10010v4.cookie",
+        "@xream.10010v4.token_online",
+        "@xream.10010v4.min_usage",
+        "@xream.10010v4.title",
+        "@xream.10010v4.subt",
+        "@xream.10010v4.desc",
+        "@xream.10010v4.bark",
+        "@xream.10010v4.config",
+        "@xream.10010v4.last",
+        "@xream.10010v4.pkgs"
+      ],
+      "author": "@xream",
+      "repo": "https://github.com/xream/scripts/tree/main/surge/modules/10010v4",
+      "scripts": [
+        {
+          "name": "发送验证码（填手机号, 保存, 执行）",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010_send_sms.js"
+        },
+        {
+          "name": "用验证码登录（填手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010_sms_sign.js"
+        },
+        {
+          "name": "手动执行查询（⚠️ 执行后 记得刷新）",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "@xream.10010v4.debug",
+          "name": "调试模式",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认不开启调试. 开启后将推送自动登录等信息"
+        },
+        {
+          "id": "@xream.10010v4.mobile",
+          "name": "手机号",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端登录手机号"
+        },
+        {
+          "id": "@xream.10010v4.code",
+          "name": "验证码(执行验证码登录才需要填)",
+          "placeholder": "",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "登录短信验证码"
+        },
+        {
+          "id": "@xream.10010v4.password",
+          "name": "服务密码",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端登录的服务密码"
+        },
+        {
+          "id": "@xream.10010v4.appId",
+          "name": "appId",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端 appId"
+        },
+        {
+          "id": "@xream.10010v4.cookie",
+          "name": "Cookie",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "Cookie"
+        },
+        {
+          "id": "@xream.10010v4.token_online",
+          "name": "tokenOnline",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "TokenOnline"
+        },
+        {
+          "id": "@xream.10010v4.min_usage",
+          "name": "最小用量通知阈值(单位 M) ",
+          "val": 0,
+          "type": "number",
+          "persistentHint": true,
+          "desc": "通知模板内的任一一项用量 >= 该数值时 才会通知. 例 [通用有限.用量] 表示这段时间内 有限的通用包的差额. 如果你要无变化时不通知, 这里可以设为 0.01"
+        },
+        {
+          "id": "@xream.10010v4.title",
+          "name": "通知标题模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: [套餐], 例: 流邦卡19元套餐. 变量看文档"
+        },
+        {
+          "id": "@xream.10010v4.subt",
+          "name": "通知副标题模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: [时长] 跳 [所有通用.用量] 免 [所有免流.用量], 例: 18分钟 跳 10M 免 10M. 变量看文档"
+        },
+        {
+          "id": "@xream.10010v4.desc",
+          "name": "通知正文模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: 通用剩 [通用有限.剩余] 免流剩 [免流有限.剩余], 例: 通用剩 5.03G 免流剩 26.35G. 变量看文档"
+        },
+        {
+          "id": "@xream.10010v4.bark",
+          "name": "使用 Bark 通知",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "[推送标题]/[推送内容]会被自动替换 形如 https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=10010&autoCopy=1&isArchive=1&icon=https%3A%2F%2Fraw.githubusercontent.com%2Fanker1209%2Ficon%2Fmain%2Fzglt.png&sound=shake&level=timeSensitive 具体看文档"
+        },
+        {
+          "id": "@xream.10010v4.pkgs",
+          "name": "包详情 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@xream.10010v4.last",
+          "name": "上次数据 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@xream.10010v4.config",
+          "name": "设置",
+          "val": "",
+          "type": "text"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/assets/icon.png",
+        "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/assets/icon.png"
+      ]
+    },
+    {
       "id": "xream.10010v3",
       "name": "联通余量(v3)",
       "descs_html": [

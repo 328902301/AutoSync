@@ -1,0 +1,34 @@
+name: 联通余量(v4)
+desc: 新版测试中 非群内用户勿用 https://t.me/zhetengsha_group
+
+http:
+  force-http-engine:
+    - "10010v4"
+  mitm:
+    - 10010v4.com
+  script:
+    - match: ^https?:\/\/10010v4\.json
+      name: "联通余量(v4)"
+      type: request
+      # require-body: true
+      timeout: 60
+      # debug: true
+
+# tiles:
+#   - name: "联通余量(v4)"
+#     interval: 300
+#     title: "联通余量"
+#     content: ""
+#     icon: "arrow.up.arrow.down.circle"
+#     backgroundColor: "#663399"
+
+cron:
+  script:
+    - name: "联通余量(v4)"
+      cron: "*/5 * * * *" # at every 5th minute
+      timeout: 60
+
+script-providers:
+  "联通余量(v4)":
+    url: https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js
+    interval: 86400

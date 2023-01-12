@@ -34,7 +34,7 @@ if($.isNode()) {
   const getdata = $.getdata
   $.getdata = key => {
     if($.isNode()) {
-      const val = process.env[key]
+      const val = process.env[`${key}`.replace(/\./g, '_')]
       if (!(val == null)){
         return val
       }

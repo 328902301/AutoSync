@@ -48,9 +48,11 @@ const resourcesConfig = {
   twresources: { name: '套外流量' },
 }
 
-const $ = new Env('10010v4', {dataFile: `10010v4${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`})
+const dataFile = `10010v4${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`
+const $ = new Env('10010v4', {dataFile})
 
 if($.isNode()) {
+  $.log(`[Node.js] dataFile`, dataFile)
   const getdata = $.getdata
   $.getdata = key => {
     if($.isNode()) {
@@ -124,7 +126,7 @@ async function main() {
    
   let needSign
   if (cookie) {
-    $.log(`🍪 [Cookie] 将尝试用 Cookie 查询`)
+    $.log(`🍪 [Cookie] 将尝试用 Cookie 查询`, mobile, appId, tokenOnline)
     try {
       result = await query({ cookie })
       // $.log(JSON.stringify(result, null, 2))
@@ -134,7 +136,7 @@ async function main() {
       if (`${e}`.includes('Cookie 无效')) {
         needSign = true
         if(debug){
-          await notify(TITLE, `查询信息`, `❌🍪 Cookie 无效 将尝试自动登录`)
+          await notify(TITLE, `查询余量`, `❌🍪 Cookie 无效 将尝试自动登录`)
         }
       } else {
         throw e
@@ -188,6 +190,7 @@ async function main() {
 // 查询余量
 async function query({ cookie }) {
   $.log(`🔛 [查询余量] 开始`)
+  $.log(`🍪 [Cookie]`, cookie)
   $.log(`[当前时间] ${new Date().toLocaleString('zh')}`)
   const res = await $.http.post({
     url: 'https://m.client.10010.com/servicequerybusiness/operationservice/queryOcsPackageFlowLeftContentRevisedInJune',
@@ -361,14 +364,26 @@ async function parse({ body,cookie }) {
               if(total< 0) total = 0
               let remain = parseNum($.lodash_get(detail, 'remain'))
               if(remain< 0) remain = 0
-              let use = parseNum($.lodash_get(detail, 'use'))
-              if(use< 0) use = 0
+              let use = $.lodash_get(detail, 'use')
               
+
+              const viceCardlist = $.lodash_get(detail, 'viceCardlist')
+                if(Array.isArray(viceCardlist)) {
+                  $.log(`[主副卡] 检测到主副卡数据`, viceCardlist.length)
+                  if(viceCardlist.length <= 1){
+                    $.log(`[主副卡] 仅一张卡 不处理`, viceCardlist.length)
+                 }else{
+                  const currentCard = viceCardlist.find(i => `${$.lodash_get(i, 'currentLoginFlag')}` === '1')
+                   $.log(`[主副卡] 找到当前卡`)
+                   $.log($.toStr(currentCard))
+                  use = $.lodash_get(currentCard, 'use')
+                 }
+                }
+              use = parseNum(use)
+              if(use< 0) use = 0
               let totalTxt = formatFlow(total, 2)
               let remainTxt = formatFlow(remain, 2)
               let useTxt = formatFlow(use, 2)
-      
-
 
               pkgs.push({ name, use, total, remain, useTxt, totalTxt, remainTxt,unlimited, id, endDate, type, addupItemCode, addUpItemName,feePolicyName, feePolicyId })
               // let last = pkgs[index-1]
@@ -598,6 +613,8 @@ async function sign({ mobile, password, appId }) {
 // 在线状态维护
 async function online({ tokenOnline, appId }) {
   $.log('🔛 [在线状态维护] 开始')
+  $.log('[TokenOnline]', tokenOnline)
+  $.log('[appId]', appId)
   const res = await $.http.post({
     url: 'https://m.client.10010.com/mobileService/onLine.htm',
     body: transParams({

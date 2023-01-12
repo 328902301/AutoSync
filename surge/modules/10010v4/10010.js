@@ -743,90 +743,94 @@ async function info({ cookie }) {
 // 通知
 async function notify(title, subt, desc, opts) {
   $.log(`[通知] 传入参数`, $.toStr({title, subt, desc, opts}))
-  const bark = $.getdata(KEY_BARK)
-  if (bark){
-    $.log(`读取到 Bark 设置, 将仅使用 Bark 通知`, bark)
-    try {
-      let barkTitle = title
-      $.log(`Bark 标题: ${barkTitle}`)
-      barkTitle = encodeURIComponent(barkTitle)
-      $.log(`编码后的 Bark 标题: ${barkTitle}`)
-      let barkContent = `${subt}\n${desc}`
-      $.log(`Bark 内容: ${barkContent}`)
-      barkContent = encodeURIComponent(barkContent)
-      $.log(`编码后的 Bark 内容: ${barkContent}`)
-      const url = bark.replace('[推送标题]', barkTitle).replace('[推送内容]', barkContent)
-      $.log(`开始 Bark 请求`)
-      $.log(url)
-      $.log('如果有问题 可以尝试在浏览器里打开上面这个链接看看是否正常')
-      const res = await $.http.get({ url })
-      // console.log(res)
-      const status = $.lodash_get(res, 'status')
-      $.log('↓ res status')
-      $.log(status)
-      let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
-      try {
-        body = JSON.parse(body)
-      } catch (e) {}
-      $.log('↓ res body')
-      $.log($.toStr(body))
-      const code = $.lodash_get(body, 'code')
-      if (`${code}` !== '200') {
-        throw new Error($.lodash_get(body, 'message') || `未知错误 ${status} ${code}`)
-      }
-    } catch (e) {
-      $.logErr(e)
-      $.logErr($.toStr(e))
-      $.msg(TITLE, `❌ Bark 请求失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
-      $.msg(title, subt, desc, opts)
-    }
+  if($.isTile() || $.isPanel() || $.isRequestData()){
+    $.log(`面板/请求 不发送通知`)
   } else {
-    $.log(`未读取到 Bark 设置`)
-    if ($.isNode()) {
-      $.log(`Node 环境 尝试加载 sendNotify`)
-      let notify
+    const bark = $.getdata(KEY_BARK)
+    if (bark){
+      $.log(`读取到 Bark 设置, 将仅使用 Bark 通知`, bark)
       try {
-        const file = require('path').join(__dirname, 'sendNotify.js')
-        $.log(`sendNotify: ${file}`)
-        notify = require(file)
-        if (!notify.sendNotify) {
-          throw new Error('sendNotify 不存在')
+        let barkTitle = title
+        $.log(`Bark 标题: ${barkTitle}`)
+        barkTitle = encodeURIComponent(barkTitle)
+        $.log(`编码后的 Bark 标题: ${barkTitle}`)
+        let barkContent = `${subt}\n${desc}`
+        $.log(`Bark 内容: ${barkContent}`)
+        barkContent = encodeURIComponent(barkContent)
+        $.log(`编码后的 Bark 内容: ${barkContent}`)
+        const url = bark.replace('[推送标题]', barkTitle).replace('[推送内容]', barkContent)
+        $.log(`开始 Bark 请求`)
+        $.log(url)
+        $.log('如果有问题 可以尝试在浏览器里打开上面这个链接看看是否正常')
+        const res = await $.http.get({ url })
+        // console.log(res)
+        const status = $.lodash_get(res, 'status')
+        $.log('↓ res status')
+        $.log(status)
+        let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
+        try {
+          body = JSON.parse(body)
+        } catch (e) {}
+        $.log('↓ res body')
+        $.log($.toStr(body))
+        const code = $.lodash_get(body, 'code')
+        if (`${code}` !== '200') {
+          throw new Error($.lodash_get(body, 'message') || `未知错误 ${status} ${code}`)
         }
       } catch (e) {
         $.logErr(e)
         $.logErr($.toStr(e))
-      }
-      if (notify){
-        $.log(`Node 环境 将使用 sendNotify`)
-        try {
-          await notify.sendNotify(`${title}`, `${subt}\n${desc}`)
-        } catch (e) {
-          $.logErr(e)
-          $.logErr($.toStr(e))
-          $.msg(TITLE, `❌ sendNotify 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
-          $.msg(title, subt, desc, opts)
-        }
-      } else if ($.isV2p()) {
-        $.log(`Node 环境, 无 sendNotify, 为 V2P 环境`)
-        $.msg(title, '', `${subt}\n${desc}`)
-      } else if ($.isTermux()) {
-        $.log(`Node 环境, 无 sendNotify, 为 Termux 环境, 将尝试使用 termux-notification`)
-        try {
-          const { execSync } = require('child_process')
-          console.log(execSync(`termux-notification -t "${title}" -c "${subtitle}\n${body}" --sound`,{encoding: 'utf8', timeout: 3 * 1000}))
-        } catch (e) {
-          $.logErr(e)
-          $.logErr($.toStr(e))
-          $.msg(TITLE, `❌ termux-notification 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
-          $.msg(title, subt, desc, opts)
-        }
-      } else {
-        $.log(`Node 环境 发本地通知`)
+        $.msg(TITLE, `❌ Bark 请求失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
         $.msg(title, subt, desc, opts)
       }
     } else {
-      $.log(`非 Node 环境 发本地通知`)
-      $.msg(title, subt, desc, opts)
+      $.log(`未读取到 Bark 设置`)
+      if ($.isNode()) {
+        $.log(`Node 环境 尝试加载 sendNotify`)
+        let notify
+        try {
+          const file = require('path').join(__dirname, 'sendNotify.js')
+          $.log(`sendNotify: ${file}`)
+          notify = require(file)
+          if (!notify.sendNotify) {
+            throw new Error('sendNotify 不存在')
+          }
+        } catch (e) {
+          $.logErr(e)
+          $.logErr($.toStr(e))
+        }
+        if (notify){
+          $.log(`Node 环境 将使用 sendNotify`)
+          try {
+            await notify.sendNotify(`${title}`, `${subt}\n${desc}`)
+          } catch (e) {
+            $.logErr(e)
+            $.logErr($.toStr(e))
+            $.msg(TITLE, `❌ sendNotify 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+            $.msg(title, subt, desc, opts)
+          }
+        } else if ($.isV2p()) {
+          $.log(`Node 环境, 无 sendNotify, 为 V2P 环境`)
+          $.msg(title, '', `${subt}\n${desc}`)
+        } else if ($.isTermux()) {
+          $.log(`Node 环境, 无 sendNotify, 为 Termux 环境, 将尝试使用 termux-notification`)
+          try {
+            const { execSync } = require('child_process')
+            console.log(execSync(`termux-notification -t "${title}" -c "${subtitle}\n${body}" --sound`,{encoding: 'utf8', timeout: 3 * 1000}))
+          } catch (e) {
+            $.logErr(e)
+            $.logErr($.toStr(e))
+            $.msg(TITLE, `❌ termux-notification 失败 将发送本地通知`, `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`)
+            $.msg(title, subt, desc, opts)
+          }
+        } else {
+          $.log(`Node 环境 发本地通知`)
+          $.msg(title, subt, desc, opts)
+        }
+      } else {
+        $.log(`非 Node 环境 发本地通知`)
+        $.msg(title, subt, desc, opts)
+      }
     }
   }
 }

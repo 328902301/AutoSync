@@ -10,8 +10,6 @@ const NAME = `10010v4`
 let TITLE = `联通余量`
 
 const KEY_DEBUG = `@${NAMESPACE}.${NAME}.debug`
-const KEY_START = `@${NAMESPACE}.${NAME}.start`
-const KEY_END = `@${NAMESPACE}.${NAME}.end`
 const KEY_APPID = `@${NAMESPACE}.${NAME}.appId`
 const KEY_MOBILE = `@${NAMESPACE}.${NAME}.mobile`
 const KEY_PASSWORD = `@${NAMESPACE}.${NAME}.password`
@@ -26,6 +24,8 @@ const KEY_SUBT = `@${NAMESPACE}.${NAME}.subt`
 const KEY_DESC = `@${NAMESPACE}.${NAME}.desc`
 const KEY_MIN_USAGE = `@${NAMESPACE}.${NAME}.min_usage`
 const KEY_BARK = `@${NAMESPACE}.${NAME}.bark`
+const KEY_START = `@${NAMESPACE}.${NAME}.start`
+const KEY_END = `@${NAMESPACE}.${NAME}.end`
 
 // 免流包 code
 const freeAddupItemCodes = ['40008']

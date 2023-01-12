@@ -146,14 +146,14 @@ let result = {}
       $.done({
         ...arg,
         title: `${$.lodash_get(result, 'title')}`,
-        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据时间: ${result.lastTime} 执行时间: ${result.endTime}`,
+        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据 ${result.lastTime} 执行 ${result.endTime}`,
       })
     } else if ($.isTile()) {
       $.log(`Stash Tile`, $.toStr(result))
       $.done({
         ...arg,
         title: `${$.lodash_get(result, 'title')}`,
-        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据时间: ${result.lastTime} 执行时间: ${result.endTime}`,
+        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据 ${result.lastTime} 执行 ${result.endTime}`,
       })
     } else {
       $.log('[result]')

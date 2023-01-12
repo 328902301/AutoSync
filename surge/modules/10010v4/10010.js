@@ -68,7 +68,11 @@ const resourcesConfig = {
 
 const dataFile = `10010v4${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`
 const $ = new Env('10010v4', {dataFile})
-
+// https://github.com/chavyleung/scripts/commit/515efc0f3fe57eb3b7c278cdf53a1f1cde77fd22
+// 临时修复
+if($.isShadowrocket()){
+  $.isSurge = () => true
+}
 if($.isNode()) {
   $.log(`[Node.js] dataFile`, dataFile)
   const getdata = $.getdata

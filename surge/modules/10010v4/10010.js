@@ -113,6 +113,14 @@ let result = {}
     let seconds = (end.getTime() - start.getTime()) / 1000
     let duration = formatDuration(seconds)
     let localeString = end.toLocaleString('zh')
+    let endTime = new Date().toTimeString().split(' ')[0]
+    let { time: lastTime } = $.getjson(KEY_LAST) || {}
+    if(lastTime){
+      lastTime = new Date(lastTime) .toTimeString().split(' ')[0]
+    }
+    result.lastTime = lastTime
+    result.endTime = endTime
+    $.log('[数据时间]', lastTime)
     $.log(`⌛ [脚本时长] ${duration}`)
     $.log(`🔚 [脚本结束] ${localeString}`)
     // $.setjson({ localeString, time: end.getTime(), seconds, duration  }, KEY_END)
@@ -138,14 +146,14 @@ let result = {}
       $.done({
         ...arg,
         title: `${$.lodash_get(result, 'title')}`,
-        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n执行时间: ${new Date().toTimeString().split(' ')[0]}`,
+        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据时间: ${result.lastTime} 执行时间: ${result.endTime}`,
       })
     } else if ($.isTile()) {
       $.log(`Stash Tile`, $.toStr(result))
       $.done({
         ...arg,
         title: `${$.lodash_get(result, 'title')}`,
-        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n执行时间: ${new Date().toTimeString().split(' ')[0]}`,
+        content: `${$.lodash_get(result, 'subt')}\n${$.lodash_get(result, 'desc')}\n数据时间: ${result.lastTime} 执行时间: ${result.endTime}`,
       })
     } else {
       $.log('[result]')

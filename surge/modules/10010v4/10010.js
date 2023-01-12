@@ -15,7 +15,7 @@ if (typeof __filename !== 'undefined') {
     console.log(`尝试从文件名称中读取 NAMESPACE: ${NAMESPACE}`)
   }
 }
-log(`NAMESPACE: ${NAMESPACE}`)
+console.log(`NAMESPACE: ${NAMESPACE}`)
 let TITLE = `联通余量${NAMESPACE==='xream'?'':`-${NAMESPACE}`}`
 
 const NAME = `10010v4`

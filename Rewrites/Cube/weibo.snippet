@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-01-09 20:10
+# 2023-01-12 12:46
 
 # 去除开屏广告 //sdkapp.uve.weibo.com, wbapp.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
@@ -18,6 +18,7 @@
 ^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\?taskType= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/profile\/me\?taskType= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/search\/container_timeline\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_timeline\?taskType= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/search\/finder\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/searchall\?gsid= url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js

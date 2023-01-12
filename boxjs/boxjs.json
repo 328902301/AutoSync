@@ -698,9 +698,10 @@
         "@xream.10010v4.subt",
         "@xream.10010v4.desc",
         "@xream.10010v4.bark",
-        "@xream.10010v4.config",
+        "@xream.10010v4.pkgs",
         "@xream.10010v4.last",
-        "@xream.10010v4.pkgs"
+        "@xream.10010v4.config",
+        "@xream.10010v4.vars"
       ],
       "author": "@xream",
       "repo": "https://github.com/xream/scripts/tree/main/surge/modules/10010v4",
@@ -831,6 +832,12 @@
         {
           "id": "@xream.10010v4.config",
           "name": "设置",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@xream.10010v4.vars",
+          "name": "变量",
           "val": "",
           "type": "text"
         }

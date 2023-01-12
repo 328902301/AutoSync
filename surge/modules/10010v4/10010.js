@@ -43,6 +43,7 @@ const KEY_MIN_USAGE = `@${NAMESPACE}.${NAME}.min_usage`
 const KEY_BARK = `@${NAMESPACE}.${NAME}.bark`
 const KEY_START = `@${NAMESPACE}.${NAME}.start`
 const KEY_END = `@${NAMESPACE}.${NAME}.end`
+const KEY_VARS = `@${NAMESPACE}.${NAME}.vars`
 
 // 免流包 code
 const freeAddupItemCodes = ['40008']
@@ -313,7 +314,11 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
       vars[`[${name}.剩余]`] = formatFlow(remainSum, 2)
       vars[`[${name}.总]`] = formatFlow(totalSum, 2)
       vars[`[${name}.用量]`] = formatFlow(remainDiff, 2)
-      vars[`[${name}.用量].diff`] = remainDiff
+
+      vars[`[${name}.已用].raw`] = useSum
+      vars[`[${name}.剩余].raw`] = remainSum
+      vars[`[${name}.总].raw`] = totalSum
+      vars[`[${name}.用量].raw`] = remainDiff
     }
     
     $.log('上次的 时间',new Date(time).toLocaleString('zh'))
@@ -343,7 +348,7 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
 
     const min_usage = $.getdata(KEY_MIN_USAGE) || 0
     const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
-    if (matches.find(i => vars[`${i}.diff`] >= min_usage * 1024)) {
+    if (matches.find(i => vars[`${i}.raw`] >= min_usage * 1024)) {
       $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
       await notify(title, subt, desc)
       $.log(`💾 保存 本次数据 为 上次数据`)
@@ -351,7 +356,8 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
     } else {
       $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
     }
-    return { title, subt, desc, pkgs }
+    $.setjson(vars, KEY_VARS)
+    return { title, subt, desc, vars }
   }
 }
 // 处理余量数据

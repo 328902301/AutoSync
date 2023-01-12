@@ -10,7 +10,7 @@
 
 ## Surge
 
-[https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.sgmodule](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.sgmodule)
+使用模块 [https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.sgmodule](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.sgmodule)
 
 ## Shadowrocket
 
@@ -18,7 +18,7 @@
 
 ## Stash
 
- 使用覆写 [https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.rewrite.stash.stoverride](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.rewrite.stash.stoverride)
+ 使用覆写 [https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.rewrite.stash.stoverride](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.rewrite.stash.stoverride)
 
 ## 其他客户端懒得弄
 

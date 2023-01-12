@@ -7,7 +7,7 @@ http:
   mitm:
     - 10010v4.com
   script:
-    - match: ^https?:\/\/10010v4\.json
+    - match: ^https?:\/\/10010v4\.com
       name: "联通余量(v4)"
       type: request
       # require-body: true

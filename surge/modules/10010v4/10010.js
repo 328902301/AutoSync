@@ -1,5 +1,5 @@
-// cron "*/5 * * * *" script-path=10010v4.js,tag=联通余量(v4)
-// const $ = new Env('联通余量(v4)')
+// cron "*/5 * * * *" script-path=10010v4.js,tag=联通余量v4-查询
+// const $ = new Env('联通余量v4-查询')
 
 //#region JSEncrypt
 // prettier-ignore

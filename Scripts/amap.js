@@ -1,4 +1,4 @@
-// 2023-01-13 10:08
+// 2023-01-13 10:24
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -18,7 +18,7 @@ if (url.includes("/msgbox/pull")) {
       );
     }
     // 高德地图-首页消息
-    if (obj.data.pull3.msgs) {
+    if (obj.data?.pull3.msgs) {
       obj.data.pull3.msgs = [];
     }
   } else if (url.includes("/shield/dsp/profile/index/nodefaas")) {

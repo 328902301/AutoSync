@@ -1,11 +1,11 @@
-// 2023-01-13 11:12
+// 2023-01-13 11:10
 
 if (!$response.body) $done({});
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
 if (obj.data) {
-  if (url.includes("/faas/amap-navigation/main-page?")) {
+  if (url.includes("/faas/amap-navigation/main-page")) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter(

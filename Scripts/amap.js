@@ -1,4 +1,4 @@
-// 2023-01-13 09:14
+// 2023-01-13 09:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -14,7 +14,8 @@ if (url.includes("/msgbox/pull")) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter(
-        (item) => item.dataKey === "LoginCard");
+        (item) => item.dataKey === "LoginCard"
+      );
     }
     // } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
     //   // 高德地图-首页消息
@@ -26,7 +27,8 @@ if (url.includes("/msgbox/pull")) {
     // 高德地图-我的
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter(
-        (item) => item.dataKey === "MyOrderCard");
+        (item) => item.dataKey === "MyOrderCard"
+      );
     }
   } else if (url.includes("/shield/search/new_hotword")) {
     // 高德地图-搜索框

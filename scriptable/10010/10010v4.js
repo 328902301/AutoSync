@@ -31,7 +31,7 @@ class Widget extends Base {
         const res = await req.loadJSON()
         console.log(res)
         const detail = res.vars
-        return JSON.parse(detail)
+        return detail
       } catch (e) {
         console.error(e)
       }

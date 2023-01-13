@@ -16,7 +16,7 @@ if (obj.data) {
     // 高德地图-打车
     delete obj.data.banner;
     delete obj.data.bubble;
-    delete obj.data.icon;
+    // delete obj.data.icon;
     delete obj.data.popup;
     delete obj.data.tips;
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {

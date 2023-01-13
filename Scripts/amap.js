@@ -1,4 +1,4 @@
-// 2023-01-13 16:08
+// 2023-01-13 16:18
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -28,10 +28,10 @@ if (obj.data) {
     }
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近
-    delete obj.data.activity;
-    delete obj.data.commodity_rec;
-    delete obj.data.coupon;
-    // delete obj.data.scene;
+    delete obj.data.activity; // 横版推广
+    delete obj.data.commodity_rec; // 超值套餐
+    delete obj.data.coupon; // 右下角广告
+    // delete obj.data.scene; // 附近二级菜单
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 高德地图-开屏广告
     if (obj.data.ad) {

@@ -152,7 +152,7 @@ ${HeaderRewrite}
 ${MapLocal}
 ${MITM}`.replace(/\;/g, "#");
 
-  $done({ response: { status: 200, body: body } });
+  $done({ status: "HTTP/1.1 200 OK", body: body });
 })().catch((e) => {
   $notification.post(`${e}`, "", "");
   $done();
@@ -160,7 +160,7 @@ ${MITM}`.replace(/\;/g, "#");
 
 function http(req) {
   return new Promise((resolve, reject) =>
-    $httpClient.get(req, (err, resp, data) => {
+    $task.fetch(req, (err, resp, data) => {
       resolve(data);
     })
   );

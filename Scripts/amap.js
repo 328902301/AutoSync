@@ -1,4 +1,4 @@
-// 2023-01-13 12:50
+// 2023-01-13 15:58
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -26,6 +26,11 @@ if (obj.data) {
         (item) => item.dataKey === "MyOrderCard"
       );
     }
+  } else if (url.includes("/shield/search/nearbyrec_smart")) {
+    delete obj.data.activity;
+    delete obj.data.commodity_rec;
+    delete obj.data.coupon;
+    delete obj.data.scene;
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 高德地图-开屏广告
     if (obj.data.ad) {

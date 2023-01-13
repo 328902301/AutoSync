@@ -1,4 +1,4 @@
-// 2023-01-11 09:02
+// 2023-01-13 09:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -13,9 +13,9 @@ if (url.includes("/msgbox/pull")) {
   if (url.includes("/faas/amap-navigation/main-page")) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
-      obj.data.cardList = obj.data.cardList.filter((item) => {
-        return item.dataKey === "LoginCard";
-      });
+      obj.data.cardList = obj.data.cardList.filter(
+        (item) => item.dataKey === "LoginCard"
+      );
     }
     // } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
     //   // 高德地图-首页消息
@@ -26,9 +26,9 @@ if (url.includes("/msgbox/pull")) {
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
     // 高德地图-我的
     if (obj.data.cardList) {
-      obj.data.cardList = obj.data.cardList.filter((item) => {
-        return (item.dataKey === "MyOrderCard");
-      });
+      obj.data.cardList = obj.data.cardList.filter(
+        (item) => item.dataKey === "MyOrderCard"
+      );
     }
   } else if (url.includes("/shield/search/new_hotword")) {
     // 高德地图-搜索框

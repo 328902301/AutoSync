@@ -17,19 +17,14 @@ if (url.includes("/json/listpage/news") || url.includes("/json/newslist/news")) 
 } else if (url.includes("/api/news/newslistpageget")) {
   // IT之家-mobileWeb
   if (obj.Result) {
-    obj.Result = obj.Result.filter((r) =>
-      r.NewsTips.every((t) => t.TipName !== "广告")
-    );
+    obj.Result = obj.Result.filter((r) => r.NewsTips.every((t) => t.TipName !== "广告"));
   }
 } else if (url.includes("/api/news/index") || url.includes("/api/topmenu/getfeeds")) {
   // IT之家-newAppFeed
   let list = obj.data.list;
   const newList = [];
   for (const item of list) {
-    if (
-      item.feedContent.smallTags &&
-      item.feedContent.smallTags.some((s) => s.text === "广告")
-    ) {
+    if (item.feedContent.smallTags && item.feedContent.smallTags.some((s) => s.text === "广告")) {
       continue;
     }
     if (item.feedContent.focusNewsData) {

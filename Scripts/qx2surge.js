@@ -87,10 +87,7 @@ let newName = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
             let op = x.match(/\sresponse-header/) ? "http-response " : "";
             if (x.match(/\$1\$2/)) {
               HeaderRewrite.push(
-                x.replace(
-                  /(\^?http[^\s]+).+?n\)([^\:]+).+/,
-                  `${op}$1 header-del $2`
-                )
+                x.replace(/(\^?http[^\s]+).+?n\)([^\:]+).+/, `${op}$1 header-del $2`)
               );
             } else {
               HeaderRewrite.push(
@@ -110,17 +107,12 @@ let newName = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
           MapLocal.push(x.replace(/(\^?http[^\s]+).+(http.+)/, '$1 data="$2"'));
           break;
         case "hostname":
-          MITM = x.replace(
-            /hostname\s?=(.*)/,
-            `[MITM]\nhostname = %APPEND% $1`
-          );
+          MITM = x.replace(/hostname\s?=(.*)/, `[MITM]\nhostname = %APPEND% $1`);
           break;
         default:
           if (type.match("url ")) {
             z[y - 1]?.match("#") && URLRewrite.push(z[y - 1]);
-            URLRewrite.push(
-              x.replace(/(\^?http[^\s]+).+(302|307).+(http.+)/, "$1 $3 $2")
-            );
+            URLRewrite.push(x.replace(/(\^?http[^\s]+).+(302|307).+(http.+)/, "$1 $3 $2"));
           } else {
             z[y - 1]?.match("#") && script.push(z[y - 1]);
             script.push(
@@ -136,11 +128,9 @@ let newName = "#!name= " + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || "无名";
 
   script = (script[0] || "") && `[Script]\n${script.join("\n")}`;
 
-  URLRewrite =
-    (URLRewrite[0] || "") && `[URL Rewrite]\n${URLRewrite.join("\n")}`;
+  URLRewrite = (URLRewrite[0] || "") && `[URL Rewrite]\n${URLRewrite.join("\n")}`;
 
-  HeaderRewrite =
-    (HeaderRewrite[0] || "") && `[Header Rewrite]\n${HeaderRewrite.join("\n")}`;
+  HeaderRewrite = (HeaderRewrite[0] || "") && `[Header Rewrite]\n${HeaderRewrite.join("\n")}`;
 
   MapLocal = (MapLocal[0] || "") && `[MapLocal]\n${MapLocal.join("\n")}`;
 

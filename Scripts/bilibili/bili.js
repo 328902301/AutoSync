@@ -113,13 +113,7 @@ if (obj.data) {
             }
           } else if (
             cardType === "cm_v2" &&
-            [
-              "ad_web_s",
-              "ad_av",
-              "ad_web_gif",
-              "ad_player",
-              "ad_inline_3d"
-            ].includes(cardGoto)
+            ["ad_web_s", "ad_av", "ad_web_gif", "ad_player", "ad_inline_3d"].includes(cardGoto)
           ) {
             // ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告 ad_inline_3d 上方大的视频3d广告
             return false;

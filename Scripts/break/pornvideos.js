@@ -18,5 +18,6 @@ https://github.com/yqc007/QuantumultX/blob/master/PornVideosCrack.js
 hostname = zjgeo.eqobc.com, xnour.xonap.com, opzzy.kefsww.com, tqrbq.mpckv.com
 *******************************/
 
-var hausd0rff = $request['\x75\x72\x6c']['\x72\x65\x70\x6c\x61\x63\x65'](/_\d+\./g, "\x2e");
-$done({url: hausd0rff});
+var hausd0rff = $request["\x75\x72\x6c"]["\x72\x65\x70\x6c\x61\x63\x65"](/_\d+\./g, "\x2e");
+
+$done({ url: hausd0rff });

@@ -7,28 +7,30 @@ hostname = zj.haier.net
 */
 
 let obj = JSON.parse($response.body);
+
 obj = {
-  "retCode" : "00000",
-  "data" : {
-    "resource" : [
+  retCode: "00000",
+  data: {
+    resource: [
       {
-        "id" : 0,
-        "deviceTypeIndex" : "",
-        "resUrl" : "",
-        "resType" : "configAPP",
-        "resourceType" : "1",
-        "resId" : "",
-        "typeId" : "",
-        "directionalBetaType" : "",
-        "hideStatusBar" : "",
-        "prodNo" : "",
-        "md5" : "",
-        "model" : "",
-        "name" : "servicePage",
-        "resVersion" : ""
+        id: 0,
+        deviceTypeIndex: "",
+        resUrl: "",
+        resType: "configAPP",
+        resourceType: "1",
+        resId: "",
+        typeId: "",
+        directionalBetaType: "",
+        hideStatusBar: "",
+        prodNo: "",
+        md5: "",
+        model: "",
+        name: "servicePage",
+        resVersion: ""
       }
     ]
   },
-  "retInfo" : "操作成功"
-}
+  retInfo: "操作成功"
+};
+
 $done({ body: JSON.stringify(obj) });

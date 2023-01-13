@@ -18,7 +18,7 @@ appstore下载，https:\/\/apps.apple.com\/cn\/app\/%E7%94%B5%E5%AD%90%E8%AF%B7%
 
 var body = $response.body;
 var url = $request.url;
-const path1 = '\/users\/info';
+const path1 = "/users/info";
 let obj = JSON.parse(body);
 
 if (url.indexOf(path1) != -1) {
@@ -27,4 +27,4 @@ if (url.indexOf(path1) != -1) {
   body = JSON.stringify(obj);
 }
 
-$done({body});
+$done({ body });

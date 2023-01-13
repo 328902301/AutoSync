@@ -5,7 +5,7 @@
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
 // 主要的选项配置
 const mainConfig = {
-  blockIds: [],	//屏蔽的用户id列表
+  blockIds: [], //屏蔽的用户id列表
   modifyMenus: true, // 编辑上下文菜单
   removeExtendInfo: true, // 删除拓展卡片
   removeFollow: true, // 关注博主
@@ -231,13 +231,13 @@ function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter((c) =>
+      data.cards[0].card_group = data.cards[0].card_group.filter((c) => {
         !(
           c?.actionlog?.ext?.includes("ads_word") ||
           c?.itemid?.includes("t:51") ||
           c?.itemid?.includes("ads_word")
-        )
-      );
+        );
+      });
     }
   }
   return data;
@@ -449,7 +449,11 @@ function topicHandler(data) {
         let cGroup = c.card_group;
         if (!cGroup) continue;
         let cGroup0 = cGroup[0];
-        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) !== -1) {
+        if (
+          ["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(
+            cGroup0.itemid
+          ) !== -1
+        ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];

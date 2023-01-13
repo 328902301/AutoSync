@@ -1,4 +1,4 @@
-// 2023-01-13 18:11
+// 2023-01-13 17:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -8,9 +8,7 @@ if (obj.data) {
   if (url.includes("/faas/amap-navigation/main-page")) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
-      obj.data.cardList = obj.data.cardList.filter(
-        (item) => item.dataKey === "LoginCard"
-      );
+      obj.data.cardList = obj.data.cardList.filter((item) => item.dataKey === "LoginCard");
     }
   } else if (url.includes("/promotion-web/resource")) {
     // 高德地图-打车
@@ -22,16 +20,13 @@ if (obj.data) {
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
     // 高德地图-我的
     if (obj.data.cardList) {
-      obj.data.cardList = obj.data.cardList.filter(
-        (item) => item.dataKey === "MyOrderCard"
-      );
+      obj.data.cardList = obj.data.cardList.filter((item) => item.dataKey === "MyOrderCard");
     }
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近
     if (obj.data.modules) {
       obj.data.modules = obj.data.modules.filter(
-        (item) =>
-          item === "head" || item === "search_hot_words" || item === "feed_rec"
+        (item) => item === "head" || item === "search_hot_words" || item === "feed_rec"
       );
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {

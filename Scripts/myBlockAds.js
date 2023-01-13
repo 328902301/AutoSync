@@ -4,18 +4,39 @@ var body = $response.body;
 var url = $request.url;
 
 function getCube(p) {
-  if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(p)) return "嘀嗒出行-开屏广告";
-  if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(p)) return "多点-开屏广告";
-  if (/^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(p)) return "JavDB";
-  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(p)) return "京东-开屏广告";
-  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(p)) return "联享家-开屏广告";
-  if (/^https:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(p)) return "美团外卖-开屏广告";
-  if (/^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$/.test(p)) return "微博-开屏广告-sdkad";
-  if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(p)) return "微博-开屏广告-wbpullad";
-  if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(p)) return "小爱音箱-开屏广告";
-  if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(p)) return "小米商城-开屏广告";
-  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(p)) return "知乎-首页右下角悬浮框";
-  return "";
+  if (/^https:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?/.test(p)) {
+    return "嘀嗒出行-开屏广告";
+  }
+  if (/^https:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic/.test(p)) {
+    return "多点-开屏广告";
+  }
+  if (/^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(p)) {
+    return "JavDB";
+  }
+  if (/^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(p)) {
+    return "京东-开屏广告";
+  }
+  if (/^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/.test(p)) {
+    return "联享家-开屏广告";
+  }
+  if (/^https:\/\/wmapi\.meituan\.com\/api\/v7\/loadInfo/.test(p)) {
+    return "美团外卖-开屏广告";
+  }
+  if (/^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$/.test(p)) {
+    return "微博-开屏广告-sdkad";
+  }
+  if (/^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\?wm=/.test(p)) {
+    return "微博-开屏广告-wbpullad";
+  }
+  if (/^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert/.test(p)) {
+    return "小爱音箱-开屏广告";
+  }
+  if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(p)) {
+    return "小米商城-开屏广告";
+  }
+  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(p)) {
+    return "知乎-首页右下角悬浮框";
+  }
 }
 
 if (!body) {
@@ -60,7 +81,7 @@ if (!body) {
         if (obj.data.splash_ad) {
           obj.data.splash_ad.enabled = false;
           obj.data.splash_ad.overtime = 0;
-        };
+        }
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`JavDB, 出现异常: ` + error);
@@ -136,7 +157,7 @@ if (!body) {
         }
         body = JSON.stringify(obj) + "OK";
       } catch (error) {
-        console.log(`微博-开屏广告-sdkad, 出现异常: ` + error);        
+        console.log(`微博-开屏广告-sdkad, 出现异常: ` + error);
       }
       break;
     case "微博-开屏广告-wbpullad":

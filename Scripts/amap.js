@@ -1,15 +1,10 @@
-// 2023-01-13 10:54
+// 2023-01-13 11:10
 
 if (!$response.body) $done({});
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
-if (url.includes("/msgbox/pull")) {
-  // 高德地图-首页消息
-  if (obj.msgs) {
-    obj.msgs = [];
-  }
-} else if (obj.data) {
+if (obj.data) {
   if (url.includes("/faas/amap-navigation/main-page")) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
@@ -23,11 +18,6 @@ if (url.includes("/msgbox/pull")) {
       obj.data.cardList = obj.data.cardList.filter(
         (item) => item.dataKey === "MyOrderCard"
       );
-    }
-  } else if (url.includes("/shield/search/new_hotword")) {
-    // 高德地图-搜索框
-    if (obj.data.header_hotword) {
-      obj.data.header_hotword = [];
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 高德地图-开屏广告

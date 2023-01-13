@@ -1,4 +1,4 @@
-// 2023-01-13 09:48
+// 2023-01-13 10:08
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -6,7 +6,7 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("/msgbox/pull")) {
   // 高德地图-首页消息
-  if (obj?.msgs) {
+  if (obj.msgs) {
     obj.msgs = [];
   }
 } else if (obj.data) {
@@ -17,12 +17,11 @@ if (url.includes("/msgbox/pull")) {
         (item) => item.dataKey === "LoginCard"
       );
     }
-    } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
-      // 高德地图-首页消息
-      if (obj.data.pull3?.msgs) {
-        obj.data.pull3.msgs = [];
-      }
-  } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
+    // 高德地图-首页消息
+    if (obj.data.pull3.msgs) {
+      obj.data.pull3.msgs = [];
+    }
+  } else if (url.includes("/shield/dsp/profile/index/nodefaas")) {
     // 高德地图-我的
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter(
@@ -36,7 +35,7 @@ if (url.includes("/msgbox/pull")) {
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 高德地图-开屏广告
-    if (obj.data?.ad) {
+    if (obj.data.ad) {
       for (let item of obj.data.ad) {
         item.set.setting.display_time = 0;
         item.creative[0].start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00

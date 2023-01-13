@@ -1,4 +1,4 @@
-// 2023-01-13 16:06
+// 2023-01-13 16:08
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -28,7 +28,7 @@ if (obj.data) {
     }
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近
-    // delete obj.data.activity;
+    delete obj.data.activity;
     delete obj.data.commodity_rec;
     delete obj.data.coupon;
     // delete obj.data.scene;

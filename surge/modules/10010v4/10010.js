@@ -401,6 +401,9 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
   } else {
     $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
   }
+  vars.title = title
+  vars.subt = subt
+  vars.desc = desc
   $.setjson(vars, KEY_VARS)
   return { title, subt, desc, vars }
 

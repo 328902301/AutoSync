@@ -131,12 +131,7 @@ function removeLive(threadList) {
   let newThreadList = threadList;
   const beforeLength = threadList?.length;
   if (beforeLength) {
-    newThreadList = threadList.filter((item) => {
-      if (item.ala_info) {
-        return false;
-      }
-      return true;
-    });
+    newThreadList = threadList.filter((item) => !item.ala_info);
     if (beforeLength === newThreadList.length) {
     }
   }

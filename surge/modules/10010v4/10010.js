@@ -392,7 +392,8 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
 
   const min_usage = $.getdata(KEY_MIN_USAGE) || 0
   const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
-  if (matches.find(i => vars[`${i}.raw`] >= min_usage * 1024)) {
+  $.log(`[通知阈值] 最小用量通知阈值条件 ${min_usage}M`)
+  if (matches.find(i => vars[`${i}.raw`] >= min_usage)) {
     $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
     await notify(title, subt, desc)
     $.log(`💾 保存 本次数据 为 上次数据`)

@@ -17,7 +17,7 @@ if (obj.data) {
   } else if (url.includes("baike-api.smzdm.com/home_v3/list")) {
     // 什么值得买-百科广告
     obj.data.rows = obj.data.rows.filter((element) => {
-      return (!element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "");
+      return !element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "";
     });
   } else if (url.includes("haojia-api.smzdm.com/home/list")) {
     // 什么值得买-好价广告

@@ -20,4 +20,5 @@ hostname=bookapi.ellabook.cn
 ***********************************/
 
 body = $response.body.replace(/end_time":0/g, 'end_time":4071137036');
-$done({body});
+
+$done({ body });

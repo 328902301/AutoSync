@@ -27,13 +27,11 @@ let needProcessFlag = false;
 if (/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$/.test(url)) {
   const dynAllReplyType = biliRoot.lookupType("bilibili.app.dynamic.DynAllReply");
   let dynAllReplyObj = dynAllReplyType.decode(unGzipBody);
-
   // 去除推荐话题topicList
   if (dynAllReplyObj.topicList) {
     needProcessFlag = true;
     dynAllReplyObj.topicList = null;
   }
-
   // 去除最常访问upList
   if (dynAllReplyObj.upList) {
     needProcessFlag = true;
@@ -59,7 +57,6 @@ if (/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$/.test(url)) {
 if (/bilibili\.app\.view\.v1\.View\/View$/.test(url)) {
   const viewReplyType = biliRoot.lookupType("bilibili.app.view.ViewReply");
   let viewReplyObj = viewReplyType.decode(unGzipBody);
-
   // 去除up主推荐广告
   if (viewReplyObj.cms?.length) {
     let adCount = 0;
@@ -75,7 +72,6 @@ if (/bilibili\.app\.view\.v1\.View\/View$/.test(url)) {
     viewReplyObj.cms = [];
     if (adCount) needProcessFlag = true;
   }
-
   // 去除相关推荐广告
   if (viewReplyObj.relates?.length) {
     let adCount = 0;
@@ -88,7 +84,6 @@ if (/bilibili\.app\.view\.v1\.View\/View$/.test(url)) {
     });
     if (adCount) needProcessFlag = true;
   }
-
   // 去除up主推荐广告 弹幕
   const adsControlValue = viewReplyObj.cmConfig?.adsControl?.value;
   if (adsControlValue) {

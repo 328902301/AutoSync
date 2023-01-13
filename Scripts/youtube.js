@@ -10,12 +10,12 @@ class searchRes$Type extends MessageType{constructor(){super("searchRes",[{no:4,
 class playerRes$Type extends MessageType{constructor(){super("playerRes",[{no:7,name:"b1f7",kind:"message",jsonName:"b1f7",repeat:1,T:()=>b1f7}])}create(e){var n={b1F7:[]};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(7===l)a.b1F7.push(b1f7.internalBinaryRead(e,e.uint32(),r));else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){for(let t=0;t<e.b1F7.length;t++)b1f7.internalBinaryWrite(e.b1F7[t],n.tag(7,WireType.LengthDelimited).fork(),r).join();var t=r.writeUnknownFields;return!1!==t&&(1==t?UnknownFieldHandler.onWrite:t)(this.typeName,e,n),n}}const playerRes=new playerRes$Type;class b1f7$Type extends MessageType{constructor(){super("b1f7",[{no:84813246,name:"b2f84813246",kind:"message",jsonName:"b2f84813246",T:()=>b2f84813246}])}create(e){var n={};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(84813246===l)a.b2F84813246=b2f84813246.internalBinaryRead(e,e.uint32(),r,a.b2F84813246);else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){return e.b2F84813246&&b2f84813246.internalBinaryWrite(e.b2F84813246,n.tag(84813246,WireType.LengthDelimited).fork(),r).join(),!1!==(r=r.writeUnknownFields)&&(1==r?UnknownFieldHandler.onWrite:r)(this.typeName,e,n),n}}const b1f7=new b1f7$Type;class b2f84813246$Type extends MessageType{constructor(){super("b2f84813246",[{no:3,name:"v",kind:"scalar",T:5}])}create(e){var n={v:0};return globalThis.Object.defineProperty(n,MESSAGE_TYPE,{enumerable:!1,value:this}),void 0!==e&&reflectionMergePartial(this,n,e),n}internalBinaryRead(e,n,r,t){for(var a=null!=t?t:this.create(),i=e.pos+n;e.pos<i;){var[l,o]=e.tag();if(3===l)a.v=e.int32();else{var s=r.readUnknownField;if("throw"===s)throw new globalThis.Error(`Unknown field ${l} (wire type ${o}) for `+this.typeName);var d=e.skip(o);!1!==s&&(!0===s?UnknownFieldHandler.onRead:s)(this.typeName,a,l,o,d)}}return a}internalBinaryWrite(e,n,r){return 0!==e.v&&n.tag(3,WireType.Varint).int32(e.v),!1!==(r=r.writeUnknownFields)&&(1==r?UnknownFieldHandler.onWrite:r)(this.typeName,e,n),n}}const b2f84813246=new b2f84813246$Type;
 
 const url = $request.url;
-const isQuanX = typeof $task !== 'undefined';
+const isQuanX = typeof $task !== "undefined";
 const binaryBody = isQuanX ? new Uint8Array($response.bodyBytes) : $response.body;
 let needProcessFlag = false;
 let body;
 
-if (url.includes('/v1/browse')) {
+if (url.includes("/v1/browse")) {
   //console.log('browse');
   let browseMessage = browseRes.fromBinary(binaryBody);
   mapItems(browseMessage.n1F10?.n2F49399797?.n3F1);
@@ -27,7 +27,7 @@ if (url.includes('/v1/browse')) {
   }
 }
 
-if (url.includes('/v1/guide')) {
+if (url.includes("/v1/guide")) {
   //console.log('guide');
   let guideMessage = guideRes.fromBinary(binaryBody);
   mapItems(guideMessage.g1F4, true);
@@ -37,7 +37,7 @@ if (url.includes('/v1/guide')) {
   }
 }
 
-if (url.includes('/v1/next')) {
+if (url.includes("/v1/next")) {
   //console.log('next');
   let nextMessage = nextRes.fromBinary(binaryBody);
   mapItems(nextMessage.a1F7?.a2F51779735?.a3F1?.n2F49399797?.n3F1);
@@ -47,7 +47,7 @@ if (url.includes('/v1/next')) {
   }
 }
 
-if (url.includes('/v1/reel/reel_watch_sequence')) {
+if (url.includes("/v1/reel/reel_watch_sequence")) {
   //console.log('shorts');
   let shortsMessage = shortsRes.fromBinary(binaryBody);
   let shortsRawLength = shortsMessage.t1F2?.length;
@@ -60,7 +60,7 @@ if (url.includes('/v1/reel/reel_watch_sequence')) {
   }
 }
 
-if (url.includes('/v1/search')) {
+if (url.includes("/v1/search")) {
   //console.log('search');
   let searchMessage = searchRes.fromBinary(binaryBody);
   mapItems(searchMessage.s1F4?.n2F49399797?.n3F1);
@@ -71,7 +71,7 @@ if (url.includes('/v1/search')) {
   }
 }
 
-if (url.includes('/v1/player')) {
+if (url.includes("/v1/player")) {
   //console.log('player');
   let playerMessage = playerRes.fromBinary(binaryBody);
   if (playerMessage.b1F7?.length) {
@@ -84,9 +84,9 @@ if (url.includes('/v1/player')) {
 if (needProcessFlag) {
   //console.log('已处理');
   if (isQuanX) {
-    $done({bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset)});
+    $done({ bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset) });
   } else {
-    $done({body});
+    $done({ body });
   }
 } else {
   //console.log('无需处理');
@@ -116,8 +116,12 @@ function isVideo(o) {
   let adFlag = true;
   let ads = o?.n7F157152291 || o?.n6F62887855 || o?.n6F166487981;
   if (!ads) {
-    let type = parseEml(o?.n6F153515154?.n7F172660663) || parseEml(o?.n6F153515154?.n7F172660663?.n8F3);
-    adFlag = /_ads?\.|ads?_|video_display_full|image|shorts(?!_pivot_item)|shelf_header|cell_divider/.test(type);
+    let type =
+      parseEml(o?.n6F153515154?.n7F172660663) || parseEml(o?.n6F153515154?.n7F172660663?.n8F3);
+    adFlag =
+      /_ads?\.|ads?_|video_display_full|image|shorts(?!_pivot_item)|shelf_header|cell_divider/.test(
+        type
+      );
     // 用于排查遗留的广告类型
     // if (!/cell_divider|video_with|comment_thread|post_base/.test(type)) console.log(`${type}--${adFlag}`);
   }
@@ -133,6 +137,9 @@ function isNotUpload(o) {
 
 function parseEml(itemObject) {
   if (itemObject) {
-    return itemObject?.n8F2?.n9F183314536?.type || itemObject?.n8F1?.n9F168777401?.n10F3?.n11F172035250?.type;
+    return (
+      itemObject?.n8F2?.n9F183314536?.type ||
+      itemObject?.n8F1?.n9F168777401?.n10F3?.n11F172035250?.type
+    );
   }
 }

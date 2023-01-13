@@ -27,4 +27,4 @@ if (obj.result) {
 if (obj.activities) delete obj.activities;
 if (obj.myBackup) delete obj.myBackup;
 
-$done({body: JSON.stringify(obj)});
+$done({ body: JSON.stringify(obj) });

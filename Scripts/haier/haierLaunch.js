@@ -7,9 +7,11 @@ hostname = zj.haier.net
 */
 
 let obj = JSON.parse($response.body);
+
 obj = {
-  "retInfo" : "请求返回成功",
-  "retCode" : "00000",
-  "data" : null
-}
+  retInfo: "请求返回成功",
+  retCode: "00000",
+  data: null
+};
+
 $done({ body: JSON.stringify(obj) });

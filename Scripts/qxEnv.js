@@ -14,7 +14,7 @@ $response.statusCode = [
   "HTTP/1.1 301 Moved Permanently",
   "HTTP/1.1 302 Found",
   "HTTP/1.1 404 Not Found",
-  "HTTP/1.1 408 Request Timeout",
+  "HTTP/1.1 408 Request Timeout"
 ];
 $response.headers = [];
 

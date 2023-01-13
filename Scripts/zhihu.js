@@ -38,9 +38,9 @@ function modifyAppConfig() {
   try {
     if (!!$.response.body) {
       let obj = JSON.parse($.response.body);
-      obj["config"]["homepage_feed_tab"]["tab_infos"] = obj["config"][
-        "homepage_feed_tab"
-      ]["tab_infos"].filter((e) => {
+      obj["config"]["homepage_feed_tab"]["tab_infos"] = obj["config"]["homepage_feed_tab"][
+        "tab_infos"
+      ].filter((e) => {
         // 将活动标签设置为已过期
         if (e["tab_type"] === "activity_tab") {
           e["end_time"] = (new Date() - 120000).toString().slice(0, 10);
@@ -69,11 +69,8 @@ function modifyAppConfig() {
         obj["config"]["zhcnh_thread_sync"]["LocalDNSSetHostWhiteList"] = [];
         obj["config"]["zhcnh_thread_sync"]["isOpenLocalDNS"] = "0";
         obj["config"]["zhcnh_thread_sync"]["ZHBackUpIP_Switch_Open"] = "0";
-        obj["config"]["zhcnh_thread_sync"]["dns_ip_detector_operation_lock"] =
-          "1";
-        obj["config"]["zhcnh_thread_sync"][
-          "ZHHTTPSessionManager_setupZHHTTPHeaderField"
-        ] = "1";
+        obj["config"]["zhcnh_thread_sync"]["dns_ip_detector_operation_lock"] = "1";
+        obj["config"]["zhcnh_thread_sync"]["ZHHTTPSessionManager_setupZHHTTPHeaderField"] = "1";
       }
       response = { body: JSON.stringify(obj) };
     }
@@ -127,8 +124,7 @@ function unlockBlockedKeywords() {
         keywords = [];
       }
       let headers = {
-        "Cache-Control":
-          "no-cache, no-store, must-revalidate, private, max-age=0",
+        "Cache-Control": "no-cache, no-store, must-revalidate, private, max-age=0",
         Connection: "keep-alive",
         "Content-Type": "application/json;charset=utf-8",
         Pragma: "no-cache",
@@ -159,8 +155,7 @@ function unlockBlockedKeywords() {
       if (!!$.request.body) {
         // 构造 response headers
         let headers = {
-          "Cache-Control":
-            "no-cache, no-store, must-revalidate, private, max-age=0",
+          "Cache-Control": "no-cache, no-store, must-revalidate, private, max-age=0",
           Connection: "keep-alive",
           "Content-Type": "application/json;charset=utf-8",
           Pragma: "no-cache",
@@ -171,9 +166,7 @@ function unlockBlockedKeywords() {
           "x-cdn-provider": "tencent"
         };
         // 读取关键词
-        let keyword = decodeURIComponent($.request.body).match(
-          /keyword=(.*)/
-        )[1];
+        let keyword = decodeURIComponent($.request.body).match(/keyword=(.*)/)[1];
         let keywords = $.data.read(keywordBlockKey, null, userInfo.id);
         if (!keywords) {
           keywords = [];
@@ -237,8 +230,7 @@ function unlockBlockedKeywords() {
       });
       $.data.write(keywordBlockKey, keywords, userInfo.id);
       let headers = {
-        "Cache-Control":
-          "no-cache, no-store, must-revalidate, private, max-age=0",
+        "Cache-Control": "no-cache, no-store, must-revalidate, private, max-age=0",
         Connection: "keep-alive",
         "Content-Type": "application/json;charset=utf-8",
         Pragma: "no-cache",
@@ -281,19 +273,12 @@ function processUserInfo() {
     ) {
       const userInfo = {
         id: obj["id"],
-        is_vip: obj["vip_info"]["is_vip"]
-          ? obj["vip_info"]["is_vip"] !== undefined
-          : false
+        is_vip: obj["vip_info"]["is_vip"] ? obj["vip_info"]["is_vip"] !== undefined : false
       };
-      $.logger.debug(
-        `当前用户id：${obj["id"]}，是否为VIP：${obj["vip_info"]["is_vip"]}`
-      );
+      $.logger.debug(`当前用户id：${obj["id"]}，是否为VIP：${obj["vip_info"]["is_vip"]}`);
       $.data.write(currentUserInfoKey, userInfo);
       // 在APP显示VIP，仅自己可见，打开后才能使用屏蔽关键词解锁
-      if (
-        $.data.read("zhihu_settings_fake_vip") !== false &&
-        obj["vip_info"]["is_vip"] === false
-      ) {
+      if ($.data.read("zhihu_settings_fake_vip") !== false && obj["vip_info"]["is_vip"] === false) {
         obj["vip_info"]["is_vip"] = true;
         obj["vip_info"]["vip_type"] = 2;
         obj["vip_info"]["vip_icon"] = {
@@ -309,8 +294,7 @@ function processUserInfo() {
         obj["vip_info"]["entrance"] = {
           icon: {
             url: "https://pic3.zhimg.com/v2-5b7012c8c22fd520f5677305e1e551bf.png",
-            night_mode_url:
-              "https://pic4.zhimg.com/v2-e51e3252d7a2cb016a70879defd5da0b.png"
+            night_mode_url: "https://pic4.zhimg.com/v2-e51e3252d7a2cb016a70879defd5da0b.png"
           },
           title: "盐选会员 为你严选好内容",
           expires_day: "2099-12-31",
@@ -346,9 +330,7 @@ function processUserInfo() {
         response = { body: JSON.stringify(obj) };
       }
     } else {
-      $.logger.warning(
-        `没有获取到本次登录用户信息，如未对功能造成影响，请忽略此日志。`
-      );
+      $.logger.warning(`没有获取到本次登录用户信息，如未对功能造成影响，请忽略此日志。`);
     }
   } catch (err) {
     $.logger.error(`获取当前用户信息出现异常：${err}`);
@@ -365,36 +347,24 @@ function manageBlackUser() {
   let defaultBlockedUsers = {};
   let customBlockedUsers = $.data.read(blockedUsersKey, "", userInfo.id);
   customBlockedUsers =
-    typeof customBlockedUsers === "object" && !!customBlockedUsers
-      ? customBlockedUsers
-      : {};
+    typeof customBlockedUsers === "object" && !!customBlockedUsers ? customBlockedUsers : {};
   defaultAnswerBlockedUsers.forEach((element) => {
     customBlockedUsers[element] = "00000000000000000000000000000000";
     defaultBlockedUsers[element] = "00000000000000000000000000000000";
   });
-  $.logger.debug(
-    `当前用户id：${userInfo.id}，脚本黑名单：${JSON.stringify(
-      customBlockedUsers
-    )}`
-  );
+  $.logger.debug(`当前用户id：${userInfo.id}，脚本黑名单：${JSON.stringify(customBlockedUsers)}`);
   // 获取黑名单
   if ($.request.method === "GET") {
     try {
       // 加载黑名单首页时，清空历史黑名单，仅保留脚本默认黑名单
       if ($.request.url.indexOf("offset") < 0) {
         customBlockedUsers = defaultBlockedUsers;
-        $.logger.debug(
-          "脚本黑名单已清空，请滑动至黑名单末尾保证重新获取完成。"
-        );
-        $.notification.post(
-          "开始同步黑名单数据，请滑动至黑名单末尾，直至弹出“同步成功”的通知。"
-        );
+        $.logger.debug("脚本黑名单已清空，请滑动至黑名单末尾保证重新获取完成。");
+        $.notification.post("开始同步黑名单数据，请滑动至黑名单末尾，直至弹出“同步成功”的通知。");
       }
       let obj = JSON.parse($.response.body);
       if (!!obj["data"]) {
-        $.logger.debug(
-          `本次滑动获取的黑名单信息：${JSON.stringify(obj["data"])}`
-        );
+        $.logger.debug(`本次滑动获取的黑名单信息：${JSON.stringify(obj["data"])}`);
         obj["data"].forEach((element) => {
           if (element["name"] !== "[已重置]") {
             customBlockedUsers[element["name"]] = element["id"];
@@ -404,13 +374,10 @@ function manageBlackUser() {
         if (obj["paging"]["is_end"] === true) {
           $.notification.post(
             `同步黑名单数据成功！当前黑名单共${
-              Object.keys(customBlockedUsers).length -
-              defaultAnswerBlockedUsers.length
+              Object.keys(customBlockedUsers).length - defaultAnswerBlockedUsers.length
             }人。\n脚本内置黑名单${defaultAnswerBlockedUsers.length}人。`
           );
-          $.logger.debug(
-            `脚本黑名单内容：${JSON.stringify(customBlockedUsers)}。`
-          );
+          $.logger.debug(`脚本黑名单内容：${JSON.stringify(customBlockedUsers)}。`);
         }
       } else {
         $.logger.warning(`获取黑名单失败，接口响应不合法：${$.response.body}`);
@@ -426,24 +393,18 @@ function manageBlackUser() {
     try {
       let obj = JSON.parse($.response.body);
       if (obj.hasOwnProperty("name") && obj.hasOwnProperty("id")) {
-        $.logger.debug(
-          `当前需要加入黑名单的用户Id：${obj["id"]}，用户名：${obj["name"]}`
-        );
+        $.logger.debug(`当前需要加入黑名单的用户Id：${obj["id"]}，用户名：${obj["name"]}`);
         if (obj["id"]) {
           customBlockedUsers[obj["name"]] = obj["id"];
           $.data.write(blockedUsersKey, customBlockedUsers, userInfo.id);
           $.logger.debug(
-            `${
-              obj["name"]
-            }写入脚本黑名单成功，当前脚本黑名单数据：${JSON.stringify(
+            `${obj["name"]}写入脚本黑名单成功，当前脚本黑名单数据：${JSON.stringify(
               customBlockedUsers
             )}`
           );
           $.notification.post(`已将用户“${obj["name"]}”写入脚本黑名单。`);
         } else {
-          $.logger.error(
-            `${obj["name"]}写入脚本黑名单失败，没有获取到用户Id。`
-          );
+          $.logger.error(`${obj["name"]}写入脚本黑名单失败，没有获取到用户Id。`);
           $.notification.post(`将用户“${obj["name"]}”写入脚本黑名单失败！`);
         }
       } else {
@@ -479,9 +440,7 @@ function manageBlackUser() {
             }
           }
         } else {
-          $.logger.error(
-            "将用户移出脚本黑名单失败！\n建议从设置中刷新黑名单数据。"
-          );
+          $.logger.error("将用户移出脚本黑名单失败！\n建议从设置中刷新黑名单数据。");
           $.notification.post(
             `将用户移出脚本黑名单失败，没有获取到用户Id。\n建议从设置中刷新黑名单数据。`
           );
@@ -513,19 +472,13 @@ function autoInsertBlackList() {
       const userInfo = getUserInfo();
       let customBlockedUsers = $.data.read(blockedUsersKey, "", userInfo.id);
       customBlockedUsers =
-        typeof customBlockedUsers === "object" && !!customBlockedUsers
-          ? customBlockedUsers
-          : {};
+        typeof customBlockedUsers === "object" && !!customBlockedUsers ? customBlockedUsers : {};
       if (!customBlockedUsers[obj.name]) {
-        $.logger.debug(
-          `当前需要加入黑名单的用户Id：${obj["id"]}，用户名：${obj["name"]}`
-        );
+        $.logger.debug(`当前需要加入黑名单的用户Id：${obj["id"]}，用户名：${obj["name"]}`);
         customBlockedUsers[obj["name"]] = obj["id"];
         $.data.write(blockedUsersKey, customBlockedUsers, userInfo.id);
         $.logger.debug(
-          `${
-            obj["name"]
-          }写入脚本黑名单成功，当前脚本黑名单数据：${JSON.stringify(
+          `${obj["name"]}写入脚本黑名单成功，当前脚本黑名单数据：${JSON.stringify(
             customBlockedUsers
           )}`
         );
@@ -546,30 +499,16 @@ function autoInsertBlackList() {
 function removeMoments() {
   let response = null;
   try {
-    let obj = JSON.parse(
-      $.response.body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"')
-    );
+    let obj = JSON.parse($.response.body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"'));
     const user_info = getUserInfo();
     let customBlockedUsers = $.data.read(blockedUsersKey, "", user_info.id);
     customBlockedUsers = !!customBlockedUsers ? customBlockedUsers : {};
     let data;
 
-    const settings_remove_stream = $.data.read(
-      "zhihu_settings_moments_stream",
-      false
-    );
-    const settings_remove_recommend = $.data.read(
-      "zhihu_settings_moments_recommend",
-      false
-    );
-    const settings_remove_activity = $.data.read(
-      "zhihu_settings_moments_activity",
-      false
-    );
-    const settings_blocked_users = $.data.read(
-      "zhihu_settings_blocked_users",
-      false
-    );
+    const settings_remove_stream = $.data.read("zhihu_settings_moments_stream", false);
+    const settings_remove_recommend = $.data.read("zhihu_settings_moments_recommend", false);
+    const settings_remove_activity = $.data.read("zhihu_settings_moments_activity", false);
+    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", false);
 
     data = obj.data.filter((item) => {
       // 转发的想法是否含有黑名单用户
@@ -578,17 +517,13 @@ function removeMoments() {
         item.target &&
         item.target["origin_pin"] &&
         item.target["origin_pin"].author &&
-        typeof customBlockedUsers[item.target["origin_pin"].author.name] !=
-          "undefined";
+        typeof customBlockedUsers[item.target["origin_pin"].author.name] != "undefined";
       // 是否为流媒体
-      const isStream =
-        settings_remove_stream && item["target_type"] === "zvideo";
+      const isStream = settings_remove_stream && item["target_type"] === "zvideo";
       // 是否为推荐关注用户
-      const isRecommend =
-        settings_remove_recommend && item.type === "recommend_user_card_list";
+      const isRecommend = settings_remove_recommend && item.type === "recommend_user_card_list";
       // 是否为关注的问题有新动态
-      const isActivity =
-        settings_remove_activity && item.type === "message_activity_card";
+      const isActivity = settings_remove_activity && item.type === "message_activity_card";
       return !(isBlackUserPin || isStream || isRecommend || isActivity);
     });
     obj["data"] = data;
@@ -608,38 +543,22 @@ function removeRecommend() {
   let response = null;
   try {
     // 移除推荐列表中的想法
-    const settings_remove_pin = $.data.read(
-      "zhihu_settings_recommend_pin",
-      false
-    );
+    const settings_remove_pin = $.data.read("zhihu_settings_recommend_pin", false);
     // 移除推荐列表的流媒体
-    const settings_recommend_stream = $.data.read(
-      "zhihu_settings_recommend_stream",
-      false
-    );
+    const settings_recommend_stream = $.data.read("zhihu_settings_recommend_stream", false);
     // 移除推荐列表的文章
-    const settings_remove_article = $.data.read(
-      "zhihu_settings_remove_article",
-      false
-    );
+    const settings_remove_article = $.data.read("zhihu_settings_remove_article", false);
     // 屏蔽黑名单用户
-    const settings_blocked_users = $.data.read(
-      "zhihu_settings_blocked_users",
-      false
-    );
+    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", false);
     // 屏蔽关键词内容
-    const settings_blocked_keywords = $.data.read(
-      "zhihu_settings_blocked_keywords",
-      true
-    );
+    const settings_blocked_keywords = $.data.read("zhihu_settings_blocked_keywords", true);
     // 获取用户信息
     const user_info = getUserInfo();
 
     let keywords = $.data.read(keywordBlockKey, "", user_info.id);
     keywords = settings_blocked_keywords && !!keywords ? keywords : [];
     let customBlockedUsers = $.data.read(blockedUsersKey, "", user_info.id);
-    customBlockedUsers =
-      settings_blocked_users && !!customBlockedUsers ? customBlockedUsers : {};
+    customBlockedUsers = settings_blocked_users && !!customBlockedUsers ? customBlockedUsers : {};
 
     const newData = (element) => {
       const elementStr = JSON.stringify(element);
@@ -653,18 +572,13 @@ function removeRecommend() {
       // 是否为流媒体
       const isStream =
         isAd !== true &&
-        elementStr.search(
-          /"(type|style)+"\s?:\s?"(drama|zvideo|Video|BIG_IMAGE)+"/i
-        ) >= 0;
+        elementStr.search(/"(type|style)+"\s?:\s?"(drama|zvideo|Video|BIG_IMAGE)+"/i) >= 0;
       const removeStream = isStream && settings_recommend_stream;
       // 是否为想法
-      const isPin =
-        isStream !== true &&
-        elementStr.search(/"(type|style)+"\s?:\s?"pin"/i) >= 0;
+      const isPin = isStream !== true && elementStr.search(/"(type|style)+"\s?:\s?"pin"/i) >= 0;
       const removePin = isPin && settings_remove_pin;
       // 是否为文章
-      const isArticle =
-        elementStr.search(/"(type|style)+"\s?:\s?"article"/i) >= 0;
+      const isArticle = elementStr.search(/"(type|style)+"\s?:\s?"article"/i) >= 0;
       const removeArticle = isArticle && settings_remove_article;
       // 是否匹配脚本关键词过滤
       let matchKeyword = false;
@@ -672,16 +586,11 @@ function removeRecommend() {
         for (let i = 0; i < keywords.length; i++) {
           if (elementStr.search(keywords[i]) >= 0) {
             if ($.isDebug) {
-              let elementTitle =
-                element["common_card"]["feed_content"]["title"]["panel_text"];
-              let elementContent =
-                element["common_card"]["feed_content"]["content"]["panel_text"];
+              let elementTitle = element["common_card"]["feed_content"]["title"]["panel_text"];
+              let elementContent = element["common_card"]["feed_content"]["content"]["panel_text"];
               let actionUrl = "";
               try {
-                actionUrl =
-                  element["common_card"]["feed_content"]["title"]["action"][
-                    "intent_url"
-                  ];
+                actionUrl = element["common_card"]["feed_content"]["title"]["action"]["intent_url"];
               } catch {}
               $.logger.debug(
                 `匹配关键字：\n${keywords[i]}\n标题：\n${elementTitle}\n内容：\n${elementContent}`
@@ -705,26 +614,17 @@ function removeRecommend() {
           matchKeyword !== true &&
           settings_blocked_users &&
           customBlockedUsers &&
-          element["common_card"]["feed_content"]["source_line"]["elements"][1][
-            "text"
-          ]["panel_text"] in customBlockedUsers;
+          element["common_card"]["feed_content"]["source_line"]["elements"][1]["text"][
+            "panel_text"
+          ] in customBlockedUsers;
       } catch {
         isBlockedUser = false;
       }
-      return !(
-        isAd ||
-        removePin ||
-        removeArticle ||
-        removeStream ||
-        matchKeyword ||
-        isBlockedUser
-      );
+      return !(isAd || removePin || removeArticle || removeStream || matchKeyword || isBlockedUser);
     };
 
     // 修复number类型精度丢失
-    let obj = JSON.parse(
-      $.response.body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"')
-    );
+    let obj = JSON.parse($.response.body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"'));
 
     if (obj["data"].length > 0 && newData.length === 0) {
       $.notification.post("所有推荐内容都已被过滤，建议调整脚本过滤配置。");
@@ -749,10 +649,7 @@ function removeQuestions() {
     let customBlockedUsers = $.data.read(blockedUsersKey, "", userInfo.id);
     customBlockedUsers = !!customBlockedUsers ? customBlockedUsers : {};
     let obj = JSON.parse($.response.body);
-    const settingsBlockedUsers = $.data.read(
-      "zhihu_settings_blocked_users",
-      false
-    );
+    const settingsBlockedUsers = $.data.read("zhihu_settings_blocked_users", false);
     $.logger.debug(`当前黑名单列表: ${JSON.stringify(customBlockedUsers)}`);
     // 黑名单用户的回答Id
     let blackUserAnswersId = $.data.read(blackAnswersIdKey, []);
@@ -771,8 +668,7 @@ function removeQuestions() {
         } catch (ex) {
           $.logger.error(`获取回答列表用户名出现异常：${ex}`);
         }
-        const isBlackUser =
-          typeof customBlockedUsers[blackUserName] != "undefined";
+        const isBlackUser = typeof customBlockedUsers[blackUserName] != "undefined";
         const removeBlackUserAnswer = settingsBlockedUsers && isBlackUser;
         // 显示仅作者自己可见的回答，允许复制
         if ("target" in element) {
@@ -787,9 +683,7 @@ function removeQuestions() {
           blackUserAnswersId.includes(answerId) === false
         ) {
           blackUserAnswersId.push(answerId);
-          $.notification.debug(
-            `记录黑名单用户${blackUserName}的回答Id:${answerId}`
-          );
+          $.notification.debug(`记录黑名单用户${blackUserName}的回答Id:${answerId}`);
         }
       }
       obj.data = newData;
@@ -817,8 +711,7 @@ function modifyAnswer() {
 
     // 付费内容提醒
     if (
-      (html.indexOf("查看完整内容") >= 0 ||
-        html.indexOf("查看全部章节") >= 0) &&
+      (html.indexOf("查看完整内容") >= 0 || html.indexOf("查看全部章节") >= 0) &&
       html.indexOf("paid") >= 0
     ) {
       insertText =
@@ -881,8 +774,7 @@ function removeComment() {
         if (typeof obj.root != "undefined") {
           // 屏蔽黑名单用户的评论
           const rootUserName = obj.root.author.name;
-          const isBlackRootUser =
-            typeof customBlockedUsers[rootUserName] != "undefined";
+          const isBlackRootUser = typeof customBlockedUsers[rootUserName] != "undefined";
           if (isBlackRootUser === true) {
             obj.root.is_delete = true;
             obj.root.can_reply = false;
@@ -904,28 +796,22 @@ function removeComment() {
               replyUserName = comment["reply_to_author"].name;
             }
             const isSubComment = replyUserName !== "";
-            const isBlackCommentUser =
-              typeof customBlockedUsers[commentUserName] != "undefined";
-            const isBlackReplyUser =
-              typeof customBlockedUsers[replyUserName] != "undefined";
+            const isBlackCommentUser = typeof customBlockedUsers[commentUserName] != "undefined";
+            const isBlackReplyUser = typeof customBlockedUsers[replyUserName] != "undefined";
             if (isBlackCommentUser === true || isBlackReplyUser === true) {
               if (
                 isBlackCommentUser &&
                 !isSubComment &&
                 $.request.url.indexOf("root_comment") > 0
               ) {
-                $.notification.debug(
-                  `屏蔽黑名单用户“${commentUserName}”的主评论。`
-                );
+                $.notification.debug(`屏蔽黑名单用户“${commentUserName}”的主评论。`);
               } else if (
                 !isBlackCommentUser &&
                 isSubComment &&
                 !isBlackReplyUser &&
                 $.request.url.indexOf("child_comment") > 0
               ) {
-                $.notification.debug(
-                  `屏蔽黑名单用户“${commentUserName}”的子评论。`
-                );
+                $.notification.debug(`屏蔽黑名单用户“${commentUserName}”的子评论。`);
               } else if (
                 isBlackCommentUser &&
                 !isBlackReplyUser &&
@@ -970,16 +856,12 @@ function removeComment() {
                     ? childComment["reply_to_author"].name
                     : "";
                 const isChildBlackCommentUser =
-                  typeof customBlockedUsers[childCommentUserName] !=
-                  "undefined";
+                  typeof customBlockedUsers[childCommentUserName] != "undefined";
                 const isChildBlackReplyUser =
-                  typeof customBlockedUsers[childCommentReplyUserName] !=
-                  "undefined";
+                  typeof customBlockedUsers[childCommentReplyUserName] != "undefined";
                 if (isChildBlackCommentUser || isChildBlackReplyUser) {
                   if (isChildBlackCommentUser === true) {
-                    $.notification.debug(
-                      `屏蔽黑名单用户“${childCommentUserName}”的子评论。`
-                    );
+                    $.notification.debug(`屏蔽黑名单用户“${childCommentUserName}”的子评论。`);
                     blockCommentIdObj[childComment.id] = childCommentUserName;
                     childComment.is_delete = true;
                     childComment.can_reply = false;
@@ -991,9 +873,7 @@ function removeComment() {
                   }
 
                   if (isChildBlackReplyUser === true) {
-                    $.logger.debug(
-                      `修改前的子评论数据:\n${JSON.stringify(childComment)}`
-                    );
+                    $.logger.debug(`修改前的子评论数据:\n${JSON.stringify(childComment)}`);
                     childComment["reply_to_author"].name = "[黑名单用户]";
                     childComment["reply_to_author"].exposed_medal = {};
                     childComment["reply_to_author"].avatar_url =
@@ -1001,9 +881,7 @@ function removeComment() {
                     $.notification.debug(
                       `隐藏“${childCommentUserName}”回复黑名单用户“${childCommentReplyUserName}”的名称与头像。`
                     );
-                    $.logger.debug(
-                      `修改后的子评论数据:\n${JSON.stringify(childComment)}`
-                    );
+                    $.logger.debug(`修改后的子评论数据:\n${JSON.stringify(childComment)}`);
                   }
                 }
                 newChildComments.push(childComment);
@@ -1090,9 +968,7 @@ function removeHotListAds() {
       let obj = JSON.parse($.response.body);
       if ("data" in obj) {
         obj["data"] = obj["data"].filter((e) => {
-          return (
-            e["type"] === "hot_list_feed" || e["type"] === "hot_list_feed_video"
-          );
+          return e["type"] === "hot_list_feed" || e["type"] === "hot_list_feed_video";
         });
       }
       response = { body: JSON.stringify(obj) };
@@ -1115,11 +991,9 @@ function removeKeywordAds() {
       $.logger.debug(`预置关键字返回：${$.response.body}`);
       let obj = JSON.parse($.response.body);
       if (obj.hasOwnProperty("preset_words") && obj["preset_words"]["words"]) {
-        obj["preset_words"]["words"] = obj["preset_words"]["words"].filter(
-          (element) => {
-            return element["type"] !== "ad";
-          }
-        );
+        obj["preset_words"]["words"] = obj["preset_words"]["words"].filter((element) => {
+          return element["type"] !== "ad";
+        });
         response = { body: JSON.stringify(obj) };
       }
     }
@@ -1149,9 +1023,7 @@ function removeNextBlackUserAnswer() {
             element.ad_info = { data: "" };
             newData.push(element);
           } else {
-            $.notification.debug(
-              `屏蔽翻页过程中出现的黑名单用户回答Id:${element.id}`
-            );
+            $.notification.debug(`屏蔽翻页过程中出现的黑名单用户回答Id:${element.id}`);
           }
         });
         // 重新为答案排序
@@ -1185,15 +1057,9 @@ function modifyAnswersNextData() {
       let newData = [];
       obj.data.data.forEach((element) => {
         element["ad_info"] = { data: "" };
-        const isBlackUser =
-          typeof customBlockedUsers[element.data.author.name] != "undefined";
-        $.logger.debug(
-          `用户${element.data.author.name}是否在黑名单中：${isBlackUser}`
-        );
-        if (
-          $.data.read("zhihu_settings_blocked_users", false) === false ||
-          isBlackUser === false
-        ) {
+        const isBlackUser = typeof customBlockedUsers[element.data.author.name] != "undefined";
+        $.logger.debug(`用户${element.data.author.name}是否在黑名单中：${isBlackUser}`);
+        if ($.data.read("zhihu_settings_blocked_users", false) === false || isBlackUser === false) {
           newData.push(element);
         }
       });
@@ -1246,28 +1112,20 @@ function changeUserCredit() {
         response = modifyAppConfig();
         break;
       case $.data.read("zhihu_settings_app_conf", false) === true &&
-        /^https?:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?/.test(
-          $.request.url
-        ):
+        /^https?:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?/.test($.request.url):
         response = modifyMCloudConfig();
         break;
       // 修改用户盐值 - 仅当自定义盐值大于真实盐值时生效
-      case /^https?:\/\/api\.zhihu\.com\/user-credit\/basis/.test(
-        $.request.url
-      ):
+      case /^https?:\/\/api\.zhihu\.com\/user-credit\/basis/.test($.request.url):
         $.notification.debug("准备修改用户盐值");
         response = changeUserCredit();
         break;
       // 推荐页 - 移除黑名单用户发布的文章、去除广告，及自定义一些屏蔽项目
-      case /^https:\/\/api\.zhihu\.com\/topstory\/recommend\?/.test(
-        $.request.url
-      ):
+      case /^https:\/\/api\.zhihu\.com\/topstory\/recommend\?/.test($.request.url):
         response = removeRecommend();
         break;
       // 问题的回答列表 - 移除黑名单用户的回答、去除广告
-      case /^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+/.test(
-        $.request.url
-      ):
+      case /^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+/.test($.request.url):
         response = removeQuestions();
         break;
       // 回答信息流 - 移除黑名单用户的回答、去除广告
@@ -1276,9 +1134,7 @@ function changeUserCredit() {
         break;
       // 消息页 - 折叠官方消息、屏蔽营销消息
       case $.data.read("zhihu_settings_sys_msg", true) !== false &&
-        /^https?:\/\/api\.zhihu\.com\/notifications\/v3\/message/.test(
-          $.request.url
-        ):
+        /^https?:\/\/api\.zhihu\.com\/notifications\/v3\/message/.test($.request.url):
         response = removeMarketingMsg();
         break;
       // 评论页及子页面 - 去除黑名单用户发表的评论
@@ -1313,9 +1169,7 @@ function changeUserCredit() {
         break;
       // 黑名单增强 - 浏览黑名单用户信息时自动加入脚本黑名单
       case $.data.read("zhihu_settings_blocked_users", true) === true &&
-        /^https?:\/\/api\.zhihu\.com\/people\/((?!self).)*$/.test(
-          $.request.url
-        ):
+        /^https?:\/\/api\.zhihu\.com\/people\/((?!self).)*$/.test($.request.url):
         response = autoInsertBlackList();
         break;
       // 关注页 - 去广告
@@ -1324,23 +1178,17 @@ function changeUserCredit() {
         break;
       // 热榜页 - 去广告
       case $.data.read("zhihu_settings_hot_list", true) === true &&
-        /^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists(\?|\/)/.test(
-          $.request.url
-        ):
+        /^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists(\?|\/)/.test($.request.url):
         response = removeHotListAds();
         break;
       // 搜索页 - 去除预置广告
       case $.data.read("zhihu_settings_preset_words", true) === true &&
-        /^https?:\/\/api\.zhihu\.com\/search\/preset_words\?/.test(
-          $.request.url
-        ):
+        /^https?:\/\/api\.zhihu\.com\/search\/preset_words\?/.test($.request.url):
         response = removeKeywordAds();
         break;
       // 黑名单页 - 同步黑名单数据
       case $.data.read("zhihu_settings_blocked_users", false) !== false &&
-        /^https?:\/\/api\.zhihu\.com\/settings\/blocked_users/.test(
-          $.request.url
-        ):
+        /^https?:\/\/api\.zhihu\.com\/settings\/blocked_users/.test($.request.url):
         manageBlackUser();
         break;
       default:
@@ -1351,8 +1199,7 @@ function changeUserCredit() {
     // 屏蔽关键词解锁
     if (
       $.data.read("zhihu_settings_blocked_keywords", false) !== false &&
-      /^https?:\/\/api\.zhihu\.com\/feed-root\/block/.test($.request.url) ===
-        true
+      /^https?:\/\/api\.zhihu\.com\/feed-root\/block/.test($.request.url) === true
     ) {
       response = unlockBlockedKeywords(response);
     }

@@ -41,19 +41,19 @@ const weibor2 = /https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url=(.*)
 
 const oldurl = $request.url;
 let newurl = "";
-if (oldurl.indexOf("links.jianshu.com/go") != -1) {
-	newurl = decodeURIComponent(jianshur.exec(oldurl)[1]);
-} else if (oldurl.indexOf("www.jianshu.com/go") != -1) {
-	newurl = decodeURIComponent(jianshur2.exec(oldurl)[1]);
-} else if (oldurl.indexOf("link.zhihu.com/?target") != -1) {
-	newurl = decodeURIComponent(zhihur.exec(oldurl)[1].replace(/&source=.*/, ""));
-} else if (oldurl.indexOf("weibo.cn/sinaurl") != -1) {
-	newurl = decodeURIComponent(weibor.exec(oldurl)[3]);
-} else if (oldurl.indexOf("shop.sc.weibo.com/h5/jump/error") != -1) {
-	newurl = decodeURIComponent(weibor2.exec(oldurl)[2]);
-} else if (oldurl.indexOf("sinaurl.cn") != -1 || oldurl.indexOf("t.cn") != -1) {
-	let headers = $response.headers;
-	newurl = headers.Location;
+if (oldurl.indexOf("links.jianshu.com/go") !== -1) {
+  newurl = decodeURIComponent(jianshur.exec(oldurl)[1]);
+} else if (oldurl.indexOf("www.jianshu.com/go") !== -1) {
+  newurl = decodeURIComponent(jianshur2.exec(oldurl)[1]);
+} else if (oldurl.indexOf("link.zhihu.com/?target") !== -1) {
+  newurl = decodeURIComponent(zhihur.exec(oldurl)[1].replace(/&source=.*/, ""));
+} else if (oldurl.indexOf("weibo.cn/sinaurl") !== -1) {
+  newurl = decodeURIComponent(weibor.exec(oldurl)[3]);
+} else if (oldurl.indexOf("shop.sc.weibo.com/h5/jump/error") !== -1) {
+  newurl = decodeURIComponent(weibor2.exec(oldurl)[2]);
+} else if (oldurl.indexOf("sinaurl.cn") !== -1 || oldurl.indexOf("t.cn") !== -1) {
+  let headers = $response.headers;
+  newurl = headers.Location;
 }
 
 newurl = newurl.indexOf("http") == 0 ? newurl : "http://" + newurl;
@@ -61,8 +61,8 @@ const isQuanX = typeof $notify != "undefined";
 const newstatus = isQuanX ? "HTTP/1.1 302 Temporary Redirect" : 302;
 
 const noredirect = {
-	status: newstatus,
-	headers: {Location: newurl},
+  status: newstatus,
+  headers: { Location: newurl }
 };
 
 let resp = isQuanX ? noredirect : { response: noredirect };

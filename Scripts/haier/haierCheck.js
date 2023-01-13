@@ -7,16 +7,18 @@ hostname = zj.haier.net
 */
 
 let obj = JSON.parse($response.body);
+
 obj = {
-  "data" : [
+  data: [
     {
-      "startPage" : true
+      startPage: true
     },
     {
-      "popAd" : true
+      popAd: true
     }
   ],
-  "retCode" : "00000",
-  "retInfo" : "操作成功"
-}
+  retCode: "00000",
+  retInfo: "操作成功"
+};
+
 $done({ body: JSON.stringify(obj) });

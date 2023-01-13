@@ -1,4 +1,4 @@
-// 2023-01-13 16:48
+// 2023-01-13 16:50
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -30,9 +30,11 @@ if (obj.data) {
     // 高德地图-附近
     if (obj.data.modules) {
       obj.data.modules = obj.data.modules.filter((item) =>
-        item === "head" ||
-        item === "search_hot_words" ||
-        item === "feed_rec"
+        (
+          item === "head" ||
+          item === "search_hot_words" ||
+          item === "feed_rec"
+        )
       );
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {

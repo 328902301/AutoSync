@@ -30,9 +30,9 @@ if (obj.data) {
     // 高德地图-附近
     if (obj.data.modules) {
       obj.data.modules = obj.data.modules.filter(item =>
-        item === "head" || // 右下角广告
-        item === "search_hot_words" || // 不知道对应啥
-        item === "feed_rec" // 热词底下的活动推荐，如指南，0元领水果之类的
+        item === "head" ||
+        item === "search_hot_words" ||
+        item === "feed_rec"
       );
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {

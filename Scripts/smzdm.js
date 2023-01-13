@@ -16,18 +16,14 @@ if (obj.data) {
     });
   } else if (url.includes("baike-api.smzdm.com/home_v3/list")) {
     // 什么值得买-百科广告
-    obj.data.rows = obj.data.rows.filter((element) => {
-      return !element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === "";
-    });
+    obj.data.rows = obj.data.rows.filter(
+      (element) => !element.hasOwnProperty("ad_banner_id") || element.ad_banner_id === ""
+    );
   } else if (url.includes("haojia-api.smzdm.com/home/list")) {
     // 什么值得买-好价广告
-    let bigBanner = obj.data.banner.big_banner.filter((element) => {
-      return element.ad_banner_id === "";
-    });
+    let bigBanner = obj.data.banner.big_banner.filter((element) => element.ad_banner_id === "");
     obj.data.banner.big_banner = bigBanner;
-    let rows = obj.data.rows.filter((element) => {
-      return !element.hasOwnProperty("ad_banner_id");
-    });
+    let rows = obj.data.rows.filter((element) => !element.hasOwnProperty("ad_banner_id"));
     // 什么值得买 红包相关
     obj.data.banner.hongbao_banner = [];
     obj.data.banner.module_banner.hongbao = {};
@@ -42,15 +38,13 @@ if (obj.data) {
     let component = [];
     obj.data.component.forEach((element) => {
       if (element.zz_type === "banner") {
-        let bannerList = element.zz_content.filter((banner) => {
-          return banner.tag !== "广告";
-        });
+        let bannerList = element.zz_content.filter((banner) => banner.tag !== "广告");
         element.zz_content = bannerList;
         // 什么值得买 去除信息流中的广告
       } else if (element.zz_type === "list") {
-        let contentList = element.zz_content.filter((content) => {
-          return content.zz_content.model_type !== "ads";
-        });
+        let contentList = element.zz_content.filter(
+          (content) => content.zz_content.model_type !== "ads"
+        );
         element.zz_content = contentList;
         // 什么值得买 去除首页背景颜色
       } else if (element.zz_type === "circular_banner") {
@@ -69,14 +63,10 @@ if (obj.data) {
     obj.data.hongbao = {};
   } else if (url.includes("s-api.smzdm.com/sou/list_v10")) {
     // 什么值得买-搜索结果广告
-    obj.data.rows = obj.data.rows.filter((element) => {
-      return element.article_tag !== "广告";
-    });
+    obj.data.rows = obj.data.rows.filter((element) => element.article_tag !== "广告");
   } else if (url.includes("/user/vip/ajax_get_banner")) {
     // 什么值得买-会员权益中心banner广告
-    obj.data.big_banner = obj.data.big_banner.filter((element) => {
-      return element.logo_title !== "广告";
-    });
+    obj.data.big_banner = obj.data.big_banner.filter((element) => element.logo_title !== "广告");
   }
 }
 

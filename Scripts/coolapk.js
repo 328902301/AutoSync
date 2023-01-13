@@ -22,16 +22,17 @@ if (obj.data) {
     );
   } else if (url.includes("/main/indexV8")) {
     // 酷安-index
-    obj.data = obj.data.filter((item) => {
-      return !(
-        item.entityTemplate === "sponsorCard" ||
-        item.entityId === 8639 ||
-        item.entityId === 33066 ||
-        item.entityId === 32557 ||
-        item.title.indexOf("值得买") !== -1 ||
-        item.title.indexOf("红包") !== -1
-      );
-    });
+    obj.data = obj.data.filter(
+      (item) =>
+        !(
+          item.entityTemplate === "sponsorCard" ||
+          item.entityId === 8639 ||
+          item.entityId === 33066 ||
+          item.entityId === 32557 ||
+          item.title.includes("值得买") ||
+          item.title.includes("红包")
+        )
+    );
   }
 }
 

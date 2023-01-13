@@ -11,33 +11,23 @@ if (obj.data) {
   } else if (url.includes("/x/resource/show/tab/v2")) {
     // 哔哩哔哩-标签页
     if (obj.data.tab) {
-      obj.data.tab = obj.data.tab.filter((item) => {
-        if (
+      obj.data.tab = obj.data.tab.filter(
+        (item) =>
           item.name === "直播" ||
           item.name === "推荐" ||
           item.name === "热门" ||
           item.name === "影视"
-        ) {
-          return true;
-        }
-        return false;
-      });
+      );
       fixPos(obj.data.tab);
     }
     if (obj.data.top) {
-      obj.data.top = obj.data.top.filter((item) => {
-        if (item.name === "游戏中心") return false;
-        return true;
-      });
+      obj.data.top = obj.data.top.filter((item) => !item.name === "游戏中心");
       fixPos(obj.data.top);
     }
     if (obj.data.bottom) {
-      obj.data.bottom = obj.data.bottom.filter((item) => {
-        if (item.name === "发布" || item.name === "会员购") {
-          return false;
-        }
-        return true;
-      });
+      obj.data.bottom = obj.data.bottom.filter(
+        (item) => !(item.name === "发布" || item.name === "会员购")
+      );
       fixPos(obj.data.bottom);
     }
   } else if (url.includes("/x/resource/top/activity")) {
@@ -60,9 +50,7 @@ if (obj.data) {
     // 622为会员购中心 425开始为概念版id
     const itemList = new Set([396, 397, 398, 399]);
     obj["data"]["sections_v2"]?.forEach((element, index) => {
-      let items = element["items"].filter((e) => {
-        return itemList.has(e.id);
-      });
+      let items = element["items"].filter((e) => itemList.has(e.id));
       obj["data"]["sections_v2"][index].button = {};
       delete obj["data"]["sections_v2"][index].tip_icon;
       delete obj["data"]["sections_v2"][index].be_up_title;

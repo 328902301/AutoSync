@@ -271,7 +271,7 @@ async function query({ cookie }) {
   } else if (maintenanceCodes.includes(code)){
     throw new Error(`🚧 [系统升级] ${code} ${desc || ''}`)
   } else {
-    throw new Error(`[查询余量] ${desc} || 未知错误 ${status} ${code}`)
+    throw new Error(`[查询余量] ${desc || `未知错误 ${status} ${code}`}`)
   }
   const {config, pkgs, packageName, time} = await parse({body,cookie})
   return await diff({config, pkgs, packageName, time})
@@ -740,8 +740,9 @@ async function online({ tokenOnline, appId }) {
   } catch (e) {}
   $.log('↓ res body')
   $.log($.toStr(body))
-  if (`${$.lodash_get(body, 'code')}` !== '0') {
-    throw new Error($.lodash_get(body, 'dsc') || '未知错误')
+  const code = $.lodash_get(body, 'code')
+  if (`${code}` !== '0') {
+    throw new Error($.lodash_get(body, 'dsc') || `未知错误 ${status} ${code}`)
   }
   const invalidat = $.lodash_get(body, 'invalidat')
   $.log(`⏳ [TokenOnline] 有效时间 ${invalidat}`)
@@ -793,7 +794,7 @@ async function info({ cookie }) {
   } else if (maintenanceCodes.includes(code)){
     throw new Error(`🚧 [系统升级] ${code} ${desc || ''}`)
   } else {
-    throw new Error(`[查询信息] ${code || '未知 Code' } ${desc || '未知错误'}`)
+    throw new Error(`[查询信息] ${desc || `未知错误 ${status} ${code}`}`)
   }
 }
 

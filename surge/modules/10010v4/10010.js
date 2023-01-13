@@ -35,6 +35,7 @@ const KEY_COOKIE = `@${NAMESPACE}.${NAME}.cookie`
 const KEY_TOKEN_ONLINE = `@${NAMESPACE}.${NAME}.token_online`
 const KEY_PKGS = `@${NAMESPACE}.${NAME}.pkgs`
 const KEY_LAST = `@${NAMESPACE}.${NAME}.last`
+const KEY_TODAY = `@${NAMESPACE}.${NAME}.today`
 const KEY_CONFIG = `@${NAMESPACE}.${NAME}.config`
 const KEY_TITLE = `@${NAMESPACE}.${NAME}.title`
 const KEY_SUBT = `@${NAMESPACE}.${NAME}.subt`
@@ -172,10 +173,16 @@ async function main() {
   const mobile = $.getdata(KEY_MOBILE)
   const password = $.getdata(KEY_PASSWORD)
   let tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
+
+  $.log(`[cookie] ${cookie}`)
+  $.log(`[appId] ${appId}`)
+  $.log(`[mobile] ${mobile}`)
+  $.log(`[password] ${password}`)
+  $.log(`[tokenOnline] ${tokenOnline}`)
    
   let needSign
   if (cookie) {
-    $.log(`🍪 [Cookie] 将尝试用 Cookie 查询`, mobile, appId, tokenOnline)
+    $.log(`🍪 [Cookie] 将尝试用 Cookie 查询`)
     try {
       result = await query({ cookie })
     } catch (e) {
@@ -239,7 +246,7 @@ async function main() {
 // 查询余量
 async function query({ cookie }) {
   $.log(`🔛 [查询余量] 开始`)
-  $.log(`🍪 [Cookie]`, cookie)
+  // $.log(`🍪 [Cookie]`, cookie)
   $.log(`[当前时间] ${new Date().toLocaleString('zh')}`)
   const res = await $.http.post({
     url: 'https://m.client.10010.com/servicequerybusiness/operationservice/queryOcsPackageFlowLeftContentRevisedInJune',
@@ -273,92 +280,130 @@ async function query({ cookie }) {
 async function diff({config, pkgs, packageName, time: time10010 }) {
   $.log('这次的 包', $.toStr(pkgs))
   let last = $.getjson(KEY_LAST)
-  let { pkgs: lastPkgs = [], time } = last || {}
-  if (!last || !time || !lastPkgs || !Array.isArray(lastPkgs)) {
+  let { pkgs: lastPkgs = [], time: lastTime } = last || {}
+  if (!last || !lastTime || !lastPkgs || !Array.isArray(lastPkgs)) {
     $.log('无上次或上次数据不正确', $.toStr(last))
     $.log(`💾 保存 本次数据 为 上次数据`)
-    $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
-    await notify(TITLE, `⚠️ 上次数据不存在/不正确`, '保存本次数据 等待下次执行')
-    return { title: TITLE, subt: '⚠️ 上次数据不存在/不正确', desc: '保存本次数据 等待下次执行', pkgs }
-  } else {
-    $.log('上次的 包', $.toStr(lastPkgs))
-    const vars = {}
-    for (const key in config) {
-      const { name, pkgIds = [] } = config[key] || {}
-      let useSum = 0
-      let remainSum = 0
-      let totalSum = 0
-      let lastUseSum = 0
-      let lastRemainSum = 0
-      let lastTotalSum = 0
-      pkgIds.forEach(id => {
-        const { use = 0, remain =0,total=0 } = pkgs.find(pkg => pkg.id === id) || {}
-        useSum += use
-        remainSum += remain
-        totalSum += total
-        const { use: lastUse = 0, remain: lastRemain =0,total:lastTotal=0 } = lastPkgs.find(pkg => pkg.id === id) || {}
-        lastUseSum += lastUse
-        lastRemainSum += lastRemain
-        lastTotalSum += lastTotal
-      })
-      let remainDiff = lastRemainSum - remainSum
-      if(remainDiff<0)remainDiff=0
-      let useDiff = useSum - lastUseSum
-      if(useDiff<0)useDiff=0
-
-      if (useDiff> 0 && remainDiff<=0)  {
-        remainDiff = useDiff
-      }
-      // vars[name] = { '已用': formatFlow(useSum, 2),'剩余': formatFlow(remainSum, 2),'总': formatFlow(totalSum, 2), useDiff, '用量': formatFlow(useDiff, 2) }
-      vars[`[${name}.已用]`] = formatFlow(useSum, 2)
-      vars[`[${name}.剩余]`] = formatFlow(remainSum, 2)
-      vars[`[${name}.总]`] = formatFlow(totalSum, 2)
-      vars[`[${name}.用量]`] = formatFlow(remainDiff, 2)
-
-      vars[`[${name}.已用].raw`] = useSum
-      vars[`[${name}.剩余].raw`] = remainSum
-      vars[`[${name}.总].raw`] = totalSum
-      vars[`[${name}.用量].raw`] = remainDiff
-    }
-    
-    $.log('上次的 时间',new Date(time).toLocaleString('zh'))
-    let now = new Date()
-    let seconds = (now.getTime() - time) / 1000
-    let duration = formatDuration(seconds)
-    let localeString = now.toLocaleString('zh')
-    $.log(`⌛ [时长] ${duration}`)
-    // vars.duration = seconds
-    vars['[时长]'] = duration
-    vars['[套餐]'] = packageName
-    vars['[联通时间]'] = time10010
-    vars['[日期时间]'] = new Date().toLocaleString('zh')
-    vars['[时间]'] = new Date().toLocaleTimeString('zh')
-
-    $.log('变量和差额', $.toStr(vars))
-
-    const titleTpl = $.getdata(KEY_TITLE) || `[套餐]`
-    const subtTpl = $.getdata(KEY_SUBT) || `[时长] 跳 [所有通用.用量] 免 [所有免流.用量]`
-    const descTpl = $.getdata(KEY_DESC) || `通用剩 [通用有限.剩余] 免流剩 [免流有限.剩余]`
-    const title = renderTpl(titleTpl, vars) 
-    const subt = renderTpl(subtTpl, vars) 
-    const desc = renderTpl(descTpl, vars) 
-    $.log(`[标题]\n`, `${titleTpl}\n`, `${title}\n`)
-    $.log(`[副标题]\n`, `${subtTpl}\n`, `${subt}\n`)
-    $.log(`[正文]\n`, `${descTpl}\n`, `${desc}\n`)
-
-    const min_usage = $.getdata(KEY_MIN_USAGE) || 0
-    const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
-    if (matches.find(i => vars[`${i}.raw`] >= min_usage * 1024)) {
-      $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
-      await notify(title, subt, desc)
-      $.log(`💾 保存 本次数据 为 上次数据`)
-      $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
-    } else {
-      $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
-    }
-    $.setjson(vars, KEY_VARS)
-    return { title, subt, desc, vars }
+    lastPkgs = pkgs || []
+    lastTime = new Date().getTime()
+    last = { pkgs: lastPkgs, time: lastTime }
+    $.setjson(last, KEY_LAST)
+    await notify(TITLE, `⚠️ 上次数据不存在/不正确`, '保存本次数据')
+    // return { title: TITLE, subt: '⚠️ 上次数据不存在/不正确', desc: '保存本次数据 等待下次执行' }
   }
+  $.log('上次的 包', $.toStr(lastPkgs))
+  const  nowTime   = new Date()
+  const todayStartTime = new Date(nowTime.getFullYear(), nowTime.getMonth(), nowTime.getDate()).getTime()
+  let today = $.getjson(KEY_TODAY)
+  let { pkgs: todayPkgs = [], time: todayTime } = today || {}
+  if (!todayTime || !(todayTime >= todayStartTime) || !todayPkgs || !Array.isArray(todayPkgs)) {
+    $.log('无今日数据或今日数据不正确或今日数据已过期', $.toStr(today))
+    $.log(`💾 保存 本次数据 为 今日数据`)
+    todayPkgs = pkgs || []
+    todayTime = new Date().getTime()
+    today = { pkgs, time: todayTime }
+    $.setjson(today, KEY_TODAY)
+  }
+  $.log('今日数据', $.toStr(today))
+  $.log('今日数据时间', new Date(todayTime).toLocaleString('zh'))
+  $.log('今日', new Date(todayStartTime).toLocaleString('zh'))
+
+  const vars = {}
+  for (const key in config) {
+    const { name, pkgIds = [] } = config[key] || {}
+    let useSum = 0
+    let remainSum = 0
+    let totalSum = 0
+    let lastUseSum = 0
+    let lastRemainSum = 0
+    let lastTotalSum = 0
+    let todayUseSum = 0
+    let todayRemainSum = 0
+    let todayTotalSum = 0
+
+    pkgIds.forEach(id => {
+      const { use = 0, remain =0,total=0 } = pkgs.find(pkg => pkg.id === id) || {}
+      useSum += use
+      remainSum += remain
+      totalSum += total
+      const { use: lastUse = 0, remain: lastRemain =0,total:lastTotal=0 } = lastPkgs.find(pkg => pkg.id === id) || {}
+      const { use: todayUse = 0, remain: todayRemain =0,total:todayTotal=0 } = todayPkgs.find(pkg => pkg.id === id) || {}
+      lastUseSum += lastUse
+      lastRemainSum += lastRemain
+      lastTotalSum += lastTotal
+      todayUseSum += todayUse
+      todayRemainSum += todayRemain
+    })
+
+    let todayRemainDiff = todayRemainSum - remainSum
+    if(todayRemainDiff<0)todayRemainDiff=0
+    let todayUseDiff = useSum - todayUseSum
+    if(todayUseDiff<0)todayUseDiff=0
+    if (todayUseDiff> 0 && todayRemainDiff<=0)  {
+      todayRemainDiff = todayUseDiff
+    }
+
+    let remainDiff = lastRemainSum - remainSum
+    if(remainDiff<0)remainDiff=0
+    let useDiff = useSum - lastUseSum
+    if(useDiff<0)useDiff=0
+
+    if (useDiff> 0 && remainDiff<=0)  {
+      remainDiff = useDiff
+    }
+    // vars[name] = { '已用': formatFlow(useSum, 2),'剩余': formatFlow(remainSum, 2),'总': formatFlow(totalSum, 2), useDiff, '用量': formatFlow(useDiff, 2) }
+    vars[`[${name}.已用]`] = formatFlow(useSum, 2)
+    vars[`[${name}.剩余]`] = formatFlow(remainSum, 2)
+    vars[`[${name}.总]`] = formatFlow(totalSum, 2)
+    vars[`[${name}.用量]`] = formatFlow(remainDiff, 2)
+    vars[`[${name}.今日用量]`] = formatFlow(todayRemainDiff, 2)
+
+    vars[`[${name}.已用].raw`] = useSum
+    vars[`[${name}.剩余].raw`] = remainSum
+    vars[`[${name}.总].raw`] = totalSum
+    vars[`[${name}.用量].raw`] = remainDiff
+    vars[`[${name}.今日用量].raw`] = todayRemainDiff
+  }
+
+  $.log('上次的 时间',new Date(lastTime).toLocaleString('zh'))
+  let now = new Date()
+  let seconds = (now.getTime() - lastTime) / 1000
+  let duration = formatDuration(seconds)
+  let localeString = now.toLocaleString('zh')
+  $.log(`⌛ [时长] ${duration}`)
+  // vars.duration = seconds
+  vars['[时长]'] = duration
+  vars['[套餐]'] = packageName
+  vars['[联通时间]'] = time10010
+  vars['[日期时间]'] = new Date().toLocaleString('zh')
+  vars['[时间]'] = new Date().toLocaleTimeString('zh')
+
+  $.log('变量和差额', $.toStr(vars))
+
+  const titleTpl = $.getdata(KEY_TITLE) || `[套餐]`
+  const subtTpl = $.getdata(KEY_SUBT) || `[时长] 跳 [所有通用.用量] 免 [所有免流.用量]`
+  const descTpl = $.getdata(KEY_DESC) || `通用剩 [通用有限.剩余] 免流剩 [免流有限.剩余]`
+  const title = renderTpl(titleTpl, vars) 
+  const subt = renderTpl(subtTpl, vars) 
+  const desc = renderTpl(descTpl, vars) 
+  $.log(`[标题]\n`, `${titleTpl}\n`, `${title}\n`)
+  $.log(`[副标题]\n`, `${subtTpl}\n`, `${subt}\n`)
+  $.log(`[正文]\n`, `${descTpl}\n`, `${desc}\n`)
+
+  const min_usage = $.getdata(KEY_MIN_USAGE) || 0
+  const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
+  if (matches.find(i => vars[`${i}.raw`] >= min_usage * 1024)) {
+    $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
+    await notify(title, subt, desc)
+    $.log(`💾 保存 本次数据 为 上次数据`)
+    $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+  } else {
+    $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
+  }
+  $.setjson(vars, KEY_VARS)
+  return { title, subt, desc, vars }
+
+
 }
 // 处理余量数据
 async function parse({ body,cookie }) {
@@ -465,8 +510,6 @@ async function parse({ body,cookie }) {
   // $.log(JSON.stringify(pkgs, null, 2))
   $.setjson(pkgs, KEY_PKGS)
   $.log(`💾 [已保存] 最新包\n\n`)
-
-
   
   if(!packageName){
     try {

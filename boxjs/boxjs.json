@@ -700,6 +700,7 @@
         "@xream.10010v4.bark",
         "@xream.10010v4.pkgs",
         "@xream.10010v4.last",
+        "@xream.10010v4.today",
         "@xream.10010v4.config",
         "@xream.10010v4.vars"
       ],
@@ -826,6 +827,12 @@
         {
           "id": "@xream.10010v4.last",
           "name": "上次数据 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@xream.10010v4.today",
+          "name": "今日数据 JSON",
           "val": "",
           "type": "text"
         },

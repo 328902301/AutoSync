@@ -1,4 +1,4 @@
-// 2023-01-13 10:48
+// 2023-01-13 10:54
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -16,11 +16,6 @@ if (url.includes("/msgbox/pull")) {
       obj.data.cardList = obj.data.cardList.filter(
         (item) => item.dataKey === "LoginCard"
       );
-    }
-  } else if (url.includes("/faas/amap-navigation/main-page-assets")) {
-    // 高德地图-首页消息
-    if (obj.data.pull3 && obj.data.pull3.msgs) {
-      obj.data.pull3.msgs = [];
     }
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
     // 高德地图-我的

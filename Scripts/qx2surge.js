@@ -152,7 +152,7 @@ ${HeaderRewrite}
 ${MapLocal}
 ${MITM}`.replace(/\;/g, "#");
 
-  $done({ status: "HTTP/1.1 200 OK", body: body });
+  $done({ response: { status: 200, body: body } });
 })().catch((e) => {
   $notification.post(`${e}`, "", "");
   $done();

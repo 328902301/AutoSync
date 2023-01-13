@@ -29,8 +29,8 @@ if (obj.data) {
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近
     if (obj.data.modules) {
-      obj.data.modules = obj.data.modules.filter((item) =>
-        (
+      obj.data.modules = obj.data.modules.filter(
+        (item) => (
           item === "head" ||
           item === "search_hot_words" ||
           item === "feed_rec"

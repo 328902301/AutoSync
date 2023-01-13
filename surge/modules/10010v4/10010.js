@@ -41,6 +41,7 @@ const KEY_TITLE = `@${NAMESPACE}.${NAME}.title`
 const KEY_SUBT = `@${NAMESPACE}.${NAME}.subt`
 const KEY_DESC = `@${NAMESPACE}.${NAME}.desc`
 const KEY_MIN_USAGE = `@${NAMESPACE}.${NAME}.min_usage`
+const KEY_NORMAL_LIMITED_ONLY = `@${NAMESPACE}.${NAME}.normal_limited_only`
 const KEY_BARK = `@${NAMESPACE}.${NAME}.bark`
 const KEY_START = `@${NAMESPACE}.${NAME}.start`
 const KEY_END = `@${NAMESPACE}.${NAME}.end`
@@ -390,16 +391,31 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
   $.log(`[副标题]\n`, `${subtTpl}\n`, `${subt}\n`)
   $.log(`[正文]\n`, `${descTpl}\n`, `${desc}\n`)
 
+  const normalLimitedOnly = `${$.getdata(KEY_NORMAL_LIMITED_ONLY)}` === 'true' || true
+  $.log(`[${normalLimitedOnly ? '启用': '未启用'}] 仅在 [通用有限.用量] >= 最小用量通知阈值 时, 进行通知`)
   const min_usage = $.getdata(KEY_MIN_USAGE) || 0
-  const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
   $.log(`[通知阈值] 最小用量通知阈值条件 ${min_usage}M`)
-  if (matches.find(i => vars[`${i}.raw`] >= min_usage)) {
-    $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
-    await notify(title, subt, desc)
-    $.log(`💾 保存 本次数据 为 上次数据`)
-    $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+  if (normalLimitedOnly) {
+    const normalLimitedUse = vars['[通用有限.用量].raw']
+    $.log(`[通用有限.用量] ${vars['[通用有限.用量]']}`)
+    if (normalLimitedUse >= min_usage) {
+      $.log(`满足 [通用有限.用量] >= 最小用量通知阈值`)
+      await notify(title, subt, desc)
+      $.log(`💾 保存 本次数据 为 上次数据`)
+      $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+    } else {
+      $.log(`不满足 [通用有限.用量] >= 最小用量通知阈值, 不通知`) 
+    }
   } else {
-    $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
+    const matches = `${titleTpl} ${subtTpl} ${descTpl}`.match(/\[[^\]]+?\.\用量]/g) || []
+    if (matches.find(i => vars[`${i}.raw`] >= min_usage)) {
+      $.log(`[通知阈值] 通知模板中的用量 >= 最小用量通知阈值`)
+      await notify(title, subt, desc)
+      $.log(`💾 保存 本次数据 为 上次数据`)
+      $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+    } else {
+      $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
+    }    
   }
   vars.title = title
   vars.subt = subt

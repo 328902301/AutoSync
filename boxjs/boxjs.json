@@ -694,6 +694,7 @@
         "@xream.10010v4.cookie",
         "@xream.10010v4.token_online",
         "@xream.10010v4.min_usage",
+        "@xream.10010v4.normal_limited_only",
         "@xream.10010v4.title",
         "@xream.10010v4.subt",
         "@xream.10010v4.desc",
@@ -727,7 +728,7 @@
           "val": false,
           "type": "boolean",
           "persistentHint": true,
-          "desc": "默认不开启调试. 开启后将推送自动登录等信息"
+          "desc": "默认不开启调试. 开启后将推送各种调试信息"
         },
         {
           "id": "@xream.10010v4.mobile",
@@ -785,6 +786,14 @@
           "type": "number",
           "persistentHint": true,
           "desc": "通知模板内的任一一项用量 >= 该数值时 才会通知. 例 [通用有限.用量] 表示这段时间内 有限的通用包的差额. 如果你要无变化时不通知, 这里可以设为 0.01"
+        },
+        {
+          "id": "@xream.10010v4.normal_limited_only",
+          "name": "仅在 [通用有限.用量] >= 最小用量通知阈值 时, 进行通知",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认关闭. 开启后, 仅在 [通用有限.用量] >= 最小用量通知阈值 时, 才会通知"
         },
         {
           "id": "@xream.10010v4.title",

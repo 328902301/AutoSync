@@ -55,16 +55,12 @@ if (_0x42fcfe["indexOf"](_0x28be74) !== -0x1 && _0xc5cbc6 == "POST") {
   var _0x2326b4 = {};
   _0x2326b4["body"] = _0x407d52;
   $done(_0x2326b4);
-} else {
-  $done({});
 }
 
 if (_0x42fcfe["indexOf"](_0x5ab574) !== -0x1 && _0xc5cbc6 == "GET") {
   var _0x1b6aa2 = {};
   _0x1b6aa2["body"] = _0x21ada0;
   $done(_0x1b6aa2);
-} else {
-  $done({});
 }
 
 if (_0x42fcfe["indexOf"](_0x1e0f8d) !== -0x1 && _0x42fcfe["indexOf"]("op=ui") !== -0x1) {
@@ -151,8 +147,6 @@ if (_0x42fcfe["indexOf"](_0x2caaf2) !== -0x1 && _0xc5cbc6 == "POST") {
   } else {
     $done({});
   }
-} else {
-  $done({});
 }
 
 if (_0x42fcfe["indexOf"](_0x43d7dd) !== -0x1 && _0x42fcfe["indexOf"]("op=gd") !== -0x1) {
@@ -161,6 +155,4 @@ if (_0x42fcfe["indexOf"](_0x43d7dd) !== -0x1 && _0x42fcfe["indexOf"]("op=gd") !=
   var _0x5525a6 = {};
   _0x5525a6["body"] = JSON["stringify"](_0xf48cd5);
   $done(_0x5525a6);
-} else {
-  $done({});
 }

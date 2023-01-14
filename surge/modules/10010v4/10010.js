@@ -66,7 +66,7 @@ const freeFeePolicyNameRegExp = /（免流）$/
 // 无效 资源 key 定义
 const invalidResourceKeys = ['usepercent', 'accountbar']
 // 无效 资源 type 定义
-const invalidResourceTypes = ['voice', 'smslist']
+const invalidResourceTypes = ['voice', 'smslist', 'unsharedsmslist', 'unsharedvoicelist']
 // 无效 Cookie Code 定义
 const invalidCookieCodes = ['999999', '999998']
 // 系统升级 Code 定义

@@ -46,12 +46,16 @@ if (url.includes("/a.p")) {
   let _0x2326b4 = {};
   _0x2326b4["body"] = modBody;
   $done(_0x2326b4);
+} else {
+  $done({});
 }
 
 if (url.includes("/vip/enc/user/vip")) {
   let _0x1b6aa2 = {};
   _0x1b6aa2["body"] = modKey;
   $done(_0x1b6aa2);
+} else {
+  $done({});
 }
 
 if (url.includes("/vip/v2/user/vip") && url.includes("op=ui")) {
@@ -88,6 +92,8 @@ if (url.includes("/vip/v2/user/vip") && url.includes("op=ui")) {
   _0x1ce790["body"] = modBody;
   $done(_0x1ce790);
 } else if (url.includes("/vip/v2/user/vip") && url.includes("jsonpcallback")) {
+  $done({});
+} else {
   $done({});
 }
 
@@ -133,6 +139,8 @@ if (url.includes("/music.pay")) {
     _0x575fea["body"] = JSON.stringify(_0xf48cd5);
     $done(_0x575fea);
   }
+} else {
+  $done({});
 }
 
 if (url.includes("/vip/v2/theme") && url.includes("op=gd")) {
@@ -141,4 +149,6 @@ if (url.includes("/vip/v2/theme") && url.includes("op=gd")) {
   let _0x5525a6 = {};
   _0x5525a6["body"] = JSON.stringify(_0xf48cd5);
   $done(_0x5525a6);
+} else {
+  $done({});
 }

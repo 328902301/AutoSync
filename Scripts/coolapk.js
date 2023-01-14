@@ -1,4 +1,4 @@
-// 2023-01-13 16:58
+// 2023-01-14 09:04
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -27,7 +27,7 @@ if (obj.data) {
         !(
           item.entityTemplate === "sponsorCard" ||
           item.entityId === 8639 ||
-          item.entityId === 33066 ||
+          item.entityId === 33006 ||
           item.entityId === 32557 ||
           item.title.includes("值得买") ||
           item.title.includes("红包")

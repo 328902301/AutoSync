@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用QX微博&微博国际版净化
 > 脚本作者：@Zmqcherish, @Cuttlefish
 > 微信账号：墨鱼手记
-> 更新时间：2022-01-08
+> 更新时间：2022-01-09
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -11,7 +11,7 @@
 > 脚本声明：本脚本是在Zmqcherish原创基础上优化自用
 ***********************************************/
 
-const version = "V2.0.82";
+const version = "V2.0.84";
 
 const mainConfig = {
     isDebug: !1,
@@ -207,7 +207,11 @@ function removeMain(e) {
           o.items[0].data?.itemid?.includes("top_title")
         )
           continue;
-        t.push(o);
+        o.items.length > 0
+          ? (o.items = Object.values(o.items).filter(
+              (e) => "feed" == e.category
+            ))
+          : t.push(o);
       }
     } else -1 == [202, 200].indexOf(o.data.card_type) && t.push(o);
   return (e.items = t), log("removeMain success"), e;
@@ -553,10 +557,10 @@ function removeLuaScreenAds(e) {
 function removePhpScreenAds(e) {
   if (!e.ads) return e;
   for (let t of ((e.show_push_splash_ad = !1),
-  (e.background_delay_display_time = 86400),
-  (e.lastAdShow_delay_display_time = 604800),
-  (e.realtime_ad_video_stall_time = 86400),
-  (e.realtime_ad_timeout_duration = 604800),
+  (e.background_delay_display_time = 0),
+  (e.lastAdShow_delay_display_time = 0),
+  (e.realtime_ad_video_stall_time = 0),
+  (e.realtime_ad_timeout_duration = 0),
   e.ads))
     (t.displaytime = 0),
       (t.displayintervel = 86400),

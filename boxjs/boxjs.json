@@ -768,25 +768,13 @@
           "id": "@xream.10010v4.cookie",
           "name": "Cookie",
           "val": "",
-          "type": "text",
-          "persistentHint": true,
-          "desc": "Cookie"
+          "type": "text"
         },
         {
           "id": "@xream.10010v4.token_online",
           "name": "tokenOnline",
           "val": "",
-          "type": "text",
-          "persistentHint": true,
-          "desc": "TokenOnline"
-        },
-        {
-          "id": "@xream.10010v4.script_only",
-          "name": "仅在常规执行时更新上次数据",
-          "val": false,
-          "type": "boolean",
-          "persistentHint": true,
-          "desc": "默认关闭. 开启后, 面板/请求等情况触发时, 不会更新上次数据, 从而不影响常规执行时的时长用量数据"
+          "type": "text"
         },
         {
           "id": "@xream.10010v4.min_usage",
@@ -803,6 +791,14 @@
           "type": "boolean",
           "persistentHint": true,
           "desc": "默认关闭. 开启后, 仅在 [通用有限.用量] >= 最小用量通知阈值 时, 才会通知"
+        },
+        {
+          "id": "@xream.10010v4.script_only",
+          "name": "仅在常规执行时更新上次数据",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认关闭. 开启后, 面板/请求等情况触发时, 不会更新上次数据, 从而不影响常规执行时的时长用量数据"
         },
         {
           "id": "@xream.10010v4.title",

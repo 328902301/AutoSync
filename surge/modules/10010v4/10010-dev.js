@@ -271,7 +271,7 @@ async function query({ cookie }) {
   } else if (maintenanceCodes.includes(code)){
     throw new Error(`🚧 [系统升级] ${code} ${desc || ''}`)
   } else {
-    throw new Error(`[查询余量] ${desc} || 未知错误 ${status} ${code}`)
+    throw new Error(`[查询余量] ${desc || `未知错误 ${status || ''} ${code || ''}`}`)
   }
   const {config, pkgs, packageName, time} = await parse({body,cookie})
   return await diff({config, pkgs, packageName, time})
@@ -694,7 +694,7 @@ async function sign({ mobile, password, appId }) {
   $.log($.toStr(body))
   const code = $.lodash_get(body, 'code')
   if (`${code}` !== '0') {
-    throw new Error($.lodash_get(body, 'dsc') || `未知错误 ${status} ${code}`)
+    throw new Error($.lodash_get(body, 'dsc') || `未知错误 ${status || ''} ${code || ''}`)
   }
 
   const invalidat = $.lodash_get(body, 'invalidat')
@@ -832,7 +832,7 @@ async function notify(title, subt, desc, opts) {
         $.log($.toStr(body))
         const code = $.lodash_get(body, 'code')
         if (`${code}` !== '200') {
-          throw new Error($.lodash_get(body, 'message') || `未知错误 ${status} ${code}`)
+          throw new Error($.lodash_get(body, 'message') || `未知错误 ${status || ''} ${code || ''}`)
         }
       } catch (e) {
         $.logErr(e)

@@ -88,7 +88,7 @@ async function send({ mobile }) {
   const desc = $.lodash_get(body, 'rsp_desc')
   const code = $.lodash_get(body, 'rsp_code')
   if (code !== '0000') {
-    throw new Error( desc || `未知错误 ${status} ${code}`)
+    throw new Error( desc || `未知错误 ${status || ''} ${code || ''}`)
   }
   $.msg(TITLE, `${mobile} 验证码已发送`, `${desc}`)
 }

@@ -32,7 +32,7 @@ if (url.includes("/a.p")) {
     .replace(/"downright":\d+/g, '"downright":1')
     .replace(/"policytype":\d+/g, '"policytype":3')
     .replace(/"policy":\d+/g, '"policy":5');
-  $done(modBody);
+  $done({modBody});
 } else if (url.includes("/a.p?op=getvip")) {
   let _0xf48cd5 = JSON.parse(modBody);
   let _0x5c24c6 = {};

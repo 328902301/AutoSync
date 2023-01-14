@@ -1,6 +1,9 @@
 #!name=联通余量(v4)
 #!desc=新版测试中 非群内用户勿用 https://t.me/zhetengsha_group
 
+[General]
+force-http-engine-hosts = %APPEND% 10010v4.com
+
 [Script]
 10010v4-cron = type=cron,cronexp=*/5 * * * *,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js
 

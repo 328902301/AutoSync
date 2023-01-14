@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-09 21:18
+// 2023-01-14 19:22
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -69,6 +69,7 @@ const otherUrls = {
   "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
   "/2/profile/container_timeline": "userHandler", // 用户主页
   "/2/profile/me": "removeHome", // 个人页模块
+  "/2/push/active": "removeRed", // 右上角红包
   "/2/search/container_discover": "removeSearch", // 搜索 tab 信息流
   "/2/search/container_timeline": "removeSearch", // 搜索 tab 信息流
   "/2/search/finder": "removeSearchMain",
@@ -333,6 +334,18 @@ function removeHome(data) {
     }
   }
   data.items = newItems;
+  return data;
+}
+
+function removeRed(data) {
+  if (!data) return data;
+  if (data.feed_redpacket) {
+    data.feed_redpacket.starttime = "2208960000";
+    data.feed_redpacket.interval = "31536000";
+    data.feed_redpacket.endtime = "2209046399";
+    data.feed_redpacket.icon = null;
+    data.feed_redpacket.finish_icon = null;
+  }
   return data;
 }
 

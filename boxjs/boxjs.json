@@ -695,6 +695,7 @@
         "@xream.10010v4.token_online",
         "@xream.10010v4.min_usage",
         "@xream.10010v4.normal_limited_only",
+        "@xream.10010v4.script_only",
         "@xream.10010v4.title",
         "@xream.10010v4.subt",
         "@xream.10010v4.desc",
@@ -778,6 +779,14 @@
           "type": "text",
           "persistentHint": true,
           "desc": "TokenOnline"
+        },
+        {
+          "id": "@xream.10010v4.script_only",
+          "name": "仅在常规执行时更新上次数据",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认关闭. 开启后, 面板/请求等情况触发时, 不会更新上次数据, 从而不影响常规执行时的时长用量数据"
         },
         {
           "id": "@xream.10010v4.min_usage",

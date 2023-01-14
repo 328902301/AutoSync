@@ -1,13 +1,23 @@
 /*************************************
 
-项目名称：蛋啵 解锁VIP
+项目名称：Wink-像修图一样修视频
+下载地址：https://t.cn/A6ouQvnT
+
+项目名称：蛋啵-宝宝版美图秀秀
 下载地址：https://t.cn/A69AjDYp
+
+项目名称：潮自拍
+下载地址：https://t.cn/A6A2Sybv
+
+项目名称：海报工厂
+下载地址：https://t.cn/A66WBa0v
+
 使用声明：仅供学习与交流，请勿转载与贩卖！⚠️
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/api-sub\.meitu\.com\/.+\/user\/vip_info_by_group\.json url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/danbo.js
+^https?:\/\/api-sub\.meitu\.com\/.+\/user\/vip_info_by_group\.json url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
 
 [mitm]
 hostname = api-sub.meitu.com

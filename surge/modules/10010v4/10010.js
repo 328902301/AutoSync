@@ -175,11 +175,11 @@ async function main() {
   const password = $.getdata(KEY_PASSWORD)
   let tokenOnline = $.getdata(KEY_TOKEN_ONLINE)
 
-  $.log(`[cookie] ${cookie}`)
-  $.log(`[appId] ${appId}`)
-  $.log(`[mobile] ${mobile}`)
-  $.log(`[password] ${password}`)
-  $.log(`[tokenOnline] ${tokenOnline}`)
+  $.log(`[cookie] \`\`\`${cookie || '-'}\`\`\``)
+  $.log(`[appId] \`\`\`${appId || '-'}\`\`\``)
+  $.log(`[mobile] \`\`\`${mobile || '-'}\`\`\``)
+  $.log(`[password] \`\`\`${password || '-'}\`\`\``)
+  $.log(`[tokenOnline] \`\`\`${tokenOnline || '-'}\`\`\``)
    
   let needSign
   if (cookie) {

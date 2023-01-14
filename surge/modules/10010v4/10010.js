@@ -47,18 +47,6 @@ const KEY_START = `@${NAMESPACE}.${NAME}.start`
 const KEY_END = `@${NAMESPACE}.${NAME}.end`
 const KEY_VARS = `@${NAMESPACE}.${NAME}.vars`
 
-// 免流包 code
-const freeAddupItemCodes = ['40008']
-// 免流包 name
-const freeAddUpItemNames = [ "套餐内专享免费流量" ]
-// 无效 资源 key 定义
-const invalidResourceKeys = ['usepercent', 'accountbar']
-// 无效 资源 type 定义
-const invalidResourceTypes = ['voice', 'smslist']
-// 无效 Cookie Code 定义
-const invalidCookieCodes = ['999999', '999998']
-// 系统升级 Code 定义
-const maintenanceCodes = ['4114030182']
 // 资源
 const resourcesConfig = {
   resources: { name: '套餐内流量&流量包' },
@@ -67,6 +55,23 @@ const resourcesConfig = {
   mlresources: { name: '免流流量' },
   twresources: { name: '套外流量' },
 }
+// 免流包 code
+const freeAddupItemCodes = ['40008']
+// 免流包 name
+const freeAddUpItemNames = [ "套餐内专享免费流量" ]
+// 免流包 type
+const freeTypes = [ "免流流量" ]
+// 免流包 suffix
+const freeFeePolicyNameRegExp = /（免流）$/
+// 无效 资源 key 定义
+const invalidResourceKeys = ['usepercent', 'accountbar']
+// 无效 资源 type 定义
+const invalidResourceTypes = ['voice', 'smslist']
+// 无效 Cookie Code 定义
+const invalidCookieCodes = ['999999', '999998']
+// 系统升级 Code 定义
+const maintenanceCodes = ['4114030182']
+
 
 const dataFile = `10010v4${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`
 const $ = new Env('10010v4', {dataFile})
@@ -525,9 +530,6 @@ async function parse({ body,cookie }) {
     }
   }
 
-  // $.log('', `↓ [解析后资源]`, '')
-  
-  // $.log(JSON.stringify(pkgs, null, 2))
   $.setjson(pkgs, KEY_PKGS)
   $.log(`💾 [已保存] 最新包\n\n`)
   
@@ -604,12 +606,9 @@ async function parse({ body,cookie }) {
     config[key]._pkgIds = []
   }
   
-  // $.log(JSON.stringify(lastConfig.freeUnlimited, null, 2))
-
-
   pkgs.forEach(({name, use, total, remain, useTxt, totalTxt, remainTxt, unlimited, id, endDate, type, addupItemCode, addUpItemName,feePolicyName, feePolicyId }) => {
   // 免流
-  if (freeAddupItemCodes.includes(addupItemCode) || freeAddUpItemNames.includes(addUpItemName)) {
+  if (freeAddupItemCodes.includes(addupItemCode) || freeAddUpItemNames.includes(addUpItemName) || freeTypes.includes(type) || freeFeePolicyNameRegExp.test(feePolicyName)) {
     // 无限
     if (unlimited) {
       if(!lastConfig["freeUnlimited"]._pkgIds.includes(id)){
@@ -676,12 +675,7 @@ async function parse({ body,cookie }) {
       await notify(TITLE, `🆕 ${newPkgs[i].name} 新增 ${newPkgs[i].pkgIds.length}个包`, `${names.join("\n")}`) 
     }    
   }
-  // $.log(JSON.stringify(config["freeUnlimited"], null, 2))
-  // $.log(JSON.stringify(lastConfig["freeUnlimited"], null, 2))
-  // $.log(JSON.stringify(newPkgs, null, 2))
-
- 
-  // $.log(JSON.stringify(config, null, 2))
+  $.log('[配置]', $.toStr(config))  
   $.setjson(config, KEY_CONFIG)
   $.log(`💾 [配置] 已保存`)
 

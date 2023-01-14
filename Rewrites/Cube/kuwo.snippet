@@ -7,6 +7,7 @@
 ^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer\/getMobileLyricAd\.do ^GET url-and-header reject-dict
 ^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^GET url-and-header reject-dict
 ^http:\/\/rich\.kuwo\.cn\/AdService\/kaiping ^GET url-and-header reject-dict
+^https:\/\/tmeadcomm\.y\.qq\.com\/maproxy\/getAd$ ^POST url-and-header reject-dict
 
 # 会员
 ^http:\/\/audiobookpay\.kuwo\.cn\/a\.p$ ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
@@ -16,4 +17,4 @@
 ^http:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
 ^https:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
 
-hostname = *.kuwo.cn
+hostname = *.kuwo.cn, tmeadcomm.y.qq.com

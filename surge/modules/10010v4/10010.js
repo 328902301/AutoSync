@@ -456,7 +456,7 @@ async function diff({config, pkgs, packageName, time: time10010, sum, freeFlow})
   $.log(`[副标题]\n`, `${subtTpl}\n`, `${subt}\n`)
   $.log(`[正文]\n`, `${descTpl}\n`, `${desc}\n`)
 
-  const normalLimitedOnly = `${$.getdata(KEY_NORMAL_LIMITED_ONLY)}` === 'true' || true
+  const normalLimitedOnly = `${$.getdata(KEY_NORMAL_LIMITED_ONLY)}` === 'true'
   $.log(`[${normalLimitedOnly ? '启用': '未启用'}] 仅在 [通用有限.用量] >= 最小用量通知阈值 时, 进行通知`)
   const min_usage = $.getdata(KEY_MIN_USAGE) || 0
   $.log(`[通知阈值] 最小用量通知阈值条件 ${min_usage}M`)

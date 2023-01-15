@@ -159,7 +159,7 @@ chxm1023 = {
       "avatar_url" : "",
       "is_expire" : 0,
       "expire_days" : -66666,
-      "gid" : 1234567090,
+      "gid" : 1234567890,
       "vip_type" : 1,
       "platform" : 2,
       "sub_name" : "包年",

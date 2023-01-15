@@ -1,62 +1,60 @@
-# 请使用最新版Clash
-# 将proxy-providers里面链接中的“你的订阅链接”全部替换即可
 mixed-port: 7890
 allow-lan: true
-bind-address: '*'
+bind-address: "*"
 mode: rule
 log-level: info
 ipv6: true
 external-controller: 127.0.0.1:9090
-
 proxy-providers:
-  #全部节点
   All:
     type: http
     url: "https://api.v1.mk/sub?target=clash&url=你的订阅链接&list=true&udp=true"
-    # 可以使用任意类型的链接替换上面文字，多个链接使用英文符号的竖杠|隔开一起写上即可；也可以将Clash订阅链接替换掉整个引号""内的链接
     interval: 3600
-    path: ./all.yaml
+    path: ./All.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
-  #香港节点     
   HK:
     type: file
-    path: ./all.yaml
+    path: ./All.yaml
     filter: 港|HK|(?i)Hong
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
- #日本节点
   JP:
     type: file
-    path: ./all.yaml
+    path: ./All.yaml
     filter: 日|东京|JP|(?i)Japan
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
- #美国节点
   US:
     type: file
-    path: ./all.yaml
+    path: ./All.yaml
     filter: 美|US|(?i)States|American
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
- #台湾节点
   TW:
     type: file
-    path: ./all.yaml
+    path: ./All.yaml
     filter: 台|湾|TW|(?i)Taiwan
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
-      
+  SG:
+    type: file
+    path: ./All.yaml
+    filter: 新|坡|SG|(?i)Singapore
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
 dns:
   enable: true
   ipv6: true
@@ -68,27 +66,24 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - '*.lan'
+    - "*.lan"
     - localhost.ptlogin2.qq.com
-    - '+.srv.nintendo.net'
-    - '+.stun.playstation.net'
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-    - '+.xboxlive.com'
-    - 'msftconnecttest.com'
-    - 'xbox.*.microsoft.com'
-    - '*.battlenet.com.cn'
-    - '*.battlenet.com'
-    - '*.blzstatic.cn'
-    - '*.battle.net'
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
     - https://dns.google/dns-query
-    
-proxies:
-
-            
+proxies: null
 proxy-groups:
   - name: 🚀 手动切换
     type: select
@@ -96,153 +91,135 @@ proxy-groups:
       - All
     proxies:
       - ✈️ 自动选择
-
   - name: ✈️ 自动选择
     type: url-test
-    use: 
+    use:
       - All
-    url: "http://www.gstatic.com/generate_204"
+    url: http://www.gstatic.com/generate_204
     interval: 300
-
   - name: 🎬 YouTube
     type: select
     proxies:
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
       - DIRECT
-
   - name: 🎬 NETFLIX
     type: select
     proxies:
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
       - DIRECT
-
   - name: 🎬 Disney+
     type: select
     proxies:
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
       - DIRECT
-
   - name: 🎬 巴哈姆特
     type: select
     proxies:
       - 🇨🇳 台湾节点
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🚀 手动切换
       - DIRECT
-
   - name: 🆎 AdBlock-AdvertisingLite
     type: select
     proxies:
       - REJECT
       - 🚀 手动切换
-
   - name: 🆎 AdBlock-Hijacking
     type: select
     proxies:
       - REJECT
       - 🚀 手动切换
-
   - name: 🆎 AdBlock-Privacy
     type: select
     proxies:
       - REJECT
       - 🚀 手动切换
-
   - name: 🌏 国外网站
     type: select
     proxies:
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
       - DIRECT
-
   - name: 🍎 苹果服务
     type: select
     proxies:
       - DIRECT
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-
   - name: 🧩 微软服务
     type: select
     proxies:
       - DIRECT
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-
+  - name: 📟 Telegram
+    type: select
+    proxies:
+      - 🚀 手动切换
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬  新加坡节点
   - name: 🎶 网易音乐
     type: select
     proxies:
       - DIRECT
-
   - name: 🎬 哔哩哔哩
     type: select
     proxies:
       - DIRECT
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🚀 手动切换
       - DIRECT
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-
   - name: 🌏 国内网站
     type: select
     proxies:
       - DIRECT
       - 🚀 手动切换
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🚀 手动切换
       - DIRECT
-      - ✈️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
@@ -250,16 +227,16 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: url-test
     use:
-     - HK
-    url: "http://www.gstatic.com/generate_204"
+      - HK
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-     - REJECT
+      - REJECT
   - name: 🇯🇵 日本节点
     type: url-test
     use:
       - JP
-    url: "http://www.gstatic.com/generate_204"
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - REJECT
@@ -267,7 +244,7 @@ proxy-groups:
     type: url-test
     use:
       - TW
-    url: "http://www.gstatic.com/generate_204"
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - REJECT
@@ -275,124 +252,119 @@ proxy-groups:
     type: url-test
     use:
       - US
-    url: "http://www.gstatic.com/generate_204"
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - REJECT
-
+  - name: 🇸🇬  新加坡节点
+    type: url-test
+    use:
+      - SG
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
 rule-providers:
-
   Direct:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
     path: ./ruleset/direct.yaml
     interval: 86400
-
   AdvertisingLite:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml
     path: ./ruleset/Advertising_Classical.yaml
     interval: 86400
-  
   Hijacking:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml
     path: ./ruleset/Hijacking.yaml
     interval: 86400
-
   Privacy:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy_Classical.yaml
     path: ./ruleset/Privacy_Classical.yaml
     interval: 86400
-        
   YouTube:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
     path: ./ruleset/YouTube.yaml
     interval: 86400
-
   Netflix:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml
     path: ./ruleset/Netflix.yaml
     interval: 86400
-
   Disney:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml
     path: ./ruleset/Disney.yaml
     interval: 86400
-
   Bahamut:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml
     path: ./ruleset/Bahamut.yaml
     interval: 86400
-
   Apple:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml
     path: ./ruleset/Apple.yaml
     interval: 86400
-
   NetEaseMusic:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
     path: ./ruleset/NetEaseMusic.yaml
     interval: 86400
-    
   Microsoft:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
     path: ./ruleset/Microsoft.yaml
     interval: 86400
-
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
   BiliBili:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml
     path: ./ruleset/BiliBili.yaml
     interval: 86400
-
   Game:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
     path: ./ruleset/Game.yaml
     interval: 86400
-
   China:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
     path: ./ruleset/China.yaml
     interval: 86400
-
   Global_Classical:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Global/Global_Classical.yaml"
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Global/Global_Classical.yaml
     path: ./ruleset/Global_Classical.yaml
     interval: 86400
-
-
-
 rules:
   - RULE-SET,Direct,DIRECT
   - RULE-SET,AdvertisingLite,🆎 AdBlock-AdvertisingLite
-  - RULE-SET,Hijacking,🆎 AdBlock-Hijacking  
+  - RULE-SET,Hijacking,🆎 AdBlock-Hijacking
   - RULE-SET,Privacy,🆎 AdBlock-Privacy
   - RULE-SET,YouTube,🎬 YouTube
   - RULE-SET,Netflix,🎬 NETFLIX
@@ -400,6 +372,7 @@ rules:
   - RULE-SET,Bahamut,🎬 巴哈姆特
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,Microsoft,🧩 微软服务
+  - RULE-SET,Telegram,📟 Telegram
   - RULE-SET,NetEaseMusic,🎶 网易音乐
   - RULE-SET,BiliBili,🎬 哔哩哔哩
   - RULE-SET,Game,🎮 游戏平台

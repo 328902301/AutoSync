@@ -1,6 +1,5 @@
 if (!$response.body) $done({});
 const url = $request.url;
-let obj = JSON.parse($response.body);
 var body = null;
 
 if (url.includes("/a.p")) {
@@ -12,6 +11,7 @@ if (url.includes("/a.p")) {
       .replace(/"policytype":\d+/g, '"policytype":3')
       .replace(/"policy":\d+/g, '"policy":5');
   } else if (url.includes("getvip")) {
+    let obj = JSON.parse($response.body);
     obj.packs = {
       end: 32495443200,
       bought_vip: 1,
@@ -23,12 +23,13 @@ if (url.includes("/a.p")) {
   }
 } else if (url.includes("mgxhtj.kuwo.cn") || url.includes("nmobi.kuwo.cn")) {
   body = $response.body
-    .replace(/<ad\s[^>]*>/g, "")
+    .replace(/(<ad\s)[^>]*>/g, "")
     .replace(/(<userinfolabel\scontent="\[)[^"]*/g, "$1]");
 } else if (url.includes("searchrecterm.kuwo.cn")) {
-  body = '{"content":[{"query_word":"搜索歌曲","desc":""}]}';
+  body = { content: [{ query_word: "搜索歌曲", desc: "" }] };
 } else if (url.includes("/music.pay")) {
   if ($response.body.includes("audio")) {
+    let obj = JSON.parse($response.body);
     obj.songs[0].audio.forEach((item) => (item.st = 0));
     let tmp = obj.songs[0].audio[0].policy;
     obj.user[0] = {
@@ -59,6 +60,7 @@ if (url.includes("/a.p")) {
     body = JSON.stringify(obj);
   }
 } else if (url.includes("/vip/v2/user/vip")) {
+  let obj = JSON.parse($response.body);
   obj.data = {
     vipIcon: "https://image.kuwo.cn/fe/f2d09ac0-b959-404f-86fa-dc65c715c0e96.png",
     iconJumpUrl:
@@ -88,6 +90,7 @@ if (url.includes("/a.p")) {
   };
   body = JSON.stringify(obj);
 } else if (url.includes("/vip/v2/theme")) {
+  let obj = JSON.parse($response.body);
   obj.data.needBieds = null;
   body = JSON.stringify(obj);
 } else if (url.includes("/vip/enc/user/vip")) {

@@ -284,20 +284,22 @@ async function query({ cookie }) {
   } else {
     throw new Error(`[查询余量] ${desc || `未知错误 ${status || ''} ${code || ''}`}`)
   }
-  const {config, pkgs, packageName, time} = await parse({body,cookie})
-  return await diff({config, pkgs, packageName, time})
+  const {config, pkgs, packageName, time, sum, freeFlow} = await parse({body,cookie})
+  return await diff({config, pkgs, packageName, time, sum, freeFlow})
 }
 // 处理差异数据
-async function diff({config, pkgs, packageName, time: time10010 }) {
+async function diff({config, pkgs, packageName, time: time10010, sum, freeFlow}) {
   $.log('这次的 包', $.toStr(pkgs))
   let last = $.getjson(KEY_LAST)
-  let { pkgs: lastPkgs = [], time: lastTime } = last || {}
+  let { pkgs: lastPkgs = [], time: lastTime, sum: lastSum = 0, freeFlow: lastFreeFlow = 0 } = last || {}
   if (!last || !lastTime || !lastPkgs || !Array.isArray(lastPkgs)) {
     $.log('无上次或上次数据不正确', $.toStr(last))
     $.log(`💾 保存 本次数据 为 上次数据`)
     lastPkgs = pkgs || []
     lastTime = new Date().getTime()
-    last = { pkgs: lastPkgs, time: lastTime }
+    lastSum = sum
+    lastFreeFlow = freeFlow
+    last = { pkgs: lastPkgs, time: lastTime, sum: lastSum, freeFlow: lastFreeFlow }
     $.setjson(last, KEY_LAST)
     await notify(TITLE, `⚠️ 上次数据不存在/不正确`, '保存本次数据')
     // return { title: TITLE, subt: '⚠️ 上次数据不存在/不正确', desc: '保存本次数据 等待下次执行' }
@@ -306,13 +308,16 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
   const  nowTime   = new Date()
   const todayStartTime = new Date(nowTime.getFullYear(), nowTime.getMonth(), nowTime.getDate()).getTime()
   let today = $.getjson(KEY_TODAY)
-  let { pkgs: todayPkgs = [], time: todayTime } = today || {}
+  let { pkgs: todayPkgs = [], time: todayTime, sum: todaySum = 0, freeFlow: todayFreeFlow = 0 } = today || {}
+  
   if (!todayTime || !(todayTime >= todayStartTime) || !todayPkgs || !Array.isArray(todayPkgs)) {
     $.log('无今日数据或今日数据不正确或今日数据已过期', $.toStr(today))
     $.log(`💾 保存 本次数据 为 今日数据`)
     todayPkgs = pkgs || []
     todayTime = new Date().getTime()
-    today = { pkgs, time: todayTime }
+    todaySum = sum
+    todayFreeFlow = freeFlow
+    today = { pkgs, time: todayTime, sum: todaySum, freeFlow: todayFreeFlow }
     $.setjson(today, KEY_TODAY)
   }
   $.log('今日数据', $.toStr(today))
@@ -376,6 +381,56 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
     vars[`[${name}.今日用量].raw`] = todayRemainDiff
   }
 
+  let normal = parseNum(sum - freeFlow)
+  if (normal < 0) {
+    normal = 0
+  }
+  let lastNormal = parseNum(lastSum - lastFreeFlow)
+  if (lastNormal < 0) {
+    lastNormal = 0
+  }
+
+  let normalDiff = parseNum(normal - lastNormal)
+  if (normalDiff < 0) {
+    normalDiff = 0
+  }
+
+  
+  let todayNormal = parseNum(todaySum - todayFreeFlow)
+  if (todayNormal < 0) {
+    todayNormal = 0
+  }
+  todayNormal = parseNum(normal - todayNormal)
+  if (todayNormal < 0) {
+    todayNormal = 0
+  }
+  vars[`[原始通用.已用]`] = formatFlow(normal, 2)
+  vars[`[原始通用.用量]`] = formatFlow(normalDiff, 2)
+  vars[`[原始通用.今日用量]`] = formatFlow(todayNormal, 2)
+
+  vars[`[原始通用.已用].raw`] = normal
+  vars[`[原始通用.用量].raw`] = normalDiff
+  vars[`[原始通用.今日用量].raw`] = todayNormal
+
+  
+  let freeFlowDiff = parseNum(freeFlow - lastFreeFlow)
+  if (freeFlowDiff < 0) {
+    freeFlowDiff = 0
+  }
+  
+  let todayfreeFlowDiff = parseNum(freeFlow - todayFreeFlow)
+  if (todayfreeFlowDiff < 0) {
+    todayfreeFlowDiff = 0
+  }
+
+  vars[`[原始免流.已用]`] = formatFlow(freeFlow, 2)
+  vars[`[原始免流.用量]`] = formatFlow(freeFlowDiff, 2)
+  vars[`[原始免流.今日用量]`] = formatFlow(todayfreeFlowDiff, 2)
+
+  vars[`[原始免流.已用].raw`] = freeFlow
+  vars[`[原始免流.用量].raw`] = freeFlowDiff
+  vars[`[原始免流.今日用量].raw`] = todayfreeFlowDiff
+
   $.log('上次的 时间',new Date(lastTime).toLocaleString('zh'))
   let now = new Date()
   let seconds = (now.getTime() - lastTime) / 1000
@@ -415,7 +470,7 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
       if(($.isTile() || $.isPanel() || $.isRequestData()) && script_only){
         $.log(`面板/请求 不更新上次数据`)
       }else{
-        $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+        $.setjson({ pkgs: pkgs || [], time: new Date().getTime(), sum, freeFlow }, KEY_LAST)
       }
     } else {
       $.log(`不满足 [通用有限.用量] >= 最小用量通知阈值, 不通知`) 
@@ -429,7 +484,7 @@ async function diff({config, pkgs, packageName, time: time10010 }) {
       if(($.isTile() || $.isPanel() || $.isRequestData()) && script_only){
         $.log(`面板/请求 不更新上次数据`)
       }else{
-        $.setjson({ pkgs: pkgs || [], time: new Date().getTime() }, KEY_LAST)
+        $.setjson({ pkgs: pkgs || [], time: new Date().getTime(), sum, freeFlow }, KEY_LAST)
       }
     } else {
       $.log(`[通知阈值] 不满足 最小用量通知阈值条件`)
@@ -448,8 +503,10 @@ async function parse({ body,cookie }) {
   $.log(`🔛 [处理余量数据] 开始`)
   const time = $.lodash_get(body, 'time')
   let packageName = $.lodash_get(body, 'packageName')
-  const sum = parseNum($.lodash_get(body, 'summary.sum'))
-  const freeFlow = parseNum($.lodash_get(body, 'summary.freeFlow'))
+  let sum = parseNum($.lodash_get(body, 'summary.sum'))
+  if(sum < 0) sum = 0
+  let freeFlow = parseNum($.lodash_get(body, 'summary.freeFlow'))
+  if(freeFlow < 0) freeFlow = 0
   let sumTxt = formatFlow(sum, 2)
   let freeFlowTxt = formatFlow(freeFlow, 2)
   $.log(`[查询时间(联通)] ${time || '-'}`)

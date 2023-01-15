@@ -19,7 +19,7 @@
 # 微博国际版_屏蔽热推荐
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - reject-dict
 
-[Script]
+
 # > 微博_屏蔽发现页面搜索框热词
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js
 

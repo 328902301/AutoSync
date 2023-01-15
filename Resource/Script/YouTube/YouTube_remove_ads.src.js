@@ -278,7 +278,7 @@
             groupPos = 0;
           case "\n":
           case "\r":
-          case "	":
+          case "  ":
           case " ":
             continue;
           default:

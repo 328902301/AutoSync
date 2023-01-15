@@ -6,20 +6,24 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 [Rule]
-DOMAIN, sdkapp.uve.weibo.com, Direct
+DOMAIN, sdkapp.uve.weibo.com, DIRECT
 
 [Rewrite]
+# > 微博_应用内弹窗广告
+^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
+# > 微博_屏蔽SDK配置请求
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
 # 微博_Spotlight
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - reject-dict
 # 微博国际版_屏蔽热搜
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject-dict
 # 微博国际版_屏蔽热推荐
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - reject-dict
-# 微博国际版_屏蔽搜索建议
-# ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest - reject-dict
-
 
 [Script]
+# > 微博_屏蔽发现页面搜索框热词
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 屏蔽发现页面搜索框热词, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+
 # 微博自定义标签皮肤
 http-response ^https?:\/\/api\.weibo\.cn\/2\/!\/client\/light_skin script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博自定义标签皮肤, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 # 微博非会员设置标签皮肤
@@ -44,17 +48,14 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 
+# 微博国际版_屏蔽搜索信息[语法暂不支持]
+# ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Info.json
+
+# 微博国际版_屏蔽搜搜话题[语法暂不支持]
+# ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Topic.json
 
 
-# 微博国际版_屏蔽搜索信息
-#^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Info.json
-
-# 微博国际版_屏蔽搜搜话题
-#^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Topic.json
-
-
-
-# 微博国际版屏蔽开屏广告 
+# 微博国际版屏蔽开屏广告
 http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版屏蔽开屏广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
 
 # 微博及微博国际版去SDK广告

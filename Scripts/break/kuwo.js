@@ -23,7 +23,7 @@ if (url.includes("/a.p")) {
   }
 } else if (url.includes("mgxhtj.kuwo.cn") || url.includes("nmobi.kuwo.cn")) {
   body = $response.body
-    .replace(/<ad\sfocusid="\d+"[^>]\/>*/g, "</>")
+    .replace(/<ad\sfocusid="\d+"[^>]\/>*/g, "")
     .replace(/(<userinfolabel\scontent="\[)[^"]*/g, "$1]");
 } else if (url.includes("searchrecterm.kuwo.cn")) {
   body = '{ content: [{ query_word: "搜索歌曲", desc: "" }] }';

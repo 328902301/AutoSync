@@ -1,9 +1,4 @@
-  
-#港台番剧自动切换
-
 # Bilibili 哔哩哔哩 港澳台番剧
-
-
 HOST,api.biliapi.com,港台番剧
 HOST,api.biliapi.net,港台番剧
 HOST,api.bilibili.com,港台番剧

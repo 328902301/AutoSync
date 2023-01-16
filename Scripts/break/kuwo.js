@@ -3,7 +3,6 @@ const url = $request.url;
 var body = null;
 
 if (url.includes("/a.p")) {
-  // audio字头的
   if ($request.method == "POST") {
     body = $response.body
       .replace(/"playright":\d+/g, '"playright":1')

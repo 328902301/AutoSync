@@ -26,7 +26,7 @@ biliBili-json = type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.
 # Bili-应用开屏广告预加载@yjqiang
 biliBili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,max-size=0,script-path=https://github.com/Keywos/rule/raw/main/JS/bilijson.js,script-update-interval=-1
 
-# Bili-1080P高码率+4K画质(番剧和影视除外)@ddgksf2013
+# Bili-高码率画质(番剧和影视除外)@ddgksf2013
 biliBili-json = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,max-size=0,script-path=https://github.com/Keywos/rule/raw/main/JS/bilijson.js,script-update-interval=-1
 
 # Bili-热搜发现@ddgksf2013

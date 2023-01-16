@@ -16,7 +16,7 @@ hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, 
 [Script]
 # Bili-Proto去广告@app2smile 'V2.0.12';
 #最常访问dynamic\.v2\.Dynamic\/DynAll|;  json内 try catch 不需要注释 console.log 'V2.0.100'
-bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/Keywos/rule/raw/main/JS/biliproto.js,script-update-interval=-1
+bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|playurl\.v1\.PlayURL\/PlayView|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/Keywos/rule/raw/main/JS/biliproto.js,script-update-interval=-1
 
 # Bili-屏蔽首页右上活动@ddgksf2013
 biliBili-json = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,max-size=0,script-path=https://github.com/Keywos/rule/raw/main/JS/bilijson.js,script-update-interval=-1

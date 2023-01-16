@@ -17,7 +17,7 @@ if(!headers[gzipStrName]){
     gzipStrName = 'Grpc-Encoding';
 }
 const isGzipCompress = headers[gzipStrName] === 'gzip';
-if(logProcessFlag) // console.log(`isGzipCompress:${isGzipCompress}`);
+if(logProcessFlag); // console.log(`isGzipCompress:${isGzipCompress}`);
 const unGzipBody = isGzipCompress ? pako.ungzip(binaryBody.slice(5)) : binaryBody.slice(5);
 headers[gzipStrName] = 'identity';
 let body;
@@ -59,7 +59,7 @@ if(url.includes("Dynamic/DynAll")){
         body = processNewBody(dynAllReplyType.encode(dynAllReplyObj).finish());
     }
 } else if(url.includes("View/View")){
-    if(logProcessFlag) // console.log('视频播放页View/View');
+    if(logProcessFlag); // console.log('视频播放页View/View');
     const viewReplyType = biliRoot.lookupType("bilibili.app.view.ViewReply");
     let viewReplyObj = viewReplyType.decode(unGzipBody);
     
@@ -81,7 +81,7 @@ if(url.includes("Dynamic/DynAll")){
             }
         }
         viewReplyObj.cms = [];
-        if(logProcessFlag) // console.log(`up主推荐广告:${adCount}`);
+        if(logProcessFlag); // console.log(`up主推荐广告:${adCount}`);
         if(adCount){
             needProcessFlag = true;
         }
@@ -96,7 +96,7 @@ if(url.includes("Dynamic/DynAll")){
             }
             return true;
         });
-        if(logProcessFlag) // console.log(`相关推荐广告:${adCount}`);
+        if(logProcessFlag); // console.log(`相关推荐广告:${adCount}`);
         if(adCount){
             needProcessFlag = true;
         }
@@ -106,7 +106,7 @@ if(url.includes("Dynamic/DynAll")){
         const adsControlDtoType = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto");
         const adsControlDtoObj = adsControlDtoType.decode(adsControlValue);
         if(adsControlDtoObj?.hasDanmu === 1 || adsControlDtoObj?.cids?.length > 0){
-            if(logProcessFlag) // console.log(`up主推荐广告-弹幕. ${adsControlDtoObj?.hasDanmu}, ${adsControlDtoObj?.cids}`);
+            if(logProcessFlag); // console.log(`up主推荐广告-弹幕. ${adsControlDtoObj?.hasDanmu}, ${adsControlDtoObj?.cids}`);
             viewReplyObj.cmConfig = null;
             needProcessFlag = true;
         }
@@ -116,7 +116,7 @@ if(url.includes("Dynamic/DynAll")){
         for (const i in tIconMap) {
             if(tIconMap[i] === null){
                 // 解决tIcon的null is not an object问题
-                if(logProcessFlag) // console.log(`tIconMap:${i}`);
+                if(logProcessFlag); // console.log(`tIconMap:${i}`);
                 delete tIconMap[i];
             }
         }
@@ -140,7 +140,7 @@ if(url.includes("Dynamic/DynAll")){
 }
 
 if(needProcessFlag){
-    if(logProcessFlag) // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
+    if(logProcessFlag); // console.log(`${body.byteLength}---${body.buffer.byteLength}`);
     if(isQuanX){
         $done({
             bodyBytes: body.buffer.slice(body.byteOffset, body.byteLength + body.byteOffset),
@@ -153,7 +153,7 @@ if(needProcessFlag){
         });
     }
 } else {
-    if(logProcessFlag) // console.log('无需处理');
+    if(logProcessFlag); // console.log('无需处理');
     $done({});
 }
 

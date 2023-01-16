@@ -19,7 +19,7 @@ hostname = *.xiuxiu.meitu.com
 
 var chxm1023 = JSON.parse($response.body);
 const hysj = '/vip/prompt';
-const hyxx = '/vip/vip_show.json';
+const hyxx = '/vip/vip_show';
 const user = '/user';
 const hyzl = '/h5/vip/new_sub_detail';
 const hymb = '/h5/vip/vip_navigation';
@@ -28,7 +28,8 @@ if ($request.url.indexOf(hysj) != -1){
 chxm1023.data.home_btn_prompt = "立即查看";
 chxm1023.data.home_prompt = "会员有效期至2099/09/09";
 chxm1023.data.svip_bubble_text = "粉钻SVIP：有效期至2099/09/09\n粉钻VIP：有效期至2099/09/09";
-chxm1023.data.beautify_btn_prompt = "已解锁";}
+chxm1023.data.beautify_btn_prompt = "已解锁";
+}
 
 if ($request.url.indexOf(hyxx) != -1){
 chxm1023 = {
@@ -43,7 +44,7 @@ chxm1023 = {
     "screen_name": "",
     "avatar_url": "",
     "in_valid_time": 4092599349,
-    "gid": 1234567890,
+    "gid": 1234567090,
     "s": 1,
     "vip_type": 101,
     "platform": 2,
@@ -66,7 +67,8 @@ chxm1023.data.vip_icon = "https://xximg1.meitudata.com/6948531747980333892.png";
 chxm1023.data.follower_count = 999000;
 chxm1023.data.fan_count = 999000;
 chxm1023.data.favorites_count = 999000;
-chxm1023.data.be_like_count = 999000;}
+chxm1023.data.be_like_count = 999000;
+}
 
 if ($request.url.indexOf(hyzl) != -1){
 chxm1023.data.valid_time = 4092599349;
@@ -88,15 +90,13 @@ chxm1023.data.vip_type = 101;
 chxm1023.data.xx_vip.sub_type = 3;
 chxm1023.data.xx_vip.valid_time = 4092599349;
 chxm1023.data.xx_vip.expire_days = -66666;
-chxm1023.data.xx_vip.in_valid_time = 4092599349;}
+chxm1023.data.xx_vip.in_valid_time = 4092599349;
+}
 
 if ($request.url.indexOf(hymb) != -1){
-chxm1023 = {
-  "degrade" : 0,
-  "error_code" : 0,
-  "data" : {
-    "hello_text" : "欢迎使用，尊贵的SVIP用户",
-    "hbp_vip" : {
+let chxm1024 = $response.body;
+var chxm1023 = JSON.parse(chxm1024);
+chxm1023.data.hbp_vip = {
       "id" : "666666666666666666",
       "id_str" : "666666666666666666",
       "valid_time" : 4092599349,
@@ -106,7 +106,7 @@ chxm1023 = {
       "avatar_url" : "",
       "is_expire" : 0,
       "expire_days" : -66666,
-      "gid" : 1234567890,
+      "gid" : 1234567090,
       "vip_type" : 101,
       "platform" : 2,
       "sub_name" : "包年",
@@ -116,8 +116,8 @@ chxm1023 = {
       "create_time" : 1666666666,
       "screen_name" : "",
       "in_valid_time" : 4092599349
-    },
-    "rights_general" : [
+    };
+chxm1023.data.rights_general = [
       {
         "img" : "https://xximg1.meitudata.com/6972861955604497692.png",
         "title" : "SVIP专属",
@@ -148,8 +148,8 @@ chxm1023 = {
         "url" : "meituxiuxiu://miniapp?app_id=VipRights&showNav=0&title=viprights&type=svip&entrance=vip_bottom",
         "track_id" : "svip_12prerogatives"
       }
-    ],
-    "xx_vip" : {
+    ];
+chxm1023.data.xx_vip = {
       "id" : "666666666666666666",
       "id_str" : "666666666666666666",
       "valid_time" : 4092599349,
@@ -159,7 +159,7 @@ chxm1023 = {
       "avatar_url" : "",
       "is_expire" : 0,
       "expire_days" : -66666,
-      "gid" : 1234567890,
+      "gid" : 1234567090,
       "vip_type" : 1,
       "platform" : 2,
       "sub_name" : "包年",
@@ -168,13 +168,7 @@ chxm1023 = {
       "is_valid_user" : 1,
       "create_time" : 1666666666,
       "screen_name" : "",
-      "in_valid_time" : 4092599349
-    }
-  },
-  "msg" : "成功",
-  "error" : "Ok",
-  "ret" : 0
-};}
+      "in_valid_time" : 4092599349};
+}
 
 $done({body : JSON.stringify(chxm1023)});
-

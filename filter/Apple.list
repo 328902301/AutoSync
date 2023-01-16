@@ -1,8 +1,10 @@
 # Block iOS Update
-# DOMAIN,mesu.apple.com,REJECT
-# DOMAIN,gdmf.apple.com,REJECT
-# DOMAIN,updates-http.cdn-apple.com,REJECT
-# DOMAIN,xp.apple.com,REJECT
+# DOMAIN,mesu.apple.com,广告屏蔽
+# DOMAIN,gdmf.apple.com,广告屏蔽
+# DOMAIN,updates-http.cdn-apple.com,广告屏蔽
+# DOMAIN,xp.apple.com,广告屏蔽
+# DOMAIN,ns.itunes.apple.com,广告屏蔽
+# DOMAIN,appldnld.apple.com,广告屏蔽
 
 # Software Update
 # > macOS updates
@@ -32,26 +34,26 @@ DOMAIN,updates-http.cdn-apple.com,Apple服务
 DOMAIN,xp.apple.com,Apple服务
 
 # Apple
-DOMAIN-SUFFIX,aaplimg.com,Apple
-DOMAIN-SUFFIX,apple.co,Apple
-DOMAIN-SUFFIX,apple.com,Apple
-DOMAIN-SUFFIX,apple.com.cn,Apple
-DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-DOMAIN-SUFFIX,apple-livephotoskit.com,Apple
-DOMAIN-SUFFIX,apple-mapkit.com,Apple
-DOMAIN-SUFFIX,applemusic.com,Apple
-DOMAIN-SUFFIX,appstore.com,Apple
-DOMAIN-SUFFIX,apzones.com,Apple
-DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,icloud.com.cn,Apple
-DOMAIN-SUFFIX,icloud-content.com,Apple
-DOMAIN-SUFFIX,me.com,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
-DOMAIN-KEYWORD,apple.com.akadns.net,Apple
-DOMAIN-KEYWORD,apple.com.edgekey.net,Apple
-DOMAIN-KEYWORD,apple-support.akadns.net,Apple
-DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+DOMAIN-SUFFIX,aaplimg.com,Apple服务
+DOMAIN-SUFFIX,apple.co,Apple服务
+DOMAIN-SUFFIX,apple.com,Apple服务
+DOMAIN-SUFFIX,apple.com.cn,Apple服务
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple服务
+DOMAIN-SUFFIX,apple-livephotoskit.com,Apple服务
+DOMAIN-SUFFIX,apple-mapkit.com,Apple服务
+DOMAIN-SUFFIX,applemusic.com,Apple服务
+DOMAIN-SUFFIX,appstore.com,Apple服务
+DOMAIN-SUFFIX,apzones.com,Apple服务
+DOMAIN-SUFFIX,cdn-apple.com,Apple服务
+DOMAIN-SUFFIX,icloud.com,Apple服务
+DOMAIN-SUFFIX,icloud.com.cn,Apple服务
+DOMAIN-SUFFIX,icloud-content.com,Apple服务
+DOMAIN-SUFFIX,me.com,Apple服务
+DOMAIN-SUFFIX,mzstatic.com,Apple服务
+DOMAIN-KEYWORD,apple.com.akadns.net,Apple服务
+DOMAIN-KEYWORD,apple.com.edgekey.net,Apple服务
+DOMAIN-KEYWORD,apple-support.akadns.net,Apple服务
+DOMAIN-KEYWORD,icloud.com.akadns.net,Apple服务
 
 # App Store
 # Store content such as apps, books, and music

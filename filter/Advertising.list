@@ -1,24 +1,21 @@
-# 广告屏蔽
-# 更新时间 2022.9.8
+HOST-SUFFIX,openapi.mysteel.com/v5/getAdv.htm,广告屏蔽
+HOST-SUFFIX,ulogs.umeng.com,广告屏蔽
+HOST-SUFFIX,gslbali.ximalaya.com,广告屏蔽
+HOST-SUFFIX,adse.ximalaya.com,广告屏蔽
+HOST-SUFFIX,gslbtx.ximalaya.com,广告屏蔽
+HOST-SUFFIX,location.ximalaya.com,广告屏蔽
+HOST-SUFFIX,passport.ximalaya.com,广告屏蔽
+HOST-SUFFIX,adbehavior.ximalaya.com,广告屏蔽
+HOST-SUFFIX,ad.ximalaya.com,广告屏蔽
+HOST-SUFFIX,audid-api.taobao.com,广告屏蔽
 
-
-
-# Other
 HOST-SUFFIX,access.mypikpak.com,广告屏蔽
 HOST,access.mypikpak.com,广告屏蔽
-#HOST-SUFFIX,dig.bdurl.net,广告屏蔽
-#HOST-SUFFIX,rp.hpplay.cn,广告屏蔽
-#HOST-SUFFIX,whoami.akamai.net,广告屏蔽
+HOST-SUFFIX,dig.bdurl.net,广告屏蔽
+HOST-SUFFIX,rp.hpplay.cn,广告屏蔽
+HOST-SUFFIX,whoami.akamai.net,广告屏蔽
 HOST,d.image.i4.cn,广告屏蔽
 IP-CIDR,203.107.1.1/24,广告屏蔽
-
-
-# 屏蔽系统更新
-# host, ns.itunes.apple.com,广告屏蔽
-# host, appldnld.apple.com,广告屏蔽
-# host, mesu.apple.com,广告屏蔽
-# host, xp.apple.com,广告屏蔽
-# host, gdmf.apple.com,广告屏蔽
 
 HOST-SUFFIX,m.uc123.com,广告屏蔽
 HOST,wmedia-track.uc.cn,广告屏蔽

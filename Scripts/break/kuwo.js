@@ -1,3 +1,5 @@
+// 2023-01-16 13:36
+
 if (!$response.body) $done({});
 const url = $request.url;
 var body = null;
@@ -23,7 +25,7 @@ if (url.includes("/a.p")) {
 } else if (url.includes("mgxhtj.kuwo.cn") || url.includes("nmobi.kuwo.cn")) {
   body = $response.body
     .replace(/<ad\s(focusid|publish)="[^>]*>/g, "")
-    .replace(/(<userinfolabel\scontent="\[)[^"]*/g, "$1]");
+    .replace(/(<userinfolabel\scontent=")[^"]*/g, "$1[]]");
 } else if (url.includes("searchrecterm.kuwo.cn")) {
   body = '{ content: [{ query_word: "搜索歌曲", desc: "" }] }';
 } else if (url.includes("/music.pay")) {

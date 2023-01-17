@@ -6,7 +6,8 @@ tiles:
     interval: 300
     title: "网络信息"
     content: ""
-    argument: "icon=antenna.radiowaves.left.and.right.circle.fill&color=#5d84f8"
+    argument: "icon=antenna.radiowaves.left.and.right.circle.fill"
+    # argument: "icon=antenna.radiowaves.left.and.right.circle.fill&color=#5d84f8"
     # icon: "arrow.up.arrow.down.circle"
     # backgroundColor: "#663399"
 

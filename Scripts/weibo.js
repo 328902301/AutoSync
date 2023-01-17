@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-17 17:53
+// 2023-01-14 19:22
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -54,34 +54,34 @@ const itemMenusConfig = {
   mblog_menus_apeal: false, // 申诉
   mblog_menus_home: false // 返回首页
 };
-const modifyCardsUrls = ["/cardlist", "/video/community_tab", "/searchall"];
+const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
 const modifyStatusesUrls = [
-  "/groups/timeline",
-  "/statuses/friends/timeline",
-  "/statuses/unread_friends_timeline",
-  "/statuses/unread_hot_timeline"
+  "/2/groups/timeline",
+  "/2/statuses/friends/timeline",
+  "/2/statuses/unread_friends_timeline",
+  "/2/statuses/unread_hot_timeline"
 ];
 const otherUrls = {
-  "/checkin/show": "removeCheckin", // 签到任务
-  "/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
-  "/container/get_item": "containerHandler", // 列表相关
-  "/messageflow": "removeMsgAd", // 私信推广
-  "/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
-  "/profile/container_timeline": "userHandler", // 用户主页
-  "/profile/me": "removeHome", // 个人页模块
-  "/push/active": "removeRed", // 右上角红包
-  "/search/container_discover": "removeSearch", // 搜索 tab 信息流
-  "/search/container_timeline": "removeSearch", // 搜索 tab 信息流
-  "/search/finder": "removeSearchMain",
-  "/statuses/container_timeline": "removeMain", // 新版主页广告
-  "/statuses/container_timeline_topic": "removeTopic", // 超话 信息流
-  "/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
-  "/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
-  "/statuses/extend": "itemExtendHandler", // 微博详情页
-  "/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
-  "/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
-  "/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
+  "/2/checkin/show": "removeCheckin", // 签到任务
+  "/2/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
+  "/2/container/get_item": "containerHandler", // 列表相关
+  "/2/messageflow": "removeMsgAd", // 私信推广
+  "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
+  "/2/profile/container_timeline": "userHandler", // 用户主页
+  "/2/profile/me": "removeHome", // 个人页模块
+  "/2/push/active": "removeRed", // 右上角红包
+  "/2/search/container_discover": "removeSearch", // 搜索 tab 信息流
+  "/2/search/container_timeline": "removeSearch", // 搜索 tab 信息流
+  "/2/search/finder": "removeSearchMain",
+  "/2/statuses/container_timeline": "removeMain", // 新版主页广告
+  "/2/statuses/container_timeline_topic": "removeTopic", // 超话 信息流
+  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
+  "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
+  "/2/statuses/extend": "itemExtendHandler", // 微博详情页
+  "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
+  "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
+  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
+  "/2/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
 };
 
 function getModifyMethod(url) {
@@ -568,49 +568,6 @@ function removeMediaHomelist(data) {
   if (mainConfig.removeLiveMedia) {
     data.data = [];
   }
-}
-
-if (url.includes("/interface/sdk/sdkad.php")) {
-  body = body.match(/\{.*\}/);
-  let obj = JSON.parse(body);
-  if (obj.needlocation) obj.needlocation = false;
-  if (obj.show_push_splash_ad) obj.show_push_splash_ad = false;
-  if (obj.code) obj.code = 200;
-  if (obj.background_delay_display_time) {
-    obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
-  }
-  if (obj.lastAdShow_delay_display_time) {
-    obj.lastAdShow_delay_display_time = 31536000;
-  }
-  if (obj.realtime_ad_video_stall_time) {
-    obj.realtime_ad_video_stall_time = 31536000;
-  }
-  if (obj.realtime_ad_timeout_duration) {
-    obj.realtime_ad_timeout_duration = 31536000;
-  }
-  if (obj.ads) {
-    for (let item of obj["ads"]) {
-      item["displaytime"] = 0;
-      item["displayintervel"] = 31536000;
-      item["allowdaydisplaynum"] = 0;
-      item["begintime"] = "2040-01-01 00:00:00";
-      item["endtime"] = "2040-01-01 23:59:59";
-    }
-  }
-  body = JSON.stringify(obj) + "OK";
-}
-
-if (url.includes("/wbapplua/wbpullad.lua")) {
-  let obj = JSON.parse(body);
-  if (obj.cached_ad && obj.cached_ad.ads) {
-    for (let item of obj["cached_ad"]["ads"]) {
-      item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      item["show_count"] = 0;
-      item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
-      item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-    }
-  }
-  body = JSON.stringify(obj);
 }
 
 var url = $request.url;

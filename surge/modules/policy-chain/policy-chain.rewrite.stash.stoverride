@@ -6,7 +6,7 @@ tiles:
     interval: 300
     title: "策略检测"
     content: "..."
-    argument: "icon=antenna.radiowaves.left.and.right.circle.fill"
+    argument: "icon=antenna.radiowaves.left.and.right.circle.fill&backgroundColor=#1CBB5E"
     # argument: "icon=antenna.radiowaves.left.and.right.circle.fill&color=#5d84f8"
     # icon: "arrow.up.arrow.down.circle"
     # backgroundColor: "#663399"

@@ -121,9 +121,7 @@ async function getDomesticChain() {
       url: domesticUrl,
       method: 'head',
     })
-  } catch (e) {
-    console.error(e)
-  }
+  } catch (e) {}
   try {
     const res = await $.http.get({
       url: `http://127.0.0.1:9090/connections`,

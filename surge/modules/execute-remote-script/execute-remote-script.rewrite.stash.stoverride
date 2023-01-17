@@ -25,10 +25,9 @@ tiles:
     interval: 3153600000
     title: "执行远程脚本"
     content: "..."
-    argument: "icon=number.circle.fill"
     # argument: "icon=number.circle.fill&color=#663399"
-    # icon: "number.circle.fill"
-    # backgroundColor: "#86A697"
+    icon: "number.circle.fill"
+    backgroundColor: "#86A697"
 
 http:
   force-http-engine:

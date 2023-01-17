@@ -28,7 +28,6 @@ if ($request.url.indexOf(hysj) != -1){
 chxm1023.data.home_btn_prompt = "立即查看";
 chxm1023.data.home_prompt = "会员有效期至2099/09/09";
 chxm1023.data.svip_bubble_text = "粉钻SVIP：有效期至2099/09/09\n粉钻VIP：有效期至2099/09/09";
-chxm1023.data.beautify_btn_prompt = "已解锁";
 }
 
 if ($request.url.indexOf(hyxx) != -1){
@@ -62,20 +61,17 @@ chxm1023 = {
 
 if ($request.url.indexOf(user) != -1){
 chxm1023.data.vip_type = 1;
-chxm1023.data.is_authorize = 1;
 chxm1023.data.vip_icon = "https://xximg1.meitudata.com/6948531747980333892.png";
 chxm1023.data.follower_count = 999000;
 chxm1023.data.fan_count = 999000;
-chxm1023.data.favorites_count = 999000;
 chxm1023.data.be_like_count = 999000;
 }
 
 if ($request.url.indexOf(hyzl) != -1){
 chxm1023.data.valid_time = 4092599349;
-chxm1023.data.vip_power_num = 999;
-chxm1023.data.new_power_num = 999;
-chxm1023.data.welfare_center_num = 999;
-chxm1023.data.rights_page_vip_btn_title = "已解锁";
+chxm1023.data.vip_power_num = 999999;
+chxm1023.data.new_power_num = 999999;
+chxm1023.data.welfare_center_num = 999999;
 chxm1023.data.s = 1;
 chxm1023.data.expire_days = -66666;
 chxm1023.data.sub_type = 3;

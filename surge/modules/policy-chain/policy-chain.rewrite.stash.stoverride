@@ -7,7 +7,7 @@ tiles:
     title: "策略检测"
     content: "..."
     # argument: "icon=antenna.radiowaves.left.and.right.circle.fill&backgroundColor=#1CBB5E"
-    icon: "antenna.radiowaves.left.and.right.circle"
+    icon: "globe.asia.australia.fill"
     backgroundColor: "#1CBB5E"
     # debug: true
 

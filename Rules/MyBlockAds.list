@@ -1,4 +1,4 @@
-# 2023-01-11 08:55
+# 2023-01-17 21:41
 
 # ======= 0 ======= #
 # 解除安全浏览限制
@@ -30,6 +30,10 @@ HOST,awaken.amap.com,MyBlockAds
 HOST,free-aos-cdn-image.amap.com,MyBlockAds
 # 工商银行 开屏广告
 HOST,pageviewp.icbc.com.cn,MyBlockAds
+HOST,api-access.pangolin-sdk-toutiao.com,MyBlockAds
+HOST,is.snssdk.com,MyBlockAds
+HOST,mi.gdt.qq.com,MyBlockAds
+HOST,open.e.kuaishou.com,MyBlockAds
 
 # ======= K ======= #
 # 酷我音乐 导致设备发热

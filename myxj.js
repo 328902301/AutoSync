@@ -41,8 +41,6 @@ chxm1023.data.be_like_count = 999000;
 }
 
 if ($request.url.indexOf(hymb) != -1){
-let chxm1024 = $response.body;
-var chxm1023 = JSON.parse(chxm1024);
 chxm1023.response.user_info = {
       "status" : 1,
       "period_type" : 11,

@@ -30,6 +30,7 @@ HOST,awaken.amap.com,MyBlockAds
 HOST,free-aos-cdn-image.amap.com,MyBlockAds
 # 工商银行 开屏广告
 HOST,pageviewp.icbc.com.cn,MyBlockAds
+# 广告联盟
 HOST,api-access.pangolin-sdk-toutiao.com,MyBlockAds
 HOST,is.snssdk.com,MyBlockAds
 HOST,mi.gdt.qq.com,MyBlockAds

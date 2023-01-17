@@ -4,7 +4,7 @@
 #force-http-engine-hosts =  %APPEND% cn*.bilivideo.com
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT-NO-DROP
-OR,((AND,((OR,((DOMAIN-KEYWORD,cn-), (DOMAIN-KEYWORD,mcdn))), (DOMAIN-KEYWORD,bilivideo.c))), (DOMAIN-SUFFIX,szbdyd.com), (DEST-PORT,4480)),REJECT-NO-DROP //b站垃圾cdn
+#OR,((AND,((OR,((DOMAIN-KEYWORD,cn-), (DOMAIN-KEYWORD,mcdn))), (DOMAIN-KEYWORD,bilivideo.c))), (DOMAIN-SUFFIX,szbdyd.com), (DEST-PORT,4480)),REJECT-NO-DROP //b站垃圾cdn,禁用会导致无法缓存视频,所以注释掉
 [MITM]
 hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, grpc.biliapi.net, api.biliapi.net, api.biliapi.com, api.bilibili.com, api.bilibili.net, manga.bilibili.com
 [URL Rewrite]

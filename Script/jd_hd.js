@@ -25,7 +25,7 @@ $.isNeedToolsDomain = false;
 $.seckill = false;
 
 if ($request.url.includes('/seckill')) {
-  $.seckill = true;
+  // $.seckill = true;
 }
 
 let urlSku;
@@ -60,6 +60,7 @@ function randomInteger(min, max) {
 let prefix = randomInteger(777, 7777);
 
 let html = $response.body || '';
+
 // console.log(`html:${html}`);
 let modifiedHeaders = { ...$response.headers };
 if (modifiedHeaders['Content-Security-Policy'])
@@ -129,6 +130,11 @@ try {
   }
 
   sku = arr.length != 0 ? arr[1] : '';
+
+  const vx77 =
+    url.includes('getcoupon') &&
+    html.includes('handleCard') &&
+    html.includes('jssdk');
 
   let cookieListDom = `<ul class="cks">`;
 
@@ -205,7 +211,23 @@ try {
   let scriptDoms = `<script src="https://unpkg.com/vconsole@3.14.6/dist/vconsole.min.js" ignore></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js" ignore></script>`;
 
+  if (vx77) {
+    html = html.replace(
+      '{initJSSDK(initPage)},200);',
+      '{initJSSDK(initPage)},0);'
+    );
+  }
+
   let mitmFixContent = `<script ignore>
+    
+    if (
+      ${vx77}
+    ) {
+      setTimeout(() => {
+        if (window.handleCard) handleCard();
+      }, 1);
+    }
+
     if (Map !== _${prefix}_id77_Map) {
       // 兼容保价页面
       if(!Map.prototype.set &&((Map.toString && Map.toString()) || '').includes('this.elements')){
@@ -247,8 +269,16 @@ try {
     }
   </script>`;
 
-  const mitmContent = `
-  <style>
+  let mitmContent = `<style>`;
+  if (vx77) {
+    mitmContent += `
+      #cardBtn {
+        width: 100%;
+        height: 7.7rem;
+      }
+    `;
+  }
+  mitmContent += `
     body > a {
         display: inline-block !important;
     }

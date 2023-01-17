@@ -94,8 +94,6 @@ chxm1023.data.xx_vip.in_valid_time = 4092599349;
 }
 
 if ($request.url.indexOf(hymb) != -1){
-let chxm1024 = $response.body;
-var chxm1023 = JSON.parse(chxm1024);
 chxm1023.data.hbp_vip = {
       "id" : "666666666666666666",
       "id_str" : "666666666666666666",

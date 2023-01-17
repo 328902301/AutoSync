@@ -870,7 +870,7 @@
     },
     {
       "id": "xream.10010v3",
-      "name": "联通余量(v3)",
+      "name": "联通余量(v3) 请使用 v4",
       "descs_html": [
         "<a href=\"https://github.com/xream/scripts/tree/main/surge/modules/10010v3\">查看文档</a>",
         "<b>登录方式一</b>",

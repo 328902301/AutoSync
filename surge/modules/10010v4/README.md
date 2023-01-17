@@ -1,10 +1,8 @@
 # 联通余量(v4)
 
-新版测试中 非群内用户勿用
+> [免责声明](https://github.com/xream/scripts/blob/main/README.md)
 
 > 欢迎加入群组 [https://t.me/zhetengsha_group](https://t.me/zhetengsha_group)
-
-> [免责声明](https://github.com/xream/scripts/blob/main/README.md)
 
 ## 说明文档
 

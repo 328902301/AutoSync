@@ -1,6 +1,8 @@
 name: 联通余量(v4)
 desc: 定时查询 与 Tile 面板
 
+# 查看仓库 📦 https://github.com/xream/scripts/tree/main/surge/modules/10010v4
+
 http:
   force-http-engine:
     - "10010v4.com"

@@ -76,8 +76,8 @@ const invalidCookieCodes = ['999999', '999998']
 const maintenanceCodes = ['4114030182']
 
 
-const dataFile = `10010v4${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`
-const $ = new Env('10010v4', {dataFile})
+const dataFile = `${NAME}${NAMESPACE==='xream'?'':`-${NAMESPACE}`}-box.dat`
+const $ = new Env(`${NAME}`, {dataFile})
 
 if($.isNode()) {
   $.log(`[Node.js] dataFile`, dataFile)

@@ -1,11 +1,11 @@
-name: 策略检测
+name: 策略检测 Tile 面板
 desc: 包含国内受限, 国内和国外. 自己设置对应域名的分流
 
 tiles:
   - name: "策略检测"
     interval: 300
     title: "策略检测"
-    content: ""
+    content: "..."
     argument: "icon=antenna.radiowaves.left.and.right.circle.fill"
     # argument: "icon=antenna.radiowaves.left.and.right.circle.fill&color=#5d84f8"
     # icon: "arrow.up.arrow.down.circle"

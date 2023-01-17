@@ -1,4 +1,4 @@
-// 2023-01-06 22:30
+// 2023-01-17 13:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -85,20 +85,21 @@ if (obj.data) {
     obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   } else if (url.includes("/x/v2/feed/index")) {
     // 哔哩哔哩-推荐广告
-    if (obj.data.items?.length) {
+    if (obj.data.items) {
       obj.data.items = obj.data.items.filter((i) => {
         const { card_type: cardType, card_goto: cardGoto } = i;
         if (cardType && cardGoto) {
           if (cardType === "banner_v8" && cardGoto === "banner") {
-            if (i.banner_item) {
+            return false;
+            // if (i.banner_item) {
               // 去除判断条件 首页横版内容全部去掉
               // for (const v of i.banner_item) {
               //   if (v.type) {
               //     if (v.type === "ad") return false;
               //   }
               // }
-              return false;
-            }
+              // return false;
+            // }
           } else if (
             cardType === "cm_v2" &&
             ["ad_web_s", "ad_av", "ad_web_gif", "ad_player", "ad_inline_3d"].includes(cardGoto)

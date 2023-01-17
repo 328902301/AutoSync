@@ -613,7 +613,7 @@ if (url.includes("/wbapplua/wbpullad.lua")) {
   body = JSON.stringify(obj);
 }
 
-const url = $request.url;
+var url = $request.url;
 var body = $response.body;
 let method = getModifyMethod(url);
 

@@ -1,5 +1,7 @@
-name: 10010v3
-desc: 联通余量(v3)
+name: 联通余量(v3)
+desc: >-
+  定时查询 与 Tile 面板
+  请使用 v4
 
 http:
   force-http-engine:

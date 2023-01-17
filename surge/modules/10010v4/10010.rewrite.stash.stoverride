@@ -1,5 +1,5 @@
 name: 联通余量(v4)
-desc: 新版测试中 非群内用户勿用 https://t.me/zhetengsha_group
+desc: 定时查询 与 Tile 面板
 
 http:
   force-http-engine:

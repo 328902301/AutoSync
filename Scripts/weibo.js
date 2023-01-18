@@ -103,17 +103,17 @@ const otherUrls = {
 };
 
 function getModifyMethod(url) {
-  for (let s of modifyCardsUrls) {
+  for (const s of modifyCardsUrls) {
     if (url.indexOf(s) !== -1) {
       return "removeCards";
     }
   }
-  for (let s of modifyStatusesUrls) {
+  for (const s of modifyStatusesUrls) {
     if (url.indexOf(s) !== -1) {
       return "removeTimeLine";
     }
   }
-  for (let [path, method] of Object.entries(otherUrls)) {
+  for (const [path, method] of Object.entries(otherUrls)) {
     if (url.indexOf(s) !== -1) {
       return method;
     }
@@ -356,7 +356,7 @@ function lvZhouHandler(data) {
     return data;
   }
   let newStruct = [];
-  for (let s of struct) {
+  for (const s of struct) {
     if (s.name !== "绿洲") {
       newStruct.push(s);
     }
@@ -379,7 +379,7 @@ function isBlock(data) {
 }
 
 function removeTimeLine(data) {
-  for (let s of ["ad", "advertises", "trends", "headers"]) {
+  for (const s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) {
       delete data[s];
     }
@@ -388,7 +388,7 @@ function removeTimeLine(data) {
     return data;
   }
   let newStatuses = [];
-  for (let s of data.statuses) {
+  for (const s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
       if (s?.common_struct) {

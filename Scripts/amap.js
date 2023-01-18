@@ -1,4 +1,4 @@
-// 2023-01-13 17:00
+// 2023-01-18 22:12
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -9,6 +9,9 @@ if (obj.data) {
     // 高德地图-首页卡片
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter((item) => item.dataKey === "LoginCard");
+    }
+    if (obj.data.mapBizList) {
+      obj.data.mapBizList = [];
     }
   } else if (url.includes("/promotion-web/resource")) {
     // 高德地图-打车
@@ -21,6 +24,15 @@ if (obj.data) {
     // 高德地图-我的
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter((item) => item.dataKey === "MyOrderCard");
+    }
+  } else if (url.includes("/shield/frogserver/aocs")) {
+    // 高德地图-首页右上角动图
+    if (obj.data.home_business_position_config) {
+      obj.data.home_business_position_config = {
+        "status": 1,
+        "version": "",
+        "value": ""
+      }
     }
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近

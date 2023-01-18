@@ -17,7 +17,10 @@ DOMAIN,cmi.pololine.ml
 DOMAIN,bsem.ddns.me
 # Bluesea Music
 DOMAIN,emby-pub1.blueseacdn.com
-DOMAIN-SUFFIX,blueseamusics.com
+DOMAIN,blueseamusics.com
 # HDOBOX
-DOMAIN-SUFFIX,onthecloudcdn.com
+DOMAIN,onthecloudcdn.com
+
+DOMAIN,xiaoya.pro
+DOMAIN,epicgames.com
 

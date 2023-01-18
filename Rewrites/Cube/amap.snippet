@@ -1,5 +1,5 @@
 # ======= 高德地图 ======= #
-# 2023-01-13 15:58
+# 2023-01-18 22:03
 
 # 首页卡片
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
@@ -10,6 +10,9 @@
 
 # 我的卡片
 ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+
+# 首页右上角动图
+^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
 # 搜索框热词
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict

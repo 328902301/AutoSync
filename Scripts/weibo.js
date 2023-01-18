@@ -400,8 +400,8 @@ function removeHome(data) {
         }
         newItems.push(item);
       } else if (itemId === "100505_-_manage2") {
-        if (item.footer) {
-          item.footer = {};
+        if (item.body) {
+          item.body = {};
         }
         newItems.push(item);
       } else {

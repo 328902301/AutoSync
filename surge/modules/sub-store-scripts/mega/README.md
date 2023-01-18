@@ -6,9 +6,7 @@
 
 > [应该不会维护了 请使用 lite 版](https://github.com/xream/scripts/tree/main/surge/modules/sub-store-scripts/lite)
 
-> [应该不会维护了 请使用 lite 版](https://github.com/xream/scripts/tree/main/surge/modules/sub-store-scripts/lite)
-
-> [应该不会维护了 请使用 lite 版](https://github.com/xream/scripts/tree/main/surge/modules/sub-store-scripts/lite)
+---
 
 使用了 [chavyleung 大佬的 Env.js](https://github.com/chavyleung/scripts/blob/master/Env.js). 兼容 QuanX, Surge, Loon, Shadowrocket, Stash 等客户端
 

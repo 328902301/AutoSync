@@ -1,22 +1,22 @@
 function operator(proxies = []) {
-  const _ = lodash
-
-  const host = _.get($arguments, 'host')
-  const hostPrefix = _.get($arguments, 'hostPrefix')
-  const hostSuffix = _.get($arguments, 'hostSuffix')
-  const port = _.get($arguments, 'port')
-  const portPrefix = _.get($arguments, 'portPrefix')
-  const portSuffix = _.get($arguments, 'portSuffix')
-  const defaultPath = _.get($arguments, 'defaultPath') || '/'
-  let path = _.get($arguments, 'path')
-  const pathPrefix = _.get($arguments, 'pathPrefix')
-  const pathSuffix = _.get($arguments, 'pathSuffix')
-  const defaultMethod = _.get($arguments, 'defaultMethod') || 'GET'
-  let method = _.get($arguments, 'method')
-  const array = _.get($arguments, 'array')
-  const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
-
   return proxies.map((p = {}) => {
+    const _ = lodash
+
+    const host = _.get($arguments, 'host')
+    const hostPrefix = _.get($arguments, 'hostPrefix')
+    const hostSuffix = _.get($arguments, 'hostSuffix')
+    const port = _.get($arguments, 'port')
+    const portPrefix = _.get($arguments, 'portPrefix')
+    const portSuffix = _.get($arguments, 'portSuffix')
+    const defaultPath = _.get($arguments, 'defaultPath') || '/'
+    let path = _.get($arguments, 'path')
+    const pathPrefix = _.get($arguments, 'pathPrefix')
+    const pathSuffix = _.get($arguments, 'pathSuffix')
+    const defaultMethod = _.get($arguments, 'defaultMethod') || 'GET'
+    let method = _.get($arguments, 'method')
+    const array = _.get($arguments, 'array')
+    const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
+    
     let network = _.get(p, 'network')
     const type = _.get(p, 'type')
     /* 只修改 vmess 和 vless */

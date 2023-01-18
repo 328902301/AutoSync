@@ -114,25 +114,25 @@ async function operator(proxies = []) {
 
 ```JavaScript
 async function operator(proxies = []) {
-    const _ = lodash
-
-    const host = _.get($arguments, 'host') || 'dm.toutiao.com'
-    const hostPrefix = _.get($arguments, 'hostPrefix')
-    const hostSuffix = _.get($arguments, 'hostSuffix') || '[头条]'
-    // 注意我这里没改端口
-    // 要改的话 是这样改 const port = _.get($arguments, 'port') || 80
-    const port = _.get($arguments, 'port')
-
-    const portPrefix = _.get($arguments, 'portPrefix')
-    const portSuffix = _.get($arguments, 'portSuffix')
-    const path = _.get($arguments, 'path') || '/'
-    const pathPrefix = _.get($arguments, 'pathPrefix')
-    const pathSuffix = _.get($arguments, 'pathSuffix')
-    const method = _.get($arguments, 'method') || 'GET'
-    const array = _.get($arguments, 'array') || true
-    const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
-
     return proxies.map((p = {}) => {
+        const _ = lodash
+
+        const host = _.get($arguments, 'host') || 'dm.toutiao.com'
+        const hostPrefix = _.get($arguments, 'hostPrefix')
+        const hostSuffix = _.get($arguments, 'hostSuffix') || '[头条]'
+        // 注意我这里没改端口
+        // 要改的话 是这样改 const port = _.get($arguments, 'port') || 80
+        const port = _.get($arguments, 'port')
+
+        const portPrefix = _.get($arguments, 'portPrefix')
+        const portSuffix = _.get($arguments, 'portSuffix')
+        const path = _.get($arguments, 'path') || '/'
+        const pathPrefix = _.get($arguments, 'pathPrefix')
+        const pathSuffix = _.get($arguments, 'pathSuffix')
+        const method = _.get($arguments, 'method') || 'GET'
+        const array = _.get($arguments, 'array') || true
+        const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
+
         // 沃音乐 公免
         // 名称判断 _.includes(p.name, '沃音乐') || _.includes(p.name, '公免')
         // 或 path 判断

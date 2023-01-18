@@ -1,4 +1,4 @@
-// 2023-01-13 17:00
+// 2023-01-18 21:56
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -21,6 +21,14 @@ if (obj.data) {
     // 高德地图-我的
     if (obj.data.cardList) {
       obj.data.cardList = obj.data.cardList.filter((item) => item.dataKey === "MyOrderCard");
+    }
+  } else if (url.includes("/shield/frogserver/aocs")) {
+    if (obj.data?.home_business_position_config) {
+      obj.data.home_business_position_config = {
+        "status": 1,
+        "version": "",
+        "value": ""
+      }
     }
   } else if (url.includes("/shield/search/nearbyrec_smart")) {
     // 高德地图-附近

@@ -332,14 +332,14 @@ function removeHomeVip(data) {
   if (!data.header) {
     return data;
   }
-  if (data.header.vipCenter) {
-    delete data.header.vipCenter;
-  }
   if (data.header.vipView) {
-    delete data.header.vipView;
+    data.header.vipView = {};
+  }
+  if (data.header.vipCenter) {
+    data.header.vipCenter = {};
   }
   if (data.header.vipIcon) {
-    delete data.header.vipIcon;
+    data.header.vipIcon = {};
   }
   return data;
 }

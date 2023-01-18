@@ -444,9 +444,9 @@ function checkSearchWindow(item) {
     item.data?.itemid === "more_frame" ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
-    return false;
+    return true;
   }
-  return true;
+  return false;
 }
 
 // 发现页

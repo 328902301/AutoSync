@@ -1,11 +1,11 @@
 # ======= 微博 ======= #
-# 2023-01-14 19:25
+# 2023-01-19 10:42
 
 # 去除开屏广告
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php\? url reject
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 
 # 去除信息流广告和各种推广模块
 ^https:\/\/api\.weibo\.cn\/2\/cardlist url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js

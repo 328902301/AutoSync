@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 16:25
+// 2023-01-19 16:58
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -133,7 +133,7 @@ function isAd(data) {
   }
   if (
     data.common_struct &&
-    data.common_struct[0]?.actionlog?.source?.includes("ad")
+    data.common_struct[0].actionlog.source.includes("ad")
   ) {
     return true;
   }
@@ -227,13 +227,11 @@ function removeTimeLine(data) {
     if (!isAd(s)) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
-        if (s.category === "feed") {
-          // 移除拓展信息
-          if (s?.common_struct) {
-            delete s.common_struct;
-          }
-          newStatuses.push(s);
+        // 移除拓展信息
+        if (s.common_struct) {
+          delete s.common_struct;
         }
+        newStatuses.push(s);
       }
     }
   }
@@ -304,7 +302,7 @@ function removeMsgAd(data) {
   }
   let newMsgs = [];
   for (let msg of data.messages) {
-    if (msg.msg_card?.ad_tag) {
+    if (msg.msg_card.ad_tag) {
       continue;
     } else {
       newMsgs.push(msg);
@@ -322,9 +320,9 @@ function removePage(data) {
       data.cards[0].card_group = data.cards[0].card_group.filter(
         (c) =>
           !(
-            c?.actionlog?.ext?.includes("ads_word") ||
-            c?.itemid?.includes("t:51") ||
-            c?.itemid?.includes("ads_word")
+            c.actionlog.ext.includes("ads_word") ||
+            c.itemid.includes("t:51") ||
+            c.itemid.includes("ads_word")
           )
       );
     }
@@ -350,7 +348,7 @@ function userHandler(data) {
       }
     }
     if (isAdd) {
-      if (item.data?.common_struct) {
+      if (item.data.common_struct) {
         delete item.data.common_struct;
       }
       newItems.push(item);
@@ -484,13 +482,13 @@ function checkSearchWindow(item) {
     return false;
   }
   if (
-    item.data?.card_type === 19 ||
-    item.data?.card_type === 208 ||
-    item.data?.card_type === 217 ||
-    item.data?.card_type === 1005 ||
-    item.data?.itemid === "finder_window" ||
-    item.data?.itemid === "more_frame" ||
-    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
+    item.data.card_type === 19 ||
+    item.data.card_type === 208 ||
+    item.data.card_type === 217 ||
+    item.data.card_type === 1005 ||
+    item.data.itemid === "finder_window" ||
+    item.data.itemid === "more_frame" ||
+    item.data.mblog.page_info.actionlog.source.includes("ad")
   ) {
     return true;
   }
@@ -594,7 +592,7 @@ function topicHandler(data) {
       }
       if (c.itemid === "bottom_mix_activity") {
         addFlag = false;
-      } else if (c?.top?.title === "正在活跃") {
+      } else if (c.top && c.top.title === "正在活跃") {
         addFlag = false;
       } else if (c.card_type === 200 && c.group) {
         addFlag = false;
@@ -663,7 +661,7 @@ function itemExtendHandler(data) {
     }
   }
   // 移除拓展卡片
-  if (data?.extend_info) {
+  if (data.extend_info) {
     data.extend_info = {};
   }
   // 移除超话新帖和新用户通知

@@ -43,7 +43,7 @@ chxm1023 = {
     "screen_name": "",
     "avatar_url": "",
     "in_valid_time": 4092599349,
-    "gid": 1234567090,
+    "gid": 1234567890,
     "s": 1,
     "vip_type": 101,
     "platform": 2,

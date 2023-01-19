@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 11:51
+// 2023-01-19 11:58
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -451,14 +451,6 @@ function checkSearchWindow(item) {
   if (item.category !== "card") {
     return false;
   }
-  // 搜索页中间的 热议话题、热门人物
-  if (item.category === "group") {
-    if (item.itemId) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   if (
     item.data?.card_type === 19 ||
     item.data?.card_type === 208 ||
@@ -486,6 +478,10 @@ function removeSearch(data) {
       }
     } else {
       if (!checkSearchWindow(item)) {
+        // 搜索页中间的热议话题、热门人物
+        if (item.category === "group") {
+          continue;
+        }
         newItems.push(item);
       }
     }

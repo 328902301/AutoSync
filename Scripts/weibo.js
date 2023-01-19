@@ -452,7 +452,7 @@ function checkSearchWindow(item) {
     return false;
   }
   // 搜索页中间的 热议话题、热门人物
-  if (item.category !== "group") {
+  if (item.category === "group") {
     return true;
   }
   if (

@@ -1,8 +1,9 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 11:58
+// 2023-01-19 12:08
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
+
 // 主要的选项配置
 const mainConfig = {
   // 个人中心配置
@@ -35,6 +36,7 @@ const mainConfig = {
   removeUnfollowTopic: true, // 移除未关注的人
   removeUnusedPart: true // 移除乱七八糟没用的部分
 };
+
 // 菜单配置
 const itemMenusConfig = {
   creator_task: false, // 转发任务
@@ -62,6 +64,8 @@ const itemMenusConfig = {
   mblog_menus_video_feedback: true, // 播放反馈
   mblog_menus_video_later: true // 可能是稍后再看
 };
+
+// 匹配的URL
 const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
 const modifyStatusesUrls = [
   "/2/groups/timeline",
@@ -184,7 +188,7 @@ function lvZhouHandler(data) {
   data.common_struct = newStruct;
 }
 
-// 屏蔽用户
+// 屏蔽用户id
 function isBlock(data) {
   let blockIds = mainConfig.blockIds || [];
   if (blockIds.length === 0) {
@@ -226,7 +230,7 @@ function removeTimeLine(data) {
   data.statuses = newStatuses;
 }
 
-// 移除tab1签到
+// 移除首页签到
 function removeCheckin(data) {
   data.show = 0;
 }
@@ -255,7 +259,7 @@ function removeComments(data) {
   data.datas = newItems;
 }
 
-// 处理感兴趣的超话和超话里的好友
+// 感兴趣的超话和超话里的好友
 function containerHandler(data) {
   if (mainConfig.removeInterestFriendInTopic) {
     if (data.card_type_name === "超话里的好友") {
@@ -271,6 +275,7 @@ function containerHandler(data) {
   }
 }
 
+// 移除私信推广
 function removeMsgAd(data) {
   if (!data.messages) {
     return data;
@@ -333,6 +338,7 @@ function userHandler(data) {
   return data;
 }
 
+// 移除会员
 function removeHomeVip(data) {
   if (!data.header) {
     return data;
@@ -359,7 +365,7 @@ function updateFollowOrder(item) {
   }
 }
 
-// 自定义固定的8个项目
+// 我的页面置顶项目
 function removeTop8(data) {
   if (!data) {
     return data;
@@ -380,6 +386,7 @@ function removeTop8(data) {
   return data;
 }
 
+// 我的页面
 function removeHome(data) {
   if (!data.items) {
     return data;
@@ -515,7 +522,7 @@ function removeSearchMain(data) {
   return data;
 }
 
-// 新版主页广告
+// 移除首页广告
 function removeMain(data) {
   if (!data.items) {
     return data;
@@ -529,6 +536,7 @@ function removeMain(data) {
       if (item.category === "feed") {
         newItems.push(item);
       } else {
+        // 移除所有的推广
         continue;
       }
     }
@@ -655,7 +663,7 @@ function itemExtendHandler(data) {
   }
 }
 
-// 移除tab2的假通知
+// 移除超话的假通知
 function removeVideoRemind(data) {
   data.bubble_dismiss_time = 0;
   data.exist_remind = false;
@@ -667,7 +675,7 @@ function removeVideoRemind(data) {
   data.tag_image_normal_dark = "";
 }
 
-// 移除话题 tab 顶部广场
+// 移除话题顶部广场
 function removeTopicTab(data) {
   if (!mainConfig.removeTab) {
     return data;
@@ -685,6 +693,7 @@ function removeMediaHomelist(data) {
   }
 }
 
+// 移除开屏广告
 function removePhp(data) {
   if (data.needlocation) {
     data.needlocation = false;
@@ -719,6 +728,7 @@ function removePhp(data) {
   return data;
 }
 
+// 移除开屏广告
 function removeLua(data) {
   if (data.cached_ad && data.cached_ad.ads) {
     for (let item of data["cached_ad"]["ads"]) {

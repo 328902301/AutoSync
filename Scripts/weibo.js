@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 11:38
+// 2023-01-19 11:40
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -112,6 +112,7 @@ function getModifyMethod(url) {
   return null;
 }
 
+// 判断信息流是不是广告、热推
 function isAd(data) {
   if (!data) {
     return false;
@@ -162,6 +163,7 @@ function removeCards(data) {
   data.cards = newCards;
 }
 
+// 移除绿洲
 function lvZhouHandler(data) {
   if (!mainConfig.removeLvZhou) {
     return data;
@@ -212,6 +214,7 @@ function removeTimeLine(data) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
         if (s.category === "feed") {
+          // 移除拓展信息
           if (s?.common_struct) {
             delete s.common_struct;
           }
@@ -244,6 +247,7 @@ function removeComments(data) {
   let newItems = [];
   for (let item of items) {
     let adType = item.adType || "";
+    // 移除评论区推广、过滤提示
     if (delType.indexOf(adType) === -1 && item.type !== 6) {
       newItems.push(item);
     }
@@ -283,7 +287,7 @@ function removeMsgAd(data) {
   return data;
 }
 
-// 删除热搜列表置顶项目,删除推广项目
+// 移除热搜列表置顶项目、推广项目
 function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
@@ -355,6 +359,7 @@ function updateFollowOrder(item) {
   }
 }
 
+// 自定义固定的8个项目
 function removeTop8(data) {
   if (!data) {
     return data;
@@ -396,22 +401,27 @@ function removeHome(data) {
         if (item.style) {
           item.style = {};
         }
+        // 移除分隔符的点点点
         if (item.images) {
           item.images = {};
         }
         newItems.push(item);
       } else if (itemId === "100505_-_manage2") {
+        // 移除面板样式
         if (item.footer) {
           item.footer = {};
         }
+        // 移除框内推广
         if (item.body) {
           item.body = {};
         }
         newItems.push(item);
       } else {
+        // 其他项目全部移除
         continue;
       }
     } else {
+      // 其他项目全部移除
       continue;
     }
   }
@@ -419,6 +429,7 @@ function removeHome(data) {
   return data;
 }
 
+// 移除首页右上角红包
 function removeRed(data) {
   if (!data) {
     return data;
@@ -441,7 +452,7 @@ function checkSearchWindow(item) {
     return false;
   }
   // 搜索页中间的 热议话题、热门人物
-  if (item.category === "group") {
+  if (item.category !== "group") {
     return true;
   }
   if (
@@ -612,13 +623,11 @@ function itemExtendHandler(data) {
       data.reward_info = null;
     }
   }
-  // 删除拓展卡片
-
+  // 移除拓展卡片
   if (data?.extend_info) {
     data.extend_info = {};
   }
-
-  // 删除超话新帖和新用户通知
+  // 移除超话新帖和新用户通知
   if (data.page_alerts) {
     data.page_alerts = null;
   }

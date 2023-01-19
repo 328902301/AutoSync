@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 12:08
+// 2023-01-19 15:40
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -32,7 +32,6 @@ const mainConfig = {
   removeInterestTopic: true, // 移除可能感兴趣的超话
   removeInterestUser: true, // 移除可能感兴趣的人
   removeLvZhou: true, // 移除绿洲模块
-  removeTab: true, // 移除广场
   removeUnfollowTopic: true, // 移除未关注的人
   removeUnusedPart: true // 移除乱七八糟没用的部分
 };
@@ -66,7 +65,11 @@ const itemMenusConfig = {
 };
 
 // 匹配的URL
-const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
+const modifyCardsUrls = [
+  "/2/cardlist",
+  "/2/video/community_tab",
+  "/2/searchall"
+];
 const modifyStatusesUrls = [
   "/2/groups/timeline",
   "/2/statuses/friends/timeline",
@@ -91,7 +94,7 @@ const otherUrls = {
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话菜单上的假通知
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话顶部广场
+  "/2/!/huati/discovery_home_bottom_channels": "removeTopicButton", // 超话顶部按钮、广场
   "/2/!/live/media_homelist": "removeMediaHomelist", // 首页顶部直播
   "/interface/sdk/sdkad.php": "removePhp", // 开屏广告sdkad
   "/wbapplua/wbpullad.lua": "removeLua" // 开屏广告pullad
@@ -127,7 +130,10 @@ function isAd(data) {
   if (data.promotion && data.promotion.type === "ad") {
     return true;
   }
-  if (data.common_struct && data.common_struct[0]?.actionlog?.source?.includes("ad")) {
+  if (
+    data.common_struct &&
+    data.common_struct[0]?.actionlog?.source?.includes("ad")
+  ) {
     return true;
   }
   return false;
@@ -359,7 +365,10 @@ function updateFollowOrder(item) {
   for (let d of item.items) {
     if (d.itemId === "mainnums_friends") {
       let s = d.click.modules[0].scheme;
-      d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
+      d.click.modules[0].scheme = s.replace(
+        "231093_-_selfrecomm",
+        "231093_-_selffollowed"
+      );
       return item;
     }
   }
@@ -580,15 +589,21 @@ function topicHandler(data) {
         }
         let cGroup0 = cGroup[0];
         if (
-          ["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(
-            cGroup0.itemid
-          ) !== -1
+          [
+            "guess_like_title",
+            "cats_top_title",
+            "chaohua_home_readpost_samecity_title"
+          ].indexOf(cGroup0.itemid) !== -1
         ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
           for (let cg of cGroup) {
-            if (["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(cg.itemid) === -1) {
+            if (
+              ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
+                cg.itemid
+              ) === -1
+            ) {
               newCardGroup.push(cg);
             }
           }
@@ -676,12 +691,19 @@ function removeVideoRemind(data) {
 }
 
 // 移除话题顶部广场
-function removeTopicTab(data) {
-  if (!mainConfig.removeTab) {
+function removeTopicButton(data) {
+  if (!mainConfig.removeUnusedPart) {
     return data;
   }
+  // 移除超话左上角、右上角图标
+  if (data.button_configs) {
+    data.button_configs = [];
+  }
+  // 移除广场页
   if (data.channelInfo.channel_list) {
-    data.channelInfo.channel_list = data.channelInfo.channel_list.filter((l) => l.title !== "广场");
+    data.channelInfo.channel_list = data.channelInfo.channel_list.filter(
+      (c) => c.title !== "广场"
+    );
   }
   return data;
 }

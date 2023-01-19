@@ -1,4 +1,4 @@
-// 2023-01-19 18:08
+// 2023-01-19 18:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -21,16 +21,12 @@ if (obj.data) {
       fixPos(obj.data.tab);
     }
     if (obj.data.top) {
-      obj.data.top = [
-        {
-          id: 176,
-          icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
-          tab_id: "消息Top",
-          name: "消息",
-          uri: "bilibili://link/im_home",
-          pos: 1
+      let newTop = [];
+      for (let item of obj.data.top) {
+        if (item.name === "消息") {
+          newTop.push(item);
         }
-      ];
+      }
       fixPos(obj.data.top);
     }
     if (obj.data.bottom) {

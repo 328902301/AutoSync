@@ -25,16 +25,26 @@ const hyzl = '/h5/vip/new_sub_detail';
 const hymb = '/h5/vip/vip_navigation';
 
 if ($request.url.indexOf(hysj) != -1){
-chxm1023.data.home_btn_prompt = "立即查看";
-chxm1023.data.home_prompt = "会员有效期至2099/09/09";
-chxm1023.data.svip_bubble_text = "粉钻SVIP：有效期至2099/09/09\n粉钻VIP：有效期至2099/09/09";
+chxm1023.data = {
+    "home_btn_prompt" : "立即查看",
+    "if_transfer" : 0,
+    "pay_interval" : 3000,
+    "beautify_prompt" : "",
+    "home_prompt" : "会员有效期至2099/09/09",
+    "svip_bubble_text" : "粉钻SVIP：有效期至2099/09/09\n粉钻VIP：有效期至2099/09/99",
+    "new_material" : {
+
+    },
+    "incentive_popup" : {
+
+    },
+    "beautify_btn_prompt" : "",
+    "request_time" : 1666666666666
+  };
 }
 
 if ($request.url.indexOf(hyxx) != -1){
-chxm1023 = {
-  "degrade": 0,
-  "error_code": 0,
-  "data": {
+chxm1023.data = {
     "id": "666666666666666666",
     "id_str": "666666666666666666",
     "valid_time": 4642350000,
@@ -53,11 +63,8 @@ chxm1023 = {
     "create_time": 1666666666,
     "sub_biz_type": 1,
     "is_expire": 0
-  },
-  "msg": "成功",
-  "error": "Ok",
-  "ret": 0
-};}
+  };
+}
 
 if ($request.url.indexOf(user) != -1){
 chxm1023.data.vip_type = 1;
@@ -68,6 +75,16 @@ chxm1023.data.be_like_count = 999000;
 }
 
 if ($request.url.indexOf(hyzl) != -1){
+chxm1023.data.vip_sign_info = {
+      "sub_type" : 3,
+      "renew_status" : 1,
+      "show_auto_renew" : 1,
+      "next_withhold_amount" : 16800,
+      "withhold_currency_symbol" : "¥",
+      "next_withhold_date" : "2099-09-09",
+      "pay_channel" : "苹果支付",
+      "do_pop_up" : false
+    };
 chxm1023.data.valid_time = 4092599349;
 chxm1023.data.vip_power_num = 999999;
 chxm1023.data.new_power_num = 999999;
@@ -100,7 +117,7 @@ chxm1023.data.hbp_vip = {
       "avatar_url" : "",
       "is_expire" : 0,
       "expire_days" : -66666,
-      "gid" : 1234567090,
+      "gid" : 1234567890,
       "vip_type" : 101,
       "platform" : 2,
       "sub_name" : "包年",
@@ -153,7 +170,7 @@ chxm1023.data.xx_vip = {
       "avatar_url" : "",
       "is_expire" : 0,
       "expire_days" : -66666,
-      "gid" : 1234567090,
+      "gid" : 1234567890,
       "vip_type" : 1,
       "platform" : 2,
       "sub_name" : "包年",

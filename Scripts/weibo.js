@@ -150,7 +150,7 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+      if ([9, 165, 180].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }

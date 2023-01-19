@@ -27,6 +27,7 @@ if (obj.data) {
           newTop.push(item);
         }
       }
+      obj.data.top = newTop;
       fixPos(obj.data.top);
     }
     if (obj.data.bottom) {

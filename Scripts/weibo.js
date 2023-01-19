@@ -78,32 +78,31 @@ const otherUrls = {
   "/2/profile/container_timeline": "userHandler", // 用户主页
   "/2/profile/me": "removeHome", // 个人页模块
   "/2/push/active": "removeRed", // 右上角红包
-  "/2/search/container_discover": "removeSearch", // 搜索 tab 信息流
-  "/2/search/container_timeline": "removeSearch", // 搜索 tab 信息流
+  "/2/search/container_discover": "removeSearch", // 搜索信息流
+  "/2/search/container_timeline": "removeSearch", // 搜索信息流
   "/2/search/finder": "removeSearchMain", // 搜索页
-  "/2/statuses/container_timeline": "removeMain", // 新版主页广告
-  "/2/statuses/container_timeline_topic": "removeTopic", // 超话 信息流
+  "/2/statuses/container_timeline": "removeMain", // 新版主页广告、超话信息流
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
-  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话 tab
+  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/video/remind_info": "removeVideoRemind", // 超话 tab 菜单上的假通知
+  "/2/video/remind_info": "removeVideoRemind", // 超话菜单上的假通知
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话 tab 顶部广场
+  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话顶部广场
   "/2/!/live/media_homelist": "removeMediaHomelist" // 首页顶部直播
 };
 
 function getModifyMethod(url) {
-  for (const s of modifyCardsUrls) {
+  for (let s of modifyCardsUrls) {
     if (url.indexOf(s) !== -1) {
       return "removeCards";
     }
   }
-  for (const s of modifyStatusesUrls) {
+  for (let s of modifyStatusesUrls) {
     if (url.indexOf(s) !== -1) {
       return "removeTimeLine";
     }
   }
-  for (const [path, method] of Object.entries(otherUrls)) {
+  for (let [path, method] of Object.entries(otherUrls)) {
     if (url.indexOf(path) !== -1) {
       return method;
     }
@@ -135,11 +134,11 @@ function removeCards(data) {
     return data;
   }
   let newCards = [];
-  for (const card of data.cards) {
+  for (let card of data.cards) {
     let cardGroup = card.card_group;
     if (cardGroup && cardGroup.length > 0) {
       let newGroup = [];
-      for (const group of cardGroup) {
+      for (let group of cardGroup) {
         let cardType = group.card_type;
         if (cardType !== 118) {
           newGroup.push(group);
@@ -149,7 +148,7 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165].indexOf(cardType) !== -1) {
+      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
@@ -173,7 +172,7 @@ function lvZhouHandler(data) {
     return data;
   }
   let newStruct = [];
-  for (const s of struct) {
+  for (let s of struct) {
     if (s.name !== "绿洲") {
       newStruct.push(s);
     }
@@ -188,7 +187,7 @@ function isBlock(data) {
     return false;
   }
   let uid = data.user.id;
-  for (const blockId of blockIds) {
+  for (let blockId of blockIds) {
     if (blockId == uid) {
       return true;
     }
@@ -197,7 +196,7 @@ function isBlock(data) {
 }
 
 function removeTimeLine(data) {
-  for (const s of ["ad", "advertises", "trends", "headers"]) {
+  for (let s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) {
       delete data[s];
     }
@@ -206,14 +205,14 @@ function removeTimeLine(data) {
     return data;
   }
   let newStatuses = [];
-  for (const s of data.statuses) {
+  for (let s of data.statuses) {
     if (!isAd(s)) {
       lvZhouHandler(s);
-      if (s?.common_struct) {
-        delete s.common_struct;
-      }
       if (!isBlock(s)) {
-        if (s.category !== "group") {
+        if (s.category === "feed") {
+          if (s?.common_struct) {
+            delete s.common_struct;
+          }
           newStatuses.push(s);
         }
       }
@@ -433,11 +432,14 @@ function removeRed(data) {
 }
 
 function checkSearchWindow(item) {
-  if (!mainConfig.removeSearchWindow) {
-    return false;
+  if (mainConfig.removeSearchWindow) {
+    return true;
   }
-  if (item.category !== "card") {
-    return false;
+  if (item.category === "card") {
+    return true;
+  }
+  if (item.category === "group") {
+    return true;
   }
   if (
     item?.itemId ||
@@ -511,31 +513,11 @@ function removeMain(data) {
   let newItems = [];
   for (let item of data.items) {
     if (!isAd(item.data)) {
-      if (item.category !== "group") {
+      if (item.category === "feed") {
         newItems.push(item);
+      } else {
+        continue;
       }
-    }
-  }
-  data.items = newItems;
-  return data;
-}
-
-function removeTopic(data) {
-  if (!data.items) {
-    return data;
-  }
-  if (data.loadedInfo && data.loadedInfo.headers) {
-    data.loadedInfo.headers = {};
-  }
-  let items = data.items;
-  let newItems = [];
-  for (let item of items) {
-    if (item.category === "feed") {
-      if (!isAd(item.data)) {
-        newItems.push(item);
-      }
-    } else {
-      continue;
     }
   }
   data.items = newItems;
@@ -543,7 +525,7 @@ function removeTopic(data) {
 }
 
 function topicHandler(data) {
-  const cards = data.cards;
+  let cards = data.cards;
   if (!cards) {
     return data;
   }
@@ -647,7 +629,7 @@ function itemExtendHandler(data) {
   } catch (error) {}
   if (mainConfig.modifyMenus && data.custom_action_list) {
     let newActions = [];
-    for (const item of data.custom_action_list) {
+    for (let item of data.custom_action_list) {
       let _t = item.type;
       let add = itemMenusConfig[_t];
       if (add === undefined) {

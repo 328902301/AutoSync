@@ -450,7 +450,7 @@ function checkSearchWindow(item) {
     item.data?.itemid === "more_frame" ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
-    return true;
+    return false;
   }
   return false;
 }

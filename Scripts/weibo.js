@@ -167,9 +167,9 @@ function removeCards(data) {
           newCards.push(card);
         }
       } else {
-        if ([180, 1007].indexOf(cardType) !== -1) {
-          continue;
-        }
+        // if ([180, 1007].indexOf(cardType) !== -1) {
+        //   continue;
+        // }
         newCards.push(card);
       }
     }

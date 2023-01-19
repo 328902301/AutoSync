@@ -1,4 +1,4 @@
-// 2023-01-17 13:55
+// 2023-01-19 18:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -21,7 +21,13 @@ if (obj.data) {
       fixPos(obj.data.tab);
     }
     if (obj.data.top) {
-      obj.data.top = obj.data.top.filter((item) => !item.name === "游戏中心");
+      let newTop = [];
+      for (let item of obj.data.top) {
+        if (item.name === "消息") {
+          newTop.push(item);
+        }
+      }
+      obj.data.top = newTop;
       fixPos(obj.data.top);
     }
     if (obj.data.bottom) {
@@ -90,26 +96,35 @@ if (obj.data) {
         const { card_type: cardType, card_goto: cardGoto } = i;
         if (cardType && cardGoto) {
           if (cardType === "banner_v8" && cardGoto === "banner") {
-            return false;
+            // 去除判断条件 首页横版内容全部去掉
             // if (i.banner_item) {
-              // 去除判断条件 首页横版内容全部去掉
-              // for (const v of i.banner_item) {
-              //   if (v.type) {
-              //     if (v.type === "ad") return false;
-              //   }
-              // }
-              // return false;
+            // for (const v of i.banner_item) {
+            //   if (v.type) {
+            //     if (v.type === "ad") return false;
+            //   }
             // }
+            // return false;
+            // }
+            return false;
           } else if (
             cardType === "cm_v2" &&
-            ["ad_web_s", "ad_av", "ad_web_gif", "ad_player", "ad_inline_3d"].includes(cardGoto)
+            [
+              "ad_web_s",
+              "ad_av",
+              "ad_web_gif",
+              "ad_player",
+              "ad_inline_3d"
+            ].includes(cardGoto)
           ) {
             // ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告 ad_inline_3d 上方大的视频3d广告
             return false;
           } else if (cardType === "small_cover_v10" && cardGoto === "game") {
             // 游戏广告
             return false;
-          } else if (cardType === "cm_double_v9" && cardGoto === "ad_inline_av") {
+          } else if (
+            cardType === "cm_double_v9" &&
+            cardGoto === "ad_inline_av"
+          ) {
             // 创作推广-大视频广告
             return false;
           }
@@ -137,7 +152,8 @@ if (obj.data) {
     }
   } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
     // 哔哩哔哩-直播广告
-    if (obj.data.activity_banner_info) obj["data"]["activity_banner_info"] = null;
+    if (obj.data.activity_banner_info)
+      obj["data"]["activity_banner_info"] = null;
   }
 }
 

@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 16:58
+// 2023-01-19 17:21
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -128,13 +128,10 @@ function isAd(data) {
   if (data.mblogtypename === "广告" || data.mblogtypename === "热推") {
     return true;
   }
-  if (data.promotion && data.promotion.type === "ad") {
+  if (data.promotion?.type === "ad") {
     return true;
   }
-  if (
-    data.common_struct &&
-    data.common_struct[0].actionlog.source.includes("ad")
-  ) {
+  if (data.common_struct?.[0]?.actionlog?.source.includes("ad")) {
     return true;
   }
   return false;
@@ -162,14 +159,11 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165].indexOf(cardType) !== -1) {
+      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
       } else {
-        if ([180, 1007].indexOf(cardType) !== -1) {
-          continue;
-        }
         newCards.push(card);
       }
     }
@@ -228,7 +222,7 @@ function removeTimeLine(data) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
         // 移除拓展信息
-        if (s.common_struct) {
+        if (s?.common_struct) {
           delete s.common_struct;
         }
         newStatuses.push(s);
@@ -302,7 +296,7 @@ function removeMsgAd(data) {
   }
   let newMsgs = [];
   for (let msg of data.messages) {
-    if (msg.msg_card.ad_tag) {
+    if (msg.msg_card?.ad_tag) {
       continue;
     } else {
       newMsgs.push(msg);
@@ -320,9 +314,9 @@ function removePage(data) {
       data.cards[0].card_group = data.cards[0].card_group.filter(
         (c) =>
           !(
-            c.actionlog.ext.includes("ads_word") ||
-            c.itemid.includes("t:51") ||
-            c.itemid.includes("ads_word")
+            c?.actionlog?.ext.includes("ads_word") ||
+            c?.itemid.includes("t:51") ||
+            c?.itemid.includes("ads_word")
           )
       );
     }
@@ -348,7 +342,7 @@ function userHandler(data) {
       }
     }
     if (isAdd) {
-      if (item.data.common_struct) {
+      if (item.data?.common_struct) {
         delete item.data.common_struct;
       }
       newItems.push(item);
@@ -482,13 +476,13 @@ function checkSearchWindow(item) {
     return false;
   }
   if (
-    item.data.card_type === 19 ||
-    item.data.card_type === 208 ||
-    item.data.card_type === 217 ||
-    item.data.card_type === 1005 ||
-    item.data.itemid === "finder_window" ||
-    item.data.itemid === "more_frame" ||
-    item.data.mblog.page_info.actionlog.source.includes("ad")
+    item.data?.card_type === 19 ||
+    item.data?.card_type === 208 ||
+    item.data?.card_type === 217 ||
+    item.data?.card_type === 1005 ||
+    item.data?.itemid === "finder_window" ||
+    item.data?.itemid === "more_frame" ||
+    item.data?.mblog?.page_info?.actionlog?.source.includes("ad")
   ) {
     return true;
   }
@@ -550,7 +544,7 @@ function removeMain(data) {
   if (!data.items) {
     return data;
   }
-  if (data.loadedInfo && data.loadedInfo.headers) {
+  if (data.loadedInfo?.headers) {
     data.loadedInfo.headers = {};
   }
   let newItems = [];
@@ -592,7 +586,7 @@ function topicHandler(data) {
       }
       if (c.itemid === "bottom_mix_activity") {
         addFlag = false;
-      } else if (c.top && c.top.title === "正在活跃") {
+      } else if (c?.top?.title === "正在活跃") {
         addFlag = false;
       } else if (c.card_type === 200 && c.group) {
         addFlag = false;
@@ -661,7 +655,7 @@ function itemExtendHandler(data) {
     }
   }
   // 移除拓展卡片
-  if (data.extend_info) {
+  if (data?.extend_info) {
     data.extend_info = {};
   }
   // 移除超话新帖和新用户通知
@@ -766,7 +760,7 @@ function removePhp(data) {
 
 // 移除开屏广告
 function removeLua(data) {
-  if (data.cached_ad && data.cached_ad.ads) {
+  if (data.cached_ad?.ads) {
     for (let item of data["cached_ad"]["ads"]) {
       item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       item["show_count"] = 0;

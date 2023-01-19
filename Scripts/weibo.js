@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 10:42
+// 2023-01-19 10:44
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -699,7 +699,7 @@ function removePhp(data) {
     data.realtime_ad_timeout_duration = 31536000;
   }
   if (data.ads) {
-    for (let item of obj["ads"]) {
+    for (let item of data["ads"]) {
       item["displaytime"] = 0;
       item["displayintervel"] = 31536000;
       item["allowdaydisplaynum"] = 0;
@@ -712,7 +712,7 @@ function removePhp(data) {
 
 function removeLua(data) {
   if (data.cached_ad && data.cached_ad.ads) {
-    for (let item of obj["cached_ad"]["ads"]) {
+    for (let item of data["cached_ad"]["ads"]) {
       item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       item["show_count"] = 0;
       item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000

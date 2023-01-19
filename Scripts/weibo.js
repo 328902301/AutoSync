@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 15:40
+// 2023-01-19 16:11
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -94,7 +94,7 @@ const otherUrls = {
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话菜单上的假通知
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicButton", // 超话顶部按钮、广场
+  "/2/!/huati/discovery_home_bottom_channels": "topicTabHandler", // 超话顶部按钮、广场
   "/2/!/live/media_homelist": "removeMediaHomelist", // 首页顶部直播
   "/interface/sdk/sdkad.php": "removePhp", // 开屏广告sdkad
   "/wbapplua/wbpullad.lua": "removeLua" // 开屏广告pullad
@@ -161,11 +161,14 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+      if ([9, 165].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
       } else {
+        if ([180, 1007].indexOf(cardType) !== -1) {
+          continue;
+        }
         newCards.push(card);
       }
     }
@@ -690,8 +693,8 @@ function removeVideoRemind(data) {
   data.tag_image_normal_dark = "";
 }
 
-// 移除话题顶部广场
-function removeTopicButton(data) {
+// 话题按钮、顶部广场
+function topicTabHandler(data) {
   if (!mainConfig.removeUnusedPart) {
     return data;
   }

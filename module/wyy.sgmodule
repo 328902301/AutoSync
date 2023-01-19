@@ -3,7 +3,8 @@
 
 [General]
 force-http-engine-hosts = %APPEND% 115.236.118.*, 183.136.182.*, 117.147.199.*, 45.254.48.*, 101.71.154.*, 59.111.19.*, 103.126.92.*, 103.126.92.*, 59.111.19.*, 112.13.119.*, 59.111.209.210:8080, 59.111.160.*, interface*.music.163.com, interface*.music.163.com.163jiasu.com
-
+# 有两个域名有时候走的是80端口,而surgemitm默认只解密443端口所以也要加上才可以识别为http而后才能使用重写等功能,因此导致很多人surge去不掉广告,还有ip地址需要完善...测试
+中
 [Rule]
 DOMAIN,httpdns.n.netease.com,REJECT
 DOMAIN,ipv6.music.163.com,REJECT

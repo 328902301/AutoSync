@@ -30,7 +30,7 @@ if (typeof $argument != 'undefined') {
     await notify(
       `${CN_IP} | ${PROXY_IP}`,
       `${CN_ADDR}`,
-      `${PROXY_ADDR}\n${$.lodash_get($network, 'wifi.ssid') || ''} ${$.lodash_get($network, 'v4.primaryAddress') || ''}`
+      `${PROXY_ADDR}\n${$.lodash_get($network, 'v4.primaryAddress') || ''} ${$.lodash_get($network, 'wifi.ssid') || ''}`
     )
   } else {
     $.log('IP 相同 不发送通知')

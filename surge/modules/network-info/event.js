@@ -27,7 +27,11 @@ if (typeof $argument != 'undefined') {
     PROXY_IP !== $.lodash_get(lastNetworkInfoEvent, 'PROXY_IP')
   ) {
     $.setjson({ CN_IP, PROXY_IP }, 'lastNetworkInfoEvent')
-    await notify(`${CN_IP} | ${PROXY_IP}`, `${CN_ADDR}`, `${PROXY_ADDR}\n${$.lodash_get($network, 'wifi.ssid')}`)
+    await notify(
+      `${CN_IP} | ${PROXY_IP}`,
+      `${CN_ADDR}`,
+      `${PROXY_ADDR}\n${$.lodash_get($network, 'wifi.ssid') || ''} ${$.lodash_get($network, 'v4.primaryAddress') || ''}`
+    )
   } else {
     $.log('IP 相同 不发送通知')
   }

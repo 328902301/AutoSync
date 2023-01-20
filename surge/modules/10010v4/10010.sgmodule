@@ -1,5 +1,5 @@
 #!name=联通余量(v4)
-#!desc=新版测试中 非群内用户勿用 https://t.me/zhetengsha_group
+#!desc=定时查询 与 Panel 面板
 
 [General]
 force-http-engine-hosts = %APPEND% 10010v4.com

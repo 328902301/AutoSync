@@ -13,29 +13,35 @@ let result = {}
   let type = $.lodash_get(arg, 'type')
   $.log(`🔗 原始文件链接`, url)
   $.log(`Content-Type`, type)
-  const res = await $.http.get({
-    url,
-    headers: {
-      'Cache-Control': 'no-cache',
-      Pragma: 'no-cache',
-    },
-  })
-  // $.log('ℹ️ res', $.toStr(res))
-  const status = $.lodash_get(res, 'status') || $.lodash_get(res, 'statusCode') || 200
-  $.log('ℹ️ res status', status)
-  let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
-  // $.log('ℹ️ res body', content)
-  result = {
-    response: {
-      status: 200,
-      body,
+  if (/^(https?|ftp|file):\/\/.*/.test(url)) {
+
+    const res = await $.http.get({
+      url,
       headers: {
-        'Content-Type': type,
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Cache-Control': 'no-cache',
+        Pragma: 'no-cache',
       },
-    },
+    })
+    // $.log('ℹ️ res', $.toStr(res))
+    const status = $.lodash_get(res, 'status') || $.lodash_get(res, 'statusCode') || 200
+    $.log('ℹ️ res status', status)
+    let body = String($.lodash_get(res, 'body') || $.lodash_get(res, 'rawBody'))
+    // $.log('ℹ️ res body', content)
+    result = {
+      response: {
+        status: 200,
+        body,
+        headers: {
+          'Content-Type': type,
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,PUT,DELETE',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        },
+      },
+    }
+
+  } else {
+    $.log('不支持此 url')
   }
 })()
   .catch(async e => {

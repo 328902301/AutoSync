@@ -69,6 +69,7 @@ async function getDirectInfo() {
       .match(/地址.*?>(.*?)<\//)[1]
       .replace('中国', '')
       .replace('上海上海', '上海')
+      .replace('北京北京', '北京')
   } catch (e) {
     $.logErr(e)
     $.logErr($.toStr(e))

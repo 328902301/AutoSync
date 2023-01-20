@@ -10,7 +10,7 @@ force-http-engine-hosts = %APPEND% 10010v4.com
 10010v4-request = type=http-request,pattern=^https?:\/\/10010v4\.com,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,requires-body=false,max-size=0,timeout=60
 
 # Panel
-10010v4-panel = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
+10010v4-panel = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v4/10010.js,argument=icon=arrow.up.arrow.down.circle&icon-color=#5d84f8
 
 [MITM]
 hostname = %APPEND% 10010v4.com

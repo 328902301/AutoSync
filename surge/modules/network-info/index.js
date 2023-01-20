@@ -65,7 +65,7 @@ async function getDirectInfo() {
     //   body = JSON.parse(body)
     // } catch (e) {}
     CN_IP = body.match(/您的IP.*?>(.*?)<\//)[1]
-    CN_ADDR = body.match(/地址.*?>(.*?)<\//)[1].replace('中国', '').replace('上海上海', '上海')
+    CN_ADDR = body.match(/地址.*?>(.*?)<\//)[1].replace('中国', '').replace('上海上海', '上海').replace('北京北京', '北京')
   } catch (e) {
     $.logErr(e)
     $.logErr($.toStr(e))

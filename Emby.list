@@ -7,7 +7,7 @@ DOMAIN,cf2.misakaf.org
 # Nebula
 DOMAIN,direct.nebula-emby.com
 # CC
-DOMAIN,cc.ccemby.tk
+DOMAIN-KEYWORD,ccemby
 # Polo
 DOMAIN,df.poloemby.xyz
 DOMAIN,cu.poloemby.xyz

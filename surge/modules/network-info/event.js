@@ -20,6 +20,7 @@ if (typeof $argument != 'undefined') {
     getDirectInfo(),
     getProxyInfo(),
   ])
+  $.log(CN_IP, CN_ADDR, PROXY_IP, PROXY_ADDR)
   const lastNetworkInfoEvent = $.getjson('lastNetworkInfoEvent')
   if (
     CN_IP !== $.lodash_get(lastNetworkInfoEvent, 'CN_IP') ||
@@ -27,6 +28,8 @@ if (typeof $argument != 'undefined') {
   ) {
     $.setjson({ CN_IP, PROXY_IP }, 'lastNetworkInfoEvent')
     await notify(`${CN_IP} | ${PROXY_IP}`, `${CN_ADDR}`, `${PROXY_ADDR}\n${$.lodash_get($network, 'wifi.ssid')}`)
+  } else {
+    $.log('IP 相同 不发送通知')
   }
 })()
   .catch(async e => {

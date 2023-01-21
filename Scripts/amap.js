@@ -1,4 +1,4 @@
-// 2023-01-19 17:48
+// 2023-01-21 18:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -40,6 +40,13 @@ if (obj.data) {
       );
     }
   } else if (url.includes("/shield/frogserver/aocs")) {
+    if (obj.data.gd_notch_logo) {
+      obj.data.gd_notch_logo = {
+        status: 1,
+        version: "",
+        value: ""
+      };
+    }
     // 高德地图-首页右上角动图
     if (obj.data.home_business_position_config) {
       obj.data.home_business_position_config = {

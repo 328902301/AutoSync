@@ -15,7 +15,7 @@ let result = {}
     // if ($input.$trigger === 'button') {
     if (true) {
       const { requests = [] } = (await httpAPI('/v1/requests/active', 'GET')) || {}
-      console.log(requests.map(i => i.URL))
+      // console.log(requests.map(i => i.URL))
       for await (const { id } of requests) {
         // console.log(id)
         const res = await httpAPI('/v1/requests/kill', 'POST', { id })
@@ -25,7 +25,7 @@ let result = {}
     }
     // await delay(1000)
     const { requests = [] } = (await httpAPI('/v1/requests/active', 'GET')) || {}
-    console.log(requests.map(i => i.URL))
+    // console.log(requests.map(i => i.URL))
     result = { title: `活跃请求数: ${requests.length}`, content: '点击一键打断', ...arg }
   } else {
     // console.log(JSON.stringify($network, null, 2))

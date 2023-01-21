@@ -1,4 +1,4 @@
-// 2023-01-16 13:36
+// 2023-01-21 15:46
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -24,8 +24,9 @@ if (url.includes("/a.p")) {
   }
 } else if (url.includes("mgxhtj.kuwo.cn") || url.includes("nmobi.kuwo.cn")) {
   body = $response.body
-    .replace(/<ad\s(focusid|publish)="[^>]*>/g, "")
-    .replace(/(<userinfolabel\scontent=")[^"]*/g, "$1[]]");
+    .replace(/<ad\sfocusid="[^>]*>/g, "")
+    .replace(/<ad\spublish="[^>]*>/g, "")
+    .replace(/(<userinfolabel\scontent=")[^"]*/g, "$1[]");
 } else if (url.includes("searchrecterm.kuwo.cn")) {
   body = '{ content: [{ query_word: "搜索歌曲", desc: "" }] }';
 } else if (url.includes("/music.pay")) {
@@ -63,7 +64,8 @@ if (url.includes("/a.p")) {
 } else if (url.includes("/vip/v2/user/vip")) {
   let obj = JSON.parse($response.body);
   obj.data = {
-    vipIcon: "https://image.kuwo.cn/fe/f2d09ac0-b959-404f-86fa-dc65c715c0e96.png",
+    vipIcon:
+      "https://image.kuwo.cn/fe/f2d09ac0-b959-404f-86fa-dc65c715c0e96.png",
     iconJumpUrl:
       "http://vip1.kuwo.cn/vip/vue/anPay/pay/index.html?pageType=avip&MBOX_WEBCLOSE=1&FULLHASARROW=1",
     growthValue: "21600",
@@ -72,11 +74,14 @@ if (url.includes("/a.p")) {
     time: "1659582730304",
     goSvipPage: "1",
     isNewUser: "1",
-    vipmIcon: "https://image.kuwo.cn/fe/34ad47f8-da7f-43e4-abdc-e6c995666368yyb.png",
-    svipIcon: "https://image.kuwo.cn/fe/f2d09ac0-b959-404f-86fa-dc65c715c0e96.png",
+    vipmIcon:
+      "https://image.kuwo.cn/fe/34ad47f8-da7f-43e4-abdc-e6c995666368yyb.png",
+    svipIcon:
+      "https://image.kuwo.cn/fe/f2d09ac0-b959-404f-86fa-dc65c715c0e96.png",
     vipmExpire: "32495443200000",
     biedSong: "0",
-    luxuryIcon: "https://image.kuwo.cn/fe/2fae68ff-de2d-4473-bf28-8efc29e44968vip.png",
+    luxuryIcon:
+      "https://image.kuwo.cn/fe/2fae68ff-de2d-4473-bf28-8efc29e44968vip.png",
     userType: "3",
     isYearUser: "2",
     vip3Expire: "0",

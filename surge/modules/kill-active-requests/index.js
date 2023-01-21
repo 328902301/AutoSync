@@ -10,15 +10,22 @@ if (typeof $argument != 'undefined') {
 let result = {}
 !(async () => {
   if (isPanel()) {
-    if ($input.$trigger === 'button') {
+    console.log($input)
+    // 跟文档不一致...
+    // if ($input.$trigger === 'button') {
+    if (true) {
       const { requests = [] } = (await httpAPI('/v1/requests/active', 'GET')) || {}
+      console.log(requests.map(i => i.URL))
       for await (const { id } of requests) {
         // console.log(id)
         const res = await httpAPI('/v1/requests/kill', 'POST', { id })
         // console.log(res)
       }
+      $notification.post('找到', `${requests.length} 个活跃请求`, `已尝试打断`)
     }
+    // await delay(1000)
     const { requests = [] } = (await httpAPI('/v1/requests/active', 'GET')) || {}
+    console.log(requests.map(i => i.URL))
     result = { title: `活跃请求数: ${requests.length}`, content: '点击一键打断', ...arg }
   } else {
     // console.log(JSON.stringify($network, null, 2))
@@ -60,4 +67,7 @@ function httpAPI(path = '', method = 'POST', body = null) {
       resolve(result)
     })
   })
+}
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
 }

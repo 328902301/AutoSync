@@ -978,7 +978,10 @@ async function notify(title, subt, desc, opts) {
           $.log(`Node 环境, 无 sendNotify, 为 Termux 环境, 将尝试使用 termux-notification`)
           try {
             const { execSync } = require('child_process')
-            console.log(execSync(`termux-notification -t "${title}" -c "${subt}\n${desc}" --sound`,{encoding: 'utf8', timeout: 3 * 1000}))
+            const cmd = `termux-notification -t "${title}" -c "${subt}\n${desc}" --sound`
+            $.log(`Termux 环境 将执行以下命令 若有异常 可在终端手动执行排查`)
+            $.log(cmd)
+            console.log(execSync(cmd,{encoding: 'utf8', timeout: 3 * 1000}))
           } catch (e) {
             $.logErr(e)
             $.logErr($.toStr(e))

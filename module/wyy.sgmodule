@@ -2,7 +2,7 @@
 #!desc=KEYAD 2023 1.23
 
 [MITM]
-hostname = %APPEND% interface*.music.163.com,interface*.music.163.com.163jiasu.com,ossgw.alicdn.com,images.pinduoduo.com,img2.360buyimg.com
+hostname = %APPEND% interface*.music.163.com,interface*.music.163.com.163jiasu.com
 [General]
 force-http-engine-hosts = %APPEND% interface*.music.163.com.163jiasu.com,interface*.music.163.com
 

@@ -18,7 +18,6 @@ hostname = asia.gikken.co
 *************************************/
 
 
-
 var chxm1023 = JSON.parse($response.body);
 const xxa = '/matesync/subscription';
 const xxb = '/matesync/register_user';
@@ -52,6 +51,5 @@ chxm1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxd) != -1){
 chxm1023 = {"registered":true};}
-
 
 $done({body : JSON.stringify(chxm1023)});

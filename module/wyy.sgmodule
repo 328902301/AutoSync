@@ -1,22 +1,17 @@
 #!name=网易云
 #!desc=KEYAD 2023 1.23
 
-[General]
-force-http-engine-hosts = %APPEND% 115.236.118.*, 183.136.182.*, 117.147.199.*, 45.254.48.*, 101.71.154.*, 59.111.19.*, 103.126.92.*, 103.126.92.*, 59.111.19.*, 112.13.119.*, 59.111.209.210:8080, 59.111.160.*, interface*.music.163.com, interface*.music.163.com.163jiasu.com
-# 后两个域名在某些时候会走80端口,而surge mitm默认只解密443端口所以加上才可以识别为http而后才能使用重写等功能,因此导致很多人surge某些时候去不掉广告,还有ip地址需要完善...测试中
-[Rule]
-DOMAIN,httpdns.n.netease.com,REJECT
-DOMAIN,ipv6.music.163.com,REJECT
-
-[URL Rewrite]
-\/eapi\/ad - reject
-#\/eapi\/ocpc\/ad - reject
-^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/.+?\.jpg$ - reject
-^http:\/\/images\.pinduoduo\.com\/marketing_api\/202\d-\d\d\-\d\d\/.*?\.jpeg - reject
-^https:\/\/img2\.360buyimg\.com\/tgx\/jfs\.*?\.jpg$ - reject 
-iadmusicmatvideo.music.126.net - reject
-iadmusicmat.music.126.net - reject
-^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
-
 [MITM]
 hostname = %APPEND% interface*.music.163.com,interface*.music.163.com.163jiasu.com,ossgw.alicdn.com,images.pinduoduo.com,img2.360buyimg.com
+[General]
+force-http-engine-hosts = %APPEND% interface*.music.163.com.163jiasu.com,interface*.music.163.com
+
+[URL Rewrite]
+iadmusicmatvideo.music.126.net - reject
+iadmusicmat.music.126.net - reject
+
+[Map Local]
+\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+[MITM]
+hostname = %APPEND% interface*.music.163.com

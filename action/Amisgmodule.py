@@ -38,7 +38,7 @@ config_combine = get_module_content(sgmodules)
 
 # write to file
 with open('./sgmodule/ami.sgmodule', 'w') as f:
-    f.writelines(['#!name=ami@Surge\n', '#!desc=Some thing.\n', '\n'])
+    f.writelines(['#!name=amii@Sgmodule\n', '#!desc=Some thing.\n', '\n'])
     for section_key in config_combine:
         f.write(section_key + '\n')
         if section_key == '[MITM]':

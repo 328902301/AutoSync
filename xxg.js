@@ -8,10 +8,13 @@
 
 [rewrite_local]
 
-^https:\/\/xianbeikeji\.com\/daily\/app\/user\/query url response-body "vipFlag":\d response-body "vipFlag":1 
+^https:\/\/xianbeikeji\.com\/daily\/app\/user\/query url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/xxg.js
 
 [mitm]
 
 hostname = xianbeikeji.com
 
 *************************************/
+
+
+var chxm1023=JSON.parse($response.body);chxm1023.data.userInfo.vipFlag=1,$done({body:JSON.stringify(chxm1023)});

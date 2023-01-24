@@ -50,6 +50,8 @@ if ($request.url.indexOf(xxc) != -1){
 chxm1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxd) != -1){
-chxm1023 = {"registered":true};}
+chxm1023 = {
+  "registered" : true
+};}
 
 $done({body : JSON.stringify(chxm1023)});

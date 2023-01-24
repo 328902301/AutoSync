@@ -20,7 +20,7 @@ hostname = api.mojidict.com
 var chxm1023 = JSON.parse($response.body);
 
 chxm1023.result.result[2] = {
-        "identity" : "000-001-00001",
+        "identity" : "000-002-00001",
         "privilegeStatus" : "activated",
         "privilege" : {
           "status" : "cancel",

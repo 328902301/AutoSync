@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,cm.bilibili.com,REJECT-NO-DROP
 #OR,((AND,((OR,((DOMAIN-KEYWORD,cn-), (DOMAIN-KEYWORD,mcdn))), (DOMAIN-KEYWORD,bilivideo.c))), (DOMAIN-SUFFIX,szbdyd.com), (DEST-PORT,4480)),REJECT-NO-DROP //b站垃圾cdn,禁用会导致无法缓存视频,所以注释掉
 [MITM]
 hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, grpc.biliapi.net, api.biliapi.net, api.biliapi.com, api.bilibili.com, api.bilibili.net, manga.bilibili.com
+#由于qx目前不支持h2mitm,所以qxmitmh2会失败约等于reject所以回退到h1,2023.1月目前如果直接用脚本或捷径转换会导致未匹配h2域名所以我将他们两脚本合并,匹配grpc.biliapi.net h2域名以达到更优性能,surge需要开启mitm h2
 [URL Rewrite]
 #cn.*\.bilivideo\.com - reject
 # Bili-屏蔽IP请求@ddgksf2013

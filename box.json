@@ -6,6 +6,38 @@
   "repo": "https://github.com/id77/QuantumultX/tree/master",
   "apps": [
     {
+      "id": "id77_tools",
+      "name": "注入工具",
+      "keys": ["id77_tools_switch", "id77_tools_selectors"],
+      "author": "@id77",
+      "icons": [
+        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/jd_car.png",
+        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/jd_car.png"
+      ],
+      "settings": [
+        {
+          "id": "id77_tools_switch",
+          "name": "开关",
+          "val": "N",
+          "type": "radios",
+          "desc": "开关控制",
+          "items": [
+            { "key": "Y", "label": "开" },
+            { "key": "N", "label": "关" }
+          ]
+        },
+        {
+          "id": "id77_tools_selectors",
+          "name": "css 选择器",
+          "val": "",
+          "type": "textarea",
+          "desc": "多个选择器，使用逗号间隔",
+          "autoGrow": true,
+          "rows": 2
+        }
+      ]
+    },
+    {
       "id": "jdWulLiu",
       "name": "京东物流",
       "keys": [

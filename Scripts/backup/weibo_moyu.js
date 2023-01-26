@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用微博&微博国际版净化脚本
 > 脚本作者：@Zmqcherish, @ddgksf2013
 > 微信账号：墨鱼手记
-> 更新时间：2022-01-21
+> 更新时间：2022-01-22
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -12,10 +12,11 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.89";
+const version = "V2.0.91";
 
 const mainConfig = {
     isDebug: !1,
+    author: "ddgksf2013",
     removeHomeVip: !0,
     removeHomeCreatorTask: !0,
     removeRelate: !0,
@@ -158,7 +159,9 @@ function isAd(e) {
     !!(
       "广告" == e.mblogtypename ||
       "热推" == e.mblogtypename ||
-      (e.promotion && "ad" == e.promotion.type) ||
+      e.promotion?.type == "ad" ||
+      e.page_info?.actionlog?.source == "ad" ||
+      e.content_auth_info?.content_auth_title == "广告" ||
       (e.common_struct && e.common_struct[0]?.actionlog?.source?.includes("ad"))
     )
   );
@@ -223,27 +226,27 @@ function topicHandler(e) {
   for (let i of t) {
     let n = !0;
     if (i.mblog) {
-      let r = i.mblog.buttons;
-      mainConfig.removeUnfollowTopic && r && "follow" == r[0].type && (n = !1);
+      let a = i.mblog.buttons;
+      mainConfig.removeUnfollowTopic && a && "follow" == a[0].type && (n = !1);
     } else {
       if (!mainConfig.removeUnusedPart) continue;
       if ("bottom_mix_activity" == i.itemid) n = !1;
       else if (i?.top?.title == "正在活跃") n = !1;
       else if (200 == i.card_type && i.group) n = !1;
       else {
-        let a = i.card_group;
-        if (!a) continue;
+        let r = i.card_group;
+        if (!r) continue;
         if (
           [
             "guess_like_title",
             "cats_top_title",
             "chaohua_home_readpost_samecity_title"
-          ].indexOf(a[0].itemid) > -1
+          ].indexOf(r[0].itemid) > -1
         )
           n = !1;
-        else if (a.length > 1) {
+        else if (r.length > 1) {
           let d = [];
-          for (let s of a)
+          for (let s of r)
             -1 ==
               ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
                 s.itemid
@@ -325,13 +328,17 @@ function removeCards(e) {
     let i = o.card_group;
     if (i && i.length > 0) {
       let n = [];
-      for (let r of i) 118 != r.card_type && n.push(r);
+      for (let a of i)
+        118 == a.card_type ||
+          isAd(a.mblog) ||
+          -1 != JSON.stringify(a).indexOf("res_from:ads") ||
+          n.push(a);
       (o.card_group = n), t.push(o);
     } else {
-      let a = o.card_type;
-      if ([9, 165].indexOf(a) > -1) isAd(o.mblog) || t.push(o);
+      let r = o.card_type;
+      if ([9, 165].indexOf(r) > -1) isAd(o.mblog) || t.push(o);
       else {
-        if ([1007, 180].indexOf(a) > -1) continue;
+        if ([1007, 180].indexOf(r) > -1) continue;
         t.push(o);
       }
     }
@@ -399,13 +406,13 @@ function itemExtendHandler(e) {
   if (mainConfig.modifyMenus && e.custom_action_list) {
     let i = [];
     for (let n of e.custom_action_list) {
-      let r = n.type,
-        a = itemMenusConfig[r];
-      void 0 === a
+      let a = n.type,
+        r = itemMenusConfig[a];
+      void 0 === r
         ? i.push(n)
-        : "mblog_menus_copy_url" === r
+        : "mblog_menus_copy_url" === a
         ? i.unshift(n)
-        : a && i.push(n);
+        : r && i.push(n);
     }
     e.custom_action_list = i;
   }
@@ -438,9 +445,9 @@ function updateProfileSkin(e, t) {
             "alpha" != dm && (n.image.style.darkMode = "alpha"),
             (n.image.iconUrl = o[i++]),
             n.dot && (n.dot = []);
-        } catch (r) {}
+        } catch (a) {}
     log("updateProfileSkin success");
-  } catch (a) {
+  } catch (r) {
     console.log("updateProfileSkin fail");
   }
 }
@@ -493,8 +500,8 @@ function removeComments(e) {
   if (0 === o.length) return;
   let i = [];
   for (let n of o) {
-    let r = n.adType || "";
-    -1 == t.indexOf(r) && 6 != n.type && i.push(n);
+    let a = n.adType || "";
+    -1 == t.indexOf(a) && 6 != n.type && i.push(n);
   }
   log("remove 评论区相关和推荐内容"), (e.datas = i);
 }

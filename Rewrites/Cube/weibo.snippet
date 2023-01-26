@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-01-19 16:18
+# 2023-01-26 18:45
 
 # 去除开屏广告
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
@@ -44,6 +44,9 @@
 
 # 去除红包信息
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket url reject-dict
+
+# 去除超话悬浮图标
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_getdotinfo url reject-dict
 
 # 去除话题卡片
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/mobile_discovery_searchchange url reject-dict

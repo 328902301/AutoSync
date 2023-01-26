@@ -2,7 +2,7 @@ import requests
 
 rawBiliBili = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list").text
 rawBiliBilintl = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBiliIntl/BiliBiliIntl.list").text
-rawBiliBiliasn = requests.get("https://raw.githubusercontent.com/futurkk/Potato/main/Surge%20for%20myself/JS/bilibiliASN.list").text
+rawBiliBiliasn = requests.get("https://raw.githubusercontent.com/futurkk/LittleThings/main/Rules/BiliBiliASN.list").text
 
 result = list()
 for rawresult in [rawBiliBili, rawBiliBilintl, rawBiliBiliasn]:

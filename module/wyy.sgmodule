@@ -1,4 +1,4 @@
-#!name=网易云
+#!name=网抑云
 #!desc=KEYAD 2023 1.23
 
 [MITM]
@@ -12,6 +12,3 @@ iadmusicmat.music.126.net - reject
 
 [Map Local]
 \/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
-[MITM]
-hostname = %APPEND% interface*.music.163.com

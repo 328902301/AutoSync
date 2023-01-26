@@ -110,6 +110,24 @@ async function operator(proxies = []) {
 }
 ```
 
+### SS 脚本最简示例
+
+```JavaScript
+async function operator(proxies = []) {
+    const _ = lodash
+    return proxies.map((p = {}) => {
+        _.set(p, 'name', `${_.get(p, 'name')}-西瓜`) // 名称添加后缀
+        _.set(p, 'plugin', 'obfs')  // 改混淆插件
+        _.set(p, 'plugin-opts', { "mode": "http", "host": "v9-dy.ixigua.com" })  // 改混淆
+
+        // _.set(p, 'plugin-opts.mode', 'http')  // 改混淆插件
+        // _.set(p, 'plugin-opts.host', 'v9-dy.ixigua.com')  // 改混淆
+
+        return p
+    })
+}
+```
+
 > 以下为完整脚本的举例 不一定会按最新代码更新
 
 ```JavaScript

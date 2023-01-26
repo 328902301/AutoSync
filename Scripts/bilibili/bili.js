@@ -1,4 +1,4 @@
-// 2023-01-26 17:35
+// 2023-01-26 17:40
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -95,23 +95,24 @@ if (obj.data) {
   } else if (url.includes("/x/v2/feed/index?")) {
     // 推荐去广告，最后问号不能去掉，以免匹配到story模式
     if (obj.data?.items) {
-      obj.data.items = obj.data.items.filter(
-        (item) =>
+      obj.data.items = obj.data.items.filter((item) => {
+        return (
           !item.banner_item &&
           !item.ad_info &&
-          item.card_goto.includes("ad") &&
+          item.card_goto?.includes("ad") &&
           [
             "small_cover_v2",
             "large_cover_v1",
             "large_cover_single_v9"
           ].includes(item.card_type)
-      );
+        );
+      });
     }
   } else if (url.includes("/x/v2/feed/index/story")) {
     if (obj.data?.items) {
-      obj.data.items = obj.data.items.filter(
-        (item) => !item.ad_info && item.card_goto.includes("ad")
-      );
+      obj.data.items = obj.data.items.filter((item) => {
+        return !item.ad_info && item.card_goto.includes("ad");
+      });
     }
   } else if (url.includes("/x/v2/search/square")) {
     // 哔哩哔哩-热搜广告

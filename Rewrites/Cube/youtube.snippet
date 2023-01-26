@@ -1,5 +1,5 @@
 # ======= YouTube ======= #
-# 2023-01-11 09:08
+# 2023-01-26 19:48
 
 # ⚠️⚠️
 # Quantumult X 必须在 [general] 部分加入以下代码: udp_drop_list=443
@@ -9,6 +9,9 @@
 
 # 去除底部上传按钮
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/guide\?key ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+
+# 开启画中画
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event\?key ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
 
 # 去除播放页广告
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/next\?key ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js

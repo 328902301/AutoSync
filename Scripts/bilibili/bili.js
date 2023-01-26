@@ -1,4 +1,4 @@
-// 2023-01-26 17:52
+// 2023-01-26 18:28
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -64,16 +64,15 @@ if (obj.data) {
         obj.data.sections_v2[index].tip_icon = "";
         obj.data.sections_v2[index].be_up_title = "";
         obj.data.sections_v2[index].tip_title = "";
-        for (let i = 0; i < obj.data.sections_v2.length; i++) {
-          if (
-            obj.data.sections_v2[i].title === "推荐服务" ||
-            obj.data.sections_v2[i].title === "更多服务" ||
-            obj.data.sections_v2[i].title === "创作中心"
-          ) {
-            obj.data.sections_v2[i].title = "";
-            obj.data.sections_v2[i].type = "";
-          }
+        if (
+          obj.data.sections_v2[index].title === "推荐服务" ||
+          obj.data.sections_v2[index].title === "更多服务" ||
+          obj.data.sections_v2[index].title === "创作中心"
+        ) {
+          obj.data.sections_v2[index].title = "";
+          obj.data.sections_v2[index].type = "";
         }
+
         obj.data.sections_v2[index].items = items;
         obj.data.vip_section_v2 = "";
         obj.data.vip_section = "";

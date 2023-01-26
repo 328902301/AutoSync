@@ -131,6 +131,12 @@ function isAd(data) {
   if (data.promotion?.type === "ad") {
     return true;
   }
+  if (data.page_info?.actionlog?.source === "ad") {
+    return true;
+  }
+  if (data.content_auth_info?.content_auth_title === "广告") {
+    return true;
+  }
   if (data.common_struct?.[0]?.actionlog?.source.includes("ad")) {
     return true;
   }
@@ -152,7 +158,11 @@ function removeCards(data) {
       for (let group of cardGroup) {
         let cardType = group.card_type;
         if (cardType !== 118) {
-          newGroup.push(group);
+          if (!isAd(group.mblog)) {
+            if (!group.includes("res_from:ads")) {
+              newGroup.push(group);
+            }
+          }
         }
       }
       card.card_group = newGroup;

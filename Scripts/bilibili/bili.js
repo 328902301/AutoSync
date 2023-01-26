@@ -58,32 +58,35 @@ if (obj.data) {
     // 622为会员购中心 425开始为概念版id
     const itemList = new Set([396, 397, 398, 399]);
     if (obj.data?.sections_v2) {
-      obj.data.sections_v2.forEach((e) => {
-        e.items = e.items.filter((i) => itemList.includes(i.id));
-        e.button = {};
-        e.be_up_title = "";
-        e.tip_icon = "";
-        e.tip_title = "";
-        if (["推荐服务", "更多服务", "创作中心"].includes(e.title)) {
-          e.title = "";
-          e.type = "";
+      obj.data.sections_v2.forEach((i) => {
+        let items = i.items.filter((e) => itemList.has(e.id));
+        obj.data.sections_v2.button = {};
+        obj.data.sections_v2.tip_icon = "";
+        obj.data.sections_v2.be_up_title = "";
+        obj.data.sections_v2.tip_title = "";
+        for (let i = 0; i < obj.data.sections_v2.length; i++) {
+          if (
+            obj.data.sections_v2[i].title === "推荐服务" ||
+            obj.data.sections_v2[i].title === "更多服务" ||
+            obj.data.sections_v2[i].title === "创作中心"
+          ) {
+            obj.data.sections_v2[i].title = "";
+            obj.data.sections_v2[i].type = "";
+          }
         }
+        obj.data.sections_v2.items = items;
+        obj.data.vip_section_v2 = "";
+        obj.data.vip_section = "";
+        obj.data.live_tip = "";
+        obj.data.answer = "";
+        // 开启本地会员标识
+        obj.data.vip_type = 2;
+        obj.data.vip.type = 2;
+        obj.data.vip.status = 1;
+        obj.data.vip.vip_pay_type = 1;
+        obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       });
-      if (obj.data?.live_tip) {
-        obj.data.live_tip = {};
-      }
-      if (obj.data?.answer) {
-        obj.data.answer = {};
-      }
-      obj.data.vip_section = "";
-      obj.data.vip_section_v2 = "";
     }
-    // 开启本地会员标识
-    obj.data.vip_type = 2;
-    obj.data.vip.type = 2;
-    obj.data.vip.status = 1;
-    obj.data.vip.vip_pay_type = 1;
-    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   } else if (url.includes("/x/v2/account/myinfo")) {
     // 哔哩哔哩-会员清晰度
     obj.data.vip.type = 2;

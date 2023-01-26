@@ -57,34 +57,33 @@ if (obj.data) {
     // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
     // 622为会员购中心 425开始为概念版id
     const itemList = new Set([396, 397, 398, 399]);
-    obj["data"]["sections_v2"]?.forEach((element, index) => {
-      let items = element["items"].filter((e) => itemList.has(e.id));
-      obj["data"]["sections_v2"][index].button = {};
-      delete obj["data"]["sections_v2"][index].tip_icon;
-      delete obj["data"]["sections_v2"][index].be_up_title;
-      delete obj["data"]["sections_v2"][index].tip_title;
-      for (let i = 0; i < obj["data"]["sections_v2"].length; i++) {
-        if (
-          obj.data.sections_v2[i].title === "推荐服务" ||
-          obj.data.sections_v2[i].title === "更多服务" ||
-          obj.data.sections_v2[i].title === "创作中心"
-        ) {
-          delete obj.data.sections_v2[i].title;
-          delete obj.data.sections_v2[i].type;
+    if (obj.data?.sections_v2) {
+      obj.data.sections_v2.forEach((e) => {
+        e.items = e.items.filter((i) => itemList.includes(i.id));
+        e.button = {};
+        e.be_up_title = "";
+        e.tip_icon = "";
+        e.tip_title = "";
+        if (["推荐服务", "更多服务", "创作中心"].includes(e.title)) {
+          e.title = "";
+          e.type = "";
         }
+      });
+      if (obj.data?.live_tip) {
+        obj.data.live_tip = {};
       }
-      obj["data"]["sections_v2"][index]["items"] = items;
-      delete obj.data.vip_section_v2;
-      delete obj.data.vip_section;
-      delete obj.data.live_tip;
-      delete obj.data.answer;
-      // 开启本地会员标识 2022-03-05 add by ddgksf2013
-      obj.data.vip_type = 2;
-      obj.data.vip.type = 2;
-      obj.data.vip.status = 1;
-      obj.data.vip.vip_pay_type = 1;
-      obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-    });
+      if (obj.data?.answer) {
+        obj.data.answer = {};
+      }
+      obj.data.vip_section = "";
+      obj.data.vip_section_v2 = "";
+    }
+    // 开启本地会员标识
+    obj.data.vip_type = 2;
+    obj.data.vip.type = 2;
+    obj.data.vip.status = 1;
+    obj.data.vip.vip_pay_type = 1;
+    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   } else if (url.includes("/x/v2/account/myinfo")) {
     // 哔哩哔哩-会员清晰度
     obj.data.vip.type = 2;

@@ -1,4 +1,4 @@
-// 2023-01-19 18:15
+// 2023-01-26 17:52
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -7,7 +7,9 @@ let obj = JSON.parse($response.body);
 if (obj.data) {
   // 哔哩哔哩-强制设置的皮肤
   if (url.includes("/x/resource/show/skin")) {
-    if (obj.data.common_equip) delete obj.data.common_equip;
+    if (obj.data.common_equip) {
+      delete obj.data.common_equip;
+    }
   } else if (url.includes("/x/resource/show/tab/v2")) {
     // 哔哩哔哩-标签页
     if (obj.data.tab) {
@@ -134,26 +136,50 @@ if (obj.data) {
     }
   } else if (url.includes("/x/v2/search/square")) {
     // 哔哩哔哩-热搜广告
-    delete obj.data;
+    // delete obj.data;
+    obj.data = {
+      type: "history",
+      title: "搜索历史",
+      search_hotword_revision: 2
+    };
   } else if (url.includes("/x/v2/splash")) {
     // 哔哩哔哩-开屏广告
-    if (obj.data.show) delete obj.data.show;
-  } else if (url.includes("/pgc/page/cinema/tab")) {
+    if (obj.data.show) {
+      delete obj.data.show;
+    }
+  } else if (
+    url.includes("/pgc/page/bangumi") ||
+    url.includes("/pgc/page/cinema/tab")
+  ) {
     // 哔哩哔哩-观影页广告
-    if (obj.result && obj.result.modules) {
-      obj.result.modules?.forEach((module) => {
-        // 头部banner
+    if (obj.result?.modules) {
+      obj.result.modules.forEach((module) => {
         if (module.style.startsWith("banner")) {
-          module.items = module.items.filter(
-            (i) => !(i.source_content && i.source_content.ad_content)
+          module.items = module.items.filter((i) => i.link.includes("play"));
+        } else if (module.style.startsWith("function")) {
+          module.items = module.items.filter((i) =>
+            i.blink.startsWith("bilibili")
           );
+        } else if (module.style.startsWith("tip")) {
+          module.items = [];
         }
       });
     }
   } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
     // 哔哩哔哩-直播广告
-    if (obj.data.activity_banner_info)
-      obj["data"]["activity_banner_info"] = null;
+    if (obj.data?.activity_banner_info) {
+      obj.data.activity_banner_info = null;
+    }
+    if (obj.data?.shopping_info) {
+      obj.data.shopping_info = { is_show: 0 };
+    }
+    if (
+      obj.data?.new_tab_info?.outer_list &&
+      obj.data?.new_tab_info?.outer_list.length > 0
+    ) {
+      obj.data.new_tab_info.outer_list =
+        obj.data.new_tab_info.outer_list.filter((i) => i.biz_id !== 33);
+    }
   }
 }
 

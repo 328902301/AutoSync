@@ -1,9 +1,0 @@
-#!name=futurkk
-#!desc=一切顺利我的宝～
-
-[Panel]
-#Airport
-Sub_info1 = script-name=Sub_info,update-interval=43200
-
-[Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/futurkk/Potato/main/Surge%20for%20myself/JS/sub_info.js,script-update-interval=0,argument=url=[encode过的机场订阅链接]&title=𝗧𝗲𝘅𝗼𝗻‘𝘀 𝗟𝗔𝗕&icon=cart.circle&color=#0047AB&reset_day=19

@@ -143,9 +143,9 @@
     constructor(name, opt2) {
       this.name = name || "";
       this.debug = opt2.debug || false;
-      if (name) {
-        this.log(`${name} Start`);
-      }
+      // if (name) {
+        // this.log(`${name} Start`);
+      // }
     }
     isQuanX() {
       return typeof $task !== "undefined";
@@ -244,7 +244,7 @@
   };
 
   // lib/env.ts
-  var $ = new SimpleClient("YouTube", { debug: true });
+  var $ = new SimpleClient("YouTube", { debug: false });
 
   // node_modules/@protobuf-ts/runtime/build/es2015/json-typings.js
   function typeofJsonValue(value) {
@@ -5062,7 +5062,7 @@
         fatal: false,
         ignoreBOM: true
       });
-      $.log(name);
+      // $.log(name);
       this.whiteNo = whiteObj.whiteNo;
       this.blackNo = whiteObj.blackNo;
       this.whiteEml = whiteObj.whiteEml;
@@ -5070,7 +5070,7 @@
     }
     save() {
       if (this.needSave) {
-        $.log("Update Config");
+        // $.log("Update Config");
         const YouTubeWhiteObj = {
           whiteNo: this.whiteNo,
           blackNo: this.blackNo,
@@ -5084,7 +5084,7 @@
       this.save();
       if (this.needProcess) {
         this.toBinary();
-        $.log("Handle");
+        // $.log("Handle");
         if ($.isQuanX()) {
           $.done({
             bodyBytes: this.body.buffer.slice(
@@ -5139,7 +5139,7 @@
       const adFlag = rawText.includes("pagead");
       adFlag ? this.blackNo.push(no) : this.whiteNo.push(no);
       this.needSave = true;
-      $.log("UnknownField:" + no + ": " + adFlag);
+      // $.log("UnknownField:" + no + ": " + adFlag);
       return adFlag;
     }
     handleKnownField(field) {

@@ -1,15 +1,15 @@
 #!name=网抑云
-#!desc=KEYAD 2023 1.23
-
-[MITM]
-hostname = %APPEND% interface*.music.163.com,interface*.music.163.com.163jiasu.com
+#!desc=KEYAD 2023 1.26
 
 [General]
-force-http-engine-hosts = %APPEND% interface*.music.163.com.163jiasu.com,interface*.music.163.com
+force-http-engine-hosts = %APPEND% 59.111.*:0
 
 [URL Rewrite]
 iadmusicmatvideo.music.126.net - reject
 iadmusicmat.music.126.net - reject
-
+^https?:\/\/httpdns\.n\.netease\.com - reject
 [Map Local]
 \/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+[MITM]
+hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0, httpdns.n.netease.com

@@ -8,6 +8,7 @@ force-http-engine-hosts = %APPEND% 59.111.*:0
 iadmusicmatvideo.music.126.net - reject
 iadmusicmat.music.126.net - reject
 ^https?:\/\/httpdns\.n\.netease\.com - reject
+^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
 
 [Map Local]
 \/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"

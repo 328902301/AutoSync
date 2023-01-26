@@ -58,12 +58,12 @@ if (obj.data) {
     // 622为会员购中心 425开始为概念版id
     const itemList = new Set([396, 397, 398, 399]);
     if (obj.data?.sections_v2) {
-      obj.data.sections_v2.forEach((i) => {
-        let items = i.items.filter((e) => itemList.has(e.id));
-        obj.data.sections_v2.button = {};
-        obj.data.sections_v2.tip_icon = "";
-        obj.data.sections_v2.be_up_title = "";
-        obj.data.sections_v2.tip_title = "";
+      obj.data.sections_v2.forEach((element, index) => {
+        let items = element.items.filter((e) => itemList.has(e.id));
+        obj.data.sections_v2[index].button = {};
+        obj.data.sections_v2[index].tip_icon = "";
+        obj.data.sections_v2[index].be_up_title = "";
+        obj.data.sections_v2[index].tip_title = "";
         for (let i = 0; i < obj.data.sections_v2.length; i++) {
           if (
             obj.data.sections_v2[i].title === "推荐服务" ||
@@ -74,7 +74,7 @@ if (obj.data) {
             obj.data.sections_v2[i].type = "";
           }
         }
-        obj.data.sections_v2.items = items;
+        obj.data.sections_v2[index].items = items;
         obj.data.vip_section_v2 = "";
         obj.data.vip_section = "";
         obj.data.live_tip = "";

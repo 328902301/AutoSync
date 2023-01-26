@@ -1,4 +1,4 @@
-// 2023-01-21 18:55
+// 2023-01-26 18:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -40,8 +40,8 @@ if (obj.data) {
       );
     }
   } else if (url.includes("/shield/frogserver/aocs")) {
-    if (obj.data.gd_notch_logo) {
-      obj.data.gd_notch_logo = {
+    if (obj.data.operation_layer) {
+      obj.data.operation_layer = {
         status: 1,
         version: "",
         value: ""

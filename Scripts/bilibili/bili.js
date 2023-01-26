@@ -1,4 +1,4 @@
-// 2023-01-26 17:32
+// 2023-01-26 17:35
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -59,7 +59,9 @@ if (obj.data) {
     const itemList = new Set([396, 397, 398, 399]);
     if (obj.data?.sections_v2) {
       obj.data.sections_v2.forEach((element) => {
-        element.items = element.items.filter((e) => itemList.has(e.id));
+        element.items = element.items.filter((e) => {
+          return itemList.includes(e.id);
+        });
         element.button = {};
         element.be_up_title = "";
         element.tip_icon = "";

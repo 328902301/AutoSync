@@ -9,7 +9,8 @@ const list = {
 	'Fileball': { name: 'filebox_pro', id: 'com.premium.yearly' },
 	'ipTV': { name: 'ipTV +', id: 'iptv_9.99_1y_7d_free' },
 	'Speechify': { name: 'pro', id: 'com.cliffweitzman.speechifyMobile2.premium.annual' },
-	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' }
+	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' },
+        'mizframa': { name: 'premium', id: 'mf_20_lifetime2' }
 };
 const data = {
 	"expires_date": "2099-02-18T07:52:54Z",

@@ -17,19 +17,13 @@ DOMAIN-SUFFIX,page.amap.com,REJECT
 DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 
 [Rewrite]
-
-# 网易接的的某宝广告
-^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/.+?\.jpg$ - reject
-# 网易接的的某汐广告
-^http:\/\/images\.pinduoduo\.com\/marketing_api\/202\d-\d\d\-\d\d\/.*?\.jpeg - reject
-# 网易接的的某东广告
-^https:\/\/img2\.360buyimg\.com\/tgx\/jfs\/t1\/.*?\.jpg$ - reject 
-# 网易自己域名的广告
+^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/.+\.jpg - reject
+^http:\/\/images\.pinduoduo\.com\/marketing_api\/202\d-\d\d\-\d\d\/.+\.jpeg - reject
+^https:\/\/img2\.360buyimg\.com\/tgx\/jfs\/t1\/.+\.jpg$ - reject 
+# 网易
 ^https?:\/\/iadmusicmatvideo.music.126.net - reject
 ^https?:\/\/iadmusicmat.music.126.net - reject
-
-^https?:\/\/interface(\d)?\.music\.163.com\/eapi\/(ad\/.*|lbs\/gpsStatus\/*) reject-200
-^https?:\/\/clientlog3\.music\.163\.com\/api\/clientlog\/encrypt\/upload* reject-200
+\/eapi\/ad\/ reject-200
 
 #555横幅
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
@@ -39,19 +33,19 @@ DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject
 
 #淘宝
-^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/.+?\.heic$ - reject
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/.+\.heic$ - reject
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 
 #云闪付
 ^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long - reject
-^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+?\.jpg$ - reject
+^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+\.jpg$ - reject
 
 #拼多多
-^https:\/\/commimg-1\.pddpic\.com\/oms_img_ng\/.+?\.jpeg - reject
-^https:\/\/lf3-beecdn\.bytetos\.com\/obj\/.*?\.png$ - reject
+^https:\/\/commimg-1\.pddpic\.com\/oms_img_ng\/.+\.jpeg - reject
+^https:\/\/lf3-beecdn\.bytetos\.com\/obj\/.+\.png$ - reject
 
 #京东
-^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+?\.jpg$ - reject
+^https:\/\/m\.360buyimg\.com\/(mobilecms|babel)\/.+\.jpg$ - reject
 
 #松果
 ^https:\/\/api.songguo7.com\/(\w{3})?mp\/v2\/misc\/toast - reject
@@ -62,6 +56,7 @@ DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 #高德横幅
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? reject-dict
+
 #中国移动
 ^https?:\/\/client.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject-200
@@ -70,7 +65,6 @@ DOMAIN-SUFFIX,www.qchannel01.cn,REJECT
 [Script]
 #12306
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://cdn.jsdelivr.net/gh/kokoryh/Script@master/js/12306.js, requires-body=true, timeout=10, tag=12306
-
 
 
 [MITM]

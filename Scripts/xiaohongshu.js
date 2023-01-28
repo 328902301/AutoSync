@@ -1,4 +1,4 @@
-// 2023-01-28 11:40
+// 2023-01-28 11:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -32,16 +32,17 @@ if (obj.data) {
       let newItems = [];
       for (let item of obj.data) {
         // 去除直播
-        if (item.model_type === "live_v2") {
-          continue;
+        if (item.model_type === "note") {
           // 去除赞助
-        } else if (item.ads_info) {
-          continue;
-          // 去除带货
-        } else if (item.note_attributes.includes("goods")) {
-          continue;
+          if (item.ads_info) {
+            continue;
+            // 去除带货
+          } else if (item.note_attributes.includes("goods")) {
+            continue;
+          } else {
+            newItems.push(item);
+          }
         }
-        newItems.push(item);
       }
     }
     obj.data = newItems;

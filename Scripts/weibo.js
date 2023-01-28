@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-28 18:45
+// 2023-01-28 18:55
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -297,7 +297,9 @@ function removeComments(data) {
   for (let item of items) {
     // 移除头像挂件、勋章、评论气泡
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      if (item.data) {
+        removeUserCard(item.data);
+      }
       if (item?.data?.comment_bubble) {
         item.data.comment_bubble = {};
       }
@@ -379,7 +381,9 @@ function userHandler(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      if (item.data) {
+        removeUserCard(item.data);
+      }
     }
     let isAdd = true;
     if (item.category === "group") {
@@ -544,7 +548,9 @@ function removeSearch(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      if (item.data) {
+        removeUserCard(item.data);
+      }
     }
     if (item.category === "feed") {
       if (!isAd(item.data)) {
@@ -735,7 +741,9 @@ function itemExtendHandler(data) {
     data.custom_action_list = newActions;
   }
   if (mainConfig.removeUserItem) {
-    removeUserCard(data.retweeted_status);
+    if (data.retweeted_status) {
+      removeUserCard(data.retweeted_status);
+    }
   }
 }
 

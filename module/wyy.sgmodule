@@ -1,6 +1,5 @@
 #!name=网抑云
-#!desc=KEYAD 2023 1.26
-
+#!desc=KEYAD 2023 1.26由于Surge对于tcp,http,port有着严格限制,而乐色网易云不遵守规则所以不能和q一样使用一个"host"规则就可以屏蔽eapi下所有
 [General]
 force-http-engine-hosts = %APPEND% 59.111.*:0
 

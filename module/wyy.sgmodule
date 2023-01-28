@@ -1,5 +1,5 @@
 #!name=网抑云
-#!desc=KEYAD 2023 1.26屏蔽搜索下广告,热搜,开屏,更新
+#!desc=KEYAD 2023 1.26
 
 [General]
 force-http-engine-hosts = %APPEND% 59.111.*:0
@@ -11,8 +11,10 @@ iadmusicmat.music.126.net - reject
 ^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
 
 [Map Local]
+#开屏
 \/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-\/eapi\/search data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-\/eapi\/ichat\/ios\/upgrade data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+#热搜
+\/eapi\/search\/chart data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 [MITM]
-hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0, httpdns.n.netease.com
+hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0

@@ -1,4 +1,4 @@
-// 2023-01-28 10:35
+// 2023-01-28 10:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -27,9 +27,19 @@ if (obj.data) {
       });
     }
   } else if (url.includes("/v6/homefeed")) {
-    // 小红书-信息流广告,商品推广
+    // 小红书-信息流广告,商品推广,直播
     if (obj.data) {
-      obj.data = obj.data.filter((d) => !d.ads_info && !d.card_icon);
+      let newItems = [];
+      for (let item of obj.data) {
+        if (item.model_type === "note") {
+          if (item.ads_info || item.card_icon) {
+            continue;
+          } else {
+            newItems.push(item);
+          }
+        }
+      }
+      obj.data = newItems;
     }
   }
 }

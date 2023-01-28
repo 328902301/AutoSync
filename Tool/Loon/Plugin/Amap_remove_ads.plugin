@@ -41,4 +41,4 @@ http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefa
 http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag= 搜索框热词,  img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
 [Mitm]
-hostname = *amap.com
+hostname = *.amap.com

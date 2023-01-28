@@ -1,4 +1,4 @@
-// 2023-01-28 13:20
+// 2023-01-28 21:40
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -7,11 +7,9 @@ let obj = JSON.parse($response.body);
 if (obj.data) {
   // 小红书-开屏广告-config
   if (url.includes("/v1/system_service/config")) {
-    if (obj.data) {
-      delete obj.data.store;
-      delete obj.data.splash;
-      delete obj.data.loading_img;
-    }
+    delete obj.data.store;
+    delete obj.data.splash;
+    delete obj.data.loading_img;
   } else if (url.includes("/v2/system_service/splash_config")) {
     // 小红书-开屏广告-splash_config
     if (obj.data?.ads_groups) {
@@ -28,24 +26,22 @@ if (obj.data) {
     }
   } else if (url.includes("/v6/homefeed")) {
     // 小红书-信息流广告
-    if (obj.data) {
-      let newItems = [];
-      for (let item of obj.data) {
-        // 去除直播
-        if (item.model_type === "live_v2") {
-          continue;
-          // 去除赞助,带货
-        } else if (item.ads_info) {
-          continue;
-          // 去除带货
-        } else if (item.card_icon) {
-          continue;
-        } else {
-          newItems.push(item);
-        }
+    let newItems = [];
+    for (let item of obj.data) {
+      // 去除直播
+      if (item.model_type === "live_v2") {
+        continue;
+        // 去除赞助,带货
+      } else if (item.ads_info) {
+        continue;
+        // 去除带货
+      } else if (item.card_icon) {
+        continue;
+      } else {
+        newItems.push(item);
       }
-      obj.data = newItems;
     }
+    obj.data = newItems;
   }
 }
 

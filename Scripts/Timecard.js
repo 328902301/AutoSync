@@ -64,7 +64,7 @@ function today(day) {
   let daythis = day;
   if (daythis == "0") {
     datenotice();
-    return "🎉🎉🎉";
+    return "🎉";
   } else {
     return daythis;
   }
@@ -74,7 +74,7 @@ function today(day) {
 function datenotice() {
   if ($persistentStore.read("timecardpushed") != tlist[nowlist][1] && tnow.getHours() >= 6) {
     $persistentStore.write(tlist[nowlist][1], "timecardpushed");
-    $notification.post("假日祝福","", "今天是" + tlist[nowlist][1] + "日 " + tlist[nowlist][0] + "   🎉🎉🎉")
+    $notification.post("假日祝福","", "今天是" + tlist[nowlist][1] + "日 " + tlist[nowlist][0] + "   🎉")
   } else if ($persistentStore.read("timecardpushed") == tlist[nowlist][1]) {
     //console.log("当日已通知");
   }

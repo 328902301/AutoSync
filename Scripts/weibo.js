@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-28 18:08
+// 2023-01-28 18:55
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -218,6 +218,23 @@ function isBlock(data) {
   return false;
 }
 
+// 移除头像挂件、勋章
+function removeUserCard(data) {
+  if (!data.user) {
+    return data;
+  }
+  if (data.user.cardid) {
+    data.user.cardid = "";
+  }
+  if (data.user.icons) {
+    data.user.icons = [];
+  }
+  if (data.user.avatargj_id) {
+    data.user.avatargj_id = "";
+  }
+  return data;
+}
+
 function removeTimeLine(data) {
   for (let s of ["ad", "advertises", "trends", "headers"]) {
     if (data[s]) {
@@ -229,6 +246,9 @@ function removeTimeLine(data) {
   }
   let newStatuses = [];
   for (let s of data.statuses) {
+    if (mainConfig.removeUserItem) {
+      removeUserCard(s);
+    }
     if (!isAd(s)) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
@@ -260,20 +280,6 @@ function publishHandler(data) {
   return data;
 }
 
-// 移除头像挂件、勋章
-function removeUserCard(data) {
-  if (!data) {
-    return data;
-  }
-  if (data.cardid) {
-    data.cardid = "";
-  }
-  if (data.icons) {
-    data.icons = [];
-  }
-  return data;
-}
-
 // 评论区相关和推荐内容
 function removeComments(data) {
   let delType = ["广告"];
@@ -291,8 +297,8 @@ function removeComments(data) {
   for (let item of items) {
     // 移除头像挂件、勋章、评论气泡
     if (mainConfig.removeUserItem) {
-      if (item.data.user) {
-        removeUserCard(item.data.user);
+      if (item.data) {
+        removeUserCard(item.data);
       }
       if (item?.data?.comment_bubble) {
         item.data.comment_bubble = {};
@@ -374,6 +380,11 @@ function userHandler(data) {
   }
   let newItems = [];
   for (let item of data.items) {
+    if (mainConfig.removeUserItem) {
+      if (item.data) {
+        removeUserCard(item.data);
+      }
+    }
     let isAdd = true;
     if (item.category === "group") {
       if (item.items[0]["data"]["desc"] === "可能感兴趣的人") {
@@ -536,6 +547,11 @@ function removeSearch(data) {
   }
   let newItems = [];
   for (let item of data.items) {
+    if (mainConfig.removeUserItem) {
+      if (item.data) {
+        removeUserCard(item.data);
+      }
+    }
     if (item.category === "feed") {
       if (!isAd(item.data)) {
         newItems.push(item);
@@ -723,6 +739,11 @@ function itemExtendHandler(data) {
       }
     }
     data.custom_action_list = newActions;
+  }
+  if (mainConfig.removeUserItem) {
+    if (data.retweeted_status) {
+      removeUserCard(data.retweeted_status);
+    }
   }
 }
 

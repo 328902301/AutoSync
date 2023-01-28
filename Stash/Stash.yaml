@@ -1,0 +1,284 @@
+allow-lan: true
+bind-address: '*'
+dns:
+  default-nameserver:
+  - 119.29.29.29
+  - 119.28.28.28
+  - 223.5.5.5
+  - 114.114.114.114
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+  - '*.lan'
+  - localhost.ptlogin2.qq.com
+  - +.srv.nintendo.net
+  - +.stun.playstation.net
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - +.xboxlive.com
+  - msftconnecttest.com
+  - xbox.*.microsoft.com
+  - '*.battlenet.com.cn'
+  - '*.battlenet.com'
+  - '*.blzstatic.cn'
+  - '*.battle.net'
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:1053
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.dns.sb/dns-query
+external-controller: 127.0.0.1:9090
+log-level: silent
+mixed-port: 7890
+mode: Rule
+proxies:
+proxy-groups:
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Select.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 自行选择
+  proxies: []
+  type: select
+  url: http://cp.cloudflare.com/generate_204
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+  name: 苹果服务
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/StreamingSE.png
+  name: 港台番剧
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Streaming.png
+  name: 国内影视
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
+  name: 国际媒体
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Steam.png
+  name: 游戏平台
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+  name: Telegram
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
+  name: 全球加速
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+  name: 兜底分流
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 狮城节点
+  - 美国节点
+  type: select
+- filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 香港节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+- filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
+  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 台湾节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+- filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
+  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 日本节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+- filter: "新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore"
+  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 狮城节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+- filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
+  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 美国节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+proxy-providers:
+    Subscribe:
+    interval: 3600
+    url: 
+    #将机场订阅链接填入
+rule-providers:
+  Telegram:
+    behavior: classical
+    interval: 86400
+    name: Telegram
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+  TikTok:
+    behavior: classical
+    interval: 86400
+    name: 国际媒体
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+  YouTube:
+    behavior: classical
+    interval: 86400
+    name: 国际媒体
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+  优酷视频:
+    behavior: classical
+    interval: 86400
+    name: 国内影视
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Youku/Youku.yaml
+  全球加速:
+    behavior: classical
+    interval: 86400
+    name: 全球加速
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
+  哔哩哔哩:
+    behavior: classical
+    interval: 86400
+    name: 港台番剧
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+  国内直连:
+    behavior: classical
+    interval: 86400
+    name: 国内直连
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml
+  广告拦截:
+    behavior: classical
+    interval: 86400
+    name: 广告拦截
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml
+  微信直连:
+    behavior: classical
+    interval: 86400
+    name: 微信直连
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
+  游戏平台:
+    behavior: classical
+    interval: 86400
+    name: 游戏平台
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+  爱奇艺:
+    behavior: classical
+    interval: 86400
+    name: 港台番剧
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iQIYI/iQIYI.yaml
+  腾讯视频:
+    behavior: classical
+    interval: 86400
+    name: 国内影视
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TencentVideo/TencentVideo.yaml
+  苹果服务:
+    behavior: classical
+    interval: 86400
+    name: 苹果服务
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+  规则修正:
+    behavior: classical
+    interval: 86400
+    name: 规则修正
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
+  运营劫持:
+    behavior: classical
+    interval: 86400
+    name: 运营劫持
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
+  隐私保护:
+    behavior: classical
+    interval: 86400
+    name: 隐私保护
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml
+rules:
+- IP-CIDR,119.28.229.0/24,游戏平台
+- IP-CIDR,18.141.84.0/24,游戏平台
+- IP-CIDR,18.194.67.0/24,游戏平台
+- IP-CIDR,18.230.161.0/24,游戏平台
+- IP-CIDR,216.239.36.0/24,游戏平台
+- IP-CIDR,3.124.157.0/24,游戏平台
+- IP-CIDR,3.137.55.0/24,游戏平台
+- IP-CIDR,54.150.52.0/24,游戏平台
+- IP-CIDR,54.180.64.0/24,游戏平台
+- RULE-SET,规则修正,DIRECT
+- RULE-SET,广告拦截,REJECT
+- RULE-SET,隐私保护,REJECT
+- RULE-SET,运营劫持,REJECT
+- RULE-SET,微信直连,DIRECT
+- RULE-SET,哔哩哔哩,港台番剧
+- RULE-SET,爱奇艺,港台番剧
+- RULE-SET,腾讯视频,国内影视
+- RULE-SET,优酷视频,国内影视
+- RULE-SET,YouTube,国际媒体
+- RULE-SET,TikTok,国际媒体
+- RULE-SET,Telegram,Telegram
+- RULE-SET,苹果服务,苹果服务
+- RULE-SET,游戏平台,游戏平台
+- RULE-SET,全球加速,全球加速
+- RULE-SET,国内直连,DIRECT
+- MATCH,兜底分流
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+subscribe-url: 

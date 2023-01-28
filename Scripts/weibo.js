@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-28 18:35
+// 2023-01-28 18:45
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -220,17 +220,17 @@ function isBlock(data) {
 
 // 移除头像挂件、勋章
 function removeUserCard(data) {
-  if (!data.user) {
+  if (!data) {
     return data;
   }
-  if (data.user.cardid) {
-    data.user.cardid = "";
+  if (data.cardid) {
+    data.cardid = "";
   }
-  if (data.user.icons) {
-    data.user.icons = [];
+  if (data.icons) {
+    data.icons = [];
   }
-  if (data.user.avatargj_id) {
-    data.user.avatargj_id = "";
+  if (data.avatargj_id) {
+    data.avatargj_id = "";
   }
   return data;
 }
@@ -247,7 +247,7 @@ function removeTimeLine(data) {
   let newStatuses = [];
   for (let s of data.statuses) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(s);
+      removeUserCard(s.user);
     }
     if (!isAd(s)) {
       lvZhouHandler(s);
@@ -297,7 +297,7 @@ function removeComments(data) {
   for (let item of items) {
     // 移除头像挂件、勋章、评论气泡
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      removeUserCard(item.data.user);
       if (item?.data?.comment_bubble) {
         item.data.comment_bubble = {};
       }
@@ -379,7 +379,7 @@ function userHandler(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      removeUserCard(item.data.user);
     }
     let isAdd = true;
     if (item.category === "group") {
@@ -544,7 +544,7 @@ function removeSearch(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data);
+      removeUserCard(item.data.user);
     }
     if (item.category === "feed") {
       if (!isAd(item.data)) {
@@ -732,10 +732,10 @@ function itemExtendHandler(data) {
         newActions.push(item);
       }
     }
-    if (mainConfig.removeUserItem) {
-      removeUserCard(data?.retweeted_status);
-    }
     data.custom_action_list = newActions;
+  }
+  if (mainConfig.removeUserItem) {
+    removeUserCard(data.retweeted_status.user);
   }
 }
 

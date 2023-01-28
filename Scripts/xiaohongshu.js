@@ -1,4 +1,4 @@
-// 2023-01-28 11:58
+// 2023-01-28 12:25
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -34,10 +34,10 @@ if (obj.data) {
         // 去除直播
         if (item.model_type === "note") {
           // 去除赞助
-          if (item.ads_info) {
+          if (item?.ads_info) {
             continue;
             // 去除带货
-          } else if (item?.note_attributes.includes("goods")) {
+          } else if (item?.note_attributes === ["goods"]) {
             continue;
           } else {
             newItems.push(item);

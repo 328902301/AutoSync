@@ -1,4 +1,4 @@
-// 2023-01-28 11:45
+// 2023-01-28 11:58
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -37,7 +37,7 @@ if (obj.data) {
           if (item.ads_info) {
             continue;
             // 去除带货
-          } else if (item.note_attributes.includes("goods")) {
+          } else if (item?.note_attributes.includes("goods")) {
             continue;
           } else {
             newItems.push(item);

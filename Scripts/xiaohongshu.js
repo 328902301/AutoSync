@@ -36,12 +36,12 @@ if (obj.data) {
           // 去除赞助
           if (item?.ads_info) {
             continue;
-          }
-          // 去除带货
-          if (item?.card_icon) {
+            // 去除带货
+          } else if (item?.card_icon) {
             continue;
+          } else {
+            newItems.push(item);
           }
-          newItems.push(item);
         }
       }
     }

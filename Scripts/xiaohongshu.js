@@ -1,4 +1,4 @@
-// 2023-01-28 12:58
+// 2023-01-28 13:05
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -32,14 +32,13 @@ if (obj.data) {
       let newItems = [];
       for (let item of obj.data) {
         // 去除直播
-        if (item?.model_type === "live_v2") {
+        if (item.model_type === "live_v2") {
           continue;
         } else {
-          // 去除赞助
-          if (item?.ads_info) {
+          // 去除赞助,带货
+          if (item.ads_info) {
             continue;
-            // 去除带货
-          } else if (item?.card_icon) {
+          } else if (item?.note_attributes?.includes("goods")) {
             continue;
           } else {
             newItems.push(item);

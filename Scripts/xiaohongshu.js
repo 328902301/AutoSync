@@ -1,4 +1,4 @@
-// 2023-01-28 10:20
+// 2023-01-28 10:32
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -29,7 +29,9 @@ if (obj.data) {
   } else if (url.includes("/v6/homefeed")) {
     // 小红书-信息流广告,商品推广
     if (obj.data) {
-      obj.data = obj.data.filter((d) => !d.ads_info && !d.card_icon);
+      obj.data = obj.data.filter(
+        (d) => !d.ads_info && !d.note_attributes.includes("goods")
+      );
     }
   }
 }

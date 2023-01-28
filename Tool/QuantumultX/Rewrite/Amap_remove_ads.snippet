@@ -18,9 +18,11 @@
 ^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif url reject-img
 # > 高德地图_左下天气
 ^https?:\/\/.*\.amap\.com\/ws\/valueadded\/weather url reject-dict
-# > 高德地图_首页右中'2022出行报告'
-^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/O1CN01z5u64r1EdKvtRa19q_!!6000000000374-2-tps-120-120\.png url reject-img
+# > 高德地图_首页右中'2022出行报告'[已解决]
+;^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/O1CN01z5u64r1EdKvtRa19q_!!6000000000374-2-tps-120-120\.png url reject-img
 
+# > 高德地图_首页右中广告
+^https?:\/\/.*\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js
 # > 高德地图_附近页面
 ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js
 # > 高德地图_打车页面

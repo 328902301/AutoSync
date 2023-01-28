@@ -31,7 +31,11 @@ external-controller: 127.0.0.1:9090
 log-level: silent
 mixed-port: 7890
 mode: Rule
-proxies:
+subscribe-url: 
+proxy-providers:
+    Subscribe:
+    interval: 3600
+    url: 
 proxy-groups:
 - icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Select.png
   include-all: true
@@ -165,7 +169,6 @@ proxy-groups:
   tolerance: 50
   type: url-test
   url: http://cp.cloudflare.com/generate_204
-proxy-providers:
 
 rule-providers:
   Telegram:
@@ -278,5 +281,5 @@ rules:
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
-subscribe-url: 
+
 

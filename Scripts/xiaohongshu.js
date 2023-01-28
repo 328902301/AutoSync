@@ -1,4 +1,4 @@
-// 2023-01-28 10:45
+// 2023-01-28 11:02
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -27,12 +27,17 @@ if (obj.data) {
       });
     }
   } else if (url.includes("/v6/homefeed")) {
-    // 小红书-信息流广告,商品推广,直播
+    // 小红书-信息流广告
     if (obj.data) {
       let newItems = [];
       for (let item of obj.data) {
-        if (item.model_type === "note") {
-          if (item.ads_info || item.card_icon) {
+        // 去除直播
+        if (item.model_type !== "live_v2") {
+          // 去除赞助
+          if (item.ads_info) {
+            continue;
+            // 去除带货
+          } else if (item.note_attributes.includes("goods")) {
             continue;
           } else {
             newItems.push(item);

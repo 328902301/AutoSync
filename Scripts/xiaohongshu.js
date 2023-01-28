@@ -1,4 +1,4 @@
-// 2023-01-28 13:10
+// 2023-01-28 13:20
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -44,8 +44,8 @@ if (obj.data) {
           newItems.push(item);
         }
       }
+      obj.data = newItems;
     }
-    obj.data = newItems;
   }
 }
 

@@ -1,4 +1,4 @@
-# 2023-01-28 19:21
+# 2023-01-19 23:00
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -54,6 +54,11 @@ HOST-SUFFIX,shuzilm.cn,MyBlockAds
 # ======= T ======= #
 # 贴吧
 IP-CIDR,180.76.76.200/32,MyBlockAds
+
+# ======= W ======= #
+# 微博 头像挂件
+HOST,new.vip.weibo.cn,MyBlockAds
+HOST,vip.storage.weibo.com,MyBlockAds
 
 # ======= X ======= #
 # 迅雷 解除版权限制

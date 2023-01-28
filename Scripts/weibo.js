@@ -220,17 +220,17 @@ function isBlock(data) {
 
 // 移除头像挂件、勋章
 function removeUserCard(data) {
-  if (!data) {
+  if (!data.user) {
     return data;
   }
-  if (data.cardid) {
-    data.cardid = "";
+  if (data.user.cardid) {
+    data.user.cardid = "";
   }
-  if (data.icons) {
-    data.icons = [];
+  if (data.user.icons) {
+    data.user.icons = [];
   }
-  if (data.avatargj_id) {
-    data.avatargj_id = "";
+  if (data.user.avatargj_id) {
+    data.user.avatargj_id = "";
   }
   return data;
 }
@@ -247,7 +247,7 @@ function removeTimeLine(data) {
   let newStatuses = [];
   for (let s of data.statuses) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(s.user);
+      removeUserCard(s);
     }
     if (!isAd(s)) {
       lvZhouHandler(s);
@@ -297,7 +297,7 @@ function removeComments(data) {
   for (let item of items) {
     // 移除头像挂件、勋章、评论气泡
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data.user);
+      removeUserCard(item.data);
       if (item?.data?.comment_bubble) {
         item.data.comment_bubble = {};
       }
@@ -379,7 +379,7 @@ function userHandler(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data.user);
+      removeUserCard(item.data);
     }
     let isAdd = true;
     if (item.category === "group") {
@@ -544,7 +544,7 @@ function removeSearch(data) {
   let newItems = [];
   for (let item of data.items) {
     if (mainConfig.removeUserItem) {
-      removeUserCard(item.data.user);
+      removeUserCard(item.data);
     }
     if (item.category === "feed") {
       if (!isAd(item.data)) {
@@ -735,7 +735,7 @@ function itemExtendHandler(data) {
     data.custom_action_list = newActions;
   }
   if (mainConfig.removeUserItem) {
-    removeUserCard(data.retweeted_status.user);
+    removeUserCard(data.retweeted_status);
   }
 }
 

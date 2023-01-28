@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-28 17:58
+// 2023-01-28 18:08
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -18,7 +18,7 @@ const mainConfig = {
   removeRelate: true, // 移除相关推荐
   removeRelateItem: true, // 移除评论区相关内容
   removeRewardItem: true, // 移除微博详情页打赏模块
-  removeUserBubble: true, // 移除头像挂件、勋章、评论气泡
+  removeUserItem: true, // 移除头像挂件、勋章、评论气泡
 
   // 视频、直播配置
   removeLiveMedia: true, // 移除首页顶部直播
@@ -260,7 +260,7 @@ function publishHandler(data) {
   return data;
 }
 
-// 移除头像挂件,勋章
+// 移除头像挂件、勋章
 function removeUserCard(data) {
   if (!data) {
     return data;
@@ -268,8 +268,8 @@ function removeUserCard(data) {
   if (data.cardid) {
     data.cardid = "";
   }
-  if (data.badge) {
-    data.badge = {};
+  if (data.icons) {
+    data.icons = [];
   }
   return data;
 }
@@ -290,7 +290,7 @@ function removeComments(data) {
   let newItems = [];
   for (let item of items) {
     // 移除头像挂件、勋章、评论气泡
-    if (mainConfig.removeUserBubble) {
+    if (mainConfig.removeUserItem) {
       if (item.data.user) {
         removeUserCard(item.data.user);
       }

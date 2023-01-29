@@ -4,16 +4,14 @@
 force-http-engine-hosts = %APPEND% 59.111.*:0
 
 [URL Rewrite]
-iadmusicmatvideo.music.126.net - reject
-iadmusicmat.music.126.net - reject
+^https?:\/\/iadmusicmat(video)?\.music\.126\.net - reject
 ^https?:\/\/httpdns\.n\.netease\.com - reject
-^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
 
 [Map Local]
 #开屏
-\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-#热搜
-\/eapi\/search\/chart data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+#热搜,清除缓存或重装后会有默认的猜你喜欢之类的,重新进网易云就会消失
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]
 hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0

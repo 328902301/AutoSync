@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,iadmatapk.nosdn.127.net,REJECT-NO-DROP
 
 [URL Rewrite]
 ^https?:\/\/httpdns\.n\.netease\.com - reject
+^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
 
 [Map Local]
 #开屏

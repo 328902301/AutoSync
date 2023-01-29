@@ -1,5 +1,5 @@
-#!name=网抑云
-#!desc=KEYAD 2023 1.26由于Surge对于tcp,http,port有着严格限制,而乐色网易云不遵守规则所以不能和q一样使用一个"host"规则就可以屏蔽eapi下所有
+#!name=网抑云 Version:8.9.20
+#!desc=KEYAD 2023 1.29由于Surge对于tcp,http,port有着严格限制,所以不能和q一样使用一个"host"规则就可以屏蔽eapi下所有,搜索页猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
 [General]
 force-http-engine-hosts = %APPEND% 59.111.*:0
 
@@ -16,9 +16,9 @@ DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
 [Map Local]
 #开屏,评论区插入广告
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/(ad|comment\/feed\/inserted) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-#搜索下面热搜
+#搜索页热搜卡片
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-#猜你喜欢,如果去不掉需要重装
+#搜索页猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
 ^https:\/\/interface3?\.music\.163\.com\/api\/search\/rcmd\/keyword\/get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]

@@ -1,3 +1,16 @@
+/*
+Stash 脚本实现 QX 的 echo-response 重写类型
+# 不支持
+^https?:\/\/echo-response\.com url echo-response text/html echo-response index.html
+# 支持
+https?:\/\/a\.b\.app\/c\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/dev/raw/main/NicegramProCrack.js
+改写为
+[Script]
+n = type=http-request,pattern=https?:\/\/a\.b\.app\/c\?id=\d{5,10},requires-body=0,max-size=0,timeout=30,script-update-interval=86400,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/echo-response/index.js, argument=type=text/json&url=https://github.com/a/dev/raw/main/b.js
+
+[MITM]
+hostname = %APPEND% restore-access.indream.app
+*/
 const NAME = 'echo-response'
 const TITLE = 'echo-response'
 const $ = new Env(NAME)

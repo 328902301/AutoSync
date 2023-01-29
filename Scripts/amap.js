@@ -17,20 +17,11 @@ if (obj.data) {
     }
   } else if (url.includes("/promotion-web/resource")) {
     // 打车页面
-    if (obj.data.banner) {
-      obj.data.banner = [];
-    }
-    if (obj.data.bubble) {
-      obj.data.bubble = [];
-    }
-    if (obj.data.icon) {
-      obj.data.icon = [];
-    }
-    if (obj.data.popup) {
-      obj.data.popup = [];
-    }
-    if (obj.data.tips) {
-      obj.data.tips = [];
+    let item = ["banner", "bubble", "icon", "popup", "tips"];
+    if (obj.data) {
+      item.forEach((i) => {
+        obj.data[i] = [];
+      });
     }
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
     // 我的页面
@@ -65,30 +56,18 @@ if (obj.data) {
       );
     }
   } else if (url.includes("/shield/search/poi/detail")) {
-    // 搜索地点详情页
+    // 景点详情页
+    let item = [
+      "check_in", // 足迹打卡
+      "multi_page_anchor", // 二级导航菜单
+      "reviews", // 用户评价
+      "scenic_recommend", //景点建议
+      "operation_banner" //横版图片推广
+    ];
     if (obj.data.modules) {
-      // 足迹打卡
-      if (obj.data.modules.check_in) {
-        obj.data.modules.check_in = {};
-      }
-      // 二级导航菜单
-      if (obj.data.modules.multi_page_anchor) {
-        obj.data.modules.multi_page_anchor = {};
-      }
-      // 用户评价
-      if (obj.data.modules.reviews) {
-        obj.data.modules.reviews = {};
-      }
-      // 景点建议
-      if (obj.data.modules.scenic_recommend) {
-        if (obj.data.modules.scenic_recommend.data) {
-          obj.data.modules.scenic_recommend.data.max_num_poi = 3;
-        }
-      }
-      // 横版图片推广
-      if (obj.data.modules.operation_banner) {
-        obj.data.modules.operation_banner = {};
-      }
+      item.forEach((i) => {
+        obj.data[i] = {};
+      });
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 开屏广告

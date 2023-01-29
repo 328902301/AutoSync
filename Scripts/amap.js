@@ -1,4 +1,4 @@
-// 2023-01-29 17:55
+// 2023-01-29 18:30
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -66,7 +66,7 @@ if (obj.data) {
     ];
     if (obj.data.modules) {
       item.forEach((i) => {
-        obj.data[i] = {};
+        obj.data.modules[i] = {};
       });
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {

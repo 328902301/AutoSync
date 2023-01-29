@@ -15,9 +15,7 @@ DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
 
 [Map Local]
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
 ^https:\/\/interface3?\.music\.163\.com\/api\/search\/rcmd\/keyword\/get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]

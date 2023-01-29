@@ -3,10 +3,12 @@
   
   如 QX：
 ^https?:\/\/request-header\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Chrome/71.0.3578.98 Safari/537.36$2
+^https?:\/\/request-header\.com url response-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Chrome/71.0.3578.98 Safari/537.36$2
    
   可改写为 Surge：
 [Script] 
 test = type=http-request,timeout=10,script-update-interval=3600,pattern=^https?:\/\/httpbin\.org,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/request-header/index.js, argument=(\r\n)User-Agent:.+(\r\n)->$1User-Agent: Chrome/71.0.3578.98 Safari/537.36$2
+test2 = type=http-response,timeout=10,script-update-interval=3600,pattern=^https?:\/\/httpbin\.org,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/request-header/index.js, argument=(\r\n)Content-Type:.+(\r\n)->$1Content-Type: text/plain; charset=UTF-8$2
 
 [MITM]
 hostname = httpbin.org
@@ -20,10 +22,18 @@ const NAME = 'request-header'
 const TITLE = 'request-header'
 const $ = new Env(NAME)
 const defaultVersion = 'HTTP/1.1'
+$.isResponse = () => typeof $response !== 'undefined'
 
 let result = {}
 !(async () => {
-  let { headers, method, url } = $request
+  let { method, url } = $request
+  let headers
+  if ($.isResponse()) {
+    headers = $response.headers
+  } else {
+    headers = $request.headers
+  }
+
   // $.log(JSON.stringify($request, null, 2))
   const urlMatched = url.match(/(^.*?:\/\/.*?)(\/.*)/)
   let path

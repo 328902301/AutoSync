@@ -5,19 +5,20 @@ force-http-engine-hosts = %APPEND% 59.111.*:0
 
 [Rule]
 #因为有时候iad的域名会走tcp80端口所以用rule
-DOMAIN-SUFFIX,gdt.qq.com,REJECT-NO-DROP
-DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
-DOMAIN-SUFFIX,iadmusicmat.music.126.net,REJECT-NO-DROP
-DOMAIN-SUFFIX,iadmat.nosdn.127.net,REJECT-NO-DROP
-DOMAIN-SUFFIX,iadmatapk.nosdn.127.net,REJECT-NO-DROP
-DOMAIN-SUFFIX,gdt.qq.com,REJECT-NO-DROP
-[URL Rewrite]
-^https?:\/\/httpdns\.n\.netease\.com - reject
+DOMAIN,gdt.qq.com,REJECT-NO-DROP
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
+DOMAIN,iadmusicmat.music.126.net,REJECT-NO-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,gdt.qq.com,REJECT-NO-DROP
+DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
 
 [Map Local]
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(ad|link\/scene\/show\/resource) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+^https:\/\/interface3?\.music\.163\.com\/api\/search\/rcmd\/keyword\/get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]
 hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0

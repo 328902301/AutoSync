@@ -1,7 +1,7 @@
 # ======= 高德地图 ======= #
-# 2023-01-29 16:25
+# 2023-01-29 18:05
 
-# 路线规划推广
+# 路线规划
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 
 # 首页卡片
@@ -21,8 +21,11 @@
 # 搜索框热词
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict
 
-# 附近
+# 附近页面
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+
+# 地点详情页
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 
 # 其他
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? url reject-dict

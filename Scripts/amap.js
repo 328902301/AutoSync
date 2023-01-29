@@ -103,9 +103,12 @@ if (obj.data) {
       // "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
-      item.forEach((i) => {
-        obj.data.modules[i] = [];
+      obj.data.modules = obj.data.modules.filter((i) => {
+        !item.includes(i);
       });
+      // item.forEach((i) => {
+      //   obj.data.modules[i] = [];
+      // });
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 开屏广告

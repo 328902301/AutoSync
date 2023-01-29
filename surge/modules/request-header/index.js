@@ -6,7 +6,7 @@
    
   可改写为 Surge：
 [Script] 
-test = type=http-request,timeout=10,script-update-interval=3600,pattern=^https?:\/\/httpbin\.org,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/request-header/index.js, debug=1 ,argument=(\r\n)User-Agent:.+(\r\n)->$1User-Agent: Chrome/71.0.3578.98 Safari/537.36$2
+test = type=http-request,timeout=10,script-update-interval=3600,pattern=^https?:\/\/httpbin\.org,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/request-header/index.js, argument=(\r\n)User-Agent:.+(\r\n)->$1User-Agent: Chrome/71.0.3578.98 Safari/537.36$2
 
 [MITM]
 hostname = httpbin.org

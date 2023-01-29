@@ -103,10 +103,9 @@ if (obj.data) {
       "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
-      obj.data.modules = obj.data.modules.filter((key) => !key.includes(item));
-      // item.forEach((i) => {
-      //   obj.data.modules[i] = {};
-      // });
+      item.forEach((i) => {
+        delete obj.data.modules[i];
+      });
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 开屏广告

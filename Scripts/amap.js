@@ -103,9 +103,7 @@ if (obj.data) {
       "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
-      obj.data.modules = obj.data.modules.filter((i) => {
-        return !item.includes(i);
-      });
+      obj.data.modules = obj.data.modules.filter((key) => !key.includes(item));
       // item.forEach((i) => {
       //   obj.data.modules[i] = {};
       // });

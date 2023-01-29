@@ -1,4 +1,4 @@
-// 2023-01-29 18:30
+// 2023-01-29 19:20
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -58,16 +58,52 @@ if (obj.data) {
   } else if (url.includes("/shield/search/poi/detail")) {
     // 景点详情页
     let item = [
-      "check_in", // 足迹打卡
-      "multi_page_anchor", // 二级导航菜单
+      // "normal_nav_bar",
+      // "base_info",
+      // "ggc_entry",
+      // "common_coupon_bar",
+      // "scenic_play_guide",
+      // "scenic_ticket_activity",
+      // "scenic_filter",
+      // "scenic_ticket",
+      // "scenic_coupon",
+      // "movie_info",
+      // "evaluate", // 高德出行评分
       "reviews", // 用户评价
-      "scenic_recommend", //景点建议
-      "operation_banner" //横版图片推广
+      // "packageShelf",
+      // "smallOrListBizRec",
+      "smallListBizRec", // 周边热门酒店
+      "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+      "bigListBizRec", // 购票悬浮菜单
+      "scenic_recommend", // 景点建议
+      // "parentBizRec",
+      // "surround_facility",
+      "scenic_mustplay", // 必游景点 四张景点大图
+      // "scenic_route_intelligent", // 推荐游玩线路
+      "scenic_lifeservices", // 吃住购娱 餐厅 购物
+      // "scenic_service",
+      // "scenic_parking",
+      // "scenic_ski", // 滑雪攻略 雪道数量 设施及服务
+      // "video",
+      "new_operation_banner", // 精选活动 高德的推广
+      "portal_entrance", // 高德旅游版块 引流到旅游频道
+      "scenic_voice", // 语音讲解 付费的项目
+      // "official_account",
+      // "scenic_knowledge",
+      // "scenic_helper", // 景区助手 开放时间 旺季 淡季
+      // "human_traffic", // 人流量情况 有统计图
+      // "scenic_guide",
+      // "scenic_route",
+      // "scenic_story",
+      // "contributor",
+      "collector_guide", // 游玩的图文指南
+      "operation_banner", // 横版图片推广
+      // "question_answer_card", // 问问 地点附近的热门问题
+      "check_in" // 足迹打卡
+      // "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
-      item.forEach((i) => {
-        obj.data.modules[i] = {};
-      });
+      obj.data.modules = obj.data.modules.filter((i) => !item.includes(i));
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 开屏广告

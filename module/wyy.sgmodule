@@ -3,8 +3,15 @@
 [General]
 force-http-engine-hosts = %APPEND% 59.111.*:0
 
+[Rule]
+#因为有时候iad的域名会走tcp80端口所以用rule
+DOMAIN-SUFFIX,gdt.qq.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
+DOMAIN-SUFFIX,iadmusicmat.music.126.net,REJECT-NO-DROP
+DOMAIN-SUFFIX,iadmat.nosdn.127.net,REJECT-NO-DROP
+DOMAIN-SUFFIX,iadmatapk.nosdn.127.net,REJECT-NO-DROP
+
 [URL Rewrite]
-^https?:\/\/iadmusicmat(video)?\.music\.126\.net - reject
 ^https?:\/\/httpdns\.n\.netease\.com - reject
 
 [Map Local]

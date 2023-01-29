@@ -15,7 +15,7 @@ DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
 
 [Map Local]
 #开屏,评论区插入广告
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(ad|comment\/feed\/inserted) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(ad|comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 #搜索页热搜卡片
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 #搜索页猜你喜欢,如果去不掉需要重装或者退出登录再重新登录

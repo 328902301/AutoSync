@@ -1,0 +1,14 @@
+#!name = 重写转换器
+#!desc = 将Quantumult X重写和Surge模块转换为Loon能识别的格式，仅支持来自GitHub的地址，点击下方链接以查看使用方法。
+#!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/blob/main/Resource/Markdown/Fileball/README.md
+#!author = 小白脸 chengkongyiban
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon\80px/Loon_rewrite_converter.png
+
+[Script]
+http-request qx\?.*|qx$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Loon_rewrite_converter/RewriteQuantumultX.js, requires-body=true, tag = 转换Quantumult X重写
+
+http-request sg\?.*|sg$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Loon_rewrite_converter/RewriteSurge.js, requires-body=true, tag = 转换Surge模块
+
+[MITM]
+hostname = github.com, raw.githubusercontent.com, gist.githubusercontent.com

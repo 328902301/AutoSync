@@ -10,10 +10,9 @@ DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
 DOMAIN-SUFFIX,iadmusicmat.music.126.net,REJECT-NO-DROP
 DOMAIN-SUFFIX,iadmat.nosdn.127.net,REJECT-NO-DROP
 DOMAIN-SUFFIX,iadmatapk.nosdn.127.net,REJECT-NO-DROP
-
+DOMAIN-SUFFIX,gdt.qq.com,REJECT-NO-DROP
 [URL Rewrite]
 ^https?:\/\/httpdns\.n\.netease\.com - reject
-^http:\/\/pgdt\.ugdtimg\.com\/141\/202\d\d\/snscosdownload\/SZ\/reserved - reject
 
 [Map Local]
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/(ad|link\/scene\/show\/resource) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"

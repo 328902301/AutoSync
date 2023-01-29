@@ -1,4 +1,4 @@
-// 2023-01-29 20:05
+// 2023-01-29 20:18
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -20,7 +20,7 @@ if (obj.data) {
     let item = ["banner", "bubble", "icon", "popup", "tips"];
     if (obj.data) {
       item.forEach((i) => {
-        obj.data[i] = [];
+        delete obj.data[i];
       });
     }
   } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
@@ -79,7 +79,7 @@ if (obj.data) {
       // "parentBizRec",
       // "surround_facility",
       "scenic_mustplay", // 必游景点 四张景点大图
-      // "scenic_route_intelligent", // 推荐游玩线路
+      "scenic_route_intelligent", // 推荐游玩线路
       "scenic_lifeservices", // 吃住购娱 餐厅 购物
       // "scenic_service",
       // "scenic_parking",

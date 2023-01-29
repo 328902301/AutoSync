@@ -1,4 +1,4 @@
-// 2023-01-29 19:55
+// 2023-01-29 20:05
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -103,9 +103,12 @@ if (obj.data) {
       "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
-      item.forEach((i) => {
-        obj.data.modules[i] = {};
+      obj.data.modules = obj.data.modules.filter((i) => {
+        return !item.includes(i);
       });
+      // item.forEach((i) => {
+      //   obj.data.modules[i] = {};
+      // });
     }
   } else if (url.includes("/valueadded/alimama/splash_screen")) {
     // 开屏广告

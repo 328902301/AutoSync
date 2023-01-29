@@ -1,4 +1,4 @@
-// 2023-01-29 19:43
+// 2023-01-29 19:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -58,23 +58,23 @@ if (obj.data) {
   } else if (url.includes("/shield/search/poi/detail")) {
     // 景点详情页
     let item = [
-      // "normal_nav_bar",
+      // "normal_nav_bar", // 右上角图标 客服 反馈
       // "base_info",
       // "ggc_entry",
-      // "common_coupon_bar",
-      // "scenic_play_guide",
+      "common_coupon_bar", // 领券条幅 新客专享 省钱卡
+      "scenic_play_guide", // 景区攻略 游玩攻略 交通攻略
       // "scenic_ticket_activity",
-      // "scenic_filter",
+      "scenic_filter", // 购票悬浮菜单 可定明日 随时退
       // "scenic_ticket",
       // "scenic_coupon",
-      // "movie_info",
+      "movie_info", // 优惠购票 景点宣传片
       // "evaluate", // 高德出行评分
       "reviews", // 用户评价
       // "packageShelf",
       // "smallOrListBizRec",
       "smallListBizRec", // 周边热门酒店
       "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
-      "bigListBizRec", // 购票悬浮菜单
+      "bigListBizRec", // 周边景点推荐 三张景点大图
       "scenic_recommend", // 景点建议
       // "parentBizRec",
       // "surround_facility",
@@ -99,8 +99,8 @@ if (obj.data) {
       "collector_guide", // 游玩的图文指南
       "operation_banner", // 横版图片推广
       // "question_answer_card", // 问问 地点附近的热门问题
-      "check_in" // 足迹打卡
-      // "feedback" // 问题反馈
+      "check_in", // 足迹打卡
+      "feedback" // 问题反馈
     ];
     if (obj.data.modules) {
       item.forEach((i) => {

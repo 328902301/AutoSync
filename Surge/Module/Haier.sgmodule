@@ -1,0 +1,27 @@
+#!name=Haier
+#!desc=Haier Home
+
+[Script]
+
+haierMain = type=http-response,pattern=^https?:\/\/oss-zjrs\.haier\.net\/resource\/confFile\/\d{22}\.json$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/haier/haierMain.js
+haierLaunch = type=http-response,pattern=^https?:\/\/zj\.haier\.net\/api-gw\/upmapi\/appmanage\/app\/[cold]?start\/report$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/haier/haierLaunch.js
+haierRes = type=http-response,pattern=^https?:\/\/zj\.haier\.net\/omsappapi\/resource\/v2\/get\/resourceBag$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/haier/haierRes.js
+
+[Map Local]
+
+^https?:\/\/dualstack-(arestapi|restios)\.amap\.com\/v3\/iasdkauth\?key= data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/dualstack-logs\.amap\.com\/ws\/log\/upload\?product data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/oss-zjrs\.haier\.net\/resource\/confFile\/\d{22}\.zip$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/api-gw\/shpmResource\/ad\/v1\/rotation$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/api-gw\/shpmResource\/servicePage\/start\/advertising\?approach data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/api-gw\/shpmResource\/servicePage\/visualize\/recommend\?dataType data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/api-gw\/shpmResource\/servicePage\/weather\/query\?areaId data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/api-gw\/upmapi\/appmanage\/publish\/getRecommendVersion$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/omsappapi\/resource\/v1\/resBagList$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/zj\.haier\.net\/omssceneapi\/house\/v1\/recommend\/listByRoom$ data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+
+[MITM]
+
+hostname = %APPEND% dualstack*.amap.com, oss-zjrs.haier.net, zj.haier.net
+

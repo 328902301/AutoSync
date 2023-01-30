@@ -1,4 +1,4 @@
-# 2023-01-19 23:00
+# 2023-01-30 11:11
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -61,6 +61,8 @@ HOST,new.vip.weibo.cn,MyBlockAds
 HOST,vip.storage.weibo.com,MyBlockAds
 
 # ======= X ======= #
+# 小红书 首页信息流
+HOST,www.xiaohongshu.com,MyBlockAds
 # 迅雷 解除版权限制
 ;HOST,hub5btmain.v6.shub.sandai.net,MyBlockAds
 ;HOST,hub5emu.v6.shub.sandai.net,MyBlockAds

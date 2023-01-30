@@ -1,9 +1,0 @@
-#!name=5.1 baliyun
-#!desc=FileBall挂载阿里云盘
-#!system=ios
-#FileBall操作步骤 https://raw.githubusercontent.com/Keywos/Rule/main/JS/Fileball_aliyun.js
-[Script]
-阿里云盘 = type=http-request,pattern=^https?:\/\/.*\.example\.com,requires-body=1,max-size=0,timeout=10,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Fileball_aliyun.js
-
-[MITM]
-hostname = %APPEND% *example.com

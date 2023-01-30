@@ -15,6 +15,7 @@ HOST-SUFFIX,rp.hpplay.cn,广告拦截
 HOST-SUFFIX,whoami.akamai.net,广告拦截
 HOST,d.image.i4.cn,广告拦截
 IP-CIDR,203.107.1.1/24,广告拦截
+ip-cidr, 203.107.63.154/32,广告拦截
 
 HOST-SUFFIX,m.uc123.com,广告拦截
 HOST,wmedia-track.uc.cn,广告拦截
@@ -31280,6 +31281,7 @@ HOST-SUFFIX,loggly.cheatsheet.com,广告拦截
 HOST-SUFFIX,loglady.publicbroadcasting.net,广告拦截
 HOST-SUFFIX,logonext.tv.kuyun.com,广告拦截
 HOST-SUFFIX,logs-qos.tf1.fr,广告拦截
+HOST-SUFFIX,ad.chelaile.net.cn,广告拦截
 HOST-SUFFIX,logs.chelaile.net.cn,广告拦截
 HOST-SUFFIX,logs.dashlane.com,广告拦截
 HOST-SUFFIX,logs.newapi.com,广告拦截

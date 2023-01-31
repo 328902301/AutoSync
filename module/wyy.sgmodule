@@ -5,19 +5,23 @@ force-http-engine-hosts = %APPEND% 59.111.*:0
 
 [Rule]
 #因为有时候iad的域名会走tcp80端口所以用rule
-DOMAIN,gdt.qq.com,REJECT-NO-DROP
 DOMAIN,iadmusicmat.music.126.net,REJECT-NO-DROP
 DOMAIN,iadmat.nosdn.127.net,REJECT-NO-DROP
 DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
-DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
-DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP //因为interface*.music.163.com.163jiasu.com, mitm不了,故拦截掉
+#网易云dns会导致ip乱跳到tcp
+DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
+DOMAIN,gdt.qq.com,REJECT-NO-DROP //广告域名
+因为interface*.music.163.com.163jiasu.com, mitm不了,故拦截掉
+DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 
 [Map Local]
 #开屏
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 #评论区插入广告｜回复广告｜首页右上角免或vip图标｜评论右上角热评馆
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/scene\/show|comment\/hotcomment\/collect) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 #搜索页热搜卡片,猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
 ^https?:\/\/interface3?\.music\.163.com\/e?api\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 

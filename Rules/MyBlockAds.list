@@ -1,4 +1,4 @@
-# 2023-01-30 11:11
+# 2023-01-31 12:32
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -36,6 +36,10 @@ HOST,mi.gdt.qq.com,MyBlockAds
 HOST,open.e.kuaishou.com,MyBlockAds
 HOST-SUFFIX,pangolin-sdk-toutiao.com,MyBlockAds
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,MyBlockAds
+
+# ======= L ======= #
+# 蓝奏云
+HOST-SUFFIX,woozooo.com,MyBlockAds
 
 # ======= M ======= #
 # 美颜相机

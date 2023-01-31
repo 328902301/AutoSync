@@ -214,10 +214,11 @@ async function operator(proxies = []) {
                     _.set(p, `${network}-opts.headers.Host`, array ? [host] : host)
                 }
             }
-            if (method && network === 'http') {
-                // clash meta 核报错 应该不是数组
-                // _.set(p, 'http-opts.method', [method])
-                _.set(p, 'http-opts.method', method)
+            if (network === 'http') {
+              if (!_.get(p, 'http-opts.method') && !method) {
+                method = defaultMethod
+              }
+              _.set(p, 'http-opts.method', method)
             }
             if (port) {
                 _.set(p, 'port', port)
@@ -228,24 +229,34 @@ async function operator(proxies = []) {
                     _.set(p, 'name', `${p.name}${portSuffix}`)
                 }
             }
-
-            if (path && network) {
-                if (pathPrefix) {
-                    _.set(p, 'name', `${pathPrefix}${p.name}`)
-                }
-                if (pathSuffix) {
-                    _.set(p, 'name', `${p.name}${pathSuffix}`)
-                }
-                if (network === 'ws') {
-                    _.set(p, 'ws-opts.path', path)
-                } else if (network === 'h2') {
-                    _.set(p, 'h2-opts.path', path)
-                } else if (network === 'http') {
-                    _.set(p, 'http-opts.path', array ? [path] : path)
-                } else {
-                    // 其他? 谁知道是数组还是字符串...先按字符串吧
-                    _.set(p, `${network}-opts.path`, path)
-                }
+            if (network === 'http') {
+              let currentPath = _.get(p, 'http-opts.path')
+              if (_.isArray(currentPath)) {
+                currentPath = _.find(currentPath, i => _.startsWith(i, '/'))
+              } else {
+                path = currentPath
+              }
+              if (!_.startsWith(currentPath, '/') && !path) {
+                path = defaultPath
+              }
+            }
+            if (path) {
+              if (pathPrefix) {
+                _.set(p, 'name', `${pathPrefix}${p.name}`)
+              }
+              if (pathSuffix) {
+                _.set(p, 'name', `${p.name}${pathSuffix}`)
+              }
+              if (network === 'ws') {
+                _.set(p, 'ws-opts.path', path)
+              } else if (network === 'h2') {
+                _.set(p, 'h2-opts.path', path)
+              } else if (network === 'http') {
+                _.set(p, 'http-opts.path', array ? [path] : path)
+              } else {
+                // 其他? 谁知道是数组还是字符串...先按字符串吧
+                _.set(p, `${network}-opts.path`, path)
+              }
             }
         }
 

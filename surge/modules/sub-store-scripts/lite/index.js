@@ -72,6 +72,8 @@ function operator(proxies = []) {
         let currentPath = _.get(p, 'http-opts.path')
         if (_.isArray(currentPath)) {
           currentPath = _.find(currentPath, i => _.startsWith(i, '/'))
+        } else {
+          path = currentPath
         }
         if (!_.startsWith(currentPath, '/') && !path) {
           path = defaultPath

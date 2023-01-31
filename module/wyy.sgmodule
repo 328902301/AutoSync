@@ -11,6 +11,7 @@ DOMAIN,iadmat.nosdn.127.net,REJECT-NO-DROP
 DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
 DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
+DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP //因为interface*.music.163.com.163jiasu.com, mitm不了,故拦截掉
 
 [Map Local]
 #开屏
@@ -21,4 +22,4 @@ DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
 ^https?:\/\/interface3?\.music\.163.com\/e?api\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, interface*.music.163.com.163jiasu.com:0
+hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0

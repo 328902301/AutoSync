@@ -36,7 +36,7 @@ DOMAIN,xp.apple.com,Apple服务
 # Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple服务
 DOMAIN-SUFFIX,apple.co,Apple服务
-DOMAIN-SUFFIX,apple.com,Apple服务
+DOMAIN-SUFFIX,apple.com,海外服务
 DOMAIN-SUFFIX,apple.com.cn,Apple服务
 DOMAIN-SUFFIX,apple-cloudkit.com,Apple服务
 DOMAIN-SUFFIX,apple-livephotoskit.com,Apple服务

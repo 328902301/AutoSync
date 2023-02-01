@@ -19,7 +19,7 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
-#播放页歌名下方 乐迷团｜关注 按钮(因为旧版本网易云没有新版本有,没对齐,强迫症,所以我去掉了,应该不会有人对网易云这么怀旧吧,又这么巧在我弄完以后想去掉他,除非你懂的)
+#播放页歌名下方 乐迷团｜关注 按钮(因为旧版本网易云没有新版本有,没对齐,强迫症,所以我去掉了,应该不会有人对网易云这个部分感兴趣吧,又这么巧在我弄完以后才去掉他,除非你懂的)
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #评论区插入广告｜回复广告｜首页右上角免或vip图标｜评论右上角热评馆

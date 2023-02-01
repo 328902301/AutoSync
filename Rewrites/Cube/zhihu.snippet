@@ -1,8 +1,6 @@
 # ======= 知乎 ======= #
 # 2023-02-01 16:25
 
-# 知乎的广告拦截，依赖于拦截 118.89.204.198 和 2402:4e00:1200:ed00:0:9089:6dac:96b6 这两个地址的请求，迫使知乎 APP 回退到以 api.zhihu.com 请求数据，才能进行 MITM
-
 # 在 [filter_local] 添加拦截规则
 ;HOST, appcloud.zhihu.com, REJECT
 ;HOST, appcloud2.in.zhihu.com, REJECT

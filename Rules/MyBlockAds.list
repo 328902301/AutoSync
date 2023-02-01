@@ -1,4 +1,4 @@
-# 2023-01-31 23:30
+# 2023-02-01 16:25
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -88,4 +88,5 @@ HOST,crash2.zhihu.com,MyBlockAds
 HOST,mqtt.zhihu.com,MyBlockAds
 HOST,sugar.zhihu.com,MyBlockAds
 IP-CIDR,118.89.204.198/32,MyBlockAds
+IP-CIDR,103.41.167.237/32,MyBlockAds
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,MyBlockAds

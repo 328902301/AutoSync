@@ -325,6 +325,7 @@ async function diff({config, pkgs, packageName, time: time10010, sum, freeFlow})
   $.log('今日', new Date(todayStartTime).toLocaleString('zh'))
 
   const vars = {}
+  const negativePkgs = {}
   for (const key in config) {
     const { name, pkgIds = [] } = config[key] || {}
     let useSum = 0
@@ -361,8 +362,18 @@ async function diff({config, pkgs, packageName, time: time10010, sum, freeFlow})
 
     let diff
     let remainDiff = lastRemainSum - remainSum
+
+    if(!(remainDiff>=0)){
+      $.lodash_set(negativePkgs, `${name}.remainDiff`, remainDiff)
+    }
+
     if(remainDiff<0)remainDiff=0
     let useDiff = useSum - lastUseSum
+    
+    if(!(useDiff>=0)){
+      $.lodash_set(negativePkgs, `${name}.useDiff`, useDiff)
+    } 
+
     if(useDiff<0)useDiff=0
 
     diff = useDiff
@@ -445,6 +456,19 @@ async function diff({config, pkgs, packageName, time: time10010, sum, freeFlow})
   vars['[时间]'] = new Date().toLocaleTimeString('zh')
 
   $.log('变量和差额', $.toStr(vars))
+  $.log('负数的包', $.toStr(negativePkgs))
+
+  if(($.lodash_get(negativePkgs, '所有免流.remainDiff') < 0 && $.lodash_get(negativePkgs, '所有免流.useDiff') < 0) || ($.lodash_get(negativePkgs, '所有通用.remainDiff') < 0 && $.lodash_get(negativePkgs, '所有通用.useDiff') < 0)){
+    $.log('可能是月初重置了包/联通抽风')
+    $.log(`💾 保存 本次数据 为 上次数据`)
+    lastPkgs = pkgs || []
+    lastTime = new Date().getTime()
+    lastSum = sum
+    lastFreeFlow = freeFlow
+    last = { pkgs: lastPkgs, time: lastTime, sum: lastSum, freeFlow: lastFreeFlow }
+    $.setjson(last, KEY_LAST)
+    await notify(TITLE, `⚠️ 可能是月初重置了包/联通抽风`, '保存 本次数据 为 上次数据')
+  }
 
   const titleTpl = $.getdata(KEY_TITLE) || `[套餐]`
   const subtTpl = $.getdata(KEY_SUBT) || `[时长] 跳 [所有通用.用量] 免 [所有免流.用量]`

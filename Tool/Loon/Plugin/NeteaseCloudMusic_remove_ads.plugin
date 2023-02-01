@@ -1,0 +1,37 @@
+#!name = 网易云音乐去广告
+#!desc = 过滤网易云音乐广告
+#!openUrl = 
+#!author = Key
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/HappyDays.png
+
+[General]
+force-http-engine-hosts = 59.111.*:0
+
+[Rule]
+#因为有时候iad的域名会走tcp80端口所以用rule
+DOMAIN, iadmusicmat.music.126.net, REJECT-DROP
+DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
+DOMAIN, iadmatapk.nosdn.127.net, REJECT-DROP
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT-DROP
+#网易云dns会导致ip乱跳到tcp
+DOMAIN, httpdns.n.netease.com, REJECT-DROP
+DOMAIN, gdt.qq.com, REJECT-DROP //广告域名
+#因为interface*.music.163.com.163jiasu.com, mitm不了,故拦截掉
+DOMAIN-SUFFIX, 163jiasu.com, REJECT-DROP
+
+[Rewrite]
+#开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad reject-dict
+
+#播放页歌名下方 乐迷团｜关注 按钮
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist) reject-dict
+
+#评论区插入广告｜回复广告｜首页右上角免或vip图标｜评论右上角热评馆
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/scene\/show|comment\/hotcomment\/collect|vipcenter\/tspopup\/get|vipauth/app/auth/query) reject-dict
+
+#搜索页热搜卡片｜猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
+^https?:\/\/interface3?\.music\.163.com\/e?api\/search\/(chart|default|rcmd\/keyword|specialkeyword) reject-dict
+
+[Mitm]
+hostname = 112.13.*, 59.111.*, interface*.music.163.com:0

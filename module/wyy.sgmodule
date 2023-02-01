@@ -17,16 +17,16 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 
 [Map Local]
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #播放页歌名下方 乐迷团｜关注 按钮
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #评论区插入广告｜回复广告｜首页右上角免或vip图标｜评论右上角热评馆
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/scene\/show|comment\/hotcomment\/collect) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/scene\/show|comment\/hotcomment\/collect) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #搜索页热搜卡片｜猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
-^https?:\/\/interface3?\.music\.163.com\/e?api\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/e?api\/search\/(chart|default|rcmd\/keyword|specialkeyword) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 [MITM]
 hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0

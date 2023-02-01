@@ -1,8 +1,6 @@
 # ======= 知乎 ======= #
 # 2023-02-01 16:18
 
-# 知乎的广告拦截，依赖于拦截 118.89.204.198 和 2402:4e00:1200:ed00:0:9089:6dac:96b6 这两个地址的请求，迫使知乎 APP 回退到以 api.zhihu.com 请求数据，才能进行 MITM
-
 # 在 [filter_local] 添加拦截规则
 ;HOST, appcloud.zhihu.com, REJECT
 ;HOST, appcloud2.in.zhihu.com, REJECT
@@ -14,7 +12,8 @@
 ;IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
 # 拦截DNS解析
-;^https:\/\/118\.89\.204\.198 url reject-200
+;^https:\/\/118\.89\.204\.198 url reject-dict
+;^https?:\/\/103\.41\.167\.237 url reject-dict
 ;^https:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 url reject-200
 
 # 屏蔽下发的配置，如皮肤等
@@ -67,7 +66,7 @@
 # 获取用户信息 - 隔离用户数据，开启本地会员等
 ^https:\/\/api\.zhihu\.com\/people\/ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
-# 解锁本地的关键词屏蔽功能，需要开启本地VIP
+# 关键词屏蔽 - 解锁本地的关键词屏蔽功能，需要开启本地VIP
 ^https:\/\/api\.zhihu\.com\/feed-root\/block url script-analyze-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
 # 优化软件配置 - 优化下发的配置文件来实现某些效果

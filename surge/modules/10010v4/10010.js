@@ -272,7 +272,8 @@ async function query({ cookie }) {
   } catch (e) {}
   $.log('↓ res body')
   $.log($.toStr(body))
-  const code = `${$.lodash_get(body, 'code')}`
+  let code = $.lodash_get(body, 'code')
+  code = code == null ? '' : `${code}`
   const desc = $.lodash_get(body, 'desc')
   
   if(code === '0000'){
@@ -281,7 +282,9 @@ async function query({ cookie }) {
     throw new Error('❌🍪 Cookie 无效')
   } else if (maintenanceCodes.includes(code)){
     throw new Error(`🚧 [系统升级] ${code} ${desc || ''}`)
-  } else {
+  } else if(body.includes('沃妹陪着您一起等待')) {
+    throw new Error(`[查询余量] 很抱歉，暂时无法为您提供服务，请稍后再试，感谢您的使用！`)
+  }else {
     throw new Error(`[查询余量] ${desc || `未知错误 ${status || ''} ${code || ''}`}`)
   }
   const {config, pkgs, packageName, time, sum, freeFlow} = await parse({body,cookie})
@@ -803,8 +806,9 @@ async function sign({ mobile, password, appId }) {
   } catch (e) {}
   $.log('↓ res body')
   $.log($.toStr(body))
-  const code = $.lodash_get(body, 'code')
-  if (`${code}` !== '0') {
+  let code = $.lodash_get(body, 'code')
+  code = code == null ? '' : `${code}`
+  if (code !== '0') {
     throw new Error($.lodash_get(body, 'dsc') || `未知错误 ${status || ''} ${code || ''}`)
   }
 
@@ -851,8 +855,9 @@ async function online({ tokenOnline, appId }) {
   } catch (e) {}
   $.log('↓ res body')
   $.log($.toStr(body))
-  const code = $.lodash_get(body, 'code')
-  if (`${code}` !== '0') {
+  let code = $.lodash_get(body, 'code')
+  code = code == null ? '' : `${code}`
+  if (code !== '0') {
     throw new Error($.lodash_get(body, 'dsc') || `未知错误 ${status || ''} ${code || ''}`)
   }
   const invalidat = $.lodash_get(body, 'invalidat')
@@ -887,8 +892,9 @@ async function info({ cookie }) {
     body = JSON.parse(body)
   } catch (e) {}
   $.log('↓ res body', $.toStr(body))
-  const code = `${$.lodash_get(body, 'code')}`
   const desc = $.lodash_get(body, 'desc')
+  let code = $.lodash_get(body, 'code')
+  code = code == null ? '' : `${code}`
   const productname = $.lodash_get(body, 'data.myPackage.productname')
   if(code === '0000'){
     if (productname) {
@@ -942,9 +948,10 @@ async function notify(title, subt, desc, opts) {
         } catch (e) {}
         $.log('↓ res body')
         $.log($.toStr(body))
-        const code = $.lodash_get(body, 'code')
-        if (`${code}` !== '200') {
-          throw new Error($.lodash_get(body, 'message') || `未知错误 ${status || ''} ${code || ''}`)
+        let code = $.lodash_get(body, 'code')
+        code = code == null ? '' : `${code}`
+        if (code !== '200') {
+          throw new Error($.lodash_get(body, 'message') || `未知错误 ${status || ''} ${code || ''}`)      
         }
       } catch (e) {
         $.logErr(e)

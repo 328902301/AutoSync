@@ -1,4 +1,4 @@
-# 2023-02-01 16:25
+# 2023-02-02 09:15
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -46,6 +46,11 @@ HOST,statics.woozooo.com,MyBlockAds
 # 美颜相机
 HOST,aaid.uyunad.com,MyBlockAds
 HOST,adui.tg.meitu.com,MyBlockAds
+
+# ======= O ======= #
+host,acdn.adnxs.com,MyBlockAds
+host,mediation.adnxs.com,MyBlockAds
+host,sin3-ib.adnxs.com,MyBlockAds
 
 # ======= R ======= #
 # RARBG 跳转广告

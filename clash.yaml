@@ -1,0 +1,656 @@
+# 应用介绍:https://docs.cfw.lbyczf.com/
+# 配置样例:https://lancellc.gitbook.io/clash
+# 配置样例:https://github.com/Dreamacro/clash/wiki/Configuration
+
+#💡 通用设置
+# 网络模式:rule规则/global全局/direct直连/script脚本
+mode: Rule
+
+# 日志模式:silent静默/info信息/warning警告/error错误/debug调试
+log-level: info
+
+# 本地http(s)服务端口
+port: 7890
+
+# 本地socks5服务端口
+socks-port: 7891
+
+# 本地http(s)或socks5服务使用同一端口
+mixed-port: 7890
+
+# 允许局域网内其它设备通过clash访问互联网
+allow-lan: true
+
+# 开启ipv6转换，设置为false时关闭
+ipv6: true
+
+# 外部控制器可以通过监听地址控制clash
+external-controller: 127.0.0.1:9090
+
+#💡 dns服务器配置
+dns:
+  enable: true
+  ipv6: true 
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  ake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.jegotrip.com.cn"
+    - "*.icitymobile.mobi"
+    - "*.cmpassport.com"
+    - "cable.auth.com"
+    - "captive.apple.com"
+    - "id6.me"
+    - "open.e.189.cn"
+    - "mdn.open.wo.cn"
+    - "opencloud.wostore.cn"
+    - "auth.wosms.cn"
+    
+# 引导dns用来解析doh/dot的ip地址，只接受ip
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    
+# 自定义上游dns服务器，支持udp/tcp/dot/doh等协议   
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    
+# 使用指定的dns服务器解析域名
+  nameserver-policy:
+    "blog.google": 94.140.15.15
+    "talk.google.com": 108.177.125.188
+    "mtalk.google.com": 108.177.125.188
+    "dl.google.com": https://dns.adguard-dns.com/dns-query
+    "dl.l.google.com": https://dns.adguard-dns.com/dns-query
+    "update.googleapis.com": https://dns.adguard-dns.com/dns-query
+
+# geoip过滤cn以外的地址，指定到fallback
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      
+# 当geoip不是cn时用以下dns解析
+  fallback:
+    - tls://dns.google
+    - https://dns.cloudflare.com/dns-query
+    
+# 指定该域名用fallback解析   
+  domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    
+#💡 tun模式配置
+tun:
+  enable: true
+  stack: gvisor
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+# dns劫持仅支持tcp/udp
+  dns-hijack:
+    - any:53
+    
+#💡 本地域名映射
+hosts:
+  "*.clash.dev": 127.0.0.1
+  ".dev": 127.0.0.1
+  "alpha.clash.dev": "::1"
+  
+#💡 自定义系统代理需要绕过的域名或ip
+bypass:
+  - localhost
+  - 127.*
+  - 10.*
+  - 172.16.*
+  - 172.17.*
+  - 172.18.*
+  - 172.19.*
+  - 172.20.*
+  - 172.21.*
+  - 172.22.*
+  - 172.23.*
+  - 172.24.*
+  - 172.25.*
+  - 172.26.*
+  - 172.27.*
+  - 172.28.*
+  - 172.29.*
+  - 172.30.*
+  - 172.31.*
+  - 192.168.*
+  - <local>
+
+#💡 远程代理服务器订阅链接
+proxy-providers:
+  all:
+    type: http
+    url: https://sub.xeton.dev/sub?target=clash&url=订阅链接|订阅链接&list=true&emoji=false&sort=true&udp=true&tfo=true&scv=true&append_type=true&fdn=true&new_name=true
+    interval: 86400
+    path: ./all.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+# 服务器节点筛选
+  hk:
+    type: file
+    path: ./all.yaml
+    filter: 港|香港|🇭🇰|HK|Hong
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      
+  tw: 
+    type: file
+    path: ./all.yaml
+    filter: 台|台湾|台北|🇹🇼|TW|Taiwan
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      
+  jp:
+    type: file
+    path: ./all.yaml
+    filter: 日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      
+  kr:
+    type: file
+    path: ./all.yaml
+    filter: 韩国|韓國|朝鲜|🇰🇷|KR|Korea
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      
+  sg:
+    type: file
+    path: ./all.yaml
+    filter: 新加坡|狮城|🇸🇬|SG|Singapore
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+  us:
+    type: file
+    path: ./all.yaml
+    filter: 美|美国|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US|America
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+  cn:
+    type: file
+    path: ./all.yaml
+    filter: 移动|联通|电信|腾讯|阿里|🇨🇳|CN|CHINA|中国|国内|华东|华南|华中|华西|华北|北京|上海|重庆|天津|广东|广州|深圳|湖北|武汉|宜昌|江苏|南京|无锡|镇江|苏州|浙江|杭州|宁波|温州|绍兴|云南|昆明|贵州|贵阳|四川|成都|福建|福州|厦门|海南|海口|湖南|长沙|安徽|合肥|江西|南昌|河南|郑州|河北|石家庄|山东|济南|山西|太原|陕西|西安|辽宁|沈阳|吉林|长春|广西|南宁|宁夏|银川|青海|西宁|甘肃|兰州|黑龙江|哈尔滨|辽宁|沈阳|内蒙古|呼和浩特|新疆|乌鲁木齐|西藏|拉萨
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+#💡 策略组
+proxy-groups:
+  - name: 🔰 手动选择
+    type: select
+    proxies:
+      - ♻️ 自动切换
+      - ✅ 节点选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      - 🇨🇳 中国节点
+      - DIRECT
+      - REJECT
+
+  - name: ♻️ 自动切换
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - all
+      
+  - name: ✅ 节点选择
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - all
+      
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - hk
+      
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - tw
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - jp    
+      
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - kr
+
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - sg
+      
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - us
+
+  - name: 🇨🇳 中国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - cn
+
+  - name: 🕸️ 网速测试
+    type: select
+    proxies:
+      - 🇨🇳 中国直连
+      - 🔰 手动选择
+      
+  - name: 🎵 国际抖音
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: ✉️ 电报群聊
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+
+  - name: 🎶 声田音乐
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: 📽️ 奈飞影视
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: 📼 迪家影视
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+        
+  - name: 🤖 脸书服务
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+
+  - name: 📟 谷歌服务
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点      
+      
+  - name: 🖥️ 微软服务
+    type: select
+    proxies:
+      - 🇨🇳 中国直连
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🇨🇳 中国直连
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+
+  - name: 🎮 国际游戏
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      - 🇨🇳 中国节点
+      
+  - name: 🎬 国际媒体
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+
+  - name: 🌐 国际加速
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      
+  - name: 📺 中国媒体
+    type: select
+    proxies:
+      - 🇨🇳 中国直连
+      - 🔰 手动选择
+
+  - name: 🇨🇳 中国直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 手动选择
+      - 🇨🇳 中国节点
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🔰 手动选择
+      - 🇨🇳 中国直连
+      - REJECT
+
+  - name: ⛔ 广告净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+#💡 远程分流规则
+rule-providers:
+  🚥 修正直连:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
+    path: ./ruleset/Direct.yaml
+    interval: 86400
+
+  ⛔ 隐私保护:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml
+    path: ./ruleset/Privacy_Classical.yaml
+    interval: 86400
+    
+  ⛔ 网络劫持:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+    
+  ⛔ 广告大全:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml
+    path: ./ruleset/AdvertisingLite_Classical.yaml
+    interval: 86400
+
+  🕸️ 网速测试:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+    path: ./ruleset/Speedtest.yaml
+    interval: 86400
+    
+  🎵 国际抖音:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    path: ./ruleset/TikTok.yaml
+    interval: 86400
+    
+  ✉️ 电报群聊:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+    
+  🎶 声田音乐:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/Spotify.yaml
+    interval: 86400
+    
+  📽️ 奈飞影视:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+    
+  📼 迪家影视:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+    path: ./ruleset/Disney.yaml
+    interval: 86400
+    
+  📹 油管视频:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+
+  🎮 国际游戏:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    path: ./ruleset/Game.yaml
+    interval: 86400
+    
+  🤖 脸书服务:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+    
+  📟 谷歌服务:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    path: ./ruleset/Google.yaml
+    interval: 86400
+    
+  🖥️ 微软服务:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+    
+  🍎 苹果更新:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml
+    path: ./ruleset/SystemOTA.yaml
+    interval: 86400
+    
+  🍎 苹果服务:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+    
+  🎬 国际媒体:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
+    path: ./ruleset/GlobalMedia_Classical.yaml
+    interval: 86400
+    
+  🌐 国际加速:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
+    path: ./ruleset/Global_Classical.yaml
+    interval: 86400
+    
+  📺 中国媒体:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    path: ./ruleset/ChinaMedia.yaml
+    interval: 86400
+    
+  🇨🇳 中国直连:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml
+    path: ./ruleset/China_Classical.yaml
+    interval: 86400
+    
+  🇨🇳 中国ips:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs_Classical.yaml
+    path: ./ruleset/ChinaIPs_Classical.yaml
+    interval: 86400
+
+  🇨🇳 中国bgp:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_Classical.yaml
+    path: ./ruleset/ChinaIPsBGP_Classical.yaml
+    interval: 86400
+
+#💡 规则类型引用（指定规则类型引用代理或策略组）
+rules:
+  - RULE-SET,🚥 修正直连,🇨🇳 中国直连 
+  - RULE-SET,⛔ 隐私保护,⛔ 广告净化
+  - RULE-SET,⛔ 网络劫持,⛔ 广告净化
+  - RULE-SET,⛔ 广告大全,⛔ 广告净化
+  - RULE-SET,🕸️ 网速测试,🕸️ 网速测试
+  - RULE-SET,🎵 国际抖音,🎵 国际抖音
+  - RULE-SET,✉️ 电报群聊,✉️ 电报群聊
+  - RULE-SET,🎶 声田音乐,🎶 声田音乐
+  - RULE-SET,📽️ 奈飞影视,📽️ 奈飞影视
+  - RULE-SET,📼 迪家影视,📼 迪家影视
+  - RULE-SET,📹 油管视频,📹 油管视频
+  - RULE-SET,🤖 脸书服务,🤖 脸书服务
+  - RULE-SET,🖥️ 微软服务,🖥️ 微软服务
+  - RULE-SET,📟 谷歌服务,📟 谷歌服务
+  - RULE-SET,🍎 苹果更新,⛔ 广告净化
+  - RULE-SET,🍎 苹果服务,🍎 苹果服务
+  - RULE-SET,🎮 国际游戏,🎮 国际游戏
+  - RULE-SET,🎬 国际媒体,🎬 国际媒体
+  - RULE-SET,🌐 国际加速,🌐 国际加速
+  - RULE-SET,📺 中国媒体,📺 中国媒体
+  - RULE-SET,🇨🇳 中国直连,🇨🇳 中国直连
+  - RULE-SET,🇨🇳 中国ips,🇨🇳 中国直连
+  - RULE-SET,🇨🇳 中国bgp,🇨🇳 中国直连
+  - GEOIP,CN,🇨🇳 中国直连
+  - MATCH,🐟 漏网之鱼

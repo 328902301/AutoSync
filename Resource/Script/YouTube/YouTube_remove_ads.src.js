@@ -4,7 +4,7 @@
 *脚本作者：app2smile
 *引用地址：https://raw.githubusercontent.com/app2smile/rules/master/js/youtube.js
 */
-// Build: 2023/1/27 14:54:43
+// Build: 2023/1/28 16:51:47
 (() => {
   // lib/text-polyfill.mjs
   function text(r) {
@@ -6144,7 +6144,7 @@
     youtubeMsg.pure();
     youtubeMsg.done();
   } else {
-    $.msg("youtube \u811A\u672C\u5339\u914D\u9519\u8BEF", "\u53EF\u80FD\u9700\u8981\u66F4\u65B0\u811A\u672C\u8D44\u6E90", url);
+    $.msg("YouTubeAds", "\u811A\u672C\u9700\u8981\u66F4\u65B0", "\u5916\u90E8\u8D44\u6E90 -> \u5168\u90E8\u66F4\u65B0");
     $.done();
   }
 })();

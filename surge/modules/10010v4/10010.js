@@ -115,11 +115,15 @@ let result = {}
   .catch(async e => {
     $.logErr(e)
     $.logErr($.toStr(e))
-    const msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
-    let name = `${$.lodash_get(e, 'name')}`
-    if(`${name}`.toLowerCase()==='error'){ name = '' }
+    let msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
+    let name = $.lodash_get(e, 'name')
+    name = name == null ? '' : `${name}`
+    if(`${name}`.toLowerCase()==='error'){ name = '错误' }
+    if(/504.*?time.*?out/i.test(msg)){
+      msg = '请求超时'
+    }
     await notify(TITLE, `❌ ${name||''}`, msg)
-    result = { title: TITLE, subt: `❌ ${name||''}`, desc: msg }
+    result = { title: TITLE, subt: `❌ ${name}`, desc: msg }
   })
   .finally(async () => {
     let end = new Date()

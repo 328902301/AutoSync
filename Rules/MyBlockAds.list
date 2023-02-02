@@ -48,9 +48,10 @@ HOST,aaid.uyunad.com,MyBlockAds
 HOST,adui.tg.meitu.com,MyBlockAds
 
 # ======= O ======= #
-host,acdn.adnxs.com,MyBlockAds
-host,mediation.adnxs.com,MyBlockAds
-host,sin3-ib.adnxs.com,MyBlockAds
+# Outlook
+HOST,acdn.adnxs.com,MyBlockAds
+HOST,mediation.adnxs.com,MyBlockAds
+HOST,sin3-ib.adnxs.com,MyBlockAds
 
 # ======= R ======= #
 # RARBG 跳转广告

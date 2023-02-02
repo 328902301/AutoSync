@@ -30,11 +30,11 @@ if (obj.data) {
         (item) => item.dataKey === "MyOrderCard"
       );
     }
-    if (obj.tipData) {
-      delete obj.tipData;
+    if (obj.data.tipData) {
+      delete obj.data.tipData;
     }
-    if (obj.footPrintV2) {
-      delete obj.footPrintV2;
+    if (obj.data.footPrintV2) {
+      delete obj.data.footPrintV2;
     }
   } else if (url.includes("/shield/frogserver/aocs")) {
     // 首页右上角图层

@@ -1,0 +1,666 @@
+#>2023.2.1
+# 配置样例:https://stash.wiki/features/example-config
+
+#💡 通用设置
+# 网络模式:rule规则/global代理/direct直连
+mode: rule
+
+# 日志模式:silent静默/info信息/warning警告/error错误/debug调试
+log-level: info
+
+#💡 代理服务信息在主页显示
+subscribe-url: 输入订阅链接
+
+#💡 远程代理服务器订阅链接
+proxy-providers:
+  node:
+    url: https://sub.store/download/collection/node
+    interval: 86400
+
+#💡 本地代理服务器（支持ss，ssr，socks5，http，https, vmess，vless，trojan，hysteria，snell，tuic等协议）
+proxies:
+- name: cloudflare
+  type: wireguard
+  server: engage.nanocat.me
+  port: 2408
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8b29:62c:98c9:445e:4417
+  private-key: +DR2fMi8ys+/BG5epZCAEOms53wBDhSDKDeWlNO4KXg=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  #preshared-key: # optional
+  mtu: 1280
+  reserved: 
+  - 21
+  - 193
+  - 169
+  keepalive: 45
+  dns:
+  - 1.1.1.1
+  - 119.29.29.29
+#underlying-proxy: # optional
+  #type: trojan
+  #server: your-underlying-proxy
+  #port: 443
+  #password: your-password
+
+#💡 dns服务器配置
+dns:
+# 跳过证书验证，解决部分兼容性问题
+  skip-cert-verify: true
+# 以下域名不会被解析为fake-ip，解析请求将返回它们真实的 IP 地址
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.jegotrip.com.cn"
+    - "*.icitymobile.mobi"
+    - "*.cmpassport.com"
+    - "cable.auth.com"
+    - "captive.apple.com"
+    - "id6.me"
+    - "open.e.189.cn"
+    - "mdn.open.wo.cn"
+    - "opencloud.wostore.cn"
+    - "auth.wosms.cn"
+    
+# 默认dns服务器只会被用来解析dns服务的域名，仅允许ip地址
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    
+# 支持udp/tcp/dot/doh/doq协议的dns服务，可指定端口，并发响应最快服务
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    
+# 域名使用指定的dns服务器解析
+  nameserver-policy:
+    "blog.google": 94.140.15.15
+    "talk.google.com": 108.177.125.188
+    "mtalk.google.com": 108.177.125.188
+    "dl.google.com": https://dns.adguard-dns.com/dns-query
+    "dl.l.google.com": https://dns.adguard-dns.com/dns-query
+    "update.googleapis.com": quic://dns.adguard-dns.com
+    
+#💡 本地域名映射
+hosts:
+  "*.clash.dev": 127.0.0.1
+  ".dev": 127.0.0.1
+  "alpha.clash.dev": '::1'
+
+#💡 http3/quic协议基于udp，在目前的网络环境下较为低效,禁用quic协议
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443  # 屏蔽http3/quic,让流量回落至http2,避免udp被qos
+
+#💡 http引擎相关
+http:
+# 强制使用http引擎处理tcp连接 
+  force-http-engine:
+    - boxer.baidu.com
+
+# 开启mitm功能的域名列表,需安装证书并信任
+  mitm:
+    - "g.cn"
+    - "*.google.cn"
+    - "boxer.baidu.com"
+    - "*.tiktokv.com"
+    - "*.byteoversea.com"
+    - "*.tik-tokapi.com"
+    
+# https-url重写支持header、302、307、reject多种策略
+  url-rewrite:
+    - ^http://g\.cn http://www.google.com header
+    - ^https?://www\.google\.cn https://www.google.com 302
+    - (?<=_region=)CN(?=&) KR 307
+    - (?<=&mcc_mnc=)4 2 307
+    - ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+    - (^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
+# https-header重写允许用户增加、删除、替换http请求/响应的任意header
+  header-rewrite:
+    - ^http://g\.cn request-add DNT 1
+    - ^http://g\.cn request-del DNT
+    - ^http://g\.cn request-replace DNT 1
+    - ^http://g\.cn request-replace-regex User-Agent Go-http-client curl
+
+# 使用javascript脚本改写https请求
+  script:
+    - match: ^https:\/\/boxer\.baidu\.com\/scheme\?scheme
+      name: baidu
+      type: response
+      require-body: false
+      timeout: 10
+
+# 定时javascript脚本任务
+cron:
+  script:
+    - name: baidu  #引用script-providers中的脚本
+      cron: '0 8 * * *'  #cron表达式，具体表达示参考：https://crontab.guru
+      timeout: 10   #script timeout in second (optional)
+      argument: ''  #script argument (optional)
+      debug: false  #开发模式，每次执行前会从provider加载最新脚本
+      
+    - name: ip-tile
+      cron: '0 0 * * *'
+      timeout: 10
+      argument: ''
+      debug: false
+      
+    - name: network-tile
+      cron: '0 0 * * *'
+      timeout: 10
+      argument: ''
+      debug: false
+      
+    - name: timecard-tile
+      cron: '0 8 * * *'
+      timeout: 10
+      argument: ''
+      debug: false
+      
+# 首页tile面板
+tiles: 
+  - name: ip-tile
+    interval: 3600
+    title: 网络信息查询
+    content: 正在查询请稍候
+    icon: https://raw.githubusercontent.com/aimetu/icons/main/other/geoip.png
+    backgroundColor: '#00a6ac'
+    
+  - name: network-tile
+    interval: 3600
+    title: 网络信息查询
+    content: 正在查询请稍候
+    icon: https://raw.githubusercontent.com/aimetu/icons/main/other/network.png
+    backgroundColor: '#00a6ac'
+
+  - name: timecard-tile
+    interval: 86400
+    title: 节假日信息查询
+    content: 漫长的等待中
+    icon: https://raw.githubusercontent.com/aimetu/icons/main/other/calendar.png
+    backgroundColor: '#b3424a'
+
+# 远程资源脚本模式
+script-providers:
+  baidu:
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+    interval: 86400
+
+  ip-tile:
+    url: https://raw.githubusercontent.com/aimetu/other/main/Stash/ip.js
+    interval: 86400
+    
+  network-tile:
+    url: https://raw.githubusercontent.com/aimetu/other/main/Stash/network.js
+    interval: 86400
+    
+  timecard-tile:
+    url: https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
+    interval: 86400
+
+#💡 策略组
+proxy-groups: 
+- name: pick
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/pick.png
+  proxies:
+  - wireless
+  - auto
+  - node
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+  - chinese
+  - DIRECT
+  - REJECT
+
+- name: wireless
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/wireless.png
+  proxies:
+  - auto
+  - node
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+  - chinese
+  - DIRECT
+  - REJECT
+  ssid-policy:
+    cellular: auto
+    default: auto  
+    OpenWrt: nations
+    OpenWrt_5G: hongkong
+
+- name: auto
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/auto.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+
+- name: node
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/node.png
+  include-all: true
+  
+- name: hongkong
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/hongkong.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 港|香港|🇭🇰|HK|Hong
+  
+- name: taiwan
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/taiwan.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 台|台湾|台北|🇹🇼|TW|Taiwan
+  
+- name: japan
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/japan.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan
+  
+- name: korea
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/korea.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 韩国|韓國|朝鲜|🇰🇷|KR|Korea
+  
+- name: singapore
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/singapore.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 新加坡|狮城|🇸🇬|SG|Singapore
+  
+- name: america
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/america.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 美|美国|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US|America
+    
+- name: nations
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/nations.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600
+  lazy: true
+  include-all: true
+  filter: ^((?!港|香港|🇭🇰|HK|Hong|台|台湾|台北|🇹🇼|TW|Taiwan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan|韩国|韓國|朝鲜|🇰🇷|KR|Korean|新加坡|狮城|🇸🇬|SG|Singapore|美|美国|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US|America).)*$
+
+- name: chinese
+  type: url-test
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/chinese.png
+  url: http://www.gstatic.com/generate_204
+  interval: 600  
+  lazy: true
+  include-all: true
+  filter: 移动|联通|电信|腾讯|阿里|🇨🇳|CN|CHINA|中国|国内|华东|华南|华中|华西|华北|北京|上海|重庆|天津|广东|广州|深圳|湖北|武汉|宜昌|江苏|南京|无锡|镇江|苏州|浙江|杭州|宁波|温州|绍兴|云南|昆明|贵州|贵阳|四川|成都|福建|福州|厦门|海南|海口|湖南|长沙|安徽|合肥|江西|南昌|河南|郑州|河北|石家庄|山东|济南|山西|太原|陕西|西安|辽宁|沈阳|吉林|长春|广西|南宁|宁夏|银川|青海|西宁|甘肃|兰州|黑龙江|哈尔滨|辽宁|沈阳|内蒙古|呼和浩特|新疆|乌鲁木齐|西藏|拉萨
+
+- name: speedtest
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/speedtest.png
+  proxies:
+  - china
+  - pick
+
+- name: tiktok
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/tiktok.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+  
+- name: telegram
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/telegram.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: spotify
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/spotify.png
+  proxies: 
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: netflix
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/netflix.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+  
+- name: disney
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/disney.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: youtube
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/youtube.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: facebook
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/facebook.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: google
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/google.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: microsoft
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/microsoft.png
+  proxies:
+  - china
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: apple
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/logo/apple.png
+  proxies:
+  - china
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: streaming
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/streaming.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+
+- name: global
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/global.png
+  proxies:
+  - pick
+  - hongkong
+  - taiwan
+  - japan
+  - korea
+  - singapore
+  - america
+  - nations
+  
+- name: media
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/media.png
+  proxies:
+  - china
+  - pick
+  
+- name: china
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/map/china.png
+  proxies:
+  - DIRECT
+  - REJECT
+  - pick
+  - chinese
+
+- name: final
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/final.png 
+  proxies:
+  - pick
+  - china
+  - adblock
+
+- name: adblock
+  type: select
+  icon: https://raw.githubusercontent.com/aimetu/icons/main/other/adblock.png
+  proxies:
+  - REJECT
+  - DIRECT
+
+#💡 远程分流规则（domain-text=ipcidr-text > domain=ipcidr > classical）
+rule-providers:
+  🚥 direct:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
+    interval: 86400
+    
+  ⛔ privacy:
+    behavior: domain-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.txt
+    interval: 86400
+    
+  ⛔ hijacking:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
+    interval: 86400
+    
+  ⛔ advertising:
+    behavior: domain-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.txt
+    interval: 86400
+      
+  🕸️ speedtest:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+    interval: 86400
+    
+  🎵 tiktok:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    interval: 86400
+    
+  ✉️ telegram:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    interval: 86400
+    
+  🎶 spotify:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    interval: 86400
+        
+  📽️ netflix:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    interval: 86400
+    
+  📼 disney:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+    interval: 86400
+    
+  📹 youtube:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400    
+
+  🤖 facebook:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+    interval: 86400
+  
+  📟 google:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    interval: 86400
+    
+  🖥️ microsoft:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 86400
+    
+  🍎 ota:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml
+    interval: 86400
+    
+  🍎 apple:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    interval: 86400
+
+  🎥 streaming:
+    behavior: domain-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.txt
+    interval: 86400
+    
+  🌐 global:
+    behavior: domain-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.txt
+    interval: 86400
+    
+  📺 media:
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    interval: 86400
+    
+  🇨🇳 china:
+    behavior: domain-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.txt
+    interval: 86400
+    
+  🇨🇳 ips:
+    behavior: ipcidr-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs_IP.txt
+    interval: 86400
+
+  🇨🇳 bgp:
+    behavior: ipcidr-text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_IP.txt
+    interval: 86400
+    
+#💡 规则类型引用（指定规则类型引用代理或策略组）
+rules:
+- RULE-SET,🚥 direct,china
+- RULE-SET,⛔ privacy,adblock
+- RULE-SET,⛔ hijacking,adblock
+- RULE-SET,⛔ advertising,adblock
+- RULE-SET,🕸️ speedtest,speedtest
+- RULE-SET,🎵 tiktok,tiktok
+- RULE-SET,✉️ telegram,telegram
+- RULE-SET,🎶 spotify,spotify
+- RULE-SET,📽️ netflix,netflix
+- RULE-SET,📼 disney,disney
+- RULE-SET,📹 youtube,youtube
+- RULE-SET,🤖 facebook,facebook
+- RULE-SET,📟 google,google
+- RULE-SET,🖥️ microsoft,microsoft
+- RULE-SET,🍎 ota,adblock
+- RULE-SET,🍎 apple,apple
+- RULE-SET,🎥 streaming,streaming
+- RULE-SET,🌐 global,global
+- RULE-SET,📺 media,media
+- RULE-SET,🇨🇳 china,china
+- RULE-SET,🇨🇳 ips,china
+- RULE-SET,🇨🇳 bgp,china
+- SCRIPT,quic,adblock
+- GEOIP,CN,china
+- MATCH,final

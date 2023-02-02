@@ -1,0 +1,23 @@
+name: network-tile
+desc: 节点网络信息查询
+
+tiles:
+  - name: network-tile
+    interval: 3600
+    title: 网络信息查询
+    content: 正在查询请稍候
+    icon: https://raw.githubusercontent.com/aimetu/icons/main/other/network.png
+    backgroundColor: '#00a6ac'
+
+cron:
+  script:   
+    - name: network-tile
+      cron: '0 0 * * *'
+      timeout: 10
+      argument: ''
+      debug: false
+      
+script-providers:
+  network-tile:
+    url: https://raw.githubusercontent.com/aimetu/other/main/Stash/network.js
+    interval: 86400

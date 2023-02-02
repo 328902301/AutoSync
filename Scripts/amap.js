@@ -1,4 +1,4 @@
-// 2023-01-29 20:18
+// 2023-02-02 10:30
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -29,6 +29,12 @@ if (obj.data) {
       obj.data.cardList = obj.data.cardList.filter(
         (item) => item.dataKey === "MyOrderCard"
       );
+    }
+    if (obj.data.tipData) {
+      delete obj.data.tipData;
+    }
+    if (obj.data.footPrintV2) {
+      delete obj.data.footPrintV2;
     }
   } else if (url.includes("/shield/frogserver/aocs")) {
     // 首页右上角图层

@@ -5,9 +5,9 @@ const url = $request.url;
 let obj = JSON.parse($response.body);
 
 if (obj?.operationResourceDTO) {
-    for (let i = 0; i < obj.operationResourceDTO.length; i++) {
-      obj.operationResourceDTO[i].endTime = "2040-01-02 00:00:00";
-      obj.operationResourceDTO[i].startTime = "2040-01-01 00:00:00";
+  for (let i = 0; i < obj.operationResourceDTO.length; i++) {
+    obj.operationResourceDTO[i].endTime = "2040-01-02 00:00:00";
+    obj.operationResourceDTO[i].startTime = "2040-01-01 00:00:00";
   }
 }
 

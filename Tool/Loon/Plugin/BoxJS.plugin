@@ -1,0 +1,12 @@
+#!name = BoxJS
+#!desc = JavaScript数据管理器
+#!openUrl = http://boxjs.com
+#!author = chavyleung
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/BoxJS.png
+
+[Script]
+http-request ^https?:\/\/boxjs\.(com|net) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BoxJS/BoxJS.js, requires-body= true, tag=BoxJS, timeout=120, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/BoxJS.png
+
+[MITM]
+hostname = boxjs.com, boxjs.net

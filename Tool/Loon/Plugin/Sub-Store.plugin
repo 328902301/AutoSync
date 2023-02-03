@@ -1,0 +1,15 @@
+#!name = Sub-Store
+#!desc = 高级订阅管理工具
+#!openUrl = https://sub.store
+#!author = Peng-YM
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Sub-Store.png
+
+[Script]
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Sub-Store/sub-store-1.min.js, requires-body = true, timeout=120, tag = Sub-Store Core, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Sub-Store.png
+http-request ^https?:\/\/sub\.store script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Sub-Store/sub-store-0.min.js, requires-body = true, timeout=120, tag = Sub-Store Simple, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Sub-Store.png
+
+cron "0 0 * * *" script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Sub-Store/cron-sync-artifacts.min.js, tag = Sub-Store Sync
+
+[MITM]
+hostname = sub.store

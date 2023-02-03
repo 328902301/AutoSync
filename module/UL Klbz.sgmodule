@@ -1,8 +1,0 @@
-#!name=克拉壁纸
-#!desc=2022.11.2
-#需要取消跳过代理域名*.apple.com
-[Script]
-克拉壁纸 = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityPaperProCrack.js,script-update-interval=0,max-size=0
-
-[MITM]
-hostname = %APPEND% buy.itunes.apple.com

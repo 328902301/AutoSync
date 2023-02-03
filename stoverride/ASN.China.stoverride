@@ -86,7 +86,6 @@ rules:
   - IP-ASN,55990,DIRECT,no-resolve
   - IP-ASN,139139,DIRECT,no-resolve
   - IP-ASN,24139,DIRECT,no-resolve
-  - IP-ASN,271571,DIRECT,no-resolve
   - IP-ASN,134764,DIRECT,no-resolve
   - IP-ASN,18242,DIRECT,no-resolve
   - IP-ASN,9929,DIRECT,no-resolve
@@ -193,7 +192,6 @@ rules:
   - IP-ASN,270415,DIRECT,no-resolve
   - IP-ASN,52593,DIRECT,no-resolve
   - IP-ASN,131506,DIRECT,no-resolve
-  - IP-ASN,52987,DIRECT,no-resolve
   - IP-ASN,9805,DIRECT,no-resolve
   - IP-ASN,262754,DIRECT,no-resolve
   - IP-ASN,56006,DIRECT,no-resolve
@@ -295,7 +293,6 @@ rules:
   - IP-ASN,23844,DIRECT,no-resolve
   - IP-ASN,55958,DIRECT,no-resolve
   - IP-ASN,63614,DIRECT,no-resolve
-  - IP-ASN,271375,DIRECT,no-resolve
   - IP-ASN,269444,DIRECT,no-resolve
   - IP-ASN,45652,DIRECT,no-resolve
   - IP-ASN,61648,DIRECT,no-resolve
@@ -388,7 +385,6 @@ rules:
   - IP-ASN,266060,DIRECT,no-resolve
   - IP-ASN,268038,DIRECT,no-resolve
   - IP-ASN,7640,DIRECT,no-resolve
-  - IP-ASN,268911,DIRECT,no-resolve
   - IP-ASN,63561,DIRECT,no-resolve
   - IP-ASN,63615,DIRECT,no-resolve
   - IP-ASN,269587,DIRECT,no-resolve
@@ -400,7 +396,6 @@ rules:
   - IP-ASN,137539,DIRECT,no-resolve
   - IP-ASN,147038,DIRECT,no-resolve
   - IP-ASN,15399,DIRECT,no-resolve
-  - IP-ASN,28267,DIRECT,no-resolve
   - IP-ASN,56003,DIRECT,no-resolve
   - IP-ASN,24409,DIRECT,no-resolve
   - IP-ASN,262463,DIRECT,no-resolve
@@ -424,8 +419,6 @@ rules:
   - IP-ASN,38358,DIRECT,no-resolve
   - IP-ASN,38380,DIRECT,no-resolve
   - IP-ASN,37937,DIRECT,no-resolve
-  - IP-ASN,262970,DIRECT,no-resolve
-  - IP-ASN,270961,DIRECT,no-resolve
   - IP-ASN,264570,DIRECT,no-resolve
   - IP-ASN,137746,DIRECT,no-resolve
   - IP-ASN,56012,DIRECT,no-resolve
@@ -451,7 +444,6 @@ rules:
   - IP-ASN,146845,DIRECT,no-resolve
   - IP-ASN,58854,DIRECT,no-resolve
   - IP-ASN,140720,DIRECT,no-resolve
-  - IP-ASN,270875,DIRECT,no-resolve
   - IP-ASN,139183,DIRECT,no-resolve
   - IP-ASN,146809,DIRECT,no-resolve
   - IP-ASN,268225,DIRECT,no-resolve
@@ -485,7 +477,6 @@ rules:
   - IP-ASN,10099,DIRECT,no-resolve
   - IP-ASN,24357,DIRECT,no-resolve
   - IP-ASN,328580,DIRECT,no-resolve
-  - IP-ASN,269598,DIRECT,no-resolve
   - IP-ASN,270771,DIRECT,no-resolve
   - IP-ASN,263614,DIRECT,no-resolve
   - IP-ASN,59073,DIRECT,no-resolve

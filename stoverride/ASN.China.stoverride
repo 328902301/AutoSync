@@ -439,7 +439,6 @@ rules:
   - IP-ASN,140903,DIRECT,no-resolve
   - IP-ASN,56019,DIRECT,no-resolve
   - IP-ASN,56015,DIRECT,no-resolve
-  - IP-ASN,262393,DIRECT,no-resolve
   - IP-ASN,38372,DIRECT,no-resolve
   - IP-ASN,59009,DIRECT,no-resolve
   - IP-ASN,139110,DIRECT,no-resolve

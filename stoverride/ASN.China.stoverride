@@ -304,7 +304,6 @@ rules:
   - IP-ASN,137690,DIRECT,no-resolve
   - IP-ASN,20940,DIRECT,no-resolve
   - IP-ASN,131519,DIRECT,no-resolve
-  - IP-ASN,328808,DIRECT,no-resolve
   - IP-ASN,137788,DIRECT,no-resolve
   - IP-ASN,139136,DIRECT,no-resolve
   - IP-ASN,45071,DIRECT,no-resolve
@@ -784,6 +783,7 @@ rules:
   - IP-ASN,146726,DIRECT,no-resolve
   - IP-ASN,140349,DIRECT,no-resolve
   - IP-ASN,146717,DIRECT,no-resolve
+  - IP-ASN,328808,DIRECT,no-resolve
   - IP-ASN,146716,DIRECT,no-resolve
   - IP-ASN,146715,DIRECT,no-resolve
   - IP-ASN,146714,DIRECT,no-resolve

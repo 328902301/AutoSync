@@ -23,5 +23,7 @@ https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? url reject
 # https://pan\.baidu\.com\/act\/api\/activityentry\? - reject
 https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip url reject
 
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js
+
 #[mitm]
 hostname = sofire.baidu.com, ndstatic.cdn.bcebos.com, pan.baidu.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com

@@ -1,5 +1,5 @@
 #!name = 百度网盘去广告
-#!desc = 过滤百度网盘广告
+#!desc = 过滤百度网盘广告，解锁SVIP权益。
 #!openUrl = 
 #!author = ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
@@ -23,6 +23,9 @@ https:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/ts_ad\/ url reject
 https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? url reject
 # https://pan\.baidu\.com\/act\/api\/activityentry\? - reject
 https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip url reject
+
+[Script]
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/BaiduNetDisk.png
 
 [MITM]
 hostname = sofire.baidu.com, ndstatic.cdn.bcebos.com, pan.baidu.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com

@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用微博&微博国际版净化脚本
 > 脚本作者：@Zmqcherish, @ddgksf2013
 > 微信账号：墨鱼手记
-> 更新时间：2022-01-22
+> 更新时间：2022-02-03
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -12,7 +12,7 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.91";
+const version = "V2.0.93";
 
 const mainConfig = {
     isDebug: !1,
@@ -178,8 +178,7 @@ function removeMainTab(e) {
   let t = [];
   for (let o of e.items)
     isAd(o.data) ||
-      (o.data?.common_struct && delete o.data.common_struct,
-      o.category ? "group" != o.category && t.push(o) : t.push(o));
+      (o.data?.common_struct && delete o.data.common_struct, t.push(o));
   return (e.items = t), log("removeMainTab success"), e;
 }
 function removeMain(e) {
@@ -325,6 +324,7 @@ function removeCards(e) {
   if ((e.hotwords && (e.hotwords = []), !e.cards)) return;
   let t = [];
   for (let o of e.cards) {
+    if (17 == o.card_type || 58 == o.card_type) continue;
     let i = o.card_group;
     if (i && i.length > 0) {
       let n = [];

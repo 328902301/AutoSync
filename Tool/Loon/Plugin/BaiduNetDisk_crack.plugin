@@ -1,0 +1,12 @@
+#!name = 百度网盘解锁
+#!desc = 解锁百度网盘SVIP权益
+#!openUrl = 
+#!author = 510004015
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/BaiduNetDisk.png
+
+[Script]
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/BaiduNetDisk.png
+
+[MITM]
+hostname = pan.baidu.com

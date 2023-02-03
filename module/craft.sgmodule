@@ -1,7 +1,0 @@
-#!name=craft
-#!desc=2022.11.8
-[Script]
-craft = type=http-response,pattern=^https:\/\/api\.craft\.do\/auth\/v2\/profile,requires-body=1,max-size=0,timeout=10,script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/craft.js
-
-[MITM]
-hostname = %APPEND% api.craft.do

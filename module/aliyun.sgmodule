@@ -1,8 +1,0 @@
-#!name=6.1 阿里云
-#!desc=首页简化
-#^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/(users | apps\/widgets$)
-[Script]
-阿里云盘简化 = type=http-response,pattern=^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$,requires-body=1,max-size=0,timeout=10,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/alidrive.js
-
-[MITM]
-hostname = %APPEND% api.aliyundrive.com

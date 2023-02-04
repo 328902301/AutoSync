@@ -138,7 +138,7 @@ function isAd(data) {
   if (data.content_auth_info?.content_auth_title === "广告") {
     return true;
   }
-  if (data.common_struct[0]?.actionlog?.source?.includes("ad")) {
+  if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
     return true;
   }
   return false;

@@ -41,7 +41,73 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   let obj = JSON.parse(body);
   // 首页签到
   if (url.includes("/2/checkin/show")) {
-    obj.show = 0;
+    if ((obj, show)) {
+      obj.show = 0;
+    }
+  } else if (url.includes("/2/client/publisher_list")) {
+    if (obj.elements) {
+      obj.elements = obj.elements.filter(
+        (e) =>
+          e.app_name === "写微博" ||
+          e.app_name === "图片" ||
+          e.app_name === "视频"
+      );
+    }
+  } else if (url.includes("/2/comments/build_comments")) {
+    let delType = ["广告"];
+    delType.push("相关内容");
+    delType.push(...["推荐", "热推"]);
+    if (obj.datas) {
+      let items = obj.datas || [];
+      if (items.length > 0) {
+        let newItems = [];
+        for (let item of items) {
+          // 移除头像挂件、勋章、评论气泡
+          if (item.data) {
+            removeUserCard(item.data);
+          }
+          if (item.data?.comment_bubble) {
+            item.data.comment_bubble = {};
+          }
+
+          let adType = item.adType || "";
+          // 移除评论区推广
+          if (delType.indexOf(adType) === -1) {
+            // 移除过滤提示
+            if (item.type === 6) {
+              continue;
+            } else {
+              newItems.push(item);
+            }
+          }
+        }
+        data.datas = newItems;
+      }
+    } else if (obj.root_comments) {
+      let items = data.root_comments || [];
+      if (items.length > 0) {
+        let newItems = [];
+        for (let item of items) {
+          // 移除头像挂件、勋章、评论气泡
+          removeUserCard(item);
+          if (item.comment_bubble) {
+            item.comment_bubble = {};
+          }
+
+          let adType = item.adType || "";
+          // 移除评论区推广
+          if (delType.indexOf(adType) === -1) {
+            // 移除过滤提示
+            if (item.type === 6) {
+              continue;
+            } else {
+              newItems.push(item);
+            }
+          }
+        }
+        data.root_comments = newItems;
+      }
+    }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     if (obj.cached_ad.ads) {
       for (let item of obj.cached_ad.ads) {
@@ -52,6 +118,20 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
     }
   }
+}
+
+// 移除评论区头像挂件、勋章
+function removeUserCard(data) {
+  if (data?.user?.cardid) {
+    data.user.cardid = "";
+  }
+  if (data?.user?.icons) {
+    data.user.icons = [];
+  }
+  if (data?.user?.avatargj_id) {
+    data.user.avatargj_id = "";
+  }
+  return data;
 }
 
 body = JSON.stringify(obj);

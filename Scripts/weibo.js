@@ -2,6 +2,7 @@
 
 if (!$response.body) $done({});
 const url = $request.url;
+let obj = null;
 
 if (url.includes("/interface/sdk/sdkad.php")) {
   let obj = JSON.parse($response.body.substring(0, body.length - 2));

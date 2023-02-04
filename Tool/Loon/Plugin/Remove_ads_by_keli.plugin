@@ -10,22 +10,22 @@
 [Rewrite]
 # 摩托范弹窗广告
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk reject
+## 百度搜索结果广告
+# ^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url response-body <head> response-body <head><style> .ec_ad_results{display:none!important} </style>
 
+[Script]
 # ======= 普通网页 ====== #
 # 原作者 毒奶
 ## 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
-## 知道搜索广告
+## 百度知道搜索广告
 http-response ^https?:\/\/(zhidao)\.baidu\.com\/(question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
-## 搜索首页广告
+## 百度搜索首页广告
 http-response ^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js
-## 搜索结果广告
-# ^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url response-body <head> response-body <head><style> .ec_ad_results{display:none!important} </style>
+
 ## 百度防跳转
 # ^https?:\/\/boxer\.baidu\.com\/scheme\?scheme ^GET url-and-header script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js
 # 内容农场(bing) //www.bing.com
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = 内容农场
-
-[Script]
 
 [MITM]
 hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com

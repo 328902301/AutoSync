@@ -2,10 +2,10 @@
 
 if (!$response.body) $done({});
 const url = $request.url;
-let obj = null;
+let body = $response.body;
 
 if (url.includes("/interface/sdk/sdkad.php")) {
-  let obj = JSON.parse($response.body.substring(0, body.length - 2));
+  let obj = JSON.parse(body.substring(0, body.length - 2));
   if (obj.needlocation) {
     obj.needlocation = false;
   }
@@ -37,7 +37,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   }
 } else {
-  let obj = JSON.parse($response.body);
+  let obj = JSON.parse(body);
   // 首页签到
   if (url.includes("/2/checkin/show")) {
     obj.show = 0;

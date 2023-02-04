@@ -1,41 +1,11 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-02-04 16:18
+// 2023-02-04 16:35
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
 
-// 主要的选项配置
-const mainConfig = {
-  // 个人中心配置
-  removeHomeVip: true, // 个人中心的vip栏
-
-  // 详情页配置
-  blockIds: [], // 屏蔽的账号id
-  modifyMenus: true, // 自定义编辑上下文菜单
-  removeFollow: true, // 移除关注博主
-  removeGood: true, // 移除博主好物种草
-  removeRecommendItem: true, // 移除评论区推荐内容
-  removeRelate: true, // 移除相关推荐
-  removeRelateItem: true, // 移除评论区相关内容
-  removeRewardItem: true, // 移除微博详情页打赏模块
-  removeUserItem: true, // 移除头像挂件、勋章、评论气泡
-
-  // 视频、直播配置
-  removeLiveMedia: true, // 移除首页顶部直播
-  removeNextVideo: true, // 关闭自动播放下一个视频
-
-  // 热搜配置
-  removePinedTrending: true, // 移除热搜列表置顶条目
-  removeSearchWindow: true, // 移除搜索页滑动窗口
-
-  // 超话配置
-  removeInterestFriendInTopic: true, // 移除超话里的好友
-  removeInterestTopic: true, // 移除可能感兴趣的超话
-  removeInterestUser: true, // 移除可能感兴趣的人
-  removeLvZhou: true, // 移除绿洲模块
-  removeUnfollowTopic: true, // 移除未关注的人
-  removeUnusedPart: true // 移除乱七八糟没用的部分
-};
+// 屏蔽的账号id
+const blockIds = [];
 
 // 菜单配置
 const itemMenusConfig = {
@@ -154,7 +124,7 @@ function removeCards(data) {
   let newCards = [];
   for (let card of data.cards) {
     let cardGroup = card.card_group;
-    if (cardGroup && cardGroup.length > 0) {
+    if (cardGroup?.length > 0) {
       let newGroup = [];
       for (let group of cardGroup) {
         let cardType = group.card_type;
@@ -182,9 +152,6 @@ function removeCards(data) {
 
 // 移除绿洲
 function lvZhouHandler(data) {
-  if (!mainConfig.removeLvZhou) {
-    return data;
-  }
   if (!data) {
     return data;
   }
@@ -203,7 +170,6 @@ function lvZhouHandler(data) {
 
 // 屏蔽用户id
 function isBlock(data) {
-  let blockIds = mainConfig.blockIds || [];
   if (blockIds.length === 0) {
     return false;
   }
@@ -278,12 +244,8 @@ function removeUserCard(data) {
 // 评论区相关和推荐内容
 function removeComments(data) {
   let delType = ["广告"];
-  if (mainConfig.removeRelateItem) {
-    delType.push("相关内容");
-  }
-  if (mainConfig.removeRecommendItem) {
-    delType.push(...["推荐", "热推"]);
-  }
+  delType.push("相关内容");
+  delType.push(...["推荐", "热推"]);
   if (data.datas) {
     let items = data.datas || [];
     if (items.length === 0) {
@@ -292,13 +254,11 @@ function removeComments(data) {
     let newItems = [];
     for (let item of items) {
       // 移除头像挂件、勋章、评论气泡
-      if (mainConfig.removeUserItem) {
-        if (item.data) {
-          removeUserCard(item.data);
-        }
-        if (item.data?.comment_bubble) {
-          item.data.comment_bubble = {};
-        }
+      if (item.data) {
+        removeUserCard(item.data);
+      }
+      if (item.data?.comment_bubble) {
+        item.data.comment_bubble = {};
       }
       let adType = item.adType || "";
       // 移除评论区推广
@@ -320,11 +280,9 @@ function removeComments(data) {
     let newItems = [];
     for (let item of items) {
       // 移除头像挂件、勋章、评论气泡
-      if (mainConfig.removeUserItem) {
-        removeUserCard(item);
-        if (item.comment_bubble) {
-          item.comment_bubble = {};
-        }
+      removeUserCard(item);
+      if (item.comment_bubble) {
+        item.comment_bubble = {};
       }
       let adType = item.adType || "";
       // 移除评论区推广
@@ -343,17 +301,13 @@ function removeComments(data) {
 
 // 感兴趣的超话和超话里的好友
 function containerHandler(data) {
-  if (mainConfig.removeInterestFriendInTopic) {
-    if (data.card_type_name === "超话里的好友") {
-      data.card_group = [];
-    }
+  if (data.card_type_name === "超话里的好友") {
+    data.card_group = [];
   }
-  if (mainConfig.removeInterestTopic && data.itemid) {
-    if (data.itemid.includes("infeed_may_interest_in")) {
-      data.card_group = [];
-    } else if (data.itemid.includes("infeed_friends_recommend")) {
-      data.card_group = [];
-    }
+  if (data.itemid.includes("infeed_may_interest_in")) {
+    data.card_group = [];
+  } else if (data.itemid.includes("infeed_friends_recommend")) {
+    data.card_group = [];
   }
 }
 
@@ -377,7 +331,7 @@ function removeMsgAd(data) {
 // 移除热搜列表置顶项目、推广项目
 function removePage(data) {
   removeCards(data);
-  if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
+  if (data.cards?.length > 0) {
     if (data.cards[0].card_group) {
       data.cards[0].card_group = data.cards[0].card_group.filter(
         (c) =>
@@ -395,9 +349,6 @@ function removePage(data) {
 // 可能感兴趣的人
 function userHandler(data) {
   data = removeMain(data);
-  if (!mainConfig.removeInterestUser) {
-    return data;
-  }
   if (!data.items) {
     return data;
   }
@@ -483,9 +434,7 @@ function removeHome(data) {
   for (let item of data.items) {
     let itemId = item.itemId;
     if (itemId === "profileme_mine") {
-      if (mainConfig.removeHomeVip) {
-        item = removeHomeVip(item);
-      }
+      item = removeHomeVip(item);
       updateFollowOrder(item);
       newItems.push(item);
     } else if (itemId === "100505_-_top8") {
@@ -538,9 +487,6 @@ function removeRed(data) {
 }
 
 function checkSearchWindow(item) {
-  if (!mainConfig.removeSearchWindow) {
-    return false;
-  }
   if (item.category !== "card") {
     return false;
   }
@@ -636,23 +582,15 @@ function topicHandler(data) {
   if (!cards) {
     return data;
   }
-  if (!mainConfig.removeUnfollowTopic && !mainConfig.removeUnusedPart) {
-    return data;
-  }
   let newCards = [];
   for (let c of cards) {
     let addFlag = true;
     if (c.mblog) {
       let btns = c.mblog.buttons;
-      if (mainConfig.removeUnfollowTopic && btns) {
-        if (btns[0].type === "follow") {
-          addFlag = false;
-        }
+      if (btns?.[0].type === "follow") {
+        addFlag = false;
       }
     } else {
-      if (!mainConfig.removeUnusedPart) {
-        continue;
-      }
       if (c.itemid === "bottom_mix_activity") {
         addFlag = false;
       } else if (c?.top?.title === "正在活跃") {
@@ -695,33 +633,25 @@ function topicHandler(data) {
 }
 
 function nextVideoHandler(data) {
-  if (mainConfig.removeNextVideo) {
-    data.statuses = [];
-    data.tab_list = [];
-  }
+  data.statuses = [];
+  data.tab_list = [];
 }
 
 // 微博详情页
 function itemExtendHandler(data) {
-  if (mainConfig.removeRelate || mainConfig.removeGood) {
-    if (data.trend && data.trend.titles) {
-      let title = data.trend.titles.title;
-      if (mainConfig.removeRelate && title === "相关推荐") {
-        delete data.trend;
-      } else if (mainConfig.removeGood && title === "博主好物种草") {
-        delete data.trend;
-      }
+  if (data.trend?.titles) {
+    let title = data.trend.titles.title;
+    if (title === "相关推荐") {
+      delete data.trend;
+    } else if (title === "博主好物种草") {
+      delete data.trend;
     }
   }
-  if (mainConfig.removeFollow) {
-    if (data.follow_data) {
-      data.follow_data = null;
-    }
+  if (data.follow_data) {
+    data.follow_data = null;
   }
-  if (mainConfig.removeRewardItem) {
-    if (data.reward_info) {
-      data.reward_info = null;
-    }
+  if (data.reward_info) {
+    data.reward_info = null;
   }
   // 移除拓展卡片
   if (data?.extend_info) {
@@ -738,7 +668,7 @@ function itemExtendHandler(data) {
       delete data.trend;
     }
   } catch (error) {}
-  if (mainConfig.modifyMenus && data.custom_action_list) {
+  if (data.custom_action_list) {
     let newActions = [];
     for (let item of data.custom_action_list) {
       let _t = item.type;
@@ -769,9 +699,6 @@ function removeVideoRemind(data) {
 
 // 话题按钮、顶部广场
 function topicTabHandler(data) {
-  if (!mainConfig.removeUnusedPart) {
-    return data;
-  }
   // 移除超话左上角、右上角图标
   if (data.button_configs) {
     data.button_configs = [];
@@ -787,9 +714,7 @@ function topicTabHandler(data) {
 
 // 移除首页顶部直播
 function removeMediaHomelist(data) {
-  if (mainConfig.removeLiveMedia) {
-    data.data = [];
-  }
+  data.data = [];
 }
 
 // 移除开屏广告

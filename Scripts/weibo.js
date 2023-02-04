@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-02-04 16:15
+// 2023-02-04 16:18
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -168,7 +168,7 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165, 180, 1007].includes(cardType)) {
+      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
@@ -302,7 +302,7 @@ function removeComments(data) {
       }
       let adType = item.adType || "";
       // 移除评论区推广
-      if (!delType.includes(adType)) {
+      if (delType.indexOf(adType) === -1) {
         // 移除过滤提示
         if (item.type === 6) {
           continue;
@@ -328,7 +328,7 @@ function removeComments(data) {
       }
       let adType = item.adType || "";
       // 移除评论区推广
-      if (!delType.includes(adType)) {
+      if (delType.indexOf(adType) === -1) {
         // 移除过滤提示
         if (item.type === 6) {
           continue;
@@ -677,9 +677,9 @@ function topicHandler(data) {
           let newCardGroup = [];
           for (let cg of cGroup) {
             if (
-              !["chaohua_discovery_banner_1", "bottom_mix_activity"].includes(
+              ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
                 cg.itemid
-              )
+              ) === -1
             ) {
               newCardGroup.push(cg);
             }

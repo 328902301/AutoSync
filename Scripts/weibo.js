@@ -41,7 +41,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   let obj = JSON.parse(body);
   // 首页签到
   if (url.includes("/2/checkin/show")) {
-    if ((obj, show)) {
+    if (obj?.show) {
       obj.show = 0;
     }
   } else if (url.includes("/2/client/publisher_list")) {

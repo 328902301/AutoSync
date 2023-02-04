@@ -11,19 +11,26 @@
 # 摩托范弹窗广告
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk reject
 
-## 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
+# 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
+# 来自RuCu6
 ## 知道搜索广告
-^https?:\/\/(zhidao)\.baidu\.com\/(question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
+http-response ^https?:\/\/(zhidao)\.baidu\.com\/(question|index|\?fr|\?word) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, requires-body=true, tag=baidu-zhidao
+
 ## 搜索首页广告
-^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js
+http-response ^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$ script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body=true, tag=baidu-index
+
 ## 搜索结果广告
-^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url response-body <head> response-body <head><style> .ec_ad_results{display:none!important} </style>
+http-response ^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, requires-body=true, tag=replaceBody, argument="<head>-><head><style> .ec_ad_results{display:none!important} </style>"
+
 ## 百度防跳转
-^https?:\/\/boxer\.baidu\.com\/scheme\?scheme ^GET url-and-header script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js
+http-request ^https?:\/\/boxer\.baidu\.com\/scheme\?scheme ^GET url-and-header script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/replace-header/index.js, tag=replaceHeader, argument=undefined->undefined
 
+# 内容农场(bing) //www.bing.com
+http-response ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body=true, tag=Adblock4limboQX
 
+http-response ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, requires-body=true, tag=replaceBody, argument="true->false"
 
 [Script]
 
 [MITM]
-hostname = pangolin-sdk-toutiao.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
+hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com

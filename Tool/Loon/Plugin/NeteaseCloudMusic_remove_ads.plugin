@@ -32,6 +32,8 @@
 ^https:\/\/interface3\.music\.163\.com\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? reject-dict
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/feed\/inserted\/resources\? reject-dict
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject-dict
+#续费弹窗提醒
+^https:\/\/interface3\.music\.163\.com\/eapi\/vipauth\/app\/auth\/recycle\? reject-dict
 
 [MITM]
 hostname = interface*.music.163.com

@@ -98,7 +98,7 @@ if (url.includes("/2/checkin/show")) {
   }
 } else if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告sdkad
-  let obj = JSON.parse(obj.substring(0, body.length - 1));
+  let obj = obj.substring(0, obj.length - 1);
   if (obj.needlocation) {
     obj.needlocation = false;
   }

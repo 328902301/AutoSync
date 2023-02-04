@@ -1,0 +1,21 @@
+#!name = 菜鸟去广告
+#!desc = 过滤菜鸟广告（原菜鸟裹裹）
+#!openUrl = 
+#!author = ddgksf2013
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+host, amdc.m.taobao.com, reject
+
+# 通用广告请求[包含开屏广告]
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn url reject-200
+
+# 首页中部的惊喜福利推广
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+# 搜索框下方今日好物推荐
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+# 首页底部商品推广
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+
+#[mitm]
+hostname = cn-acs.m.cainiao.com

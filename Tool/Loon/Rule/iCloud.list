@@ -3,16 +3,16 @@
 # 引用地址 https://support.apple.com/en-us/HT210060
 # iCloud - 除了上面列出的 Apple ID 主机外，Apple 设备必须能够连接到以下域的主机才能使用 iCloud 服务。
 
-DOMAIN-SUFFIX, apple-cloudkit.com #iCloud 服务
-DOMAIN-SUFFIX, apple-livephotoskit.com #iCloud 服务
-DOMAIN-SUFFIX, apzones.com #中国大陆的 iCloud 服务
-DOMAIN-SUFFIX, cdn-apple.com #iCloud 服务
-DOMAIN-SUFFIX, gc.apple.com #iCloud 服务
-DOMAIN-SUFFIX, icloud.com #iCloud 服务
-DOMAIN-SUFFIX, icloud.com.cn #中国大陆的 iCloud 服务
-DOMAIN-SUFFIX, icloud.apple.com #iCloud 服务
-DOMAIN-SUFFIX, icloud-content.com #iCloud 服务
-DOMAIN-SUFFIX, iwork.apple.com #iWork 文稿
-DOMAIN, mask.icloud.com #iCloud 专用代理
-DOMAIN, mask-h2.icloud.com #iCloud 专用代理
-DOMAIN, mask-api.icloud.com #iCloud 专用代理
+DOMAIN-SUFFIX, apple-cloudkit.com //iCloud 服务
+DOMAIN-SUFFIX, apple-livephotoskit.com //iCloud 服务
+DOMAIN-SUFFIX, apzones.com //中国大陆的 iCloud 服务
+DOMAIN-SUFFIX, cdn-apple.com //iCloud 服务
+DOMAIN-SUFFIX, gc.apple.com //iCloud 服务
+DOMAIN-SUFFIX, icloud.com //iCloud 服务
+DOMAIN-SUFFIX, icloud.com.cn //中国大陆的 iCloud 服务
+DOMAIN-SUFFIX, icloud.apple.com //iCloud 服务
+DOMAIN-SUFFIX, icloud-content.com //iCloud 服务
+DOMAIN-SUFFIX, iwork.apple.com //iWork 文稿
+DOMAIN, mask.icloud.com //iCloud 专用代理
+DOMAIN, mask-h2.icloud.com //iCloud 专用代理
+DOMAIN, mask-api.icloud.com //iCloud 专用代理

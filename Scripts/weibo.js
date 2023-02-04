@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-02-01 23:30
+// 2023-02-04 16:08
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -138,7 +138,7 @@ function isAd(data) {
   if (data.content_auth_info?.content_auth_title === "广告") {
     return true;
   }
-  if (data.common_struct?.[0]?.actionlog?.source.includes("ad")) {
+  if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
     return true;
   }
   return false;
@@ -405,7 +405,7 @@ function userHandler(data) {
   for (let item of data.items) {
     let isAdd = true;
     if (item.category === "group") {
-      if (item.items[0]["data"]["desc"] === "可能感兴趣的人") {
+      if (item.items[0].data.desc === "可能感兴趣的人") {
         isAdd = false;
       }
     }
@@ -816,12 +816,12 @@ function removePhp(data) {
     data.realtime_ad_timeout_duration = 31536000;
   }
   if (data.ads) {
-    for (let item of data["ads"]) {
-      item["displaytime"] = 0;
-      item["displayintervel"] = 31536000;
-      item["allowdaydisplaynum"] = 0;
-      item["begintime"] = "2040-01-01 00:00:00";
-      item["endtime"] = "2040-01-01 23:59:59";
+    for (let item of data.ads) {
+      item.displaytime = 0;
+      item.displayintervel = 31536000;
+      item.allowdaydisplaynum = 0;
+      item.begintime = "2040-01-01 00:00:00";
+      item.endtime = "2040-01-01 23:59:59";
     }
   }
   return data;
@@ -830,11 +830,11 @@ function removePhp(data) {
 // 移除开屏广告
 function removeLua(data) {
   if (data.cached_ad.ads) {
-    for (let item of data["cached_ad"]["ads"]) {
-      item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      item["show_count"] = 0;
-      item["duration"] = 31536000; // 60 * 60 * 24 * 365 = 31536000
-      item["end_date"] = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+    for (let item of data.cached_ad.ads) {
+      item.start_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      item.show_count = 0;
+      item.duration = 31536000; // 60 * 60 * 24 * 365 = 31536000
+      item.end_date = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
     }
   }
   return data;

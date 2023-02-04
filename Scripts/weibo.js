@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-02-04 16:08
+// 2023-02-04 16:15
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -104,17 +104,17 @@ const otherUrls = {
 
 function getModifyMethod(url) {
   for (let s of modifyCardsUrls) {
-    if (url.indexOf(s) !== -1) {
+    if (url.includes(s)) {
       return "removeCards";
     }
   }
   for (let s of modifyStatusesUrls) {
-    if (url.indexOf(s) !== -1) {
+    if (url.includes(s)) {
       return "removeTimeLine";
     }
   }
   for (let [path, method] of Object.entries(otherUrls)) {
-    if (url.indexOf(path) !== -1) {
+    if (url.includes(path)) {
       return method;
     }
   }
@@ -168,7 +168,7 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+      if ([9, 165, 180, 1007].includes(cardType)) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
@@ -302,7 +302,7 @@ function removeComments(data) {
       }
       let adType = item.adType || "";
       // 移除评论区推广
-      if (delType.indexOf(adType) === -1) {
+      if (!delType.includes(adType)) {
         // 移除过滤提示
         if (item.type === 6) {
           continue;
@@ -328,7 +328,7 @@ function removeComments(data) {
       }
       let adType = item.adType || "";
       // 移除评论区推广
-      if (delType.indexOf(adType) === -1) {
+      if (!delType.includes(adType)) {
         // 移除过滤提示
         if (item.type === 6) {
           continue;
@@ -349,9 +349,9 @@ function containerHandler(data) {
     }
   }
   if (mainConfig.removeInterestTopic && data.itemid) {
-    if (data.itemid.indexOf("infeed_may_interest_in") !== -1) {
+    if (data.itemid.includes("infeed_may_interest_in")) {
       data.card_group = [];
-    } else if (data.itemid.indexOf("infeed_friends_recommend") !== -1) {
+    } else if (data.itemid.includes("infeed_friends_recommend")) {
       data.card_group = [];
     }
   }
@@ -670,16 +670,16 @@ function topicHandler(data) {
             "guess_like_title",
             "cats_top_title",
             "chaohua_home_readpost_samecity_title"
-          ].indexOf(cGroup0.itemid) !== -1
+          ].includes(cGroup0.itemid)
         ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
           for (let cg of cGroup) {
             if (
-              ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
+              !["chaohua_discovery_banner_1", "bottom_mix_activity"].includes(
                 cg.itemid
-              ) === -1
+              )
             ) {
               newCardGroup.push(cg);
             }
@@ -734,7 +734,7 @@ function itemExtendHandler(data) {
   // 广告 暂时判断逻辑根据图片  https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
   try {
     let picUrl = data.trend.extra_struct.extBtnInfo.btn_picurl;
-    if (picUrl.indexOf("timeline_icon_ad_delete") !== -1) {
+    if (picUrl.includes("timeline_icon_ad_delete")) {
       delete data.trend;
     }
   } catch (error) {}

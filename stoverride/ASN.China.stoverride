@@ -527,6 +527,7 @@ rules:
   - IP-ASN,140496,DIRECT,no-resolve
   - IP-ASN,140497,DIRECT,no-resolve
   - IP-ASN,24302,DIRECT,no-resolve
+  - IP-ASN,268086,DIRECT,no-resolve
   - IP-ASN,269298,DIRECT,no-resolve
   - IP-ASN,140521,DIRECT,no-resolve
   - IP-ASN,140522,DIRECT,no-resolve

@@ -489,7 +489,6 @@ rules:
   - IP-ASN,328580,DIRECT,no-resolve
   - IP-ASN,269598,DIRECT,no-resolve
   - IP-ASN,270771,DIRECT,no-resolve
-  - IP-ASN,28610,DIRECT,no-resolve
   - IP-ASN,263614,DIRECT,no-resolve
   - IP-ASN,59073,DIRECT,no-resolve
   - IP-ASN,131497,DIRECT,no-resolve
@@ -527,6 +526,7 @@ rules:
   - IP-ASN,265475,DIRECT,no-resolve
   - IP-ASN,24372,DIRECT,no-resolve
   - IP-ASN,24371,DIRECT,no-resolve
+  - IP-ASN,28610,DIRECT,no-resolve
   - IP-ASN,140496,DIRECT,no-resolve
   - IP-ASN,140497,DIRECT,no-resolve
   - IP-ASN,24302,DIRECT,no-resolve

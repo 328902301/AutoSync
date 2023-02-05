@@ -711,57 +711,68 @@ async function parse({ body,cookie }) {
   }
   
   pkgs.forEach(({name, use, total, remain, useTxt, totalTxt, remainTxt, unlimited, id, endDate, type, addupItemCode, addUpItemName,feePolicyName, feePolicyId }) => {
-  // 免流
-  if (freeAddupItemCodes.includes(addupItemCode) || freeAddUpItemNames.includes(addUpItemName) || freeTypes.includes(type) || freeFeePolicyNameRegExp.test(feePolicyName)) {
-    // 无限
-    if (unlimited) {
-      if(!lastConfig["freeUnlimited"]._pkgIds.includes(id)){
-        newPkgs["freeUnlimited"].pkgIds.push(id)
-        if(!config["freeUnlimited"].pkgIds[id]) config["freeUnlimited"].pkgIds.push(id)
+    // 免流
+    if (freeAddupItemCodes.includes(addupItemCode) || freeAddUpItemNames.includes(addUpItemName) || freeTypes.includes(type) || freeFeePolicyNameRegExp.test(feePolicyName)) {
+      // 无限
+      if (unlimited) {
+        if(!lastConfig["freeUnlimited"]._pkgIds.includes(id)){
+          newPkgs["freeUnlimited"].pkgIds.push(id)
+          if(!config["freeUnlimited"].pkgIds[id]) config["freeUnlimited"].pkgIds.push(id)
+        }
+        config["freeUnlimited"]._pkgIds.push(id)
+        if(noConfig){
+          config["freeUnlimited"].pkgIds = config["freeUnlimited"]._pkgIds
+        }
+        config["freeUnlimited"]._pkgIds = uniqueArray(config["freeUnlimited"]._pkgIds)
+        config["freeUnlimited"].pkgIds = uniqueArray(config["freeUnlimited"].pkgIds)
+      } else{
+        if(!lastConfig["freeLimited"]._pkgIds.includes(id)){
+          newPkgs["freeLimited"].pkgIds.push(id)
+          if(!config["freeLimited"].pkgIds[id]) config["freeLimited"].pkgIds.push(id)
+        }
+        config["freeLimited"]._pkgIds.push(id)
+        if(noConfig){
+          config["freeLimited"].pkgIds = config["freeLimited"]._pkgIds
+        }
+        config["freeLimited"]._pkgIds = uniqueArray(config["freeLimited"]._pkgIds)
+        config["freeLimited"].pkgIds = uniqueArray(config["freeLimited"].pkgIds)
       }
-      config["freeUnlimited"]._pkgIds.push(id)
+      if(!lastConfig["free"]._pkgIds.includes(id)){
+        newPkgs["free"].pkgIds.push(id)
+        if(!config["free"].pkgIds[id]) config["free"].pkgIds.push(id)
+      }
+      config["free"]._pkgIds.push(id)
       if(noConfig){
-        config["freeUnlimited"].pkgIds = config["freeUnlimited"]._pkgIds
+        config["free"].pkgIds = config["free"]._pkgIds
       }
-    }else{
-      if(!lastConfig["freeLimited"]._pkgIds.includes(id)){
-        newPkgs["freeLimited"].pkgIds.push(id)
-        if(!config["freeLimited"].pkgIds[id]) config["freeLimited"].pkgIds.push(id)
-      }
-      config["freeLimited"]._pkgIds.push(id)
-      if(noConfig){
-        config["freeLimited"].pkgIds = config["freeLimited"]._pkgIds
-      }
-    }
-    if(!lastConfig["free"]._pkgIds.includes(id)){
-      newPkgs["free"].pkgIds.push(id)
-      if(!config["free"].pkgIds[id]) config["free"].pkgIds.push(id)
-    }
-    config["free"]._pkgIds.push(id)
-    if(noConfig){
-      config["free"].pkgIds = config["free"]._pkgIds
-    }
+      config["free"]._pkgIds = uniqueArray(config["free"]._pkgIds)
+      config["free"].pkgIds = uniqueArray(config["free"].pkgIds)
     }  else  {
-    // 无限
-    if (unlimited) {
-      if(!lastConfig["normalUnlimited"]._pkgIds.includes(id)){
-        newPkgs["normalUnlimited"].pkgIds.push(id)
-        if(!config["normalUnlimited"].pkgIds[id]) config["normalUnlimited"].pkgIds.push(id)
+
+      // 无限
+      if (unlimited) {
+        if(!lastConfig["normalUnlimited"]._pkgIds.includes(id)){
+          newPkgs["normalUnlimited"].pkgIds.push(id)
+          if(!config["normalUnlimited"].pkgIds[id]) config["normalUnlimited"].pkgIds.push(id)
+        }
+        config["normalUnlimited"]._pkgIds.push(id)
+        if(noConfig){
+          config["normalUnlimited"].pkgIds = config["normalUnlimited"]._pkgIds
+        }
+        config["normalUnlimited"]._pkgIds = uniqueArray(config["normalUnlimited"]._pkgIds)
+        config["normalUnlimited"].pkgIds = uniqueArray(config["normalUnlimited"].pkgIds)
+      } else {
+        if(!lastConfig["normalLimited"]._pkgIds.includes(id)){
+          newPkgs["normalLimited"].pkgIds.push(id)
+          if(!config["normalLimited"].pkgIds[id]) config["normalLimited"].pkgIds.push(id)
+        }
+        config["normalLimited"]._pkgIds.push(id)
+        if(noConfig){
+          config["normalLimited"].pkgIds = config["normalLimited"]._pkgIds
+        }
+        config["normalLimited"]._pkgIds = uniqueArray(config["normalLimited"]._pkgIds)
+        config["normalLimited"].pkgIds = uniqueArray(config["normalLimited"].pkgIds)
       }
-      config["normalUnlimited"]._pkgIds.push(id)
-      if(noConfig){
-        config["normalUnlimited"].pkgIds = config["normalUnlimited"]._pkgIds
-      }
-    } else {
-      if(!lastConfig["normalLimited"]._pkgIds.includes(id)){
-        newPkgs["normalLimited"].pkgIds.push(id)
-        if(!config["normalLimited"].pkgIds[id]) config["normalLimited"].pkgIds.push(id)
-      }
-      config["normalLimited"]._pkgIds.push(id)
-      if(noConfig){
-        config["normalLimited"].pkgIds = config["normalLimited"]._pkgIds
-      }
-    }
       if(!lastConfig["normal"]._pkgIds.includes(id)){
         newPkgs["normal"].pkgIds.push(id)
         if(!config["normal"].pkgIds[id]) config["normal"].pkgIds.push(id)
@@ -770,6 +781,9 @@ async function parse({ body,cookie }) {
       if(noConfig){
         config["normal"].pkgIds = config["normal"]._pkgIds
       }
+      config["normal"]._pkgIds = uniqueArray(config["normal"]._pkgIds)
+      config["normal"].pkgIds = uniqueArray(config["normal"].pkgIds)
+      
     }
   })
     
@@ -1163,6 +1177,13 @@ function getJsRes({ code = 200, body }) {
     return { status: `HTTP/1.1 ${code}`, headers, body: js }
   }
   return { response: { status: code, headers, body: js } }
+}
+function uniqueArray(arr) {
+    var a = [];
+    for (var i=0, l=arr.length; i<l; i++)
+        if (a.indexOf(arr[i]) === -1 && arr[i] !== '')
+            a.push(arr[i]);
+    return a;
 }
 
 //#region Env.js

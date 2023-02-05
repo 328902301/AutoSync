@@ -717,7 +717,7 @@ async function parse({ body,cookie }) {
     if (unlimited) {
       if(!lastConfig["freeUnlimited"]._pkgIds.includes(id)){
         newPkgs["freeUnlimited"].pkgIds.push(id)
-        config["freeUnlimited"].pkgIds.push(id)
+        if(!config["freeUnlimited"].pkgIds[id]) config["freeUnlimited"].pkgIds.push(id)
       }
       config["freeUnlimited"]._pkgIds.push(id)
       if(noConfig){
@@ -726,7 +726,7 @@ async function parse({ body,cookie }) {
     }else{
       if(!lastConfig["freeLimited"]._pkgIds.includes(id)){
         newPkgs["freeLimited"].pkgIds.push(id)
-        config["freeLimited"].pkgIds.push(id)
+        if(!config["freeLimited"].pkgIds[id]) config["freeLimited"].pkgIds.push(id)
       }
       config["freeLimited"]._pkgIds.push(id)
       if(noConfig){
@@ -735,7 +735,7 @@ async function parse({ body,cookie }) {
     }
     if(!lastConfig["free"]._pkgIds.includes(id)){
       newPkgs["free"].pkgIds.push(id)
-      config["free"].pkgIds.push(id)
+      if(!config["free"].pkgIds[id]) config["free"].pkgIds.push(id)
     }
     config["free"]._pkgIds.push(id)
     if(noConfig){
@@ -746,7 +746,7 @@ async function parse({ body,cookie }) {
     if (unlimited) {
       if(!lastConfig["normalUnlimited"]._pkgIds.includes(id)){
         newPkgs["normalUnlimited"].pkgIds.push(id)
-        config["normalUnlimited"].pkgIds.push(id)
+        if(!config["normalUnlimited"].pkgIds[id]) config["normalUnlimited"].pkgIds.push(id)
       }
       config["normalUnlimited"]._pkgIds.push(id)
       if(noConfig){
@@ -755,7 +755,7 @@ async function parse({ body,cookie }) {
     } else {
       if(!lastConfig["normalLimited"]._pkgIds.includes(id)){
         newPkgs["normalLimited"].pkgIds.push(id)
-        config["normalLimited"].pkgIds.push(id)
+        if(!config["normalLimited"].pkgIds[id]) config["normalLimited"].pkgIds.push(id)
       }
       config["normalLimited"]._pkgIds.push(id)
       if(noConfig){
@@ -764,7 +764,7 @@ async function parse({ body,cookie }) {
     }
       if(!lastConfig["normal"]._pkgIds.includes(id)){
         newPkgs["normal"].pkgIds.push(id)
-        config["normal"].pkgIds.push(id)
+        if(!config["normal"].pkgIds[id]) config["normal"].pkgIds.push(id)
       }
       config["normal"]._pkgIds.push(id)
       if(noConfig){

@@ -479,6 +479,7 @@ rules:
   - IP-ASN,7497,DIRECT,no-resolve
   - IP-ASN,271590,DIRECT,no-resolve
   - IP-ASN,271022,DIRECT,no-resolve
+  - IP-ASN,270442,DIRECT,no-resolve
   - IP-ASN,271018,DIRECT,no-resolve
   - IP-ASN,266625,DIRECT,no-resolve
   - IP-ASN,10099,DIRECT,no-resolve

@@ -4,6 +4,10 @@ if (!$response.body) $done({});
 const url = $request.url;
 let body = $response.body;
 
+// 屏蔽用户id获取方法
+// 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
+const blockIds = [];
+
 if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告
   let obj = JSON.parse(body.substring(0, body.length - 2));
@@ -360,6 +364,20 @@ function isAd(data) {
   // if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
   //   return true;
   // }
+  return false;
+}
+
+// 屏蔽用户id
+function isBlock(data) {
+  if (blockIds.length === 0) {
+    return false;
+  }
+  let uid = data.user.id;
+  for (let blockId of blockIds) {
+    if (blockId == uid) {
+      return true;
+    }
+  }
   return false;
 }
 

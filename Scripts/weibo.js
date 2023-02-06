@@ -524,14 +524,14 @@ function checkSearchWindow(item) {
 
 // 发现页
 function removeSearch(data) {
-  if (obj.loadedInfo) {
+  if (data.loadedInfo) {
     // 去除搜索框填充词
-    if (obj.loadedInfo.searchBarContent) {
-      delete obj.loadedInfo.searchBarContent;
+    if (data.loadedInfo.searchBarContent) {
+      delete data.loadedInfo.searchBarContent;
     }
     // 去除搜索背景图片
-    if (obj.loadedInfo.headerBack?.channelStyleMap) {
-      delete obj.loadedInfo.headerBack.channelStyleMap;
+    if (data.loadedInfo.headerBack?.channelStyleMap) {
+      delete data.loadedInfo.headerBack.channelStyleMap;
     }
   }
   if (!data.items) {

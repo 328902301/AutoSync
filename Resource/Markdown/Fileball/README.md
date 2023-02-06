@@ -5,9 +5,9 @@
 
 2. 地址填写[aliyun.example.com](aliyun.example.com)；
 
-3. 账号随便填，密码填写Token。
+3. 账号随便填，密码填写refresh_token的值。
 
-###### Token的三种获取方式
+###### Refresh token的三种获取方式
 - 在浏览器的Web开发者工具里获得
 - 抓包获得
 - 使用阿里云盘App扫描[Alist的二维码](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)获得

@@ -422,7 +422,6 @@ rules:
   - IP-ASN,139721,DIRECT,no-resolve
   - IP-ASN,38358,DIRECT,no-resolve
   - IP-ASN,38380,DIRECT,no-resolve
-  - IP-ASN,37937,DIRECT,no-resolve
   - IP-ASN,262970,DIRECT,no-resolve
   - IP-ASN,270961,DIRECT,no-resolve
   - IP-ASN,264570,DIRECT,no-resolve

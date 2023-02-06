@@ -156,6 +156,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.messages = newMsgs;
     }
+  } else if (url.includes("/2/page")) {
+    if (data.cards?.length > 0) {
+      if (data.cards[0].card_group) {
+        data.cards[0].card_group = data.cards[0].card_group.filter(
+          (c) =>
+            !(
+              c?.actionlog?.ext?.includes("ads_word") ||
+              c?.itemid?.includes("t:51") ||
+              c?.itemid?.includes("ads_word")
+            )
+        );
+      }
+    }
   } else if (url.includes("/2/profile/container_timeline")) {
     // 个人主页信息流
     if (obj.items) {

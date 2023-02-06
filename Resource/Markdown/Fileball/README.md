@@ -1,20 +1,27 @@
 ## 使用说明
-1. 将Loon的代理模式切换到[HTTP Proxy&Tun]；
-2. 添加Synoogy协议，账号随便填，密码填Cookie。
-
-### 获取Cookie的方法
 
 #### 阿里云网盘
-地址填写[aliyun.example.com](aliyun.example.com)
+1. 添加Synoogy协议；
 
-Token获取地址[需要用阿里云盘扫描Alist的二维码获得](https://alist-doc.nn.ci/docs/driver/aliyundrive)
+2. 地址填写[aliyun.example.com](aliyun.example.com)；
+
+3. 账号随便填，密码填写Token。
+
+###### Token的三种获取方式
+- 在浏览器的Web开发者工具里获得
+- 抓包获得
+- 使用阿里云盘App扫描[Alist的二维码](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)获得
 
 #### 夸克网盘
-地址填写[quark.example.com](quark.example.com)
+1. 添加Synoogy协议；
 
-登录[网页版](https://drive.quark.cn/1/clouddrive/file)抓包获得
+2. 地址填写[quark.example.com](quark.example.com)；
+
+3. 密码填写Cookie，登录[网页版](https://drive.quark.cn/1/clouddrive/file)抓包获得。
 
 #### PikPak网盘
-地址填写[pikpak.example.com](pikpak.example.com)
+1. 添加Synoogy协议；
 
-直接填账号密码即可
+2. 地址填写[pikpak.example.com](pikpak.example.com)；
+
+3. 直接填你的PikPak账号密码即可。

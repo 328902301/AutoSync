@@ -1,4 +1,4 @@
-// 2023-02-06 21:55
+// 2023-02-06 22:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -377,8 +377,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/statuses/show")) {
     // 长文章详情页
+    if (obj?.reward_scheme) {
+      delete obj.reward_scheme;
+    }
     if (obj?.reward_info) {
       delete obj.reward_info;
+    }
+    if (obj?.reward_exhibition_type) {
+      delete obj.reward_exhibition_type;
     }
     if (obj.longText.user) {
       removeAvatar(obj.longText.user);
@@ -497,6 +503,9 @@ function removeAvatar(data) {
   }
   if (data.cardid) {
     delete data.cardid;
+  }
+  if (data.avatar_extend_info) {
+    delete avatar_extend_info;
   }
   if (data.icons) {
     delete data.icons;

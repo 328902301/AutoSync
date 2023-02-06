@@ -496,7 +496,6 @@ rules:
   - IP-ASN,48200,DIRECT,no-resolve
   - IP-ASN,271548,DIRECT,no-resolve
   - IP-ASN,59010,DIRECT,no-resolve
-  - IP-ASN,271335,DIRECT,no-resolve
   - IP-ASN,272243,DIRECT,no-resolve
   - IP-ASN,141425,DIRECT,no-resolve
   - IP-ASN,140329,DIRECT,no-resolve

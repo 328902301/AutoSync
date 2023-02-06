@@ -5,7 +5,7 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Fileball.png
 
-#[General]
+[General]
 # 要开MPV的话必须添加
 force-http-engine-hosts = aliyun.example.com:0, quark.example.com:0, pikpak.example.com:0
 

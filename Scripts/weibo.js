@@ -1,4 +1,4 @@
-// 2023-02-06 19:25
+// 2023-02-06 20:05
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -386,7 +386,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 removeAvatar(group.mblog);
                 // 关注按钮
                 if (group.mblog?.buttons) {
-                  group.mblog.buttons = [];
+                  delete group.mblog.buttons;
                 }
                 newGroup.push(group);
               }
@@ -410,7 +410,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
     if (obj.button_configs) {
-      obj.button_configs = [];
+      delete obj.button_configs;
     }
     // 广场页
     if (obj.channelInfo.channel_list) {
@@ -421,7 +421,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/!/live/media_homelist")) {
     // 首页顶部直播
     if (obj.data) {
-      obj.data = [];
+      delete obj.data;
     }
   } else if (url.includes("/v1/ad/realtime")) {
     // 开屏广告
@@ -484,13 +484,13 @@ function removeAvatar(data) {
     return data;
   }
   if (data.cardid) {
-    data.cardid = "";
+    delete data.cardid;
   }
   if (data.icons) {
-    data.icons = [];
+    delete data.icons;
   }
   if (data.avatargj_id) {
-    data.avatargj_id = "";
+    delete data.avatargj_id;
   }
   return data;
 }

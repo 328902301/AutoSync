@@ -247,6 +247,7 @@ rules:
   - IP-ASN,55994,DIRECT,no-resolve
   - IP-ASN,268175,DIRECT,no-resolve
   - IP-ASN,17428,DIRECT,no-resolve
+  - IP-ASN,133847,DIRECT,no-resolve
   - IP-ASN,136197,DIRECT,no-resolve
   - IP-ASN,267294,DIRECT,no-resolve
   - IP-ASN,13778,DIRECT,no-resolve

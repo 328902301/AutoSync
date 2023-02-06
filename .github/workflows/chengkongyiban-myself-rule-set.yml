@@ -1,0 +1,28 @@
+name: chengkongyiban-myself-rule-set-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-repo
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync chengkongyiban-myself-rule-set
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/chengkongyiban/myself-rule-set.git"
+          source_branch: "main"
+          destination_branch: "chengkongyiban-myself-rule-set"
+          github_token: ${{ secrets.PAT }}

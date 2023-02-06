@@ -1,0 +1,28 @@
+name: Neurogram-R-Quantumult-X-sync
+on:
+  schedule:
+    - cron: '45 */24 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-repo
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync Neurogram-R-Quantumult-X
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Neurogram-R/Quantumult-X.git"
+          source_branch: "main"
+          destination_branch: "Neurogram-R-Quantumult-X"
+          github_token: ${{ secrets.PAT }}

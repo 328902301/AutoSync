@@ -487,6 +487,7 @@ rules:
   - IP-ASN,10099,DIRECT,no-resolve
   - IP-ASN,24357,DIRECT,no-resolve
   - IP-ASN,328580,DIRECT,no-resolve
+  - IP-ASN,270319,DIRECT,no-resolve
   - IP-ASN,270771,DIRECT,no-resolve
   - IP-ASN,263614,DIRECT,no-resolve
   - IP-ASN,59073,DIRECT,no-resolve

@@ -1,4 +1,4 @@
-// 2023-02-06 08:42
+// 2023-02-06 16:05
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -222,7 +222,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     } else if (url.includes("finder")) {
       removeSearchMain(obj);
     }
-  } else if (url.includes("/2/statuses/container_timeline")) {
+  } else if (url.includes("/2/statuses/")) {
     // 信息流
     if (obj.loadedInfo?.headers) {
       obj.loadedInfo.headers = {};

@@ -1,4 +1,4 @@
-// 2023-02-06 18:58
+// 2023-02-06 19:10
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -155,6 +155,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.messages = newMsgs;
+    }
+  } else if (url.includes("/2/page")) {
+    if (obj.cards?.length > 0) {
+      if (obj.cards[0].card_group) {
+        obj.cards[0].card_group = obj.cards[0].card_group.filter(
+          (c) =>
+            !(
+              c?.actionlog?.ext?.includes("ads_word") ||
+              c?.itemid?.includes("t:51") ||
+              c?.itemid?.includes("ads_word")
+            )
+        );
+      }
     }
   } else if (url.includes("/2/profile/container_timeline")) {
     // 个人主页信息流

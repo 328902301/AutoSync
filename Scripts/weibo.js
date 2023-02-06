@@ -461,15 +461,6 @@ function isAd(data) {
   if (data.promotion?.type === "ad") {
     return true;
   }
-  if (data.page_info?.actionlog?.source === "ad") {
-    return true;
-  }
-  if (data.content_auth_info?.content_auth_title === "广告") {
-    return true;
-  }
-  if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
-    return true;
-  }
   return false;
 }
 

@@ -386,7 +386,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.reward_exhibition_type) {
       delete obj.reward_exhibition_type;
     }
-    if (obj?.longText.user) {
+    if (obj?.longText?.user) {
       removeAvatar(obj.longText.user);
     }
   } else if (url.includes("/2/cardlist")) {

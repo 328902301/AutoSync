@@ -1,4 +1,4 @@
-// 2023-02-06 17:48
+// 2023-02-06 18:20
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -155,6 +155,26 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.messages = newMsgs;
+    }
+  } else if (url.includes("/2/profile/container_timeline")) {
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (item.category === "card") {
+          if (item.data.right_filter) {
+            newItems.push(item);
+          } else {
+            continue;
+          }
+        } else if (item.category === "feed") {
+          if (!isAd(item.data)) {
+            newItems.push(item);
+          } else {
+            continue;
+          }
+        }
+      }
+      obj.items = newItems;
     }
   } else if (url.includes("/2/profile/me")) {
     // 我的页面

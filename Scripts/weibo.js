@@ -161,6 +161,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.messages = newMsgs;
     }
   } else if (url.includes("/2/page")) {
+    // 搜索页列表
     if (obj.cards?.length > 0) {
       if (obj.cards[0].card_group) {
         obj.cards[0].card_group = obj.cards[0].card_group.filter(
@@ -273,7 +274,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.feed_redpacket.endtime = "2209046399";
     }
   } else if (url.includes("/2/search/")) {
-    // 搜索页
+    // 搜索页信息流
     if (url.includes("container_discover")) {
       removeSearch(obj);
     } else if (url.includes("container_timeline")) {
@@ -304,6 +305,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.items = newItems;
     }
   } else if (url.includes("/2/statuses/container_timeline_topic")) {
+    // 超话信息流
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {

@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-02-06 16:03
+# 2023-02-06 16:28
 
 # 开屏广告
 ^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/weibo.js
@@ -39,8 +39,8 @@
 ^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\? url reject-dict
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
-^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
-^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
-^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
+^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
+^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
+^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
 
 hostname = boot.biz.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, api.weibo.cn, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn

@@ -222,7 +222,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     } else if (url.includes("finder")) {
       removeSearchMain(obj);
     }
-  } else if (url.includes("/2/statuses/")) {
+  } else if (url.includes("/2/statuses/container_timeline")) {
     // 信息流
     if (obj.loadedInfo?.headers) {
       obj.loadedInfo.headers = {};
@@ -240,6 +240,27 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/unread_hot_timeline")) {
+    for (let s of ["ad", "advertises", "trends", "headers"]) {
+      if (obj[s]) {
+        delete obj[s];
+      }
+    }
+    if (obj.statuses) {
+      let newStatuses = [];
+      for (let s of obj.statuses) {
+        if (!isAd(s)) {
+          if (!isBlock(s)) {
+            // 移除拓展信息,绿洲
+            if (s?.common_struct) {
+              delete s.common_struct;
+            }
+            newStatuses.push(s);
+          }
+        }
+      }
+      obj.statuses = newStatuses;
     }
   } else if (url.includes("/2/cardlist")) {
     if (obj.cards) {

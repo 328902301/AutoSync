@@ -78,7 +78,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.show = 0;
     }
   } else if (url.includes("/2/client/publisher_list")) {
-    // 首页发布按钮
+    // 首页右上角按钮
     if (obj.elements) {
       obj.elements = obj.elements.filter(
         (a) =>
@@ -88,7 +88,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       );
     }
   } else if (url.includes("/2/comments/build_comments")) {
-    // 评论区相关和推荐内容
+    // 评论区
     let delType = ["广告"];
     delType.push("相关内容");
     delType.push(...["推荐", "热推"]);
@@ -157,6 +157,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.messages = newMsgs;
     }
   } else if (url.includes("/2/profile/container_timeline")) {
+    // 个人主页信息流
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
@@ -255,6 +256,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.feed_redpacket.endtime = "2209046399";
     }
   } else if (url.includes("/2/search/")) {
+    // 搜索页
     if (url.includes("container_discover")) {
       removeSearch(obj);
       if (obj.loadedInfo) {
@@ -273,7 +275,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       removeSearchMain(obj);
     }
   } else if (url.includes("/2/statuses/container_timeline")) {
-    // 信息流
+    // 首页关注tab信息流
     if (obj.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
     }
@@ -292,6 +294,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.items = newItems;
     }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
+    // 首页推荐tab信息流
     for (let s of ["ad", "advertises", "trends", "headers"]) {
       if (obj[s]) {
         delete obj[s];
@@ -313,7 +316,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.statuses = newStatuses;
     }
   } else if (url.includes("/2/statuses/extend")) {
-    // 判断逻辑暂时根据此图片 https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
+    // 微博详情页
     if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
       delete obj.trend;
     }
@@ -347,6 +350,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.custom_action_list = newActions;
     }
   } else if (url.includes("/2/cardlist")) {
+    // 卡片
     if (obj.cards) {
       let newCards = [];
       for (let card of obj.cards) {
@@ -382,7 +386,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.cards = newCards;
     }
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
-    // 超话左上角、右上角图标
+    // 超话左上角,右上角图标
     if (obj.button_configs) {
       obj.button_configs = [];
     }

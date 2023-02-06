@@ -1,4 +1,4 @@
-// 2023-02-06 19:10
+// 2023-02-06 19:25
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -272,16 +272,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     // 搜索页
     if (url.includes("container_discover")) {
       removeSearch(obj);
-      if (obj.loadedInfo) {
-        // 去除搜索框填充词
-        if (obj.loadedInfo.searchBarContent) {
-          obj.loadedInfo.searchBarContent = [];
-        }
-        // 去除搜索背景图片
-        if (obj.loadedInfo.headerBack?.channelStyleMap) {
-          delete obj.loadedInfo.headerBack.channelStyleMap;
-        }
-      }
     } else if (url.includes("container_timeline")) {
       removeSearch(obj);
     } else if (url.includes("finder")) {
@@ -471,15 +461,6 @@ function isAd(data) {
   if (data.promotion?.type === "ad") {
     return true;
   }
-  if (data.page_info?.actionlog?.source === "ad") {
-    return true;
-  }
-  if (data.content_auth_info?.content_auth_title === "广告") {
-    return true;
-  }
-  if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
-    return true;
-  }
   return false;
 }
 
@@ -534,6 +515,16 @@ function checkSearchWindow(item) {
 
 // 发现页
 function removeSearch(data) {
+  if (data.loadedInfo) {
+    // 去除搜索框填充词
+    if (data.loadedInfo.searchBarContent) {
+      delete data.loadedInfo.searchBarContent;
+    }
+    // 去除搜索背景图片
+    if (data.loadedInfo.headerBack?.channelStyleMap) {
+      delete data.loadedInfo.headerBack.channelStyleMap;
+    }
+  }
   if (!data.items) {
     return data;
   }

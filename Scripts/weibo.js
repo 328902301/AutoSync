@@ -1,4 +1,4 @@
-// 2023-02-06 19:09
+// 2023-02-06 19:10
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -157,9 +157,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.messages = newMsgs;
     }
   } else if (url.includes("/2/page")) {
-    if (data.cards?.length > 0) {
-      if (data.cards[0].card_group) {
-        data.cards[0].card_group = data.cards[0].card_group.filter(
+    if (obj.cards?.length > 0) {
+      if (obj.cards[0].card_group) {
+        obj.cards[0].card_group = obj.cards[0].card_group.filter(
           (c) =>
             !(
               c?.actionlog?.ext?.includes("ads_word") ||

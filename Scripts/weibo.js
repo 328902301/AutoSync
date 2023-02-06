@@ -1,4 +1,4 @@
-// 2023-02-06 18:20
+// 2023-02-06 18:58
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -274,7 +274,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     } else if (url.includes("finder")) {
       removeSearchMain(obj);
     }
-  } else if (url.includes("/2/statuses/container_timeline")) {
+  } else if (
+    url.includes("/2/statuses/container_timeline?") ||
+    url.includes("/2/statuses/container_timeline_unread")
+  ) {
     // 首页关注tab信息流
     if (obj.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
@@ -289,6 +292,22 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 移除所有的推广
             continue;
           }
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/container_timeline_topic")) {
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (item?.items) {
+          delete item.items;
+        }
+        if (item.category === "feed") {
+          newItems.push(item);
+        } else {
+          // 移除所有的推广
+          continue;
         }
       }
       obj.items = newItems;

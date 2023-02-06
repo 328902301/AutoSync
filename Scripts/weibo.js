@@ -377,17 +377,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.custom_action_list = newActions;
     }
-  } else if (url.includes("/2/statuses/show")) {
-    // 长文章详情页
-    if (obj?.reward_scheme) {
-      delete obj.reward_scheme;
-    }
-    if (obj?.reward_info) {
-      delete obj.reward_info;
-    }
-    if (obj?.reward_exhibition_type) {
-      delete obj.reward_exhibition_type;
-    }
   } else if (url.includes("/2/cardlist")) {
     // 卡片
     if (obj.cards) {

@@ -1,4 +1,4 @@
-// 2023-02-06 16:05
+// 2023-02-06 17:44
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -7,6 +7,36 @@ let body = $response.body;
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
 const blockIds = [];
+
+// 微博详情页菜单配置
+const itemMenusConfig = {
+  creatortypeask: false, // 转发任务
+  mblog_menus_apeal: false, // 申诉
+  mblog_menus_avatar_widget: true, // 头像挂件
+  mblog_menus_bullet_shield: true, // 屏蔽弹幕
+  mblog_menus_card_bg: true, // 卡片背景
+  mblog_menus_comment_manager: true, // 评论管理
+  mblog_menus_copy_url: true, // 复制链接
+  mblog_menus_custom: true, // 寄微博
+  mblog_menus_delete: true, // 删除
+  mblog_menus_edit: true, // 编辑
+  mblog_menus_edit_history: true, // 编辑记录
+  mblog_menus_edit_video: true, // 编辑视频
+  mblog_menus_favorite: true, // 收藏
+  mblog_menus_follow: true, // 关注
+  mblog_menus_home: true, // 返回首页
+  mblog_menus_long_picture: true, // 生成长图
+  mblog_menus_modify_visible: true, // 设置分享范围
+  mblog_menus_novelty: false, // 新鲜事投稿
+  mblog_menus_open_reward: false, // 赞赏
+  mblog_menus_popularize: false,
+  mblog_menus_promote: false, // 推广
+  mblog_menus_report: false, // 投诉
+  mblog_menus_shield: false, // 屏蔽
+  mblog_menus_sticking: false, // 置顶
+  mblog_menus_video_feedback: false, // 播放反馈
+  mblog_menus_video_later: false // 可能是稍后再看
+};
 
 if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告
@@ -72,7 +102,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             removeAvatar(item.data.user);
           }
           if (item.data?.comment_bubble) {
-            item.data.comment_bubble = {};
+            delete item.data.comment_bubble;
           }
           let adType = item.adType || "";
           // 移除评论区推广
@@ -97,7 +127,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             removeAvatar(item.user);
           }
           if (item?.comment_bubble) {
-            item.comment_bubble = {};
+            delete item.comment_bubble;
           }
           let adType = item.adType || "";
           // 移除评论区推广
@@ -129,21 +159,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/profile/me")) {
     // 我的页面
     if (obj.vipHeaderBgImage) {
-      obj.vipHeaderBgImage = {};
+      delete obj.vipHeaderBgImage;
     }
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
         let itemId = item.itemId;
         if (itemId === "profileme_mine") {
-          if (item.header.vipView) {
-            item.header.vipView = {};
-          }
-          if (item.header.vipCenter) {
-            item.header.vipCenter = {};
-          }
-          if (item.header.vipIcon) {
-            item.header.vipIcon = {};
+          if (item.header) {
+            delete item.header.vipView;
+            delete item.header.vipCenter;
+            delete item.header.vipIcon;
           }
           for (let d of item.items) {
             if (d.itemId === "mainnums_friends") {
@@ -173,21 +199,21 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "mine") {
           if (itemId === "100505_-_manage") {
             if (item.style) {
-              item.style = {};
+              delete item.style;
             }
             // 移除分隔符的点点点
             if (item.images) {
-              item.images = {};
+              delete item.images;
             }
             newItems.push(item);
           } else if (itemId === "100505_-_manage2") {
             // 移除面板样式
             if (item.footer) {
-              item.footer = {};
+              delete item.footer;
             }
             // 移除框内推广
             if (item.body) {
-              item.body = {};
+              delete item.body;
             }
             newItems.push(item);
           } else {
@@ -217,8 +243,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           obj.loadedInfo.searchBarContent = [];
         }
         // 去除搜索背景图片
-        if (obj.loadedInfo.headerBack) {
-          obj.loadedInfo.headerBack.channelStyleMap = {};
+        if (obj.loadedInfo.headerBack?.channelStyleMap) {
+          delete obj.loadedInfo.headerBack.channelStyleMap;
         }
       }
     } else if (url.includes("container_timeline")) {
@@ -229,7 +255,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/statuses/container_timeline")) {
     // 信息流
     if (obj.loadedInfo?.headers) {
-      obj.loadedInfo.headers = {};
+      delete obj.loadedInfo.headers;
     }
     if (obj.items) {
       let newItems = [];
@@ -265,6 +291,40 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.statuses = newStatuses;
+    }
+  } else if (url.includes("/2/statuses/extend")) {
+    // 判断逻辑暂时根据此图片 https://h5.sinaimg.cn/upload/1007/25/2018/05/03/timeline_icon_ad_delete.png
+    if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
+      delete obj.trend;
+    }
+    // 关注提醒
+    if (obj?.follow_data) {
+      delete obj.follow_data;
+    }
+    // 公益赞赏
+    if (obj?.reward_info) {
+      delete obj.reward_info;
+    }
+    // 移除拓展卡片
+    if (obj?.extend_info) {
+      delete obj.extend_info;
+    }
+    // 移除超话新帖和新用户通知
+    if (obj?.page_alerts) {
+      delete obj.page_alerts;
+    }
+    if (obj.custom_action_list) {
+      let newActions = [];
+      for (let item of obj.custom_action_list) {
+        let type = item.type;
+        let add = itemMenusConfig[type];
+        if (type === "mblog_menus_copy_url") {
+          newActions.unshift(item);
+        } else if (add) {
+          newActions.push(item);
+        }
+      }
+      obj.custom_action_list = newActions;
     }
   } else if (url.includes("/2/cardlist")) {
     if (obj.cards) {
@@ -352,18 +412,18 @@ function isAd(data) {
   if (data.mblogtypename === "热推") {
     return true;
   }
-  // if (data.promotion?.type === "ad") {
-  //   return true;
-  // }
-  // if (data.page_info?.actionlog?.source === "ad") {
-  //   return true;
-  // }
-  // if (data.content_auth_info?.content_auth_title === "广告") {
-  //   return true;
-  // }
-  // if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
-  //   return true;
-  // }
+  if (data.promotion?.type === "ad") {
+    return true;
+  }
+  if (data.page_info?.actionlog?.source === "ad") {
+    return true;
+  }
+  if (data.content_auth_info?.content_auth_title === "广告") {
+    return true;
+  }
+  if (data.common_struct?.[0]?.actionlog?.source?.includes("ad")) {
+    return true;
+  }
   return false;
 }
 

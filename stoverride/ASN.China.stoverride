@@ -373,6 +373,7 @@ rules:
   - IP-ASN,63617,DIRECT,no-resolve
   - IP-ASN,139327,DIRECT,no-resolve
   - IP-ASN,141679,DIRECT,no-resolve
+  - IP-ASN,37063,DIRECT,no-resolve
   - IP-ASN,58850,DIRECT,no-resolve
   - IP-ASN,63722,DIRECT,no-resolve
   - IP-ASN,140276,DIRECT,no-resolve

@@ -1,4 +1,4 @@
-// 2023-02-06 22:22
+// 2023-02-06 23:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -266,6 +266,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.items = newItems;
     }
+  } else if (url.includes("/2/profile/userinfo")) {
+    // 用户主页
+    let items = obj.footer.data.toolbar_menus_new.items;
+    items = items.filter((i) => !i.identifier.includes("reward"));
   } else if (url.includes("/2/push/active")) {
     // 首页右上角红包图标
     if (obj?.feed_redpacket) {
@@ -376,17 +380,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.custom_action_list = newActions;
-    }
-  } else if (url.includes("/2/statuses/show")) {
-    // 长文章详情页
-    if (obj?.reward_scheme) {
-      delete obj.reward_scheme;
-    }
-    if (obj?.reward_info) {
-      delete obj.reward_info;
-    }
-    if (obj?.reward_exhibition_type) {
-      delete obj.reward_exhibition_type;
     }
   } else if (url.includes("/2/cardlist")) {
     // 卡片

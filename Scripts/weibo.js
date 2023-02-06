@@ -1,4 +1,4 @@
-// 2023-02-06 20:05
+// 2023-02-06 21:33
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -97,10 +97,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 移除头像挂件、勋章、评论气泡
-          if (item.data?.user) {
+          // 移除超话社区,头像挂件,勋章,评论气泡
+          if (item.data.user) {
+            if (item.data.user.name === "超话社区") {
+              continue;
+            }
             removeAvatar(item.data.user);
           }
+          // 移除评论气泡
           if (item.data?.comment_bubble) {
             delete item.data.comment_bubble;
           }

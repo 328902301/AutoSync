@@ -1,4 +1,4 @@
-// 2023-02-06 23:00
+// 2023-02-06 22:22
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -266,10 +266,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.items = newItems;
     }
-  } else if (url.includes("/2/profile/userinfo")) {
-    // 用户主页
-    let items = obj.footer.data.toolbar_menus_new.items;
-    items = items.filter((i) => !i.identifier.includes("reward"));
   } else if (url.includes("/2/push/active")) {
     // 首页右上角红包图标
     if (obj?.feed_redpacket) {

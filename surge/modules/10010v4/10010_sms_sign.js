@@ -7,8 +7,20 @@ var navigator=navigator||{};var window=window||{};ASN1={};Hex={};Base64S={};var 
 //#endregion
 
 let NAMESPACE = `xream`
+if (typeof __filename !== 'undefined') {
+  // console.log('尝试解析文件名称')
+  let matchedFilename = String(__filename).match(/\/_(.*)_10010/)
+  // console.log(matchedFilename)
+  if (matchedFilename&&matchedFilename[1]) {
+    NAMESPACE = matchedFilename[1]
+    console.log(`尝试从文件名称中读取 NAMESPACE: ${NAMESPACE}`)
+  }
+}
+console.log(`NAMESPACE: ${NAMESPACE}`)
+let TITLE = `联通余量${NAMESPACE==='xream'?'':`(${NAMESPACE})`}`
+
 const NAME = `10010v4`
-let TITLE = `联通余量`
+
 
 const KEY_DEBUG = `@${NAMESPACE}.${NAME}.debug`
 const KEY_START = `@${NAMESPACE}.${NAME}.start`

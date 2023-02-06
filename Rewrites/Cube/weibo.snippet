@@ -1,12 +1,5 @@
 # ======= 微博 ======= #
-# 2023-02-06 19:08
-
-# 开屏广告
-^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php\? url reject
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+# 2023-02-06 21:55
 
 # 信息流广告,各种推广模块
 ^https:\/\/api\.weibo\.cn\/2\/cardlist\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
@@ -23,6 +16,7 @@
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread)?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/extend\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/show\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 
@@ -41,9 +35,19 @@
 # 信息流视频号
 ^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\? url reject-dict
 
+# 开屏广告
+^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php\? url reject
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+
+# 微博长文章底部推广
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/uvead\? url reject-dict
+
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
 ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 ^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 
-hostname = boot.biz.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, api.weibo.cn, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+hostname = api.weibo.cn, boot.biz.weibo.com, card.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn

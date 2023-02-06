@@ -1,4 +1,4 @@
-// 2023-02-06 21:33
+// 2023-02-06 21:55
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -374,6 +374,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.custom_action_list = newActions;
+    }
+  } else if (url.includes("/2/statuses/show")) {
+    // 长文章详情页
+    if (obj?.reward_info) {
+      delete obj.reward_info;
+    }
+    if (obj.longText.user) {
+      removeAvatar(obj.longText.user);
     }
   } else if (url.includes("/2/cardlist")) {
     // 卡片

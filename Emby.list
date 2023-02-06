@@ -22,3 +22,9 @@ DOMAIN,blueseamusics.com
 DOMAIN,xiaoya.pro
 DOMAIN,epicgames.com
 
+HOST-SUFFIX,live.cn
+HOST-SUFFIX,live.com
+HOST-SUFFIX,live.com.au
+HOST-SUFFIX,live.eu
+HOST-SUFFIX,live.net
+

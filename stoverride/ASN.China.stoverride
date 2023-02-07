@@ -189,6 +189,7 @@ rules:
   - IP-ASN,9810,DIRECT,no-resolve
   - IP-ASN,139203,DIRECT,no-resolve
   - IP-ASN,136191,DIRECT,no-resolve
+  - IP-ASN,23771,DIRECT,no-resolve
   - IP-ASN,270415,DIRECT,no-resolve
   - IP-ASN,52593,DIRECT,no-resolve
   - IP-ASN,131506,DIRECT,no-resolve

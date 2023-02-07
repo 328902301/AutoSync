@@ -161,7 +161,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.messages = newMsgs;
     }
   } else if (url.includes("/2/page")) {
-    // 搜索页列表
+    // 搜索页列表,超话
     if (obj.cards?.length > 0) {
       if (obj.cards[0].card_group) {
         obj.cards[0].card_group = obj.cards[0].card_group.filter(
@@ -171,6 +171,21 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               c?.itemid?.includes("t:51") ||
               c?.itemid?.includes("ads_word")
             )
+        );
+      } else if (obj.cards) {
+        obj.cards = obj.cards.filter(
+          (i) =>
+            !(
+              i.itemid.includes("infeed_pagemanual3") || // 手动区域3
+              i.itemid.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
+              i.itemid.includes("infeed_weibo_mall") || // 微博小店
+              i.itemid.includes("feed_-_invite") || // 超话里的好友
+              i.mblog.mblogtypename === "广告"
+            )
+        );
+      } else if (obj.card_group) {
+        obj.card_group = obj.card_group.filter(
+          (i) => !(i?.desc === "你可能感兴趣的超话")
         );
       }
     }

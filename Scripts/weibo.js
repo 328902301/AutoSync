@@ -1,4 +1,4 @@
-// 2023-02-07 17:38
+// 2023-02-07 17:40
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -284,8 +284,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               newItems.push(item);
             }
           } else if (item.category === "card") {
-            // 保留顶部热搜卡片,热门微博字样
-            if (item.data.card_type === 17 || item.data.card_type === 101) {
+            // 保留顶部热搜卡片
+            if (item.data.card_type === 17) {
               newItems.push(item);
             } else {
               continue;

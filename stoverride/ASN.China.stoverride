@@ -463,6 +463,7 @@ rules:
   - IP-ASN,131279,DIRECT,no-resolve
   - IP-ASN,268202,DIRECT,no-resolve
   - IP-ASN,137759,DIRECT,no-resolve
+  - IP-ASN,52898,DIRECT,no-resolve
   - IP-ASN,148981,DIRECT,no-resolve
   - IP-ASN,131512,DIRECT,no-resolve
   - IP-ASN,59012,DIRECT,no-resolve

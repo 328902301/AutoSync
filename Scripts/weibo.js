@@ -317,9 +317,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (!isAd(item.data)) {
                     newItems.push(item);
                   }
-                } else if (item.category === "group") {
-                  // 搜索页中间的热议话题、热门人物
-                  continue;
                 } else {
                   if (!checkSearchWindow(item)) {
                     newItems.push(item);
@@ -544,6 +541,9 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
+  if (item.category === "group") {
+    return true;
+  }
   if (item.category !== "card") {
     return false;
   }

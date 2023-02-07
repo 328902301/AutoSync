@@ -180,7 +180,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               i.itemid.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
               i.itemid.includes("infeed_weibo_mall") || // 微博小店
               i.itemid.includes("feed_-_invite") || // 超话里的好友
-              i?.mblog.mblogtypename === "广告"
+              i?.mblog?.mblogtypename === "广告"
             )
         );
       } else if (obj.card_group) {

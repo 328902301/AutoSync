@@ -377,45 +377,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.custom_action_list = newActions;
     }
-  } else if (url.includes("/2/cardlist")) {
-    // 搜索页卡片
-    if (obj.cards) {
-      let newCards = [];
-      for (let card of obj.cards) {
-        let cardGroup = card.card_group;
-        if (cardGroup?.length > 0) {
-          let newGroup = [];
-          for (let group of cardGroup) {
-            let cardType = group.card_type;
-            if (cardType !== 118) {
-              if (!isAd(group.mblog)) {
-                removeAvatar(group.mblog);
-                // 关注按钮
-                if (group.mblog?.buttons) {
-                  delete group.mblog.buttons;
-                }
-                newGroup.push(group);
-              }
-            }
-          }
-          card.card_group = newGroup;
-          newCards.push(card);
-        } else {
-          if (card?.group) {
-            continue;
-          }
-          let cardType = card.card_type;
-          if ([9, 165].indexOf(cardType) !== -1) {
-            if (!isAd(card.mblog)) {
-              newCards.push(card);
-            }
-          } else {
-            continue;
-          }
-        }
-      }
-      obj.cards = newCards;
-    }
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
     if (obj.button_configs) {

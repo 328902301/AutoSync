@@ -284,7 +284,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               newItems.push(item);
             }
           } else {
-            continue;
+            if (!checkSearchWindow(item)) {
+              newItems.push(item);
+            }
           }
           obj.items = newItems;
         }

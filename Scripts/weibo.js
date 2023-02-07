@@ -1,4 +1,4 @@
-// 2023-02-07 17:56
+// 2023-02-07 18:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -542,6 +542,7 @@ function removeAvatar(data) {
 
 function checkSearchWindow(item) {
   if (item.category) {
+    // 搜索页中间的热议话题、热门人物
     if (item.category === "group") {
       return true;
     } else {

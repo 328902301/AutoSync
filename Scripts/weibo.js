@@ -1,4 +1,4 @@
-// 2023-02-06 22:22
+// 2023-02-07 08:23
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -424,14 +424,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         (t) => t.title !== "广场"
       );
     }
-  } else if (url.includes("/2/!/live/media_homelist")) {
-    // 首页顶部直播
-    if (obj.data) {
-      delete obj.data;
-    }
   } else if (url.includes("/v1/ad/realtime")) {
     // 开屏广告
-    if (obj.ads) {
+    if (obj?.ads) {
       for (let item of obj.ads) {
         item.daily_display_cnt = 50; // "total_display_cnt" : 50,
         item.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59

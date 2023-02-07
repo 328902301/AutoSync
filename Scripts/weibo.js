@@ -544,10 +544,6 @@ function checkSearchWindow(item) {
   if (item.category !== "card") {
     return false;
   }
-  // 搜索页中间的热议话题、热门人物
-  if (item.category === "group") {
-    return true;
-  }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地
     item.data?.card_type === 118 || // finder_window 横版大图

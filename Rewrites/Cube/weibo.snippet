@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-02-07 08:28
+# 2023-02-07 08:48
 
 # 信息流广告,各种推广模块
 ^https:\/\/api\.weibo\.cn\/2\/cardlist\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/weibo.js
@@ -45,6 +45,7 @@
 ^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/weibo.js
 
 # 微博长文章推广
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/reward\? url reject-dict
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/uvead\? url reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/reward\? url reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/uvead\? url reject-dict

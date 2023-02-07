@@ -1,4 +1,4 @@
-// 2023-02-07 09:32
+// 2023-02-07 11:40
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -464,8 +464,8 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
-  if (item.category !== "card") {
-    return false;
+  if (item.category === "card") {
+    return true;
   }
   if (
     item.data?.card_type === 19 ||

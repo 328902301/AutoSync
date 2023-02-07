@@ -296,24 +296,29 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (obj.channelInfo?.channelConfig) {
         delete obj.channelInfo.channelConfig;
       }
-      if (obj.channelInfo.channels) {
-        for (let channel of obj.channelInfo.channels) {
-          if (channel.payload.items) {
-            let newItems = [];
-            for (let item of channel.payload.items) {
-              if (!checkSearchWindow(item)) {
-                newItems.push(item);
+      let channels = obj.channelInfo.channels;
+      if (channels) {
+        for (let channel of channels) {
+          let payload = channel.payload;
+          if (payload) {
+            let items = payload.items;
+            if (items) {
+              let newItems = [];
+              for (let item of items) {
+                if (!checkSearchWindow(item)) {
+                  newItems.push(item);
+                }
               }
             }
           }
-          // 去除搜索框填充词
-          if (channel.payload.loadedInfo.searchBarContent) {
-            delete channel.payload.loadedInfo.searchBarContent;
-          }
-          // 去除搜索背景图片
-          if (channel.payload.loadedInfo.headerBack.channelStyleMap) {
-            delete channel.payload.loadedInfo.headerBack.channelStyleMap;
-          }
+        }
+        // 去除搜索框填充词
+        if (channels.payload.loadedInfo.searchBarContent) {
+          delete channels.payload.loadedInfo.searchBarContent;
+        }
+        // 去除搜索背景图片
+        if (channels.payload.loadedInfo.headerBack.channelStyleMap) {
+          delete channels.payload.loadedInfo.headerBack.channelStyleMap;
         }
       }
     }
@@ -537,43 +542,4 @@ function checkSearchWindow(item) {
     return true;
   }
   return false;
-}
-
-// 发现页
-function removeSearch(data) {
-  if (!data.items) {
-    return data;
-  }
-  let newItems = [];
-  for (let item of data.items) {
-    if (item.category === "feed") {
-      if (!isAd(item.data)) {
-        newItems.push(item);
-      }
-    } else {
-      if (!checkSearchWindow(item)) {
-        // 搜索页中间的热议话题、热门人物
-        if (item.category === "group") {
-          continue;
-        }
-        newItems.push(item);
-      }
-    }
-  }
-  data.items = newItems;
-  return data;
-}
-
-function removeSearchMain(data) {
-  if (!channels) {
-    return data;
-  }
-  for (let channel of channels) {
-    let payload = channel.payload;
-    if (!payload) {
-      continue;
-    }
-    removeSearch(payload);
-  }
-  return data;
 }

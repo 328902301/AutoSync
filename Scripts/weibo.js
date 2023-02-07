@@ -1,4 +1,4 @@
-// 2023-02-07 11:40
+// 2023-02-07 14:46
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -275,52 +275,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/search/")) {
     // 搜索页信息流
-    // if (url.includes("container_discover")) {
-
-    // } else
-    if (url.includes("container_timeline")) {
-      if (obj.items) {
-        let newItems = [];
-        for (let item of obj.items) {
-          if (item.category === "feed") {
-            if (!isAd(item.data)) {
-              newItems.push(item);
-            }
-          } else {
-            newItems.push(item);
-          }
-        }
-        obj.items = newItems;
-      }
+    if (url.includes("container_discover")) {
+      removeSearch(obj);
+    } else if (url.includes("container_timeline")) {
+      removeSearch(obj);
     } else if (url.includes("finder")) {
-      if (obj.channelInfo?.channelConfig) {
-        delete obj.channelInfo.channelConfig;
-      }
-      let channels = obj.channelInfo.channels;
-      if (channels) {
-        for (let channel of channels) {
-          let payload = channel.payload;
-          if (payload) {
-            let newItems = [];
-            for (let item of payload.items) {
-              if (!checkSearchWindow(item)) {
-                if (!isAd(item)) {
-                  newItems.push(item);
-                }
-              }
-            }
-            payload.items = newItems;
-          }
-        }
-        // 去除搜索框填充词
-        if (channels.payload?.loadedInfo?.searchBarContent) {
-          delete channels.payload.loadedInfo.searchBarContent;
-        }
-        // 去除搜索背景图片
-        if (channels.payload?.loadedInfo?.headerBack?.channelStyleMap) {
-          delete channels.payload.loadedInfo.headerBack.channelStyleMap;
-        }
-      }
+      removeSearchMain(obj);
     }
   } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
     if (obj.cards) {
@@ -484,30 +444,28 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 
 // 判断信息流是不是广告、热推
 function isAd(data) {
-  if (!data) {
-    return false;
-  }
-  if (data.mblogtypename === "广告") {
-    return true;
-  }
-  if (data.mblogtypename === "热推") {
-    return true;
-  }
-  if (data.promotion?.type === "ad") {
-    return true;
+  if (data) {
+    if (data.mblogtypename === "广告") {
+      return true;
+    }
+    if (data.mblogtypename === "热推") {
+      return true;
+    }
+    if (data.promotion?.type === "ad") {
+      return true;
+    }
   }
   return false;
 }
 
 // 屏蔽用户id
 function isBlock(data) {
-  if (blockIds.length === 0) {
-    return false;
-  }
-  let uid = data.user.id;
-  for (let blockId of blockIds) {
-    if (blockId == uid) {
-      return true;
+  if (blockIds?.length > 0) {
+    let uid = data.user.id;
+    for (let blockId of blockIds) {
+      if (blockId == uid) {
+        return true;
+      }
     }
   }
   return false;
@@ -515,38 +473,81 @@ function isBlock(data) {
 
 // 移除头像挂件、勋章
 function removeAvatar(data) {
-  if (!data) {
-    return data;
-  }
-  if (data.cardid) {
-    delete data.cardid;
-  }
-  if (data.avatar_extend_info) {
-    delete avatar_extend_info;
-  }
-  if (data.icons) {
-    delete data.icons;
-  }
-  if (data.avatargj_id) {
-    delete data.avatargj_id;
+  if (data) {
+    if (data.cardid) {
+      delete data.cardid;
+    }
+    if (data.avatar_extend_info) {
+      delete avatar_extend_info;
+    }
+    if (data.icons) {
+      delete data.icons;
+    }
+    if (data.avatargj_id) {
+      delete data.avatargj_id;
+    }
   }
   return data;
 }
 
 function checkSearchWindow(item) {
-  if (item.category !== "card") {
-    return false;
-  }
   if (
-    item.data?.card_type === 19 ||
-    item.data?.card_type === 208 ||
+    item.data?.card_type === 19 || // 找人 热议 本地
+    item.data?.card_type === 118 || // finder_window 横版大图
+    item.data?.card_type === 208 || // 实况热聊
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
-    item.data?.itemid === "finder_window" ||
     item.data?.itemid === "more_frame" ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
     return true;
   }
   return false;
+}
+
+// 发现页
+function removeSearch(data) {
+  if (data.items) {
+    let newItems = [];
+    for (let item of data.items) {
+      if (item.category === "feed") {
+        if (!isAd(item.data)) {
+          newItems.push(item);
+        }
+      } else {
+        if (!checkSearchWindow(item)) {
+          // 搜索页中间的热议话题、热门人物
+          if (item.category === "group") {
+            continue;
+          }
+          newItems.push(item);
+        }
+      }
+    }
+    data.items = newItems;
+  }
+  return data;
+}
+
+function removeSearchMain(data) {
+  let channels = data.channelInfo.channels;
+  if (channels) {
+    for (let channel of channels) {
+      let payload = channel.payload;
+      if (payload) {
+        if (payload.loadedInfo) {
+          // 去除搜索框填充词
+          if (payload.loadedInfo.searchBarContent) {
+            delete payload.loadedInfo.searchBarContent;
+          }
+          // 去除搜索背景图片
+          if (payload.loadedInfo.headerBack?.channelStyleMap) {
+            delete payload.loadedInfo.headerBack.channelStyleMap;
+          }
+        }
+        removeSearch(payload);
+      }
+    }
+  }
+  return data;
 }

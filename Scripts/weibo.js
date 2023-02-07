@@ -1,4 +1,4 @@
-// 2023-02-07 17:44
+// 2023-02-07 17:48
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -348,7 +348,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newCards.push(card);
         } else {
           let cardType = card.card_type;
-          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
+          // 9 广告
+          // 58 猜你想搜偏好设置
+          // 165 广告
+          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
             continue;
           } else {
             if (!isAd(card.mblog)) {
@@ -489,7 +492,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   $done({ body });
 }
 
-// 判断信息流是不是广告、热推
+// 判断信息流
 function isAd(data) {
   if (data) {
     if (data.mblogtypename === "广告") {
@@ -518,7 +521,7 @@ function isBlock(data) {
   return false;
 }
 
-// 移除头像挂件、勋章
+// 移除头像挂件,勋章
 function removeAvatar(data) {
   if (data) {
     if (data.cardid) {
@@ -538,12 +541,12 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
+  if (item.category !== "card") {
+    return false;
+  }
   // 搜索页中间的热议话题、热门人物
   if (item.category === "group") {
     return true;
-  }
-  if (item.category !== "card") {
-    return false;
   }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地

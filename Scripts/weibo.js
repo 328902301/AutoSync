@@ -1,4 +1,4 @@
-// 2023-02-07 19:58
+// 2023-02-08 07:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -443,6 +443,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     // 微博详情页
     if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
       delete obj.trend;
+    }
+    if (obj.trend?.titles) {
+      let title = data.trend.titles.title;
+      if (["博主好物种草", "相关推荐"].indexOf(title) !== -1) {
+        delete obj.trend;
+      }
     }
     // 关注提醒
     if (obj?.follow_data) {

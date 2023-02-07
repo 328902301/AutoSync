@@ -6,7 +6,7 @@
 
 * [哪吒监控原仓库](https://github.com/naiba/nezha)
 * [我修改的主题，自定义代码style放到对应地方](https://github.com/Keywos/rule/raw/main/conf/key.css)
-* 按月流量统计，避免vps重启后流量监控丢失
+* 按月流量统计，避免vps重启后过去的监控流量数据丢失
 ### 预览图
 ![](tv/nzpc.png)
 ![](tv/nzpc2.png)
@@ -26,8 +26,7 @@
 ```
 
 * 按月流量统计复制以下代码
-* 进入后台
-* 管理员->报警->添加报警规则
+* 进入后台管理员->报警->添加报警规则
 ```
 [{"type":"transfer_all_cycle","max":1099511627776,"cycle_start":"2023-02-05T21:00:00+08:00","cycle_interval":1,"cycle_unit":"month","cover":1,"ignore":{"1":true}}]
 ```

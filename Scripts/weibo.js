@@ -273,6 +273,66 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.feed_redpacket.interval = "31536000";
       obj.feed_redpacket.endtime = "2209046399";
     }
+  } else if (url.includes("/2/search/")) {
+    // 搜索页信息流
+    if (url.includes("container_discover")) {
+      if (data.loadedInfo) {
+        // 去除搜索框填充词
+        if (data.loadedInfo.searchBarContent) {
+          delete data.loadedInfo.searchBarContent;
+        }
+        // 去除搜索背景图片
+        if (data.loadedInfo.headerBack?.channelStyleMap) {
+          delete data.loadedInfo.headerBack.channelStyleMap;
+        }
+      }
+    } else if (url.includes("container_timeline")) {
+      if (obj.items) {
+        let newItems = [];
+        for (let item of obj.items) {
+          if (item.category === "feed") {
+            if (!isAd(item.data)) {
+              newItems.push(item);
+            }
+          } else {
+            continue;
+          }
+        }
+        obj.items = newItems;
+      }
+    } else if (url.includes("finder")) {
+      removeSearchMain(obj);
+    }
+  } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (const card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (const group of cardGroup) {
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          let cardType = card.card_type;
+          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
+            continue;
+          } else {
+            if (!isAd(card.mblog)) {
+              newCards.push(card);
+            }
+          }
+        }
+      }
+      obj.cards = newCards;
+    }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
     url.includes("/2/statuses/container_timeline_unread")
@@ -471,16 +531,6 @@ function checkSearchWindow(item) {
 
 // 发现页
 function removeSearch(data) {
-  if (data.loadedInfo) {
-    // 去除搜索框填充词
-    if (data.loadedInfo.searchBarContent) {
-      delete data.loadedInfo.searchBarContent;
-    }
-    // 去除搜索背景图片
-    if (data.loadedInfo.headerBack?.channelStyleMap) {
-      delete data.loadedInfo.headerBack.channelStyleMap;
-    }
-  }
   if (!data.items) {
     return data;
   }

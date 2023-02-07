@@ -1,4 +1,4 @@
-// 2023-02-07 08:23
+// 2023-02-07 09:13
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -378,7 +378,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.custom_action_list = newActions;
     }
   } else if (url.includes("/2/cardlist")) {
-    // 卡片
+    // 搜索页卡片
     if (obj.cards) {
       let newCards = [];
       for (let card of obj.cards) {
@@ -402,7 +402,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newCards.push(card);
         } else {
           let cardType = card.card_type;
-          if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
             if (!isAd(card.mblog)) {
               newCards.push(card);
             }

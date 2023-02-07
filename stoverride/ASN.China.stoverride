@@ -287,6 +287,7 @@ rules:
   - IP-ASN,59067,DIRECT,no-resolve
   - IP-ASN,58862,DIRECT,no-resolve
   - IP-ASN,23842,DIRECT,no-resolve
+  - IP-ASN,40065,DIRECT,no-resolve
   - IP-ASN,9392,DIRECT,no-resolve
   - IP-ASN,140278,DIRECT,no-resolve
   - IP-ASN,38346,DIRECT,no-resolve

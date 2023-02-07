@@ -283,10 +283,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (!isAd(item.data)) {
               newItems.push(item);
             }
-          } else {
-            if (!checkSearchWindow(item)) {
+          } else if (item.category === "card") {
+            if (item.data.card_type === 17 || item.data.card_type === 101) {
               newItems.push(item);
+            } else {
+              continue;
             }
+          } else {
+            continue;
           }
           obj.items = newItems;
         }
@@ -543,9 +547,6 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
-  if (item.category === "card") {
-    return true;
-  }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地
     item.data?.card_type === 118 || // finder_window 横版大图

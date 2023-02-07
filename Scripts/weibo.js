@@ -1,4 +1,4 @@
-// 2023-02-07 09:13
+// 2023-02-07 14:46
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -282,6 +282,36 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     } else if (url.includes("finder")) {
       removeSearchMain(obj);
     }
+  } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (const card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (const group of cardGroup) {
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          let cardType = card.card_type;
+          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
+            continue;
+          } else {
+            if (!isAd(card.mblog)) {
+              newCards.push(card);
+            }
+          }
+        }
+      }
+      obj.cards = newCards;
+    }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
     url.includes("/2/statuses/container_timeline_unread")
@@ -377,42 +407,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.custom_action_list = newActions;
     }
-  } else if (url.includes("/2/cardlist")) {
-    // 搜索页卡片
-    if (obj.cards) {
-      let newCards = [];
-      for (let card of obj.cards) {
-        let cardGroup = card.card_group;
-        if (cardGroup?.length > 0) {
-          let newGroup = [];
-          for (let group of cardGroup) {
-            let cardType = group.card_type;
-            if (cardType !== 118) {
-              if (!isAd(group.mblog)) {
-                removeAvatar(group.mblog);
-                // 关注按钮
-                if (group.mblog?.buttons) {
-                  delete group.mblog.buttons;
-                }
-                newGroup.push(group);
-              }
-            }
-          }
-          card.card_group = newGroup;
-          newCards.push(card);
-        } else {
-          let cardType = card.card_type;
-          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
-            if (!isAd(card.mblog)) {
-              newCards.push(card);
-            }
-          } else {
-            newCards.push(card);
-          }
-        }
-      }
-      obj.cards = newCards;
-    }
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
     if (obj.button_configs) {
@@ -450,30 +444,28 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 
 // 判断信息流是不是广告、热推
 function isAd(data) {
-  if (!data) {
-    return false;
-  }
-  if (data.mblogtypename === "广告") {
-    return true;
-  }
-  if (data.mblogtypename === "热推") {
-    return true;
-  }
-  if (data.promotion?.type === "ad") {
-    return true;
+  if (data) {
+    if (data.mblogtypename === "广告") {
+      return true;
+    }
+    if (data.mblogtypename === "热推") {
+      return true;
+    }
+    if (data.promotion?.type === "ad") {
+      return true;
+    }
   }
   return false;
 }
 
 // 屏蔽用户id
 function isBlock(data) {
-  if (blockIds.length === 0) {
-    return false;
-  }
-  let uid = data.user.id;
-  for (let blockId of blockIds) {
-    if (blockId == uid) {
-      return true;
+  if (blockIds?.length > 0) {
+    let uid = data.user.id;
+    for (let blockId of blockIds) {
+      if (blockId == uid) {
+        return true;
+      }
     }
   }
   return false;
@@ -481,34 +473,30 @@ function isBlock(data) {
 
 // 移除头像挂件、勋章
 function removeAvatar(data) {
-  if (!data) {
-    return data;
-  }
-  if (data.cardid) {
-    delete data.cardid;
-  }
-  if (data.avatar_extend_info) {
-    delete avatar_extend_info;
-  }
-  if (data.icons) {
-    delete data.icons;
-  }
-  if (data.avatargj_id) {
-    delete data.avatargj_id;
+  if (data) {
+    if (data.cardid) {
+      delete data.cardid;
+    }
+    if (data.avatar_extend_info) {
+      delete avatar_extend_info;
+    }
+    if (data.icons) {
+      delete data.icons;
+    }
+    if (data.avatargj_id) {
+      delete data.avatargj_id;
+    }
   }
   return data;
 }
 
 function checkSearchWindow(item) {
-  if (item.category !== "card") {
-    return false;
-  }
   if (
-    item.data?.card_type === 19 ||
-    item.data?.card_type === 208 ||
+    item.data?.card_type === 19 || // 找人 热议 本地
+    item.data?.card_type === 118 || // finder_window 横版大图
+    item.data?.card_type === 208 || // 实况热聊
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
-    item.data?.itemid === "finder_window" ||
     item.data?.itemid === "more_frame" ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
@@ -519,50 +507,47 @@ function checkSearchWindow(item) {
 
 // 发现页
 function removeSearch(data) {
-  if (data.loadedInfo) {
-    // 去除搜索框填充词
-    if (data.loadedInfo.searchBarContent) {
-      delete data.loadedInfo.searchBarContent;
-    }
-    // 去除搜索背景图片
-    if (data.loadedInfo.headerBack?.channelStyleMap) {
-      delete data.loadedInfo.headerBack.channelStyleMap;
-    }
-  }
-  if (!data.items) {
-    return data;
-  }
-  let newItems = [];
-  for (let item of data.items) {
-    if (item.category === "feed") {
-      if (!isAd(item.data)) {
-        newItems.push(item);
-      }
-    } else {
-      if (!checkSearchWindow(item)) {
-        // 搜索页中间的热议话题、热门人物
-        if (item.category === "group") {
-          continue;
+  if (data.items) {
+    let newItems = [];
+    for (let item of data.items) {
+      if (item.category === "feed") {
+        if (!isAd(item.data)) {
+          newItems.push(item);
         }
-        newItems.push(item);
+      } else {
+        if (!checkSearchWindow(item)) {
+          // 搜索页中间的热议话题、热门人物
+          if (item.category === "group") {
+            continue;
+          }
+          newItems.push(item);
+        }
       }
     }
+    data.items = newItems;
   }
-  data.items = newItems;
   return data;
 }
 
 function removeSearchMain(data) {
   let channels = data.channelInfo.channels;
-  if (!channels) {
-    return data;
-  }
-  for (let channel of channels) {
-    let payload = channel.payload;
-    if (!payload) {
-      continue;
+  if (channels) {
+    for (let channel of channels) {
+      let payload = channel.payload;
+      if (payload) {
+        if (payload.loadedInfo) {
+          // 去除搜索框填充词
+          if (payload.loadedInfo.searchBarContent) {
+            delete payload.loadedInfo.searchBarContent;
+          }
+          // 去除搜索背景图片
+          if (payload.loadedInfo.headerBack?.channelStyleMap) {
+            delete payload.loadedInfo.headerBack.channelStyleMap;
+          }
+        }
+        removeSearch(payload);
+      }
     }
-    removeSearch(payload);
   }
   return data;
 }

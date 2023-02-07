@@ -1,4 +1,4 @@
-// 2023-02-07 17:48
+// 2023-02-07 17:52
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -317,6 +317,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (!isAd(item.data)) {
                     newItems.push(item);
                   }
+                } else if (item.category === "group") {
+                  // 搜索页中间的热议话题、热门人物
+                  continue;
                 } else {
                   if (!checkSearchWindow(item)) {
                     newItems.push(item);

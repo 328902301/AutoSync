@@ -1,4 +1,4 @@
-// 2023-02-07 17:40
+// 2023-02-07 17:44
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -283,15 +283,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (!isAd(item.data)) {
               newItems.push(item);
             }
-          } else if (item.category === "card") {
-            // 保留顶部热搜卡片
-            if (item.data.card_type === 17) {
-              newItems.push(item);
-            } else {
-              continue;
-            }
           } else {
-            continue;
+            if (!checkSearchWindow(item)) {
+              newItems.push(item);
+            }
           }
           obj.items = newItems;
         }
@@ -546,6 +541,9 @@ function checkSearchWindow(item) {
   // 搜索页中间的热议话题、热门人物
   if (item.category === "group") {
     return true;
+  }
+  if (item.category !== "card") {
+    return false;
   }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地

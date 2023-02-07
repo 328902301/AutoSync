@@ -22,7 +22,7 @@
 "cycle_interval":1, 每隔多少个周期单位
 "cycle_unit":"month", 统计周期单位，默认hour,可选(hour, day, week, month, year)
 "cover":1, 0 监控所有，通过 ignore 忽略特定服务器，1 忽略所有，通过 ignore 监控特定服务器
-"ignore":{"1":true}}] 监控对机器id
+"ignore":{"1":true}}] 监控对应机器id
 ```
 
 按月流量统计复制以下代码

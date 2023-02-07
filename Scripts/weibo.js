@@ -301,15 +301,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         for (let channel of channels) {
           let payload = channel.payload;
           if (payload) {
-            let items = payload.items;
-            if (items) {
-              let newItems = [];
-              for (let item of items) {
-                if (!checkSearchWindow(item)) {
-                  newItems.push(item);
-                }
+            let newItems = [];
+            for (let item of payload.items) {
+              if (!checkSearchWindow(item)) {
+                newItems.push(item);
               }
             }
+            payload.items = newItems;
           }
         }
         // 去除搜索框填充词

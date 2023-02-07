@@ -313,11 +313,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         }
         // 去除搜索框填充词
-        if (channels.payload.loadedInfo.searchBarContent) {
+        if (channels.payload?.loadedInfo?.searchBarContent) {
           delete channels.payload.loadedInfo.searchBarContent;
         }
         // 去除搜索背景图片
-        if (channels.payload.loadedInfo.headerBack.channelStyleMap) {
+        if (channels.payload?.loadedInfo?.headerBack?.channelStyleMap) {
           delete channels.payload.loadedInfo.headerBack.channelStyleMap;
         }
       }

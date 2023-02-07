@@ -31,7 +31,7 @@
    https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/Aweme.sgmodule
 * TikTok解锁
    ``` bash
-   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok-JP.sgmodule
+   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/TikTok.sgmodule
 * YouTube去广告
    ``` bash
   https://raw.githubusercontent.com/iEwha/Profiles/master/Surge/YouTubeAds.sgmodule

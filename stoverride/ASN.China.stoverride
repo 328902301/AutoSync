@@ -446,6 +446,7 @@ rules:
   - IP-ASN,146845,DIRECT,no-resolve
   - IP-ASN,58854,DIRECT,no-resolve
   - IP-ASN,271604,DIRECT,no-resolve
+  - IP-ASN,266016,DIRECT,no-resolve
   - IP-ASN,140720,DIRECT,no-resolve
   - IP-ASN,270875,DIRECT,no-resolve
   - IP-ASN,139183,DIRECT,no-resolve

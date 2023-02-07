@@ -1,5 +1,5 @@
 # ======= 网易云音乐 ======= #
-# 2023-02-04 10:15
+# 2023-02-07 22:35
 
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
@@ -15,9 +15,10 @@
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/rcmd\/keyword\/get\/v2$ url reject-dict
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/specialkeyword\/get\? url reject-dict
 
-# 播放页,多余图标,高品质音乐试用弹窗
+# 播放页,多余图标,各种小提示,高品质音乐试用弹窗
 ^https:\/\/interface3\.music\.163\.com\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/resource\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/strategy\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/user\/sub\/artist\/exist\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/vipcenter\/tspopup\/get\? url reject-dict

@@ -37,7 +37,8 @@ function operator(proxies = []) {
         if (_.get(p, 'tls')) {
           /* skip-cert-verify 在这里设为 true 有需求就再加一个节点操作吧 */
           _.set(p, 'skip-cert-verify', true)
-          _.set(p, 'tls-hostname', host)
+          // 这个应该没用了
+          // _.set(p, 'tls-hostname', host)
           _.set(p, 'sni', host)
         }
 

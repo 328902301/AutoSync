@@ -1,22 +1,22 @@
 function operator(proxies = []) {
-  const _ = lodash
-
-  const host = _.get($arguments, 'host')
-  const hostPrefix = _.get($arguments, 'hostPrefix')
-  const hostSuffix = _.get($arguments, 'hostSuffix')
-  const port = _.get($arguments, 'port')
-  const portPrefix = _.get($arguments, 'portPrefix')
-  const portSuffix = _.get($arguments, 'portSuffix')
-  const defaultPath = _.get($arguments, 'defaultPath') || '/'
-  let path = _.get($arguments, 'path')
-  const pathPrefix = _.get($arguments, 'pathPrefix')
-  const pathSuffix = _.get($arguments, 'pathSuffix')
-  const defaultMethod = _.get($arguments, 'defaultMethod') || 'GET'
-  let method = _.get($arguments, 'method')
-  const array = _.get($arguments, 'array')
-  const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
-
   return proxies.map((p = {}) => {
+    const _ = lodash
+
+    const host = _.get($arguments, 'host')
+    const hostPrefix = _.get($arguments, 'hostPrefix')
+    const hostSuffix = _.get($arguments, 'hostSuffix')
+    const port = _.get($arguments, 'port')
+    const portPrefix = _.get($arguments, 'portPrefix')
+    const portSuffix = _.get($arguments, 'portSuffix')
+    const defaultPath = _.get($arguments, 'defaultPath') || '/'
+    let path = _.get($arguments, 'path')
+    const pathPrefix = _.get($arguments, 'pathPrefix')
+    const pathSuffix = _.get($arguments, 'pathSuffix')
+    const defaultMethod = _.get($arguments, 'defaultMethod') || 'GET'
+    let method = _.get($arguments, 'method')
+    const array = _.get($arguments, 'array')
+    const defaultNetwork = _.get($arguments, 'defaultNetwork') || 'http'
+
     let network = _.get(p, 'network')
     const type = _.get(p, 'type')
     /* 只修改 vmess 和 vless */
@@ -37,7 +37,8 @@ function operator(proxies = []) {
         if (_.get(p, 'tls')) {
           /* skip-cert-verify 在这里设为 true 有需求就再加一个节点操作吧 */
           _.set(p, 'skip-cert-verify', true)
-          _.set(p, 'tls-hostname', host)
+          // 这个应该没用了
+          // _.set(p, 'tls-hostname', host)
           _.set(p, 'sni', host)
         }
 
@@ -72,6 +73,8 @@ function operator(proxies = []) {
         let currentPath = _.get(p, 'http-opts.path')
         if (_.isArray(currentPath)) {
           currentPath = _.find(currentPath, i => _.startsWith(i, '/'))
+        } else {
+          path = currentPath
         }
         if (!_.startsWith(currentPath, '/') && !path) {
           path = defaultPath

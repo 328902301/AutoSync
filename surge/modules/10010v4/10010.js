@@ -148,6 +148,10 @@ let result = {}
         let cookieFilePath = require('path').join(__dirname, cookieFile)
         $.log(`Node.js 环境 尝试写入 Cookie 文件供其他工具使用`, cookieFilePath)
         require('fs').writeFileSync(cookieFilePath, $.getdata(KEY_COOKIE), 'utf-8')
+        let accountFile = `${NAME}${NAMESPACE==='xream'?'':`_${NAMESPACE}`}_account.txt`
+        let accountFilePath = require('path').join(__dirname, accountFile)
+        $.log(`Node.js 环境 尝试写入 Account 文件供其他工具使用`, accountFilePath)
+        require('fs').writeFileSync(accountFilePath, `${$.getdata(KEY_MOBILE)}#${$.getdata(KEY_APPID)}#${$.getdata(KEY_TOKEN_ONLINE)}`, 'utf-8')
       } catch (e) {
         console.error(e);
       }

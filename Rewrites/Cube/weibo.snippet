@@ -42,12 +42,13 @@
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/weibo.js
 ^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/weibo.js
 
-# 微博长文章底部推广
+# 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/uvead\? url reject-dict
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/uvead\? url reject-dict
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
 ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
 ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
 ^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/noRedirect.js
 
-hostname = api.weibo.cn, boot.biz.weibo.com, card.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+hostname = api.weibo.cn, boot.biz.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn

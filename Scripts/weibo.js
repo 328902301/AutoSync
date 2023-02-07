@@ -1,4 +1,4 @@
-// 2023-02-07 14:46
+// 2023-02-07 16:58
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -275,12 +275,28 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/search/")) {
     // 搜索页信息流
-    if (url.includes("container_discover")) {
-      removeSearch(obj);
-    } else if (url.includes("container_timeline")) {
+    if (url.includes("container_timeline")) {
       removeSearch(obj);
     } else if (url.includes("finder")) {
-      removeSearchMain(obj);
+      let channels = obj.channelInfo.channels;
+      if (channels) {
+        for (let channel of channels) {
+          let payload = channel.payload;
+          if (payload) {
+            if (payload.loadedInfo) {
+              // 去除搜索框填充词
+              if (payload.loadedInfo.searchBarContent) {
+                delete payload.loadedInfo.searchBarContent;
+              }
+              // 去除搜索背景图片
+              if (payload.loadedInfo.headerBack?.channelStyleMap) {
+                delete payload.loadedInfo.headerBack.channelStyleMap;
+              }
+            }
+            removeSearch(payload);
+          }
+        }
+      }
     }
   } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
     if (obj.cards) {
@@ -525,29 +541,6 @@ function removeSearch(data) {
       }
     }
     data.items = newItems;
-  }
-  return data;
-}
-
-function removeSearchMain(data) {
-  let channels = data.channelInfo.channels;
-  if (channels) {
-    for (let channel of channels) {
-      let payload = channel.payload;
-      if (payload) {
-        if (payload.loadedInfo) {
-          // 去除搜索框填充词
-          if (payload.loadedInfo.searchBarContent) {
-            delete payload.loadedInfo.searchBarContent;
-          }
-          // 去除搜索背景图片
-          if (payload.loadedInfo.headerBack?.channelStyleMap) {
-            delete payload.loadedInfo.headerBack.channelStyleMap;
-          }
-        }
-        removeSearch(payload);
-      }
-    }
   }
   return data;
 }

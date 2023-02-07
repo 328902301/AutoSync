@@ -1,4 +1,4 @@
-// 2023-02-07 14:28
+// 2023-02-07 11:40
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -186,10 +186,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             continue;
           }
         } else if (item.category === "feed") {
-          if (isAd(item.data)) {
-            continue;
-          } else {
+          if (!isAd(item.data)) {
             newItems.push(item);
+          } else {
+            continue;
           }
         }
       }
@@ -275,14 +275,15 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/search/")) {
     // 搜索页信息流
+    // if (url.includes("container_discover")) {
+
+    // } else
     if (url.includes("container_timeline")) {
       if (obj.items) {
         let newItems = [];
         for (let item of obj.items) {
           if (item.category === "feed") {
-            if (isAd(item.data)) {
-              continue;
-            } else {
+            if (!isAd(item.data)) {
               newItems.push(item);
             }
           } else {
@@ -302,9 +303,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (payload) {
             let newItems = [];
             for (let item of payload.items) {
-              if (checkSearchWindow(item)) {
-                continue;
-              } else {
+              if (!checkSearchWindow(item)) {
                 newItems.push(item);
               }
             }
@@ -330,12 +329,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           let newGroup = [];
           for (const group of cardGroup) {
             let cardType = group.card_type;
-            if (cardType === 118) {
-              continue;
-            } else {
-              if (isAd(group.mblog)) {
-                continue;
-              } else {
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
                 newGroup.push(group);
               }
             }
@@ -344,10 +339,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newCards.push(card);
         } else {
           let cardType = card.card_type;
-          if ([9, 17, 165, 180, 1007].indexOf(cardType) === -1) {
-            if (isAd(card.mblog)) {
-              continue;
-            } else {
+          if ([9, 17, 165, 180, 1007].indexOf(cardType) !== -1) {
+            continue;
+          } else {
+            if (!isAd(card.mblog)) {
               newCards.push(card);
             }
           }
@@ -366,9 +361,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
-        if (isAd(item.data)) {
-          continue;
-        } else {
+        if (!isAd(item.data)) {
           if (item.category === "feed") {
             newItems.push(item);
           } else {
@@ -406,12 +399,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.statuses) {
       let newStatuses = [];
       for (let s of obj.statuses) {
-        if (isAd(s)) {
-          continue;
-        } else {
-          if (isBlock(s)) {
-            continue;
-          } else {
+        if (!isAd(s)) {
+          if (!isBlock(s)) {
             // 移除拓展信息,绿洲
             if (s?.common_struct) {
               delete s.common_struct;
@@ -543,10 +532,17 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
+  if (item.category !== "card") {
+    return false;
+  }
   if (
-    item.data?.card_type === 19 || // 找人 热议 本地
-    item.data?.card_type === 118 || // 横版大图
-    item.data?.card_type === 208 // 实况热聊
+    item.data?.card_type === 19 ||
+    item.data?.card_type === 208 ||
+    item.data?.card_type === 217 ||
+    item.data?.card_type === 1005 ||
+    item.data?.itemid === "finder_window" ||
+    item.data?.itemid === "more_frame" ||
+    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
     return true;
   }

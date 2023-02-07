@@ -1,4 +1,4 @@
-// 2023-02-07 16:58
+// 2023-02-07 17:17
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -276,7 +276,22 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/search/")) {
     // 搜索页信息流
     if (url.includes("container_timeline")) {
-      removeSearch(obj);
+      if (obj.items) {
+        let newItems = [];
+        for (let item of obj.items) {
+          if (item.category === "feed") {
+            if (!isAd(item.data)) {
+              newItems.push(item);
+            }
+          } else {
+            continue;
+          }
+          obj.items = newItems;
+        }
+      }
+      if (obj?.loadedInfo) {
+        delete obj?.loadedInfo;
+      }
     } else if (url.includes("finder")) {
       let channels = obj.channelInfo.channels;
       if (channels) {
@@ -293,7 +308,26 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 delete payload.loadedInfo.headerBack.channelStyleMap;
               }
             }
-            removeSearch(payload);
+            if (payload.items) {
+              let newItems = [];
+              for (let item of payload.items) {
+                if (item.category === "feed") {
+                  if (!isAd(item.data)) {
+                    newItems.push(item);
+                  }
+                } else {
+                  if (!checkSearchWindow(item)) {
+                    // 搜索页中间的热议话题、热门人物
+                    if (item.category === "group") {
+                      continue;
+                    } else {
+                      newItems.push(item);
+                    }
+                  }
+                }
+              }
+              payload.items = newItems;
+            }
           }
         }
       }
@@ -519,28 +553,4 @@ function checkSearchWindow(item) {
     return true;
   }
   return false;
-}
-
-// 发现页
-function removeSearch(data) {
-  if (data.items) {
-    let newItems = [];
-    for (let item of data.items) {
-      if (item.category === "feed") {
-        if (!isAd(item.data)) {
-          newItems.push(item);
-        }
-      } else {
-        if (!checkSearchWindow(item)) {
-          // 搜索页中间的热议话题、热门人物
-          if (item.category === "group") {
-            continue;
-          }
-          newItems.push(item);
-        }
-      }
-    }
-    data.items = newItems;
-  }
-  return data;
 }

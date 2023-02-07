@@ -304,7 +304,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             let newItems = [];
             for (let item of payload.items) {
               if (!checkSearchWindow(item)) {
-                newItems.push(item);
+                if (!isAd(item)) {
+                  newItems.push(item);
+                }
               }
             }
             payload.items = newItems;

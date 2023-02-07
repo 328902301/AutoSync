@@ -275,16 +275,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/search/")) {
     // 搜索页信息流
-    if (obj.loadedInfo) {
-      // 去除搜索框填充词
-      if (obj.loadedInfo.searchBarContent) {
-        delete obj.loadedInfo.searchBarContent;
-      }
-      // 去除搜索背景图片
-      if (obj.loadedInfo.headerBack?.channelStyleMap) {
-        delete obj.loadedInfo.headerBack.channelStyleMap;
-      }
-    }
     // if (url.includes("container_discover")) {
 
     // } else
@@ -292,9 +282,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (obj.items) {
         let newItems = [];
         for (let item of obj.items) {
-          if (item.category === "card") {
-            newItems.push(item);
-          } else if (item.category === "feed") {
+          if (item.category === "feed") {
             if (!isAd(item.data)) {
               newItems.push(item);
             }
@@ -304,10 +292,31 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
         obj.items = newItems;
       }
+    } else if (url.includes("finder")) {
+      if (obj.channelInfo?.channelConfig) {
+        delete obj.channelInfo.channelConfig;
+      }
+      if (obj.channelInfo.channels) {
+        for (let channel of obj.channelInfo.channels) {
+          if (channel.payload.items) {
+            let newItems = [];
+            for (let item of channel.payload.items) {
+              if (!checkSearchWindow(item)) {
+                newItems.push(item);
+              }
+            }
+          }
+          // 去除搜索框填充词
+          if (channel.payload.loadedInfo.searchBarContent) {
+            delete channel.payload.loadedInfo.searchBarContent;
+          }
+          // 去除搜索背景图片
+          if (channel.payload.loadedInfo.headerBack.channelStyleMap) {
+            delete channel.payload.loadedInfo.headerBack.channelStyleMap;
+          }
+        }
+      }
     }
-    // } else if (url.includes("finder")) {
-    //   removeSearchMain(obj);
-    // }
   } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
     if (obj.cards) {
       let newCards = [];
@@ -521,13 +530,9 @@ function removeAvatar(data) {
 
 function checkSearchWindow(item) {
   if (
-    item.data?.card_type === 19 ||
-    item.data?.card_type === 208 ||
-    item.data?.card_type === 217 ||
-    item.data?.card_type === 1005 ||
-    item.data?.itemid === "finder_window" ||
-    item.data?.itemid === "more_frame" ||
-    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
+    item.data?.card_type === 19 || // 找人 热议 本地
+    item.data?.card_type === 118 || // 横版大图
+    item.data?.card_type === 208 // 实况热聊
   ) {
     return true;
   }
@@ -560,7 +565,6 @@ function removeSearch(data) {
 }
 
 function removeSearchMain(data) {
-  let channels = data.channelInfo.channels;
   if (!channels) {
     return data;
   }

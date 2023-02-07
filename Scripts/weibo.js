@@ -1,4 +1,4 @@
-// 2023-02-07 09:21
+// 2023-02-07 09:24
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -407,7 +407,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               newCards.push(card);
             }
           } else {
-            if ([17, 180, 1007].indexOf(r) > -1) {
+            if ([17, 180, 1007].indexOf(cardType) !== -1) {
               continue;
             }
             newCards.push(card);

@@ -1,5 +1,5 @@
 # ======= 微博 ======= #
-# 2023-02-07 08:48
+# 2023-02-07 12:35
 
 # 信息流广告,各种推广模块
 ^https:\/\/api\.weibo\.cn\/2\/cardlist\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
@@ -11,9 +11,11 @@
 ^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/profile\/me\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/push\/active\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/push\/daily\? url reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_timeline\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/search\/finder\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/searchall\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread)?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/extend\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js

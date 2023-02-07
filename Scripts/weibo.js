@@ -1,4 +1,4 @@
-// 2023-02-07 17:17
+// 2023-02-07 17:24
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -543,6 +543,9 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
+  if (item.category === "card") {
+    return true;
+  }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地
     item.data?.card_type === 118 || // finder_window 横版大图

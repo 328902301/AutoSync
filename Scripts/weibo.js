@@ -445,7 +445,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       delete obj.trend;
     }
     if (obj.trend?.titles) {
-      let title = data.trend.titles.title;
+      let title = obj.trend.titles.title;
       if (["博主好物种草", "相关推荐"].indexOf(title) !== -1) {
         delete obj.trend;
       }

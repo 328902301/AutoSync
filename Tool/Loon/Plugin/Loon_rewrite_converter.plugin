@@ -8,8 +8,9 @@
 [Script]
 http-request qx\?.*|qx$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Loon_rewrite_converter/RewriteQuantumultX.js, requires-body=true, tag = 转写Quantumult X重写, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Loon_rewrite_converter.png
 
-
 http-request sg\?.*|sg$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Loon_rewrite_converter/RewriteSurge.js, requires-body=true, tag = 转写Surge模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Loon_rewrite_converter.png
 
+http-request r_parser.list$|r_parser.list\?.* script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Loon_rewrite_converter/Rule_converter.js, requires-body=true, tag = 规则转换, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Loon_rewrite_converter.png
+
 [MITM]
-hostname = github.com, raw.githubusercontent.com, gist.githubusercontent.com
+hostname = github.com, raw.githubusercontent.com, gist.githubusercontent.com, gitlab.com

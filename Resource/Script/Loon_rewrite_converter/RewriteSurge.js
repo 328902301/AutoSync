@@ -1,4 +1,5 @@
 /****************************
+引用地址https://raw.githubusercontent.com/chengkongyiban/Loon/main/js/Surge_to_Loon.js
 
 说明
    t&zd; = {  , }  花括号中的逗号
@@ -40,7 +41,7 @@ if (iconStatus === false){
     icon = "#!icon=";
 }else{
     const stickerStartNum = 1000;
-const stickerSum = 199;
+const stickerSum = 335;
 let randomStickerNum = parseInt(stickerStartNum + Math.random() * stickerSum).toString();
    icon = "#!icon=" + "https://raw.githubusercontent.com/chengkongyiban/StickerOnScreen/main/Stickers/Sticker_" + randomStickerNum +".png";
 };
@@ -55,7 +56,7 @@ if(body == null){if(isSurgeiOS || isStashiOS){
 }//识别客户端通知
 }else{//以下开始重写及脚本转换
 
-original = body.split("\n");
+original = body.replace(/^ *(#|;|\/\/)/g,'#').replace(/ _ reject/g,' - reject').replace(/(^[^#].+)\x20+\/\/.+/g,"$1").split("\n");
     body = body.match(/[^\r\n]+/g);
     
 let script = [];
@@ -65,7 +66,7 @@ let MITM = "";
 let others = [];          //不支持的内容
 
 body.forEach((x, y, z) => {
-    x = x.replace(/^(#|;|\/\/)/gi,'#').replace(/(\{.*?)\,(.*?\})/gi,'$1t&zd;$2').replace(" _ reject"," - reject").replace(/(^[^#].+)\x20+\/\/.+/,"$1");
+    x = x.replace(/^ *(#|;|\/\/)/,'#').replace(' _ reject',' - reject').replace(/(^[^#].+)\x20+\/\/.+/,"$1").replace(/hostname\x20*=/,'hostname=');
     let type = x.match(
         /http-re|\x20header-|cronexp|\x20-\x20reject|\x20data=|^hostname|\x20(302|307|header)$|(URL-REGEX|USER-AGENT|IP-CIDR|GEOIP|IP-ASN|DOMAIN)/
     )?.[0];
@@ -84,7 +85,7 @@ if(Pin0 != null)    {
 if(Pout0 != null){
     for (let i=0; i < Pout0.length; i++) {
   const elem = Pout0[i];
-    if (x.indexOf(elem) != -1 && x.indexOf("hostname") == -1){
+    if (x.indexOf(elem) != -1 && x.indexOf("hostname=") == -1){
         x = x.replace(/(.+)/,"#$1")
     }else{};
 };//循环结束
@@ -114,7 +115,7 @@ if(Pout0 != null){
                 
                 let scname = x.replace(/\x20/gi,'').split("=")[0].replace(/^#/,'');
                 
-                let ptn = x.replace(/\x20/gi,"").split("pattern=")[1].split(",")[0].replace(/"/gi,'');
+                let ptn = x.replace(/(\{[0-9]+)\,([0-9]*\})/g,'$1t&zd;$2').replace(/\x20/gi,"").split("pattern=")[1].split(",")[0].replace(/"/gi,'');
                 
                 let js = x.replace(/\x20/gi,"").split("script-path=")[1].split(",")[0];
                 
@@ -129,7 +130,7 @@ if(Pout0 != null){
             }else{}
             
                 script.push(
-                        `${noteK}http-${sctype} ${ptn} script-path=${js}${rebody}${proto}, tag=${scname}${arg}`
+                        `${noteK}http-${sctype} ${ptn} script-path=${js}${rebody}${proto}, tag=${scname}_${y}${arg}`
                     );
                 
                 }else{
@@ -172,7 +173,7 @@ if(Pout0 != null){
             }else{}
                 
                 script.push(
-                    `${noteK}http-${sctype} ${ptn} script-path=${js}${rebody}${proto}, tag=${scname}${arg}`
+                    `${noteK}http-${sctype} ${ptn} script-path=${js}${rebody}${proto}, tag=${scname}_${y}${arg}`
                 );
 
                 }else{
@@ -243,7 +244,7 @@ others.push(lineNum + "行" + x)}
         
                 z[y - 1]?.match(/^#/) && script.push(z[y - 1]);
         script.push(
-            `${noteK}http-request ${ptn} script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/echo-response/index.js, tag=${scname}, argument=type=text/json&url=${arg}`)
+            `${noteK}http-request ${ptn} script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/echo-response/index.js, tag=${scname}_${y}, argument=type=text/json&url=${arg}`)
                     
                 }
                 break;
@@ -300,7 +301,7 @@ ${script}
 
 ${MITM}`
         .replace(/t&zd;/g,',')
-        .replace(/(#.+\n)\n/g,'$1')
+        .replace(/(#.+\n)\n+/g,'$1')
         .replace(/\n{2,}/g,'\n\n')
 
 if (isSurgeiOS || isStashiOS) {

@@ -273,15 +273,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.feed_redpacket.interval = "31536000";
       obj.feed_redpacket.endtime = "2209046399";
     }
-  } else if (url.includes("/2/search/")) {
-    // 搜索页信息流
-    if (url.includes("container_discover")) {
-      removeSearch(obj);
-    } else if (url.includes("container_timeline")) {
-      removeSearch(obj);
-    } else if (url.includes("finder")) {
-      removeSearchMain(obj);
-    }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
     url.includes("/2/statuses/container_timeline_unread")

@@ -1,4 +1,4 @@
-// 2023-02-07 19:27
+// 2023-02-07 19:58
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -472,6 +472,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.custom_action_list = newActions;
+    }
+  } else if (url.includes("/2/video/tiny_stream_video_list")) {
+    if (obj.statuses) {
+      obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
     }
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标

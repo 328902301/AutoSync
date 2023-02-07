@@ -1,4 +1,4 @@
-// 2023-02-07 18:00
+// 2023-02-07 19:27
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -176,10 +176,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         obj.cards = obj.cards.filter(
           (i) =>
             !(
-              i.itemid.includes("infeed_pagemanual3") || // 手动区域3
-              i.itemid.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
-              i.itemid.includes("infeed_weibo_mall") || // 微博小店
               i.itemid.includes("feed_-_invite") || // 超话里的好友
+              i.itemid.includes("infeed_friends_recommend") || // 好友关注
+              i.itemid.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
+              i.itemid.includes("infeed_pagemanual3") || // 手动区域3
+              i.itemid.includes("infeed_weibo_mall") || // 微博小店
               i?.mblog?.mblogtypename === "广告"
             )
         );

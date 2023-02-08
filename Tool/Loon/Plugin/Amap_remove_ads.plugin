@@ -1,9 +1,12 @@
 #!name = 高德地图去广告
-#!desc = 过滤高德地图广告，需将高德地图卸载重装，方可去除广告。
+#!desc = 过滤高德地图广告
 #!openUrl = 
-#!author = RuCu6
+#!author = RuCu6 koko ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+
+[Rule]
+DOMAIN, amdc.m.taobao.com, REJECT
 
 [Rewrite]
 # 我的主页

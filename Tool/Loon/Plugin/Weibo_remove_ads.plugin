@@ -9,6 +9,8 @@
 # 信息流广告及各种推广模块
 ^https:\/\/api\.weibo\.cn\/2\/push\/daily\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\? reject-dict
 # 热搜提醒
 ^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
 # 侧边栏
@@ -19,8 +21,6 @@
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/mobile_discovery_searchchange\? reject-dict
 # 首页顶部直播
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
-# 信息流视频号
-^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\? reject-dict
 # 猜你想搜
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject-dict
 # 开屏广告

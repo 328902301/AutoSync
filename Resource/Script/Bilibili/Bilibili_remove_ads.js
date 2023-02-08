@@ -1,12 +1,197 @@
 /*
-应用名称：自用B站去广告脚本
-脚本作者：Cuttlefish
-微信账号：公众号墨鱼手记
-更新时间：2022-12-07
-脚本版本：(78) 
-通知频道：https://t.me/ddgksf2021
-问题反馈：ddgksf2013@163.com
+引用地址：https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 */
-const version = 'V2.0.97';
+// 2023-01-26 18:28
+if (!$response.body) $done({});
+const url = $request.url;
+let obj = JSON.parse($response.body);
 
-let body=$response.body;if(body){switch(!0){case/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test($request.url):try{let t=JSON.parse(body),i=[];for(let e of t.data.items)if(!e.hasOwnProperty("banner_item")){if(e.hasOwnProperty("ad_info")||-1!==e.card_goto.indexOf("ad")||"small_cover_v2"!==e.card_type&&"large_cover_v1"!==e.card_type&&"large_cover_single_v9"!==e.card_type)continue;else i.push(e)}t.data.items=i,body=JSON.stringify(t)}catch(a){console.log("bilibili index:"+a)}break;case/^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test($request.url):try{let s=JSON.parse(body),l=[];for(let o of s.data.items)o.hasOwnProperty("ad_info")||-1!==o.card_goto.indexOf("ad")||l.push(o);s.data.items=l,body=JSON.stringify(s)}catch(r){console.log("bilibili Story:"+r)}break;case/^https?:\/\/app\.bilibili\.com\/x\/v\d\/account\/teenagers\/status\?/.test($request.url):try{let d=JSON.parse(body);d.data.teenagers_status=0,body=JSON.stringify(d)}catch(b){console.log("bilibili teenagers:"+b)}break;case/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test($request.url):try{let p=new Set([177,178,179,181,102,104,106,486,488,489]),c=JSON.parse(body);if(c.data?.tab&&(c.data.tab=[{id:39,name:"直播",uri:"bilibili://live/home",tab_id:"直播tab",pos:1},{id:40,name:"推荐",uri:"bilibili://pegasus/promo",tab_id:"推荐tab",pos:2,default_selected:1},{id:41,name:"热门",uri:"bilibili://pegasus/hottopic",tab_id:"hottopic",pos:3},{id:545,name:"番剧",uri:"bilibili://pgc/home",tab_id:"bangumi",pos:4},{id:151,name:"影视",uri:"bilibili://pgc/cinema-tab",tab_id:"film",pos:5}]),c.data.top&&(c.data.top=[{id:481,icon:"http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",name:"消息",uri:"bilibili://link/im_home",tab_id:"消息Top",pos:1}]),c.data.bottom){let n=c.data.bottom.filter(t=>p.has(t.id));c.data.bottom=n}body=JSON.stringify(c)}catch(y){console.log("bilibili tab processing:"+y)}break;case/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test($request.url):try{let m=JSON.parse(body),h=new Set([396,397,398,399,402,404,407,410,425,426,427,428,430,432,433,434,494,495,496,497,500,501]);m.data.sections_v2.forEach((t,i)=>{t.items.forEach(t=>{622===t.id&&(t.title="会员购",t.uri="bilibili://mall/home")});let e=t.items.filter(t=>h.has(t.id));m.data.sections_v2[i].items=e,m.data.sections_v2[i].button={},delete m.data.sections_v2[i].be_up_title,delete m.data.sections_v2[i].tip_icon,delete m.data.sections_v2[i].tip_title;for(let a=0;a<m.data.sections_v2.length;a++)("创作中心"==m.data.sections_v2[a].title||"創作中心"==m.data.sections_v2[a].title)&&(delete m.data.sections_v2[a].title,delete m.data.sections_v2[a].type);delete m.data.vip_section_v2,delete m.data.vip_section,m.data.hasOwnProperty("live_tip")&&(m.data.live_tip={}),m.data.hasOwnProperty("answer")&&(m.data.answer={}),m.data.vip_type=2,m.data.vip.type=2,m.data.vip.status=1,m.data.vip.vip_pay_type=1,m.data.vip.due_date=4669824160}),body=JSON.stringify(m)}catch(u){console.log("bilibili mypage:"+u)}break;case/^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test($request.url):try{let f=JSON.parse(body);f.data.activity_banner_info=null,body=JSON.stringify(f)}catch(g){console.log("bilibili live broadcast:"+g)}break;case/^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test($request.url):try{let v=JSON.parse(body);v.data&&(v.data.hash="ddgksf2013",v.data.online.icon=""),body=JSON.stringify(v)}catch(_){console.log("bilibili right corner:"+_)}break;case/^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test($request.url):try{let $=JSON.parse(body);$.data={type:"history",title:"搜索历史",search_hotword_revision:2},body=JSON.stringify($)}catch(k){console.log("bilibili hot search:"+k)}break;case/https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test($request.url):try{let w=JSON.parse(body);w.data.vip.type=2,w.data.vip.status=1,w.data.vip.vip_pay_type=1,w.data.vip.due_date=4669824160,body=JSON.stringify(w)}catch(x){console.log("bilibili 1080p:"+x)}break;case/pgc\/page\/bangumi/.test($request.url):try{let O=JSON.parse(body);O.result.modules.forEach(t=>{t.style.startsWith("banner")&&(t.items=t.items.filter(t=>-1!=t.link.indexOf("play"))),t.style.startsWith("function")&&(t.items=t.items.filter(t=>-1==t.blink.indexOf("www.bilibili.com")),(1283==t.module_id||241==t.module_id)&&(t.items=[])),t.style.startsWith("tip")&&(t.items=[])}),body=JSON.stringify(O)}catch(P){console.log("bilibili fanju:"+P)}break;case/pgc\/page\/cinema\/tab\?/.test($request.url):try{let W=JSON.parse(body);W.result.modules.forEach(t=>{t.style.startsWith("banner")&&(t.items=t.items.filter(t=>-1!=t.link.indexOf("play"))),t.style.startsWith("function")&&(t.items=t.items.filter(t=>-1==t.blink.indexOf("www.bilibili.com")),(1441==t.module_id||1284==t.module_id)&&(t.items=[])),t.style.startsWith("tip")&&(t.items=[])}),body=JSON.stringify(W)}catch(E){console.log("bilibili video:"+E)}break;case/^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test($request.url):try{let q=JSON.parse(body);q&&q.hasOwnProperty("data")&&q.data.hasOwnProperty("common_equip")&&q.data.common_equip.hasOwnProperty("package_url"),body=JSON.stringify(q)}catch(j){console.log("bilibili skin:"+j)}break;case/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test($request.url):try{let B=JSON.parse(body);if(B.data&&B.data.list)for(let I of B.data.list)I.duration=0,I.begin_time=2240150400,I.end_time=2240150400;body=JSON.stringify(B)}catch(R){console.log("bilibili openad:"+R)}break;default:$done({})}$done({body})}else $done({});
+if (obj.data) {
+  // 哔哩哔哩-强制设置的皮肤
+  if (url.includes("/x/resource/show/skin")) {
+    if (obj.data.common_equip) {
+      delete obj.data.common_equip;
+    }
+  } else if (url.includes("/x/resource/show/tab/v2")) {
+    // 哔哩哔哩-标签页
+    if (obj.data.tab) {
+      obj.data.tab = obj.data.tab.filter(
+        (item) =>
+          item.name === "直播" ||
+          item.name === "推荐" ||
+          item.name === "热门" ||
+          item.name === "影视"
+      );
+      fixPos(obj.data.tab);
+    }
+    if (obj.data.top) {
+      let newTop = [];
+      for (let item of obj.data.top) {
+        if (item.name === "消息") {
+          newTop.push(item);
+        }
+      }
+      obj.data.top = newTop;
+      fixPos(obj.data.top);
+    }
+    if (obj.data.bottom) {
+      obj.data.bottom = obj.data.bottom.filter(
+        (item) => !(item.name === "发布" || item.name === "会员购")
+      );
+      fixPos(obj.data.bottom);
+    }
+  } else if (url.includes("/x/resource/top/activity")) {
+    // 哔哩哔哩-右上角活动入口
+    if (obj.data.hash && obj.data.online.icon) {
+      obj.data.hash = "";
+      obj.data.online.icon = "";
+    }
+  } else if (url.includes("/x/v2/account/mine")) {
+    // 哔哩哔哩-我的页面
+    // 标准版：
+    // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
+    // 港澳台：
+    // 534离线缓存 8历史记录 4我的收藏 428稍后再看
+    // 352离线缓存 1历史记录 405我的收藏 402个性装扮 404我的钱包 544创作中心
+    // 概念版：
+    // 425离线缓存 426历史记录 427我的收藏 428稍后再看 171创作中心 430我的钱包 431联系客服 432设置
+    // 国际版：
+    // 494离线缓存 495历史记录 496我的收藏 497稍后再看 741我的钱包 742稿件管理 500联系客服 501设置
+    // 622为会员购中心 425开始为概念版id
+    const itemList = new Set([396, 397, 398, 399]);
+    if (obj.data?.sections_v2) {
+      obj.data.sections_v2.forEach((element, index) => {
+        let items = element.items.filter((e) => itemList.has(e.id));
+        obj.data.sections_v2[index].button = {};
+        obj.data.sections_v2[index].tip_icon = "";
+        obj.data.sections_v2[index].be_up_title = "";
+        obj.data.sections_v2[index].tip_title = "";
+        if (
+          obj.data.sections_v2[index].title === "推荐服务" ||
+          obj.data.sections_v2[index].title === "更多服务" ||
+          obj.data.sections_v2[index].title === "创作中心"
+        ) {
+          obj.data.sections_v2[index].title = "";
+          obj.data.sections_v2[index].type = "";
+        }
+
+        obj.data.sections_v2[index].items = items;
+        obj.data.vip_section_v2 = "";
+        obj.data.vip_section = "";
+        obj.data.live_tip = "";
+        obj.data.answer = "";
+        // 开启本地会员标识
+        obj.data.vip_type = 2;
+        obj.data.vip.type = 2;
+        obj.data.vip.status = 1;
+        obj.data.vip.vip_pay_type = 1;
+        obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      });
+    }
+  } else if (url.includes("/x/v2/account/myinfo")) {
+    // 哔哩哔哩-会员清晰度
+    obj.data.vip.type = 2;
+    obj.data.vip.status = 1;
+    obj.data.vip.vip_pay_type = 1;
+    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+  } else if (url.includes("/x/v2/feed/index")) {
+    // 哔哩哔哩-推荐广告
+    if (obj.data.items) {
+      obj.data.items = obj.data.items.filter((i) => {
+        const { card_type: cardType, card_goto: cardGoto } = i;
+        if (cardType && cardGoto) {
+          if (cardType === "banner_v8" && cardGoto === "banner") {
+            // 去除判断条件 首页横版内容全部去掉
+            // if (i.banner_item) {
+            // for (const v of i.banner_item) {
+            //   if (v.type) {
+            //     if (v.type === "ad") return false;
+            //   }
+            // }
+            // return false;
+            // }
+            return false;
+          } else if (
+            cardType === "cm_v2" &&
+            [
+              "ad_web_s",
+              "ad_av",
+              "ad_web_gif",
+              "ad_player",
+              "ad_inline_3d"
+            ].includes(cardGoto)
+          ) {
+            // ad_player大视频广告 ad_web_gif大gif广告 ad_web_s普通小广告 ad_av创作推广广告 ad_inline_3d 上方大的视频3d广告
+            return false;
+          } else if (cardType === "small_cover_v10" && cardGoto === "game") {
+            // 游戏广告
+            return false;
+          } else if (
+            cardType === "cm_double_v9" &&
+            cardGoto === "ad_inline_av"
+          ) {
+            // 创作推广-大视频广告
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+  } else if (url.includes("/x/v2/search/square")) {
+    // 哔哩哔哩-热搜广告
+    // delete obj.data;
+    obj.data = {
+      type: "history",
+      title: "搜索历史",
+      search_hotword_revision: 2
+    };
+  } else if (url.includes("/x/v2/splash")) {
+    // 哔哩哔哩-开屏广告
+    if (obj.data.show) {
+      delete obj.data.show;
+    }
+  } else if (
+    url.includes("/pgc/page/bangumi") ||
+    url.includes("/pgc/page/cinema/tab")
+  ) {
+    // 哔哩哔哩-观影页广告
+    if (obj.result?.modules) {
+      obj.result.modules.forEach((module) => {
+        if (module.style.startsWith("banner")) {
+          module.items = module.items.filter((i) => i.link.includes("play"));
+        } else if (module.style.startsWith("function")) {
+          module.items = module.items.filter((i) =>
+            i.blink.startsWith("bilibili")
+          );
+        } else if (module.style.startsWith("tip")) {
+          module.items = [];
+        }
+      });
+    }
+  } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
+    // 哔哩哔哩-直播广告
+    if (obj.data?.activity_banner_info) {
+      obj.data.activity_banner_info = null;
+    }
+    if (obj.data?.shopping_info) {
+      obj.data.shopping_info = { is_show: 0 };
+    }
+    if (
+      obj.data?.new_tab_info?.outer_list &&
+      obj.data?.new_tab_info?.outer_list.length > 0
+    ) {
+      obj.data.new_tab_info.outer_list =
+        obj.data.new_tab_info.outer_list.filter((i) => i.biz_id !== 33);
+    }
+  }
+}
+
+// 修复pos
+function fixPos(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].pos = i + 1;
+  }
+}
+
+body = JSON.stringify(obj);
+$done({ body });

@@ -12,19 +12,21 @@ hostname= api.weibo.cn, mapi.weibo.com, magev6.if.qidian.com, api.account.meitu.
 #💡通用设置
 [General]
 #跳过代理或者ip段，不经过代理
-skip-proxy = 
+skip-proxy = 127.0.0.0/8
 
 #指定ip段范围绕过tun旁路由
-bypass-tun =
+bypass-tun = 127.0.0.0/8
 
 #配置的域名不会使用fakeip进行映射，返回真实的ip
 real-ip = 
 
 #设置dns服务器
-dns-server =
+dns-server = 1.2.4.8
 
 #💡指定dns服务器解析域名
 [host]
+*.gov.cn = server:1.2.4.8
+*.政务 = server:1.2.4.8
 
 #💡分流规则
 [Rule]

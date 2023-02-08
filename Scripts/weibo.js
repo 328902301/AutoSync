@@ -1,4 +1,4 @@
-// 2023-02-08 12:38
+// 2023-02-08 12:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -496,12 +496,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/v1/ad/realtime")) {
     // 开屏广告
-    if (obj?.ads) {
-      for (let item of obj.ads) {
-        item.display_duration = 0; // "total_display_cnt" : 50,
-        item.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-        item.begin_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      }
+    if (obj?.ads?.length === 1) {
+      obj.ads[0].display_duration = 0;
+      obj.ads[0].end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      obj.ads[0].adid = "";
+      obj.ads[0].begin_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告

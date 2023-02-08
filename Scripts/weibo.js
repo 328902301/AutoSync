@@ -1,4 +1,4 @@
-// 2023-02-08 07:45
+// 2023-02-08 12:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -54,10 +54,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     obj.lastAdShow_delay_display_time = 31536000;
   }
   if (obj.realtime_ad_video_stall_time) {
-    obj.realtime_ad_video_stall_time = 31536000;
+    obj.realtime_ad_video_stall_time = 0;
   }
   if (obj.realtime_ad_timeout_duration) {
-    obj.realtime_ad_timeout_duration = 31536000;
+    obj.realtime_ad_timeout_duration = 0;
   }
   if (obj.ads) {
     for (let item of obj.ads) {
@@ -496,12 +496,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/v1/ad/realtime")) {
     // 开屏广告
-    if (obj?.ads) {
-      for (let item of obj.ads) {
-        item.daily_display_cnt = 50; // "total_display_cnt" : 50,
-        item.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
-        item.begin_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      }
+    if (obj?.ads?.length === 1) {
+      obj.ads[0].display_duration = 0;
+      obj.ads[0].end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      obj.ads[0].adid = "";
+      obj.ads[0].begin_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告
@@ -509,7 +508,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.cached_ad.ads) {
         item.start_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
         item.show_count = 0;
-        item.duration = 31536000; // 60 * 60 * 24 * 365 = 31536000
+        item.duration = 0; // 60 * 60 * 24 * 365 = 31536000
         item.end_date = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       }
     }

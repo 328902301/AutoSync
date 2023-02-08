@@ -18,7 +18,6 @@
 # ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
 
 [Script]
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body = true, tag = Proto动态去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 # Proto 动态去广告 //app.bilibili.com
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body = true, tag = Proto动态去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 

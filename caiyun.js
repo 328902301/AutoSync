@@ -49,9 +49,7 @@ chxm1023.result.wt.vip = {
       };
 chxm1023.result.wt.svip_given = 365;
 chxm1023.result.wt.ranking_above = 91;
-
 chxm1023.result.name = "chxm1023";
-
 chxm1023.result.avatar = "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLia6zPUuGQKVOJk2gnjpjHxSIuH7XaOJF2gEk9ic35ibib4QzUcbvNu6EpdHDc1Vciat1xg63ibK6EptWw/132";
 chxm1023.result.phone_num = "13145200000";
 chxm1023.result.vip_take_effect = 1;
@@ -106,9 +104,7 @@ chxm1023.result.wt.vip = {
       };
 chxm1023.result.wt.svip_given = 365;
 chxm1023.result.wt.ranking_above = 91;
-
 chxm1023.result.name = "chxm1023";
-
 chxm1023.result.avatar = "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLia6zPUuGQKVOJk2gnjpjHxSIuH7XaOJF2gEk9ic35ibib4QzUcbvNu6EpdHDc1Vciat1xg63ibK6EptWw/132";
 chxm1023.result.phone_num = "13145200000";
 chxm1023.result.vip_take_effect = 1;

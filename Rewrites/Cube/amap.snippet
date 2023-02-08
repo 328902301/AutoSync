@@ -1,20 +1,21 @@
 # ======= 高德地图 ======= #
-# 2023-02-08 19:55
+# 2023-02-08 22:30
 
 # 导航详情页,路线规划,地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 
-# 首页,卡片,消息横幅,天气质量卡片,右上角动图,搜索框热词,左下角天气,天气动效图层
+# 首页,卡片,天气质量卡片,右上角动图,搜索框热词,左下角天气,红点角标,天气动效图层,消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-location\? url reject-dict
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? url reject-dict
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/message\/notice\/list\? url reject-dict
 ^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? url reject
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? url reject-dict
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? url reject-dict
 
 # 我的页面,个人主页,卡片,足迹
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/home\? url reject-dict

@@ -59,4 +59,4 @@ http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/g
 # http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 画质解锁, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 
 [MITM]
-hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com
+hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net

@@ -1,6 +1,6 @@
 #!name = 高德地图去广告
 #!desc = 过滤高德地图广告
-#!openUrl = 
+#!open= 
 #!author = RuCu6 kokoryh ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
@@ -9,14 +9,14 @@
 DOMAIN, amdc.m.taobao.com, REJECT
 
 [Rewrite]
+# 路线规划
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? reject-dict
 # 我的主页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/home\? reject-dict
 # 首页消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
-# 路线规划
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? reject-dict
 # 搜索框热词
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
 # 其他
@@ -31,19 +31,19 @@ DOMAIN, amdc.m.taobao.com, REJECT
 
 [Script]
 # 首页卡片
-http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页卡片, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页卡片, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 我的卡片
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 我的卡片, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 我的卡片, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 首页右上角动图
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页右上角动图, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 首页右上角动图, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 附近页面
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 附近页面, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 附近页面, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 地点详情页
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 地点详情页, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 地点详情页, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 开屏广告
-http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 开屏广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 开屏广告, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 # 打车卡片
-http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 打车卡片, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
+http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 打车卡片, img-= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
 [MITM]
 hostname = m5.amap.com, m5-zb.amap.com, sns.amap.com

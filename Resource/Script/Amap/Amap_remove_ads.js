@@ -2,6 +2,7 @@
 引用地址https://github.com/RuCu6/QuanX/raw/main/Rewrites/Cube/amap.snippet
 */
 // 2023-02-02 10:30
+
 if (!$response.body) $done({});
 const url = $request.url;
 let obj = JSON.parse($response.body);

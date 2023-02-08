@@ -8,14 +8,14 @@
 ;host, amdc.m.taobao.com, reject
 
 #[rewrite_local]
+# 路线规划
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 # 我的主页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/home\? url reject-dict
 # 首页消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? url reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? url reject-dict
-# 路线规划
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 # 搜索框热词
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict
 # 其他

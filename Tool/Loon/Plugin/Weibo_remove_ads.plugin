@@ -1,62 +1,66 @@
 #!name = 微博去广告
-#!desc = 过滤微博广告及去除各部分推广模块，支持微博国际版。
+#!desc = 过滤微博广告及去除各部分推广模块
 #!openUrl = 
-#!author = zmqcherish Cuttlefish
+#!author = RuCu6 zmqcherish Cuttlefish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
-[Rule]
-DOMAIN, sdkapp.uve.weibo.com, DIRECT
-
 [Rewrite]
-# > 微博_去除底部超话栏表层浮icon及tips
-^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo reject-dict
-# > 微博_屏蔽首页左上角每日的弹窗tips
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily reject-dict
-# > 微博_应用内弹窗广告
-^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) reject
-# > 微博_屏蔽sdkconfig请求
-^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
-# > 微博_Spotlight
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight reject-dict
-# > 微博国际版_屏蔽hotsearch
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict
-# > 微博国际版_屏蔽热推荐
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? reject-dict
+# 信息流广告及各种推广模块
+^https:\/\/api\.weibo\.cn\/2\/push\/daily\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject-dict
+# 热搜提醒
+^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
+# 侧边栏
+^https:\/\/api\.weibo\.cn\/2\/ug\/checkin\/list\? reject-dict
+# 超话悬浮图标
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_getdotinfo\? reject-dict
+# 话题卡片
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/mobile_discovery_searchchange\? reject-dict
+# 首页顶部直播
+^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
+# 信息流视频号
+^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get\? reject-dict
+# 猜你想搜
+^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject-dict
+# 开屏广告
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php\? url reject
+# 微博长文章推广
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/reward\? reject-dict
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/uvead\? reject-dict
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/reward\? reject-dict
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/uvead\? reject-dict
 
 [Script]
-# > 微博_屏蔽发现页面搜索框热词
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_屏蔽发现页面搜索框热词, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-# > 微博_自定义tab皮肤
-http-response ^https://api.weibo.cn/2/!/client/light_skin script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_自定义tab皮肤, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-# > 微博_非会员设置tab皮肤
-http-response ^https://new.vip.weibo.cn/littleskin/preview script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_非会员设置tab皮肤, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-# > 微博_去广告以及去除各部分推广模块
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博_去广告以及去除各部分推广模块, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+# 移除信息流广告及各种推广模块
+http-response ^https:\/\/api\.weibo\.cn\/2\/cardlist\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/checkin\/show\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/client\/publisher_list\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/page\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/me\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/push\/active\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/search\/container_timeline\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/search\/finder\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread)?\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/extend\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除信息流广告及各种推广模块, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
-# > 微博国际版_屏蔽searching_info
-http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Info.json
-# > 微博国际版_屏蔽search_topic 
-http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_Search_Topic.json
+# 移除开屏广告
+http-response ^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除开屏广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除开屏广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-response ^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博·移除开屏广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
-# > 微博国际版_屏蔽开屏广告 
-http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版_屏蔽开屏广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
-# > 微博国际版_屏蔽sdkad
-http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版_屏蔽sdkad, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
-# > 微博国际版_趋势顶部Card去广告
-http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版_趋势顶部Card去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
-# > 微博国际版_屏蔽用户VIP栏
-http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版_屏蔽用户VIP栏, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
-# > 微博国际版_热搜处理
-http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版_热搜处理, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+# 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+# http-response ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js, requires-body = true, tag = 微博·跳过重定向, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+# http-response ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js, requires-body = true, tag = 微博·跳过重定向, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+http-request ^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js, requires-body = true, tag = 微博·跳过重定向, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 [MITM]
-hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn
+hostname = api.weibo.cn, boot.biz.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn

@@ -74,7 +74,7 @@ if (url.includes("/bilibili.app.dynamic.v2.Dynamic/DynAll")) {
         let content = JSON.stringify(item.extend.origDesc);
         let noForwordWhite = noForwordWhiteRegex.test(content);
         if (noForwordWhite && item.cardType !== 1) {
-          // 始终保留真-白名单内的动态和含 noForwordWhiteRegex 关键词的非转发动态
+          // 始终保留含noForwordWhiteRegex关键词的非转发动态
           return true;
         }
         if (

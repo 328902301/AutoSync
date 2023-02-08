@@ -1,10 +1,19 @@
 #!name = IT之家去广告
 #!desc = 过滤IT之家信息流广告和文末广告，仅支持8.30及以上版本客户端。
 #!openUrl = 
-#!author = toulanboy
+#!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 
-^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao.* url reject
-^https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+#[rewrite_local]
+^https:\/\/api\.zuihuimai\.com url reject
+# ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao.* url reject
 
-hostname = api.ithome.com,napi.ithome.com,api.zuihuimai.com
+^https:\/\/api\.ithome\.com\/json\/listpage\/news url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https:\/\/api\.ithome\.com\/json\/newslist\/news url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https:\/\/napi\.ithome\.com\/api\/news\/index url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+^https:\/\/napi\.ithome\.com\/api\/topmenu\/getfeeds url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js
+
+#[mitm]
+hostname = api.ithome.com, api.zuihuimai.com, m.ithome.com, napi.ithome.com

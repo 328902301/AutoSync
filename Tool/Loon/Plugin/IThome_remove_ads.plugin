@@ -1,15 +1,21 @@
 #!name = IT之家去广告
 #!desc = 过滤IT之家信息流广告和文末广告，仅支持8.30及以上版本客户端。
 #!openUrl = 
-#!author = toulanboy
+#!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
 
 [Rewrite]
-^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao.* reject
+^https?:\/\/api\.zuihuimai\.com reject
+# ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao.* reject
 
 [Script]
-http-response ^https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body=true, tag=IT之家去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/api\.ithome\.com\/json\/listpage\/news script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/api\.ithome\.com\/json\/newslist\/news script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/api\.ithome\.com\/json\/slide\/index script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/m\.ithome\.com\/api\/news\/newslistpageget script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/napi\.ithome\.com\/api\/news\/index script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
+http-response ^https?:\/\/napi\.ithome\.com\/api\/topmenu\/getfeeds script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/IThome/IThome_remove_ads.js,requires-body = true, tag = IT之家去广告, img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/IThome.png
   
 [MITM]
-hostname = api.ithome.com,napi.ithome.com,api.zuihuimai.com
+hostname = api.ithome.com, api.zuihuimai.com, m.ithome.com, napi.ithome.com

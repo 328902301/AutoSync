@@ -9,6 +9,7 @@
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* reject
 ^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* reject
+^https:\/\/interface3\.music\.163\.com\/eapi\/music\/songshare\/text\/recommend\/get\? reject-dict
 
 # 开屏广告、首页顶部横幅广告
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* reject-dict
@@ -21,13 +22,14 @@
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/specialkeyword\/get\? reject-dict
 
 # 播放页、多余图标、各种小提示、高品质音乐试用弹窗
-^https:\/\/interface3\.music\.163\.com\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? reject-dict
-^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/resource\? reject-dict
-^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/strategy\? reject-dict
-^https:\/\/interface3\.music\.163\.com\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? reject-dict
-^https:\/\/interface3\.music\.163\.com\/eapi\/user\/sub\/artist\/exist\? reject-dict
-^https:\/\/interface3\.music\.163\.com\/eapi\/vipcenter\/tspopup\/get\? reject-dict
-^https?:\/\/interface3\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get\? reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/resource\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/link\/position\/show\/strategy\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/music\/songshare\/text\/recommend\/get\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/user\/sub\/artist\/exist\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/vipcenter\/tspopup\/get\? url reject-dict
+^https?:\/\/interface3\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get\? url reject-dict
 
 # 评论页、回复广告、星评馆
 ^https:\/\/interface3\.music\.163\.com\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? reject-dict

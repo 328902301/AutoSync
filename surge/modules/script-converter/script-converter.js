@@ -94,7 +94,7 @@ var _scriptSonverterDone = (val = {}) => {
 let url
 !(async () => {
   if (!$.isRequest()) throw new Error('不是 request')
-  url = $request.url.replace(/_script-converter-stash\.js$/, '')
+  url = $request.url.replace(/_script-converter-(stash|surge)\.js$/, '')
   $.log(`🔗 原始文件链接`, url)
   const res = await $.http.get({
     url,

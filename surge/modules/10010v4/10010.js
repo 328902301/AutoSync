@@ -290,7 +290,7 @@ async function query({ cookie }) {
     throw new Error('❌🍪 Cookie 无效')
   } else if (maintenanceCodes.includes(code)){
     throw new Error(`🚧 [系统升级] ${code} ${desc || ''}`)
-  } else if(body.includes('沃妹陪着您一起等待')) {
+  } else if(`${body}`.includes('沃妹陪着您一起等待')) {
     throw new Error(`[查询余量] 很抱歉，暂时无法为您提供服务，请稍后再试，感谢您的使用！`)
   }else {
     throw new Error(`[查询余量] ${desc || `未知错误 ${status || ''} ${code || ''}`}`)

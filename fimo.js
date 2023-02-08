@@ -9,7 +9,7 @@
 
 [rewrite_local]
 
-^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/fimo.js
+^https:\/\/server\.yoyiapp\.com url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/fimo.js
 
 [mitm]
 

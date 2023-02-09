@@ -1,4 +1,4 @@
-// 2023-01-26 18:28
+// 2023-02-09 10:30
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -40,10 +40,12 @@ if (obj.data) {
     }
   } else if (url.includes("/x/resource/top/activity")) {
     // 哔哩哔哩-右上角活动入口
-    if (obj.data.hash && obj.data.online.icon) {
-      obj.data.hash = "";
-      obj.data.online.icon = "";
-    }
+    obj = {
+      "code" : -404,
+      "message" : "啥都木有",
+      "ttl" : 1,
+      "data" : null
+    };
   } else if (url.includes("/x/v2/account/mine")) {
     // 哔哩哔哩-我的页面
     // 标准版：
@@ -137,7 +139,6 @@ if (obj.data) {
     }
   } else if (url.includes("/x/v2/search/square")) {
     // 哔哩哔哩-热搜广告
-    // delete obj.data;
     obj.data = {
       type: "history",
       title: "搜索历史",

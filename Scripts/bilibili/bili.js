@@ -33,14 +33,14 @@ if (obj.data) {
           id: 129,
           tab_id: "舞蹈",
           name: "舞蹈",
-          uri: "bilibili://region/129",
+          uri: "bilibili://pegasus/129",
           pos: 3
         },
         {
           id: 211,
           tab_id: "美食",
           name: "美食",
-          uri: "bilibili://region/211",
+          uri: "bilibili://pegasus/211",
           pos: 4
         }
       ];

@@ -1,4 +1,4 @@
-// 2023-02-09 17:00
+// 2023-02-09 17:05
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -16,7 +16,9 @@ if (obj.data) {
       obj.data.tab = obj.data.tab.filter(
         (item) =>
           item.name === "推荐" ||
-          item.name === "热门"
+          item.name === "热门" ||
+          item.name === "舞蹈" ||
+          item.name === "美食"
       );
       fixPos(obj.data.tab);
     }

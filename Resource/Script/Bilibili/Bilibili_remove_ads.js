@@ -1,38 +1,64 @@
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 */
-// 2023-01-26 18:28
+// 2023-02-09 17:55
+
 if (!$response.body) $done({});
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
 if (obj.data) {
-  // 哔哩哔哩-强制设置的皮肤
+  // 强制设置的皮肤
   if (url.includes("/x/resource/show/skin")) {
     if (obj.data.common_equip) {
       delete obj.data.common_equip;
     }
   } else if (url.includes("/x/resource/show/tab/v2")) {
-    // 哔哩哔哩-标签页
+    // 标签页
     if (obj.data.tab) {
-      obj.data.tab = obj.data.tab.filter(
-        (item) =>
-          item.name === "直播" ||
-          item.name === "推荐" ||
-          item.name === "热门" ||
-          item.name === "影视"
-      );
-      fixPos(obj.data.tab);
+      obj.data.tab = [
+        {
+          id: 41,
+          tab_id: "hottopic",
+          name: "热门",
+          uri: "bilibili://pegasus/hottopic",
+          pos: 1
+        },
+        {
+          id: 40,
+          tab_id: "推荐tab",
+          default_selected: 1,
+          name: "推荐",
+          uri: "bilibili://pegasus/promo",
+          pos: 2
+        },
+        {
+          id: 151,
+          tab_id: "film",
+          name: "影视",
+          uri: "bilibili://pgc/cinema-tab",
+          pos: 3
+        },
+        {
+          id: 545,
+          tab_id: "bangumi",
+          name: "动画",
+          uri: "bilibili://pgc/home",
+          pos: 4
+        }
+      ];
     }
     if (obj.data.top) {
-      let newTop = [];
-      for (let item of obj.data.top) {
-        if (item.name === "消息") {
-          newTop.push(item);
+      obj.data.top = [
+        {
+          id: 176,
+          icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
+          tab_id: "消息Top",
+          name: "消息",
+          uri: "bilibili://link/im_home",
+          pos: 1
         }
-      }
-      obj.data.top = newTop;
-      fixPos(obj.data.top);
+      ];
     }
     if (obj.data.bottom) {
       obj.data.bottom = obj.data.bottom.filter(
@@ -41,13 +67,15 @@ if (obj.data) {
       fixPos(obj.data.bottom);
     }
   } else if (url.includes("/x/resource/top/activity")) {
-    // 哔哩哔哩-右上角活动入口
-    if (obj.data.hash && obj.data.online.icon) {
-      obj.data.hash = "";
-      obj.data.online.icon = "";
-    }
+    // 右上角活动入口
+    obj = {
+      code: -404,
+      message: "啥都木有",
+      ttl: 1,
+      data: null
+    };
   } else if (url.includes("/x/v2/account/mine")) {
-    // 哔哩哔哩-我的页面
+    // 我的页面
     // 标准版：
     // 396离线缓存 397历史记录 398我的收藏 399稍后再看 171个性装扮 172我的钱包 407联系客服 410设置
     // 港澳台：
@@ -89,13 +117,13 @@ if (obj.data) {
       });
     }
   } else if (url.includes("/x/v2/account/myinfo")) {
-    // 哔哩哔哩-会员清晰度
+    // 会员清晰度
     obj.data.vip.type = 2;
     obj.data.vip.status = 1;
     obj.data.vip.vip_pay_type = 1;
     obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
   } else if (url.includes("/x/v2/feed/index")) {
-    // 哔哩哔哩-推荐广告
+    // 推荐广告
     if (obj.data.items) {
       obj.data.items = obj.data.items.filter((i) => {
         const { card_type: cardType, card_goto: cardGoto } = i;
@@ -138,15 +166,14 @@ if (obj.data) {
       });
     }
   } else if (url.includes("/x/v2/search/square")) {
-    // 哔哩哔哩-热搜广告
-    // delete obj.data;
+    // 热搜广告
     obj.data = {
       type: "history",
       title: "搜索历史",
       search_hotword_revision: 2
     };
   } else if (url.includes("/x/v2/splash")) {
-    // 哔哩哔哩-开屏广告
+    // 开屏广告
     if (obj.data.show) {
       delete obj.data.show;
     }
@@ -154,7 +181,7 @@ if (obj.data) {
     url.includes("/pgc/page/bangumi") ||
     url.includes("/pgc/page/cinema/tab")
   ) {
-    // 哔哩哔哩-观影页广告
+    // 观影页广告
     if (obj.result?.modules) {
       obj.result.modules.forEach((module) => {
         if (module.style.startsWith("banner")) {
@@ -169,7 +196,7 @@ if (obj.data) {
       });
     }
   } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
-    // 哔哩哔哩-直播广告
+    // 直播广告
     if (obj.data?.activity_banner_info) {
       obj.data.activity_banner_info = null;
     }

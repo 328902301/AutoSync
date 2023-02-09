@@ -1,14 +1,14 @@
 # ======= 哔哩哔哩 ======= #
-# 2023-02-08 17:48
+# 2023-02-09 10:00
 
 # Proto 动态去广告 //app.bilibili.com
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
+^https:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
 
 # Proto 播放页去广告 //app.bilibili.com
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/View$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
+^https:\/\/app\.bilibili\.com\/bilibili\.app\.view\.v1\.View\/View$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
 
 # Proto 去除后台播放限制 //app.bilibili.com
-;^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
+;^https:\/\/app\.bilibili\.com\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
 
 # 屏蔽DefaultWord //app.bilibili.com
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Defaultwords$ url reject

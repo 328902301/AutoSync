@@ -1,5 +1,5 @@
 # ======= 哔哩哔哩 ======= #
-# 2023-02-09 10:00
+# 2023-02-09 10:15
 
 # Proto 动态去广告 //app.bilibili.com
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
@@ -11,7 +11,7 @@
 ;^https:\/\/app\.bilibili\.com\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/bilibili/biliProto.js
 
 # 屏蔽DefaultWord //app.bilibili.com
-^https:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Defaultwords$ url reject
+^https:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ url reject
 
 # 屏蔽IP请求 //app.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip url reject

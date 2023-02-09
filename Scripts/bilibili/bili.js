@@ -1,4 +1,4 @@
-// 2023-02-09 17:40
+// 2023-02-09 17:45
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -30,17 +30,17 @@ if (obj.data) {
           pos: 2
         },
         {
-          id: 545,
-          tab_id: "bangumi",
-          name: "动画",
-          uri: "bilibili://pgc/home",
-          pos: 3
-        },
-        {
           id: 151,
           tab_id: "film",
           name: "影视",
           uri: "bilibili://pgc/cinema-tab",
+          pos: 3
+        },
+        {
+          id: 545,
+          tab_id: "bangumi",
+          name: "动画",
+          uri: "bilibili://pgc/home",
           pos: 4
         }
       ];

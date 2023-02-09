@@ -19,10 +19,6 @@ hostname = api.jitizhong.com
 
 
 var chxm1023 = JSON.parse($response.body);
-const vipa = '/weightnote/ios/user/get';
-const vipb = '/weightnote/ios/usercentre/userInfo';
-const vipc = '/ios/vip/getVipInfo';
-
 const vip={
       "status" : 0,
       "userId" : 304246632,
@@ -33,7 +29,9 @@ const vip={
       "surplusSeconds" : 172268,
       "lastSpecialFlag" : 0
     };
-
+const vipa = '/weightnote/ios/user/get';
+const vipb = '/weightnote/ios/usercentre/userInfo';
+const vipc = '/ios/vip/getVipInfo';
 
 if ($request.url.indexOf(vipa) != -1){
 chxm1023.data.vipInfo = (vip);

@@ -2,13 +2,11 @@
 
 适用软件：[所有使用Clash Premium核心的程序](https://github.com/Dreamacro/clash/releases/tag/premium)
 
-配置作者：[可莉🅥](https://t.me/iKeLee)
+配置作者：[可莉🅥](tg://user?id=259049671)
 
-更新日期：2022-12-14
+更新日期：2023-02-09
 
-适用版本：3.0.3
-
-配置地址：[https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee_20230110.yml](https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee_20230110.yml)
+配置地址：[https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yml](https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yml)
 
 ### 使用说明
 
@@ -17,7 +15,6 @@
 策略组如图
 
 ![](https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Resource/01.png)
-
 
 ![](https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Resource/02.png)
 

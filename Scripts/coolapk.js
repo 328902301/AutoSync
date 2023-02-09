@@ -1,11 +1,11 @@
-// 2023-01-21 18:55
+// 2023-02-09 15:35
 
 if (!$response.body) $done({});
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
 if (obj.data) {
-  // 酷安-detail
+  // detail
   if (url.includes("/feed/detail")) {
     if (obj.data.hotReplyRows && obj.data.hotReplyRows.length > 0) {
       obj.data.hotReplyRows = obj.data.hotReplyRows.filter((item) => item.id);
@@ -23,18 +23,18 @@ if (obj.data) {
       obj.data.detailSponsorCard = [];
     }
   } else if (url.includes("/feed/replyList")) {
-    // 酷安-replyList
+    // replyList
     if (obj.data.length > 0) {
       obj.data = obj.data.filter((item) => item.id);
     }
   } else if (url.includes("/main/dataList")) {
-    // 酷安-dataList
+    // dataList
     obj.data = obj.data.filter(
       (item) =>
         !(item.entityTemplate === "sponsorCard" || item.title === "精选配件")
     );
   } else if (url.includes("/main/indexV8")) {
-    // 酷安-index
+    // index
     obj.data = obj.data.filter(
       (item) =>
         !(
@@ -46,6 +46,12 @@ if (obj.data) {
           item.title.includes("值得买") ||
           item.title.includes("红包")
         )
+    );
+  } else if (url.includes("/page/dataList")) {
+    // 酷安热搜
+    obj.data = obj.data.filter(
+      (item) =>
+        !(item.title === "酷安热搜")
     );
   }
 }

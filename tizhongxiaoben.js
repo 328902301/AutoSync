@@ -19,7 +19,7 @@ hostname = api.jitizhong.com
 
 
 var chxm1023 = JSON.parse($response.body);
-const vip={
+const vip = {
       "status" : 0,
       "userId" : 304246632,
       "serverTime" : 1675898982,

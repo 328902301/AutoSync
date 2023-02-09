@@ -40,7 +40,7 @@ if (obj.data) {
           id: 151,
           tab_id: "film",
           name: "影视",
-          uri: "bilibili://pgc/cnima-tab",
+          uri: "bilibili://pgc/cinema-tab",
           pos: 4
         }
       ];

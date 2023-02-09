@@ -8,7 +8,7 @@
 
 [zwf234](https://github.com/zwf234/rules)
 
-[小白脸](https://t.me/SURGEPRO) 来自Surge Pro群组
+[小白脸](tg://user?id=414317162) 来自Surge Pro群组
 
 [彭于晏](https://github.com/89996462)
 
@@ -29,5 +29,13 @@
 [yichahucha](https://github.com/yichahucha/surge)
 
 [xOS](https://github.com/xOS/Config/tree/Her/Module/General)
+
+[RuCu6](https://github.com/RuCu6/QuanX)
+
+[yqc007](https://github.com/yqc007/QuantumultX)
+
+[NobyDa](https://github.com/NobyDa)
+
+[kokoryh](https://github.com/kokoryh/Script/tree/master/Surge/module)
 
 暂时就这些，未提及的后续补上。

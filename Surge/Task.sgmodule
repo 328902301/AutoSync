@@ -11,3 +11,7 @@ Sub-Store Sync = type=cron,cronexp=30 */12 * * *,wake-system=1,script-path=https
 机场签到 = type=cron,cronexp=10 5 * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js,script-update-interval=0
 # > 今日黄历
 黄历 = type=cron,cronexp=15 7 * * *,script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js,script-update-interval=0
+# > 阿里云盘 签到
+阿里云盘 = type=cron,cronexp=0 10 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
+# > 哔哩哔哩
+哔哩哔哩 = type=cron,cronexp=10 */12 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js,script-update-interval=0

@@ -1,7 +1,7 @@
 /*
-针对QuantumultX下载AppleStore应用速度过慢的几种解决措施：
-1.为Apple添加分流，走代理
-2.清除QX的DNS缓存，添加定时脚本(每天晚9点清理一次）
+每晚9点清理一次qx的dns缓存
+在配置文件里面添加此定时脚本
+
 [task_local]
 0 21 * * * https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/dns.js
 */

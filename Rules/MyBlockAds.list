@@ -1,4 +1,4 @@
-# 2023-02-10 15:25
+# 2023-02-10 18:15
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -10,8 +10,6 @@ HOST-SUFFIX,lookup.api.bsb.baidu.com,REJECT
 # ======= B ======= #
 # 哔哩哔哩 自动换区支持
 IP-CIDR,203.107.1.1/32,REJECT
-# 哔哩哔哩 proto 支持
-;HOST,grpc.biliapi.net,REJECT
 
 # ======= C ======= #
 # Clue 智库
@@ -54,7 +52,7 @@ HOST,mediation.adnxs.com,REJECT
 HOST,sin3-ib.adnxs.com,REJECT
 
 # ======= R ======= #
-# RARBG 跳转广告
+# RARBG 推广跳转
 HOST,furiousfar.com,REJECT
 HOST,swallowcrockerybless.com,REJECT
 

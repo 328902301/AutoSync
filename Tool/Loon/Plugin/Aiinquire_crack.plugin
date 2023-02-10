@@ -5,8 +5,11 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Aiinquiry.png
 
+[Rewrite]
+^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
+
 [Script]
 http-response ^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire_crack.js, requires-body=true, tag=爱企查解锁, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Aiinquiry.png
 
 [MITM]
-hostname = aiqicha.baidu.com
+hostname = aiqicha.baidu.com, b2baifanfan.baidu.com

@@ -1,4 +1,4 @@
-// 2023-02-10 12:45
+// 2023-02-10 14:20
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -497,12 +497,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/v1/ad/realtime")) {
     // 开屏广告
     if (obj?.ads?.length === 1) {
-      if (obj.ads?.image_base64) {
-        delete obj.ads.image_base64;
-      }
-      if (obj.ads?.click_rects) {
-        delete obj.ads.click_rects;
-      }
+      delete obj.ads[0].image_base64;
+      delete obj.ads[0].monitor_url;
+      delete obj.ads[0].click_rects;
       obj.ads[0].display_duration = 0;
       obj.ads[0].end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       obj.ads[0].adid = "";

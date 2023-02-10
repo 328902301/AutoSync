@@ -1,98 +1,98 @@
-# 2023-02-02 09:15
+# 2023-02-10 09:15
 
 # ======= A ======= #
 # 安全浏览限制解除
-HOST-SUFFIX,u3.ucweb.com,MyBlockAds
-HOST-SUFFIX,safebrowsing.urlsec.qq.com,MyBlockAds
-HOST-SUFFIX,safebrowsing.googleapis.com,MyBlockAds
-HOST-SUFFIX,lookup.api.bsb.baidu.com,MyBlockAds
+HOST-SUFFIX,u3.ucweb.com,REJECT
+HOST-SUFFIX,safebrowsing.urlsec.qq.com,REJECT
+HOST-SUFFIX,safebrowsing.googleapis.com,REJECT
+HOST-SUFFIX,lookup.api.bsb.baidu.com,REJECT
 
 # ======= B ======= #
 # 哔哩哔哩 自动换区支持
-IP-CIDR,203.107.1.1/32,MyBlockAds
+IP-CIDR,203.107.1.1/32,REJECT
 # 哔哩哔哩 proto 支持
-;HOST,grpc.biliapi.net,MyBlockAds
+;HOST,grpc.biliapi.net,REJECT
 
 # ======= C ======= #
 # Clue 智库
-HOST,api.helloclue.com,MyBlockAds
-HOST,brahe.apptimize.com,MyBlockAds
-HOST,collector.clue.run,MyBlockAds
-HOST,mapi.apptimize.com,MyBlockAds
-HOST,md-i-s.apptimize.com,MyBlockAds
-HOST,images.ctfassets.net,MyBlockAds
+HOST,api.helloclue.com,REJECT
+HOST,brahe.apptimize.com,REJECT
+HOST,collector.clue.run,REJECT
+HOST,mapi.apptimize.com,REJECT
+HOST,md-i-s.apptimize.com,REJECT
+HOST,images.ctfassets.net,REJECT
 
 # ======= G ======= #
 # 高德地图
-HOST,amap-aos-info-nogw.amap.com,MyBlockAds
-HOST,amdc.m.taobao.com,MyBlockAds
-HOST,awaken.amap.com,MyBlockAds
-HOST,free-aos-cdn-image.amap.com,MyBlockAds
+HOST,amap-aos-info-nogw.amap.com,REJECT
+HOST,amdc.m.taobao.com,REJECT
+HOST,awaken.amap.com,REJECT
+HOST,free-aos-cdn-image.amap.com,REJECT
 # 工商银行 开屏广告
-HOST,pageviewp.icbc.com.cn,MyBlockAds
+HOST,pageviewp.icbc.com.cn,REJECT
 # 广告联盟
-HOST,is.snssdk.com,MyBlockAds
-HOST,mi.gdt.qq.com,MyBlockAds
-HOST,open.e.kuaishou.com,MyBlockAds
-HOST-SUFFIX,pangolin-sdk-toutiao.com,MyBlockAds
-HOST-SUFFIX,pangolin-sdk-toutiao-b.com,MyBlockAds
+HOST,is.snssdk.com,REJECT
+HOST,mi.gdt.qq.com,REJECT
+HOST,open.e.kuaishou.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
 
 # ======= L ======= #
 # 蓝奏云
-HOST,pos.baidu.com,MyBlockAds
-HOST,statics.woozooo.com,MyBlockAds
+HOST,pos.baidu.com,REJECT
+HOST,statics.woozooo.com,REJECT
 
 # ======= M ======= #
 # 美颜相机
-HOST,aaid.uyunad.com,MyBlockAds
-HOST,adui.tg.meitu.com,MyBlockAds
+HOST,aaid.uyunad.com,REJECT
+HOST,adui.tg.meitu.com,REJECT
 
 # ======= O ======= #
 # Outlook
-HOST,acdn.adnxs.com,MyBlockAds
-HOST,mediation.adnxs.com,MyBlockAds
-HOST,sin3-ib.adnxs.com,MyBlockAds
+HOST,acdn.adnxs.com,REJECT
+HOST,mediation.adnxs.com,REJECT
+HOST,sin3-ib.adnxs.com,REJECT
 
 # ======= R ======= #
 # RARBG 跳转广告
-HOST,furiousfar.com,MyBlockAds
-HOST,swallowcrockerybless.com,MyBlockAds
+HOST,furiousfar.com,REJECT
+HOST,swallowcrockerybless.com,REJECT
 
 # ======= S ======= #
 # 数字联盟
-HOST-SUFFIX,shuzilm.cn,MyBlockAds
+HOST-SUFFIX,shuzilm.cn,REJECT
 
 # ======= T ======= #
 # 贴吧
-IP-CIDR,180.76.76.200/32,MyBlockAds
+IP-CIDR,180.76.76.200/32,REJECT
 
 # ======= W ======= #
 # 微博 头像挂件
-HOST,new.vip.weibo.cn,MyBlockAds
-HOST,vip.storage.weibo.com,MyBlockAds
+HOST,new.vip.weibo.cn,REJECT
+HOST,vip.storage.weibo.com,REJECT
 
 # ======= X ======= #
 # 迅雷 解除版权限制
-;HOST,hub5btmain.v6.shub.sandai.net,MyBlockAds
-;HOST,hub5emu.v6.shub.sandai.net,MyBlockAds
-;HOST,hub5idx.v6.shub.sandai.net,MyBlockAds
+;HOST,hub5btmain.v6.shub.sandai.net,REJECT
+;HOST,hub5emu.v6.shub.sandai.net,REJECT
+;HOST,hub5idx.v6.shub.sandai.net,REJECT
 
 # ======= Y ======= #
 # 云闪付 开屏广告
-HOST,ads.95516.com,MyBlockAds
-HOST,cm-10-138.getui.com,MyBlockAds
-HOST,sdk.open.talk.getui.net,MyBlockAds
-HOST,sdk-conf.getui.com,MyBlockAds
-HOST,switch.cup.com.cn,MyBlockAds
-HOST,tysdk.95516.com,MyBlockAds
+HOST,ads.95516.com,REJECT
+HOST,cm-10-138.getui.com,REJECT
+HOST,sdk.open.talk.getui.net,REJECT
+HOST,sdk-conf.getui.com,REJECT
+HOST,switch.cup.com.cn,REJECT
+HOST,tysdk.95516.com,REJECT
 
 # ======= Z ======= #
 # 知乎
-HOST,appcloud.zhihu.com,MyBlockAds
-HOST,appcloud2.in.zhihu.com,MyBlockAds
-HOST,crash2.zhihu.com,MyBlockAds
-HOST,mqtt.zhihu.com,MyBlockAds
-HOST,sugar.zhihu.com,MyBlockAds
-IP-CIDR,118.89.204.198/32,MyBlockAds
-IP-CIDR,103.41.167.237/32,MyBlockAds
-IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,MyBlockAds
+HOST,appcloud.zhihu.com,REJECT
+HOST,appcloud2.in.zhihu.com,REJECT
+HOST,crash2.zhihu.com,REJECT
+HOST,mqtt.zhihu.com,REJECT
+HOST,sugar.zhihu.com,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+IP-CIDR,103.41.167.237/32,REJECT
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT

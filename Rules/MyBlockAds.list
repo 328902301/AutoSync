@@ -1,4 +1,4 @@
-# 2023-02-10 15:20
+# 2023-02-10 15:25
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -71,6 +71,7 @@ IP-CIDR,180.76.76.200/32,REJECT
 HOST,new.vip.weibo.cn,REJECT
 HOST,vip.storage.weibo.com,REJECT
 HOST,adstrategy.biz.weibo.com,REJECT
+HOST,boot.biz.weibo.com,REJECT
 
 # ======= X ======= #
 # 迅雷 解除版权限制

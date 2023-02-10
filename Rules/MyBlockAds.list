@@ -1,4 +1,4 @@
-# 2023-02-10 09:15
+# 2023-02-10 15:20
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -67,9 +67,10 @@ HOST-SUFFIX,shuzilm.cn,REJECT
 IP-CIDR,180.76.76.200/32,REJECT
 
 # ======= W ======= #
-# 微博 头像挂件
+# 微博 头像挂件,开屏广告
 HOST,new.vip.weibo.cn,REJECT
 HOST,vip.storage.weibo.com,REJECT
+HOST,adstrategy.biz.weibo.com,REJECT
 
 # ======= X ======= #
 # 迅雷 解除版权限制

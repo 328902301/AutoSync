@@ -1,274 +1,274 @@
-# https://github.com/limbopro/Adblock4limbo/blob/main/Adblock4limbo.list
+# https://github.com/REJECTpro/Adblock4REJECT/blob/main/Adblock4REJECT.list
 # 2023-01-06
 
 ##### https://javmost.xyz/
-;HOST,delivery-node-aziz.voe-network.net,limbo
-;HOST,inspiringaccurate.com,limbo
-;HOST,track.aso1.net,limbo
-HOST-SUFFIX,v3.fstats.xyz,limbo
-HOST-SUFFIX,wpadmngr.com,limbo
-HOST-SUFFIX,histats.com,limbo
-HOST-SUFFIX,son-in-lawmorbid.com,limbo
-HOST-SUFFIX,mc.yandex.ru,limbo
-HOST-SUFFIX,amung.us,limbo
-HOST-SUFFIX,widgets.amung.us,limbo
-HOST-SUFFIX,s10.histats.com,limbo
-;HOST-SUFFIX,js.wpadmngr.com,limbo
-;HOST-SUFFIX,suzihaza.com,limbo
-HOST-SUFFIX,eyebrowscrambledlater.com,limbo
-HOST-SUFFIX,a.realsrv.com,limbo
-HOST-SUFFIX,media.aso1.net,limbo
-HOST-SUFFIX,js.wpshsdk.com,limbo
-HOST-SUFFIX,js.wpushsdk.com,limbo
-HOST-SUFFIX,9e77b6e6e2.2e3f31faae.com,limbo
-HOST-SUFFIX,playersb.com,limbo
-;HOST-SUFFIX,dood.la,limbo
+;HOST,delivery-node-aziz.voe-network.net,REJECT
+;HOST,inspiringaccurate.com,REJECT
+;HOST,track.aso1.net,REJECT
+HOST-SUFFIX,v3.fstats.xyz,REJECT
+HOST-SUFFIX,wpadmngr.com,REJECT
+HOST-SUFFIX,histats.com,REJECT
+HOST-SUFFIX,son-in-lawmorbid.com,REJECT
+HOST-SUFFIX,mc.yandex.ru,REJECT
+HOST-SUFFIX,amung.us,REJECT
+HOST-SUFFIX,widgets.amung.us,REJECT
+HOST-SUFFIX,s10.histats.com,REJECT
+;HOST-SUFFIX,js.wpadmngr.com,REJECT
+;HOST-SUFFIX,suzihaza.com,REJECT
+HOST-SUFFIX,eyebrowscrambledlater.com,REJECT
+HOST-SUFFIX,a.realsrv.com,REJECT
+HOST-SUFFIX,media.aso1.net,REJECT
+HOST-SUFFIX,js.wpshsdk.com,REJECT
+HOST-SUFFIX,js.wpushsdk.com,REJECT
+HOST-SUFFIX,9e77b6e6e2.2e3f31faae.com,REJECT
+HOST-SUFFIX,playersb.com,REJECT
+;HOST-SUFFIX,dood.la,REJECT
 
 ##### https://www.tvc.cc/
-HOST-SUFFIX,42yenxh.cn,limbo
-HOST-SUFFIX,dwyhup.cn,limbo
-HOST-SUFFIX,netdjs.net,limbo
-HOST-SUFFIX,pc.stgowan.com,limbo
+HOST-SUFFIX,42yenxh.cn,REJECT
+HOST-SUFFIX,dwyhup.cn,REJECT
+HOST-SUFFIX,netdjs.net,REJECT
+HOST-SUFFIX,pc.stgowan.com,REJECT
 
 ##### https://avple.tv/
-HOST-SUFFIX,tapioni.com,limbo
-;HOST-SUFFIX,107iwh.cn:4032,limbo
-;HOST-SUFFIX,qinhemuye.com:443,limbo
-HOST-SUFFIX,107iwh.cn,limbo
-HOST-SUFFIX,hbhuatie.com,limbo
-HOST-SUFFIX,qinzhihao.com,limbo
-HOST-SUFFIX,nby360.com,limbo
-HOST-SUFFIX,tfosrv.com,limbo
-HOST-SUFFIX,trafforsrv.com,limbo
-HOST-SUFFIX,trafficforce.com,limbo
-HOST-SUFFIX,s.csyfe.com,limbo
+HOST-SUFFIX,tapioni.com,REJECT
+;HOST-SUFFIX,107iwh.cn:4032,REJECT
+;HOST-SUFFIX,qinhemuye.com:443,REJECT
+HOST-SUFFIX,107iwh.cn,REJECT
+HOST-SUFFIX,hbhuatie.com,REJECT
+HOST-SUFFIX,qinzhihao.com,REJECT
+HOST-SUFFIX,nby360.com,REJECT
+HOST-SUFFIX,tfosrv.com,REJECT
+HOST-SUFFIX,trafforsrv.com,REJECT
+HOST-SUFFIX,trafficforce.com,REJECT
+HOST-SUFFIX,s.csyfe.com,REJECT
 
 ##### https://www.tvn.cc/ 韩剧TV
-HOST-SUFFIX,qw2v.changshuohr.net,limbo
-HOST-SUFFIX,wss.haoyundmn.com,limbo
+HOST-SUFFIX,qw2v.changshuohr.net,REJECT
+HOST-SUFFIX,wss.haoyundmn.com,REJECT
 
 ##### missav.com
-HOST-SUFFIX,creative.live.missav.com,limbo
-HOST-SUFFIX,cashewsforlife208.com,limbo
-HOST-SUFFIX,ingest.sentry,limbo
-HOST-SUFFIX,phloxsub73ulata.com,limbo
-HOST-SUFFIX,xxxjmp.com,limbo
-HOST-SUFFIX,pitrespite.com,limbo
-HOST-SUFFIX,alexametrics.com,limbo
-HOST-SUFFIX,designslicensedeep.com,limbo
-HOST-SUFFIX,a.bestcontentfood.top,limbo
-HOST-SUFFIX,tsyndicate.com,limbo
-HOST-SUFFIX,cashewsforlife208.com,limbo
-HOST-SUFFIX,e67repidwnfu7gcha.com,limbo
-HOST-SUFFIX,mc7clurd09pla4nrtat7ion.com,limbo
-HOST-SUFFIX,e67repidwnfu7gcha.com,limbo
-HOST-SUFFIX,wuzbhjpvsf.com,limbo
-HOST-SUFFIX,a.realsrv.com,limbo
+HOST-SUFFIX,creative.live.missav.com,REJECT
+HOST-SUFFIX,cashewsforlife208.com,REJECT
+HOST-SUFFIX,ingest.sentry,REJECT
+HOST-SUFFIX,phloxsub73ulata.com,REJECT
+HOST-SUFFIX,xxxjmp.com,REJECT
+HOST-SUFFIX,pitrespite.com,REJECT
+HOST-SUFFIX,alexametrics.com,REJECT
+HOST-SUFFIX,designslicensedeep.com,REJECT
+HOST-SUFFIX,a.bestcontentfood.top,REJECT
+HOST-SUFFIX,tsyndicate.com,REJECT
+HOST-SUFFIX,cashewsforlife208.com,REJECT
+HOST-SUFFIX,e67repidwnfu7gcha.com,REJECT
+HOST-SUFFIX,mc7clurd09pla4nrtat7ion.com,REJECT
+HOST-SUFFIX,e67repidwnfu7gcha.com,REJECT
+HOST-SUFFIX,wuzbhjpvsf.com,REJECT
+HOST-SUFFIX,a.realsrv.com,REJECT
 
 #####Jable.tv av吃到饱
-HOST-SUFFIX,a.shukriya90.com,limbo
-HOST-SUFFIX,a.shukriya90.com,limbo
-HOST-SUFFIX,creative.xlviirdr.com,limbo
-HOST-SUFFIX,realsrv.com,limbo
-HOST-SUFFIX,asewlfjqwlflkew.com,limbo
-HOST-SUFFIX,uus52.com,limbo
-HOST-SUFFIX,uus58.com,limbo
-HOST-SUFFIX,ddmax20.xyz,limbo
-HOST-SUFFIX,ads.exosrv.com,limbo
-HOST-KEYWORD,exosrv,limbo
-HOST-KEYWORD,asewlfjqwlflkew,limbo
-HOST-SUFFIX,tyrantdb.com,limbo
-HOST-SUFFIX,adserve.work,limbo
+HOST-SUFFIX,a.shukriya90.com,REJECT
+HOST-SUFFIX,a.shukriya90.com,REJECT
+HOST-SUFFIX,creative.xlviirdr.com,REJECT
+HOST-SUFFIX,realsrv.com,REJECT
+HOST-SUFFIX,asewlfjqwlflkew.com,REJECT
+HOST-SUFFIX,uus52.com,REJECT
+HOST-SUFFIX,uus58.com,REJECT
+HOST-SUFFIX,ddmax20.xyz,REJECT
+HOST-SUFFIX,ads.exosrv.com,REJECT
+HOST-KEYWORD,exosrv,REJECT
+HOST-KEYWORD,asewlfjqwlflkew,REJECT
+HOST-SUFFIX,tyrantdb.com,REJECT
+HOST-SUFFIX,adserve.work,REJECT
 
 #####nfmovies.com 奈菲影视
-HOST-KEYWORD,brushshopy,limbo
-HOST-KEYWORD,onenews,limbo
-HOST-SUFFIX,s96.cnzz.com,limbo
-;HOST-SUFFIX,yabo729.com,limbo
+HOST-KEYWORD,brushshopy,REJECT
+HOST-KEYWORD,onenews,REJECT
+HOST-SUFFIX,s96.cnzz.com,REJECT
+;HOST-SUFFIX,yabo729.com,REJECT
 
 ######m.pianku.me/ 手机片库网
-;HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i:4443,limbo
-;HOST-KEYWORD,xn--2qux23c9ziyrq,limbo
-HOST-SUFFIX,xn--3bs795g.zone,limbo
-HOST-SUFFIX,xn--2qux23c9ziyrq.plus,limbo
-HOST-SUFFIX,xn--2qux23c9ziyrq.club,limbo
-HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i,limbo
-HOST-SUFFIX,ddmax20.xyz,limbo
-;HOST-SUFFIX,www.avple.video,limbo
-HOST-SUFFIX,xn--3bs795g.link,limbo
-HOST-SUFFIX,show.suning.beer,limbo
-HOST-SUFFIX,www.govshenzhen.cn,limbo
-HOST-SUFFIX,mm9842.com,limbo
-HOST-KEYWORD,e2wysbacctt1,limbo
-;HOST-SUFFIX,streamtape.com,limbo
+;HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i:4443,REJECT
+;HOST-KEYWORD,xn--2qux23c9ziyrq,REJECT
+HOST-SUFFIX,xn--3bs795g.zone,REJECT
+HOST-SUFFIX,xn--2qux23c9ziyrq.plus,REJECT
+HOST-SUFFIX,xn--2qux23c9ziyrq.club,REJECT
+HOST-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i,REJECT
+HOST-SUFFIX,ddmax20.xyz,REJECT
+;HOST-SUFFIX,www.avple.video,REJECT
+HOST-SUFFIX,xn--3bs795g.link,REJECT
+HOST-SUFFIX,show.suning.beer,REJECT
+HOST-SUFFIX,www.govshenzhen.cn,REJECT
+HOST-SUFFIX,mm9842.com,REJECT
+HOST-KEYWORD,e2wysbacctt1,REJECT
+;HOST-SUFFIX,streamtape.com,REJECT
 
 #####netflav.com Netflav
-HOST-SUFFIX,maphuahin.com,limbo
-HOST-SUFFIX,ggsfq.com,limbo
-HOST-SUFFIX,ad.pornimg.xyz,limbo
-HOST-SUFFIX,yandex.ru,limbo
-HOST-SUFFIX,awaitcola.com,limbo
-;HOST-SUFFIX,jsdelivr.net,limbo
-HOST-SUFFIX,wine-api.net,limbo
-;HOST-KEYWORD,wixsite.com,limbo
-HOST-SUFFIX,exosrv.com,limbo
-HOST-SUFFIX,juicyads.com,limbo
-;HOST-SUFFIX,wixstatic.com,limbo
-HOST-SUFFIX,thumb.fvs.io,limbo
-HOST-SUFFIX,itnuzleafan.com,limbo
-HOST-SUFFIX,oawhaursaith.com,limbo
-HOST-SUFFIX,unreshiramor.com,limbo
-HOST-SUFFIX,regulationprivilegescan.top,limbo
-HOST-SUFFIX,in-page-push.com,limbo
-HOST-SUFFIX,farmcrapsubsist.com,limbo
+HOST-SUFFIX,maphuahin.com,REJECT
+HOST-SUFFIX,ggsfq.com,REJECT
+HOST-SUFFIX,ad.pornimg.xyz,REJECT
+HOST-SUFFIX,yandex.ru,REJECT
+HOST-SUFFIX,awaitcola.com,REJECT
+;HOST-SUFFIX,jsdelivr.net,REJECT
+HOST-SUFFIX,wine-api.net,REJECT
+;HOST-KEYWORD,wixsite.com,REJECT
+HOST-SUFFIX,exosrv.com,REJECT
+HOST-SUFFIX,juicyads.com,REJECT
+;HOST-SUFFIX,wixstatic.com,REJECT
+HOST-SUFFIX,thumb.fvs.io,REJECT
+HOST-SUFFIX,itnuzleafan.com,REJECT
+HOST-SUFFIX,oawhaursaith.com,REJECT
+HOST-SUFFIX,unreshiramor.com,REJECT
+HOST-SUFFIX,regulationprivilegescan.top,REJECT
+HOST-SUFFIX,in-page-push.com,REJECT
+HOST-SUFFIX,farmcrapsubsist.com,REJECT
 
 #####avgle.me
-HOST-SUFFIX,jads.co,limbo
-HOST-SUFFIX,adxadserv.com,limbo
-HOST-SUFFIX,moatads.com,limbo
-HOST-SUFFIX,juicyads.in,limbo
-HOST-SUFFIX,dtscout.com,limbo
+HOST-SUFFIX,jads.co,REJECT
+HOST-SUFFIX,adxadserv.com,REJECT
+HOST-SUFFIX,moatads.com,REJECT
+HOST-SUFFIX,juicyads.in,REJECT
+HOST-SUFFIX,dtscout.com,REJECT
 
 #####dilili.tv
-HOST-SUFFIX,51.la,limbo
-HOST-SUFFIX,51daeka.com,limbo
+HOST-SUFFIX,51.la,REJECT
+HOST-SUFFIX,51daeka.com,REJECT
 
 ######porn
-HOST-SUFFIX,trafficjunky.com,limbo
+HOST-SUFFIX,trafficjunky.com,REJECT
 
 #####xvideos
 
 ##### ja.nyahentai.com
-HOST-SUFFIX,adserver.juicyads.com,limbo
-HOST-SUFFIX,poweredby.jads.co,limbo
-HOST-SUFFIX,jads.co,limbo
+HOST-SUFFIX,adserver.juicyads.com,REJECT
+HOST-SUFFIX,poweredby.jads.co,REJECT
+HOST-SUFFIX,jads.co,REJECT
 
 ##### www.cocomanhua.com
-HOST-SUFFIX,exdynsrv.com,limbo
-;HOST-SUFFIX,cloudfront.net,limbo
-HOST-SUFFIX,d227cncaprzd7y.cloudfront.net,limbo
-HOST-SUFFIX,d10lumateci472.cloudfront.net,limbo
+HOST-SUFFIX,exdynsrv.com,REJECT
+;HOST-SUFFIX,cloudfront.net,REJECT
+HOST-SUFFIX,d227cncaprzd7y.cloudfront.net,REJECT
+HOST-SUFFIX,d10lumateci472.cloudfront.net,REJECT
 
 ##### www.mfkhm.com
-HOST-SUFFIX,new.xiongzhangad.com,limbo
+HOST-SUFFIX,new.xiongzhangad.com,REJECT
 
 ##### m.yhdm.io
-HOST-SUFFIX,dvzk66.cn,limbo
-HOST-SUFFIX,pu0glv.cn,limbo
+HOST-SUFFIX,dvzk66.cn,REJECT
+HOST-SUFFIX,pu0glv.cn,REJECT
 
 ##### hmtv.me
-HOST-SUFFIX,sentry.io,limbo
+HOST-SUFFIX,sentry.io,REJECT
 
 ##### www.porntrex.com/
-;HOST-SUFFIX,ads.bullionyield.com,limbo
+;HOST-SUFFIX,ads.bullionyield.com,REJECT
 
 ##### https://www.zhenbuka.com/
-HOST-KEYWORD,dlads,limbo
-HOST,dagonghuzhu.com,limbo
-;HOST-SUFFIX,byteimg.com,limbo
-HOST-KEYWORD,xxshuyuan,limbo
-HOST-KEYWORD,haowanyou,limbo
-HOST-KEYWORD,dat8,limbo
-HOST-KEYWORD,112wan,limbo
-HOST-KEYWORD,dfkj8,limbo
-HOST-KEYWORD,mifengv,limbo
-HOST-KEYWORD,lieyou,limbo
-HOST-KEYWORD,789htbet,limbo
-HOST-KEYWORD,mdapp09,limbo
-HOST-KEYWORD,juruigj,limbo
-;HOST-KEYWORD,mmiyue,limbo
+HOST-KEYWORD,dlads,REJECT
+HOST,dagonghuzhu.com,REJECT
+;HOST-SUFFIX,byteimg.com,REJECT
+HOST-KEYWORD,xxshuyuan,REJECT
+HOST-KEYWORD,haowanyou,REJECT
+HOST-KEYWORD,dat8,REJECT
+HOST-KEYWORD,112wan,REJECT
+HOST-KEYWORD,dfkj8,REJECT
+HOST-KEYWORD,mifengv,REJECT
+HOST-KEYWORD,lieyou,REJECT
+HOST-KEYWORD,789htbet,REJECT
+HOST-KEYWORD,mdapp09,REJECT
+HOST-KEYWORD,juruigj,REJECT
+;HOST-KEYWORD,mmiyue,REJECT
 
 ##### pornhub.com
-HOST-SUFFIX,etahub.com,limbo
-HOST-SUFFIX,evtubescms.phncdn.com,limbo
+HOST-SUFFIX,etahub.com,REJECT
+HOST-SUFFIX,evtubescms.phncdn.com,REJECT
 
 ##### www.hptoon.com
-HOST-SUFFIX,22c.in,limbo
-HOST-SUFFIX,imgxxx.shunxincar.cn,limbo
-;HOST-SUFFIX,cc58.oss-cn-beijing.aliyuncs.com,limbo
-;HOST-SUFFIX,oss-accelerate.aliyuncs.com,limbo
-HOST-SUFFIX,kk.braincf.com,limbo
-HOST-SUFFIX,run.haireig.com,limbo
-HOST-SUFFIX,d.zxptw.cn,limbo
-HOST-SUFFIX,new.xiongzhangad.com,limbo
-HOST-SUFFIX,js.users.51.la,limbo
-HOST-SUFFIX,maxwellsery.com,limbo
-HOST-SUFFIX,annabelleabe.com,limbo
+HOST-SUFFIX,22c.in,REJECT
+HOST-SUFFIX,imgxxx.shunxincar.cn,REJECT
+;HOST-SUFFIX,cc58.oss-cn-beijing.aliyuncs.com,REJECT
+;HOST-SUFFIX,oss-accelerate.aliyuncs.com,REJECT
+HOST-SUFFIX,kk.braincf.com,REJECT
+HOST-SUFFIX,run.haireig.com,REJECT
+HOST-SUFFIX,d.zxptw.cn,REJECT
+HOST-SUFFIX,new.xiongzhangad.com,REJECT
+HOST-SUFFIX,js.users.51.la,REJECT
+HOST-SUFFIX,maxwellsery.com,REJECT
+HOST-SUFFIX,annabelleabe.com,REJECT
 
 ##### https://91mjw.com/
-HOST-SUFFIX,jidukeji.com,limbo
-HOST-SUFFIX,atmib.com,limbo
-HOST-SUFFIX,bjzysd.net,limbo
-HOST-SUFFIX,iycwl.com,limbo
-HOST-SUFFIX,haoyundm.com,limbo
-HOST-SUFFIX,qqq123987.site,limbo
-HOST-SUFFIX,qweewq2021.online,limbo
-HOST-SUFFIX,qqq123987.site,limbo
-HOST-SUFFIX,jianxinshanghai.com,limbo
-HOST-SUFFIX,js.51toubu.com,limbo
-HOST-SUFFIX,img.hylmxing.com,limbo
-HOST-SUFFIX,777.000123456789.space,limbo
-HOST-SUFFIX,bhichong.com,limbo
-HOST-SUFFIX,tskdfjksldk.sdhsgcj.com,limbo
-HOST-SUFFIX,haoyuntj.com,limbo
+HOST-SUFFIX,jidukeji.com,REJECT
+HOST-SUFFIX,atmib.com,REJECT
+HOST-SUFFIX,bjzysd.net,REJECT
+HOST-SUFFIX,iycwl.com,REJECT
+HOST-SUFFIX,haoyundm.com,REJECT
+HOST-SUFFIX,qqq123987.site,REJECT
+HOST-SUFFIX,qweewq2021.online,REJECT
+HOST-SUFFIX,qqq123987.site,REJECT
+HOST-SUFFIX,jianxinshanghai.com,REJECT
+HOST-SUFFIX,js.51toubu.com,REJECT
+HOST-SUFFIX,img.hylmxing.com,REJECT
+HOST-SUFFIX,777.000123456789.space,REJECT
+HOST-SUFFIX,bhichong.com,REJECT
+HOST-SUFFIX,tskdfjksldk.sdhsgcj.com,REJECT
+HOST-SUFFIX,haoyuntj.com,REJECT
 
 ##### https://m.biquge.com.cn/
-HOST-SUFFIX,bizhixiang.cn,limbo
-HOST-SUFFIX,jspassport.ssl.qhimg.com,limbo
+HOST-SUFFIX,bizhixiang.cn,REJECT
+HOST-SUFFIX,jspassport.ssl.qhimg.com,REJECT
 
 ##### https://gimy.tv/ 剧迷tv
-HOST-SUFFIX,ads.superad.cc,limbo
+HOST-SUFFIX,ads.superad.cc,REJECT
 
 ##### https://javfan.one/ JAVFAN
-HOST-SUFFIX,isboost.co.jp,limbo
-HOST-SUFFIX,boost-next.co.jp,limbo
-HOST-SUFFIX,ad-nex.com,limbo
-HOST-SUFFIX,aaacompany.net,limbo
-HOST-SUFFIX,d24ak3f2b.top,limbo
-HOST-SUFFIX,blastcahs.com,limbo
+HOST-SUFFIX,isboost.co.jp,REJECT
+HOST-SUFFIX,boost-next.co.jp,REJECT
+HOST-SUFFIX,ad-nex.com,REJECT
+HOST-SUFFIX,aaacompany.net,REJECT
+HOST-SUFFIX,d24ak3f2b.top,REJECT
+HOST-SUFFIX,blastcahs.com,REJECT
 
 ##### javtsunami.com
-HOST-SUFFIX,alexametrics.com,limbo
+HOST-SUFFIX,alexametrics.com,REJECT
 
 ##### https://hpjav.tv/ JAVFAN #NSFW
-HOST-SUFFIX,wpncdn.com,limbo
-HOST-SUFFIX,exosrv.com,limbo
-HOST-SUFFIX,jads.co,limbo
-HOST-KEYWORD,toateeli,limbo
-HOST-KEYWORD,greenplasticdua,limbo
-HOST-KEYWORD,bongacash,limbo
-HOST-KEYWORD,bngpt,limbo
-HOST-KEYWORD,stunninglover,limbo
-HOST-KEYWORD,jads,limbo
-HOST-KEYWORD,trwl1,limbo
-;HOST-KEYWORD,vidoza,limbo
-HOST-KEYWORD,o333o,limbo
-HOST-SUFFIX,ad.pornimg.xyz,limbo
+HOST-SUFFIX,wpncdn.com,REJECT
+HOST-SUFFIX,exosrv.com,REJECT
+HOST-SUFFIX,jads.co,REJECT
+HOST-KEYWORD,toateeli,REJECT
+HOST-KEYWORD,greenplasticdua,REJECT
+HOST-KEYWORD,bongacash,REJECT
+HOST-KEYWORD,bngpt,REJECT
+HOST-KEYWORD,stunninglover,REJECT
+HOST-KEYWORD,jads,REJECT
+HOST-KEYWORD,trwl1,REJECT
+;HOST-KEYWORD,vidoza,REJECT
+HOST-KEYWORD,o333o,REJECT
+HOST-SUFFIX,ad.pornimg.xyz,REJECT
 
 ##### https://javgg.net/
-HOST-SUFFIX,x2sfa.javgg.eu,limbo
-HOST-SUFFIX,xd3r.javgg.eu,limbo
-HOST-SUFFIX,p242.plainwrk.name,limbo
+HOST-SUFFIX,x2sfa.javgg.eu,REJECT
+HOST-SUFFIX,xd3r.javgg.eu,REJECT
+HOST-SUFFIX,p242.plainwrk.name,REJECT
 
 ##### https://www5.javmost.com/
-HOST-KEYWORD,histats,limbo
-HOST-KEYWORD,dtscout,limbo
-HOST-KEYWORD,adform,limbo
-HOST-KEYWORD,mathtag,limbo
-HOST-KEYWORD,pagespeed-mod,limbo
-HOST-KEYWORD,in-page-push,limbo
+HOST-KEYWORD,histats,REJECT
+HOST-KEYWORD,dtscout,REJECT
+HOST-KEYWORD,adform,REJECT
+HOST-KEYWORD,mathtag,REJECT
+HOST-KEYWORD,pagespeed-mod,REJECT
+HOST-KEYWORD,in-page-push,REJECT
 
 #### disqus
-HOST-SUFFIX,referrer.disqus.com,limbo
-HOST-SUFFIX,links.services.disqus.com,limbo
-HOST-SUFFIX,disqusads.com,limbo
-HOST,glitter.services.disqus.com,limbo
-HOST,juggler.services.disqus.com,limbo
-HOST,tempest.services.disqus.com,limbo
-HOST,mc.viglink.com,limbo
-HOST,qa.viglink.com,limbo
-HOST,ns4.viglink.com,limbo
-HOST,ns2.viglink.com,limbo
-HOST,ns3.viglink.com,limbo
-HOST,apicdn.viglink.com,limbo
-HOST-SUFFIX,cdn.viglink.com,limbo
+HOST-SUFFIX,referrer.disqus.com,REJECT
+HOST-SUFFIX,links.services.disqus.com,REJECT
+HOST-SUFFIX,disqusads.com,REJECT
+HOST,glitter.services.disqus.com,REJECT
+HOST,juggler.services.disqus.com,REJECT
+HOST,tempest.services.disqus.com,REJECT
+HOST,mc.viglink.com,REJECT
+HOST,qa.viglink.com,REJECT
+HOST,ns4.viglink.com,REJECT
+HOST,ns2.viglink.com,REJECT
+HOST,ns3.viglink.com,REJECT
+HOST,apicdn.viglink.com,REJECT
+HOST-SUFFIX,cdn.viglink.com,REJECT

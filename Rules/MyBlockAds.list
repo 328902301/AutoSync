@@ -1,4 +1,4 @@
-# 2023-02-10 19:40
+# 2023-02-10 20:10
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -65,6 +65,13 @@ HOST-SUFFIX,shuzilm.cn,REJECT
 IP-CIDR,180.76.76.200/32,REJECT
 
 # ======= W ======= #
+# 网易云音乐
+HOST,gdt.qq.com,REJECT
+HOST,httpdns.n.netease.com,REJECT
+HOST,iadmat.nosdn.127.net,REJECT
+HOST,iadmusicmat.music.126.net,REJECT
+HOST,iadmusicmatvideo.music.126.net,REJECT
+HOST-SUFFIX,163jiasu.com,REJECT
 # 微博 头像挂件
 HOST,new.vip.weibo.cn,REJECT
 HOST,vip.storage.weibo.com,REJECT

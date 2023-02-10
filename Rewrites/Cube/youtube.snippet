@@ -1,5 +1,5 @@
 # ======= YouTube ======= #
-# 2023-02-03 15:55
+# 2023-02-10 18:45
 
 # ⚠️⚠️
 # Quantumult X 必须在 [general] 部分加入以下代码: udp_drop_list=443
@@ -7,25 +7,17 @@
 # 开启画中画,后台播放
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/account\/get_setting\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 
-# 去除首页瀑布流广告
+# 首页 瀑布流,上传按钮,短视频
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-
-# 去除底部上传按钮
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/guide\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-
-# 去除播放页广告
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/next\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-
-# 去除Shorts内视频广告
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/reel\/reel_watch_sequence\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 
-# 去除搜索页面广告
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/search\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-
-# 去除播放过程插播广告
+# 播放页 插播广告,贴片广告
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/next\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-
-# 去除播放器贴片广告
 ^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad url reject-200
+
+# 搜索页
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/search\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 
 hostname = rr*.googlevideo.com, youtubei.googleapis.com

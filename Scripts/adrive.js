@@ -1,6 +1,8 @@
-// 2023-02-11 16:25
+// 2023-02-11 22:30
 
+if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
+
 const item = [
   "recentUsed", // 最近在看
   "coreFeatures", // 顶部图标
@@ -10,11 +12,8 @@ const item = [
   "signIn" // 顶部签到
 ];
 
-if (!$response.body) {
-  $done({});
-} else {
-  item.forEach((i) => {
-    delete obj[i];
-  });
-  $done({ body: JSON.stringify(obj) });
-}
+item.forEach((i) => {
+  delete obj[i];
+});
+
+$done({ body: JSON.stringify(obj) });

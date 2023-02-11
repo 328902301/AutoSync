@@ -1,4 +1,4 @@
-# 2023-02-10 20:10
+# 2023-02-11 09:50
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -47,7 +47,7 @@ HOST,adui.tg.meitu.com,REJECT
 
 # ======= O ======= #
 # Outlook
-HOST,acdn.adnxs.com,REJECT
+;HOST,acdn.adnxs.com,REJECT
 HOST,mediation.adnxs.com,REJECT
 HOST,sin3-ib.adnxs.com,REJECT
 

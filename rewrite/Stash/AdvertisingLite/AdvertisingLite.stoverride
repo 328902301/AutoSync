@@ -1,11 +1,11 @@
 name: 复写去广告(严格版)
-desc: 最后更新时间 2023-02-09 02:14:59
+desc: 最后更新时间 2023-02-12 02:14:58
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
-# reject: 495
-# mitm: 408
+# reject: 496
+# mitm: 409
 # force-http-engine-hosts: 6
-# total: 909
+# total: 911
 
 
 
@@ -68,6 +68,7 @@ http:
     - ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
     - ^https?:\/\/api-release\.wuta-cam\.com\/ad_tree - reject
     - ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
+    - ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad - reject
     - ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
     - ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
     - ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
@@ -608,6 +609,7 @@ http:
     - "api.yizhibo.com"
     - "api.yonghuivip.com"
     - "api.zhuishushenqi.com"
+    - "api3.cls.cn"
     - "api4.bybutter.com"
     - "apis.lifeweek.com.cn"
     - "app-api.jinse.com"

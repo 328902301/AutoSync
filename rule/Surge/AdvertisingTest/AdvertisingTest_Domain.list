@@ -1,15 +1,15 @@
 # NAME: AdvertisingTest
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-11 10:32:13
+# UPDATED: 2023-02-12 02:08:46
 # DESCRIPTION: 分流规则中含有URL-REGEX类型，建议搭配MITM使用
 # AND: 1
-# DOMAIN: 11493
+# DOMAIN: 11506
 # DOMAIN-KEYWORD: 264
-# DOMAIN-SUFFIX: 103627
+# DOMAIN-SUFFIX: 103626
 # IP-CIDR: 241
 # URL-REGEX: 285
-# TOTAL: 115911
+# TOTAL: 115923
 00-gov.cn
 0026645142c89aeb1.com
 006a039c957c142bb.com
@@ -1002,6 +1002,7 @@ alma-cmp.almamedia.io
 alnsvbmp.com
 alsoknowsit.com
 alszaaceaz.com
+alunitemoste.com
 alvdtjrb.com
 alvfzqwkb.com
 alwkvwdxqojyce.com
@@ -1312,6 +1313,7 @@ babsedrinhi.info
 babsitlehaphow.com
 baby.jiangongjixie.cn
 babynameready.dl.tb.ask.com
+backseatrunners.com
 badgirlz.org
 badsamps.com
 badshores.com
@@ -3105,6 +3107,7 @@ exjozegvbaresw.com
 exkruwviyy.com
 exlpor.com
 exoclickz.com
+expdirclk.com
 expedia.com.hk
 explainidentifycoding.info
 expogrim.com
@@ -3283,6 +3286,7 @@ ficrwcptjvfpd.com
 fiechaev.com
 fiewqoyhdkdcm.com
 fifnonxntvaszg.com
+fighla.com
 file.ppbk9.com
 filecatcher.xyz
 fileloadr.com
@@ -4118,6 +4122,7 @@ hoochoor.com
 hooraico.com
 hoortols.org
 hoozique.net
+hopefullyactively.com
 hopeyouxue.com
 hoppr.co
 hopurl.org
@@ -4897,6 +4902,7 @@ jttoioquq.com
 jtuvgczhvuptzn.com
 juedische-kammerphilharmonie.de
 juggler.services.disqus.com
+jugixgjqx.xyz
 juhepen.com
 juiceads.net
 juicypussyclips.com
@@ -5546,6 +5552,7 @@ luckypure.info
 luckyshine.info
 luckysuccess.info
 luckytidy.info
+ludocsbho.com
 ludovwmhazsx.com
 lukir.info
 lulrtvfcy.com
@@ -7034,6 +7041,7 @@ pod.manplay.com
 podbwdcrmjufmr.com
 podimxqmqguj.com
 podzemi.myotis.info
+poflix.com
 pogdlwpmck.com
 poirreleast.club
 pokachi.net
@@ -8108,6 +8116,7 @@ sgqcvfjvr.onet.pl
 sgqqhydoovcd.com
 sgrreqyxvigwuh.com
 sgs.us.com
+sgtm.inet.se
 sgutelyg.com
 sgvac.com
 sgvuexlhbgpylr.com
@@ -8344,6 +8353,7 @@ ssraju3n.com
 sssyabhje.com
 ssucvdbxxlibn.com
 ssypntfmi.com
+stabam.com
 star.86uk.com
 startraint.com
 stat-data.net
@@ -8888,6 +8898,7 @@ tx2play1.douyucdn.cn
 tx2play2.douyucdn.cn
 txkjad.com
 txnpdfvqkuzrd.com
+txrx.bol.com
 txwdabikzvw.com
 txwfpcfdgepzmp.com
 txyylwegpdfsda.com
@@ -9345,6 +9356,7 @@ victor.connectcloud.ch
 video.youzu.com
 videoindigen.com
 videotracker.washingtonpost.com
+vidscity.info
 vidsdelivery.com
 view-ads.de
 viewex.co.uk
@@ -10681,6 +10693,7 @@ xghfi97mk6.com
 xgievxfxhy.com
 xgipqvffxrgs.com
 xgmlmmulciz.com
+xgsgougog.com
 xgspfcpxt.com
 xgznkebnjme.com
 xh83333.com
@@ -79157,6 +79170,7 @@ zzxosget.com
 .pirt.pro
 .pirtecho.net
 .pisism.com
+.pistolsizehoe.com
 .pistraving.co
 .pistyll.bleacherreport.com
 .pitadt.com
@@ -102505,7 +102519,6 @@ zzxosget.com
 .trackjs.com
 .trackkas.com
 .trackla.stackla.com
-.tracklink-tel.de
 .tracklog.58.com
 .trackmackweldon.com
 .trackmethod.com
@@ -102642,7 +102655,6 @@ zzxosget.com
 .trail.thomsonreuters.com.au
 .trail.thomsonreuters.in
 .trailbox.net
-.traildelsfars.com
 .trailers.to
 .trailheadapp.com
 .trailssuecism.com

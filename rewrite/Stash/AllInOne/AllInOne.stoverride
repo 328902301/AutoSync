@@ -1,15 +1,15 @@
 name: AllInOne
-desc: 最后更新时间 2023-02-11 02:13:06
+desc: 最后更新时间 2023-02-12 02:14:49
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
 # domain: 5
 # http-request-script: 1
-# http-response-script: 31
+# http-response-script: 32
 # redirect: 8
-# reject: 506
-# mitm: 560
+# reject: 507
+# mitm: 562
 # force-http-engine-hosts: 6
-# total: 1117
+# total: 1121
 
 
 
@@ -81,6 +81,7 @@ http:
     - ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
     - ^https?:\/\/api-release\.wuta-cam\.com\/ad_tree - reject
     - ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
+    - ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad - reject
     - ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
     - ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
     - ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
@@ -549,14 +550,14 @@ http:
       argument: 
     # BiliBili_开屏去广告
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
-      name: bilibili_plus.js_243478f2
+      name: startup.js_5686edbb
       type: response
       require-body: true
       timeout: 30
       argument: 
     # Fa米家_开屏去广告
     - match: ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/start\/ad
-      name: famijia_checkin.js_515b8868
+      name: startup.js_5686edbb
       type: response
       require-body: true
       timeout: 30
@@ -738,13 +739,20 @@ http:
       argument: 
     # 嘀嗒出行_开屏去广告
     - match: ^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?
-      name: bilibili_plus.js_243478f2
+      name: startup.js_5686edbb
       type: response
       require-body: true
       timeout: 30
       argument: 
     # 多点_开屏去广告
     - match: ^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic
+      name: startup.js_5686edbb
+      type: response
+      require-body: true
+      timeout: 30
+      argument: 
+    # 爱奇艺_开屏去广告
+    - match: ^https?:\/\/(t7z|kjp)\.cupid\.iqiyi\.com\/mixer\?
       name: startup.js_5686edbb
       type: response
       require-body: true
@@ -779,6 +787,7 @@ http:
     - "*.bebi.com"
     - "*.chelaile.net.cn"
     - "*.chelaileapp.cn"
+    - "*.cupid.iqiyi.com"
     - "*.google.cn"
     - "*.hoopchina.com"
     - "*.iiilab.com"
@@ -914,6 +923,7 @@ http:
     - "api.yonghuivip.com"
     - "api.zhihu.com"
     - "api.zhuishushenqi.com"
+    - "api3.cls.cn"
     - "api4.bybutter.com"
     - "apimobile.meituan.com"
     - "apis.lifeweek.com.cn"
@@ -1336,12 +1346,6 @@ http:
     - "zone.guiderank-app.com"
 
 script-providers:
-  bilibili_plus.js_243478f2:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-    interval: 86400
-  famijia_checkin.js_515b8868:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js
-    interval: 86400
   smzdm_remove_ads.js_bf08360d:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
     interval: 86400

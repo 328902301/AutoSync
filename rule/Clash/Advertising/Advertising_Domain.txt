@@ -1,12 +1,12 @@
 # NAME: Advertising
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-11 10:31:26
+# UPDATED: 2023-02-12 02:07:49
 # DOMAIN: 15561
 # DOMAIN-KEYWORD: 76
-# DOMAIN-SUFFIX: 81527
+# DOMAIN-SUFFIX: 81757
 # IP-CIDR: 238
-# TOTAL: 97402
+# TOTAL: 97632
 03.lzzncm.com
 04.lzzncm.com
 103.21.91.144
@@ -16192,6 +16192,7 @@ opencloud.wostore.cn
 .24affiliates.com
 .24businessnews.com
 .24counter.com
+.24d.ir
 .24h-ad.24hstatic.com
 .24h-ipad-ad.24hstatic.com
 .24kad.com
@@ -18386,6 +18387,7 @@ opencloud.wostore.cn
 .acsbap.com
 .acscdn.com
 .acsentia.fr
+.acsshufxnu.com
 .acstat.com
 .actiflex.org
 .actio.systems
@@ -18718,6 +18720,7 @@ opencloud.wostore.cn
 .ad.szhsx.net
 .ad.tapthislink.com
 .ad.tbn.ru
+.ad.technews-iran.com
 .ad.tehno-rating.ru
 .ad.tencentmusic.com
 .ad.terra.com
@@ -18728,7 +18731,6 @@ opencloud.wostore.cn
 .ad.tv2.no
 .ad.universcine.com
 .ad.usatoday.com
-.ad.utop.ir
 .ad.valuecalling.com
 .ad.velomania.ru
 .ad.vhls.ru.com
@@ -19111,6 +19113,7 @@ opencloud.wostore.cn
 .adenc.co.kr
 .adengage.com
 .adengine.rt.ru
+.adengine.telewebion.com
 .adentifi.com
 .adenza.dev
 .adeprimo.se
@@ -19133,6 +19136,7 @@ opencloud.wostore.cn
 .adexchangetracker.com
 .adexcite.com
 .adexmedias.com
+.adexo.ir
 .adexpansion.com
 .adexpose.com
 .adexprt.me
@@ -19309,6 +19313,7 @@ opencloud.wostore.cn
 .adition.net
 .aditizanna.com
 .aditize.com
+.adivery.com
 .adizio.com
 .adjaco.com
 .adjal.com
@@ -19499,6 +19504,7 @@ opencloud.wostore.cn
 .adncdnend.azureedge.net
 .adne.info
 .adnectar.com
+.adnegah.net
 .adnemo.com
 .adnesia.com
 .adnet.asahi.com
@@ -19656,6 +19662,7 @@ opencloud.wostore.cn
 .adprs.net
 .adpstatic.com
 .adpublisher.s3.amazonaws.com
+.adpulse.ir
 .adpush.goforandroid.com
 .adpushup.com
 .adq.nextag.com
@@ -19798,7 +19805,10 @@ opencloud.wostore.cn
 .ads.affiliates.match.com
 .ads.ahds.ac.uk
 .ads.aitype.net
+.ads.akairan.com
+.ads.akaup.com
 .ads.al.com
+.ads.alaatv.com
 .ads.aland.com
 .ads.albawaba.com
 .ads.alive.com
@@ -19921,6 +19931,7 @@ opencloud.wostore.cn
 .ads.currantbun.com
 .ads.cvut.cz
 .ads.cybersales.cz
+.ads.dabi.ir
 .ads.dada.it
 .ads.dailycamera.com
 .ads.ddj.com
@@ -19977,7 +19988,6 @@ opencloud.wostore.cn
 .ads.expekt.com
 .ads.expekt.se
 .ads.fairfax.com.au
-.ads.farakav.com
 .ads.fastcomgroup.it
 .ads.fasttrack-ignite.com
 .ads.faxo.com
@@ -20103,6 +20113,7 @@ opencloud.wostore.cn
 .ads.justhungry.com
 .ads.kabooaffiliates.com
 .ads.kaktuz.net
+.ads.karzar.net
 .ads.kelbymediagroup.com
 .ads.kelkoo.com
 .ads.kiemsat.vn
@@ -20307,6 +20318,7 @@ opencloud.wostore.cn
 .ads.rootzoo.com
 .ads.ruralpress.com
 .ads.sacbee.com
+.ads.safarme.ir
 .ads.samsung.com
 .ads.satyamonline.com
 .ads.scabee.com
@@ -20729,6 +20741,7 @@ opencloud.wostore.cn
 .adside.com
 .adsiduous.com
 .adsignals.com
+.adsima.net
 .adsimg.kompas.com
 .adsimilis.com
 .adsinimages.com
@@ -20737,6 +20750,7 @@ opencloud.wostore.cn
 .adsixmedia.fr
 .adsjumbo.com
 .adskape.ru
+.adskav.com
 .adskeeper.co.uk
 .adskeeper.com
 .adsklick.de
@@ -20973,6 +20987,7 @@ opencloud.wostore.cn
 .adtotal.pl
 .adtpix.com
 .adtr.io
+.adtrace.io
 .adtrace.org
 .adtrack.king.com
 .adtracker.jpchd.veraxen.com
@@ -21168,6 +21183,7 @@ opencloud.wostore.cn
 .advmedialtd.com
 .advmusic.com
 .advmusic.net
+.advn.ir
 .advnet.xyz
 .advnetwork.net
 .advnt.com
@@ -21204,6 +21220,9 @@ opencloud.wostore.cn
 .adwile.com
 .adwile.net
 .adwired.mobi
+.adwised.azureedge.net
+.adwised.com
+.adwisedfs.com
 .adwist.ru
 .adwitty.com
 .adwods.com
@@ -21391,6 +21410,7 @@ opencloud.wostore.cn
 .affil.top4football.com
 .affilae.com
 .affilbox.cz
+.affili.ir
 .affili.net
 .affili.st
 .affiliago.it
@@ -21405,6 +21425,7 @@ opencloud.wostore.cn
 .affiliate.astraweb.com
 .affiliate.baazee.com
 .affiliate.chiaki.vn
+.affiliate.digikala.com
 .affiliate.dtiserv.com
 .affiliate.exabytes.com.my
 .affiliate.gameladen.com
@@ -21415,6 +21436,7 @@ opencloud.wostore.cn
 .affiliate.k4.tinhte.vn
 .affiliate.klook.com
 .affiliate.konibet.com
+.affiliate.malltina.com
 .affiliate.mediatemple.net
 .affiliate.mogs.com
 .affiliate.offgamers.com
@@ -21475,6 +21497,7 @@ opencloud.wostore.cn
 .affilimatch.de
 .affilimate.com
 .affilimate.io
+.affilio.ir
 .affilired.com
 .affiliscout.com
 .affiliserve.com
@@ -21504,6 +21527,7 @@ opencloud.wostore.cn
 .affpros.net
 .affrh2023.com
 .affsnetwork.com
+.affstat.digikala.com
 .afftrack.com
 .afftrack.pro
 .afftrack001.com
@@ -21862,6 +21886,7 @@ opencloud.wostore.cn
 .aistolsu.net
 .aistthatheha.xyz
 .aitaoshegnqian.cn
+.aitrades.com
 .aiupiyd.cn
 .aivalabs.com
 .aivento.cn
@@ -22293,6 +22318,7 @@ opencloud.wostore.cn
 .amaprop.net
 .amarceusan.com
 .amarfa.ir
+.amaroid.net
 .amasssentimentaldamaging.com
 .amassshack.com
 .amateurcouplewebcam.com
@@ -22367,6 +22393,7 @@ opencloud.wostore.cn
 .amjoltiktor.com
 .amjtizfeqwz.com
 .amltaqap.com
+.ammaar.delivery.zeerak.cloud
 .amnet.tw
 .amnoctowlan.club
 .amoad.com
@@ -22438,13 +22465,16 @@ opencloud.wostore.cn
 .analy1.dtnnetwork.be
 .analysecrappy.com
 .analysis.afreecatv.com
+.analysis.faradars.org
 .analysis.fc2.com
 .analysis.focalprice.com
 .analysistools.net
+.analyt.ir
 .analyti.io
 .analytic-client.cuntempire.com
 .analytic-client.playful-fairies.com
 .analytic.baodantoc.vn
+.analytic.magland.ir
 .analytic.piri.net
 .analytic.press
 .analytic.rocks
@@ -22453,6 +22483,8 @@ opencloud.wostore.cn
 .analytic20.detik.com
 .analytically.net
 .analyticapi.piri.net
+.analytics-2.aasaam.com
+.analytics-3.aasaam.com
 .analytics-api.a-f.io
 .analytics-api.dvdfab.at
 .analytics-api.dvdfab.cn
@@ -22491,6 +22523,7 @@ opencloud.wostore.cn
 .analytics.appsbnet.com.br
 .analytics.appservice.tech
 .analytics.artirix.com
+.analytics.asiatech.ir
 .analytics.atlassian.com
 .analytics.bachtuongphat.com
 .analytics.bi.encuentra24.com
@@ -22521,6 +22554,7 @@ opencloud.wostore.cn
 .analytics.dnsfilter.com
 .analytics.dpd.com
 .analytics.dsyqt.com
+.analytics.dunro.com
 .analytics.e1.ru
 .analytics.e2estudios.com
 .analytics.edgekey.net
@@ -22536,6 +22570,7 @@ opencloud.wostore.cn
 .analytics.fatmedia.io
 .analytics.femalefirst.co.uk
 .analytics.fontanka.ru
+.analytics.football360.ir
 .analytics.fs-bdash.com
 .analytics.fsoft.com.vn
 .analytics.gate.co.id
@@ -22552,6 +22587,7 @@ opencloud.wostore.cn
 .analytics.icons8.com
 .analytics.imponline.com
 .analytics.inlinemanual.com
+.analytics.irancell.ir
 .analytics.iss.one
 .analytics.jamstackvietnam.com
 .analytics.jodelapis.com
@@ -22561,6 +22597,7 @@ opencloud.wostore.cn
 .analytics.kongregate.io
 .analytics.kurocore.com
 .analytics.kwebsoft.com
+.analytics.labbayk.ir
 .analytics.lekumo.jp
 .analytics.liveact-vault.com
 .analytics.loop-cloud.de
@@ -22570,7 +22607,6 @@ opencloud.wostore.cn
 .analytics.mall.tv
 .analytics.map.qq.com
 .analytics.marquiz.ru
-.analytics.metrix.ir
 .analytics.mfocus.vn
 .analytics.mobile.walmart.com
 .analytics.mobilegamestats.com
@@ -22579,6 +22615,7 @@ opencloud.wostore.cn
 .analytics.moneycat.vn
 .analytics.move.ru
 .analytics.msnbc.msn.com
+.analytics.nastooh.ir
 .analytics.netcent.se
 .analytics.newsinc.com
 .analytics.nextopia.net
@@ -23035,6 +23072,7 @@ opencloud.wostore.cn
 .api.innomdc.com
 .api.iterative.ly
 .api.itpub.cloud
+.api.karpishe.com
 .api.kiip.me
 .api.lab.amplitude.com
 .api.limbik.com
@@ -23086,6 +23124,7 @@ opencloud.wostore.cn
 .apl.headlines.pw
 .apleasantsit.xyz
 .aplentytwo.com
+.apm.bama.ir
 .apm.crittercism.com
 .apmebf.com
 .apnwcakifv.com
@@ -23272,6 +23311,7 @@ opencloud.wostore.cn
 .aquabibchawed.website
 .aquaplatform.com
 .aquavitpathway.com
+.aqylmil.cn
 .ar-x.site
 .ar.5.p2l.info
 .ar.hao123.com
@@ -23382,6 +23422,7 @@ opencloud.wostore.cn
 .arnofourgu.com
 .arodvsmindxec.com
 .arointbarra.com
+.arongroups.co
 .arouac.com
 .aroundpayslips.com
 .arousedimitateplane.com
@@ -23414,6 +23455,7 @@ opencloud.wostore.cn
 .arsonunemployedcask.com
 .arswabluchan.com
 .art-offer.com
+.artanlife.club
 .artefact.is
 .artemisaffiliates.com
 .arteradio.fr
@@ -23448,6 +23490,9 @@ opencloud.wostore.cn
 .arwhismura.com
 .arwygug.cn
 .arxqpexijob.com
+.aryacoin.io
+.aryana.io
+.aryastake.io
 .aryguying.com
 .arzanphearse.com
 .as-farm.com
@@ -23572,6 +23617,7 @@ opencloud.wostore.cn
 .asrety.com
 .asricewaterh.com
 .assailusefullyenemies.com
+.assaystalonic.com
 .assembled-battery.com
 .assembledscout.com
 .assembleservers.com
@@ -24192,6 +24238,7 @@ opencloud.wostore.cn
 .axiwyni.cn
 .axlsksphvbs.xyz
 .axoncoho.tk
+.axotrade.com
 .axpvy.cn
 .axqpn.cn
 .axrfetwwx.xyz
@@ -24227,6 +24274,7 @@ opencloud.wostore.cn
 .ayunzhizuo.ltd
 .ayvcjvdfk.xyz
 .ayverwe.cn
+.ayyaar.ir
 .az.5.p2l.info
 .az361816.vo.msecnd.net
 .az512334.vo.msecnd.net
@@ -24428,6 +24476,7 @@ opencloud.wostore.cn
 .backlinks.com
 .backlusjumpdur.club
 .backmerriment.com
+.backority.ir
 .backpub.mom
 .backromy.com
 .backseatabundantpickpocket.com
@@ -24490,6 +24539,7 @@ opencloud.wostore.cn
 .bagsmartname.com
 .bagsstepcollations.com
 .bagwynbilgier.com
+.bahatoken.site
 .bahfhgfdibgbcegbgg.ru
 .bahisciler.co
 .bahmemohod.com
@@ -24701,7 +24751,6 @@ opencloud.wostore.cn
 .banner.trangvangvietnam.com
 .banner.uto.vn
 .banner.vadian.net
-.banner.vatanclick.ir
 .banner.webmersion.com
 .banner.zol.ru
 .banner1.site
@@ -25152,6 +25201,7 @@ opencloud.wostore.cn
 .becomingcrackingragged.com
 .becond.com
 .becorsolaom.com
+.becramblunger.com
 .becrustleom.com
 .becuboneor.com
 .bedaslonej.com
@@ -25228,6 +25278,7 @@ opencloud.wostore.cn
 .behavioralengine.com
 .beheadmuffleddetached.com
 .behick.com
+.behinava.com
 .beholdascared.com
 .behootpokeys.com
 .behoppipan.com
@@ -25299,6 +25350,7 @@ opencloud.wostore.cn
 .belyyeusy.com
 .bemachopor.com
 .bembexpps.life
+.bemchain.io
 .bemobpath.com
 .bemobtrcks.com
 .bemobtrk.com
@@ -25867,6 +25919,8 @@ opencloud.wostore.cn
 .biucosmetics.fr
 .biv.gazeta.pl
 .bivgiokd0y.cn
+.bixb.exchange
+.bixbcoin.com
 .biz-newsfeed1.com
 .biz-offer.com
 .biz5.sandai.net
@@ -26166,6 +26220,7 @@ opencloud.wostore.cn
 .bn.orthodoxy.ru
 .bn.take-profit.org
 .bn5x.net
+.bnbmatrix.io
 .bnbvd.xyz
 .bncloudfl.com
 .bndmh4.com
@@ -26347,6 +26402,7 @@ opencloud.wostore.cn
 .boomselljamwelunch.com
 .boonsbarcas.uno
 .booptuwa.net
+.boorantech.com
 .booshout.com
 .boost-cdn.manatee.dk
 .boost-next.co.jp
@@ -26564,6 +26620,7 @@ opencloud.wostore.cn
 .brereairsome.com
 .brevandolius.com
 .brews.marketale.com
+.brewseryngo.com
 .brfiles.com
 .brfrb.cn
 .brftedjb.com
@@ -26574,6 +26631,8 @@ opencloud.wostore.cn
 .bricolo-blogger.fr
 .bridae.com
 .bridesmaidcleft.com
+.bridespiraya.com
+.bridge.link
 .bridgebase.fr
 .bridgetrack.com
 .bridgevine.com
@@ -27523,6 +27582,7 @@ opencloud.wostore.cn
 .cashandfavor.ru
 .cashandlife.com
 .cashback.co.uk
+.cashback.takhfifan.com
 .cashbackwow.co.uk
 .cashburners.com
 .cashcount.com
@@ -27610,6 +27670,7 @@ opencloud.wostore.cn
 .cavy9soho.com
 .cawbarthe.com
 .caxxetj.cn
+.cayot.ir
 .cb-content.com
 .cb.ksmobile.com
 .cb9e43b2a0.com
@@ -28062,6 +28123,7 @@ opencloud.wostore.cn
 .ch6g.top
 .ch6p2aj2gh8zy5cm0px9ow7aj3tmzhtk6lzx2ch9xj7gx2jq1cj8v4jklz6b.me
 .cha2spoi3rasne.com
+.chabok.io
 .chachophigy.pro
 .chachors.net
 .chaerel.com
@@ -28145,6 +28207,7 @@ opencloud.wostore.cn
 .chautcho.com
 .chautchy.net
 .chavoads.com
+.chavosh.org
 .chayibu.com
 .chazanscapita.com
 .chch.fr
@@ -28645,6 +28708,7 @@ opencloud.wostore.cn
 .click.cartsguru.io
 .click.classmates.com
 .click.comm.rcibank.co.uk
+.click.digiato.com
 .click.digital.metaquestmail.com
 .click.em.blizzard.com
 .click.email.bbc.com
@@ -28690,6 +28754,7 @@ opencloud.wostore.cn
 .clickandjoinyourgirl.com
 .clickaslu.com
 .clickauditor.net
+.clickaval.com
 .clickbangpop.com
 .clickbank.com
 .clickbaza.com
@@ -29209,6 +29274,7 @@ opencloud.wostore.cn
 .cointraffic.io
 .coinurl.com
 .coinverti.com
+.coinwallet.biz
 .coinwebmining.com
 .coinworker.com
 .coinzilla.io
@@ -29372,6 +29438,7 @@ opencloud.wostore.cn
 .compassionorb.com
 .compe-nickel.fr
 .comperesuccessive.com
+.competitivepopcheerleader.com
 .complainfriendshipperry.com
 .completedmisunderstand.com
 .complexdaggled.com
@@ -29402,6 +29469,7 @@ opencloud.wostore.cn
 .computersncs.com
 .computersoostynaarlo.nl
 .computertechanalysis.com
+.comradeglorious.com
 .comscore.com
 .comsss-56.com
 .comunicazio.com
@@ -29459,6 +29527,8 @@ opencloud.wostore.cn
 .confusionfowlsomen.com
 .congestit.com
 .congoesld.com
+.congoro.com
+.congoro.ir
 .congrab.com
 .congratulatedreside.com
 .congressaffrayghosts.com
@@ -29842,6 +29912,7 @@ opencloud.wostore.cn
 .counter.tengrinews.kz
 .counter.theconversation.com
 .counter.tianjimedia.com
+.counter.toolsir.com
 .counter.top.kg
 .counter.topping.com.ua
 .counter.tripod.com
@@ -30273,6 +30344,7 @@ opencloud.wostore.cn
 .cryptocurrecny.com
 .cryptokoinz.com
 .cryptolabpro.com
+.cryptoland.com
 .cryptoloot.pro
 .cryptonote.club
 .cryptonoter.com
@@ -31003,6 +31075,7 @@ opencloud.wostore.cn
 .d2oa97wrxvxm7y.cloudfront.net
 .d2oh4tlt9mrke9.cloudfront.net
 .d2ojfulajn60p5.cloudfront.net
+.d2oy22m6xey08r.cloudfront.net
 .d2p3zdq8vjvnxd.cloudfront.net
 .d2pdbggfzjbhzh.cloudfront.net
 .d2pnacriyf41qm.cloudfront.net
@@ -31392,6 +31465,7 @@ opencloud.wostore.cn
 .daffaite.com
 .daftporus.website
 .dafttwist.com
+.dagcoin.org
 .dagd0kz7sipfl.cloudfront.net
 .dahaifa.com
 .dahexs.net
@@ -31619,6 +31693,7 @@ opencloud.wostore.cn
 .daurifek.net
 .davaifoa.com
 .davarello.com
+.davedbux.ir
 .daveexpose.com
 .davidhuynh.fr
 .dawangde.me
@@ -31816,6 +31891,9 @@ opencloud.wostore.cn
 .deeginews.com
 .deehalig.net
 .deeheede.com
+.deema.agency
+.deemaagency.ir
+.deemanetwork.com
 .deemnnc2ebecekx.ru
 .deemsoil.com
 .deemsteppemental.com
@@ -31848,6 +31926,7 @@ opencloud.wostore.cn
 .deferencedilutemurmur.com
 .defetohi.com
 .deficitsilverdisability.com
+.defigroups.com
 .defilt.com
 .definedlaunching.com
 .definitial.com
@@ -31980,6 +32059,7 @@ opencloud.wostore.cn
 .dentcontrader.com
 .dentistsinyourarea.com
 .dentofinauk.shop
+.denutility.com
 .denx.fr
 .deorganizati.co
 .deostr.com
@@ -33178,6 +33258,7 @@ opencloud.wostore.cn
 .dsoizkd.cn
 .dsoodbye.xyz
 .dsp-eu.surfy.tech
+.dsp.aparat.com
 .dsp.colpirio.com
 .dsp.io
 .dsparking.com
@@ -34167,6 +34248,7 @@ opencloud.wostore.cn
 .emediate.eu
 .emediate.se
 .emediatrack.com
+.emenshowapp.xyz
 .ementwre.buzz
 .emeralddead.com
 .emeraldtiger.com
@@ -34215,6 +34297,7 @@ opencloud.wostore.cn
 .emulousoaty.com
 .emusly.com
 .emuwanflat.com
+.emway.ir
 .emwkzebpuo.com
 .emxdgt.com
 .emxdigital.com
@@ -34227,6 +34310,7 @@ opencloud.wostore.cn
 .ena-native-ads4.com
 .enaceanspection.com
 .enactmedic.com
+.enactsbasiate.com
 .enacttournamentcute.com
 .enalytics.fr
 .enamberchivies.com
@@ -34520,6 +34604,7 @@ opencloud.wostore.cn
 .err.cloudbit.rocks
 .err.rambler.ru
 .erringcrambly.com
+.error-tracking.arvancloud.com
 .errorfixing.space
 .ersallower.com
 .ersfohiplaceof.xyz
@@ -34929,6 +35014,7 @@ opencloud.wostore.cn
 .exclusivegiftcards.com
 .exclusivelydepict.com
 .exclusivepussy.com
+.excoino.com
 .excpm.com
 .excretekings.com
 .excsyrv.cn
@@ -35192,6 +35278,7 @@ opencloud.wostore.cn
 .facebookj.fr
 .faceboook-replyei0ki.montadalitihad.com
 .facemail.com
+.facepop.org
 .faceporn.com
 .facesnotebook.com
 .facesrenaissanceconfirmed.com
@@ -35330,6 +35417,7 @@ opencloud.wostore.cn
 .fapmeth.com
 .fapp.pw
 .faracoon.com
+.farakav.com
 .farantitid.racing
 .farcedboccis.com
 .fardingsoiling.com
@@ -35340,6 +35428,7 @@ opencloud.wostore.cn
 .farmius.org
 .faroff-painting.pro
 .farrivederev.pro
+.farsbux.ir
 .farteniuson.com
 .fartmoda.com
 .fas.catholicgreatestinterpret.xyz
@@ -35363,6 +35452,7 @@ opencloud.wostore.cn
 .fastcache.fun
 .fastcdn.info
 .fastclick.com.edgesuite.net
+.fastclick.ir
 .fastcmp.com
 .fastcontentdelivery.com
 .fastcounter.com
@@ -35421,6 +35511,7 @@ opencloud.wostore.cn
 .fawu.asia
 .faxqaaawyb.com
 .fb-accounts.com
+.fb-gw.bef.rest
 .fb-plus.com
 .fb28078ad6.com
 .fb332fdc0d.com
@@ -36360,7 +36451,6 @@ opencloud.wostore.cn
 .free.propdfconverter.com
 .free.srcdn.xyz
 .free.videodownloadconverter.com
-.free.xjs.lol
 .free247downloads.com
 .free3dgame.xyz
 .free4faucet.com
@@ -36498,6 +36588,7 @@ opencloud.wostore.cn
 .frnafinance.fr
 .frnwvialjbey.xyz
 .froancefootball.fr
+.frocogue.store
 .frodx.com
 .frog9alea.com
 .frogrugby.com
@@ -36546,6 +36637,7 @@ opencloud.wostore.cn
 .frypanbushlet.com
 .fryruejoust.cam
 .fryvzw.com
+.frzss.com
 .fs-client-logger.herokuapp.com
 .fs0523.com
 .fsalfrwdr.com
@@ -36796,6 +36888,7 @@ opencloud.wostore.cn
 .g5rillh2awn8.com
 .g7.com.tw
 .g77776666.com
+.g8ld.fun
 .g9o.cn
 .ga-ads.com
 .ga-analytics.com
@@ -37212,6 +37305,7 @@ opencloud.wostore.cn
 .geoip.cookieyes.com
 .geoip.fotoable.net
 .geoip.herewetest.com
+.geoip.imber.live
 .geoiplookup.io
 .geoiplookup.wikimedia.org
 .geojs.io
@@ -37249,6 +37343,7 @@ opencloud.wostore.cn
 .geriod.com
 .germaniavid.com
 .geruksom.net
+.gervasdonatee.guru
 .gestionpub.com
 .get-ads.ru
 .get-answers-fast.com
@@ -37931,6 +38026,7 @@ opencloud.wostore.cn
 .gombaltowa.cfd
 .gombmobil.store
 .gombointill.com
+.gomhn.cn
 .gomnlt.com
 .gompoozu.net
 .gomsa.ru
@@ -38096,6 +38192,7 @@ opencloud.wostore.cn
 .gparted.fr
 .gpm-mon-sg.bytegsdk.com
 .gpm-mon-sg.byteoversea.com
+.gpm.ltd
 .gpnjknuqas.xyz
 .gposrzz.cn
 .gpozmocm.com
@@ -38430,6 +38527,7 @@ opencloud.wostore.cn
 .guffawdecipher.com
 .guge.red
 .gugulm.net
+.guhtoken.org
 .guiaconsumidor.com
 .guide2poker.com
 .guidelon.fr
@@ -38579,6 +38677,7 @@ opencloud.wostore.cn
 .gzpinda.com
 .gzppit.com
 .gzqczl.cn
+.gzqgaq.xyz
 .gzsadlmy.cn
 .gzsanxiaomingshi.cn
 .gzts188.com
@@ -38751,6 +38850,7 @@ opencloud.wostore.cn
 .hannist.com
 .hannode.xyz
 .hansaisai.top
+.hantana.org
 .hanyingmall.cn
 .hanzhixin.cn
 .hao222.com
@@ -39083,6 +39183,7 @@ opencloud.wostore.cn
 .helove.xyz
 .help.adtech.fr
 .help.adtech.us
+.helpedhandwritingintestine.com
 .helperate.net
 .helpful-web.com
 .helpfulwrap.com
@@ -39264,6 +39365,7 @@ opencloud.wostore.cn
 .hi.5.p2l.info
 .hiaaheddgjdfgabiafc.ru
 .hiadone.com
+.hiads.hidoctor.ir
 .hiasor.com
 .hibaby.ren
 .hibids10.com
@@ -40830,6 +40932,7 @@ opencloud.wostore.cn
 .imssl01.adtech.us
 .imstks.com
 .imtmp.net
+.imtokenwallet.biz
 .imtowoz.ru
 .imtwjwoasak.com
 .imudukely.store
@@ -41317,6 +41420,7 @@ opencloud.wostore.cn
 .intopicmedia.com
 .intorterraon.com
 .intowow.com
+.intrack.ir
 .intrack.pl
 .intranet.dcorp.com.vn
 .intrapromotion.com
@@ -41463,6 +41567,7 @@ opencloud.wostore.cn
 .iprotrk.com
 .iproute66.com
 .iprpe.cn
+.ipsite.ir
 .ipsowrite.com
 .ipssss.com
 .ipstack.com
@@ -41494,7 +41599,10 @@ opencloud.wostore.cn
 .iqyqqfduxeql.com
 .iqzone.com
 .iqzt3ec.cn
+.ir.mihanstore.net
 .ir002423.cn
+.irancloudmining.com
+.irancoinmine.com
 .irardijjyawmool.xyz
 .iratelyveinlet.com
 .irbisennuis.com
@@ -41855,6 +41963,7 @@ opencloud.wostore.cn
 .jajevnitxoshgb.com
 .jajnhd.com
 .jaleepsorous.website
+.jaletemetia.com
 .jalewaads.com
 .jaloppystudy.life
 .jambelegate.casa
@@ -42024,6 +42133,7 @@ opencloud.wostore.cn
 .jestbiases.com
 .jestinvaderspeedometer.com
 .jet.zbp.ru
+.jetbux.ir
 .jetem.fr
 .jetgatem.com
 .jetsomkhulda.com
@@ -43158,6 +43268,7 @@ opencloud.wostore.cn
 .kingads.net
 .kingdom-news.com
 .kingleo.hk
+.kingmoney.io
 .kingsun.online
 .kingwitheaa.lol
 .kingyonlendir.link
@@ -43925,6 +44036,7 @@ opencloud.wostore.cn
 .landslidechoreloft.com
 .landupoatour.com.ua
 .landupoatouwe.xyz
+.landyab.com
 .lane5down.com
 .langger76.site
 .langkefaye.top
@@ -43975,6 +44087,7 @@ opencloud.wostore.cn
 .laptoprewardsgroup.com
 .laptoprewardszone.com
 .lapypushistyye.com
+.laqira.io
 .laraliaethnol.com
 .lararforbundet.analytics.ozzi.io
 .larati.net
@@ -44400,6 +44513,7 @@ opencloud.wostore.cn
 .leucan3thegm6um.com
 .leukemianarrow.com
 .leukemiarussianarmies.com
+.leumia.io
 .leuquipe.fr
 .leuxq.com
 .levaochbo.compricer.se
@@ -44565,6 +44679,7 @@ opencloud.wostore.cn
 .lifeofpie.fr
 .lifepromo.biz
 .liferd.de
+.lifesoonersoar.org
 .lifestyleoptimisticsing.com
 .lifetds.com
 .lifetimeroyaltybestial.com
@@ -44689,6 +44804,7 @@ opencloud.wostore.cn
 .linkconnector.com
 .linkcounter.com
 .linkcounter.pornosite.com
+.linkdoni.soft98.ir
 .linkeasy.org
 .linkedads.de
 .linkedassassin.com
@@ -44698,6 +44814,7 @@ opencloud.wostore.cn
 .linker.hr
 .linkexchange.com
 .linkexchangers.net
+.linkfars.com
 .linkfeed.ru
 .linkforyoud.com
 .linkgrand.com
@@ -44721,6 +44838,7 @@ opencloud.wostore.cn
 .links.zoopla.co.uk
 .links2revenue.com
 .linksalpha.com
+.linksaz.net
 .linksecurecd.com
 .linkshighway.com
 .linkshrink.net
@@ -44748,6 +44866,7 @@ opencloud.wostore.cn
 .linkword.ru
 .linkworth.com
 .linkxchanger.com
+.linkyar.com
 .linkybank.com
 .linnechaya.com
 .linodo.ru
@@ -46817,6 +46936,7 @@ opencloud.wostore.cn
 .meridia.4.p2l.info
 .meridiameridia.3xforum.ro
 .meried.co
+.merita.ir
 .meritiny.top
 .mermaidcontemplateadjoining.com
 .mermiscoapted.com
@@ -46967,6 +47087,8 @@ opencloud.wostore.cn
 .metrika.traff.space
 .metrilo.com
 .metriweb.be
+.metrix.behtarino.com
+.metrix.ir
 .metrx.fr
 .metsaubs.net
 .mettelindberg.dk
@@ -47174,6 +47296,7 @@ opencloud.wostore.cn
 .minence.fr
 .minencraft.fr
 .minently.com
+.minepi.com
 .miner.pr0gramm.com
 .mineralisasse.site
 .mineralscreamrobes.com
@@ -47279,6 +47402,7 @@ opencloud.wostore.cn
 .misxgkvnlf.com
 .miszonepionic.space
 .mitosesgawking.com
+.mitrarank.ir
 .mittylargen.com
 .miuspzkmn.bar
 .mix1traff.ru
@@ -47440,6 +47564,7 @@ opencloud.wostore.cn
 .mobalert.net
 .mobalives.com
 .mobalyzer.net
+.mobantong.oss-cn-hangzhou.aliyuncs.com
 .mobatori.com
 .mobatory.com
 .mobcrummymow.com
@@ -47992,6 +48117,7 @@ opencloud.wostore.cn
 .mt.64foot.com
 .mt34iofvjay.com
 .mt66g.com
+.mtabdil.com
 .mtalk.google.com
 .mtbjupleyqy.xyz
 .mtburn.com
@@ -48025,6 +48151,7 @@ opencloud.wostore.cn
 .mtsry.top
 .mtst.io
 .mttag.com
+.mttcoin.com
 .mtttvrit.com
 .mttty.top
 .mttwtrack.com
@@ -48834,6 +48961,7 @@ opencloud.wostore.cn
 .netagent.cz
 .netapplications.com
 .netavenir.com
+.netbina.com
 .netbiscuits.net
 .netbulvar.eu
 .netclickstats.com
@@ -48923,6 +49051,7 @@ opencloud.wostore.cn
 .new-new-years.com
 .new-park-hunt.ml
 .new-pressroom.com
+.new-sentry.digikala.com
 .new-vid-zone-1.blogspot.com.au
 .new.lerian-nti.be
 .new.zalizo.pp.ua
@@ -48992,6 +49121,7 @@ opencloud.wostore.cn
 .news-network.ru
 .news-news.co
 .news-venere.com
+.news-view-api.varzesh3.com
 .news.1ru.tv
 .news.fangdaijisuanqi.com
 .news.govorjat.ru
@@ -49047,6 +49177,7 @@ opencloud.wostore.cn
 .newsupdatewe.info
 .newsvidnews.info
 .newswhip.com
+.newswidget.net
 .newt1.adultworld.com
 .newtention.net
 .newthuads.com
@@ -49369,6 +49500,7 @@ opencloud.wostore.cn
 .nojazz.eu
 .nokaut.link
 .nokiadatabooklet.ltd
+.nokontoken.com
 .noksauxi.com
 .nolrougn.com
 .nomadtricesurfing.com
@@ -50165,6 +50297,7 @@ opencloud.wostore.cn
 .offers.motime.com.br
 .offers.nordvpn.com
 .offers.royalvegascasino.com
+.offers.sapra.ir
 .offersbid.com
 .offerserve.com
 .offersquared.com
@@ -50430,6 +50563,7 @@ opencloud.wostore.cn
 .omtvxcle.com
 .omynews.net
 .omzylhvhwp.com
+.on-click.ir
 .on-line.lv
 .on-push.com
 .on.5.p2l.info
@@ -50831,6 +50965,7 @@ opencloud.wostore.cn
 .orays.co
 .orbengine.com
 .orbitcarrot.com
+.orbitnetwork.net
 .orbsclawand.com
 .orbsrv.com
 .orcapia.com
@@ -51467,6 +51602,7 @@ opencloud.wostore.cn
 .panruo.net.cn
 .pansymerbaby.com
 .pantafives.com
+.pantatec.ae
 .pantaya.fr
 .panther.goguardian.com
 .pantherads.com
@@ -51548,6 +51684,7 @@ opencloud.wostore.cn
 .parsimoniouspolice.com
 .parskabab.com
 .part-time-job.biz
+.partclick.ir
 .parth2enerocis9tsust2ricus7pidata.com
 .parthanonstatue.com
 .parthetwo.ru
@@ -51984,6 +52121,8 @@ opencloud.wostore.cn
 .perryvolleyball.com
 .persesgnetum.com
 .persevered.com
+.persia.exchange
+.persianrank.ir
 .persianstat.com
 .persianstat.ir
 .persistentadequate.com
@@ -52007,6 +52146,7 @@ opencloud.wostore.cn
 .pervasivebacksrate.com
 .pervertmine.com
 .pervialinagile.com
+.perviv.com
 .perzonalization.com
 .peskyclarifysuitcases.com
 .pestgermagriculture.com
@@ -52028,6 +52168,7 @@ opencloud.wostore.cn
 .peweesfluer.website
 .pexi.nl
 .pexuvais.net
+.peyvandha.ir
 .peyzamo.ru
 .pezrphjl.com
 .pf34zdjoeycr.com
@@ -52175,6 +52316,7 @@ opencloud.wostore.cn
 .phocidabioses.store
 .phoenix-adrunner.mycomputer.com
 .phoenix-widget.com
+.phoenixad.io
 .phoenixads.co.in
 .phoenixinvestigations.ca
 .phohothiptu.pro
@@ -52192,6 +52334,7 @@ opencloud.wostore.cn
 .phones4you.be
 .phonestar.info
 .phonograph2.voxmedia.com
+.phonroid.com
 .phoobsoo.net
 .phooreew.net
 .phoossax.net
@@ -52819,6 +52962,7 @@ opencloud.wostore.cn
 .polyvalent.co.in
 .pomolation.ru
 .pomp-buerotechnik.de
+.pompass.net
 .pompeyafrite.com
 .pompeydesigning.com
 .pompouseruptionrang.com
@@ -52873,12 +53017,15 @@ opencloud.wostore.cn
 .popcpm.com
 .popec.net
 .popeni.live
+.popgozar.com
 .pophahwot.com
 .pophandler.net
 .pophit.net
+.popina.ir
 .popinads.com
 .popitunder.com
 .popjs.xyz
+.popland.info
 .poplarcolonistgreatest.com
 .popmajor.com
 .popmarker.com
@@ -52910,6 +53057,7 @@ opencloud.wostore.cn
 .populr.me
 .popult.com
 .popunder.bid
+.popunder.ir
 .popunder.online
 .popunder.ru
 .popunderjs.club
@@ -52924,6 +53072,7 @@ opencloud.wostore.cn
 .popup.softreklam.com
 .popupaval.com
 .popupclick.ru
+.popupdl.ir
 .popupdomination.com
 .popupmaker.com
 .popupme.net
@@ -53451,6 +53600,7 @@ opencloud.wostore.cn
 .promenadd.ru
 .promisecurtainscurrency.com
 .promisingjournalist.com
+.promizer.com
 .promo-banner.ru
 .promo-bc.com
 .promo-images.ttpsdk.info
@@ -53526,6 +53676,7 @@ opencloud.wostore.cn
 .properbunch.pro
 .propermessage.io
 .propersuitcase.com
+.propertiq.io
 .propgoservice.com
 .prophecyrehabilitationcardboard.com
 .prophetachybrief.com
@@ -53885,6 +54036,7 @@ opencloud.wostore.cn
 .publi.atresmediapublicidad.com
 .publiads.com
 .public.porn.fr
+.publica.ir
 .publicgood.com
 .publicidad.elmundo.es
 .publicidades.redtotalonline.com
@@ -53899,6 +54051,7 @@ opencloud.wostore.cn
 .publish.iptvz.net
 .publish.web.id
 .publish0x.com
+.publisher-network.com
 .publisheradnetwork.com
 .publishercounting.com
 .publishflow.com
@@ -54468,6 +54621,7 @@ opencloud.wostore.cn
 .qinger.name
 .qingfeng.homes
 .qingfengxq.com
+.qingganlan.ltd
 .qinghua.cc
 .qinghyx.com
 .qingjiedi.com
@@ -54516,6 +54670,7 @@ opencloud.wostore.cn
 .qkixi.com
 .qkkgish.cn
 .qkobbgs.cyou
+.qkoio.cyou
 .qksrv.biz
 .qksrv.cc
 .qksrv.net
@@ -54674,12 +54829,14 @@ opencloud.wostore.cn
 .qthynj2.com
 .qtimowbaqnd.xyz
 .qtnfnrm.cn
+.qtspkqzn.com
 .quackdamaging.com
 .quackexclusfdfjd.com
 .quadhu.com
 .quadran.eu
 .quadrinhoseroticos.net
 .quae0.top
+.quahl.com
 .quaidesbulles.fr
 .quaintcan.com
 .quakingcalix.com
@@ -54901,6 +55058,7 @@ opencloud.wostore.cn
 .rack-media.com
 .racleo.com
 .racterdeet.com
+.radar.bayan.ir
 .radarconsultation.com
 .radarstats.com
 .radarurl.com
@@ -54993,6 +55151,7 @@ opencloud.wostore.cn
 .rankings24.de
 .rankingscout.com
 .rankinteractive.com
+.rankirani.ir
 .ranklink.de
 .rankyou.com
 .ranlisgz.fun
@@ -56013,6 +56172,7 @@ opencloud.wostore.cn
 .rhinoseo.com
 .rhiospsea.one
 .rhkyufodw8ochdr3ogsite.com
+.rhoeomanid.space
 .rholi.ru
 .rhombicsomeday.com
 .rhombusads.com
@@ -56312,6 +56472,7 @@ opencloud.wostore.cn
 .roiughttohimhe.xyz
 .roivant.fr
 .rojadirectatv.fr
+.rokhdad.telewebion.com
 .rokitokijoki.com
 .rokkkpc.cn
 .rokno.com
@@ -56518,6 +56679,7 @@ opencloud.wostore.cn
 .rsptymlylo.com
 .rss.dtiserv.com
 .rss9f.top
+.rssbank.ir
 .rssblgb.cn
 .rsspump.com
 .rst.pornyhd.com
@@ -57078,6 +57240,7 @@ opencloud.wostore.cn
 .sangoo.top
 .sanity-dataplane.rudderstack.com
 .sanjagh.com
+.sanjagh.net
 .sankaudacityrefine.com
 .sankezhi.cn
 .sankoup.com
@@ -57343,6 +57506,7 @@ opencloud.wostore.cn
 .scriptall.ml
 .scriptcdn.net
 .scriptil.com
+.scripts-ads.s3.ir-thr-at1.arvanstorage.com
 .scripts.linkz.net
 .scripts.static-od.com
 .scripts.verticalacuity.com
@@ -57697,6 +57861,7 @@ opencloud.wostore.cn
 .sendptp.com
 .sendsay.ru
 .sendtraffic.com
+.sendword.ir
 .sendyourpush.com
 .sength.com
 .senigh.com
@@ -57726,8 +57891,15 @@ opencloud.wostore.cn
 .sentphysically.com
 .sentrapromosi.com
 .sentry-mini.zalo.me
+.sentry-new.divar.ir
 .sentry-track.vietnamworks.com
+.sentry.cafebazaar.org
+.sentry.footballiapp.com
+.sentry.hamravesh.com
 .sentry.io
+.sentry.malltina.com
+.sentry.namava.ir
+.sentry.quera.org
 .sentry01.zerg.rambler.ru
 .senufocaviar.com
 .senxiaopang.top
@@ -58010,6 +58182,7 @@ opencloud.wostore.cn
 .shamelessmessengerdescription.com
 .shamelessnullneutrality.com
 .shamelessspank.com
+.shamining.com
 .shamodesha.com
 .shanaurg.net
 .shandongaosen.cn
@@ -58087,6 +58260,7 @@ opencloud.wostore.cn
 .sheerdaulpusher.com
 .sheeroop.com
 .sheetchi.net
+.sheetvibe.com
 .sheglach.net
 .shellstore.info
 .shelvesdeserve.com
@@ -58597,6 +58771,7 @@ opencloud.wostore.cn
 .skcapepyshdr.xyz
 .skcrtxr.com
 .skdbarh.cn
+.skeetads.com
 .skeettools.com
 .skelaxin.1.p2l.info
 .skelaxin.3.p2l.info
@@ -58670,6 +58845,7 @@ opencloud.wostore.cn
 .skysa.com
 .skyscrpr.com
 .skyvideo1.ru
+.skzlz.cn
 .sl-ct5.com
 .sl-h-statistics-ch-1.storeland.ru
 .sl6.top
@@ -58841,6 +59017,7 @@ opencloud.wostore.cn
 .smarterhq.io
 .smarterremarketer.net
 .smartfarming.cn
+.smartgalaxy.finance
 .smartinfomarketing.ru
 .smartlifeguides.com
 .smartlify.com
@@ -59234,6 +59411,7 @@ opencloud.wostore.cn
 .sontent.powvibeo.me
 .sontent.powzers.lol
 .sonumal.com
+.soodland.com
 .soogandrooped.cam
 .soopukib.net
 .soorbka.cn
@@ -59529,6 +59707,7 @@ opencloud.wostore.cn
 .sprayswisha.com
 .spreadlink.net
 .spreau.com
+.sprettyruckus.com
 .spring-tns.net
 .spring.de
 .springbot.com
@@ -59790,6 +59969,7 @@ opencloud.wostore.cn
 .stat-rock.com
 .stat-track.com
 .stat.56.com
+.stat.absolutist.com
 .stat.adguard.com
 .stat.airdroid.com
 .stat.alloha.tv
@@ -60098,6 +60278,7 @@ opencloud.wostore.cn
 .statscol.pond5.com
 .statserv.net
 .statsevent.com
+.statsfa.com
 .statsforads.com
 .statsforever.com
 .statsie.com
@@ -60139,6 +60320,7 @@ opencloud.wostore.cn
 .stc-nas.nixcdn.com
 .stc-support-app-brand.zdn.vn
 .stc.nas.nixcdn.com
+.stc.ninisite.com
 .stc.store.page.zaloapp.com
 .stcollection.moneysupermarket.com
 .stcounter.com
@@ -60392,6 +60574,7 @@ opencloud.wostore.cn
 .style.onvz.nl
 .stylesheet-js.ru
 .styleui.ru
+.stylliyote.com
 .stypaphupse.com
 .styrianauf.com
 .su.valley.ne.jp
@@ -60849,6 +61032,7 @@ opencloud.wostore.cn
 .syncbanjo.com
 .syncdownload.com
 .syncdownloading.com
+.synchrobit.io
 .synchronizedoll.com
 .syncingprocess.com
 .syncommisty.com
@@ -61035,6 +61219,7 @@ opencloud.wostore.cn
 .tabici.com
 .tabledownstairsprovocative.com
 .tablequantity.com
+.tabligheirani.ir
 .tabloidsuggest.com
 .tabmo.io
 .taboizo.mom
@@ -61051,6 +61236,7 @@ opencloud.wostore.cn
 .tadadamads.com
 .tadamads.com
 .tadsbelver.com
+.tadv.didestan.net
 .taembed.com
 .taetsiatomia.com
 .taffiasspavies.tech
@@ -61156,6 +61342,7 @@ opencloud.wostore.cn
 .takru.com
 .takychasing.com
 .talamk3.beauty
+.talapop.ir
 .talaropa.com
 .talazywho.pro
 .talkfusion.com
@@ -61267,6 +61454,7 @@ opencloud.wostore.cn
 .targetspot.com
 .tarnifotum.com
 .taroads.com
+.tarokbien.com
 .tarotien.com
 .tarpitbar.com
 .tarrilyathenee.com
@@ -61279,6 +61467,7 @@ opencloud.wostore.cn
 .taskapi.net
 .taskproceduresseverely.com
 .tassed.com
+.tastenfts.com
 .tastevision.cn
 .tastingraise.com
 .tastishi.ru
@@ -61314,6 +61503,7 @@ opencloud.wostore.cn
 .tberjonk.com
 .tbex.ru
 .tbhenherthertindn.xyz
+.tbli.ir
 .tbm09.com
 .tbplcam.com
 .tbs1.xyz
@@ -61403,6 +61593,7 @@ opencloud.wostore.cn
 .te.thestar.com
 .te.trb.com
 .te.versiontracker.com
+.te1.ir
 .te37w.cn
 .tea.pornolomka.video
 .teachac.com
@@ -61565,6 +61756,7 @@ opencloud.wostore.cn
 .telusplanet.net
 .telvanil.ru
 .telwrite.com
+.tembetachasmic.guru
 .tembetanymil.com
 .temelio.com
 .temnos.com
@@ -61753,6 +61945,7 @@ opencloud.wostore.cn
 .thague.com
 .thaickoo.net
 .thaidapps.com
+.thaignax.net
 .thaiguxu.com
 .thailandtravel.live
 .thainationalparks.fr
@@ -62573,6 +62766,7 @@ opencloud.wostore.cn
 .toppage.vn
 .topperformance.xyz
 .toppingfascili.tech
+.toppopup.com
 .toppornvids.com
 .topprofitablecpm.com
 .topprofitablegate.com
@@ -62995,9 +63189,11 @@ opencloud.wostore.cn
 .tracker.consumerpackage.net
 .tracker.coopt.com
 .tracker.dcdn.baidu.com
+.tracker.digikala.com
 .tracker.durasite.net
 .tracker.edupia.vn
 .tracker.fado.vn
+.tracker.farsnews.ir
 .tracker.files.fm
 .tracker.gamedock.io
 .tracker.giftd.ru
@@ -63097,6 +63293,7 @@ opencloud.wostore.cn
 .tracking.edvisors.com
 .tracking.emilyclarkconsulting.com
 .tracking.engagedigitalmedia.com
+.tracking.ensonhaber.com
 .tracking.epicgames.com
 .tracking.exipure.com
 .tracking.fado.vn
@@ -63252,7 +63449,6 @@ opencloud.wostore.cn
 .trackity.tiki.vn
 .trackjs.com
 .trackkas.com
-.tracklink-tel.de
 .trackmethod.com
 .trackmstr.com
 .trackmundo.com
@@ -63447,7 +63643,6 @@ opencloud.wostore.cn
 .traiah.com
 .trail-web.com
 .trailbox.net
-.traildelsfars.com
 .trailers.to
 .trailheadapp.com
 .trainspersuasiveknitting.com
@@ -63531,6 +63726,7 @@ opencloud.wostore.cn
 .treehousei.com
 .treehundredarmament.com
 .treenghsas.com
+.treenvest.com
 .treeoutcry.com
 .trehtnoas.com
 .trek.powtoon.com
@@ -63579,6 +63775,7 @@ opencloud.wostore.cn
 .trianglerank.net
 .tribalstrived.com
 .tribl.io
+.triboon.net
 .trick17.it
 .trickylongaffliction.com
 .trickyseduction.com
@@ -63743,6 +63940,7 @@ opencloud.wostore.cn
 .trustmeiamapro.de
 .trustmeiamcdn.com
 .trustpid.com
+.trustseal.e-rasaneh.ir
 .trusturl.top
 .trustutn.org
 .trustyfine.com
@@ -64617,6 +64815,7 @@ opencloud.wostore.cn
 .uniontraff.com
 .uniplayad.com
 .uniqodo.com
+.unique.finance
 .uniquecaptcha.com
 .uniregistry.com
 .unisound.cdnvideo.ru
@@ -64939,6 +65138,10 @@ opencloud.wostore.cn
 .usbkngf.cn
 .usbvhzg.cn
 .uscdn.top
+.usdtbang.com
+.usdtbbc.com
+.usdtcan.com
+.usdteng.com
 .useads.com
 .usedunderstood.com
 .usefomo.com
@@ -64971,6 +65174,7 @@ opencloud.wostore.cn
 .userdatatrust.com
 .userdive.com
 .usereachpeople.com
+.userfriendly.ir
 .userlook.com
 .userneeds.dk
 .userreplay.com
@@ -65027,6 +65231,7 @@ opencloud.wostore.cn
 .utarget.pro
 .utarget.ru
 .utauniv-lyon2.fr
+.utbyte.io
 .utcatholicycl.co
 .utci9.cn
 .utensils.pro
@@ -65050,6 +65255,8 @@ opencloud.wostore.cn
 .utmyoogrxpesf.xyz
 .utndln.com
 .utokapa.com
+.utop.ir
+.utopclick.com
 .utoumine.net
 .utrace.fr
 .utraff.com
@@ -65172,6 +65379,7 @@ opencloud.wostore.cn
 .v2cigs.com
 .v2mlemerald.com
 .v2profit.com
+.v2st.shinobi.jp
 .v2zn.xyz
 .v34ffs.site
 .v3cdn.net
@@ -65312,6 +65520,7 @@ opencloud.wostore.cn
 .vastroll.ru
 .vastserved.com
 .vatafapac.ru
+.vatanclick.ir
 .vatcalf.com
 .vatedquali.com
 .vatizon.com
@@ -65450,6 +65659,7 @@ opencloud.wostore.cn
 .vercel-insights.com
 .verdictdisingenuousfruitless.com
 .verdoledran.ru
+.vereyhinders.com
 .vericlick.com
 .verified-extensions.com
 .verify.authorize.net
@@ -65609,6 +65819,7 @@ opencloud.wostore.cn
 .video-serve.com
 .video-stats.video.google.com
 .video-streaming.ezoic.com
+.video-view-api.varzesh3.com
 .video.cynogage.com
 .video.entertaintastic.com
 .video.flashiest-vacation.win
@@ -65672,6 +65883,7 @@ opencloud.wostore.cn
 .vidible.tv
 .vidigital.ru
 .vidnline.com
+.vidomusic.org
 .vidora.com
 .vidout.net
 .vidplah.com
@@ -65740,6 +65952,7 @@ opencloud.wostore.cn
 .vilereasoning.com
 .viliaff.com
 .vilith.com
+.vilki.cn
 .villagarden.pl
 .villageeatable.com
 .villasquinttolerance.com
@@ -66508,6 +66721,7 @@ opencloud.wostore.cn
 .waycloud.info
 .wayexiaofei.club
 .wayfarerspoutpraise.com
+.waykingroup.com
 .waymarkgentiin.com
 .waymentriddel.com
 .waytogrow.eu
@@ -66654,6 +66868,7 @@ opencloud.wostore.cn
 .webengage.com
 .webest.info
 .webeyez.com
+.webfeetdaidled.com
 .webflowmetrics.com
 .webforensics.co.uk
 .webfunny.cn
@@ -66745,6 +66960,11 @@ opencloud.wostore.cn
 .websitesampling.com
 .websitetosubmit.com
 .websitewelcome.com
+.websocket.55online.news
+.websocket.ilna.ir
+.websocket.khanefootball.com
+.websocket.sobhtazeh.news
+.websocket.varandaz.com
 .webspiration.de
 .websponsors.com
 .webstag.kplus.vn
@@ -67140,6 +67360,7 @@ opencloud.wostore.cn
 .wickedreports.com
 .wickiupcopalms.com
 .widaimty.com
+.wideads.com
 .wideangle.co
 .widebanner.com
 .wideeyedlady.pro
@@ -67268,6 +67489,7 @@ opencloud.wostore.cn
 .winnye.com
 .winpbn.com
 .winr.online
+.wintap.io
 .winter-balance.com
 .winternewsnow.name
 .winterolivia.com
@@ -68714,6 +68936,7 @@ opencloud.wostore.cn
 .xjnwqdospderqtk.ru
 .xjpphoto.com
 .xjpsrb.xyz
+.xjs.lol
 .xjsq.xyz
 .xjuneuud.cn
 .xjwrq.com
@@ -68785,6 +69008,7 @@ opencloud.wostore.cn
 .xmlterra.com
 .xmltym2.cn
 .xmlwizard.com
+.xmlx.lol
 .xmmnsl.com
 .xmorex.com
 .xmq123.cn
@@ -69268,10 +69492,12 @@ opencloud.wostore.cn
 .yeegsxcwbnn.com
 .yehuitudu.cn
 .yeip5aehi.icu
+.yekbux.com
 .yektanet.com
 .yeld9auto.com
 .yeliam.com
 .yellads.com
+.yelloadwise.ir
 .yellow-record.pro
 .yellowacorn.net
 .yellowblue.io
@@ -69587,6 +69813,7 @@ opencloud.wostore.cn
 .yoomedia.de
 .yoopigoopi.com
 .yooumoughtc.xyz
+.yoozbit.com
 .yopard.com
 .yoptaejrj2kkf8nj09.com
 .yoqpnkhl.com
@@ -70022,6 +70249,7 @@ opencloud.wostore.cn
 .zampad.com
 .zampda.net
 .zanaflex.1.p2l.info
+.zanboor.net
 .zangocash.com
 .zangtui.com
 .zanlisgq.fun
@@ -70448,6 +70676,7 @@ opencloud.wostore.cn
 .znfg6677.top
 .znktkt.cn
 .znlgplt.com
+.znllfp.xyz
 .znnhmzumod.com
 .znqip.net
 .znqip.org
@@ -70649,6 +70878,7 @@ opencloud.wostore.cn
 .zx.docin.com
 .zxcdn.com
 .zxcvbnmasdfghjklqwertyuiop.work
+.zxfas56.com
 .zxhstudy.online
 .zxiaochun.site
 .zxopen.tech

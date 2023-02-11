@@ -1,12 +1,12 @@
 # NAME: AdvertisingTest
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-11 10:32:15
-# DOMAIN: 11493
+# UPDATED: 2023-02-12 02:08:49
+# DOMAIN: 11506
 # DOMAIN-KEYWORD: 264
-# DOMAIN-SUFFIX: 103627
+# DOMAIN-SUFFIX: 103626
 # IP-CIDR: 241
-# TOTAL: 115625
+# TOTAL: 115637
 3p-geo.yahoo.com
 3p-udc.yahoo.com
 46186911.vtt
@@ -18,6 +18,7 @@ adfstat.yandex.ru
 ads.yahoo.com
 ads.youtube.com
 adsdk.yandex.ru
+alunitemoste.com
 an.yandex.ru
 anxiousapples.com
 api.sec.miui.com
@@ -28,6 +29,7 @@ applesometimes.com
 applets.ebxcdn.com
 awaps.yandex.ru
 awsync.yandex.ru
+backseatrunners.com
 bats.video.yahoo.com
 beacon.search.yahoo.com
 beap-bc.yahoo.com
@@ -38,16 +40,21 @@ cookiex.ngd.yahoo.com
 crypta.js
 d1stxfv94hrhia.cloudfront
 dmg-dd.oss-accelerate.aliyuncs.com
+expdirclk.com
 februaryreductionapplet.com
+fighla.com
 fpb1.apple886.com
 ganon.yahoo.com
 geo.yahoo.com
+hopefullyactively.com
 iadsdk.apple.com
 ib.snssdk.com
 informer.yandex.ru
 jill.fc.yahoo.com
 jpaasne.e.shifen.com
+jugixgjqx.xyz
 log.strm.yandex.ru
+ludocsbho.com
 marketingsolutions.yahoo.com
 mc.yandex.ru
 mediaappletree.com
@@ -55,19 +62,24 @@ meitaolianmeng.ltd
 mm.n3w1d0ma1n
 mo.vlpyj.xy
 nol.yahoo.com
+poflix.com
 pr.comet.yahoo.com
 pv.sohu.com
 rrf.fat1domain1
+sgtm.inet.se
 shackapple.com
+stabam.com
 stats.video.search.yahoo.com
 sub.powerapple.com
 sugar.zhihu.com
 supportmetrics.apple.com
 test.vast
 theapple.site
+vidscity.info
 visit.webhosting.yahoo.com
 wondefulapplend.com
 wzjs1.oss-accelerate.aliyuncs.com
+xgsgougog.com
 youtube.local
 103.21.91.144
 103.49.209.27
@@ -11500,6 +11512,7 @@ stats.sandberg.world
 tao.barstoolsports.com
 tla.traderlink.com
 tm.swp.de
+txrx.bol.com
 .0-000.store
 .0.code.cotsta.ru
 .0001.best
@@ -12121,6 +12134,7 @@ tm.swp.de
 .24affiliates.com
 .24businessnews.com
 .24counter.com
+.24d.ir
 .24h-ad.24hstatic.com
 .24h-ipad-ad.24hstatic.com
 .24kad.com
@@ -14309,6 +14323,7 @@ tm.swp.de
 .acsbap.com
 .acscdn.com
 .acsentia.fr
+.acsshufxnu.com
 .acstat.com
 .actiflex.org
 .actio.systems
@@ -14636,6 +14651,7 @@ tm.swp.de
 .ad.szhsx.net
 .ad.tapthislink.com
 .ad.tbn.ru
+.ad.technews-iran.com
 .ad.tehno-rating.ru
 .ad.tencentmusic.com
 .ad.terra.com
@@ -15024,6 +15040,7 @@ tm.swp.de
 .adenc.co.kr
 .adengage.com
 .adengine.rt.ru
+.adengine.telewebion.com
 .adentifi.com
 .adenza.dev
 .adeprimo.se
@@ -15045,6 +15062,7 @@ tm.swp.de
 .adexchangetracker.com
 .adexcite.com
 .adexmedias.com
+.adexo.ir
 .adexpansion.com
 .adexpose.com
 .adexprt.me
@@ -15221,6 +15239,7 @@ tm.swp.de
 .adition.net
 .aditizanna.com
 .aditize.com
+.adivery.com
 .adizio.com
 .adjaco.com
 .adjal.com
@@ -15410,6 +15429,7 @@ tm.swp.de
 .adncdnend.azureedge.net
 .adne.info
 .adnectar.com
+.adnegah.net
 .adnemo.com
 .adnesia.com
 .adnet.asahi.com
@@ -15566,6 +15586,7 @@ tm.swp.de
 .adprs.net
 .adpstatic.com
 .adpublisher.s3.amazonaws.com
+.adpulse.ir
 .adpush.goforandroid.com
 .adpushup.com
 .adq.nextag.com
@@ -15706,7 +15727,10 @@ tm.swp.de
 .ads.affiliates.match.com
 .ads.ahds.ac.uk
 .ads.aitype.net
+.ads.akairan.com
+.ads.akaup.com
 .ads.al.com
+.ads.alaatv.com
 .ads.aland.com
 .ads.albawaba.com
 .ads.alive.com
@@ -15827,6 +15851,7 @@ tm.swp.de
 .ads.currantbun.com
 .ads.cvut.cz
 .ads.cybersales.cz
+.ads.dabi.ir
 .ads.dada.it
 .ads.dailycamera.com
 .ads.ddj.com
@@ -16007,6 +16032,7 @@ tm.swp.de
 .ads.justhungry.com
 .ads.kabooaffiliates.com
 .ads.kaktuz.net
+.ads.karzar.net
 .ads.kelbymediagroup.com
 .ads.kelkoo.com
 .ads.kiemsat.vn
@@ -16210,6 +16236,7 @@ tm.swp.de
 .ads.rootzoo.com
 .ads.ruralpress.com
 .ads.sacbee.com
+.ads.safarme.ir
 .ads.samsung.com
 .ads.satyamonline.com
 .ads.scabee.com
@@ -16627,6 +16654,7 @@ tm.swp.de
 .adside.com
 .adsiduous.com
 .adsignals.com
+.adsima.net
 .adsimg.kompas.com
 .adsimilis.com
 .adsinimages.com
@@ -16635,6 +16663,7 @@ tm.swp.de
 .adsixmedia.fr
 .adsjumbo.com
 .adskape.ru
+.adskav.com
 .adskeeper.co.uk
 .adskeeper.com
 .adsklick.de
@@ -16870,6 +16899,7 @@ tm.swp.de
 .adtotal.pl
 .adtpix.com
 .adtr.io
+.adtrace.io
 .adtrace.org
 .adtrack.king.com
 .adtracker.jpchd.veraxen.com
@@ -17062,6 +17092,7 @@ tm.swp.de
 .advmedialtd.com
 .advmusic.com
 .advmusic.net
+.advn.ir
 .advnet.xyz
 .advnetwork.net
 .advnt.com
@@ -17098,6 +17129,9 @@ tm.swp.de
 .adwile.com
 .adwile.net
 .adwired.mobi
+.adwised.azureedge.net
+.adwised.com
+.adwisedfs.com
 .adwist.ru
 .adwitty.com
 .adwods.com
@@ -17283,6 +17317,7 @@ tm.swp.de
 .affil.top4football.com
 .affilae.com
 .affilbox.cz
+.affili.ir
 .affili.net
 .affili.st
 .affiliago.it
@@ -17297,6 +17332,7 @@ tm.swp.de
 .affiliate.astraweb.com
 .affiliate.baazee.com
 .affiliate.chiaki.vn
+.affiliate.digikala.com
 .affiliate.dtiserv.com
 .affiliate.exabytes.com.my
 .affiliate.gameladen.com
@@ -17307,6 +17343,7 @@ tm.swp.de
 .affiliate.k4.tinhte.vn
 .affiliate.klook.com
 .affiliate.konibet.com
+.affiliate.malltina.com
 .affiliate.mediatemple.net
 .affiliate.mogs.com
 .affiliate.offgamers.com
@@ -17365,6 +17402,7 @@ tm.swp.de
 .affilimatch.de
 .affilimate.com
 .affilimate.io
+.affilio.ir
 .affilired.com
 .affiliscout.com
 .affiliserve.com
@@ -17394,6 +17432,7 @@ tm.swp.de
 .affpros.net
 .affrh2023.com
 .affsnetwork.com
+.affstat.digikala.com
 .afftrack.com
 .afftrack.pro
 .afftrack001.com
@@ -17750,6 +17789,7 @@ tm.swp.de
 .aistolsu.net
 .aistthatheha.xyz
 .aitaoshegnqian.cn
+.aitrades.com
 .aiupiyd.cn
 .aivalabs.com
 .aivento.cn
@@ -18179,6 +18219,7 @@ tm.swp.de
 .amaprop.net
 .amarceusan.com
 .amarfa.ir
+.amaroid.net
 .amasssentimentaldamaging.com
 .amassshack.com
 .amateurcouplewebcam.com
@@ -18253,6 +18294,7 @@ tm.swp.de
 .amjoltiktor.com
 .amjtizfeqwz.com
 .amltaqap.com
+.ammaar.delivery.zeerak.cloud
 .amnet.tw
 .amnoctowlan.club
 .amoad.com
@@ -18322,13 +18364,16 @@ tm.swp.de
 .analy1.dtnnetwork.be
 .analysecrappy.com
 .analysis.afreecatv.com
+.analysis.faradars.org
 .analysis.fc2.com
 .analysis.focalprice.com
 .analysistools.net
+.analyt.ir
 .analyti.io
 .analytic-client.cuntempire.com
 .analytic-client.playful-fairies.com
 .analytic.baodantoc.vn
+.analytic.magland.ir
 .analytic.piri.net
 .analytic.press
 .analytic.rocks
@@ -18677,6 +18722,7 @@ tm.swp.de
 .api.infinario.com
 .api.iterative.ly
 .api.itpub.cloud
+.api.karpishe.com
 .api.limbik.com
 .api.linkgist.com
 .api.linkz.net
@@ -18724,6 +18770,7 @@ tm.swp.de
 .apl.headlines.pw
 .apleasantsit.xyz
 .aplentytwo.com
+.apm.bama.ir
 .apmebf.com
 .apnwcakifv.com
 .apollo.plein.nl
@@ -18902,6 +18949,7 @@ tm.swp.de
 .aquabibchawed.website
 .aquaplatform.com
 .aquavitpathway.com
+.aqylmil.cn
 .ar-x.site
 .ar.5.p2l.info
 .ar.hao123.com
@@ -19012,6 +19060,7 @@ tm.swp.de
 .arnofourgu.com
 .arodvsmindxec.com
 .arointbarra.com
+.arongroups.co
 .arouac.com
 .aroundpayslips.com
 .arousedimitateplane.com
@@ -19044,6 +19093,7 @@ tm.swp.de
 .arsonunemployedcask.com
 .arswabluchan.com
 .art-offer.com
+.artanlife.club
 .artefact.is
 .artemisaffiliates.com
 .arteradio.fr
@@ -19078,6 +19128,9 @@ tm.swp.de
 .arwhismura.com
 .arwygug.cn
 .arxqpexijob.com
+.aryacoin.io
+.aryana.io
+.aryastake.io
 .aryguying.com
 .arzanphearse.com
 .as-farm.com
@@ -19201,6 +19254,7 @@ tm.swp.de
 .asrety.com
 .asricewaterh.com
 .assailusefullyenemies.com
+.assaystalonic.com
 .assembled-battery.com
 .assembledscout.com
 .assembleservers.com
@@ -19817,6 +19871,7 @@ tm.swp.de
 .axiwyni.cn
 .axlsksphvbs.xyz
 .axoncoho.tk
+.axotrade.com
 .axpvy.cn
 .axqpn.cn
 .axrfetwwx.xyz
@@ -19852,6 +19907,7 @@ tm.swp.de
 .ayunzhizuo.ltd
 .ayvcjvdfk.xyz
 .ayverwe.cn
+.ayyaar.ir
 .az.5.p2l.info
 .az361816.vo.msecnd.net
 .az512334.vo.msecnd.net
@@ -20052,6 +20108,7 @@ tm.swp.de
 .backlinks.com
 .backlusjumpdur.club
 .backmerriment.com
+.backority.ir
 .backpub.mom
 .backromy.com
 .backseatabundantpickpocket.com
@@ -20114,6 +20171,7 @@ tm.swp.de
 .bagsmartname.com
 .bagsstepcollations.com
 .bagwynbilgier.com
+.bahatoken.site
 .bahfhgfdibgbcegbgg.ru
 .bahisciler.co
 .bahmemohod.com
@@ -20770,6 +20828,7 @@ tm.swp.de
 .becomingcrackingragged.com
 .becond.com
 .becorsolaom.com
+.becramblunger.com
 .becrustleom.com
 .becuboneor.com
 .bedaslonej.com
@@ -20846,6 +20905,7 @@ tm.swp.de
 .behavioralengine.com
 .beheadmuffleddetached.com
 .behick.com
+.behinava.com
 .beholdascared.com
 .behootpokeys.com
 .behoppipan.com
@@ -20917,6 +20977,7 @@ tm.swp.de
 .belyyeusy.com
 .bemachopor.com
 .bembexpps.life
+.bemchain.io
 .bemobpath.com
 .bemobtrcks.com
 .bemobtrk.com
@@ -21480,6 +21541,8 @@ tm.swp.de
 .biucosmetics.fr
 .biv.gazeta.pl
 .bivgiokd0y.cn
+.bixb.exchange
+.bixbcoin.com
 .biz-newsfeed1.com
 .biz-offer.com
 .biz5.sandai.net
@@ -21778,6 +21841,7 @@ tm.swp.de
 .bn.orthodoxy.ru
 .bn.take-profit.org
 .bn5x.net
+.bnbmatrix.io
 .bnbvd.xyz
 .bncloudfl.com
 .bndmh4.com
@@ -21948,6 +22012,7 @@ tm.swp.de
 .boomselljamwelunch.com
 .boonsbarcas.uno
 .booptuwa.net
+.boorantech.com
 .booshout.com
 .boost-cdn.manatee.dk
 .boost-next.co.jp
@@ -22164,6 +22229,7 @@ tm.swp.de
 .brereairsome.com
 .brevandolius.com
 .brews.marketale.com
+.brewseryngo.com
 .brfiles.com
 .brfrb.cn
 .brftedjb.com
@@ -22174,6 +22240,8 @@ tm.swp.de
 .bricolo-blogger.fr
 .bridae.com
 .bridesmaidcleft.com
+.bridespiraya.com
+.bridge.link
 .bridgebase.fr
 .bridgetrack.com
 .bridgevine.com
@@ -23109,6 +23177,7 @@ tm.swp.de
 .cashandfavor.ru
 .cashandlife.com
 .cashback.co.uk
+.cashback.takhfifan.com
 .cashbackwow.co.uk
 .cashburners.com
 .cashcount.com
@@ -23195,6 +23264,7 @@ tm.swp.de
 .cavy9soho.com
 .cawbarthe.com
 .caxxetj.cn
+.cayot.ir
 .cb-content.com
 .cb.ksmobile.com
 .cb9e43b2a0.com
@@ -23634,6 +23704,7 @@ tm.swp.de
 .ch6g.top
 .ch6p2aj2gh8zy5cm0px9ow7aj3tmzhtk6lzx2ch9xj7gx2jq1cj8v4jklz6b.me
 .cha2spoi3rasne.com
+.chabok.io
 .chachophigy.pro
 .chachors.net
 .chaerel.com
@@ -23716,6 +23787,7 @@ tm.swp.de
 .chautcho.com
 .chautchy.net
 .chavoads.com
+.chavosh.org
 .chayibu.com
 .chazanscapita.com
 .chch.fr
@@ -24215,6 +24287,7 @@ tm.swp.de
 .click.cartsguru.io
 .click.classmates.com
 .click.comm.rcibank.co.uk
+.click.digiato.com
 .click.digital.metaquestmail.com
 .click.em.blizzard.com
 .click.email.bbc.com
@@ -24258,6 +24331,7 @@ tm.swp.de
 .clickandjoinyourgirl.com
 .clickaslu.com
 .clickauditor.net
+.clickaval.com
 .clickbangpop.com
 .clickbank.com
 .clickbaza.com
@@ -24768,6 +24842,7 @@ tm.swp.de
 .cointent.com
 .coinurl.com
 .coinverti.com
+.coinwallet.biz
 .coinwebmining.com
 .coinworker.com
 .coinzilla.io
@@ -24929,6 +25004,7 @@ tm.swp.de
 .compassionorb.com
 .compe-nickel.fr
 .comperesuccessive.com
+.competitivepopcheerleader.com
 .complainfriendshipperry.com
 .completedmisunderstand.com
 .complexdaggled.com
@@ -24959,6 +25035,7 @@ tm.swp.de
 .computersncs.com
 .computersoostynaarlo.nl
 .computertechanalysis.com
+.comradeglorious.com
 .comscore.com
 .comsss-56.com
 .comunicazio.com
@@ -25016,6 +25093,8 @@ tm.swp.de
 .confusionfowlsomen.com
 .congestit.com
 .congoesld.com
+.congoro.com
+.congoro.ir
 .congrab.com
 .congratulatedreside.com
 .congressaffrayghosts.com
@@ -25397,6 +25476,7 @@ tm.swp.de
 .counter.tengrinews.kz
 .counter.theconversation.com
 .counter.tianjimedia.com
+.counter.toolsir.com
 .counter.top.kg
 .counter.topping.com.ua
 .counter.tripod.com
@@ -25824,6 +25904,7 @@ tm.swp.de
 .cryptocurrecny.com
 .cryptokoinz.com
 .cryptolabpro.com
+.cryptoland.com
 .cryptoloot.pro
 .cryptonote.club
 .cryptonoter.com
@@ -26549,6 +26630,7 @@ tm.swp.de
 .d2oa97wrxvxm7y.cloudfront.net
 .d2oh4tlt9mrke9.cloudfront.net
 .d2ojfulajn60p5.cloudfront.net
+.d2oy22m6xey08r.cloudfront.net
 .d2p3zdq8vjvnxd.cloudfront.net
 .d2pdbggfzjbhzh.cloudfront.net
 .d2pnacriyf41qm.cloudfront.net
@@ -26938,6 +27020,7 @@ tm.swp.de
 .daffaite.com
 .daftporus.website
 .dafttwist.com
+.dagcoin.org
 .dagd0kz7sipfl.cloudfront.net
 .dahaifa.com
 .dahexs.net
@@ -27165,6 +27248,7 @@ tm.swp.de
 .daurifek.net
 .davaifoa.com
 .davarello.com
+.davedbux.ir
 .daveexpose.com
 .davidhuynh.fr
 .dawangde.me
@@ -27361,6 +27445,9 @@ tm.swp.de
 .deeginews.com
 .deehalig.net
 .deeheede.com
+.deema.agency
+.deemaagency.ir
+.deemanetwork.com
 .deemnnc2ebecekx.ru
 .deemsoil.com
 .deemsteppemental.com
@@ -27392,6 +27479,7 @@ tm.swp.de
 .deferencedilutemurmur.com
 .defetohi.com
 .deficitsilverdisability.com
+.defigroups.com
 .defilt.com
 .definedlaunching.com
 .definitial.com
@@ -27523,6 +27611,7 @@ tm.swp.de
 .dentcontrader.com
 .dentistsinyourarea.com
 .dentofinauk.shop
+.denutility.com
 .denx.fr
 .deorganizati.co
 .deostr.com
@@ -28711,6 +28800,7 @@ tm.swp.de
 .dsoizkd.cn
 .dsoodbye.xyz
 .dsp-eu.surfy.tech
+.dsp.aparat.com
 .dsp.colpirio.com
 .dsp.io
 .dsparking.com
@@ -29688,6 +29778,7 @@ tm.swp.de
 .emediate.eu
 .emediate.se
 .emediatrack.com
+.emenshowapp.xyz
 .ementwre.buzz
 .emeralddead.com
 .emeraldtiger.com
@@ -29734,6 +29825,7 @@ tm.swp.de
 .emulousoaty.com
 .emusly.com
 .emuwanflat.com
+.emway.ir
 .emwkzebpuo.com
 .emxdgt.com
 .emxdigital.com
@@ -29746,6 +29838,7 @@ tm.swp.de
 .ena-native-ads4.com
 .enaceanspection.com
 .enactmedic.com
+.enactsbasiate.com
 .enacttournamentcute.com
 .enalytics.fr
 .enamberchivies.com
@@ -30436,6 +30529,7 @@ tm.swp.de
 .exclusivegiftcards.com
 .exclusivelydepict.com
 .exclusivepussy.com
+.excoino.com
 .excpm.com
 .excretekings.com
 .excsyrv.cn
@@ -30698,6 +30792,7 @@ tm.swp.de
 .facebookj.fr
 .faceboook-replyei0ki.montadalitihad.com
 .facemail.com
+.facepop.org
 .faceporn.com
 .facesnotebook.com
 .facesrenaissanceconfirmed.com
@@ -30836,6 +30931,7 @@ tm.swp.de
 .fapmeth.com
 .fapp.pw
 .faracoon.com
+.farakav.com
 .farantitid.racing
 .farcedboccis.com
 .fardingsoiling.com
@@ -30846,6 +30942,7 @@ tm.swp.de
 .farmius.org
 .faroff-painting.pro
 .farrivederev.pro
+.farsbux.ir
 .farteniuson.com
 .fartmoda.com
 .fas.catholicgreatestinterpret.xyz
@@ -30869,6 +30966,7 @@ tm.swp.de
 .fastcache.fun
 .fastcdn.info
 .fastclick.com.edgesuite.net
+.fastclick.ir
 .fastcmp.com
 .fastcontentdelivery.com
 .fastcounter.com
@@ -30926,6 +31024,7 @@ tm.swp.de
 .fawu.asia
 .faxqaaawyb.com
 .fb-accounts.com
+.fb-gw.bef.rest
 .fb-plus.com
 .fb28078ad6.com
 .fb332fdc0d.com
@@ -31992,6 +32091,7 @@ tm.swp.de
 .frnafinance.fr
 .frnwvialjbey.xyz
 .froancefootball.fr
+.frocogue.store
 .frodx.com
 .frog9alea.com
 .frogrugby.com
@@ -32040,6 +32140,7 @@ tm.swp.de
 .frypanbushlet.com
 .fryruejoust.cam
 .fryvzw.com
+.frzss.com
 .fs-client-logger.herokuapp.com
 .fs0523.com
 .fsalfrwdr.com
@@ -32288,6 +32389,7 @@ tm.swp.de
 .g5rillh2awn8.com
 .g7.com.tw
 .g77776666.com
+.g8ld.fun
 .g9o.cn
 .ga-ads.com
 .ga-bq-py-1.appspot.com
@@ -32700,6 +32802,7 @@ tm.swp.de
 .geoip.cookieyes.com
 .geoip.fotoable.net
 .geoip.herewetest.com
+.geoip.imber.live
 .geoiplookup.io
 .geoiplookup.wikimedia.org
 .geojs.io
@@ -32737,6 +32840,7 @@ tm.swp.de
 .geriod.com
 .germaniavid.com
 .geruksom.net
+.gervasdonatee.guru
 .gestionpub.com
 .get-ads.ru
 .get-answers-fast.com
@@ -33411,6 +33515,7 @@ tm.swp.de
 .gombaltowa.cfd
 .gombmobil.store
 .gombointill.com
+.gomhn.cn
 .gomnlt.com
 .gompoozu.net
 .gomsa.ru
@@ -33572,6 +33677,7 @@ tm.swp.de
 .gparted.fr
 .gpm-mon-sg.bytegsdk.com
 .gpm-mon-sg.byteoversea.com
+.gpm.ltd
 .gpnjknuqas.xyz
 .gposrzz.cn
 .gpozmocm.com
@@ -33906,6 +34012,7 @@ tm.swp.de
 .guffawdecipher.com
 .guge.red
 .gugulm.net
+.guhtoken.org
 .guiaconsumidor.com
 .guide2poker.com
 .guidelon.fr
@@ -34054,6 +34161,7 @@ tm.swp.de
 .gzpinda.com
 .gzppit.com
 .gzqczl.cn
+.gzqgaq.xyz
 .gzsadlmy.cn
 .gzsanxiaomingshi.cn
 .gzts188.com
@@ -34224,6 +34332,7 @@ tm.swp.de
 .hannist.com
 .hannode.xyz
 .hansaisai.top
+.hantana.org
 .hanyingmall.cn
 .hanzhixin.cn
 .hao222.com
@@ -34553,6 +34662,7 @@ tm.swp.de
 .helove.xyz
 .help.adtech.fr
 .help.adtech.us
+.helpedhandwritingintestine.com
 .helperate.net
 .helpful-web.com
 .helpfulwrap.com
@@ -34733,6 +34843,7 @@ tm.swp.de
 .hi.5.p2l.info
 .hiaaheddgjdfgabiafc.ru
 .hiadone.com
+.hiads.hidoctor.ir
 .hiasor.com
 .hibaby.ren
 .hibids10.com
@@ -36289,6 +36400,7 @@ tm.swp.de
 .imssl01.adtech.us
 .imstks.com
 .imtmp.net
+.imtokenwallet.biz
 .imtowoz.ru
 .imtwjwoasak.com
 .imudukely.store
@@ -36767,6 +36879,7 @@ tm.swp.de
 .intopicmedia.com
 .intorterraon.com
 .intowow.com
+.intrack.ir
 .intrack.pl
 .intranet.dcorp.com.vn
 .intrapromotion.com
@@ -36911,6 +37024,7 @@ tm.swp.de
 .iprotrk.com
 .iproute66.com
 .iprpe.cn
+.ipsite.ir
 .ipsowrite.com
 .ipssss.com
 .ipstack.com
@@ -36942,7 +37056,10 @@ tm.swp.de
 .iqyqqfduxeql.com
 .iqzone.com
 .iqzt3ec.cn
+.ir.mihanstore.net
 .ir002423.cn
+.irancloudmining.com
+.irancoinmine.com
 .irardijjyawmool.xyz
 .iratelyveinlet.com
 .irbisennuis.com
@@ -37301,6 +37418,7 @@ tm.swp.de
 .jajevnitxoshgb.com
 .jajnhd.com
 .jaleepsorous.website
+.jaletemetia.com
 .jalewaads.com
 .jaloppystudy.life
 .jambelegate.casa
@@ -37470,6 +37588,7 @@ tm.swp.de
 .jestbiases.com
 .jestinvaderspeedometer.com
 .jet.zbp.ru
+.jetbux.ir
 .jetem.fr
 .jetgatem.com
 .jetsomkhulda.com
@@ -38602,6 +38721,7 @@ tm.swp.de
 .kingads.net
 .kingdom-news.com
 .kingleo.hk
+.kingmoney.io
 .kingsun.online
 .kingwitheaa.lol
 .kingyonlendir.link
@@ -39366,6 +39486,7 @@ tm.swp.de
 .landslidechoreloft.com
 .landupoatour.com.ua
 .landupoatouwe.xyz
+.landyab.com
 .lane5down.com
 .langger76.site
 .langkefaye.top
@@ -39416,6 +39537,7 @@ tm.swp.de
 .laptoprewardsgroup.com
 .laptoprewardszone.com
 .lapypushistyye.com
+.laqira.io
 .laraliaethnol.com
 .larati.net
 .laratlacrestot.pro
@@ -39837,6 +39959,7 @@ tm.swp.de
 .leucan3thegm6um.com
 .leukemianarrow.com
 .leukemiarussianarmies.com
+.leumia.io
 .leuquipe.fr
 .leuxq.com
 .levaochbo.compricer.se
@@ -40001,6 +40124,7 @@ tm.swp.de
 .lifeofpie.fr
 .lifepromo.biz
 .liferd.de
+.lifesoonersoar.org
 .lifestyleoptimisticsing.com
 .lifetds.com
 .lifetimeroyaltybestial.com
@@ -40125,6 +40249,7 @@ tm.swp.de
 .linkconnector.com
 .linkcounter.com
 .linkcounter.pornosite.com
+.linkdoni.soft98.ir
 .linkeasy.org
 .linkedads.de
 .linkedassassin.com
@@ -40134,6 +40259,7 @@ tm.swp.de
 .linker.hr
 .linkexchange.com
 .linkexchangers.net
+.linkfars.com
 .linkfeed.ru
 .linkforyoud.com
 .linkgrand.com
@@ -40156,6 +40282,7 @@ tm.swp.de
 .links.zoopla.co.uk
 .links2revenue.com
 .linksalpha.com
+.linksaz.net
 .linksecurecd.com
 .linkshighway.com
 .linkshrink.net
@@ -40183,6 +40310,7 @@ tm.swp.de
 .linkword.ru
 .linkworth.com
 .linkxchanger.com
+.linkyar.com
 .linkybank.com
 .linnechaya.com
 .linodo.ru
@@ -42236,6 +42364,7 @@ tm.swp.de
 .meridia.4.p2l.info
 .meridiameridia.3xforum.ro
 .meried.co
+.merita.ir
 .meritiny.top
 .mermaidcontemplateadjoining.com
 .mermiscoapted.com
@@ -42386,6 +42515,8 @@ tm.swp.de
 .metrika.traff.space
 .metrilo.com
 .metriweb.be
+.metrix.behtarino.com
+.metrix.ir
 .metrx.fr
 .metsaubs.net
 .mettelindberg.dk
@@ -42590,6 +42721,7 @@ tm.swp.de
 .minence.fr
 .minencraft.fr
 .minently.com
+.minepi.com
 .miner.pr0gramm.com
 .mineralisasse.site
 .mineralscreamrobes.com
@@ -42695,6 +42827,7 @@ tm.swp.de
 .misxgkvnlf.com
 .miszonepionic.space
 .mitosesgawking.com
+.mitrarank.ir
 .mittylargen.com
 .miuspzkmn.bar
 .mix1traff.ru
@@ -42854,6 +42987,7 @@ tm.swp.de
 .mobalert.net
 .mobalives.com
 .mobalyzer.net
+.mobantong.oss-cn-hangzhou.aliyuncs.com
 .mobatori.com
 .mobatory.com
 .mobcrummymow.com
@@ -43402,6 +43536,7 @@ tm.swp.de
 .mt.64foot.com
 .mt34iofvjay.com
 .mt66g.com
+.mtabdil.com
 .mtalk.google.com
 .mtbjupleyqy.xyz
 .mtburn.com
@@ -43434,6 +43569,7 @@ tm.swp.de
 .mtsry.top
 .mtst.io
 .mttag.com
+.mttcoin.com
 .mtttvrit.com
 .mttty.top
 .mttwtrack.com
@@ -44234,6 +44370,7 @@ tm.swp.de
 .netagent.cz
 .netapplications.com
 .netavenir.com
+.netbina.com
 .netbiscuits.net
 .netbulvar.eu
 .netclickstats.com
@@ -44322,6 +44459,7 @@ tm.swp.de
 .new-new-years.com
 .new-park-hunt.ml
 .new-pressroom.com
+.new-sentry.digikala.com
 .new-vid-zone-1.blogspot.com.au
 .new.lerian-nti.be
 .new.zalizo.pp.ua
@@ -44391,6 +44529,7 @@ tm.swp.de
 .news-network.ru
 .news-news.co
 .news-venere.com
+.news-view-api.varzesh3.com
 .news.1ru.tv
 .news.fangdaijisuanqi.com
 .news.govorjat.ru
@@ -44445,6 +44584,7 @@ tm.swp.de
 .newsupdatewe.info
 .newsvidnews.info
 .newswhip.com
+.newswidget.net
 .newt1.adultworld.com
 .newtention.net
 .newthuads.com
@@ -44767,6 +44907,7 @@ tm.swp.de
 .nojazz.eu
 .nokaut.link
 .nokiadatabooklet.ltd
+.nokontoken.com
 .noksauxi.com
 .nolrougn.com
 .nomadtricesurfing.com
@@ -45555,6 +45696,7 @@ tm.swp.de
 .offers.motime.com.br
 .offers.nordvpn.com
 .offers.royalvegascasino.com
+.offers.sapra.ir
 .offersbid.com
 .offerserve.com
 .offersquared.com
@@ -45819,6 +45961,7 @@ tm.swp.de
 .omtvxcle.com
 .omynews.net
 .omzylhvhwp.com
+.on-click.ir
 .on-line.lv
 .on-push.com
 .on.5.p2l.info
@@ -46217,6 +46360,7 @@ tm.swp.de
 .orays.co
 .orbengine.com
 .orbitcarrot.com
+.orbitnetwork.net
 .orbsclawand.com
 .orbsrv.com
 .orcapia.com
@@ -46845,6 +46989,7 @@ tm.swp.de
 .panruo.net.cn
 .pansymerbaby.com
 .pantafives.com
+.pantatec.ae
 .pantaya.fr
 .panther.goguardian.com
 .pantherads.com
@@ -46926,6 +47071,7 @@ tm.swp.de
 .parsimoniouspolice.com
 .parskabab.com
 .part-time-job.biz
+.partclick.ir
 .parth2enerocis9tsust2ricus7pidata.com
 .parthanonstatue.com
 .parthetwo.ru
@@ -47359,6 +47505,8 @@ tm.swp.de
 .perryvolleyball.com
 .persesgnetum.com
 .persevered.com
+.persia.exchange
+.persianrank.ir
 .persianstat.com
 .persianstat.ir
 .persistentadequate.com
@@ -47382,6 +47530,7 @@ tm.swp.de
 .pervasivebacksrate.com
 .pervertmine.com
 .pervialinagile.com
+.perviv.com
 .perzonalization.com
 .peskyclarifysuitcases.com
 .pestgermagriculture.com
@@ -47403,6 +47552,7 @@ tm.swp.de
 .peweesfluer.website
 .pexi.nl
 .pexuvais.net
+.peyvandha.ir
 .peyzamo.ru
 .pezrphjl.com
 .pf34zdjoeycr.com
@@ -47549,6 +47699,7 @@ tm.swp.de
 .phocidabioses.store
 .phoenix-adrunner.mycomputer.com
 .phoenix-widget.com
+.phoenixad.io
 .phoenixads.co.in
 .phoenixinvestigations.ca
 .phohothiptu.pro
@@ -47565,6 +47716,7 @@ tm.swp.de
 .phones4you.be
 .phonestar.info
 .phonograph2.voxmedia.com
+.phonroid.com
 .phoobsoo.net
 .phooreew.net
 .phoossax.net
@@ -48186,6 +48338,7 @@ tm.swp.de
 .polyvalent.co.in
 .pomolation.ru
 .pomp-buerotechnik.de
+.pompass.net
 .pompeyafrite.com
 .pompeydesigning.com
 .pompouseruptionrang.com
@@ -48240,12 +48393,15 @@ tm.swp.de
 .popcpm.com
 .popec.net
 .popeni.live
+.popgozar.com
 .pophahwot.com
 .pophandler.net
 .pophit.net
+.popina.ir
 .popinads.com
 .popitunder.com
 .popjs.xyz
+.popland.info
 .poplarcolonistgreatest.com
 .popmajor.com
 .popmarker.com
@@ -48277,6 +48433,7 @@ tm.swp.de
 .populr.me
 .popult.com
 .popunder.bid
+.popunder.ir
 .popunder.online
 .popunder.ru
 .popunderjs.club
@@ -48291,6 +48448,7 @@ tm.swp.de
 .popup.softreklam.com
 .popupaval.com
 .popupclick.ru
+.popupdl.ir
 .popupdomination.com
 .popupmaker.com
 .popupme.net
@@ -48812,6 +48970,7 @@ tm.swp.de
 .promenadd.ru
 .promisecurtainscurrency.com
 .promisingjournalist.com
+.promizer.com
 .promo-banner.ru
 .promo-bc.com
 .promo-images.ttpsdk.info
@@ -48887,6 +49046,7 @@ tm.swp.de
 .properbunch.pro
 .propermessage.io
 .propersuitcase.com
+.propertiq.io
 .propgoservice.com
 .prophecyrehabilitationcardboard.com
 .prophetachybrief.com
@@ -49244,6 +49404,7 @@ tm.swp.de
 .publi.atresmediapublicidad.com
 .publiads.com
 .public.porn.fr
+.publica.ir
 .publicgood.com
 .publicidad.elmundo.es
 .publicidades.redtotalonline.com
@@ -49258,6 +49419,7 @@ tm.swp.de
 .publish.iptvz.net
 .publish.web.id
 .publish0x.com
+.publisher-network.com
 .publisheradnetwork.com
 .publishercounting.com
 .publishflow.com
@@ -49825,6 +49987,7 @@ tm.swp.de
 .qinger.name
 .qingfeng.homes
 .qingfengxq.com
+.qingganlan.ltd
 .qinghua.cc
 .qinghyx.com
 .qingjiedi.com
@@ -49873,6 +50036,7 @@ tm.swp.de
 .qkixi.com
 .qkkgish.cn
 .qkobbgs.cyou
+.qkoio.cyou
 .qksrv.biz
 .qksrv.cc
 .qksrv.net
@@ -50031,12 +50195,14 @@ tm.swp.de
 .qthynj2.com
 .qtimowbaqnd.xyz
 .qtnfnrm.cn
+.qtspkqzn.com
 .quackdamaging.com
 .quackexclusfdfjd.com
 .quadhu.com
 .quadran.eu
 .quadrinhoseroticos.net
 .quae0.top
+.quahl.com
 .quaidesbulles.fr
 .quaintcan.com
 .quakingcalix.com
@@ -50257,6 +50423,7 @@ tm.swp.de
 .rack-media.com
 .racleo.com
 .racterdeet.com
+.radar.bayan.ir
 .radarconsultation.com
 .radarstats.com
 .radarurl.com
@@ -50348,6 +50515,7 @@ tm.swp.de
 .rankings24.de
 .rankingscout.com
 .rankinteractive.com
+.rankirani.ir
 .ranklink.de
 .rankyou.com
 .ranlisgz.fun
@@ -51365,6 +51533,7 @@ tm.swp.de
 .rhinoseo.com
 .rhiospsea.one
 .rhkyufodw8ochdr3ogsite.com
+.rhoeomanid.space
 .rholi.ru
 .rhombicsomeday.com
 .rhombusads.com
@@ -51663,6 +51832,7 @@ tm.swp.de
 .roiughttohimhe.xyz
 .roivant.fr
 .rojadirectatv.fr
+.rokhdad.telewebion.com
 .rokitokijoki.com
 .rokkkpc.cn
 .rokno.com
@@ -51868,6 +52038,7 @@ tm.swp.de
 .rsptymlylo.com
 .rss.dtiserv.com
 .rss9f.top
+.rssbank.ir
 .rssblgb.cn
 .rsspump.com
 .rst.pornyhd.com
@@ -52418,6 +52589,7 @@ tm.swp.de
 .sangoo.top
 .sanity-dataplane.rudderstack.com
 .sanjagh.com
+.sanjagh.net
 .sankaudacityrefine.com
 .sankezhi.cn
 .sankoup.com
@@ -52679,6 +52851,7 @@ tm.swp.de
 .scriptall.ml
 .scriptcdn.net
 .scriptil.com
+.scripts-ads.s3.ir-thr-at1.arvanstorage.com
 .scripts.linkz.net
 .scripts.static-od.com
 .scripts.verticalacuity.com
@@ -53031,6 +53204,7 @@ tm.swp.de
 .sendmepush.com
 .sendptp.com
 .sendsay.ru
+.sendword.ir
 .sendyourpush.com
 .sength.com
 .senigh.com
@@ -53060,8 +53234,15 @@ tm.swp.de
 .sentphysically.com
 .sentrapromosi.com
 .sentry-mini.zalo.me
+.sentry-new.divar.ir
 .sentry-track.vietnamworks.com
+.sentry.cafebazaar.org
+.sentry.footballiapp.com
+.sentry.hamravesh.com
 .sentry.io
+.sentry.malltina.com
+.sentry.namava.ir
+.sentry.quera.org
 .sentry01.zerg.rambler.ru
 .senufocaviar.com
 .senxiaopang.top
@@ -53342,6 +53523,7 @@ tm.swp.de
 .shamelessmessengerdescription.com
 .shamelessnullneutrality.com
 .shamelessspank.com
+.shamining.com
 .shamodesha.com
 .shanaurg.net
 .shandongaosen.cn
@@ -53419,6 +53601,7 @@ tm.swp.de
 .sheerdaulpusher.com
 .sheeroop.com
 .sheetchi.net
+.sheetvibe.com
 .sheglach.net
 .shellstore.info
 .shelvesdeserve.com
@@ -53921,6 +54104,7 @@ tm.swp.de
 .skcapepyshdr.xyz
 .skcrtxr.com
 .skdbarh.cn
+.skeetads.com
 .skeettools.com
 .skelaxin.1.p2l.info
 .skelaxin.3.p2l.info
@@ -53994,6 +54178,7 @@ tm.swp.de
 .skysa.com
 .skyscrpr.com
 .skyvideo1.ru
+.skzlz.cn
 .sl-ct5.com
 .sl-h-statistics-ch-1.storeland.ru
 .sl6.top
@@ -54165,6 +54350,7 @@ tm.swp.de
 .smarterhq.io
 .smarterremarketer.net
 .smartfarming.cn
+.smartgalaxy.finance
 .smartinfomarketing.ru
 .smartlifeguides.com
 .smartlify.com
@@ -54556,6 +54742,7 @@ tm.swp.de
 .sontent.powvibeo.me
 .sontent.powzers.lol
 .sonumal.com
+.soodland.com
 .soogandrooped.cam
 .soopukib.net
 .soorbka.cn
@@ -54849,6 +55036,7 @@ tm.swp.de
 .sprayswisha.com
 .spreadlink.net
 .spreau.com
+.sprettyruckus.com
 .spring-tns.net
 .spring.de
 .springbot.com
@@ -55106,6 +55294,7 @@ tm.swp.de
 .stat-rock.com
 .stat-track.com
 .stat.56.com
+.stat.absolutist.com
 .stat.adguard.com
 .stat.airdroid.com
 .stat.alloha.tv
@@ -55409,6 +55598,7 @@ tm.swp.de
 .statscol.pond5.com
 .statserv.net
 .statsevent.com
+.statsfa.com
 .statsforads.com
 .statsforever.com
 .statsie.com
@@ -55450,6 +55640,7 @@ tm.swp.de
 .stc-nas.nixcdn.com
 .stc-support-app-brand.zdn.vn
 .stc.nas.nixcdn.com
+.stc.ninisite.com
 .stc.store.page.zaloapp.com
 .stcollection.moneysupermarket.com
 .stcounter.com
@@ -55702,6 +55893,7 @@ tm.swp.de
 .style.onvz.nl
 .stylesheet-js.ru
 .styleui.ru
+.stylliyote.com
 .stypaphupse.com
 .styrianauf.com
 .su.valley.ne.jp
@@ -56156,6 +56348,7 @@ tm.swp.de
 .syncbanjo.com
 .syncdownload.com
 .syncdownloading.com
+.synchrobit.io
 .synchronizedoll.com
 .syncingprocess.com
 .syncommisty.com
@@ -56336,6 +56529,7 @@ tm.swp.de
 .tabici.com
 .tabledownstairsprovocative.com
 .tablequantity.com
+.tabligheirani.ir
 .tabloidsuggest.com
 .tabmo.io
 .taboizo.mom
@@ -56352,6 +56546,7 @@ tm.swp.de
 .tadadamads.com
 .tadamads.com
 .tadsbelver.com
+.tadv.didestan.net
 .taembed.com
 .taetsiatomia.com
 .taffiasspavies.tech
@@ -56456,6 +56651,7 @@ tm.swp.de
 .takru.com
 .takychasing.com
 .talamk3.beauty
+.talapop.ir
 .talaropa.com
 .talazywho.pro
 .talkfusion.com
@@ -56566,6 +56762,7 @@ tm.swp.de
 .targetspot.com
 .tarnifotum.com
 .taroads.com
+.tarokbien.com
 .tarotien.com
 .tarpitbar.com
 .tarrilyathenee.com
@@ -56577,6 +56774,7 @@ tm.swp.de
 .taskapi.net
 .taskproceduresseverely.com
 .tassed.com
+.tastenfts.com
 .tastevision.cn
 .tastingraise.com
 .tastishi.ru
@@ -56612,6 +56810,7 @@ tm.swp.de
 .tberjonk.com
 .tbex.ru
 .tbhenherthertindn.xyz
+.tbli.ir
 .tbm09.com
 .tbplcam.com
 .tbs1.xyz
@@ -56701,6 +56900,7 @@ tm.swp.de
 .te.thestar.com
 .te.trb.com
 .te.versiontracker.com
+.te1.ir
 .te37w.cn
 .tea.pornolomka.video
 .teachac.com
@@ -56863,6 +57063,7 @@ tm.swp.de
 .telusplanet.net
 .telvanil.ru
 .telwrite.com
+.tembetachasmic.guru
 .tembetanymil.com
 .temelio.com
 .temnos.com
@@ -57050,6 +57251,7 @@ tm.swp.de
 .thague.com
 .thaickoo.net
 .thaidapps.com
+.thaignax.net
 .thaiguxu.com
 .thailandtravel.live
 .thainationalparks.fr
@@ -57864,6 +58066,7 @@ tm.swp.de
 .toppage.vn
 .topperformance.xyz
 .toppingfascili.tech
+.toppopup.com
 .toppornvids.com
 .topprofitablecpm.com
 .topprofitablegate.com
@@ -58280,9 +58483,11 @@ tm.swp.de
 .tracker.consumerpackage.net
 .tracker.coopt.com
 .tracker.dcdn.baidu.com
+.tracker.digikala.com
 .tracker.durasite.net
 .tracker.edupia.vn
 .tracker.fado.vn
+.tracker.farsnews.ir
 .tracker.files.fm
 .tracker.gamedock.io
 .tracker.giftd.ru
@@ -58322,7 +58527,6 @@ tm.swp.de
 .trackity.tiki.vn
 .trackjs.com
 .trackkas.com
-.tracklink-tel.de
 .trackmethod.com
 .trackmstr.com
 .trackmundo.com
@@ -58432,7 +58636,6 @@ tm.swp.de
 .traiah.com
 .trail-web.com
 .trailbox.net
-.traildelsfars.com
 .trailers.to
 .trailheadapp.com
 .trainspersuasiveknitting.com
@@ -58515,6 +58718,7 @@ tm.swp.de
 .treehousei.com
 .treehundredarmament.com
 .treenghsas.com
+.treenvest.com
 .treeoutcry.com
 .trehtnoas.com
 .trek.powtoon.com
@@ -58563,6 +58767,7 @@ tm.swp.de
 .trianglerank.net
 .tribalstrived.com
 .tribl.io
+.triboon.net
 .trick17.it
 .trickylongaffliction.com
 .trickyseduction.com
@@ -58725,6 +58930,7 @@ tm.swp.de
 .trustmeiamapro.de
 .trustmeiamcdn.com
 .trustpid.com
+.trustseal.e-rasaneh.ir
 .trusturl.top
 .trustutn.org
 .trustyfine.com
@@ -59596,6 +59802,7 @@ tm.swp.de
 .uniontraff.com
 .uniplayad.com
 .uniqodo.com
+.unique.finance
 .uniquecaptcha.com
 .uniregistry.com
 .unisound.cdnvideo.ru
@@ -59914,6 +60121,10 @@ tm.swp.de
 .usbkngf.cn
 .usbvhzg.cn
 .uscdn.top
+.usdtbang.com
+.usdtbbc.com
+.usdtcan.com
+.usdteng.com
 .useads.com
 .usedunderstood.com
 .usefomo.com
@@ -59946,6 +60157,7 @@ tm.swp.de
 .userdatatrust.com
 .userdive.com
 .usereachpeople.com
+.userfriendly.ir
 .userlook.com
 .userneeds.dk
 .userreplay.com
@@ -60002,6 +60214,7 @@ tm.swp.de
 .utarget.pro
 .utarget.ru
 .utauniv-lyon2.fr
+.utbyte.io
 .utcatholicycl.co
 .utci9.cn
 .utensils.pro
@@ -60025,6 +60238,8 @@ tm.swp.de
 .utmyoogrxpesf.xyz
 .utndln.com
 .utokapa.com
+.utop.ir
+.utopclick.com
 .utoumine.net
 .utrace.fr
 .utraff.com
@@ -60147,6 +60362,7 @@ tm.swp.de
 .v2cigs.com
 .v2mlemerald.com
 .v2profit.com
+.v2st.shinobi.jp
 .v2zn.xyz
 .v34ffs.site
 .v3cdn.net
@@ -60286,6 +60502,7 @@ tm.swp.de
 .vastroll.ru
 .vastserved.com
 .vatafapac.ru
+.vatanclick.ir
 .vatcalf.com
 .vatedquali.com
 .vatizon.com
@@ -60422,6 +60639,7 @@ tm.swp.de
 .vercel-insights.com
 .verdictdisingenuousfruitless.com
 .verdoledran.ru
+.vereyhinders.com
 .vericlick.com
 .verified-extensions.com
 .verify.authorize.net
@@ -60581,6 +60799,7 @@ tm.swp.de
 .video-serve.com
 .video-stats.video.google.com
 .video-streaming.ezoic.com
+.video-view-api.varzesh3.com
 .video.cynogage.com
 .video.entertaintastic.com
 .video.flashiest-vacation.win
@@ -60644,6 +60863,7 @@ tm.swp.de
 .vidible.tv
 .vidigital.ru
 .vidnline.com
+.vidomusic.org
 .vidora.com
 .vidout.net
 .vidplah.com
@@ -60710,6 +60930,7 @@ tm.swp.de
 .vilereasoning.com
 .viliaff.com
 .vilith.com
+.vilki.cn
 .villagarden.pl
 .villageeatable.com
 .villasquinttolerance.com
@@ -61471,6 +61692,7 @@ tm.swp.de
 .waycloud.info
 .wayexiaofei.club
 .wayfarerspoutpraise.com
+.waykingroup.com
 .waymarkgentiin.com
 .waymentriddel.com
 .waytogrow.eu
@@ -61615,6 +61837,7 @@ tm.swp.de
 .webengage.com
 .webest.info
 .webeyez.com
+.webfeetdaidled.com
 .webflowmetrics.com
 .webforensics.co.uk
 .webfunny.cn
@@ -61705,6 +61928,11 @@ tm.swp.de
 .websitesampling.com
 .websitetosubmit.com
 .websitewelcome.com
+.websocket.55online.news
+.websocket.ilna.ir
+.websocket.khanefootball.com
+.websocket.sobhtazeh.news
+.websocket.varandaz.com
 .webspiration.de
 .websponsors.com
 .webstag.kplus.vn
@@ -62093,6 +62321,7 @@ tm.swp.de
 .wickedreports.com
 .wickiupcopalms.com
 .widaimty.com
+.wideads.com
 .wideangle.co
 .widebanner.com
 .wideeyedlady.pro
@@ -62220,6 +62449,7 @@ tm.swp.de
 .winnye.com
 .winpbn.com
 .winr.online
+.wintap.io
 .winter-balance.com
 .winternewsnow.name
 .winterolivia.com
@@ -63649,6 +63879,7 @@ tm.swp.de
 .xjnwqdospderqtk.ru
 .xjpphoto.com
 .xjpsrb.xyz
+.xjs.lol
 .xjsq.xyz
 .xjuneuud.cn
 .xjwrq.com
@@ -63719,6 +63950,7 @@ tm.swp.de
 .xmlterra.com
 .xmltym2.cn
 .xmlwizard.com
+.xmlx.lol
 .xmmnsl.com
 .xmorex.com
 .xmq123.cn
@@ -64196,10 +64428,12 @@ tm.swp.de
 .yeegsxcwbnn.com
 .yehuitudu.cn
 .yeip5aehi.icu
+.yekbux.com
 .yektanet.com
 .yeld9auto.com
 .yeliam.com
 .yellads.com
+.yelloadwise.ir
 .yellow-record.pro
 .yellowacorn.net
 .yellowblue.io
@@ -64514,6 +64748,7 @@ tm.swp.de
 .yoomedia.de
 .yoopigoopi.com
 .yooumoughtc.xyz
+.yoozbit.com
 .yopard.com
 .yoptaejrj2kkf8nj09.com
 .yoqpnkhl.com
@@ -64946,6 +65181,7 @@ tm.swp.de
 .zampad.com
 .zampda.net
 .zanaflex.1.p2l.info
+.zanboor.net
 .zangocash.com
 .zangtui.com
 .zanlisgq.fun
@@ -65372,6 +65608,7 @@ tm.swp.de
 .znfg6677.top
 .znktkt.cn
 .znlgplt.com
+.znllfp.xyz
 .znnhmzumod.com
 .znqip.net
 .znqip.org
@@ -65573,6 +65810,7 @@ tm.swp.de
 .zx.docin.com
 .zxcdn.com
 .zxcvbnmasdfghjklqwertyuiop.work
+.zxfas56.com
 .zxhstudy.online
 .zxiaochun.site
 .zxopen.tech
@@ -78222,7 +78460,6 @@ tm.swp.de
 .24200.h5ixp.com
 .24200.luvbr.com
 .24click.top
-.24d.ir
 .24smi.org
 .24x7report.com
 .25381bfc0c.com
@@ -79010,7 +79247,6 @@ tm.swp.de
 .acquaintedexpectations.com
 .acs.wapa.taobao.com
 .acsam-relay.agof.de
-.acsshufxnu.com
 .act-on.milestoneinternet.com
 .act-on.snb.com
 .act.ethology.com
@@ -79130,7 +79366,6 @@ tm.swp.de
 .ad.qn.img-space.com
 .ad.quwin.cn
 .ad.smartmediarep.com
-.ad.technews-iran.com
 .ad.ttstreaming.stream
 .ad.us.sinaimg.cn
 .ad.wawacity.xyz
@@ -79200,11 +79435,9 @@ tm.swp.de
 .adebis.sbishinseibank.co.jp
 .adebis.sokamocka.com
 .aden.baidu.com
-.adengine.telewebion.com
 .adepeejeiix.com
 .adeq.hiidc.com.cn
 .adex.kintetsu-re.co.jp
-.adexo.ir
 .adexpo.tencentmusic.com
 .adexprtz.com
 .adfancy.com.cn
@@ -79226,7 +79459,6 @@ tm.swp.de
 .adimmix.com
 .aditor.com
 .adiu.amap.com
-.adivery.com
 .adixkr.culturekings.com.au
 .adj.st
 .adjmpfrbhed.com
@@ -79260,7 +79492,6 @@ tm.swp.de
 .admother.com
 .adn.baidu.com
 .adne.tv
-.adnegah.net
 .adnextjs.adverline.com
 .adnexus.mobi
 .adnoble.com
@@ -79276,7 +79507,6 @@ tm.swp.de
 .adplan7.com
 .adpool.bet
 .adpopcon.com
-.adpulse.ir
 .adpushsdk.goforandroid.com
 .adpxl.co
 .adquest3d.com
@@ -79307,10 +79537,7 @@ tm.swp.de
 .ads.adfox.me
 .ads.adroi.com.cn
 .ads.adtrustmedia.com
-.ads.akairan.com
-.ads.akaup.com
 .ads.al3ably.com
-.ads.alaatv.com
 .ads.allaccess.com.ph
 .ads.anese.co
 .ads.appchair.com
@@ -79323,7 +79550,6 @@ tm.swp.de
 .ads.chargeads.com
 .ads.chinadaily.com.cn
 .ads.cyberctm.com
-.ads.dabi.ir
 .ads.deliverimp.com
 .ads.dixcom.com
 .ads.djc.com
@@ -79340,7 +79566,6 @@ tm.swp.de
 .ads.icloseli.com
 .ads.idiscountmall.net
 .ads.inven.co.kr
-.ads.karzar.net
 .ads.latinongroup.com
 .ads.mediaforge.com.edgekey.net
 .ads.memob.com
@@ -79365,7 +79590,6 @@ tm.swp.de
 .ads.reader.yueyouxs.com
 .ads.reembed.com
 .ads.roblox.com
-.ads.safarme.ir
 .ads.saplacikardepo.xyz
 .ads.snapchat.com
 .ads.sonataplatform.com
@@ -79413,11 +79637,9 @@ tm.swp.de
 .adsh.m.taobao.com
 .adshell.net
 .adshostnet.com
-.adsima.net
 .adsimg-kompascom-1349122490.ap-southeast-1.elb.amazonaws.com
 .adsinapvcsrie.com
 .adsk-pnxproxy-prd-1753980530.us-east-1.elb.amazonaws.com
-.adskav.com
 .adsmind.apdcdn.tc.qq.com
 .adsmis.duxiaoman.com
 .adsnot.1javguru.xyz
@@ -79450,7 +79672,6 @@ tm.swp.de
 .adtecc.com
 .adtongji.xyz
 .adtoqbuejunef.com
-.adtrace.io
 .adtrack.adleadevent.com
 .adtrackers.net
 .adtrue-track-server-1082517350.us-west-2.elb.amazonaws.com
@@ -79472,7 +79693,6 @@ tm.swp.de
 .advise.gallup.com
 .advisor.newyorklifeannuities.com
 .advisorservicesfpc.etradefinancial.com
-.advn.ir
 .advpro.pro
 .advrts.onelouder.com
 .advrts.s3.amazonaws.com
@@ -79480,9 +79700,6 @@ tm.swp.de
 .advtimedown.goforandroid.com
 .adwbs.ximalaya.com
 .adwires.com
-.adwised.azureedge.net
-.adwised.com
-.adwisedfs.com
 .adx-api.mobadvent.com
 .adx-bid.tianzhuobj.com
 .adx-exchange.toast.com
@@ -79643,7 +79860,6 @@ tm.swp.de
 .affilbox.mutumutu.cz
 .affilbox.rondopartner.cz
 .affilbox.stygremvkleci.cz
-.affili.ir
 .affiliate.2gispraha.cz
 .affiliate.4fresh.cz
 .affiliate.agatinsvet.cz
@@ -79676,7 +79892,6 @@ tm.swp.de
 .affiliate.diana-company.cz
 .affiliate.diana-company.sk
 .affiliate.diatomplus.cz
-.affiliate.digikala.com
 .affiliate.dmxgear.cz
 .affiliate.domoss.sk
 .affiliate.easylingo.com
@@ -79728,7 +79943,6 @@ tm.swp.de
 .affiliate.lg-store.cz
 .affiliate.loveo.cz
 .affiliate.luxusnipradlo.cz
-.affiliate.malltina.com
 .affiliate.manvel.cz
 .affiliate.milagro.cz
 .affiliate.mobilonline.sk
@@ -79783,7 +79997,6 @@ tm.swp.de
 .affiliateold.firma20.cz
 .affiliates.adinternet.cz
 .affiliationjs.s3.amazonaws.com
-.affilio.ir
 .affilo.crosta.cz
 .affilo.crosta.sk
 .affilo.damoda.cz
@@ -79793,7 +80006,6 @@ tm.swp.de
 .affilpartner.descanti.com
 .afflat3e1.com
 .affluencepaymentlandscape.com
-.affstat.digikala.com
 .affsuhgiyd.com
 .afftrack.awellnesscollective.net
 .afftrack.healthprimeplus.net
@@ -79912,7 +80124,6 @@ tm.swp.de
 .airs.adpinfo.com
 .airsoubs.com
 .aissores.com
-.aitrades.com
 .aiwtbamcfmmwe.com
 .aixintou.com.cn
 .aizhigu.tv
@@ -80065,7 +80276,6 @@ tm.swp.de
 .amandajuliett.com
 .amap-aos-info-nogw.amap.com
 .amarketing.top
-.amaroid.net
 .amateurinduced.com
 .amatrck.com
 .amaurt.com
@@ -80093,7 +80303,6 @@ tm.swp.de
 .amitaephapse.com
 .amkucbputvj.com
 .amlatiosa.com
-.ammaar.delivery.zeerak.cloud
 .amnestynanny.com
 .amnyescsmgcagjj.com
 .amoeba.fudata.cn
@@ -80127,13 +80336,10 @@ tm.swp.de
 .analy.tuniu.cn
 .analysis.120ask.com
 .analysis.chinaiiss.com
-.analysis.faradars.org
 .analysis.lionmobi.com
 .analysis.polarisoffice.com
-.analyt.ir
 .analytiall.com
 .analytic.americanfunds.com
-.analytic.magland.ir
 .anaumb.com
 .ancdwlavstghmr.com
 .anciet.com
@@ -80331,7 +80537,6 @@ tm.swp.de
 .api.ivymobile.com
 .api.jialiangad.com
 .api.jsfc8.cn
-.api.karpishe.com
 .api.keen.io
 .api.ktplay.com
 .api.kwaizt.com
@@ -80419,7 +80624,6 @@ tm.swp.de
 .apjqgtbgk.com
 .aplidhree.com
 .apm-engine.meteor.com
-.apm.bama.ir
 .apm.relationshipone.com
 .apnoeagu.com
 .apojtowdaa.com
@@ -80706,7 +80910,6 @@ tm.swp.de
 .aqvqgjun.com
 .aqwawryqsvughsf.com
 .aqycugomdv.com
-.aqylmil.cn
 .ar.quadient.com
 .ar.tankasphose.com
 .aratiremanie.com
@@ -80739,7 +80942,6 @@ tm.swp.de
 .armlyemoan.com
 .armpitarticle.com
 .aroidsdefaced.com
-.arongroups.co
 .aroups.com
 .arousedskinnyspeeding.com
 .arrict.com
@@ -80747,7 +80949,6 @@ tm.swp.de
 .arrreeject.com
 .arrwjdoafypygo.com
 .art.carte-gr.total.fr
-.artanlife.club
 .artbluesea.xyz
 .artibot.ai
 .articles.americansaversfinder.com
@@ -80757,9 +80958,6 @@ tm.swp.de
 .arvb.6v7q4txztl.ru
 .arvb.78bfjskxto.ru
 .arvb.gamz48qlok.ru
-.aryacoin.io
-.aryana.io
-.aryastake.io
 .as.balluff.com
 .as.cfcnet.top
 .as.ebacdn.com
@@ -80836,7 +81034,6 @@ tm.swp.de
 .aspirinelitistunderstood.com
 .asqqfuiw.com
 .asrop.xyz
-.assaystalonic.com
 .assessment.vetassess.com.au
 .assets-production.applicaster.com
 .assets-secure.applicaster.com
@@ -81088,7 +81285,6 @@ tm.swp.de
 .axlyexdqxndyhmw.com
 .axmlhyaudio.com
 .axmmhpkxkrvlm.com
-.axotrade.com
 .axp.avaya.com
 .axp9.com
 .axp9.net
@@ -81111,7 +81307,6 @@ tm.swp.de
 .ayvpagsvdvh.com
 .aywfsjpglvhzdk.com
 .aywgucxmh.com
-.ayyaar.ir
 .ayyfewggggfbhf.com
 .az413505.vo.msecnd.net
 .az416426.vo.msecnd.net
@@ -81163,7 +81358,6 @@ tm.swp.de
 .backfirefever.com
 .backlogtop.xyz
 .backoffice.verintsystemsinc.com
-.backority.ir
 .backwardchampionship.com
 .bactqsbbxr.xyz
 .bad.maienyanjing.cn
@@ -81186,7 +81380,6 @@ tm.swp.de
 .baggageaccomplishfrom.com
 .bagirastyle.ru
 .bagsevitld.com
-.bahatoken.site
 .bahuthue.com
 .baichuan-sdk.alicdn.com
 .baid1.okooo.com
@@ -81405,7 +81598,6 @@ tm.swp.de
 .becasp.com
 .beclogsbryce.com
 .becoquin.com
-.becramblunger.com
 .bedbug.bragi.com
 .bedsitetrypa.com
 .bedumbserugate.com
@@ -81420,7 +81612,6 @@ tm.swp.de
 .befsqgyqbw.top
 .beguesscrabbit.com
 .behelddisfiguresucceed.com
-.behinava.com
 .behpgjclsf.com
 .beigecombinedsniffing.com
 .bejeweled-skies-prod.elasticbeanstalk.com
@@ -81430,7 +81621,6 @@ tm.swp.de
 .believergenerate.com
 .belongrobustgreedy.com
 .belookmoirai.com
-.bemchain.io
 .bemoathudson.com
 .bendycrumply.com
 .benefit.genyprozivot.cz
@@ -81581,8 +81771,6 @@ tm.swp.de
 .bitvnvjfakrik.xyz
 .biwhamto.com
 .biwo.ink
-.bixb.exchange
-.bixbcoin.com
 .bizmavosndi.com
 .bja2.destinia.cz
 .bjavvsmuqnob.com
@@ -81697,7 +81885,6 @@ tm.swp.de
 .bn2b-cor003.api.p001.1drv.com
 .bn2b-cor004.api.p001.1drv.com
 .bn3p-cor001.api.p001.1drv.com
-.bnbmatrix.io
 .bnbsagevcuca.com
 .bnc.lt
 .bnc1m.com
@@ -81765,7 +81952,6 @@ tm.swp.de
 .bookmrqafuftc.com
 .bookwormapricotconcealment.com
 .boom.laravel.io
-.boorantech.com
 .boorishregt.com
 .booster.webtradecenter.com
 .boothscrain.com
@@ -81835,12 +82021,9 @@ tm.swp.de
 .breakemyhoney.com
 .breakthrough.kronos.com
 .breathunwelcome.com
-.brewseryngo.com
 .brfddmrfb.com
 .brhxtc.dxl.com
 .bridalspottagy.com
-.bridespiraya.com
-.bridge.link
 .bridgerbristle.com
 .briefsupbuoy.com
 .briesburlesk.com
@@ -82202,7 +82385,6 @@ tm.swp.de
 .casavasstamnoi.com
 .cascadion.thermo.com
 .cascadion.thermofisher.com
-.cashback.takhfifan.com
 .casino.betsson.com
 .casleygkqvkx.com
 .cassettepreceding.com
@@ -82251,7 +82433,6 @@ tm.swp.de
 .cawsspjzhtgz.com
 .caxlbwivi.xyz
 .caxtondegame.com
-.cayot.ir
 .cb.sailthru.com
 .cb24g.site
 .cbba8228b1.com
@@ -82508,7 +82689,6 @@ tm.swp.de
 .ch3301-g.1drv.com
 .ch3302-c.1drv.com
 .ch3302-e.1drv.com
-.chabok.io
 .chaferfathom.com
 .challengeh.carte-gr.total.fr
 .chameleon.rndm.uk
@@ -82537,7 +82717,6 @@ tm.swp.de
 .chatra.io
 .chats.novait.com.ua
 .chatterpal.me
-.chavosh.org
 .chdnnrdkpp.com
 .che0.com
 .check-this-match.com
@@ -82697,7 +82876,6 @@ tm.swp.de
 .click.check-games.com
 .click.clickcash.pro
 .click.com.cn
-.click.digiato.com
 .click.directrankcl.com
 .click.dracking.com
 .click.e.juiceplus.com
@@ -82726,7 +82904,6 @@ tm.swp.de
 .click.yhd.com
 .click.yourpositivereality.com
 .click2soft.ru
-.clickaval.com
 .clickbytes.ru
 .clickc4n.pornharlot.net
 .clickcay.com
@@ -82970,7 +83147,6 @@ tm.swp.de
 .coins.now.sh
 .coinsicmp.com
 .coinstash1.now.sh
-.coinwallet.biz
 .coinzba.mom
 .col.casa.it
 .colamirus.com
@@ -83048,7 +83224,6 @@ tm.swp.de
 .compass-events.deliverimp.com
 .compass-v2.deliverimp.com
 .competitivediscontent.com
-.competitivepopcheerleader.com
 .compliance.coniferhealth.com
 .complianceupdates.aem.org
 .complimentarywalkerexcessively.com
@@ -83057,7 +83232,6 @@ tm.swp.de
 .composurevulnerable.com
 .computers.panasonic.eu
 .computeterrifyingobdurate.com
-.comradeglorious.com
 .comscore.akadns.net
 .comscoreresearch.com
 .comtelitalia.alcatel-lucent.com
@@ -83088,8 +83262,6 @@ tm.swp.de
 .confirm.aon.com
 .confirmic.com
 .confiscatecatherinehandling.com
-.congoro.com
-.congoro.ir
 .coninemelior.com
 .conjectwatson.com
 .connect-qa.netapp.com
@@ -83345,7 +83517,6 @@ tm.swp.de
 .count.pcauto.com.cn
 .count.pcgames.com.cn
 .counter.pcauto.com.cn
-.counter.toolsir.com
 .countess.twitch.tv
 .countpage.sznews.com
 .coupon2buy.com
@@ -83469,7 +83640,6 @@ tm.swp.de
 .crummytoots.com
 .crvsqkqidgnltp.com
 .crwan.applinzi.com
-.cryptoland.com
 .cryptopay.org.za
 .cryptown.netlify.com
 .crystal-blocker.com
@@ -83656,7 +83826,6 @@ tm.swp.de
 .d2izls9pm2f64q.cloudfront.net
 .d2kr2fnkbj2h4c.cloudfront.net
 .d2o307dm5mqftz.cloudfront.net
-.d2oy22m6xey08r.cloudfront.net
 .d2szg1g41jt3pq.cloudfront.net
 .d2yyd1h5u9mauk.cloudfront.net
 .d32r9jwgeu9dzx.cloudfront.net
@@ -83685,7 +83854,6 @@ tm.swp.de
 .dadlommysetcg.com
 .dadsans.com
 .dafxumsbix.com
-.dagcoin.org
 .daglatuw.com
 .dagnar.com
 .dailymotion-cs.vpadn.com
@@ -85435,7 +85603,6 @@ tm.swp.de
 .dauaskjyfoy.com
 .daugus.com
 .daunnotes.com
-.davedbux.ir
 .davzwyavjm.com
 .dawdlechahar.com
 .dawnjacktip.live
@@ -85537,16 +85704,12 @@ tm.swp.de
 .dediom.com
 .dedispot.com
 .deduexwbxvjdxbp.com
-.deema.agency
-.deemaagency.ir
-.deemanetwork.com
 .deer.m1x.co
 .deer.ray.io
 .defas.site
 .defeak.com
 .defempgkgmvccj.com
 .defiantinfluencedtrustworthy.com
-.defigroups.com
 .defre.net
 .defundium.com
 .deinfkvtgkna.com
@@ -85570,7 +85733,6 @@ tm.swp.de
 .denis-pj0823031-491201b.com
 .denpjz.jamesedition.com
 .denpne.modelones.com
-.denutility.com
 .denza.pro
 .derristerma.com
 .des.me.coact.org.au
@@ -85967,7 +86129,6 @@ tm.swp.de
 .dsp-x.jd.com
 .dsp.adcountymedia.com
 .dsp.anytheengmedia.com
-.dsp.aparat.com
 .dsp.batmobi.net
 .dsp.brand.sogo.com
 .dspack.com.cn
@@ -86579,7 +86740,6 @@ tm.swp.de
 .embodimentabstain.com
 .embuebreme.com
 .emea.info.mouser.com
-.emenshowapp.xyz
 .emeraldmistrust.com
 .emetrics.eastwestbank.com
 .emised.com
@@ -86597,12 +86757,10 @@ tm.swp.de
 .emu.blitzpower.com
 .emu.cortexfutura.com
 .emu.pin13.net
-.emway.ir
 .en25.com
 .ena-native-ads9.com
 .enablecherrysail.com
 .enablement.vmware.com
-.enactsbasiate.com
 .encasedandelionhauled.com
 .encounts.com
 .endljp.edna.bg
@@ -86902,7 +87060,6 @@ tm.swp.de
 .exchad.com
 .exchange.carte-gr.total.fr
 .exchange.superfastmediation.com
-.excoino.com
 .exct.net
 .executivebriefing.coniferhealth.com
 .exemph.com
@@ -86972,7 +87129,6 @@ tm.swp.de
 .f338113ad0.com
 .f3f1317bda.com
 .f3fea4450e3b.xzccie.com
-.facepop.org
 .facilitategovernor.com
 .factermer.com
 .facvtxtvjbumb.com
@@ -86998,15 +87154,12 @@ tm.swp.de
 .fanumi.com
 .fanzinetautens.com
 .fapping.club
-.farakav.com
 .farcdnf.com
-.farsbux.ir
 .fascinatingappraisalunderestimate.com
 .fast-vpn.me
 .fast.s5live.com
 .fast2click.ru
 .fastcallagent.com
-.fastclick.ir
 .fastg8.pool.iponweb.net
 .fatherceremony.com
 .fattiersereins.com
@@ -87016,7 +87169,6 @@ tm.swp.de
 .favouritesuitable.com
 .fay.chat
 .fayelv.top
-.fb-gw.bef.rest
 .fbapi.dxsvr.com
 .fbapi.guguread.com
 .fbiskulrsmccibl.com
@@ -87453,7 +87605,6 @@ tm.swp.de
 .frevi.net
 .friendfinder.com
 .frientialfinge.xyz
-.frocogue.store
 .frog.jamesbliss.com
 .froggyinter.com
 .fromhttptohttps.atea.fi
@@ -87467,7 +87618,6 @@ tm.swp.de
 .fructushumble.com
 .fruggedraids.com
 .fruine.com
-.frzss.com
 .fsoft4down.com
 .fssuqbylk.com
 .fsswokpc.com
@@ -87548,7 +87698,6 @@ tm.swp.de
 .g4x.porngirl.eu
 .g8ads.com
 .g8f.ifeng.com
-.g8ld.fun
 .ga.amgtrack.link
 .ga.asseizeenl.com
 .ga2.3dmgame.com
@@ -87654,7 +87803,6 @@ tm.swp.de
 .geobanner.fuckbookhookups.com
 .geobanner.sexfinder.com
 .geoip.goforandroid.com
-.geoip.imber.live
 .geoip.olx.com.br
 .georgh.com
 .geovideo.name
@@ -87662,7 +87810,6 @@ tm.swp.de
 .gerdonarium.com
 .gerfulcabman.com
 .germanexpecting.com
-.gervasdonatee.guru
 .get-datinghere.life
 .get-express-vpn.online
 .get-express-vpns.com
@@ -87990,7 +88137,6 @@ tm.swp.de
 .goldnfz.com
 .goldspotmedia.com
 .goload.wecloud.io
-.gomhn.cn
 .gomo.cc
 .gondangwicopy.com
 .gong-eb.qubit.com
@@ -88027,7 +88173,6 @@ tm.swp.de
 .gpbhgborcpy.com
 .gplayer.kmpmedia.net
 .gplusapi.appspot.com
-.gpm.ltd
 .gpneofgeo.com
 .gptrbohjwkk.com
 .gpyrvmufck.com
@@ -88113,7 +88258,6 @@ tm.swp.de
 .gueigdtqfrcdvo.com
 .guelvp.1111.com.tw
 .guffsview.com
-.guhtoken.org
 .guideforwindows.top
 .guineapig.espressive.com
 .guineapig.recap.io
@@ -88155,7 +88299,6 @@ tm.swp.de
 .gyvesmutic.com
 .gyvzjp.conradelektronik.dk
 .gzbwdbipemilou.com
-.gzqgaq.xyz
 .h-ay.com
 .h.b5qpg.cn
 .h.imguol.com
@@ -88190,7 +88333,6 @@ tm.swp.de
 .hamster.darstellendekuenste.de
 .hamtugin.com
 .handycam.alicdn.com
-.hantana.org
 .hao1.loxue.com
 .hao123union.baidu.com
 .haodiwh.top
@@ -88287,7 +88429,6 @@ tm.swp.de
 .hell.duttak.com
 .hello.bpost.be
 .hellomybeuty.com
-.helpedhandwritingintestine.com
 .helphauntboxer.com
 .helping.net.zooplus.es
 .helpscout.net
@@ -88332,7 +88473,6 @@ tm.swp.de
 .hhy.betway8118.com
 .hi.zeri3a.click
 .hi999.mom
-.hiads.hidoctor.ir
 .hiadscvd.cezici.cn
 .hiankh.com
 .hiba.club
@@ -89016,7 +89156,6 @@ tm.swp.de
 .improveapesbates.com
 .imprvdosrv.com
 .imspecial.club
-.imtokenwallet.biz
 .imuppvykdsys.xyz
 .imwinnerkur.com
 .imwx.com
@@ -89237,7 +89376,6 @@ tm.swp.de
 .intl.wapa.taobao.com
 .intl.waptest.taobao.com
 .intouch.arcsoft.com
-.intrack.ir
 .inunctsignate.com
 .inurra.com
 .inutilepiously.com
@@ -89282,16 +89420,12 @@ tm.swp.de
 .ipmatm.cp12.wasu.tv
 .iprefer.com.tw
 .ipservice.163.com
-.ipsite.ir
 .iq.intellicyt.com
 .iqdflfpchlmtnt.com
 .iqzgqivb.com
 .ir.avertinniello.com
-.ir.mihanstore.net
 .ir.mildlydoucely.com
 .ir0.mobify.com
-.irancloudmining.com
-.irancoinmine.com
 .iranismepode.com
 .irbtiaybbjrule.com
 .iris.tv
@@ -89388,7 +89522,6 @@ tm.swp.de
 .jadout.com
 .jagevirom.com
 .jainafashing.com
-.jaletemetia.com
 .jameschan.info
 .jampp.com
 .jan19.zhiyueit.com
@@ -89443,7 +89576,6 @@ tm.swp.de
 .jerkindeducer.com
 .jerrcotch.com
 .jesult.com
-.jetbux.ir
 .jeuqlahm.com
 .jevtguexebyt.com
 .jf.10010.com
@@ -89779,7 +89911,6 @@ tm.swp.de
 .kingfisher.gedaly.com
 .kingfisher.startupdemoday.live
 .kingfisher.wishloom.com
-.kingmoney.io
 .kingpinmedia.net
 .kingsofneon.espheredigital.com
 .kingtus.pics
@@ -89981,10 +90112,8 @@ tm.swp.de
 .landsnail.bindle.io
 .landsnail.brownfield.dev
 .landsnail.garasjeport1.no
-.landyab.com
 .lanky-examination.pro
 .lantern.fortinet.com
-.laqira.io
 .larasub.conxxx.pro
 .lardedinial.com
 .largosoft.co.kr
@@ -90099,7 +90228,6 @@ tm.swp.de
 .letshareus.com
 .lettersskirt.icu
 .letzonke.com
-.leumia.io
 .leviol.com
 .lexvek.gap.ae
 .lezai.com
@@ -90133,7 +90261,6 @@ tm.swp.de
 .liehu.ijinshan.com
 .life.html5.qq.com
 .life.smartfinancialinsider.com
-.lifesoonersoar.org
 .liffswithabr.com
 .lifrim.com
 .lightning.cnn.com
@@ -90164,8 +90291,6 @@ tm.swp.de
 .link.realself.com
 .link.topdealspost.com
 .link2.strawberrynet.com
-.linkdoni.soft98.ir
-.linkfars.com
 .linkmads.com
 .linkpopu.mom
 .links.businessinsurance.bankofscotland.co.uk
@@ -90174,10 +90299,8 @@ tm.swp.de
 .links.npsemails.mbna.co.uk
 .links.qumu.com
 .links.strava.com
-.linksaz.net
 .linksoftbox.ru
 .linkwarkop4d.com
-.linkyar.com
 .linurk.com
 .lion.lastfrontiermagazine.com
 .lipemicgears.com
@@ -91477,7 +91600,6 @@ tm.swp.de
 .mercythirty.com
 .merdihatus.com
 .meridieswobber.com
-.merita.ir
 .meryjanechile.rdtrke.com
 .meshare.site
 .message.sonicwall.com
@@ -91842,8 +91964,6 @@ tm.swp.de
 .metrics.worldsteakchallenge.com
 .metricscollector.lp.xcal.tv
 .metricsinfo.edc.ca
-.metrix.behtarino.com
-.metrix.ir
 .metrix.newsok.com
 .metrix.publix.com
 .mewigurom.com
@@ -91897,7 +92017,6 @@ tm.swp.de
 .mim-teleconference.mfg.macquarie.com
 .minchikeji.cloud
 .minekitten.io
-.minepi.com
 .miner-1.team.nimiq.agency
 .miner-10.team.nimiq.agency
 .miner-11.team.nimiq.agency
@@ -91948,7 +92067,6 @@ tm.swp.de
 .mite.cotinga.io
 .mite.tetrameros.com
 .miteredgasbags.com
-.mitrarank.ir
 .miva.com
 .mix.sina.com.cn
 .mixbig.oss-ap-southeast-1.aliyuncs.com
@@ -92040,7 +92158,6 @@ tm.swp.de
 .mob10.cqjktj.com
 .mob26.jnjszl.com
 .mobalm.com
-.mobantong.oss-cn-hangzhou.aliyuncs.com
 .mobappconfig.securities.eastmoney.com
 .mobfox-server.thinknearhub.com
 .mobidea.com
@@ -92195,14 +92312,12 @@ tm.swp.de
 .msttz.tst98.com
 .msyq.xyz
 .mta.exacttarget.com
-.mtabdil.com
 .mtbraqc.cn
 .mtl.gzhuibei.com
 .mtl.xtpxw.com
 .mto.multiopen.cn
 .mtrace.play.cp81.ott.cibntv.net
 .mtrace.ysp.cctv.cn
-.mttcoin.com
 .mtvp05j.com
 .mucho.us-assistance.org
 .mucizewus.com
@@ -92484,7 +92599,6 @@ tm.swp.de
 .net.cleverjp.com
 .net.contoseroticoscnn.com
 .net.sexstories69.com
-.netbina.com
 .netcpms.com
 .netperform-is.vodafone.com.tr
 .netrailed.com
@@ -92497,7 +92611,6 @@ tm.swp.de
 .neupwvhayjm.com
 .neuronales.xyz
 .never2never.com
-.new-sentry.digikala.com
 .newburgtourism.com
 .newdmn.icu
 .newideasdaily.com
@@ -92516,7 +92629,6 @@ tm.swp.de
 .news-log.lsttnews.com
 .news-pro.net
 .news-robot.com
-.news-view-api.varzesh3.com
 .news-whistleout.s3.amazonaws.com
 .news-yakaja.cc
 .news.animesilo.live
@@ -92547,7 +92659,6 @@ tm.swp.de
 .newsokos.com
 .newspopperio.com
 .newswe.org
-.newswidget.net
 .newt.javier.dev
 .newt.jordin.eu
 .newtab-media.com
@@ -92664,7 +92775,6 @@ tm.swp.de
 .nohaxn.damattween.com
 .noiselessverb.com
 .noisysortcasualty.com
-.nokontoken.com
 .nomcyk.cn
 .nominalexperimentdaybreak.com
 .nonekvoi.skin
@@ -92875,7 +92985,6 @@ tm.swp.de
 .offer2.autopolicysaver.com
 .offerpalads.com
 .offers.chemsultants.com
-.offers.sapra.ir
 .offers.top10us.com
 .offers.trkhl.com
 .offgate-app-phkr.com
@@ -92996,7 +93105,6 @@ tm.swp.de
 .oms.oln.ca
 .omvmev.alpenkraft.shop
 .omzpbbz.cn
-.on-click.ir
 .onclickclear.com
 .ondemand.tf-cdn.net
 .one.fsylr.com
@@ -93075,7 +93183,6 @@ tm.swp.de
 .orangutan.renovare.org
 .orangutan.va4indieauthors.com
 .orbhcvyfgitkpfl.xyz
-.orbitnetwork.net
 .orbmehcerqxamdy.com
 .orca.getnodo.com
 .orca.weatherontheway.app
@@ -93273,7 +93380,6 @@ tm.swp.de
 .panel.smartpoint.pro
 .pangle.io.edgekey.net
 .pansiedshards.com
-.pantatec.ae
 .panther.activelink.ie
 .panther.atgonlinecoaching.com
 .panther.codyhatfield.me
@@ -93305,7 +93411,6 @@ tm.swp.de
 .parrotfish.wus.immo
 .parrssulk.com
 .partak.surfey.cz
-.partclick.ir
 .participants.evolv.ai
 .partner-widget.vse-sdal.com
 .partner.2din.cz
@@ -93697,14 +93802,11 @@ tm.swp.de
 .performpreciseheavilythefile.vip
 .periljuicywary.com
 .perimeterx.widget.insent.ai
-.persia.exchange
-.persianrank.ir
 .personal-video.live
 .personalization-production.us-east-1.elasticbeanstalk.com
 .personalization.bloomberg.com
 .personalization.centech.glulive.com
 .perusoul.com
-.perviv.com
 .pesshooting.com
 .pestequitch.com
 .petalonpeery.com
@@ -93715,7 +93817,6 @@ tm.swp.de
 .pewdomdiff.com
 .pexu.com
 .peyqvn.falke.com
-.peyvandha.ir
 .pfcdnc.com
 .pfnnjqki.com
 .pfpxepbjqfg.com
@@ -93743,10 +93844,8 @@ tm.swp.de
 .phfspteipq.com
 .philbardre.com
 .phizzle.com
-.phoenixad.io
 .pholtust.com
 .phoneboothslender.com
-.phonroid.com
 .photo.188kc.cn
 .photo.789ble.cn
 .photo.941ziyuan.cn
@@ -93815,6 +93914,7 @@ tm.swp.de
 .piquetmuriti.com
 .piranha.jsmobiledev.com
 .piranida.com
+.pistolsizehoe.com
 .pitcatet.live
 .pivo.tracked.one
 .piwhecyfo.pro
@@ -93955,7 +94055,6 @@ tm.swp.de
 .polarbear.wpnow.dev
 .policy.cupid.qiyi.com
 .polmontventures.com
-.pompass.net
 .pompom-www.com
 .pompysxdz.com
 .ponti-pzk.com
@@ -93973,17 +94072,12 @@ tm.swp.de
 .popcornvod.com
 .popearn.com
 .popeld.com
-.popgozar.com
-.popina.ir
-.popland.info
 .poppcheck.de
 .popped.biz
 .poptube.fun
-.popunder.ir
 .popunderjs.com
 .popup.laybuy.com
 .popupblockergold.com
-.popupdl.ir
 .popxxx.net
 .porase.com
 .porcupine.dvresolve.com
@@ -94150,7 +94244,6 @@ tm.swp.de
 .programmes-skema.skema.edu
 .prohibitionformersporting.com
 .proko.cn
-.promizer.com
 .promo.20bet.partners
 .promo.smskouc.cz
 .promo.top20gadgetdeals.net
@@ -94164,7 +94257,6 @@ tm.swp.de
 .propadsviews.com
 .propelplus.com
 .propelslaverybenevolent.com
-.propertiq.io
 .prophet.heise-academy.de
 .prospergenerosityperformance.com
 .prospertinum.com
@@ -94231,9 +94323,7 @@ tm.swp.de
 .pub88.mom
 .pubbucks.homes
 .pubg.remiitano.xyz
-.publica.ir
 .publicidad.davivienda.com.pa
-.publisher-network.com
 .publisher.monster.com
 .pubmatic.edgekey.net
 .pubstatus.sinaapp.com
@@ -94430,7 +94520,6 @@ tm.swp.de
 .qichenx.com
 .qiewqceaqrihwie.com
 .qimrcqxkqwbtn.com
-.qingganlan.ltd
 .qingrektmkt.com
 .qinhemuye.com
 .qinmon.xyz
@@ -94448,7 +94537,6 @@ tm.swp.de
 .qkdbufas.com
 .qkf7jq3b.space
 .qkhhjm.autoscout24.nl
-.qkoio.cyou
 .qktbbiavkqcqmn.com
 .qktfwkftgqeynnp.com
 .qkuvmwf.cn
@@ -94509,12 +94597,10 @@ tm.swp.de
 .qstukqmsddqgs.com
 .qswotrk.com
 .qtorzy.mothercare.ae
-.qtspkqzn.com
 .qtvbgetlfxnw.com
 .qtywnoh.cn
 .qtzvsufbkpxin.com
 .qu.oilsulva.com
-.quahl.com
 .quail.efix.uk
 .quakedamnalight.com
 .qualificationrestriction.com
@@ -94588,14 +94674,12 @@ tm.swp.de
 .rabc2.iteye.com
 .raccoon.donateflow.com
 .racesstuffing.com
-.radar.bayan.ir
 .radiusnetworks.com.herokudns.com
 .radust.com
 .rafflereticence.com
 .raftcomposuremeals.com
 .ralijqugghwqil.com
 .ranceleerie.com
-.rankirani.ir
 .ranselbetons.com
 .rapeunevenphiladelphia.com
 .rapidhooray.com
@@ -94866,7 +94950,6 @@ tm.swp.de
 .rhinoceros.workforcreators.com
 .rhinoceros.wus.life
 .rhinsk.com
-.rhoeomanid.space
 .rhtgyvbv.com
 .rhubarbsnagtip.com
 .rhxvsvpsw.com
@@ -94928,7 +95011,6 @@ tm.swp.de
 .rogew.com
 .rokeewoozy.com
 .rokettsaince.com
-.rokhdad.telewebion.com
 .rolegu.com
 .romanceally.com
 .romanticmonuments.com
@@ -94981,7 +95063,6 @@ tm.swp.de
 .rsppartners.com
 .rsrwmpsiii.com
 .rss-loader.com
-.rssbank.ir
 .rssfetcher.blogsys.jp
 .rssrank.net
 .rswfhkmhcl.com
@@ -95366,7 +95447,6 @@ tm.swp.de
 .sanbox.mom
 .sandalcamases.com
 .sandbox.tinypass.com
-.sanjagh.net
 .sanjibroupy.com
 .sanl.footlocker.co.nz
 .sanl.footlocker.hk
@@ -95449,7 +95529,6 @@ tm.swp.de
 .scramsaaron.com
 .scratch-telemetry-s.us-east-1.elasticbeanstalk.com
 .scripsjeermint.com
-.scripts-ads.s3.ir-thr-at1.arvanstorage.com
 .scripts.mailfire.io
 .scripts.personalics.com
 .scripts.retentionrocket.com.herokudns.com
@@ -95671,7 +95750,6 @@ tm.swp.de
 .send-notice.com
 .sendelven.com
 .sendpulse.com
-.sendword.ir
 .seniorliving.freedomsquarefl.com
 .seniorliving.plymouthplace.org
 .seniorliving.sandhillcove.com
@@ -95682,14 +95760,7 @@ tm.swp.de
 .sensitivenessbuttons.com
 .sensors.cloud.tencent.com
 .sensors.yodo1api.com
-.sentry-new.divar.ir
-.sentry.cafebazaar.org
-.sentry.footballiapp.com
-.sentry.hamravesh.com
 .sentry.justwatch.com
-.sentry.malltina.com
-.sentry.namava.ir
-.sentry.quera.org
 .seonto.com
 .sepknotting.xyz
 .septetsfactor.com
@@ -95762,7 +95833,6 @@ tm.swp.de
 .shake.f.360.cn
 .shakeegi.com
 .shalltry.com
-.shamining.com
 .shammarfinew.com
 .shampooattackalways.com
 .shanozoje.com
@@ -95779,7 +95849,6 @@ tm.swp.de
 .sheep.vesperix.io
 .sheepforgivedismount.com
 .sheerbenchmeltdown.com
-.sheetvibe.com
 .shemale.house
 .shemale.team
 .shence.hupu.com
@@ -95910,7 +95979,6 @@ tm.swp.de
 .sjs.jcshouhui.com
 .sjyzsm.danjohn.com
 .skads.gxsky.com
-.skeetads.com
 .skellbillard.com
 .sketeprofs.com
 .skewlyundazed.com
@@ -95930,7 +95998,6 @@ tm.swp.de
 .skypicker-api.infinario.com
 .skyplayer.tiscali.it
 .skyuglejealous.com
-.skzlz.cn
 .sl-log.oray.net
 .sl-tk.oray.com
 .sl.hpplay.cn
@@ -95975,7 +96042,6 @@ tm.swp.de
 .smartblocker.org
 .smartcj.com
 .smarteucookiebanner.upsell-apps.com.herokudns.com
-.smartgalaxy.finance
 .smb.info.shutterstock.com
 .smelt.allenpike.com
 .smelt.waltrack.net
@@ -97037,7 +97103,6 @@ tm.swp.de
 .songcan.me
 .sonioubemeal.com
 .sonoow.ecco-verde.pl
-.soodland.com
 .soonen.com
 .sopertyvalua.com
 .sophiasearch.com
@@ -97150,7 +97215,6 @@ tm.swp.de
 .spot.spsfactory.com
 .spotxcdn.com.edgekey.net
 .spreadable.com.cn
-.sprettyruckus.com
 .sprint-srs-appopen.asapp.com
 .sprint.asapp.com
 .spy.bocvu.lol
@@ -97562,7 +97626,6 @@ tm.swp.de
 .stat-ssl.tour-list.com
 .stat-ssl.webcg.net
 .stat-ssl.xn--pckua2a7gp15o89zb.com
-.stat.absolutist.com
 .stat.agl.com.au
 .stat.appsgeyser.com
 .stat.baike.com
@@ -97949,7 +98012,6 @@ tm.swp.de
 .stats.yourewhole.com
 .stats2.cntraveler.com
 .stats2.teenvogue.com
-.statsfa.com
 .statsonline.pushct.baidu.com
 .status.minexmr.com
 .statuscake.com
@@ -97958,7 +98020,6 @@ tm.swp.de
 .stbg.standardbank.com
 .stbvip.mom
 .stbzekvyt.com
-.stc.ninisite.com
 .std.o.nytimes.com
 .std.o.vitals.com
 .steadyrevulsioncorky.com
@@ -98064,7 +98125,6 @@ tm.swp.de
 .sturteheaping.com
 .stustogagly.com
 .styjpqqvafcl.com
-.stylliyote.com
 .stypeshinu.com
 .su-offers.com
 .sub.adzgame.com
@@ -98246,7 +98306,6 @@ tm.swp.de
 .synalio.com
 .sync.mobojoy.baidu.com
 .syncedvision.com
-.synchrobit.io
 .syndication.elink12.com
 .syndication.elink66.com
 .syndication.elink77.com
@@ -98484,11 +98543,9 @@ tm.swp.de
 .ta-collector.centurygame.com
 .ta.taxslayer.com
 .ta.yangkeduo.com
-.tabligheirani.ir
 .tabularriders.com
 .tacskivthnfgvad.com
 .tads.mobadvent.com
-.tadv.didestan.net
 .taffiaveiner.com
 .tag-adtrue-com-1341320338.us-west-2.elb.amazonaws.com
 .tag.adincube.com
@@ -98533,7 +98590,6 @@ tm.swp.de
 .takeyourpresent.life
 .takin.amoivillas.com
 .takin.cors.digital
-.talapop.ir
 .talbotthrall.com
 .tallcy.com
 .tallowstwangle.com
@@ -98634,12 +98690,10 @@ tm.swp.de
 .targeting.influencemobile.com
 .targetlr.adobe.com
 .targetsecure.kohler.com
-.tarokbien.com
 .tarrabastanly.com
 .tarsan.media-412.com
 .tarteaucitron.io
 .tassagohecatic.com
-.tastenfts.com
 .tastierxyphoid.com
 .tattid.com
 .taunhhcx.com
@@ -98649,7 +98703,6 @@ tm.swp.de
 .tbadseiepqrl.xyz
 .tbaqje.zadig-et-voltaire.com
 .tben.nnchangyi.com
-.tbli.ir
 .tblqycca.com
 .tbm.snssdk.com
 .tbs.qq.com
@@ -98685,7 +98738,6 @@ tm.swp.de
 .te.frankoniamoda.ch
 .te.sieh-an.at
 .te.waeschepur.de
-.te1.ir
 .teads.tv-v1.edgekey.net
 .teads.tv.edgekey.net
 .tealeaf.ibmcloud.com
@@ -98721,7 +98773,6 @@ tm.swp.de
 .telulr.golfgalaxy.com
 .telyn610zoanthropy.com
 .temald.com
-.tembetachasmic.guru
 .tempersonic.com
 .tempest.services.disqus.com
 .template.liusha.info
@@ -98776,7 +98827,6 @@ tm.swp.de
 .tgxcmcoikpgek.com
 .th.micheryfrugal.com
 .thackgooder.com
-.thaignax.net
 .thalrjdulkbopbv.com
 .thanksgivingwittyfrisk.com
 .thatdhostler.com
@@ -99008,7 +99058,6 @@ tm.swp.de
 .topnfm.com
 .topnfq.com
 .topnfw.com
-.toppopup.com
 .toroidscentry.com
 .tortoise.transistor.fm
 .torturegratified.com
@@ -99719,8 +99768,6 @@ tm.swp.de
 .trackbuyers.likeableagent.com
 .trackdat.pinsightmedia.com
 .tracker-sp-elb-1474841806.us-east-1.elb.amazonaws.com
-.tracker.digikala.com
-.tracker.farsnews.ir
 .tracker.insurancenexus.com
 .tracker.loropartners.com
 .tracker.personizely.net
@@ -99770,7 +99817,6 @@ tm.swp.de
 .trcyrn.com
 .treasuresensignron.com
 .tredir.go.com
-.treenvest.com
 .trejar.com
 .trenchenious.com
 .trendentrium.com
@@ -99782,7 +99828,6 @@ tm.swp.de
 .trials.questdiagnostics.com
 .triariihurtled.com
 .tribez.game-insight.com
-.triboon.net
 .tribpubads.com
 .tributeipseity.com
 .trifaouthits.com
@@ -99961,7 +100006,6 @@ tm.swp.de
 .truernewlywait.com
 .trueskincare.tech
 .trunkmafia.com
-.trustseal.e-rasaneh.ir
 .trustworthytopmost.com
 .truthtraff.com
 .trutstapps.com
@@ -100252,7 +100296,6 @@ tm.swp.de
 .union.ijinshan.com
 .union.m.jd.com
 .unionsug.baidu.com
-.unique.finance
 .unisonbong.com
 .unitelogreport.reader.qq.com
 .unityads.unity3d.com.edgekey.net
@@ -100340,15 +100383,10 @@ tm.swp.de
 .usantaetian.com
 .usao.77gog.com
 .uscnvdcxttnh.com
-.usdtbang.com
-.usdtbbc.com
-.usdtcan.com
-.usdteng.com
 .usenetnl.download
 .user-data.tfgapps.com
 .user-event-tracker-prod.us-east-1.elasticbeanstalk.com
 .user.duokanbox.com
-.userfriendly.ir
 .userlike.com
 .usivbt.qoo10.com
 .usmkg.inetprocess.com
@@ -100361,7 +100399,6 @@ tm.swp.de
 .uswtcdnqbm.com
 .utag.ijinshan.com
 .utationforh.buzz
-.utbyte.io
 .utctime.tiltingpoint.io
 .utecer.com
 .utf1.liehuo.net
@@ -100371,8 +100408,6 @@ tm.swp.de
 .utkuslbdpwehmr.com
 .utle.tech426.com
 .utma.ywpxp.cn
-.utop.ir
-.utopclick.com
 .utopicmobile.com
 .utpvfpoar.com
 .utrosy.com
@@ -100434,7 +100469,6 @@ tm.swp.de
 .v10.vortex-win.data.microsft.com
 .v2.boxcfg.niu.xunlei.com
 .v2.phb123.com
-.v2st.shinobi.jp
 .v3-ad.ixigua.com
 .v7.shaoyumuye.com
 .v8-collector-live.us-west-2.elasticbeanstalk.com
@@ -100470,7 +100504,6 @@ tm.swp.de
 .vas-hl-x.snssdk.com
 .vashoagn.com
 .vast.mangomediaads.com
-.vatanclick.ir
 .vatfulsicing.com
 .vaureept.com
 .vavsnhau.mom
@@ -100511,7 +100544,6 @@ tm.swp.de
 .veqvek.space.ca
 .verbox.ru
 .verdrivenbru.info
-.vereyhinders.com
 .vergilimus.com
 .verizon.asapp.com
 .vernmentbasily.com
@@ -100562,7 +100594,6 @@ tm.swp.de
 .vicuna.casa-moebel.at
 .vid-adblocker.com
 .video-ad.sm.cn
-.video-view-api.varzesh3.com
 .video.animesilo.live
 .video.chocobabe.live
 .video.dispatch.tc.qq.com
@@ -100576,7 +100607,6 @@ tm.swp.de
 .videosynd.kataweb.it
 .videozhishi.com
 .vidkidsgedrite.com
-.vidomusic.org
 .vidoplay.com
 .vidpay.com
 .vidtech.cbsinteractive.com
@@ -100596,7 +100626,6 @@ tm.swp.de
 .vigoroussolidjitter.com
 .vigpsypoyta.com
 .vike.ink
-.vilki.cn
 .vindexcravat.com
 .vinksuwobuebn.com
 .vinuser5.biz
@@ -100902,7 +100931,6 @@ tm.swp.de
 .waterproofsparkle.com
 .wavail.com
 .wavysumatone.cam
-.waykingroup.com
 .wayyaj8t094u.www.kodalia.com
 .wb.110.taobao.com
 .wbbmubevftcy.com
@@ -100972,7 +101000,6 @@ tm.swp.de
 .webcache-eu.datareporter.eu
 .webcache.datareporter.eu
 .webchat.cmcplanet.com
-.webfeetdaidled.com
 .webim.ru
 .webiq-cdn-hr.appspot.com
 .webiq-warp-hrd.appspot.com
@@ -100990,11 +101017,6 @@ tm.swp.de
 .websearchers.net
 .webservice.360doc.com
 .website-usage.b2bendix.com
-.websocket.55online.news
-.websocket.ilna.ir
-.websocket.khanefootball.com
-.websocket.sobhtazeh.news
-.websocket.varandaz.com
 .webstat.freaks4u.com
 .webstat.garanti.com.tr
 .webstats.bijenpatel.com
@@ -101094,7 +101116,6 @@ tm.swp.de
 .whz9ruftvh4pxz8fc7vh.theochu.com
 .wickoolt.com
 .widdiesbrawns.com
-.wideads.com
 .widelygeneralizereptile.com
 .widget-cdn.rpxnow.com
 .widget-static.com
@@ -101198,7 +101219,6 @@ tm.swp.de
 .windychinese.com
 .winnerkur.com
 .winnersofvouchers.com
-.wintap.io
 .winzevrocht.com
 .wipe.de
 .wiptisiwo.com
@@ -101601,7 +101621,6 @@ tm.swp.de
 .xjoqmy.tuifly.be
 .xjpnycwqr.com
 .xjqxrpwlfg.com
-.xjs.lol
 .xjwgyq.fatquartershop.com
 .xjzcbddnj.com
 .xjztuj.kbwine.com
@@ -101771,7 +101790,6 @@ tm.swp.de
 .xmlserving.mobagent.com
 .xmlv4.chameleostudios.com
 .xmlv4.reklama.network
-.xmlx.lol
 .xmohlh.melia.com
 .xmosae.edigital.bg
 .xmvusqpp.com
@@ -101944,8 +101962,6 @@ tm.swp.de
 .yehwbflmq.com
 .yehyqc.hugoboss.com
 .yeiydrlkojywhf.com
-.yekbux.com
-.yelloadwise.ir
 .yema.shop
 .yempid.com
 .yeokisdoflkut.xyz
@@ -102038,7 +102054,6 @@ tm.swp.de
 .yoke.jyhlo0.com
 .yolo.philipbjorge.com
 .yolo.phpliveregex.com
-.yoozbit.com
 .yorage.com
 .yoretxpczr.com
 .you-just-won-prize.com
@@ -102160,7 +102175,6 @@ tm.swp.de
 .zagxgmzmiledvh.com
 .zaintrillet.com
 .zaitouwang.com
-.zanboor.net
 .zanox.com.cn
 .zaomavzcoww.com
 .zaoyx.jrchiji.cn
@@ -102261,7 +102275,6 @@ tm.swp.de
 .zly.dlhxgg.com
 .zmmrpv.peterglenn.com
 .zndsssp.dangbei.net
-.znllfp.xyz
 .znmtka.kikocosmetics.com
 .zoariasurgeon.com
 .zociwodi.com
@@ -102308,7 +102321,6 @@ tm.swp.de
 .zxdb123caducn.xyz
 .zxdbuo.providentestate.com
 .zxeotdjlzvcsa.com
-.zxfas56.com
 .zxnexus.com
 .zxw51.com
 .zxyonlybelongstolym.xyz

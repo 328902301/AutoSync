@@ -6,7 +6,7 @@ if (!$response.body) {
 } else {
   if (/^https:\/\/api\.zhihu\.com\/people\/self$/.test(url)) {
     // 获取用户信息 - 隔离用户数据，开启本地盐选会员等
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     if (obj?.id?.vip_info?.is_vip) {
       // 在APP显示VIP，仅自己可见，打开后才能使用屏蔽关键词解锁
       if (obj["vip_info"]["is_vip"] === false) {
@@ -63,7 +63,7 @@ if (!$response.body) {
     response = { body: JSON.stringify(obj) };
   } else if (/^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config/.test(url)) {
     // 优化软件配置 - 优化下发的配置文件来实现某些效果
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     obj["config"]["homepage_feed_tab"]["tab_infos"] = obj["config"][
       "homepage_feed_tab"
     ]["tab_infos"].filter((e) => {
@@ -105,7 +105,7 @@ if (!$response.body) {
     /^https?:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?/.test(url)
   ) {
     // 去除灰色主题
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     if (obj.data && obj.data["configs"]) {
       obj.data["configs"].forEach((element) => {
         if (element["configKey"] === "feed_gray_theme") {
@@ -177,7 +177,7 @@ if (!$response.body) {
     response = { body: JSON.stringify(obj) };
   } else if (/^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+/.test(url)) {
     // 问题的回答列表 - 移除黑名单用户的回答、去除广告
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     // 去除广告
     delete obj["ad_info"];
     // 去除回答列表中的黑名单用户
@@ -204,7 +204,7 @@ if (!$response.body) {
     response = { body: JSON.stringify(obj) };
   } else if (/^https?:\/\/api\.zhihu\.com\/next-data\?/.test(url)) {
     // 回答信息流 - 移除黑名单用户的回答、去除广告
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     let newData = [];
     obj.data.data.forEach((element) => {
       element["ad_info"] = { data: "" };
@@ -216,7 +216,7 @@ if (!$response.body) {
     /^https?:\/\/api\.zhihu\.com\/notifications\/v3\/message/.test(url)
   ) {
     // 消息页 - 折叠官方消息、屏蔽营销消息
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     let newItems = [];
     for (let item of obj["data"]) {
       if (item["detail_title"] === "官方帐号消息") {
@@ -249,7 +249,7 @@ if (!$response.body) {
     // 评论页及子页面 - 去除黑名单用户发表的评论
     // 文章页 - 去除底部卡片广告
     // 回答页底部评论摘要 - 移除黑名单用户发表的评论
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     obj["ad_info"] = {};
     response = { body: JSON.stringify(obj) };
   } else if (
@@ -329,7 +329,7 @@ if (!$response.body) {
     /^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists(\?|\/)/.test(url)
   ) {
     // 热榜页 - 去广告
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     if (obj["data"]) {
       obj["data"] = obj["data"].filter((e) => {
         return (
@@ -340,7 +340,7 @@ if (!$response.body) {
     response = { body: JSON.stringify(obj) };
   } else if (/^https?:\/\/api\.zhihu\.com\/search\/preset_words\?/.test(url)) {
     // 搜索页 - 去除预置广告
-    let obj = JSON.parse($response.body);
+    let obj = JSON.parse(body);
     if (obj.hasOwnProperty("preset_words") && obj["preset_words"]["words"]) {
       obj["preset_words"]["words"] = obj["preset_words"]["words"].filter(
         (element) => {

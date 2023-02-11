@@ -36,7 +36,10 @@ HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
 
 # ======= K ======= #
-# 酷我音乐 开屏广告
+# 酷我音乐
+HOST,mobilead.kuwo.cn,REJECT
+HOST,rich.kuwo.cn,REJECT
+HOST,tmead.y.qq.com,REJECT
 HOST,tmeadcomm.y.qq.com,REJECT
 
 # ======= L ======= #

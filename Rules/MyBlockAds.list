@@ -1,4 +1,4 @@
-# 2023-02-11 09:50
+# 2023-02-11 17:10
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -34,6 +34,10 @@ HOST,mi.gdt.qq.com,REJECT
 HOST,open.e.kuaishou.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+
+# ======= K ======= #
+# 酷我音乐 开屏广告
+HOST,tmeadcomm.y.qq.com,REJECT
 
 # ======= L ======= #
 # 蓝奏云

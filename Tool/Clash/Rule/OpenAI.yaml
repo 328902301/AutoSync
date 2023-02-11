@@ -1,0 +1,4 @@
+payload:
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN,cdn.auth0.com
+  - DOMAIN,openaiapi-site.azureedge.net

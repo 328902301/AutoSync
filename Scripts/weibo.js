@@ -70,7 +70,6 @@ if (!$response.body) {
         item.endtime = "2040-01-01 23:59:59";
       }
     }
-
     $done({ body: JSON.stringify(obj) + "OK" });
   } else {
     let obj = JSON.parse(body);
@@ -513,8 +512,8 @@ if (!$response.body) {
         }
       }
     }
+    $done({ body: JSON.stringify(obj) });
   }
-  $done({ body: JSON.stringify(obj) });
 }
 
 // 判断信息流

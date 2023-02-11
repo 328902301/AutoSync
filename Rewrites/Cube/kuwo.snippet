@@ -1,16 +1,16 @@
 # ======= 酷我音乐 ====== #
-# 2023-01-15 16:18
+# 2023-02-11 17:00
 
 # 广告
-^http:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright ^GET url-and-header reject-dict
+^http:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright ^GET url-and-header reject
 ^http:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s ^GET url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
-^http:\/\/mobilead\.kuwo\.cn\/EcomResourceServer ^GET url-and-header reject-dict
-^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer\/getMobileLyricAd\.do ^GET url-and-header reject-dict
-^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^GET url-and-header reject-dict
+^http:\/\/mobilead\.kuwo\.cn\/EcomResourceServer ^GET url-and-header reject
+^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer\/getMobileLyricAd\.do ^GET url-and-header reject
+^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^GET url-and-header reject
 ^http:\/\/nmobi\.kuwo\.cn\/mobi\.s ^GET url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
-^http:\/\/rich\.kuwo\.cn\/AdService\/kaiping ^GET url-and-header reject-dict
+^http:\/\/rich\.kuwo\.cn\/AdService\/kaiping ^GET url-and-header reject
 ^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s ^GET url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js
-^https:\/\/tmeadcomm\.y\.qq\.com\/maproxy\/getAd$ ^POST url-and-header reject-dict
+^https:\/\/tmeadcomm\.y\.qq\.com\/maproxy\/getAd$ ^POST url-and-header reject
 
 # 会员
 ^http:\/\/audiobookpay\.kuwo\.cn\/a\.p url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/break/kuwo.js

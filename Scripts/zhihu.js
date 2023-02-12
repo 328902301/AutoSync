@@ -28,13 +28,7 @@ if (url.includes("/appview/v3/zhomre")) {
     // 推荐信息流
     if (obj.data) {
       obj.data = obj.data.filter((i) => {
-        if (i.extra?.type === "zvideo") {
-          let videoUrl = i.common_card.feed_content.video.customized_page_url;
-          let videoID = getUrlParamValue(videoUrl, "videoID");
-          if (videoID) {
-            i.common_card.feed_content.video.id = videoID;
-          }
-        } else if (
+        if (
           i.type === "market_card" &&
           i.fields?.header?.url &&
           i.fields.body?.video?.id
@@ -43,16 +37,22 @@ if (url.includes("/appview/v3/zhomre")) {
           if (videoID) {
             i.fields.body.video.id = videoID;
           }
-        } else if (i.common_card?.feed_content?.video?.id) {
-          let search = '"feed_content":{"video":{"id":';
-          let str = $response.body.substring(
-            $response.body.indexOf(search) + search.length
-          );
-          let videoID = str.substring(0, str.indexOf(","));
-          i.common_card.feed_content.video.id = videoID;
-        }
-        if (i.type === "common_card") {
-          if (
+        } else if (i.type === "common_card") {
+          // 推广视频
+          if (i.extra?.type === "zvideo") {
+            let videoUrl = i.common_card.feed_content.video.customized_page_url;
+            let videoID = getUrlParamValue(videoUrl, "videoID");
+            if (videoID) {
+              i.common_card.feed_content.video.id = videoID;
+            }
+          } else if (i.common_card?.feed_content?.video?.id) {
+            let search = '"feed_content":{"video":{"id":';
+            let str = $response.body.substring(
+              $response.body.indexOf(search) + search.length
+            );
+            let videoID = str.substring(0, str.indexOf(","));
+            i.common_card.feed_content.video.id = videoID;
+          } else if (
             i.common_card?.footline?.elements?.text?.panel_text?.includes(
               "广告"
             )
@@ -60,13 +60,11 @@ if (url.includes("/appview/v3/zhomre")) {
             return false;
           }
           return true;
-        }
-        // 信息流横排卡片
-        if (i.type === "pin_aggregation_card") {
+        } else if (i.type === "pin_aggregation_card") {
+          // 信息流横排卡片
           return false;
-        }
-        // 伪装成正常内容的卡片
-        if (i.type === "feed_advert") {
+        } else if (i.type === "feed_advert") {
+          // 伪装成正常内容的卡片
           return false;
         }
         return true;

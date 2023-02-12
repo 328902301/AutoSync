@@ -17,7 +17,7 @@ if (url.includes("/appview/v3/zhomre")) {
     }
   } else if (url.includes("/moments_v3")) {
     if (obj.data) {
-      obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
+      obj.data = obj.data.filter((i) => !i?.title?.includes("为您推荐"));
     }
   } else if (url.includes("/v2/topstory/hot-lists/everyone-seeing")) {
     // 热榜信息流

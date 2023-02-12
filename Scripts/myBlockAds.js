@@ -1,4 +1,4 @@
-// 2023-02-11 22:30
+// 2023-02-12 10:25
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -28,9 +28,6 @@ function getCube(p) {
   }
   if (/^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(p)) {
     return "小米商城-开屏广告";
-  }
-  if (/^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$/.test(p)) {
-    return "知乎-首页右下角悬浮框";
   }
 }
 
@@ -150,15 +147,6 @@ switch (getCube(url)) {
       body = JSON.stringify(obj);
     } catch (error) {
       console.log(`小米商城-开屏广告, 出现异常: ` + error);
-    }
-    break;
-  case "知乎-首页右下角悬浮框":
-    try {
-      let obj = JSON.parse(body);
-      if ("feed_egg" in obj) obj = {};
-      body = JSON.stringify(obj);
-    } catch (error) {
-      console.log(`知乎-首页右下角悬浮框, 出现异常: ` + error);
     }
     break;
   default:

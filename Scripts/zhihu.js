@@ -6,8 +6,11 @@ let body = $response.body;
 
 if (url.includes("/appview/v3/zhomre")) {
   // 我的页面
-  body = body.replace(/(<body><div\sid="root").*(<\/div><script>)/g, "");
-  $done({ body });
+  newBody = $response.body.replace(
+    /<body><div\sid="root".*<\/div><script>/g,
+    ""
+  );
+  $done({ newBody });
 } else {
   let obj = JSON.parse(body);
   if (url.includes("/appcloud2.zhihu.com/v3/config")) {

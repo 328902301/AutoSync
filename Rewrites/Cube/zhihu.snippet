@@ -34,7 +34,7 @@
 ^https:\/\/appcloud2\.zhihu\.com\/v3\/config$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 
 # 网页版去广告 //www.zhihu.com, zhuanlan.zhihu.com
-^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? url readings-dict
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? url reject-dict
 ^https:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject
 ^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject
 ^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner url reject

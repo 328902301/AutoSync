@@ -6,7 +6,7 @@ let body = $response.body;
 
 if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
-  body = body.replace(/任务中心.*<\/div><\/a>/g, "");
+  body = body.replace(/<\/head><body>.*<\/script><\/body>/g, "");
   $done({ body });
 } else {
   let obj = JSON.parse(body);

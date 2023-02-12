@@ -4,13 +4,10 @@ if (!$response.body) $done({});
 const url = $request.url;
 let body = $response.body;
 
-if (url.includes("/appview/v3/zhomre")) {
+if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
-  newBody = $response.body.replace(
-    /<body><div\sid="root".*<\/div><script>/g,
-    ""
-  );
-  $done({ newBody });
+  body = body.replace(/<body><div\sid="root".*<\/div><script>/g, "");
+  $done({ body });
 } else {
   let obj = JSON.parse(body);
   if (url.includes("/appcloud2.zhihu.com/v3/config")) {

@@ -12,14 +12,23 @@ QuantumultX自用所有文件是一个收集所有QuantumultX自用文件的项�
 # 本项目的文件目录结构如下:
 
 QuantumultX-Self-Files/
+
 ├── Scripts/
+
 │   ├── Script1.js
+
 │   ├── Script2.js
+
 │   └── ...
+
 └── Configs/
+
     ├── Config1.conf
+
     ├── Config2.conf
+
     └── ...
+
 # 🚀 如何使用
 
 下载本项目至本地，将 Scripts 目录下的脚本文件和 Configs 目录下的配置文件导入 QuantumultX 即可使用。

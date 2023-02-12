@@ -1,4 +1,4 @@
-// 2023-02-12 10:25
+// 2023-02-12 17:30
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -10,7 +10,11 @@ if (url.includes("/appview/v3/zhomre")) {
   $done({ body });
 } else {
   let obj = JSON.parse(body);
-  if (url.includes("/api/v4/answers")) {
+  if (url.includes("/appcloud2.zhihu.com/v3/config")) {
+    if (obj.config?.zhcnh_thread_sync?.ZHBackUpIP_Switch_Open === "1") {
+      obj.config.zhcnh_thread_sync.ZHBackUpIP_Switch_Open = "0";
+    }
+  } else if (url.includes("/api/v4/answers")) {
     if (obj.paging) {
       obj.paging = {};
     }

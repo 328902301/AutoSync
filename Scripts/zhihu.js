@@ -19,15 +19,13 @@ if (url.includes("/appview/v3/zhomre")) {
     if (obj.data) {
       obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
     }
-  } else if (url.includes("/topstory/hot-lists/everyone-seeing")) {
+  } else if (url.includes("/v2/topstory/hot-lists/everyone-seeing")) {
     // 热榜信息流
     if (obj.data.data) {
-      obj.data.data = obj.data.data.filter((i) => {
-        if (i.target?.metrics_area?.text?.includes("合作推广")) {
-          return false;
-        }
-        return true;
-      });
+      // 合作推广
+      obj.data.data = obj.data.data.filter(
+        (i) => !i.target?.metrics_area?.text?.includes("合作推广")
+      );
     }
   } else if (url.includes("/topstory/recommend_v2")) {
     // 推荐信息流
@@ -66,7 +64,7 @@ if (url.includes("/appview/v3/zhomre")) {
           }
           return true;
         } else if (i.type === "pin_aggregation_card") {
-          // 信息流横排卡片
+          // 横排卡片
           return false;
         } else if (i.type === "feed_advert") {
           // 伪装成正常内容的卡片

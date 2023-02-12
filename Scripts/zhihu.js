@@ -22,9 +22,9 @@ if (url.includes("/appview/v3/zhomre")) {
       obj.data.data = obj.data.data.filter((i) => !i.card_id.includes("AT_"));
     }
   } else if (url.includes("/topstory/recommend_v2")) {
-    if (obj.data?.length > 0) {
+    if (obj.data) {
       obj.data = obj.data.filter((i) =>
-        i.common_card.footline.elements.text.panel_text.includes("广告")
+        i.common_card.footline?.elements?.text?.panel_text?.includes("广告")
       );
     }
   } else if (url.includes("/people/homepage_entry")) {

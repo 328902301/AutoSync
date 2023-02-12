@@ -116,10 +116,11 @@ if (url.includes("/appview/v3/zhomre")) {
     ];
     if (obj.list) {
       obj.list = obj.list.filter((i) => {
-        if (i.name.includes(item)) {
+        if (item.indexOf(i.name) !== -1) {
           return true;
+        } else {
+          return false;
         }
-        return false;
       });
     }
   } else if (url.includes("/people/self")) {

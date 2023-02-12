@@ -1,20 +1,5 @@
 # ======= 知乎 ======= #
-# 2023-02-01 16:18
-
-# 在 [filter_local] 添加拦截规则
-;HOST, appcloud.zhihu.com, REJECT
-;HOST, appcloud2.in.zhihu.com, REJECT
-;HOST, crash2.zhihu.com, REJECT
-;HOST, mqtt.zhihu.com, REJECT
-;HOST, sugar.zhihu.com, REJECT
-;IP-CIDR, 118.89.204.198/32, REJECT
-;IP-CIDR, 103.41.167.237/32, REJECT
-;IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
-
-# 拦截DNS解析
-;^https:\/\/118\.89\.204\.198 url reject-dict
-;^https?:\/\/103\.41\.167\.237 url reject-dict
-;^https:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 url reject-200
+# 2023-02-12 13:25
 
 # 屏蔽下发的配置，如皮肤等
 ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject

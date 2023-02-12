@@ -1,14 +1,14 @@
 # NAME: AdvertisingTest
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-12 02:08:49
+# UPDATED: 2023-02-13 02:08:17
 # DESCRIPTION: 分流规则中含有URL-REGEX类型，建议搭配MITM使用
-# DOMAIN: 11506
+# DOMAIN: 11499
 # DOMAIN-KEYWORD: 264
-# DOMAIN-SUFFIX: 103626
+# DOMAIN-SUFFIX: 103658
 # IP-CIDR: 241
 # URL-REGEX: 285
-# TOTAL: 115922
+# TOTAL: 115947
 00-gov.cn
 0026645142c89aeb1.com
 006a039c957c142bb.com
@@ -1001,7 +1001,6 @@ alma-cmp.almamedia.io
 alnsvbmp.com
 alsoknowsit.com
 alszaaceaz.com
-alunitemoste.com
 alvdtjrb.com
 alvfzqwkb.com
 alwkvwdxqojyce.com
@@ -1312,7 +1311,6 @@ babsedrinhi.info
 babsitlehaphow.com
 baby.jiangongjixie.cn
 babynameready.dl.tb.ask.com
-backseatrunners.com
 badgirlz.org
 badsamps.com
 badshores.com
@@ -1558,6 +1556,7 @@ blrqeqn.com
 blueduckredapple.com
 blueioabj.com
 bluposr.com
+blushingbread.com
 blwgtqakqaxemz.com
 bmanpn.com
 bmayyviswklkd.com
@@ -1918,6 +1917,7 @@ cbuxzegro.com
 cbwocsublalxz.com
 cbyzgxhbovgwju.com
 cbzjukldosooj.com
+ccnnetwork.co
 ccrkqqnxmnwlm.com
 cczixhwxprith.com
 cd001.www.duba.net
@@ -3108,6 +3108,7 @@ exlpor.com
 exoclickz.com
 expdirclk.com
 expedia.com.hk
+experiments.sparanoid.net
 explainidentifycoding.info
 expogrim.com
 exponderle.pro
@@ -3285,7 +3286,6 @@ ficrwcptjvfpd.com
 fiechaev.com
 fiewqoyhdkdcm.com
 fifnonxntvaszg.com
-fighla.com
 file.ppbk9.com
 filecatcher.xyz
 fileloadr.com
@@ -4121,7 +4121,6 @@ hoochoor.com
 hooraico.com
 hoortols.org
 hoozique.net
-hopefullyactively.com
 hopeyouxue.com
 hoppr.co
 hopurl.org
@@ -4901,7 +4900,6 @@ jttoioquq.com
 jtuvgczhvuptzn.com
 juedische-kammerphilharmonie.de
 juggler.services.disqus.com
-jugixgjqx.xyz
 juhepen.com
 juiceads.net
 juicypussyclips.com
@@ -5551,7 +5549,6 @@ luckypure.info
 luckyshine.info
 luckysuccess.info
 luckytidy.info
-ludocsbho.com
 ludovwmhazsx.com
 lukir.info
 lulrtvfcy.com
@@ -7040,7 +7037,6 @@ pod.manplay.com
 podbwdcrmjufmr.com
 podimxqmqguj.com
 podzemi.myotis.info
-poflix.com
 pogdlwpmck.com
 poirreleast.club
 pokachi.net
@@ -7119,6 +7115,7 @@ pricedinfo.com
 pride-u-bike.com
 prigmaperf.me
 prime535.com
+primis-amp.tech
 printfriendly.com
 privacy.purch.com
 privacy.totaaltv.nl
@@ -8115,7 +8112,6 @@ sgqcvfjvr.onet.pl
 sgqqhydoovcd.com
 sgrreqyxvigwuh.com
 sgs.us.com
-sgtm.inet.se
 sgutelyg.com
 sgvac.com
 sgvuexlhbgpylr.com
@@ -8352,7 +8348,6 @@ ssraju3n.com
 sssyabhje.com
 ssucvdbxxlibn.com
 ssypntfmi.com
-stabam.com
 star.86uk.com
 startraint.com
 stat-data.net
@@ -9355,7 +9350,6 @@ victor.connectcloud.ch
 video.youzu.com
 videoindigen.com
 videotracker.washingtonpost.com
-vidscity.info
 vidsdelivery.com
 view-ads.de
 viewex.co.uk
@@ -10692,7 +10686,6 @@ xghfi97mk6.com
 xgievxfxhy.com
 xgipqvffxrgs.com
 xgmlmmulciz.com
-xgsgougog.com
 xgspfcpxt.com
 xgznkebnjme.com
 xh83333.com
@@ -11804,6 +11797,7 @@ zzxosget.com
 .0u48ltm1ok.ru
 .0uk9e.cn
 .0ulfpx.cn
+.0vkkf.cn
 .0x013d.website
 .0x01e7.website
 .0x01n2ptpuz3.com
@@ -23373,6 +23367,7 @@ zzxosget.com
 .aluenunohrgbb.com
 .alulimprowess.com
 .alulsdsubwro.com
+.alunitemoste.com
 .alvares.esportsheaven.com
 .alvenda.com
 .alwayscare.starmountlife.com
@@ -25632,6 +25627,7 @@ zzxosget.com
 .asnetworks.de
 .asnoibator.com
 .aso1.net
+.asoeasy.cn
 .asoewk.jaanuu.com
 .asohfyllrsaeana.xyz
 .asoulrox.com
@@ -26075,6 +26071,7 @@ zzxosget.com
 .attorney.findlaw.com
 .attr-2p.com
 .attracta.com
+.attractbestbonuses.life
 .attractionbanana.com
 .attractiveafternoon.com
 .attractivecap.com
@@ -27103,6 +27100,7 @@ zzxosget.com
 .backromy.com
 .backseatabundantpickpocket.com
 .backseatincredible.com
+.backseatrunners.com
 .backstage.funnelenvy.com
 .backstageconfide.com
 .backstagedeputy.com
@@ -29381,6 +29379,7 @@ zzxosget.com
 .bitterlythread.com
 .bitterstrawberry.com
 .bittyrail.com
+.bitu.fun
 .bitvnvjfakrik.xyz
 .bitx.tv
 .bityah-sym.com
@@ -32339,6 +32338,7 @@ zzxosget.com
 .cautiouscrate.com
 .cautiouscredit.com
 .cauwausa.net
+.cavecoat.top
 .cavelyamun.com
 .cavernousshift.pro
 .cavuredears.com
@@ -45147,6 +45147,7 @@ zzxosget.com
 .easyliao.com
 .easylist-to.xyz
 .easymarketcrs.it
+.easypics.info
 .easypills.co
 .easyrecoverychina.com
 .easyresearch.se
@@ -46014,6 +46015,7 @@ zzxosget.com
 .elk.techphotoguy.com
 .elkbahtax.com
 .elkconsistbirch.com
+.ellaysad.live
 .ellcurvth.com
 .elle.alljournal.ru
 .ellentmatchwi.com
@@ -47216,6 +47218,7 @@ zzxosget.com
 .etingplansfo.buzz
 .etivat.com
 .etjbedubcx.com
+.etkht.cn
 .etl-xlmc-ssl.xunlei.com
 .etl.tindersparks.com
 .etmxjglxsthvm.xyz
@@ -48985,6 +48988,7 @@ zzxosget.com
 .figddlderciy.com
 .figgleimpregn.com
 .figgynudest.com
+.fighla.com
 .fighsfg.cn
 .fightingcowardlycoffin.com
 .fightingleatherconspicuous.com
@@ -55689,6 +55693,7 @@ zzxosget.com
 .hoowooze.net
 .hop.clickbank.net
 .hopedwishfulpercent.com
+.hopefullyactively.com
 .hopefullyadults.com
 .hopefullyapricot.com
 .hopefulserversnecklace.com
@@ -59017,6 +59022,7 @@ zzxosget.com
 .ioedpk.oneill.com
 .ioeq5cead.icu
 .ioffuwfjfu.com
+.iogjhbnoypg.com
 .iogous.com
 .ioheiy.com
 .iojgo.com
@@ -61098,6 +61104,7 @@ zzxosget.com
 .jugerfowells.com
 .juggledcample.website
 .jugglu.com
+.jugixgjqx.xyz
 .jugnaglo.com
 .jugust.com
 .juhn.cn
@@ -66034,6 +66041,7 @@ zzxosget.com
 .ludesthat.club
 .ludicrousarch.com
 .ludicroussignify.com
+.ludocsbho.com
 .ludwigreseise.tech
 .lueticajuga.com
 .lueway.fr
@@ -75064,6 +75072,7 @@ zzxosget.com
 .obsessionthree.com
 .obsessivepetsbean.com
 .obsore.com
+.obsors.com
 .obspkoirhnvq.xyz
 .obssiyjiachvh.xyz
 .obstructionsaint.com
@@ -76858,6 +76867,7 @@ zzxosget.com
 .oweverycanvas.info
 .owewary.com
 .owhoogryinfo.com
+.owihyg.xyz
 .owin.biqugego.com
 .owkkutiuxxvfb.com
 .owkuwquf.com
@@ -79023,6 +79033,7 @@ zzxosget.com
 .pikdtipujmr.com
 .pikedhelloed.com
 .pikeletkiyi.com
+.pikepreviousi.com
 .pikzor.com
 .pilaffskoniga.com
 .pilaryhurrah.com
@@ -79916,6 +79927,7 @@ zzxosget.com
 .poetsofthefall.fr
 .poewage.top
 .pofang.com
+.poflix.com
 .pofooz.cn
 .pofqlldhpkvvh.com
 .pogothere.xyz
@@ -82069,6 +82081,7 @@ zzxosget.com
 .pwbstpjjkovpy.com
 .pwdplz.com
 .pweaatek.com
+.pweocgzutri.com
 .pwhukl.com
 .pwidonnctmdc.com
 .pwigekcyr.com
@@ -82304,6 +82317,7 @@ zzxosget.com
 .qbreport.html5.qq.com
 .qbse.intuit.com
 .qbxaebqkg.com
+.qbxucdgggl.com
 .qbyy010.com
 .qbyyvg3.com
 .qc-static.coccoc.com
@@ -88859,6 +88873,7 @@ zzxosget.com
 .sgsnssdk.com.edgekey.net
 .sgswuesocfr.com
 .sgtld.cn
+.sgtm.inet.se
 .sgtm.sefamerve.com
 .sgtm.simoahava.com
 .sguac.com
@@ -93133,6 +93148,7 @@ zzxosget.com
 .spannercopyright.com
 .spanuletubings.com
 .spapan.com
+.spaped.com
 .spapua.com
 .sparechange.io
 .sparedmallet.com
@@ -93445,6 +93461,7 @@ zzxosget.com
 .spottedsmile.com
 .spottedsnow.com
 .spottt.com
+.spotunworthycoercive.com
 .spotx.tv
 .spotxcdn.com
 .spotxcdn.com.edgekey.net
@@ -94214,6 +94231,7 @@ zzxosget.com
 .sta.jcjk0451.com
 .sta.tracedock.com
 .staaqwe.com
+.stabam.com
 .stabbr.com
 .stabilecordy.com
 .stabilityvatinventory.com
@@ -106454,6 +106472,7 @@ zzxosget.com
 .vidpay.com
 .vidplah.com
 .vidroll.ru
+.vidscity.info
 .vidseed.ru
 .vidsfun.info
 .vidsofdream.today
@@ -111252,6 +111271,7 @@ zzxosget.com
 .xgpub.com
 .xgraph.net
 .xgrwjbui.top
+.xgsgougog.com
 .xgspzv.troyestore.com
 .xgsx.club
 .xguqeh.com
@@ -112512,6 +112532,7 @@ zzxosget.com
 .ybaih.com
 .ybaiu.com
 .ybamxhcghruwtc.com
+.ybandwhwscrcyf.com
 .ybanj.com
 .ybaoh.com
 .ybayck.xyz
@@ -113665,6 +113686,7 @@ zzxosget.com
 .yuretb.site
 .yurivideo.com
 .yurobl.rw-co.com
+.yurti.cyou
 .yuske2.xyz
 .yusnw.cc
 .yuubuslvsqhopkk.com
@@ -113864,6 +113886,7 @@ zzxosget.com
 .z41vm.cn
 .z444o.com
 .z492.ctinsider.com
+.z4a.net
 .z501lpfg9x8v.com
 .z590.fairfieldcitizenonline.com
 .z5x.net
@@ -114573,6 +114596,7 @@ zzxosget.com
 .zkczbti.cn
 .zkczzltlhp6y.com
 .zkdkvnzsdxge.info
+.zkdmdf.xyz
 .zkfborg.cn
 .zkgvsoo.cn
 .zkit.club
@@ -114581,6 +114605,7 @@ zzxosget.com
 .zkqfrti.cn
 .zkqqsjdgscrwm.com
 .zkrdy.com
+.zktqzyz.cn
 .zkwsdf.com
 .zkxmhc.carcam.ru
 .zl588.com

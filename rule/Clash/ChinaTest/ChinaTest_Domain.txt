@@ -1,13 +1,13 @@
 # NAME: ChinaTest
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-12 02:11:44
+# UPDATED: 2023-02-13 02:11:18
 # DOMAIN: 174
 # DOMAIN-KEYWORD: 9
-# DOMAIN-SUFFIX: 65767
+# DOMAIN-SUFFIX: 65777
 # IP-CIDR: 10
 # IP-CIDR6: 4
-# TOTAL: 65964
+# TOTAL: 65974
 analytics.strava.com
 blzddist1-a.akamaihd.net
 cdp.cloud.unity3d.com
@@ -609,6 +609,7 @@ xn--flw351e.com
 .apcdns.net
 .api.crisp.chat
 .apigwtencent.com
+.apimkt.net
 .apk3.com
 .apk8.com
 .aplaybox.com
@@ -831,6 +832,7 @@ xn--flw351e.com
 .cczq.net
 .cdn20.com
 .cdn30.org
+.cdndo.com
 .cdndoctor.com
 .cdngot.com
 .cdngslb.com
@@ -997,6 +999,7 @@ xn--flw351e.com
 .clarivate.com
 .clashroyaleapp.com
 .classix-unlimited.co.uk
+.clk1.top
 .cloud-beijing.com
 .cloud-hebi.com
 .cloud-industry-delivery.site
@@ -1380,6 +1383,7 @@ xn--flw351e.com
 .ecitic.com
 .ecitic.net
 .ecjobhome.com
+.ecloud-gdu.com
 .edu4399.com
 .eduei.com
 .eeyy.com
@@ -1883,6 +1887,8 @@ xn--flw351e.com
 .ipinyou.com
 .ipip.net
 .ipplus360.com
+.iprdp.net
+.ipssh.net
 .ipv6-test.com
 .iq.com
 .iqiyi.com
@@ -2353,6 +2359,7 @@ xn--flw351e.com
 .mdeer.com
 .mdpda.com
 .me.com
+.me1.ltd
 .me4399.com
 .mechina.org
 .mediav.com
@@ -2905,6 +2912,7 @@ xn--flw351e.com
 .sjwyx.com
 .skycn.com
 .skysea.com
+.slk1.net
 .sllssrq.com
 .smartisan.com
 .smtcdns.com
@@ -3200,6 +3208,7 @@ xn--flw351e.com
 .txtyxg.com
 .txyscdn.com
 .txyscdn.net
+.u-cdn.net
 .u.tools
 .u17.com
 .u17i.com
@@ -3207,11 +3216,38 @@ xn--flw351e.com
 .ubssdic.com
 .ubuntukylin.com
 .ucbug.com
+.ucgslb.com
+.ucgslb.info
+.ucgslb.net
+.ucgslb.top
+.ucloud-edm.com
+.ucloud365.com
+.ucloudadmin.com
+.ucloudapi.com
+.ucloudgda.com
+.ucloudnaming.com
+.ucloudnaming.info
+.ucloudnaming.net
+.ucloudoss.com
+.ucloudstack.com
+.ucloudstack.net
+.ucloudstor.com
+.ucloudufile.com
+.ucnaming.com
+.ucnaming.info
+.ucnaming.net
 .ucweb.com
 .udache.com
 .udacity.com
+.uewaf.com
 .ufileos.com
 .uggame.com
+.ugslb.com
+.ugslb.info
+.ugslb.net
+.ugslb.top
+.ugslb2.net
+.uhasadmin.com
 .ulikecam.com
 .um.run
 .umajor.net
@@ -3221,6 +3257,8 @@ xn--flw351e.com
 .umsns.com
 .umtrack.com
 .un.org
+.unaming.info
+.unaming.net
 .uni-bielefeld.de
 .uning.com
 .unionpay.com
@@ -3240,6 +3278,8 @@ xn--flw351e.com
 .urselect.com
 .urumqi-air.com
 .useso.com
+.uslk.net
+.uucl.vip
 .uuu9.com
 .uxengine.net
 .uyunad.com
@@ -5217,6 +5257,7 @@ xn--flw351e.com
 .17wclass.com
 .17weike.com
 .17wendao.com
+.17whz.com
 .17win.com
 .17ww.cc
 .17xie.com
@@ -12115,7 +12156,6 @@ xn--flw351e.com
 .apicase.io
 .apicloud.com
 .apicvn.com
-.apimkt.net
 .apiview.com
 .apizb.com
 .apizl.com
@@ -16040,7 +16080,6 @@ xn--flw351e.com
 .cdndm.com
 .cdndm5.com
 .cdndm5.net
-.cdndo.com
 .cdnet110.com
 .cdnetdns.net
 .cdnff.com
@@ -21186,6 +21225,7 @@ xn--flw351e.com
 .digua.com
 .diguage.com
 .diguan.wang
+.diguazu.com
 .diguobbs.com
 .dihuikj.com
 .diiqu.com
@@ -21463,7 +21503,6 @@ xn--flw351e.com
 .dmjtxt.com
 .dmlei.com
 .dmm87d.xyz
-.dmmds.com
 .dmozdir.org
 .dmpans.com
 .dmqst.com
@@ -22746,7 +22785,6 @@ xn--flw351e.com
 .ecjson.com
 .eckjzx.com
 .eckwai.com
-.ecloud-gdu.com
 .ecloud.hk
 .ecmagnet.com
 .ecmoban.com
@@ -22902,6 +22940,7 @@ xn--flw351e.com
 .eduzs.net
 .edward-han.com
 .edwiv.com
+.ee-nav.com
 .ee1234.com
 .ee68.com
 .ee8828.com
@@ -32406,12 +32445,10 @@ xn--flw351e.com
 .ipr123.com
 .iprchn.com
 .iprdaily.com
-.iprdp.net
 .ipresst.com
 .iprtop.com
 .iprun.com
 .ips8.com
-.ipssh.net
 .iptalent.com
 .iptrm.com
 .ipuu.net
@@ -37843,6 +37880,7 @@ xn--flw351e.com
 .lingdonghuyu.com
 .lingdunwang.com
 .lingduohome.com
+.lingduzuji.com
 .lingdz.com
 .lingfei.wang
 .lingfengyun.com
@@ -39809,7 +39847,6 @@ xn--flw351e.com
 .mdydt.net
 .mdzgjx.com
 .me-city.com
-.me1.ltd
 .me361.com
 .meadin.com
 .meaninggame.com
@@ -41849,6 +41886,7 @@ xn--flw351e.com
 .nbahjx.com
 .nbaidai.com
 .nball.cc
+.nbalxhf.com
 .nbaqmq.com
 .nbayaobasketballclub.com
 .nbazww.com
@@ -42440,6 +42478,7 @@ xn--flw351e.com
 .nlypx.com
 .nlzpy.com
 .nm8yx.com
+.nmbxd1.com
 .nmet168.com
 .nmgchigang.com
 .nmgd.com
@@ -43016,6 +43055,7 @@ xn--flw351e.com
 .okooe.com
 .okoooimg.com
 .okpush.com
+.okpython.com
 .okrecovery.com
 .okskills.com
 .oksun.com
@@ -49882,7 +49922,6 @@ xn--flw351e.com
 .slinuxer.com
 .sljkj.com
 .sljypt.com
-.slk1.net
 .sllai.com
 .slmbio.com
 .slogra.com
@@ -51092,7 +51131,6 @@ xn--flw351e.com
 .suqicloud.com
 .suqishi.com
 .suqnn.com
-.surdoc.net
 .sure56.com
 .suremotoo.site
 .surgerycast.com
@@ -54045,7 +54083,6 @@ xn--flw351e.com
 .tzxingtang.com
 .tzxwzx.com
 .tzye123.com
-.u-cdn.net
 .u-jingling.com
 .u-link.org
 .u-ls.com
@@ -54154,9 +54191,6 @@ xn--flw351e.com
 .ucfly.com
 .ucfma.com
 .ucfpay.com
-.ucgslb.com
-.ucgslb.info
-.ucgslb.net
 .uchangdi.com
 .uchiha.ltd
 .uchis.com
@@ -54168,23 +54202,7 @@ xn--flw351e.com
 .uclmad.com
 .uclmimg.com
 .uclmjs.com
-.ucloud-edm.com
-.ucloud365.com
-.ucloudadmin.com
-.ucloudapi.com
-.ucloudgda.com
-.ucloudnaming.com
-.ucloudnaming.info
-.ucloudnaming.net
-.ucloudoss.com
-.ucloudstack.com
-.ucloudstack.net
-.ucloudstor.com
-.ucloudufile.com
 .ucly.net
-.ucnaming.com
-.ucnaming.info
-.ucnaming.net
 .ucnano.com
 .ucnest.com
 .ucpaas.com
@@ -54236,7 +54254,6 @@ xn--flw351e.com
 .uestcedu.com
 .uestcguoji.com
 .ueuz.com
-.uewaf.com
 .uf-crm.com
 .uf-tobacco.com
 .ufanw.com
@@ -54271,15 +54288,10 @@ xn--flw351e.com
 .ugojp.com
 .ugong.com
 .ugoshop.com
-.ugslb.com
-.ugslb.info
-.ugslb.net
-.ugslb2.net
 .ugsnx.com
 .ugubl.net
 .ugxsd.com
 .uhandak.com
-.uhasadmin.com
 .uhomecp.com
 .uhomes.com
 .uhouzz.com
@@ -54396,8 +54408,6 @@ xn--flw351e.com
 .un1c0de.xyz
 .una-ad.com
 .unages.com
-.unaming.info
-.unaming.net
 .uncbd.com
 .unccr.com
 .uncle-ad.com
@@ -54619,7 +54629,6 @@ xn--flw351e.com
 .usitour.com
 .usitrip.com
 .usjuw.com
-.uslk.net
 .usnook.com
 .usocialplus.com
 .usoftchina.com
@@ -54666,7 +54675,6 @@ xn--flw351e.com
 .uu898.com
 .uuaa.net
 .uuaoz.com
-.uucl.vip
 .uucolor.com
 .uudsp.com
 .uuecs.com
@@ -57670,6 +57678,7 @@ xn--flw351e.com
 .wufuba.com
 .wufun.net
 .wufuquanlawyer.com
+.wugongdong.com
 .wuguiyunwei.com
 .wuguoren.com
 .wuguyufen.com
@@ -62988,6 +62997,7 @@ xn--flw351e.com
 .yusi.com
 .yusi.tv
 .yusi123.com
+.yutaoyouxi.com
 .yuteng.site
 .yutennet.com
 .yutian.cc

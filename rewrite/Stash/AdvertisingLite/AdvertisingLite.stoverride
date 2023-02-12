@@ -1,11 +1,11 @@
 name: 复写去广告(严格版)
-desc: 最后更新时间 2023-02-12 02:14:58
+desc: 最后更新时间 2023-02-13 02:14:41
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
-# reject: 496
-# mitm: 409
+# reject: 494
+# mitm: 407
 # force-http-engine-hosts: 6
-# total: 911
+# total: 907
 
 
 
@@ -174,7 +174,6 @@ http:
     - ^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image - reject
     - ^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ - reject
     - ^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash - reject
-    - ^https?:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/(free\/open\/advertisingV2|c\/home\/searchMark) - reject
     - ^https?:\/\/btrace\.qq\.com - reject
     - ^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+?\.jpg - reject
     - ^https?:\/\/business\.msstatic\.com\/advertiser\/ - reject
@@ -225,7 +224,6 @@ http:
     - ^https?:\/\/dsa-mfp\.fengshows\.cn\/mfp\/mfpMultipleDelivery\.do\?.+?adunitid - reject
     - ^https?:\/\/dsp-impr2\.youdao\.com\/adload - reject
     - ^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject
-    - ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) - reject
     - ^https?:\/\/e\.dangdang\.com\/media\/api.+?\?action=getDeviceStartPage - reject
     - ^https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\/ - reject
     - ^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv - reject
@@ -647,7 +645,6 @@ http:
     - "b.zhuishushenqi.com"
     - "bdsp-x.jd.com"
     - "bgw.xinyue.qq.com"
-    - "bp-api.bestv.com.cn"
     - "btrace.qq.com"
     - "business-cdn.shouji.sogou.com"
     - "business.msstatic.com"
@@ -695,7 +692,6 @@ http:
     - "dsp-impr2.youdao.com"
     - "dsp-x.jd.com"
     - "dsp.toutiao.com"
-    - "dss0.bdstatic.com"
     - "e.dangdang.com"
     - "easyreadfs.nosdn.127.net"
     - "edit.sinaapp.com"

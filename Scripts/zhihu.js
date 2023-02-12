@@ -35,12 +35,7 @@ if (url.includes("/appview/v3/zhomre")) {
     const isArticle =
       elementStr.search(/"(type|style)+"\s?:\s?"article"/i) >= 0;
     const removeArticle = isArticle && settings_remove_article;
-    return !(
-      isAd ||
-      removePin ||
-      removeArticle ||
-      removeStream
-    );
+    return !(isAd || removePin || removeArticle || removeStream);
   };
 
   // 修复number类型精度丢失
@@ -65,13 +60,9 @@ if (url.includes("/appview/v3/zhomre")) {
       obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
     }
   } else if (url.includes("/topstory/hot-lists")) {
-    if (obj.data) {
-      obj.data = obj.data.filter(
-        (i) => i.type === "hot_list_feed" || i.type === "hot_list_feed_video"
-      );
-    } else if (obj.data.data) {
+    if (obj.data.data) {
       obj.data.data = obj.data.data.filter(
-        (i) => !i.target.metrics_area.text.includes("合作推广")
+        (i) => !i.target.metrics_area.text === "合作推广"
       );
     }
   } else if (url.includes("/people/homepage_entry")) {

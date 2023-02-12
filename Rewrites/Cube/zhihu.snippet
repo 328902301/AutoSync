@@ -1,5 +1,5 @@
 # ======= 知乎 ======= #
-# 2023-02-12 20:05
+# 2023-02-12 20:15
 
 # 开屏广告
 ^https:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-dict
@@ -13,11 +13,10 @@
 ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/drama\/hot-drama-list$ url reject-dict
 
-# 我的页面 项目列表,本地会员,更多卡片
+# 我的页面 项目列表,本地会员,会员卡片,更多卡片
 ^https:\/\/api\.zhihu\.com\/people\/homepage_entry$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/people\/self$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
-;会员卡片
-;^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card$ url reject-dict
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card$ url reject-dict
 ^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
 # 搜索页 关键词

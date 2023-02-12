@@ -538,10 +538,10 @@ function removeMoments() {
     customBlockedUsers = !!customBlockedUsers ? customBlockedUsers : {};
     let data;
 
-    const settings_remove_stream = $.data.read("zhihu_settings_moments_stream", true);
-    const settings_remove_recommend = $.data.read("zhihu_settings_moments_recommend", true);
-    const settings_remove_activity = $.data.read("zhihu_settings_moments_activity", true);
-    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", true);
+    const settings_remove_stream = $.data.read("zhihu_settings_moments_stream", false);
+    const settings_remove_recommend = $.data.read("zhihu_settings_moments_recommend", false);
+    const settings_remove_activity = $.data.read("zhihu_settings_moments_activity", false);
+    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", false);
 
     data = obj.data.filter(
       (item) => {
@@ -575,13 +575,13 @@ function removeRecommend() {
   let response = null;
   try {
     // 移除推荐列表中的想法
-    const settings_remove_pin = $.data.read("zhihu_settings_recommend_pin", true);
+    const settings_remove_pin = $.data.read("zhihu_settings_recommend_pin", false);
     // 移除推荐列表的流媒体
-    const settings_recommend_stream = $.data.read("zhihu_settings_recommend_stream", true);
+    const settings_recommend_stream = $.data.read("zhihu_settings_recommend_stream", false);
     // 移除推荐列表的文章
-    const settings_remove_article = $.data.read("zhihu_settings_remove_article", true);
+    const settings_remove_article = $.data.read("zhihu_settings_remove_article", false);
     // 屏蔽黑名单用户
-    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", true);
+    const settings_blocked_users = $.data.read("zhihu_settings_blocked_users", false);
     // 屏蔽关键词内容
     const settings_blocked_keywords = $.data.read("zhihu_settings_blocked_keywords", true);
     // 获取用户信息

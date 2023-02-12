@@ -17,7 +17,7 @@
 ^https:\/\/api\.zhihu\.com\/people\/homepage_entry$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/people\/self$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card$ url reject-dict
-^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore$ url reject-dict
+^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 
 # 搜索页 关键词
 ^https:\/\/api\.zhihu\.com\/search\/preset_words$ url reject-dict

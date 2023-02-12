@@ -15,19 +15,19 @@ if (url.includes("/appview/v3/zhomre")) {
     }
   } else if (url.includes("/moments_v3")) {
     if (obj.data) {
-      obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
+      obj.data = obj.data.filter((i) => !i.title === "为您推荐");
     }
   } else if (url.includes("/topstory/hot-lists/everyone-seeing")) {
     if (obj.data.data) {
       obj.data.data = obj.data.data.filter(
-        (i) => !i.target.metrics_area.text.includes("合作推广")
+        (i) => !i.target.metrics_area.text === "合作推广"
       );
     }
   } else if (url.includes("/topstory/recommend_v2")) {
     if (obj.data) {
       obj.data = obj.data.filter(
         (i) =>
-          !i.common_card.footline.second_elements.elements.panel_text.includes(
+          !i.common_card.footline.second_elements.elements.panel_text?.includes(
             "广告"
           )
       );

@@ -27,12 +27,23 @@ if (url.includes("/appview/v3/zhomre")) {
   } else if (url.includes("/topstory/recommend_v2")) {
     // 推荐信息流
     if (obj.data) {
-      obj.data = obj.data.filter(
-        (i) =>
-          !i?.common_card?.footline?.elements?.text?.panel_text?.includes(
-            "广告"
-          )
-      );
+      obj.data = obj.data.filter((i) => {
+        if (i.type === "common_card") {
+          if (
+            i.common_card?.footline?.elements?.text?.panel_text?.includes(
+              "广告"
+            )
+          ) {
+            return false;
+          }
+          return true;
+        }
+        // 信息流横排卡片
+        if (i.type === "pin_aggregation_card") {
+          return false;
+        }
+        return true;
+      });
     }
   } else if (url.includes("/people/homepage_entry")) {
     const item = [

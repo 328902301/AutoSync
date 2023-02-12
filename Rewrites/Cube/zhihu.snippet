@@ -1,5 +1,5 @@
 # ======= 知乎 ======= #
-# 2023-02-12 11:10
+# 2023-02-12 17:30
 
 # 开屏广告
 ^https:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-dict
@@ -28,6 +28,9 @@
 ^https:\/\/api\.zhihu\.com\/v4\/questions\/\d+\/answers\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/www\.zhihu\.com\/api\/v4\/articles\/\d+\/recommendation\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
+
+# 其他
+^https:\/\/appcloud2\.zhihu\.com\/v3\/config$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 
 # 网页版去广告 //www.zhihu.com, zhuanlan.zhihu.com
 ^https:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject

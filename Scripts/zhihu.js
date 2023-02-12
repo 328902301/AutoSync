@@ -22,7 +22,12 @@ if (url.includes("/appview/v3/zhomre")) {
   } else if (url.includes("/topstory/hot-lists/everyone-seeing")) {
     // 热榜信息流
     if (obj.data.data) {
-      obj.data.data = obj.data.data.filter((i) => !i.card_id.includes("AT_"));
+      obj.data.data = obj.data.data.filter((i) => {
+        if (i.target?.metrics_area?.text?.includes("合作推广")) {
+          return false;
+        }
+        return true;
+      });
     }
   } else if (url.includes("/topstory/recommend_v2")) {
     // 推荐信息流

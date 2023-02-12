@@ -6,10 +6,10 @@ let body = $response.body;
 
 if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
-  body = body
-    .replace(/<head><script>.*<\/script>/g, "")
-    .replace(/<div\sclass="css-4t69oh">.*<\/div><\/div><\/div><style/g, "")
-    .replace(/<\/script><script>!.*<\/script><\/body>/g, "");
+  body = body.replace(
+    /<div\sclass="css-scpgbl">.*<\/div><\/div><\/div><\/div><\/div>/g,
+    ""
+  );
   $done({ body });
 } else {
   let obj = JSON.parse(body);

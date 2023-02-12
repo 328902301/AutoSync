@@ -10,7 +10,26 @@ if (url.includes("/appview/v3/zhomre")) {
   $done({ body });
 } else {
   let obj = JSON.parse(body);
-  if (url.includes("/commercial_api/app_float_layer")) {
+  if (url.includes("/api/v4/answers")) {
+    if (obj.paging) {
+      obj.paging = {};
+    }
+    if (obj.data) {
+      obj.data = {};
+    }
+  } else if (url.includes("/api/v4/articles")) {
+    if (obj.ad_info) {
+      obj.ad_info = {};
+    }
+  } else if (url.includes("/v4/questions") || url.includes("/questions")) {
+    // 问题回答列表广告
+    if (obj.data.ad_info) {
+      obj.data.ad_info = {};
+    }
+    if (obj.ad_info) {
+      obj.ad_info = {};
+    }
+  } else if (url.includes("/commercial_api/app_float_layer")) {
     // 悬浮图标
     if ("feed_egg" in obj) {
       obj = {};
@@ -18,14 +37,6 @@ if (url.includes("/appview/v3/zhomre")) {
   } else if (url.includes("/moments_v3")) {
     if (obj.data) {
       obj.data = obj.data.filter((i) => !i?.title?.includes("为您推荐"));
-    }
-  } else if (url.includes("/v2/topstory/hot-lists/everyone-seeing")) {
-    // 热榜信息流
-    if (obj.data.data) {
-      // 合作推广
-      obj.data.data = obj.data.data.filter(
-        (i) => !i.target?.metrics_area?.text?.includes("合作推广")
-      );
     }
   } else if (url.includes("/topstory/recommend_v2")) {
     // 推荐信息流
@@ -73,6 +84,14 @@ if (url.includes("/appview/v3/zhomre")) {
         return true;
       });
     }
+  } else if (url.includes("/v2/topstory/hot-lists/everyone-seeing")) {
+    // 热榜信息流
+    if (obj.data.data) {
+      // 合作推广
+      obj.data.data = obj.data.data.filter(
+        (i) => !i.target?.metrics_area?.text?.includes("合作推广")
+      );
+    }
   } else if (url.includes("/people/homepage_entry")) {
     const item = [
       // "钱包",
@@ -92,7 +111,12 @@ if (url.includes("/appview/v3/zhomre")) {
       // "盐值分"
     ];
     if (obj.list) {
-      obj.list = obj.list.filter((i) => i.name.includes(item));
+      obj.list = obj.list.filter((i) => {
+        if (i.name.includes(item)) {
+          return true;
+        }
+        return false;
+      });
     }
   } else if (url.includes("/people/self")) {
     if (obj.vip_info) {

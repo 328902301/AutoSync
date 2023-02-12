@@ -8,7 +8,8 @@ if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
   body = body
     .replace(/<head><script>.*<\/script>/g, "")
-    .replace(/<div\sclass="css-4t69oh">.*<\/div><\/div><\/div><style/g, "");
+    .replace(/<div\sclass="css-4t69oh">.*<\/div><\/div><\/div><style/g, "")
+    .replace(/<\/script><script>!.*<\/script><\/body>/g, "");
   $done({ body });
 } else {
   let obj = JSON.parse(body);

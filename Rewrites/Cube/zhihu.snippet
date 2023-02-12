@@ -8,8 +8,8 @@
 # 首页 悬浮图标,相关搜索卡片,推荐,热榜,回答底部卡片
 ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$ url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/moments\/lastread$ url reject-dict
-^https:\/\/api\.zhihu\.com\/topstory\/hot-lists\/everyone-seeing\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/api\.zhihu\.com\/topstory\/recommend_v2\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/zhihu.js
 ^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations\? url reject-dict
 
 # 我的页面 项目列表,本地会员,会员卡片,更多卡片

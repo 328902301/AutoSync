@@ -7,6 +7,53 @@ let body = $response.body;
 if (url.includes("/appview/v3/zhomre")) {
   body = body.replace(/<body><div\sid="root".*<\/div><script>>/g, "");
   $done({ body });
+} else if (url.includes("/topstory/recommend_v2")) {
+  const newData = (element) => {
+    const elementStr = JSON.stringify(element);
+    // 是否为广告
+    const isAd =
+      element["card_type"] === "slot_event_card" ||
+      element["card_type"] === "slot_video_event_card" ||
+      element.hasOwnProperty("ad") ||
+      // 非常恶心伪装成普通内容的广告
+      (element["brief"] && element["brief"].indexOf("slot_card") >= 0) ||
+      // 训练营
+      (element["extra"] && element["extra"]["type"] === "Training");
+    // 是否为流媒体
+    const isStream =
+      isAd !== true &&
+      elementStr.search(
+        /"(type|style)+"\s?:\s?"(drama|zvideo|Video|BIG_IMAGE)+"/i
+      ) >= 0;
+    const removeStream = isStream && settings_recommend_stream;
+    // 是否为想法
+    const isPin =
+      isStream !== true &&
+      elementStr.search(/"(type|style)+"\s?:\s?"pin"/i) >= 0;
+    const removePin = isPin && settings_remove_pin;
+    // 是否为文章
+    const isArticle =
+      elementStr.search(/"(type|style)+"\s?:\s?"article"/i) >= 0;
+    const removeArticle = isArticle && settings_remove_article;
+    return !(
+      isAd ||
+      removePin ||
+      removeArticle ||
+      removeStream
+    );
+  };
+
+  // 修复number类型精度丢失
+  body = body.replace(/(\w+"+\s?):\s?(\d{15,})/g, '$1:"$2"');
+  let obj = JSON.parse(body);
+  obj["data"] = obj["data"].filter(newData);
+  $done({ body: JSON.stringify(obj) });
+  // if (obj.data) {
+  //   obj.data = obj.data.filter(
+  //     (i) =>
+  //       !i.common_card?.footline.elements.text.panel_text.includes("广告")
+  //   );
+  // }
 } else {
   let obj = JSON.parse(body);
   if (url.includes("/commercial_api/app_float_layer")) {
@@ -15,19 +62,16 @@ if (url.includes("/appview/v3/zhomre")) {
     }
   } else if (url.includes("/moments_v3")) {
     if (obj.data) {
-      obj.data = obj.data.filter((i) => !i.title === "为您推荐");
+      obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
     }
-  } else if (url.includes("/topstory/hot-lists/everyone-seeing")) {
-    if (obj.data.data) {
-      obj.data.data = obj.data.data.filter(
-        (i) => !i.target.metrics_area.text.includes("合作推广")
-      );
-    }
-  } else if (url.includes("/topstory/recommend_v2")) {
+  } else if (url.includes("/topstory/hot-lists")) {
     if (obj.data) {
       obj.data = obj.data.filter(
-        (i) =>
-          !i.common_card?.footline.elements.text.panel_text.includes("广告")
+        (i) => i.type === "hot_list_feed" || i.type === "hot_list_feed_video"
+      );
+    } else if (obj.data.data) {
+      obj.data.data = obj.data.data.filter(
+        (i) => !i.target.metrics_area.text.includes("合作推广")
       );
     }
   } else if (url.includes("/people/homepage_entry")) {

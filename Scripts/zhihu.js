@@ -6,7 +6,7 @@ let body = $response.body;
 
 if (url.includes("/appview/v3/zhomre")) {
   // 我的页面
-  body = body.replace(/<body><div\sid="root".*<\/div><script>>/g, "");
+  body = body.replace(/<body><div\sid="root".*<\/div><script>/g, "");
   $done({ body });
 } else {
   let obj = JSON.parse(body);

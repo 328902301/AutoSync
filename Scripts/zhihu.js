@@ -25,7 +25,7 @@ if (url.includes("/appview/v3/zhomre")) {
     if (obj.data) {
       obj.data = obj.data.filter(
         (i) =>
-          !i.common_card?.footline?.[0].elements?.[0].text.panel_text.includes("广告")
+          !i.common_card.footline.elements[0].text.panel_text.includes("广告")
       );
     }
   } else if (url.includes("/people/homepage_entry")) {

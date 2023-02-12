@@ -5,11 +5,13 @@ const url = $request.url;
 let body = $response.body;
 
 if (url.includes("/appview/v3/zhomre")) {
+  // 我的页面
   body = body.replace(/<body><div\sid="root".*<\/div><script>>/g, "");
   $done({ body });
 } else {
   let obj = JSON.parse(body);
   if (url.includes("/commercial_api/app_float_layer")) {
+    // 悬浮图标
     if ("feed_egg" in obj) {
       obj = {};
     }
@@ -18,13 +20,16 @@ if (url.includes("/appview/v3/zhomre")) {
       obj.data = obj.data.filter((i) => !i.title.includes("为您推荐"));
     }
   } else if (url.includes("/topstory/hot-lists/everyone-seeing")) {
+    // 热榜信息流
     if (obj.data.data) {
       obj.data.data = obj.data.data.filter((i) => !i.card_id.includes("AT_"));
     }
   } else if (url.includes("/topstory/recommend_v2")) {
-    if (obj?.data) {
+    // 推荐信息流
+    if (obj.data) {
       obj.data = obj.data.filter(
-        (i) => !i.common_card.footline.elements.text.panel_text.includes("广告")
+        (i) =>
+          !i?.common_card.footline.elements.text.panel_text.includes("广告")
       );
     }
   } else if (url.includes("/people/homepage_entry")) {

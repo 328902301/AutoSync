@@ -1,4 +1,4 @@
-// 2023-02-13 14:30
+// 2023-02-13 14:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -427,6 +427,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     // 商品橱窗
     if (obj?.common_struct) {
       delete obj.common_struct;
+    }
+    // 循环引用中的商品橱窗
+    if (obj.text?.common_struct) {
+      delete obj.text.common_struct;
     }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流

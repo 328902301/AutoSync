@@ -250,7 +250,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             );
           }
           newItems.push(item);
-        } else if (itemId === "100505_-_manage") {
+        } else {
+          if (itemId !== "100505_-_manage") {
+            continue;
+          }
           if (item.style) {
             delete item.style;
           }
@@ -259,9 +262,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             delete item.images;
           }
           newItems.push(item);
-        } else {
-          // 其他项目全部移除
-          continue;
         }
       }
       obj.items = newItems;

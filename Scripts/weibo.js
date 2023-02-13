@@ -1,4 +1,4 @@
-// 2023-02-13 14:45
+// 2023-02-13 18:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -84,59 +84,49 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/comments/build_comments")) {
     // 评论区
-    let delType = ["广告"];
-    delType.push("相关内容");
-    delType.push(...["推荐", "热推"]);
     if (obj.datas) {
-      let items = obj.datas || [];
+      let items = obj.datas;
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 移除超话社区,头像挂件,勋章,评论气泡
-          if (item.data.user) {
-            if (item.data.user.name === "超话社区") {
+          if (!isAd(item.data)) {
+            // 超话社区,头像挂件,勋章,评论气泡
+            if (item.data.user) {
+              removeAvatar(item.data.user);
+              // 微博伪装评论,过滤不当言论提示
+              if (
+                item.data.user.name === "超话社区" ||
+                item.data.user.name === "微博视频"
+              ) {
+                continue;
+              }
+            }
+            // 评论气泡
+            if (item.data?.comment_bubble) {
+              delete item.data.comment_bubble;
+            }
+            if (item?.type === 6) {
               continue;
             }
-            removeAvatar(item.data.user);
-          }
-          // 移除评论气泡
-          if (item.data?.comment_bubble) {
-            delete item.data.comment_bubble;
-          }
-          let adType = item.adType || "";
-          // 移除评论区推广
-          if (delType.indexOf(adType) === -1) {
-            // 移除过滤提示
-            if (item.type === 6) {
-              continue;
-            } else {
-              newItems.push(item);
-            }
+            newItems.push(item);
           }
         }
         obj.datas = newItems;
       }
     } else if (obj.root_comments) {
-      let items = obj.root_comments || [];
+      let items = obj.root_comments;
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 移除头像挂件、勋章、评论气泡
-          if (item?.user) {
-            removeAvatar(item.user);
-          }
-          if (item?.comment_bubble) {
-            delete item.comment_bubble;
-          }
-          let adType = item.adType || "";
-          // 移除评论区推广
-          if (delType.indexOf(adType) === -1) {
-            // 移除过滤提示
-            if (item.type === 6) {
-              continue;
-            } else {
-              newItems.push(item);
+          if (!isAd(item)) {
+            // 头像挂件,勋章,评论气泡
+            if (item?.user) {
+              removeAvatar(item.user);
             }
+            if (item?.comment_bubble) {
+              delete item.comment_bubble;
+            }
+            newItems.push(item);
           }
         }
         obj.root_comments = newItems;

@@ -84,9 +84,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/comments/build_comments")) {
     // 评论区
-    let delType = ["广告"];
-    delType.push("相关内容");
-    delType.push(...["推荐", "热推"]);
     if (obj.datas) {
       let items = obj.datas || [];
       if (items.length > 0) {
@@ -103,15 +100,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item.data?.comment_bubble) {
             delete item.data.comment_bubble;
           }
-          let adType = item.adType || "";
-          // 移除评论区推广
-          if (delType.indexOf(adType) === -1) {
-            // 移除过滤提示
-            if (item.type === 6) {
-              continue;
-            } else {
-              newItems.push(item);
-            }
+          if (!isAd(item)) {
+            newItems.push(item);
           }
         }
         obj.datas = newItems;
@@ -128,15 +118,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item?.comment_bubble) {
             delete item.comment_bubble;
           }
-          let adType = item.adType || "";
-          // 移除评论区推广
-          if (delType.indexOf(adType) === -1) {
-            // 移除过滤提示
-            if (item.type === 6) {
-              continue;
-            } else {
-              newItems.push(item);
-            }
+          if (!isAd(item)) {
+            newItems.push(item);
           }
         }
         obj.root_comments = newItems;

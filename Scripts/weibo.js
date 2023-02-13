@@ -188,7 +188,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "group") {
           let ii = item.items;
           // 个人置顶微博
-          if (ii.data.itemid === "profile_top") {
+          if (ii.data?.itemid === "profile_top") {
             newItems.push(item);
           }
         } else if (item.category === "feed") {

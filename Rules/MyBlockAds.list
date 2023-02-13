@@ -81,6 +81,8 @@ HOST,iadmat.nosdn.127.net,REJECT
 HOST,iadmusicmat.music.126.net,REJECT
 HOST,iadmusicmatvideo.music.126.net,REJECT
 HOST-SUFFIX,163jiasu.com,REJECT
+# 微博 开屏广告
+HOST,boot.biz.weibo.com,REJECT
 # 微博 头像挂件
 HOST,new.vip.weibo.cn,REJECT
 HOST,vip.storage.weibo.com,REJECT

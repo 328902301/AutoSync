@@ -1,4 +1,4 @@
-// 2023-02-13 11:15
+// 2023-02-13 12:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -202,6 +202,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
+            // 移除商品橱窗
+            if (item.data?.common_struct?.actionlog?.source?.includes("ad")) {
+              delete item.data.common_struct;
+            }
             newItems.push(item);
           } else {
             continue;
@@ -252,7 +256,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
-           delete item.style;
+            delete item.style;
           }
           // 移除分隔符的点点点
           if (item.images) {
@@ -384,6 +388,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     // 首页关注tab信息流
     if (obj.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
+    }
+    // 移除商品橱窗
+    if (obj.common_struct?.actionlog?.source?.includes("ad")) {
+      delete obj.common_struct;
     }
     if (obj.items) {
       let newItems = [];

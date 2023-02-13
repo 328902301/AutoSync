@@ -1,12 +1,8 @@
-// 2023-02-13 11:15
+// 2023-02-13 13:00
 
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
-
-// 屏蔽用户id获取方法
-// 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
-const blockIds = [];
 
 // 微博详情页菜单配置
 const itemMenusConfig = {
@@ -252,7 +248,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
-           delete item.style;
+            delete item.style;
           }
           // 移除分隔符的点点点
           if (item.images) {
@@ -416,6 +412,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.items = newItems;
     }
+  } else if (url.includes("/2/statuses/show")) {
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj.common_struct;
+    }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流
     for (let s of ["ad", "advertises", "trends", "headers"]) {
@@ -427,13 +428,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newStatuses = [];
       for (let s of obj.statuses) {
         if (!isAd(s)) {
-          if (!isBlock(s)) {
-            // 移除拓展信息,绿洲
-            if (s?.common_struct) {
-              delete s.common_struct;
-            }
-            newStatuses.push(s);
+          // 移除拓展信息,绿洲
+          if (s?.common_struct) {
+            delete s.common_struct;
           }
+          newStatuses.push(s);
         }
       }
       obj.statuses = newStatuses;
@@ -523,19 +522,6 @@ function isAd(data) {
     }
     if (data.promotion?.type === "ad") {
       return true;
-    }
-  }
-  return false;
-}
-
-// 屏蔽用户id
-function isBlock(data) {
-  if (blockIds?.length > 0) {
-    let uid = data.user.id;
-    for (let blockId of blockIds) {
-      if (blockId == uid) {
-        return true;
-      }
     }
   }
   return false;

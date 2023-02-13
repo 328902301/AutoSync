@@ -211,6 +211,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item.data?.extend_info?.ad || item.data?.extend_info?.shopwindow_card) {
               delete item.data.extend_info;
             }
+            if (item.data?.common_struct?.actionlog?.source?.includes("ad")) {
+              delete item.data.common_struct;
+            }
             newItems.push(item);
           } else {
             continue;

@@ -250,7 +250,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             );
           }
           newItems.push(item);
-        } else if (item.category === "mine") {
+        } else {
           if (itemId === "100505_-_manage") {
             if (item.style) {
               delete item.style;
@@ -270,13 +270,15 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.body;
             }
             newItems.push(item);
+          } else if (
+            itemId === "100505_-_chaohua" ||
+            itemId === "100505_-_recentlyuser"
+          ) {
+            newItems.push(item);
           } else {
             // 其他项目全部移除
             continue;
           }
-        } else {
-          // 其他项目全部移除
-          continue;
         }
       }
       obj.items = newItems;

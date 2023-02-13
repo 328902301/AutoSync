@@ -186,10 +186,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item.category === "group") {
-          let ii = item.items;
-          // 个人置顶微博
-          if (ii.data?.itemid === "profile_top") {
-            newItems.push(item);
+          for (let ii of item.items) {
+            if (ii.data.itemid === "profile_top") {
+              newItems.push(item);
+            }
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {

@@ -1,4 +1,4 @@
-// 2023-02-13 22:15
+// 2023-02-13 22:25
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -393,6 +393,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
+            // 商品橱窗
+            if (item.data?.common_struct) {
+              delete item.data.common_struct;
+            }
             newItems.push(item);
           } else if (item.category === "feedBiz") {
             // 管理特别关注按钮

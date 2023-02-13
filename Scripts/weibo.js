@@ -186,9 +186,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item.category === "group") {
-          if (item?.items?.data?.itemid === "profile_top") {
-            newItems.push(item);
-          } else if (item?.items?.category === "feed") {
+          if (
+            item.items.data?.[0]?.itemid === "profile_top" &&
+            item.items.data?.[1]?.category === "feed"
+          ) {
             newItems.push(item);
           }
         } else if (item.category === "feed") {

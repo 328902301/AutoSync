@@ -187,13 +187,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "group") {
           let ii = item.items;
-          // 热门话题,可能感兴趣的人
           if (ii.data?.group) {
             continue;
           } else if (ii.data?.desc === "可能感兴趣的人") {
             continue;
           } else {
-            newItems.push(ii);
+            newItems.push(item);
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {

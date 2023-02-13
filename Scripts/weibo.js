@@ -191,8 +191,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 热门话题,可能感兴趣的人
             if (i.data?.card_type === 17 || i.data?.card_type === 42) {
               continue;
-            } else {
-              newItems.push(item);
             }
           }
         } else if (item.category === "feed") {

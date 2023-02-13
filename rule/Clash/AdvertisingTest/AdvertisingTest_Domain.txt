@@ -1,79 +1,133 @@
 # NAME: AdvertisingTest
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-13 02:08:17
-# DOMAIN: 11499
+# UPDATED: 2023-02-14 02:08:11
+# DOMAIN: 11577
 # DOMAIN-KEYWORD: 264
-# DOMAIN-SUFFIX: 103658
+# DOMAIN-SUFFIX: 103641
 # IP-CIDR: 241
-# TOTAL: 115662
-3p-geo.yahoo.com
-3p-udc.yahoo.com
+# TOTAL: 115723
+44629.com
 46186911.vtt
+4b05b6a5e7.com
+6016799644.com
 80055404.vtt
+9bbd72928f.com
 aab-proxy.tld
 absurdapple.com
-adfox.yandex.ru
 adfstat.yandex.ru
+adltserv.com
 ads.yahoo.com
 ads.youtube.com
-adsdk.yandex.ru
-an.yandex.ru
+affelseaeinera.org
+albertabelen.com
 anxiousapples.com
 api.sec.miui.com
 app.ssp.yahoo.com
 appboy-images.com
-apple.www.letv.com
 applesometimes.com
-applets.ebxcdn.com
-awaps.yandex.ru
+aqdhacjwiat.com
 awsync.yandex.ru
-bats.video.yahoo.com
+baywoodkbps.space
 beacon.search.yahoo.com
 beap-bc.yahoo.com
 blueduckredapple.com
-blushingbread.com
-bs.yandex.ru
-ccnnetwork.co
-collector2c.zhihuishu.com
-cookiex.ngd.yahoo.com
+boltepse.com
+bookmanzyzzyva.com
+boriod.com
+carlingquerent.com
+cau1aighae.com
+commiseratefacilenotably.com
+cragconcluded.com
+credibilityyowl.com
 crypta.js
 d1stxfv94hrhia.cloudfront
+dgemanowhowe.xyz
+diiodidasmear.com
 dmg-dd.oss-accelerate.aliyuncs.com
-expdirclk.com
-experiments.sparanoid.net
+dmhzqokylmkc.com
+dolatiaschan.com
+dopiesttrotter.com
+elevateamongstelitist.com
+escaatwite.com
+existsdesist.com
 februaryreductionapplet.com
 fpb1.apple886.com
-ganon.yahoo.com
-geo.yahoo.com
+gejulm1314.com
+grinnymohels.com
+guidon40hyporadius9.com
+hfudugo.com
+hoho.mobi
 iadsdk.apple.com
 ib.snssdk.com
-informer.yandex.ru
-jill.fc.yahoo.com
+inbbredraxing.com
+indignationmapprohibited.com
+irritateinformantmeddle.com
+jgpkcifimwldsy.com
+jjvnlfpywgbxgt.com
+jokebided.space
 jpaasne.e.shifen.com
+kerbayarugate.com
+kunidaotno.xyz
+lh54.top
+liaisondegreedaughters.com
+liutou20230203.live
 log.strm.yandex.ru
 marketingsolutions.yahoo.com
-mc.yandex.ru
 mediaappletree.com
 meitaolianmeng.ltd
+missingweighnapkin.com
 mm.n3w1d0ma1n
 mo.vlpyj.xy
-nol.yahoo.com
+ncvkzz.cn
+onanistbrawns.store
+oswegomiting.com
+otherwiseparticipate.com
+ouchruse.com
+outdilateinterrupt.com
+pallaliven.com
+panyarspan.com
+patenssabzi.com
+peculiaritiesimaginationembankment.com
+peeksdragoncontinually.com
+pnuhondppw.com
 pr.comet.yahoo.com
-primis-amp.tech
-pv.sohu.com
+priestsuede.com
+pronunciationawarenessunemployment.com
+q99i1qi6.de
+renewalsuspiciousrattle.com
 rrf.fat1domain1
+selungdunker.website
 shackapple.com
+sinproductors.org
+solidlyrotches.guru
+sotchoum.com
 stats.video.search.yahoo.com
+stized.com
 sub.powerapple.com
-sugar.zhihu.com
-supportmetrics.apple.com
-test.vast
+suddensjesu.com
+sxkjfroxta.com
+tat3ayogh6.com
+telanggyppery.com
 theapple.site
-visit.webhosting.yahoo.com
+thesauruspainfully.com
+thousandfalteralbeit.com
+tivdeesaloyhx.com
+tlrkcj17.de
+upsweephalms.com
+whirltoes.com
+wjuowrvca.com
+wokenoptionalcohabit.com
+womsauph.com
 wondefulapplend.com
+wutou20230201.live
 wzjs1.oss-accelerate.aliyuncs.com
+xdiwbc.com
+xiaohui668.club
+xiwwhyobp.com
 youtube.local
+10.10.34.35
+10.10.34.36
 103.21.91.144
 103.49.209.27
 104.149.15.130
@@ -585,6 +639,7 @@ gtssl-aia.geotrust.com
 guangyukeji.com
 guanjia.qq.com
 guowaidiaocha.com
+gvod.aiseejapp.atianqi.com
 h1.xysibu.cn
 h163e.com
 h5.7vyou.com
@@ -9163,6 +9218,7 @@ taozgpkjzpdtgr.com
 tapffdskgjr.com
 targetctracker.com
 tarteaucitron.ml
+tat.pandora.xiaomi.com
 tataget.ru
 tatami-solutions.com
 tauwhout.net
@@ -11423,8 +11479,6 @@ zzwajufm.com
 zzxlukodff.com
 zzxosget.com
 519332da.rtc.youme.im
-gvod.aiseejapp.atianqi.com
-tat.pandora.xiaomi.com
 39d83s.com
 aboard.apilocate.amap.com
 access.open.uc.cn
@@ -11482,16 +11536,35 @@ wvvvvvvw.zhongchaoyinshua.com
 wx.yubangsmart.com
 xc.xiyqjea.cn
 xg.tjwmtrw.cn
+3p-geo.yahoo.com
+3p-udc.yahoo.com
 ad.kddi-fs.com
+adfox.yandex.ru
+adsdk.yandex.ru
+an.yandex.ru
+apple.www.letv.com
+applets.ebxcdn.com
+awaps.yandex.ru
+bats.video.yahoo.com
+bs.yandex.ru
 clear.wallapop.com
+collector2c.zhihuishu.com
+cookiex.ngd.yahoo.com
 e.legalstart.fr
+ganon.yahoo.com
 gct.americanexpress.com
+geo.yahoo.com
+informer.yandex.ru
+jill.fc.yahoo.com
 log-gateway.zoom.us
 log.kuwo.cn
 log.rabobank.nl
+mc.yandex.ru
 metrics.apple.com
 metrics.bankmonitor.hu
+nol.yahoo.com
 pt.legalstart.fr
+pv.sohu.com
 ras.yahoo.com
 rba-screen.healthsafe-id.com
 retcode.taobao.com
@@ -11500,12 +11573,17 @@ securemetrics.apple.com
 securemetrics.experience.apple
 securemvt.apple.com
 securemvt.apple.com.cn
+shiveringspot.com
 ssp.rambler.ru
 stats.sandberg.world
+sugar.zhihu.com
+supportmetrics.apple.com
 tao.barstoolsports.com
+test.vast
 tla.traderlink.com
 tm.swp.de
 txrx.bol.com
+visit.webhosting.yahoo.com
 .0-000.store
 .0.code.cotsta.ru
 .0001.best
@@ -11557,7 +11635,6 @@ txrx.bol.com
 .0427d7.se
 .0454yc.com
 .045zxnm.com
-.046642ba0d.com
 .046zxnm.com
 .0483bm4mlow8.xyz
 .048a7052f0.com
@@ -11594,6 +11671,7 @@ txrx.bol.com
 .07780778.com
 .0792gdst.com
 .07ab456fe8.com
+.07xm.fun
 .0816bvh.ru
 .0817tt.com
 .0819837.com
@@ -11671,6 +11749,7 @@ txrx.bol.com
 .0tracker.com
 .0u.fastdmn0.com
 .0u48ltm1ok.ru
+.0vkkf.cn
 .0x01n2ptpuz3.com
 .0x5.me
 .1-1ads.com
@@ -12675,6 +12754,7 @@ txrx.bol.com
 .4hfchest5kdnfnut.com
 .4htixb.cn
 .4i-app-mobile.com
+.4iksy.cn
 .4info.com
 .4jffu.cn
 .4jfggh.com
@@ -13276,7 +13356,6 @@ txrx.bol.com
 .77tianxu.cn
 .77union.cn
 .77vip.wang
-.77zhuan.com
 .788111.com
 .78bk5iji.de
 .78cc571ae97.net
@@ -13556,7 +13635,6 @@ txrx.bol.com
 .90370.com
 .90cd7fb7ca.com
 .911.x24hr.com
-.9136.com
 .913h6.cn
 .9158918.com
 .91756.cn
@@ -13872,7 +13950,6 @@ txrx.bol.com
 .a353364ec1bd19a.com
 .a3b8be1b5b.com
 .a3h.de
-.a3p4.com
 .a3vy69.cn
 .a3yqjsrczwwp.com
 .a4.overclockers.ua
@@ -18017,6 +18094,7 @@ txrx.bol.com
 .aliyun6969.cn
 .aliyune.xyz
 .aliyuni.xyz
+.aliyunsupercdn.com
 .aljamaa.fr
 .alkemics.com
 .alklinker.com
@@ -18182,6 +18260,7 @@ txrx.bol.com
 .altynamoan.com
 .aluationiam.com
 .alulimprowess.com
+.alunitemoste.com
 .alvenda.com
 .alwayspainfully.com
 .alwaysxup.com
@@ -19230,6 +19309,7 @@ txrx.bol.com
 .asnetworks.de
 .asnoibator.com
 .aso1.net
+.asoeasy.cn
 .asoulrox.com
 .asoursuls.com
 .asowp.com
@@ -19384,7 +19464,6 @@ txrx.bol.com
 .atevaccination.com
 .atexceede.com
 .atf-tagmanager.de
-.atfqpjvl.com
 .atgallader.com
 .atgenesecton.com
 .athena-ads.wikia.com
@@ -20106,6 +20185,7 @@ txrx.bol.com
 .backromy.com
 .backseatabundantpickpocket.com
 .backseatincredible.com
+.backseatrunners.com
 .backstageconfide.com
 .backstagedeputy.com
 .backstagefreakish.com
@@ -21060,7 +21140,6 @@ txrx.bol.com
 .besocial.online
 .besstahete.info
 .best-cargo.ru
-.best-cdn.pl
 .best-lucky-cat.xyz
 .best-offer-for-you.com
 .best-protection4.me
@@ -21300,7 +21379,6 @@ txrx.bol.com
 .bhujiwwb.top
 .bhxgvvk.cn
 .bhyuu.com
-.bhzejltg.info
 .bi-pipeline-collector.stylight.net
 .bi.manhuaren.com
 .bi.vhost.vn
@@ -21530,6 +21608,7 @@ txrx.bol.com
 .bittads.com
 .bitterlythread.com
 .bittyrail.com
+.bitu.fun
 .bitx.tv
 .biucosmetics.fr
 .biv.gazeta.pl
@@ -21574,6 +21653,7 @@ txrx.bol.com
 .bjlmok.com
 .bjmantis.net
 .bjmcmj.cn
+.bjorksta.me
 .bjornecoydog.com
 .bjpwv.com
 .bjqwllp.cn
@@ -21589,7 +21669,6 @@ txrx.bol.com
 .bjzshy.cn
 .bjzysd.net
 .bk.goodline.info
-.bkbhejseov.com
 .bkembwdgujzp.com
 .bkisss.com
 .bkl72.com
@@ -21794,6 +21873,7 @@ txrx.bol.com
 .bluewhaleweb.com
 .bluffyporn.com
 .bluishgeologicallimitless.com
+.blushingbread.com
 .blushmossy.com
 .blvdstatus.com
 .blw4-1.com
@@ -22085,7 +22165,6 @@ txrx.bol.com
 .boustahe.com
 .boutique-papillon.fr
 .bouygiestelecom.fr
-.bovqryrbtmhmrf.com
 .bowed-common.pro
 .bowedsequence.com
 .bowei666.xyz
@@ -23061,6 +23140,7 @@ txrx.bol.com
 .cao444cao.com
 .caoliuzx.tk
 .caomeixz10.xyz
+.caomeixz7.xyz
 .caopanshou.top
 .caoys1998.xyz
 .cap-cap-pop.com
@@ -23295,6 +23375,7 @@ txrx.bol.com
 .cccpmo.com
 .ccemqe.cn
 .ccgateway.net
+.ccgjmzv.cn
 .ccies.cn
 .ccieurope.fr
 .ccio6rope.cyou
@@ -23310,6 +23391,7 @@ txrx.bol.com
 .ccmeng.com
 .ccmiocw.com
 .ccn08sth.de
+.ccnnetwork.co
 .ccpmo.com
 .ccpufcj.cn
 .ccpvmjh.cn
@@ -23685,7 +23767,6 @@ txrx.bol.com
 .cgdiqvn.cn
 .cgdjy.top
 .cgeckmydirect.biz
-.cgfpwgmy.com
 .cggf.xyz
 .cgiale.com
 .cgirm.greatfallstribune.com
@@ -24320,6 +24401,7 @@ txrx.bol.com
 .clickaine.com
 .clickallow.net
 .clickalyzer.com
+.clickandbuy.review
 .clickandbuy.win
 .clickandjoinyourgirl.com
 .clickaslu.com
@@ -24638,7 +24720,6 @@ txrx.bol.com
 .cms100.xyz
 .cmsxodnj.xyz
 .cmuohlatpsp.com
-.cmvihhhelf.com
 .cmvrclicks000.com
 .cmweb.ilike.alibaba.com
 .cmyx.xyz
@@ -24806,7 +24887,6 @@ txrx.bol.com
 .coinad.media
 .coinad.org
 .coinads.io
-.coinadv.com
 .coinbaze.lol
 .coinenoisg.xyz
 .coiner.site
@@ -24825,7 +24905,6 @@ txrx.bol.com
 .coinio.cc
 .coinive.com
 .coinjive.com
-.coinlab.biz
 .coinmedia.co
 .coinminingonline.com
 .coinpirate.cf
@@ -24878,6 +24957,7 @@ txrx.bol.com
 .collect.rebelmouse.io
 .collect.rtl.lu
 .collect.serious.li
+.collectconsent.com
 .collectfasttracks.com
 .collecting.click
 .collection-day.com
@@ -25971,6 +26051,7 @@ txrx.bol.com
 .ctoabc.xyz
 .ctoatwoxxnk.com
 .ctobsnssdk.com
+.ctoyb.cyou
 .ctoziphius.com
 .ctr-media.info
 .ctr-media.net
@@ -27790,7 +27871,6 @@ txrx.bol.com
 .dgmaxinteractive.com
 .dgozp.com
 .dgpcdn.org
-.dgqlwqedzowhqb.com
 .dgrrvpl.cn
 .dgtauto.com
 .dgulden.ru
@@ -28042,7 +28122,6 @@ txrx.bol.com
 .dirhin.com
 .dirkino-traff.ru
 .dirtmountainbike.fr
-.dirty-tinder.com
 .dirtyasmr.com
 .dirtyrhino.com
 .diryleme.pro
@@ -28195,7 +28274,6 @@ txrx.bol.com
 .djbanners.deadjournal.com
 .djchfgacdfaaadfdc.ru
 .djers.com
-.djfhwosjck.bi
 .djfhwosjck.bid
 .djfiln.com
 .djfwuer.xyz
@@ -28759,7 +28837,6 @@ txrx.bol.com
 .drulilqe8wg66.cloudfront.net
 .drumcash.com
 .drumimaring.xyz
-.drupalupdates.tk
 .drupta.com
 .drwzn.com
 .drydrum.com
@@ -29113,6 +29190,7 @@ txrx.bol.com
 .e0d4e3650c.com
 .e0n.cn
 .e1f95201b19594.site
+.e1jzk.cn
 .e21b1642db801b2a.com
 .e255347009.com
 .e27fe9334e.com
@@ -29252,6 +29330,7 @@ txrx.bol.com
 .easyliao.com
 .easylist-to.xyz
 .easymarketcrs.it
+.easypics.info
 .easypills.co
 .easyresearch.se
 .easysol.net
@@ -29704,6 +29783,7 @@ txrx.bol.com
 .elizaguarapo.com
 .elkbahtax.com
 .elkconsistbirch.com
+.ellaysad.live
 .ellcurvth.com
 .elle.alljournal.ru
 .ellentmatchwi.com
@@ -29771,7 +29851,6 @@ txrx.bol.com
 .emediate.eu
 .emediate.se
 .emediatrack.com
-.emenshowapp.xyz
 .ementwre.buzz
 .emeralddead.com
 .emeraldtiger.com
@@ -30045,7 +30124,6 @@ txrx.bol.com
 .eputfeable.co
 .eqacypykxa.com
 .eqbyc.com
-.eqeknhxxwmeys.top
 .eqfgc.com
 .eqj2a3bx.cn
 .eqmx04n5s0.ru
@@ -30261,6 +30339,7 @@ txrx.bol.com
 .ethresholdouc.xyz
 .ethtrader.de
 .etingplansfo.buzz
+.etkht.cn
 .etl.tindersparks.com
 .etmxjglxsthvm.xyz
 .etnmabtucqnsn.com
@@ -30578,12 +30657,14 @@ txrx.bol.com
 .exovueplatform.com
 .expandremittance.com
 .exparint.fr
+.expdirclk.com
 .expeldetachment.com
 .expelsleeken.website
 .expendituredefeated.com
 .expepp.de
 .experianmarketingservices.digital
 .experimentalconcerningsuck.com
+.experiments.sparanoid.net
 .expert.ruab.ru
 .expertland.net
 .expertnifg.com
@@ -31039,7 +31120,6 @@ txrx.bol.com
 .fbsecurity.co
 .fbthirdpartypixel.com
 .fbuser.ovp.vn
-.fbwaikol.com
 .fbwvly.cn
 .fc.webmasterpro.de
 .fc2ppv.buzz
@@ -31308,6 +31388,7 @@ txrx.bol.com
 .figato.fr
 .figgleimpregn.com
 .figgynudest.com
+.fighla.com
 .fightingcowardlycoffin.com
 .fightingleatherconspicuous.com
 .figpii.com
@@ -32051,7 +32132,7 @@ txrx.bol.com
 .freshmate.com.cn
 .freshnews.su
 .freshplum.com
-.freshrefreshnerer186rb.info
+.freshrefreshnerer186.info
 .freshrelevance.com
 .freshzz00.duckdns.org
 .frestacero.com
@@ -32114,7 +32195,6 @@ txrx.bol.com
 .frtya.com
 .frtyd.com
 .frtyh.com
-.frtyi.com
 .frtyj.com
 .frtyk.com
 .frtyo.com
@@ -32355,7 +32435,6 @@ txrx.bol.com
 .fzygcof.cn
 .g--o.info
 .g-cash.biz
-.g-content.bid
 .g-day.design
 .g-statistic.com
 .g.delivery.net
@@ -32593,7 +32672,6 @@ txrx.bol.com
 .gazia.fr
 .gbaseby.ru
 .gbcvbnv5.com
-.gbeqibqtxknt.com
 .gbfgvzfcjfs.com
 .gbfwqsakvaysygn.xyz
 .gbgijiiiabgebdjiadh.ru
@@ -32685,7 +32763,6 @@ txrx.bol.com
 .gdmgsecure.com
 .gdn.bigfishgames.com
 .gdpr.es
-.gdrisajx.com
 .gdsoq.com
 .gdtimg.com
 .gdtqq.cn
@@ -33540,6 +33617,7 @@ txrx.bol.com
 .goodgoodluck.cn
 .goodkee.cn
 .goodkind.ru
+.goodkino.biz
 .goodlooknews.net
 .goodmeasure.io
 .goodreader.fr
@@ -34097,7 +34175,6 @@ txrx.bol.com
 .gx101.com
 .gx2f.top
 .gx4g.top
-.gxbrowser.net
 .gxdianhua.com
 .gxdmxx.com
 .gxdrytainoxadwy.xyz
@@ -34815,7 +34892,6 @@ txrx.bol.com
 .hhfun.cn
 .hhgxbxk.cn
 .hhiacjmkwe.xyz
-.hhipghbkdwql.com
 .hhit.xyz
 .hhizcfv.cn
 .hhklc.com
@@ -35129,6 +35205,7 @@ txrx.bol.com
 .hocoas.com
 .hocolats-voisin.fr
 .hoddysaith.com
+.hodlers.party
 .hodor-collect.arabam.com
 .hoegutvie.com
 .hognaivee.com
@@ -35217,6 +35294,7 @@ txrx.bol.com
 .hoothaglow.com
 .hoowooze.net
 .hopedwishfulpercent.com
+.hopefullyactively.com
 .hopefullyapricot.com
 .hopefulserversnecklace.com
 .hopfeed.com
@@ -35532,6 +35610,7 @@ txrx.bol.com
 .hueadsxml.com
 .huffingtopost.fr
 .huffson-delivery.com
+.hufkzv.xyz
 .hugedomains.com
 .hugeincome.cf
 .hugelyantony.com
@@ -35558,6 +35637,7 @@ txrx.bol.com
 .huishij.net
 .huishunhang.net
 .huisifa.com
+.huissl.com
 .huitiankuaiji.com
 .huitoukao.com
 .huiun.com
@@ -36083,6 +36163,7 @@ txrx.bol.com
 .ihfxao.com
 .ihhqwaurke.com
 .ihjtrncfoha.com
+.ihmbpow.cn
 .ihngyjp.cn
 .ihoabsop.xyz
 .iholot.ru
@@ -36393,7 +36474,6 @@ txrx.bol.com
 .imssl01.adtech.us
 .imstks.com
 .imtmp.net
-.imtokenwallet.biz
 .imtowoz.ru
 .imtwjwoasak.com
 .imudukely.store
@@ -36468,7 +36548,6 @@ txrx.bol.com
 .indextools.com
 .indfor.com
 .indianbannerexchange.com
-.indianfriendfinder.com
 .indianlinkexchange.com
 .indicative.com
 .indicatordevotedriver.com
@@ -36679,6 +36758,7 @@ txrx.bol.com
 .insankafa.cc
 .inscan.cn
 .inscriptionafford.com
+.insdrbot.com
 .insectdatabasesignificantly.com
 .inseee.fr
 .inseparablelunchwasted.com
@@ -37046,7 +37126,6 @@ txrx.bol.com
 .iqtewa.ru
 .iquue.com
 .iqyewu.cn
-.iqyqqfduxeql.com
 .iqzone.com
 .iqzt3ec.cn
 .ir.mihanstore.net
@@ -37067,7 +37146,6 @@ txrx.bol.com
 .irenicaserrano.com
 .ireraisin.com
 .irethertoldimn.xyz
-.irgayuwmhj.com
 .iridiumsergeiprogenitor.info
 .iringtgandm.one
 .irinto.com
@@ -37490,7 +37568,6 @@ txrx.bol.com
 .jb9vtov.xyz
 .jbazhaheia.top
 .jbcbio.cn
-.jbgswlkxgbfieb.com
 .jbkmskjeaevkne.xyz
 .jbkwrkmdug.com
 .jbnmuye.cn
@@ -37545,7 +37622,6 @@ txrx.bol.com
 .jefctihngyjpogd.xyz
 .jeffstrategic.com
 .jehobsee.com
-.jehpefquik.com
 .jeisl.com
 .jekson44.ru
 .jelfmtsr5i.ru
@@ -37646,7 +37722,6 @@ txrx.bol.com
 .jiajiann.cn
 .jialiren.net
 .jializyw.com
-.jianglishi.cn
 .jiangsg.me
 .jiangsm.club
 .jianjianjiao.top
@@ -37704,7 +37779,6 @@ txrx.bol.com
 .jillsclickcorner.com
 .jilong.work
 .jilorunmy.buzz
-.jilqwiooctiuf.com
 .jimopuwa.com
 .jin0cbonpi.ru
 .jincanfohn.website
@@ -37741,7 +37815,6 @@ txrx.bol.com
 .jinzpeng.cn
 .jioads.akamaized.net
 .jioer.pro
-.jiordgxkpglzm.com
 .jipezy.cn
 .jiphihizi.com
 .jipinyouwu.com
@@ -38141,6 +38214,7 @@ txrx.bol.com
 .jugerfowells.com
 .juggledcample.website
 .jugglu.com
+.jugixgjqx.xyz
 .jugnaglo.com
 .jugust.com
 .juhn.cn
@@ -38291,7 +38365,6 @@ txrx.bol.com
 .jygotubvpyguak.com
 .jyhfuqoh.info
 .jyigozm.cn
-.jyiofgswbja.com
 .jyjgtpurrwg.xyz
 .jykgslnrgpbymc.xyz
 .jykhjwb.cn
@@ -39210,7 +39283,6 @@ txrx.bol.com
 .kvhttt.top
 .kvidcq.com
 .kvision.tv
-.kvjkkwyomjrx.com
 .kvkaa.com
 .kvkddd.top
 .kvkggg.top
@@ -41105,6 +41177,7 @@ txrx.bol.com
 .lucretius-ada.com
 .ludesthat.club
 .ludicroussignify.com
+.ludocsbho.com
 .ludwigreseise.tech
 .lueway.fr
 .lufbogazixz.com
@@ -41557,7 +41630,6 @@ txrx.bol.com
 .makipsuki.pro
 .makoglassen.website
 .makotruong.live
-.makqfcvs.com
 .makroads.net
 .makroo.com
 .makucoca.com
@@ -42564,7 +42636,6 @@ txrx.bol.com
 .mhhn.fr
 .mhhsa.xyz
 .mhi9da.cn
-.mhiobjnirs.gq
 .mhivqcu.cn
 .mhjcpn.com
 .mhlnk.com
@@ -44275,7 +44346,6 @@ txrx.bol.com
 .neegreez.com
 .neekstore.com
 .neeladou.net
-.neemu.com
 .neezausu.net
 .neffor.com
 .nefies.com
@@ -44960,7 +45030,6 @@ txrx.bol.com
 .nordicresearch.com
 .nordishopping.com
 .norentisol.com
-.norespar.ru
 .noretia.com
 .norlsbly.cyou
 .norm0care.com
@@ -45036,7 +45105,6 @@ txrx.bol.com
 .novadv.com
 .novafinanza.com
 .novaleafgroup.cn
-.novaminers.tk
 .novanet.vn
 .novaon.asia
 .novaon.vn
@@ -45559,6 +45627,7 @@ txrx.bol.com
 .obsessiondiscourteous.com
 .obsessivepetsbean.com
 .obsore.com
+.obsors.com
 .obspkoirhnvq.xyz
 .obssiyjiachvh.xyz
 .obstructionsaint.com
@@ -45741,6 +45810,7 @@ txrx.bol.com
 .oghdnp.cn
 .oghub.io
 .ogicatius.com
+.ogkfuw.xyz
 .oglasi.posjetnica.com
 .ogle-0740lb.com
 .ogleskys.live
@@ -46117,7 +46187,6 @@ txrx.bol.com
 .onmarshtompor.com
 .onmypc.net
 .onpluslean.com
-.onquercaniceberg.com
 .onsafelink.com
 .onscroll.com
 .onsequentlys.xyz
@@ -46678,6 +46747,7 @@ txrx.bol.com
 .owenexposure.com
 .owewary.com
 .owhoogryinfo.com
+.owihyg.xyz
 .owkkutiuxxvfb.com
 .owkuwquf.com
 .owlcongratulate.com
@@ -47380,6 +47450,7 @@ txrx.bol.com
 .pegasuson.com
 .peggedperfins.com
 .pegloang.com
+.pehlvl.xyz
 .pei-ads.thesmokingjacket.com
 .peigbv.cn
 .peircing-street.fr
@@ -47564,6 +47635,7 @@ txrx.bol.com
 .pfxlive.com
 .pgames.club
 .pgapi.ksmobile.com
+.pgccaoy.cn
 .pgeejqisao.com
 .pghub.io
 .pghwwjd.com
@@ -48258,6 +48330,7 @@ txrx.bol.com
 .poetryintendedverdict.com
 .poetsofthefall.fr
 .poewage.top
+.poflix.com
 .pogothere.xyz
 .pohs2oom.com
 .poined.com
@@ -48794,7 +48867,6 @@ txrx.bol.com
 .prfuxl.xyz
 .prhzxq.com
 .pri12mel.com
-.pricefbcf.gq
 .prickjuvenileturnstile.com
 .priefy.com
 .prield.com
@@ -48813,6 +48885,7 @@ txrx.bol.com
 .primevalrespectful.com
 .primevalstork.com
 .primevalsymphonymuttering.com
+.primis-amp.tech
 .primusbelgium.com
 .princesses.asia
 .principles.wang
@@ -49158,7 +49231,6 @@ txrx.bol.com
 .proximic.com
 .proximityads.flipcorp.com
 .proxistore.com
-.proxy4life.org
 .proxyas.com
 .proxyfl.info
 .proxyindia.net
@@ -49170,7 +49242,6 @@ txrx.bol.com
 .prre.ru
 .prscripts.com
 .prsitecheck.com
-.prsrjdr.ru
 .prssifu.cn
 .prt-or-067.com
 .prtawe.com
@@ -49708,6 +49779,7 @@ txrx.bol.com
 .pwbckuco.com
 .pwdplz.com
 .pweaatek.com
+.pweocgzutri.com
 .pwhukl.com
 .pwigekcyr.com
 .pwjwgrtznpl.com
@@ -49779,7 +49851,6 @@ txrx.bol.com
 .pziacchirov.com
 .pziad.com
 .pznqjhh.life
-.pzoifaum.info
 .pzz.events
 .q-counter.com
 .q-stats.nl
@@ -49840,6 +49911,7 @@ txrx.bol.com
 .qbkybab.cn
 .qbkzvophvva.com
 .qbop.com
+.qbxucdgggl.com
 .qbyyvg3.com
 .qc-static.coccoc.com
 .qc.5.p2l.info
@@ -49933,6 +50005,7 @@ txrx.bol.com
 .qhdhtd.com
 .qhdjhw.com
 .qhdzljxsb.cn
+.qheoy.cn
 .qhhyls.com
 .qhiqgrf.cn
 .qhlmb.com
@@ -49984,7 +50057,6 @@ txrx.bol.com
 .qinghua.cc
 .qinghyx.com
 .qingjiedi.com
-.qingniao.me
 .qingsedhhh.xyz
 .qingshu.live
 .qingsj.cn
@@ -50049,7 +50121,6 @@ txrx.bol.com
 .qlsynmly.fun
 .qlzjwgb.cn
 .qlzn6i1l.com
-.qlzwfzfatjth.ru
 .qm92.com
 .qmbnkdh.cn
 .qmdllqv.cn
@@ -50067,7 +50138,6 @@ txrx.bol.com
 .qndytvy.cn
 .qnieo.fun
 .qnipkk.xyz
-.qnmhotpnwhdrwu.com
 .qnmvqdl.cn
 .qnnmyjnnaoohdv.xyz
 .qnsr.com
@@ -50103,7 +50173,6 @@ txrx.bol.com
 .qozveo.com
 .qpeadbmaql.com
 .qplwfdfgv.xyz
-.qpmsybxqvlje.ru
 .qpmue.xyz
 .qprskl.com
 .qptnew.com
@@ -50193,7 +50262,6 @@ txrx.bol.com
 .quackexclusfdfjd.com
 .quadhu.com
 .quadran.eu
-.quadrinhoseroticos.net
 .quae0.top
 .quahl.com
 .quaidesbulles.fr
@@ -50532,6 +50600,7 @@ txrx.bol.com
 .raptapee.com
 .raptp.fr
 .rarath.com
+.rardi.cyou
 .rareghoa.net
 .rareinsane.com
 .rareru.ru
@@ -50594,7 +50663,6 @@ txrx.bol.com
 .rbck.st3pst3p.com
 .rbgfxxt.cn
 .rbioclv.cn
-.rbkshort.info
 .rbnt.org
 .rbrxg.com
 .rbthindic.xyz
@@ -50618,7 +50686,6 @@ txrx.bol.com
 .rcpuierp.cn
 .rcsadv.it
 .rcswbr.cn
-.rctfgrazkha.ru
 .rcurn.com
 .rcvlink.com
 .rcvlinks.com
@@ -50702,7 +50769,6 @@ txrx.bol.com
 .realmedia.advance.net
 .realmpallduns.com
 .realmsham.com
-.realnetwrk.com
 .realplayz.com
 .realpopbid.com
 .realpush.digital
@@ -50953,12 +51019,9 @@ txrx.bol.com
 .refractionius.com
 .refrainskiereatable.com
 .refraintupaiid.com
-.refreshnerer27.info
-.refreshnerer27rb.info
 .refrigeratorgranddifficult.com
 .reftagger.com
 .refugedcuber.com
-.refunevent.com
 .refurt.com
 .refuserates.com
 .refutationexcessiveglamour.com
@@ -51149,7 +51212,6 @@ txrx.bol.com
 .remox.com
 .renaissancewednesday.com
 .renaissanto.com
-.rencohep.com
 .rencontreavenue.com
 .renderscreech.com
 .rendfy.com
@@ -51269,8 +51331,6 @@ txrx.bol.com
 .reselling-corp.com
 .resemblanceilluminatedcigarettes.com
 .reservationszone.com
-.reservedoffers.cl
-.reservedoffers.club
 .reservedwantrealistic.com
 .reservehearingmissing.com
 .resetdigital.co
@@ -51343,7 +51403,6 @@ txrx.bol.com
 .resurnommions.xyz
 .reswimmouldy.uno
 .reswsentativ.xyz
-.retadint.com
 .retaea.com
 .retag.xyz
 .retagapp.com
@@ -51611,7 +51670,6 @@ txrx.bol.com
 .rimstipulatedeputy.com
 .rinc.ink
 .rindingreb.ru
-.rineventrec.com
 .ringairs.xyz
 .ringedtusher.com
 .ringexpressbeach.com
@@ -51622,8 +51680,6 @@ txrx.bol.com
 .rinsesofadual.com
 .rinsouxy.com
 .rintaref.ru
-.rintindown.com
-.rintinwa.com
 .rinwasmahis.ru
 .riolenproce.xyz
 .riotousgrit.com
@@ -51958,7 +52014,6 @@ txrx.bol.com
 .rowensalmner.com
 .rowenspopped.website
 .rowheengoupe.com
-.rowherthat.ru
 .rowlnk.com
 .rowoardog.com
 .roxby.org
@@ -51966,7 +52021,6 @@ txrx.bol.com
 .roxr.net
 .roxyaffiliates.com
 .royal-cash.com
-.royalads.net
 .royalcactus.com
 .royalcount.de
 .royapp.com
@@ -52255,7 +52309,6 @@ txrx.bol.com
 .rutube.com
 .rutvind.com
 .ruuwkftrtegqj.com
-.ruvuryua.ru
 .ruwei.me
 .ruwertur.com
 .ruyqiolnz.cyou
@@ -52514,7 +52567,6 @@ txrx.bol.com
 .sakulyavoluspa.tech
 .sakura.goguardian.com
 .sakuraquant.com
-.salamaleyum.com
 .salamantex.com
 .salangane.asia
 .salebestever.su
@@ -52589,7 +52641,6 @@ txrx.bol.com
 .sanlida.asia
 .sanme2.taisantech.com
 .sanmenxia.info
-.sanmiyangguang.com
 .sannsyn.com
 .sannupsendysis.uno
 .sanqian.press
@@ -52704,7 +52755,6 @@ txrx.bol.com
 .sbeforeuka.xyz
 .sbehgm.xyz
 .sbfsdvc.com
-.sbhmn-miner.com
 .sbird.xyz
 .sblftg.com
 .sbroiughttohi.xyz
@@ -52986,7 +53036,6 @@ txrx.bol.com
 .searchwe.com
 .searchx.eu
 .seasonale.1.p2l.info
-.seasonaloffers.club
 .seatac15.com
 .seatsrehearseinitial.com
 .seayipsex.com
@@ -53397,7 +53446,6 @@ txrx.bol.com
 .setpadchat.com
 .setqfx.cn
 .setqre.cn
-.setravieso.com
 .setrise.nl
 .setsdowntown.com
 .setsspreadenable.com
@@ -53425,10 +53473,8 @@ txrx.bol.com
 .sexdatecash.com
 .sexdatingsite.pro
 .sexengine.sx
-.sexflirtbook.com
 .sexgoesmobile.com
 .sexiba.com
-.sexintheuk.com
 .sexinyourcity.com
 .sexiststurdygather.com
 .sexlist.com
@@ -53495,6 +53541,7 @@ txrx.bol.com
 .sgsdqs.xyz
 .sgsincentlyse.xyz
 .sgswuesocfr.com
+.sgtm.inet.se
 .sgtm.sefamerve.com
 .sgtm.simoahava.com
 .sgxkm.com
@@ -54103,7 +54150,6 @@ txrx.bol.com
 .skelaxin.3.p2l.info
 .skelaxin.4.p2l.info
 .skelity.com
-.skencituer.com
 .skenqaamefeoncfegrytbuvksebpefer.com
 .sketbhang.guru
 .sketchinferiorunits.com
@@ -54581,7 +54627,6 @@ txrx.bol.com
 .socialproof.it
 .socialreach.com
 .socialrest.com
-.socialsex.biz
 .socialsexnetwork.net
 .socialspark.com
 .socialtools.fm
@@ -54833,6 +54878,7 @@ txrx.bol.com
 .spankmasters.com
 .spannercopyright.com
 .spanuletubings.com
+.spaped.com
 .spapua.com
 .sparechange.io
 .sparedmallet.com
@@ -54846,7 +54892,6 @@ txrx.bol.com
 .sparksne.com
 .sparkstudios.com
 .sparkyinchun.com
-.sparnove.com
 .spatesbloke.com
 .spathefesting.com
 .spatterjointposition.com
@@ -55021,6 +55066,7 @@ txrx.bol.com
 .spots.ru
 .spotscenered.info
 .spottt.com
+.spotunworthycoercive.com
 .spotx.tv
 .spotxcdn.com
 .spotxchange.com
@@ -55051,7 +55097,6 @@ txrx.bol.com
 .spt.performgroup.com
 .sptag.com
 .sptag1.com
-.sptlkiyjsglayc.ru
 .spublicidad.net
 .spuezain.com
 .spuggysorbol.website
@@ -55212,6 +55257,7 @@ txrx.bol.com
 .st1.bhol.co.il
 .st1net.com
 .sta.tracedock.com
+.stabam.com
 .stabbr.com
 .stabilecordy.com
 .stabilityvatinventory.com
@@ -55330,7 +55376,6 @@ txrx.bol.com
 .stat.xiaomi.com
 .stat.yellowtracker.com
 .stat.zenon.net
-.stat0808.info
 .stat1.z-stat.com
 .stat2.corp.56.com
 .stat24.com
@@ -56195,7 +56240,6 @@ txrx.bol.com
 .svi.online.sberbank.ru
 .sviter2s1olenyami1.com
 .svitnews.com
-.svivqrhrh.ru
 .svk-native.ru
 .svk100hp.ru
 .svkmxwssih.com
@@ -56345,7 +56389,6 @@ txrx.bol.com
 .synchronizedoll.com
 .syncingprocess.com
 .syncommisty.com
-.synconnector.com
 .syncwowsails.com
 .syndicate.payloadz.com
 .syndicated.mondominishows.com
@@ -57113,7 +57156,6 @@ txrx.bol.com
 .terbaru.cyou
 .tercept.com
 .terciogouge.com
-.terethat.ru
 .terhousoopeuk.work
 .terialnevitiesini.com
 .termadodad.com
@@ -58153,7 +58195,6 @@ txrx.bol.com
 .touchrom.com
 .touchxd.com
 .touchycart.com
-.toufangke.com
 .toufangzhe.cn
 .touglesy.net
 .toujing7.top
@@ -59922,7 +59963,6 @@ txrx.bol.com
 .uofmnbkm.com
 .uogrvci.cn
 .uole.ad.uol.com.br
-.uomsogicgi.com
 .uongsona.uno
 .uongsono.uno
 .uorlsblg.cyou
@@ -60114,10 +60154,6 @@ txrx.bol.com
 .usbkngf.cn
 .usbvhzg.cn
 .uscdn.top
-.usdtbang.com
-.usdtbbc.com
-.usdtcan.com
-.usdteng.com
 .useads.com
 .usedunderstood.com
 .usefomo.com
@@ -60528,6 +60564,7 @@ txrx.bol.com
 .vcdc.com
 .vcdnads.ru.com
 .vcentury01.com
+.vcfs6ip5h6.bi
 .vciayrf.cn
 .vciddepi.cyou
 .vcinwqw.cn
@@ -60712,7 +60749,6 @@ txrx.bol.com
 .vh5g.top
 .vhajaja.pro
 .vhildeiygwnwoo.com
-.vhjwlmlhd.com
 .vhlret.cn
 .vhmengine.com
 .vhmjevcgc.xyz
@@ -60861,6 +60897,7 @@ txrx.bol.com
 .vidout.net
 .vidplah.com
 .vidroll.ru
+.vidscity.info
 .vidseed.ru
 .vidsfun.info
 .vidsofdream.today
@@ -61093,7 +61130,6 @@ txrx.bol.com
 .vividly.site
 .vivistats.com
 .vivocha.com
-.vixmwnivtbqk.com
 .vixoafte.xyz
 .viyouhui.com
 .viyuzi.xyz
@@ -61266,6 +61302,7 @@ txrx.bol.com
 .votistics.com
 .vouceeco.com
 .vouhecem.net
+.voumxy.ru
 .vounaipu.net
 .vouninked.com
 .vovikshelomov.ru
@@ -61304,6 +61341,7 @@ txrx.bol.com
 .vptbn.com
 .vptjabo.cn
 .vpvsy.com
+.vpzccwpyilvoyg.ru
 .vq7736.com
 .vq91811.com
 .vqd51a5.biz.ua
@@ -61369,6 +61407,7 @@ txrx.bol.com
 .vtracker.net
 .vtracy.de
 .vtrnpueqtqke.xyz
+.vtsgaqnfvzcyu.ru
 .vtuctez.cn
 .vubihowhe.com
 .vucdmuvavnu.com
@@ -61454,6 +61493,7 @@ txrx.bol.com
 .vzrufh.com
 .vztfc.com
 .vztkmhf.cn
+.vzzexalcirfgrf.ru
 .w-chat.xf.cz
 .w-m-w.net
 .w.anmeihe.cn
@@ -61632,6 +61672,7 @@ txrx.bol.com
 .washedinmate.com
 .washpiggyabdomen.com
 .wasm.stream
+.wasm24.ru
 .wasoffspring.com
 .wasp-182b.com
 .waspaortascene.com
@@ -61697,6 +61738,7 @@ txrx.bol.com
 .wbdds.com
 .wbdsj.top
 .wbdx.fr
+.wbe4sp.top
 .wbidder.online
 .wbidder2.com
 .wbidr.com
@@ -61707,7 +61749,6 @@ txrx.bol.com
 .wbqosw.xyz
 .wbshu.com
 .wbtrk.net
-.wbuifglj.com
 .wbusiness.fr
 .wc4.net
 .wcdzw.com
@@ -62073,6 +62114,7 @@ txrx.bol.com
 .welt-der-links.de
 .weltercampe.com
 .wemfbox.ch
+.wemine.pro
 .wempooboa.com
 .wenda.io
 .wenhaikj.xyz
@@ -62210,6 +62252,7 @@ txrx.bol.com
 .whereaboutsconclusive.com
 .wherebyinstantly.com
 .wheredoyoucomefrom.ovh
+.whereismommy.gq
 .whereismybonus.com
 .whereres.com
 .wheretogo.bid
@@ -62306,6 +62349,7 @@ txrx.bol.com
 .whxva.com
 .whychymithy.com
 .whycywhivu.pro
+.whysoserius.cl
 .whysoserius.club
 .whzz.shop
 .wi.5.p2l.info
@@ -62379,6 +62423,7 @@ txrx.bol.com
 .wikiodeliv.com
 .wild0army.com
 .wildhookups.com
+.wildianing.ru
 .wildlifeeventlean.com
 .wildlyplacephotocopy.com
 .wildmatch.com
@@ -62490,6 +62535,7 @@ txrx.bol.com
 .witnessfeast.com
 .witnesssimilarindoors.com
 .wittf.com
+.witthethim.com
 .wittilyfrogleg.com
 .wittyoffers.club
 .wiuspckmn.bar
@@ -62555,6 +62601,7 @@ txrx.bol.com
 .wmcasher.ru
 .wmcdp.io
 .wmclickz.ru
+.wmemsnhgldd.ru
 .wmeng.feihuadns.com
 .wmgocya.cn
 .wmgtr.com
@@ -62575,6 +62622,7 @@ txrx.bol.com
 .wmruzfvtg.com
 .wmspw.com
 .wmtech.website
+.wmwmwwfmkvucbln.ru
 .wmzona.com
 .wmzrmmlgqe.com
 .wn68din.cn
@@ -62582,6 +62630,7 @@ txrx.bol.com
 .wndj.net
 .wndvcmyrqwnbdy.xyz
 .wnjjhksaue.com
+.wnmyerzbjhu.ru
 .wnp.com
 .wnpbdan.bid
 .wnpladv.com
@@ -62760,6 +62809,7 @@ txrx.bol.com
 .woydyd343.com
 .woymebsi.com
 .wp-club.net
+.wp-monero-miner.de
 .wp-stats.com
 .wp-tk.ru
 .wp20.ru
@@ -62791,9 +62841,10 @@ txrx.bol.com
 .wpush.org
 .wpushsdk.com
 .wpwocgjsqselo.xyz
-.wqjbldnnceroue.com
+.wqgkainysj.ru
 .wqkxlke.cn
 .wqlkp.com
+.wqmgqm.xyz
 .wqnggnse.fun
 .wqprtyg.cn
 .wqyloitd.cn
@@ -62821,6 +62872,7 @@ txrx.bol.com
 .wrjgeh.com
 .wrkl.xyz
 .wrmcfyzl.com
+.wronpeci.com
 .wrontonshatbona.pro
 .wrotos.com
 .wrotov.com
@@ -62892,6 +62944,7 @@ txrx.bol.com
 .wtvertnet.com
 .wtwbvglzzt.com
 .wty007.xyz
+.wty46.com
 .wtzgaa.com
 .wu3wl2g7.cn
 .wubsauth.net
@@ -63725,6 +63778,7 @@ txrx.bol.com
 .xgpub.com
 .xgraph.net
 .xgrwjbui.top
+.xgsgougog.com
 .xgsx.club
 .xguqeh.com
 .xgvfkge.cn
@@ -63883,6 +63937,7 @@ txrx.bol.com
 .xkesalwueyz.com
 .xketil.com
 .xkhall.xyz
+.xkjcpl.cn
 .xkjxgt.com
 .xkpbcd.com
 .xkpgguajr.com
@@ -63922,6 +63977,7 @@ txrx.bol.com
 .xmaswrite.com
 .xmbhj.com
 .xmemory.ru
+.xmg.cool
 .xmgdgo.cn
 .xmglass.cn
 .xmhaorizi.cn
@@ -64057,6 +64113,7 @@ txrx.bol.com
 .xsl280.com
 .xsl281.com
 .xsrs.com
+.xssrmimmnq.ru
 .xstatic.nk-net.pl
 .xstats.net
 .xsu.cc
@@ -64127,6 +64184,7 @@ txrx.bol.com
 .xuninrfwruoyqb.xyz
 .xunjiu.online
 .xunleiii.com
+.xunren.club
 .xunsilu.com
 .xunyangdianzi4.cn
 .xunyibaike.com
@@ -64348,11 +64406,13 @@ txrx.bol.com
 .yaxujiancai.cn
 .yazcash.com
 .ybamxhcghruwtc.com
+.ybandwhwscrcyf.com
 .ybayck.xyz
 .ybcrwm.com
 .ybej5ohp0x.ru
 .ybfljs.com
 .ybgo.xyz
+.ybjfsqcevow.ru
 .ybkjap.com
 .ybmnptiuj.xyz
 .ybn4.top
@@ -64475,7 +64535,6 @@ txrx.bol.com
 .yfmhik.xyz
 .yforaglasys.xyz
 .yfot.com.cn
-.yfqnmourhgim.com
 .yfue99.xyz
 .yfunkgk.cn
 .yfupfhqxmwvu.com
@@ -64864,7 +64923,6 @@ txrx.bol.com
 .yowledwarm.website
 .yoyadsdom.com
 .yoyue.net
-.yozyboqyiy.com
 .ypiads.com
 .yping.online
 .ypjmvdfxqw.com
@@ -65006,7 +65064,6 @@ txrx.bol.com
 .yunded.com
 .yundingez.top
 .yundingmap.com
-.yunfanlm.com
 .yungetongxun.xyz
 .yunit.org
 .yunluge.com
@@ -65029,11 +65086,13 @@ txrx.bol.com
 .yuquad.com
 .yuretb.site
 .yurivideo.com
+.yurti.cyou
 .yuske2.xyz
 .yusnw.cc
 .yuunion.com
 .yuvvddt.cn
 .yuyueyang.cn
+.yuyyio.com
 .yvajogj.cn
 .yves-rocker.fr
 .yvgqtrnncvearx.xyz
@@ -65121,6 +65180,7 @@ txrx.bol.com
 .z1.pclady.com.cn
 .z3dmbpl6309s.com
 .z444o.com
+.z4a.net
 .z590.fairfieldcitizenonline.com
 .z5x.net
 .z66ggsh.top
@@ -65206,6 +65266,7 @@ txrx.bol.com
 .zausosti.net
 .zauthuvy.com
 .zavunuve.pro
+.zavzlen.ru
 .zawqwpajq.club
 .zax01.com
 .zayac2volk11.com
@@ -65535,6 +65596,7 @@ txrx.bol.com
 .zjai.xyz
 .zjcxyh.cn
 .zjdb2b.wang
+.zjemch.ru
 .zjgfq.com
 .zjgjzzy.online
 .zjgzp4z9.club
@@ -65556,10 +65618,12 @@ txrx.bol.com
 .zkczbti.cn
 .zkczzltlhp6y.com
 .zkdkvnzsdxge.info
+.zkdmdf.xyz
 .zkgvsoo.cn
 .zkit.club
 .zkjh.info
 .zkqfrti.cn
+.zktqzyz.cn
 .zlacraft.com
 .zlbkj.com
 .zlfgedpuxrbpgm.com
@@ -65590,22 +65654,17 @@ txrx.bol.com
 .zmjagawa.com
 .zmkj.club
 .zmkma.com
-.zmxncb5.com
-.zmzfile.com
 .znaptag.com
 .znazlahbcu.com
 .znbdr.com
-.znctrack.net
 .zndaowjdnf.stream
 .znews.su
 .znfg6677.top
 .znktkt.cn
-.znlgplt.com
 .znllfp.xyz
 .znnhmzumod.com
 .znqip.net
 .znqip.org
-.znxblom.cn
 .znyiaxnaf.com
 .zo6g.top
 .zo7gihmry2.com
@@ -65626,12 +65685,8 @@ txrx.bol.com
 .zoloft.4.p2l.info
 .zolrauls.net
 .zomtanup.com
-.zona.pl
-.zona.plus
 .zona1.at.ua
 .zonealta.com
-.zongzuhulian.com
-.zonst.com
 .zontera.com
 .zonupiza.com
 .zoomflow.com
@@ -65640,13 +65695,11 @@ txrx.bol.com
 .zoopsame.com
 .zoopy.xyz
 .zoosnet.net
-.zoossoft.cn
 .zoossoft.net
 .zoozistu.net
 .zorango.com
 .zorkabiz.ru
 .zorlsbln.cyou
-.zorosrv.com
 .zortaudi.xyz
 .zosteraclumsy.website
 .zoteromedia.com
@@ -65662,10 +65715,8 @@ txrx.bol.com
 .zoxetijy.xyz
 .zozocash.biz
 .zozoter.ru
-.zp0573.cn
 .zp0737.com
 .zp1999.online
-.zp265.com
 .zpbhjatpnaovj.com
 .zpcode11.com
 .zpe7z.fun
@@ -65684,7 +65735,6 @@ txrx.bol.com
 .zpsh.shop
 .zptxjlh.cn
 .zpu.samsungelectronics.com
-.zq-hk.cn
 .zq.lansedir.com
 .zq2h2.com
 .zq9a.top
@@ -65706,9 +65756,7 @@ txrx.bol.com
 .zrysogsiq.uno
 .zsbwoqpcxj.com
 .zscwdu.com
-.zsdzcpw.mobi
 .zsgwed.cn
-.zsh-work.com
 .zsinek.com
 .zsjxwj.com
 .zsjyuet.cn
@@ -65717,7 +65765,6 @@ txrx.bol.com
 .zsmyzg.cn
 .zsnignsq.xyz
 .zsnoownmq.fun
-.zswhcsfww.mobi
 .zswl.so
 .zswph.com
 .zswzri7ju3.ru
@@ -78400,7 +78447,6 @@ txrx.bol.com
 .0i.simply-hentai.com
 .0torrent.com
 .0ulfpx.cn
-.0vkkf.cn
 .1.5646.cn
 .1.dpoopsrv.click
 .1.feeddsp.cn
@@ -78551,6 +78597,7 @@ txrx.bol.com
 .75bb9a4031.com
 .76doyxyw.cn
 .7705a9f168.com
+.77zhuan.com
 .79h8h8.ruslanbaginskiy.com
 .7bd3d001ff6.clicknplay.to
 .7eaf2aa8c1.com
@@ -78583,6 +78630,7 @@ txrx.bol.com
 .8t2.di91ba.cn
 .900bets10.com
 .91.51rmc.com
+.9136.com
 .91adv.com.cn
 .91jiedai.cn
 .9270.com.cn
@@ -78707,6 +78755,7 @@ txrx.bol.com
 .a1843.g.akamai.net
 .a23-trk.xyz
 .a2platinum.vip
+.a3p4.com
 .a40c129de3.com
 .a4dtrk.com
 .a50.g2.akamai.net
@@ -80259,7 +80308,6 @@ txrx.bol.com
 .altrooz.com
 .aluenunohrgbb.com
 .alulsdsubwro.com
-.alunitemoste.com
 .alxxhjfeldk.com
 .am-display.com
 .am2lma0ay.xrpmerchstore.com
@@ -80497,6 +80545,7 @@ txrx.bol.com
 .api.attentivemobile.com
 .api.beaconsinspace.com
 .api.bee7.com
+.api.bhzejltg.info
 .api.bitmango.com
 .api.bugfender.com
 .api.bugsee.com
@@ -80569,6 +80618,7 @@ txrx.bol.com
 .api.proba.ai
 .api.punchh.com
 .api.push.io
+.api.pzoifaum.info
 .api.radar.io
 .api.sailthru.com
 .api.savemedia.website
@@ -81016,7 +81066,6 @@ txrx.bol.com
 .aslmyoxscfr.com
 .asmlymer.com
 .asmsagvjbxejm.xyz
-.asoeasy.cn
 .asohfyllrsaeana.xyz
 .asp.ashesashes.org
 .asp.chop-shop.com.au
@@ -81355,7 +81404,6 @@ txrx.bol.com
 .backfirefever.com
 .backlogtop.xyz
 .backoffice.verintsystemsinc.com
-.backseatrunners.com
 .backwardchampionship.com
 .bactqsbbxr.xyz
 .bad.maienyanjing.cn
@@ -81637,6 +81685,7 @@ txrx.bol.com
 .beside-u.xyz
 .besoes.com
 .bessioutdrew.com
+.best-cdn.pl
 .best-stream.net
 .best-zb.com
 .best.gobiga.xyz
@@ -81766,7 +81815,6 @@ txrx.bol.com
 .bitcoiner.win
 .bitmakerz.biz
 .bitterstrawberry.com
-.bitu.fun
 .bitvnvjfakrik.xyz
 .biwhamto.com
 .biwo.ink
@@ -82862,7 +82910,6 @@ txrx.bol.com
 .click-rtb2-useast.e-volution.ai
 .click-rtb2-uswest.afkwa.com
 .click-to-win-prize.com
-.click-v4.expdirclk.com
 .click-v4.expdiremdia.com
 .click-v4.expmdiadi.com
 .click-v4.globlemath.com
@@ -83141,9 +83188,11 @@ txrx.bol.com
 .coin-hive-stratum-fcwcduvpjs.now.sh
 .coin-hive-stratum-yvvbqoavck.now.sh
 .coin-services.info
+.coinadv.com
 .coincharts.now.sh
 .coinhive-proxy-renxoslote.now.sh
 .coinhive-proxy.party
+.coinlab.biz
 .coins.now.sh
 .coinsicmp.com
 .coinstash1.now.sh
@@ -85863,6 +85912,7 @@ txrx.bol.com
 .diressources.carte-gr.total.fr
 .diritymirkish.com
 .dirty-messenger.com
+.dirty-tinder.com
 .disagreeablepeninsula.com
 .disapprovalhardwareenvy.com
 .disbandcrumena.com
@@ -86105,6 +86155,7 @@ txrx.bol.com
 .drugtest.questdiagnostics.com
 .druic.mytxt.cc
 .druis.mytxt.cc
+.drupalupdates.tk
 .drvczg.levtech.jp
 .dryum.ru
 .ds-m.addthisedge.com.edgekey.net
@@ -86459,7 +86510,6 @@ txrx.bol.com
 .easydownloadnow.com
 .easyinformer.com
 .easykits.org
-.easypics.info
 .eaterenhanced.com
 .eaus2watcab01.blob.core.windows.net
 .eaus2watcab02.blob.core.windows.net
@@ -86649,7 +86699,6 @@ txrx.bol.com
 .elk.okcrowd.co
 .elk.ritterhilgerstuetz.de
 .elk.techphotoguy.com
-.ellaysad.live
 .elmftqzs.com
 .eloqgx.eightoclock.com
 .eloqua.petchem-update.com
@@ -86978,7 +87027,6 @@ txrx.bol.com
 .ethmedialab.info
 .etivat.com
 .etjbedubcx.com
-.etkht.cn
 .etl-xlmc-ssl.xunlei.com
 .etoqel.nordicnest.de
 .etrack.ext.arubainstanton.com
@@ -87178,6 +87226,7 @@ txrx.bol.com
 .fbmedia-bls.com
 .fbmjc.39yst.com
 .fbtrack.mensuas.com
+.fbwaikol.com
 .fc.itmedia.co.jp
 .fc3tn.baidu.com
 .fc5tn.baidu.com
@@ -87269,7 +87318,6 @@ txrx.bol.com
 .fidcwpfarvtlvc.com
 .fidgetsnovena.com
 .figddlderciy.com
-.fighla.com
 .fighsfg.cn
 .filamentapp-assets.s3.amazonaws.com
 .filamentapp.s3.amazonaws.com
@@ -87618,10 +87666,12 @@ txrx.bol.com
 .frontpage.controlapplication-legacying.net.zooplus.de
 .frtyb.com
 .frtye.com
+.frtyi.com
 .frucmensitophardia.tk
 .fructushumble.com
 .fruggedraids.com
 .fruine.com
+.fruitice.realnetwrk.com
 .fsoft4down.com
 .fssuqbylk.com
 .fsswokpc.com
@@ -87686,6 +87736,7 @@ txrx.bol.com
 .fze8.carrefour-banque.fr
 .fzlbvs.schuhe24.de
 .fznshe.sarahpacini.com
+.g-content.bid
 .g.fotoable.com
 .g.guanxiwen.cn
 .g.haofan005.com
@@ -88145,7 +88196,6 @@ txrx.bol.com
 .gondangwicopy.com
 .gong-eb.qubit.com
 .gooderamour.com
-.goodkino.biz
 .goodshare.ru
 .goodsky.shop
 .goodvibesmatterforus.com
@@ -88289,6 +88339,7 @@ txrx.bol.com
 .gwmrb.cn
 .gwrstksnxo.xyz
 .gwrtheyrn-rot.com
+.gxbrowser.net
 .gxdthwdtcfo.xyz
 .gyccdnydir.com
 .gyjffdsp.com
@@ -88553,7 +88604,6 @@ txrx.bol.com
 .hobbes.blueoxtech.com
 .hobbi.xyz
 .hockledscissel.com
-.hodlers.party
 .hodling.faith
 .hoergigas.com
 .hofofici.com
@@ -88576,7 +88626,6 @@ txrx.bol.com
 .hondasamulla.com
 .hook.integromat.com
 .hooligapps.com
-.hopefullyactively.com
 .hopefullyadults.com
 .horaceencampment.com
 .horiticaldist.fun
@@ -89182,6 +89231,7 @@ txrx.bol.com
 .indefinitelypeevishrussian.com
 .indexesport.com
 .indiads.com
+.indianfriendfinder.com
 .induis.com
 .inenau.com
 .inenno.com
@@ -89434,6 +89484,7 @@ txrx.bol.com
 .ir0.mobify.com
 .iranismepode.com
 .irbtiaybbjrule.com
+.irgayuwmhj.com
 .iris.tv
 .irksomeshamefarrier.com
 .irr.ru
@@ -89600,6 +89651,7 @@ txrx.bol.com
 .jhwwtm.idmarket.com
 .jiahewine.cn
 .jian18.mumu01.com
+.jianglishi.cn
 .jiaoben.webkaka.com
 .jiazhenghangye.pw
 .jiejg.ifeng.com
@@ -89756,7 +89808,6 @@ txrx.bol.com
 .jubish.com
 .juejdkio.com
 .jugeau.com
-.jugixgjqx.xyz
 .jumhityvblhwwlt.com
 .jump2.top
 .jundtapl.com
@@ -90058,6 +90109,7 @@ txrx.bol.com
 .kuzyvyni.pro
 .kveaa.com
 .kvilhypwtelaos.xyz
+.kvjkkwyomjrx.com
 .kvlzsbxn.com
 .kvrcvu.budujmase.pl
 .kwalnc.vans.co.kr
@@ -90630,7 +90682,6 @@ txrx.bol.com
 .luatgqssoyh.com
 .lucifer.redtrack.pro
 .lucylent.com
-.ludocsbho.com
 .lueticajuga.com
 .luhtb.top
 .luiisstldqvg.com
@@ -92001,6 +92052,7 @@ txrx.bol.com
 .mh1.zhengdongwuye.cn
 .mhaupz.carpisa.it
 .mhhugd.wilsonsleather.com
+.mhiobjnirs.gq
 .mhmmna.atrapamuebles.com
 .mhuijbkkwcz.com
 .mhwbhn.tohapi.fr
@@ -92818,6 +92870,7 @@ txrx.bol.com
 .notimoti.com
 .nour.stockhoursllc.com
 .nova-collector-1192479543.us-east-1.elb.amazonaws.com
+.novaminers.tk
 .now.peek-cloppenburg.de
 .now.rthometoday.com
 .now.tana.fi
@@ -92937,7 +92990,6 @@ txrx.bol.com
 .obqetks.cn
 .obscureforum.com
 .obsessionthree.com
-.obsors.com
 .obwmidktcmuc.com
 .obyeok.hair
 .obyjpiok.com
@@ -93276,7 +93328,6 @@ txrx.bol.com
 .ovxlcwqkrxpv.com
 .owb101.goo.ne.jp
 .owcdcamldcu.com
-.owihyg.xyz
 .owl.gregwolanski.com
 .owl.heidipay.com
 .owneduntwind.com
@@ -94055,7 +94106,6 @@ txrx.bol.com
 .podbooth.martela.se
 .poddishflabra.com
 .poenem.com
-.poflix.com
 .pofooz.cn
 .pofqlldhpkvvh.com
 .pogrji.handle-marche.com
@@ -94460,7 +94510,6 @@ txrx.bol.com
 .pvstat.baomihua.com
 .pvyvglaf.com
 .pwbstpjjkovpy.com
-.pweocgzutri.com
 .pwidonnctmdc.com
 .pwmyqojtdwhqqr.com
 .px.redgifs.com
@@ -94497,7 +94546,6 @@ txrx.bol.com
 .qbqvef.toy.ru
 .qbreport.html5.qq.com
 .qbxaebqkg.com
-.qbxucdgggl.com
 .qcdnxq.com
 .qcdwodgn.com
 .qcmxuy.hardloop.de
@@ -94534,6 +94582,7 @@ txrx.bol.com
 .qichenx.com
 .qiewqceaqrihwie.com
 .qimrcqxkqwbtn.com
+.qingniao.me
 .qingrektmkt.com
 .qinhemuye.com
 .qinmon.xyz
@@ -94615,6 +94664,7 @@ txrx.bol.com
 .qtywnoh.cn
 .qtzvsufbkpxin.com
 .qu.oilsulva.com
+.quadrinhoseroticos.net
 .quail.efix.uk
 .quakedamnalight.com
 .qualificationrestriction.com
@@ -94711,6 +94761,7 @@ txrx.bol.com
 .rayingburiat.com
 .rayli.com.cn
 .razuphyju.com
+.rbkshort.info
 .rboundgypster.com
 .rbqxiormchflobr.xyz
 .rbxtrk.com
@@ -94865,6 +94916,7 @@ txrx.bol.com
 .remote-data.asnapieu.com
 .remote.carte-gr.total.fr
 .remove-ads.xyz
+.rencohep.com
 .renderer.qmerce.com
 .renting.aldautomotive.es
 .rentingketch.com
@@ -94894,10 +94946,12 @@ txrx.bol.com
 .request.verisign.com
 .requial.com
 .requotehocker.com
+.res.adx.opera.com
 .res.marianne.net
 .res.ymxiaopin.com
 .resavethyme.com
 .reseelysin.com
+.reservedoffers.club
 .resistancefrustrating.com
 .resolvedweighpasswords.com
 .resource.aacargo.com
@@ -94979,6 +95033,8 @@ txrx.bol.com
 .rimpirbtmxg.com
 .ringingmandyas.com
 .rinryesop.one
+.rintindown.com
+.rintinwa.com
 .ripelm.com
 .risolk.com
 .risopsuphu.com
@@ -95047,7 +95103,9 @@ txrx.bol.com
 .routgveriprt.com
 .rovamucm.com
 .roverinvolv.bid
+.rowherthat.ru
 .rowilo.com
+.royalads.net
 .rozsnxbpbf.com
 .rp.tsuresoranges.com
 .rpc-tapjoy-com-lb-1378811527.us-east-1.elb.amazonaws.com
@@ -95261,6 +95319,7 @@ txrx.bol.com
 .rushhips.com
 .ruthcraveastray.com
 .rutius.com
+.ruvuryua.ru
 .ruxsuqwfwx.com
 .rvbsugxblak.com
 .rvcrfvighmoaksn.com
@@ -95435,6 +95494,7 @@ txrx.bol.com
 .sajagosta.pro
 .sajari.com
 .sakcguwb.com
+.salamaleyum.com
 .salamander.laboucheriebio.com
 .salamander.showandtelldata.com
 .salbandtripy.com
@@ -95468,6 +95528,7 @@ txrx.bol.com
 .sanl.footlocker.mo
 .sanl.sidestepstore.de
 .sanl.sidestepstore.nl
+.sanmiyangguang.com
 .santafe.lol
 .santosseorita.com
 .sanxueshufa.cn
@@ -95498,6 +95559,7 @@ txrx.bol.com
 .sayhi.360.cn
 .sayingcoxy.com
 .sb.elfshippref.com
+.sbhmn-miner.com
 .sbmrwzkwshit.com
 .sbprpoowdyfbx.com
 .sbrbhzlp.com
@@ -95662,6 +95724,7 @@ txrx.bol.com
 .search.infinity-info.com
 .search.twitter.com
 .search4y.com
+.seasonaloffers.club
 .seaweedludicrous.com
 .seb.sharpmarketing.eu
 .sec.video.qq.com
@@ -95807,6 +95870,7 @@ txrx.bol.com
 .services.vrp.com
 .serving-sys.com.edgekey.net
 .setoutcazique.com
+.setravieso.com
 .setrowid.com
 .setting.adzcore.com
 .settings-win-ppe.data.microsoft.com
@@ -95816,6 +95880,8 @@ txrx.bol.com
 .seventhfolder.com
 .sewingfibber.com
 .sexemulator.com
+.sexflirtbook.com
+.sexintheuk.com
 .sexy.fling.com
 .seyfwl.bryk.pl
 .seyfwl.deccoria.pl
@@ -95837,7 +95903,6 @@ txrx.bol.com
 .sgifuqjieq.xyz
 .sgsnssdk.com.edgekey.net
 .sgtld.cn
-.sgtm.inet.se
 .sgwqoz.toddsnyder.com
 .sgyebd.com
 .sgzhg.pornlovo.co
@@ -95995,6 +96060,7 @@ txrx.bol.com
 .sjyzsm.danjohn.com
 .skads.gxsky.com
 .skellbillard.com
+.skencituer.com
 .sketeprofs.com
 .skewlyundazed.com
 .skilfulbags.com
@@ -97031,6 +97097,7 @@ txrx.bol.com
 .social.dw.de
 .socialize.eu1.gigya.com
 .socialsend.ru
+.socialsex.biz
 .socialsex.com
 .sofire.baidu.com
 .soft.jiegeng.com
@@ -97155,8 +97222,8 @@ txrx.bol.com
 .spamvariationswithin.com
 .spankerpuked.com
 .spapan.com
-.spaped.com
 .sparkle.locationlabs.com
+.sparnove.com
 .sparrow.collabwithpedal.com
 .sparrow.uitvaartzorg-vanraemdonck.be
 .sparrow.workingincontent.com
@@ -97229,11 +97296,11 @@ txrx.bol.com
 .sports-tab.com
 .sportygalago.com
 .spot.spsfactory.com
-.spotunworthycoercive.com
 .spotxcdn.com.edgekey.net
 .spreadable.com.cn
 .sprint-srs-appopen.asapp.com
 .sprint.asapp.com
+.sptlkiyjsglayc.ru
 .spy.bocvu.lol
 .spyafoepeyddb.xyz
 .spynet2.microsoft.com
@@ -97588,7 +97655,6 @@ txrx.bol.com
 .st.websites.txk.me
 .st.yagla.ru
 .staaqwe.com
-.stabam.com
 .stable.icecyber.org
 .stack-exchange-dynamic-ads.herokuapp.com
 .stadsvc.com
@@ -97695,6 +97761,7 @@ txrx.bol.com
 .stat.yunfan.com
 .stat.zbii.com
 .stat.zdnet.com.cn
+.stat0808.info
 .statement.blauenseville.buzz
 .states.newegg.ca
 .states.newegg.com
@@ -98235,6 +98302,7 @@ txrx.bol.com
 .svelterterton.com
 .svip.shwxtw.com
 .svip.xsmy2.cn
+.svivqrhrh.ru
 .svkxlfhrdrn.com
 .svrvcnynsv.xyz
 .svsjfwwgatdxqr.com
@@ -98324,6 +98392,7 @@ txrx.bol.com
 .synalio.com
 .sync.mobojoy.baidu.com
 .syncedvision.com
+.synconnector.com
 .syndication.elink12.com
 .syndication.elink66.com
 .syndication.elink77.com
@@ -98802,6 +98871,7 @@ txrx.bol.com
 .terats.com
 .tercept-serve-beacon-543813600.ap-south-1.elb.amazonaws.com
 .teredo.ipv6.microsoft.com
+.terethat.ru
 .terthoreper.ru
 .terytelevel.xyz
 .test-ad.mens-lucia.com
@@ -99086,6 +99156,7 @@ txrx.bol.com
 .totorogyring.com
 .totxxucxtfq.com
 .touch.thenavisway.com
+.toufangke.com
 .toujing5.top
 .tour.mrskin.com
 .toutiao-frontier.snssdk.com
@@ -100343,6 +100414,7 @@ txrx.bol.com
 .uohtnfdrnhqyc.com
 .uojjpevjusfoidc.com
 .uolwbz.heine.de
+.uomsogicgi.com
 .uopmcdnpad.com
 .uoqjxo.roxy.jp
 .uoqwgo.decjuba.com.au
@@ -100535,7 +100607,6 @@ txrx.bol.com
 .vcdhtxhfbhx.com
 .vcdn.biz
 .vcdnc.com
-.vcfs6ip5h6.bi
 .vchat.essaygator.net
 .vconf.f.360.cn
 .vcoufi.as-1.co.jp
@@ -100627,7 +100698,6 @@ txrx.bol.com
 .vidkidsgedrite.com
 .vidoplay.com
 .vidpay.com
-.vidscity.info
 .vidtech.cbsinteractive.com
 .vidvas1.com
 .vidvas2.com
@@ -100760,7 +100830,6 @@ txrx.bol.com
 .vortex.data.glbdns2.microsoft.com
 .vote.sibnet.ru
 .vothaiwi.com
-.voumxy.ru
 .vouruwou.com
 .vowrnpkfw.com
 .voyagecondom.com
@@ -100787,7 +100856,6 @@ txrx.bol.com
 .vpuuzj.schnullireich.de
 .vpvbojamkoxo.com
 .vpyqdlrweoc.com
-.vpzccwpyilvoyg.ru
 .vq40567.com
 .vqbidy.benetton.com
 .vqieahnhdle.com
@@ -100836,7 +100904,6 @@ txrx.bol.com
 .vtfdfrxfxktq.xyz
 .vtmhxs.bulkapothecary.com
 .vtodss.livenation.com
-.vtsgaqnfvzcyu.ru
 .vttics.world.co.jp
 .vueqfdry.com
 .vuiaki.mom
@@ -100868,7 +100935,6 @@ txrx.bol.com
 .vyplzy.job-medley.com
 .vyrgapgedwbqpa.com
 .vz.7vid.net
-.vzzexalcirfgrf.ru
 .w-profiling.cibc.com
 .w.inews.qq.com
 .w.uohz.cn
@@ -100935,7 +101001,6 @@ txrx.bol.com
 .was.vodafone.nl
 .wasbetenhep.ru
 .wasc.homedepot.com
-.wasm24.ru
 .waspsbiga.com
 .wass.spglobal.com
 .wastedposterapostrophe.com
@@ -101074,7 +101139,6 @@ txrx.bol.com
 .wellishunderly.com
 .welokygry.com
 .welovepg.polymail.io
-.wemine.pro
 .wemsacker.com
 .wengesog.net
 .wentwidespread.com
@@ -101102,7 +101166,6 @@ txrx.bol.com
 .whauchel.net
 .whcmij.altitude-sports.com
 .whereatmeans.com
-.whereismommy.gq
 .wheresmoropus.com
 .wherevertogo.com
 .whetic.com
@@ -101129,7 +101192,6 @@ txrx.bol.com
 .whsdmiaxdujo.com
 .whsrdsweq.com
 .whuqpbeddwiqp.com
-.whysoserius.cl
 .whysuffice.com
 .whyzipsiwho.com
 .whz9ruftvh4pxz8fc7vh.theochu.com
@@ -101204,7 +101266,6 @@ txrx.bol.com
 .wildcard-ads-new-1653986885.us-east-1.elb.amazonaws.com
 .wildcat.fspy.io
 .wildfowl.minter.io
-.wildianing.ru
 .wimpmustsyllabus.com
 .win-rtb-eu.musiciansaudience.com
 .win-rtb-miami.musiciansaudience.com
@@ -101244,7 +101305,6 @@ txrx.bol.com
 .wirial.com
 .wish.securedtouch.com
 .wit.qq.com
-.witthethim.com
 .wixjcl.maginon.de
 .wixstatic.com
 .wjhstylq.com
@@ -101270,19 +101330,16 @@ txrx.bol.com
 .wlp3.aegon.es
 .wlptux.habitaclia.com
 .wlwtcr.toptoon.com
-.wmemsnhgldd.ru
 .wmkqxqwpyodrl.com
 .wmlleyjtj.com
 .wmnejndvberrd.com
 .wmvlivmdnvy.com
-.wmwmwwfmkvucbln.ru
 .wmxuba.aldoshoes.com
 .wnbeiskivkkmpy.xyz
 .wnbssfaitzgt.com
 .wnccxcgvkuoitmy.com
 .wnhlsqfxnn.com
 .wnllmofqxsziio.com
-.wnmyerzbjhu.ru
 .wnyywf.frankonia.de
 .woakcayapo.com
 .wocysuwo.com
@@ -101319,7 +101376,6 @@ txrx.bol.com
 .wosork.com
 .wotmyjkdit.com
 .wowhofoo.com
-.wp-monero-miner.de
 .wpan.sc2yun.com
 .wpcdn1.herokuapp.com
 .wpfukdvchi.com
@@ -101335,20 +101391,20 @@ txrx.bol.com
 .wqennyectdnvx.com
 .wqfflc.fupa.net
 .wqfflc.plantopedia.de
-.wqgkainysj.ru
 .wqgorl.viaggigiovani.it
 .wreathsmartblack.com
 .wren.femi.io
 .wretchedsuperiority.com
 .wrivedipnoi.com
-.wronpeci.com
 .wrotal.com
 .wroton.com
 .wrotr.com
 .wrxqupnusmdewe.com
 .wryweirdy.com
+.ws.bhzejltg.info
 .ws.etuch.cn
 .ws.push-notifs.com
+.ws.pzoifaum.info
 .wsd.guonongllc.com
 .wsec.multiscreensite.com
 .wsgddl.deporvillage.it
@@ -101362,7 +101418,6 @@ txrx.bol.com
 .wteicogfeyhjk.com
 .wtgnmr.golfdigest.co.jp
 .wthnbwzk.com
-.wty46.com
 .wucvvh.surpricenow.com
 .wueihlouuw.com
 .wugebk.zoomzoomtour.com
@@ -101604,7 +101659,6 @@ txrx.bol.com
 .xgdhxgznp.com
 .xgefvi.iteshop.com
 .xggayd.thecolouredhouse.nl
-.xgsgougog.com
 .xgspzv.troyestore.com
 .xgwqjjgwhgke.com
 .xgzyfpmfkxa.com
@@ -101674,7 +101728,6 @@ txrx.bol.com
 .xmatch.com
 .xmaterial.tu.qq.com
 .xmdborrjxmmt.com
-.xmg.cool
 .xmilqyyg.com
 .xml-eu-v4.chameleostudios.com
 .xml-eu-v4.coupontic.com
@@ -101853,7 +101906,6 @@ txrx.bol.com
 .xshijie.xyz
 .xslmpq.ohou.se
 .xsolid.baidu.com
-.xssrmimmnq.ru
 .xsusmtvgvxp.xyz
 .xsvvmrhjztro.com
 .xsvwvyewrlqdgw.com
@@ -101954,8 +102006,6 @@ txrx.bol.com
 .yasiwngdihnfe.com
 .yawnspuker.com
 .yawxae.footpatrol.com
-.ybandwhwscrcyf.com
-.ybjfsqcevow.ru
 .ybnggmnaxu.com
 .ybnrltcea.com
 .yboourdyi.com
@@ -102088,6 +102138,7 @@ txrx.bol.com
 .yourhealth.wellness.providence.org
 .yourporsche.nabooda-auto.com
 .youzok.lol
+.yozyboqyiy.com
 .yp.shuhuangge.org
 .yphmgzkojubwxn.com
 .ypopaycisqh.com
@@ -102130,12 +102181,11 @@ txrx.bol.com
 .yume.com
 .yummycuisine.club
 .yumu.pro
+.yunfanlm.com
 .yunuo.online
 .yuqnibpyn.com
 .yurobl.rw-co.com
-.yurti.cyou
 .yuubuslvsqhopkk.com
-.yuyyio.com
 .yvcjyi.beymen.com
 .yvfnb.cn
 .yvgesf.copmed.fr
@@ -102190,7 +102240,6 @@ txrx.bol.com
 .z2.cnywst.com
 .z2.xysmai.com
 .z2.zhishidu.com
-.z4a.net
 .z6uc8er1mzx8n2qd.pro
 .z888.izhufu.net
 .zaamuvqteety.com
@@ -102205,7 +102254,6 @@ txrx.bol.com
 .zaqedc.top
 .zarkph.lacotto.jp
 .zatodr.trenbe.com
-.zavzlen.ru
 .zbest.in
 .zbrfde.ozmall.co.jp
 .zbwkapoit.com
@@ -102281,15 +102329,12 @@ txrx.bol.com
 .ziyeaiying.com
 .zizikagle.com
 .zizpjdnvkks.com
-.zjemch.ru
 .zjj.xhdccz.com
 .zjoqtb.jacadi.fr
 .zjwwhcdop.com
 .zjzs.club
 .zkake.exashare.com
-.zkdmdf.xyz
 .zkqqsjdgscrwm.com
-.zktqzyz.cn
 .zlajnpfqgsleo.com
 .zlbdvgjlxm.com
 .zlgkpr.lottehotel.com
@@ -102299,16 +102344,26 @@ txrx.bol.com
 .zllqoxidate.com
 .zly.dlhxgg.com
 .zmmrpv.peterglenn.com
+.zmxncb5.com
+.zmzfile.com
+.znctrack.net
 .zndsssp.dangbei.net
+.znlgplt.com
 .znmtka.kikocosmetics.com
+.znxblom.cn
 .zoariasurgeon.com
 .zociwodi.com
 .zofkhbbjw.com
+.zona.pl
+.zona.plus
 .zone.stripcam.tv
 .zone1.bestbdsm24.com
 .zone1.bestporn24.com
+.zongzuhulian.com
 .zonmxej.cn
+.zonst.com
 .zoomhead.xyz
+.zoossoft.cn
 .zopxzq.premiata.it
 .zorbanmat.com
 .zorprhbnwbezie.com
@@ -102316,8 +102371,11 @@ txrx.bol.com
 .zouwie.mlhif.com
 .zovihutum.com
 .zozwyc.moscot.com
+.zp0573.cn
+.zp265.com
 .zptncsir.com
 .zpxalcnnafyy.com
+.zq-hk.cn
 .zqduqpirbn.com
 .zqslg.cn
 .zqwdyz.probikeshop.fr
@@ -102325,6 +102383,9 @@ txrx.bol.com
 .zrktaa.cityfurniture.com
 .zrljkhcwhxhh.com
 .zrukecdcv.com
+.zsdzcpw.mobi
+.zsh-work.com
+.zswhcsfww.mobi
 .zswxrfwnapgg.com
 .zszgjiejuw.mobi
 .ztd.dds.microsoft.com

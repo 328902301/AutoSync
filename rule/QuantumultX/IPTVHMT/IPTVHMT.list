@@ -1,0 +1,54 @@
+# NAME: IPTVHMT
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2023-02-14 02:17:00
+# HOST: 31
+# IP-CIDR: 16
+# TOTAL: 47
+HOST,anren.live,IPTVHMT
+HOST,antvlive.ab5c6921.cdnviet.com,IPTVHMT
+HOST,cclive.aniu.tv,IPTVHMT
+HOST,cclive2.aniu.tv,IPTVHMT
+HOST,cctvtxyh5c.liveplay.myqcloud.com,IPTVHMT
+HOST,cdn.hklive.tv,IPTVHMT
+HOST,d2e1asnsl7br7b.cloudfront.net,IPTVHMT
+HOST,dbiptv.sn.chinamobile.com,IPTVHMT
+HOST,epg.112114.xyz,IPTVHMT
+HOST,epg.pm,IPTVHMT
+HOST,flv3948069e.live.126.net,IPTVHMT
+HOST,gxfrg007.8800.org,IPTVHMT
+HOST,js1.amtb.cn,IPTVHMT
+HOST,live-350k.streamingfast.net,IPTVHMT
+HOST,live.cgtn.com,IPTVHMT
+HOST,live.ciguang.tv,IPTVHMT
+HOST,live.mastvnet.com,IPTVHMT
+HOST,mobile.ccdntech.com,IPTVHMT
+HOST,myun-hw-s3.myun.tv,IPTVHMT
+HOST,nettvpro.live,IPTVHMT
+HOST,p2.weizan.cn,IPTVHMT
+HOST,play-live.ifeng.com,IPTVHMT
+HOST,playtv-live.ifeng.com,IPTVHMT
+HOST,pulltv1.wanfudaluye.com,IPTVHMT
+HOST,pulltv2.wanfudaluye.com,IPTVHMT
+HOST,rthktv32-live.akamaized.net,IPTVHMT
+HOST,seb.sason.top,IPTVHMT
+HOST,streamipcf.akamaized.net,IPTVHMT
+HOST,v3.mediacast.hk,IPTVHMT
+HOST,www.dalitv.com.tw,IPTVHMT
+HOST,zhibo.hkstv.tv,IPTVHMT
+IP-CIDR,103.233.191.132/31,IPTVHMT
+IP-CIDR,103.233.191.134/32,IPTVHMT
+IP-CIDR,111.59.189.40/32,IPTVHMT
+IP-CIDR,120.84.96.55/32,IPTVHMT
+IP-CIDR,123.51.230.124/32,IPTVHMT
+IP-CIDR,124.238.99.44/32,IPTVHMT
+IP-CIDR,202.175.127.77/32,IPTVHMT
+IP-CIDR,202.69.67.66/32,IPTVHMT
+IP-CIDR,210.210.155.37/32,IPTVHMT
+IP-CIDR,218.202.220.2/32,IPTVHMT
+IP-CIDR,23.237.10.66/32,IPTVHMT
+IP-CIDR,38.64.72.148/32,IPTVHMT
+IP-CIDR,50.7.168.234/32,IPTVHMT
+IP-CIDR,50.7.220.74/32,IPTVHMT
+IP-CIDR,58.99.33.16/32,IPTVHMT
+IP-CIDR,61.216.67.119/32,IPTVHMT

@@ -1,12 +1,29 @@
 #!name= Advertising
-#!desc= 最后更新时间 2023-02-13 02:14:25
+#!desc= 最后更新时间 2023-02-14 02:17:44
 #!openUrl= https://github.com/blackmatrix7/ios_rule_script
 #!author= blackmatrix7
 #!homepage= https://github.com/blackmatrix7/ios_rule_script
 #!icon= https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/source/avatar.jpg
-#!reject= 541
+#!domain= 14
+#!reject= 530
 #!mitm= 498
-#!total= 1039
+#!total= 1042
+
+[Rule]
+DOMAIN,access.mypikpak.com
+DOMAIN,apis.lifeweek.com.cn
+DOMAIN,b.appsimg.com
+DOMAIN,ccsp-egmas.sf-express.com
+DOMAIN,guanyu.longfor.com
+DOMAIN,homefront.qunar.com
+DOMAIN,m.yhdm.io
+DOMAIN,mapi.appvipshop.com
+DOMAIN,new-app-api.ylyk.com
+DOMAIN,open3.vistastory.com
+DOMAIN,support.you.163.com
+DOMAIN,tagit.hyhuo.com
+DOMAIN,top-widgets-api.xiaozujian.com
+DOMAIN,zone.guiderank-app.com
 
 
 [URL Rewrite]
@@ -348,7 +365,6 @@
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList - reject
 ^https?:\/\/m\.ibuscloud.com\/v2\/app\/getStartPage - reject-200
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
-^https?:\/\/m\.yhdm\.io\/bar\/yfgg.js - reject
 ^https?:\/\/m\d\.amap\.com\/ws\/message\/notice\/list\? - reject-200
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
@@ -531,25 +547,15 @@
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
 ^https?:\/\/zjh5api\.189smarthome\.com:\d+\/xygj-config-api\/queryData - reject
 ^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do - reject
-https?:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible - reject
-https?:\/\/apis\.lifeweek\.com\.cn\/api\/baseConfig\/getIosNewConfig - reject
-https?:\/\/b\.appsimg\.com\/upload\/momin\/ - reject
 https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* - reject
 https?:\/\/fbchina\.flipchina\.cn\/v2\/ad\/query\/* - reject
-https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start - reject
 https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
-https?:\/\/homefront\.qunar\.com\/front\/splash\/ad - reject
 https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad.*ios_home_modal - reject
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens - reject-200
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup - reject-200
 https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 https?:\/\/mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity - reject
-https?:\/\/new-app-api\.ylyk\.com\/v1\/user\/myinfo\/adviser - reject
 https?:\/\/open3\.vistastory\.com\/v3\/api.*get_popup - reject
-https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad - reject
-https?:\/\/support\.you\.163\.com\/appversync\/check.do - reject
-https?:\/\/tagit\.hyhuo\.com\/recover\/list - reject
-https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config - reject
 https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 - reject
 
 [MITM]

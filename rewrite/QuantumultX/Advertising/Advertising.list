@@ -1,0 +1,22 @@
+# NAME: Advertising
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2023-02-14 02:17:51
+# HOST: 14
+# REJECT: 557
+# MITM: 442
+# TOTAL: 1013
+HOST,access.mypikpak.com,Advertising
+HOST,apis.lifeweek.com.cn,Advertising
+HOST,b.appsimg.com,Advertising
+HOST,ccsp-egmas.sf-express.com,Advertising
+HOST,guanyu.longfor.com,Advertising
+HOST,homefront.qunar.com,Advertising
+HOST,m.yhdm.io,Advertising
+HOST,mapi.appvipshop.com,Advertising
+HOST,new-app-api.ylyk.com,Advertising
+HOST,open3.vistastory.com,Advertising
+HOST,support.you.163.com,Advertising
+HOST,tagit.hyhuo.com,Advertising
+HOST,top-widgets-api.xiaozujian.com,Advertising
+HOST,zone.guiderank-app.com,Advertising

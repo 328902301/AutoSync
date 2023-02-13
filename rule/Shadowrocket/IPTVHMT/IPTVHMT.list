@@ -1,0 +1,54 @@
+# NAME: IPTVHMT
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2023-02-14 02:17:00
+# DOMAIN: 31
+# IP-CIDR: 16
+# TOTAL: 47
+DOMAIN,anren.live
+DOMAIN,antvlive.ab5c6921.cdnviet.com
+DOMAIN,cclive.aniu.tv
+DOMAIN,cclive2.aniu.tv
+DOMAIN,cctvtxyh5c.liveplay.myqcloud.com
+DOMAIN,cdn.hklive.tv
+DOMAIN,d2e1asnsl7br7b.cloudfront.net
+DOMAIN,dbiptv.sn.chinamobile.com
+DOMAIN,epg.112114.xyz
+DOMAIN,epg.pm
+DOMAIN,flv3948069e.live.126.net
+DOMAIN,gxfrg007.8800.org
+DOMAIN,js1.amtb.cn
+DOMAIN,live-350k.streamingfast.net
+DOMAIN,live.cgtn.com
+DOMAIN,live.ciguang.tv
+DOMAIN,live.mastvnet.com
+DOMAIN,mobile.ccdntech.com
+DOMAIN,myun-hw-s3.myun.tv
+DOMAIN,nettvpro.live
+DOMAIN,p2.weizan.cn
+DOMAIN,play-live.ifeng.com
+DOMAIN,playtv-live.ifeng.com
+DOMAIN,pulltv1.wanfudaluye.com
+DOMAIN,pulltv2.wanfudaluye.com
+DOMAIN,rthktv32-live.akamaized.net
+DOMAIN,seb.sason.top
+DOMAIN,streamipcf.akamaized.net
+DOMAIN,v3.mediacast.hk
+DOMAIN,www.dalitv.com.tw
+DOMAIN,zhibo.hkstv.tv
+IP-CIDR,103.233.191.132/31,no-resolve
+IP-CIDR,103.233.191.134/32,no-resolve
+IP-CIDR,111.59.189.40/32,no-resolve
+IP-CIDR,120.84.96.55/32,no-resolve
+IP-CIDR,123.51.230.124/32,no-resolve
+IP-CIDR,124.238.99.44/32,no-resolve
+IP-CIDR,202.175.127.77/32,no-resolve
+IP-CIDR,202.69.67.66/32,no-resolve
+IP-CIDR,210.210.155.37/32,no-resolve
+IP-CIDR,218.202.220.2/32,no-resolve
+IP-CIDR,23.237.10.66/32,no-resolve
+IP-CIDR,38.64.72.148/32,no-resolve
+IP-CIDR,50.7.168.234/32,no-resolve
+IP-CIDR,50.7.220.74/32,no-resolve
+IP-CIDR,58.99.33.16/32,no-resolve
+IP-CIDR,61.216.67.119/32,no-resolve

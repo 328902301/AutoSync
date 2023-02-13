@@ -1,4 +1,4 @@
-// 2023-02-13 22:05
+// 2023-02-13 22:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -187,6 +187,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item.category === "group") {
+          // 遍历group,保留置顶微博
           for (let ii of item.items) {
             if (ii.data.itemid === "profile_top") {
               newItems.push(item);

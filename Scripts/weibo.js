@@ -191,7 +191,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "group") {
           // 17推广话题 42可能感兴趣的人
           // 置顶微博
-          if (item?.items.data.card_type === 211) {
+          if (item.items.data?.card_type === 211) {
             newItems.push(item);
           } else {
             continue;

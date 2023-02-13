@@ -1,4 +1,4 @@
-// 2023-02-13 20:55
+// 2023-02-13 22:05
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -349,6 +349,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             let cardType = group.card_type;
             if (cardType !== 118) {
               if (!isAd(group.mblog)) {
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
                 newGroup.push(group);
               }
             }

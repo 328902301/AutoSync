@@ -1,4 +1,4 @@
-// 2023-02-11 22:30
+// 2023-02-13 09:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -495,6 +495,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/v2/strategy/ad")) {
     // 开屏广告
+    obj.data = {};
     obj.end = "2040-01-01 23:59:59";
     obj.start = "2040-01-01 00:00:00";
   } else if (url.includes("/wbapplua/wbpullad.lua")) {

@@ -181,7 +181,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.items) {
         if (item.category === "card") {
-          if (item.data.right_filter) {
+          // 17话题 42可能感兴趣的人
+          if (item.data.card_type === 216) {
+            // 筛选按钮
+            newItems.push(item);
+          } else if (item.data.card_type === 211) {
+            // 置顶微博
             newItems.push(item);
           } else {
             continue;

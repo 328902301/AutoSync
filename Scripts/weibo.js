@@ -1,4 +1,4 @@
-// 2023-02-13 12:55
+// 2023-02-13 13:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -198,6 +198,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
+            // 商品橱窗
+            if (item.data?.common_struct) {
+              delete item.data.common_struct;
+            }
             newItems.push(item);
           } else {
             continue;
@@ -380,6 +384,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     // 首页关注tab信息流
     if (obj.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
+    }
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj?.common_struct;
     }
     if (obj.items) {
       let newItems = [];

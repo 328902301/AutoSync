@@ -350,6 +350,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             let cardType = group.card_type;
             if (cardType !== 118) {
               if (!isAd(group.mblog)) {
+                // 商品橱窗
                 if (group.mblog?.common_struct) {
                   delete group.mblog.common_struct;
                 }

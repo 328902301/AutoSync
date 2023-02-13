@@ -1,6 +1,6 @@
 ### 访问量
 
-![](http://profile-counter.glitch.me/FoKit_Scripts/count.svg)
+![](http://profile-counter.glitch.me/chxm1023_Rewrite/count.svg)
 
 ### App解锁合集
 

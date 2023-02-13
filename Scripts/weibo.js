@@ -188,9 +188,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "group") {
           for (let ii of item.items) {
             // 热门话题,可能感兴趣的人
-            if (ii.data?.card_type === 17 || ii.data?.card_type === 42) {
-              continue;
-            } else {
+            if (ii.data?.card_type !== 17 || ii.data?.card_type !== 42) {
               newItems.push(ii);
             }
           }

@@ -1,4 +1,4 @@
-// 2023-02-13 19:00
+// 2023-02-13 19:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -181,7 +181,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.items) {
         if (item.category === "card") {
-          // 10推荐关注
           // 筛选按钮
           if (item.data.card_type === 216) {
             newItems.push(item);
@@ -189,9 +188,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             continue;
           }
         } else if (item.category === "group") {
-          // 17推广话题 42可能感兴趣的人
           // 置顶微博
-          if (item.items.data?.card_type === 211) {
+          if (
+            item.items.data?.card_type === 211 ||
+            item.items.data.category === "feed"
+          ) {
             newItems.push(item);
           } else {
             continue;

@@ -1,4 +1,4 @@
-// 2023-02-13 18:10
+// 2023-02-13 20:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -181,10 +181,15 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.items) {
         if (item.category === "card") {
-          if (item.data.right_filter) {
+          // 筛选按钮
+          if (item.data.card_type === 216) {
             newItems.push(item);
-          } else {
-            continue;
+          }
+        } else if (item.category === "group") {
+          for (let ii of item.items) {
+            if (ii.data.itemid === "profile_top") {
+              newItems.push(item);
+            }
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
@@ -193,8 +198,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.common_struct;
             }
             newItems.push(item);
-          } else {
-            continue;
           }
         }
       }

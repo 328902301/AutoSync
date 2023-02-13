@@ -111,14 +111,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 头像挂件、勋章、评论气泡
-          if (item?.user) {
-            removeAvatar(item.user);
-          }
-          if (item?.comment_bubble) {
-            delete item.comment_bubble;
-          }
-          if (!isAd(item.data)) {
+          if (!isAd(item)) {
+            // 头像挂件、勋章、评论气泡
+            if (item?.user) {
+              removeAvatar(item.user);
+            }
+            if (item?.comment_bubble) {
+              delete item.comment_bubble;
+            }
             newItems.push(item);
           }
         }

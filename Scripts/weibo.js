@@ -202,9 +202,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
-            if (item.data?.common_struct?.actionlog?.source?.includes("ad")) {
-              delete item.data.common_struct;
-            }
             newItems.push(item);
           } else {
             continue;

@@ -14,11 +14,12 @@ dns:
   default-nameserver:
      - 119.29.29.29
   nameserver:
-# 腾讯DoH2
+# 腾讯阿里DoH2
      - https://1.12.12.12/dns-query
+     - https://223.5.5.5/dns-query
   fallback:
-# 阿里云DoH2
-     - https://dns.alidns.com
+# 腾讯DoH2
+     - https://120.53.53.53/dns-query
 
 # interval 代表间隔时间，单位为 s；
 # tolerance 代表容差时间，单位为 ms；

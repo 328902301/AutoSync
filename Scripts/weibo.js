@@ -1,4 +1,4 @@
-// 2023-02-13 17:30
+// 2023-02-13 18:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -93,17 +93,24 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 超话社区,头像挂件,勋章,评论气泡
             if (item.data.user) {
               removeAvatar(item.data.user);
+              // 微博伪装评论,过滤不当言论提示
+              if (
+                item.data.user.name === "超话社区" ||
+                item.data.user.name === "微博视频"
+              ) {
+                continue;
+              } else {
+                newItems.push(item);
+              }
             }
             // 评论气泡
             if (item.data?.comment_bubble) {
               delete item.data.comment_bubble;
             }
-            // 微博伪装评论,过滤不当言论提示
-            if (
-              item.data.user.name === "超话社区" ||
-              item.data.user.name === "微博视频"
-              ) {
+            if (item?.type === 6) {
               continue;
+            } else {
+              newItems.push(item);
             }
             newItems.push(item);
           }

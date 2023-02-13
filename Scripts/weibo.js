@@ -99,8 +99,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 item.data.user.name === "微博视频"
               ) {
                 continue;
-              } else {
-                newItems.push(item);
               }
             }
             // 评论气泡
@@ -109,8 +107,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             }
             if (item?.type === 6) {
               continue;
-            } else {
-              newItems.push(item);
             }
             newItems.push(item);
           }

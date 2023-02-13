@@ -188,9 +188,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "group") {
           for (let ii of item.items) {
             if (ii.data?.itemid === "profile_top") {
-              newItems.push(ii);
-            } else if (ii.data?.category === "feed") {
-              newItems.push(ii);
+              newItems.push(item);
             }
           }
         } else if (item.category === "feed") {

@@ -520,7 +520,6 @@ rule-providers:
 
 # 分流规则
 rules:
-  - IP-CIDR,45.129.8.34/32,DIRECT
   - RULE-SET,Lan,DIRECT
   - RULE-SET,Direct,DIRECT
   - RULE-SET,Proxy,地区选择

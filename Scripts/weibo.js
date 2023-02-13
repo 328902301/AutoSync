@@ -1,4 +1,4 @@
-// 2023-02-13 12:45
+// 2023-02-13 12:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -198,7 +198,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
-            // 移除商品橱窗
+            // 商品橱窗
             if (item.data?.common_struct) {
               delete item.data.common_struct;
             }
@@ -390,7 +390,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
-            // 移除商品橱窗
+            // 商品橱窗
             if (item.data?.common_struct) {
               delete item.data?.common_struct;
             }
@@ -419,6 +419,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/show")) {
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj.common_struct;
     }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流

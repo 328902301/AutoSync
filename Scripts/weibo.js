@@ -188,14 +188,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             continue;
           }
         } else if (item.category === "group") {
-          // 置顶微博
+          // 热门话题,可能感兴趣的人
           if (
-            item.items.data?.card_type === 211 ||
-            item.items.data?.category === "feed"
+            item.items.data?.card_type === 17 ||
+            item.items.data?.card_type === 42
           ) {
-            newItems.push(item);
-          } else {
             continue;
+          } else {
+            newItems.push(item);
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {

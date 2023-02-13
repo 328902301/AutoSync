@@ -1,4 +1,4 @@
-// 2023-02-13 13:10
+// 2023-02-13 14:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -394,6 +394,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
+            newItems.push(item);
+          } else if (item.category === "feedBiz") {
+            // 管理特别关注按钮
             newItems.push(item);
           } else {
             // 移除所有的推广

@@ -1,4 +1,4 @@
-// 2023-02-13 11:10
+// 2023-02-13 09:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -257,6 +257,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           // 移除分隔符的点点点
           if (item.images) {
             delete item.images;
+          }
+          newItems.push(item);
+        } else if (itemId === "100505_-_manage2") {
+          // 移除面板样式
+          if (item.footer) {
+            delete item.footer;
+          }
+          // 移除框内推广
+          if (item.body) {
+            delete item.body;
           }
           newItems.push(item);
         } else if (

@@ -9,11 +9,11 @@
 
 [rewrite_local]
 
-^https://files.yuchenglw.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js
+https://files.honghufly.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js
 
 [mitm]
 
-hostname = files.yuchenglw.com
+hostname = files.honghufly.com
 
 *************************************/
 

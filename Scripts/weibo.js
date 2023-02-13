@@ -191,7 +191,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           // 置顶微博
           if (
             item.items.data?.card_type === 211 ||
-            item.items.data.category === "feed"
+            item.items.data?.category === "feed"
           ) {
             newItems.push(item);
           } else {

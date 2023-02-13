@@ -9,11 +9,11 @@
 
 [rewrite_local]
 
-https://files.honghufly.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js
+^https:\/\/files\.(yuchenglw|honghufly)\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js
 
 [mitm]
 
-hostname = files.honghufly.com
+hostname = files.*.com
 
 *************************************/
 
@@ -43,5 +43,7 @@ body = body.replace(/(<div class="banner">)[\s\S[\d\D]{0,2500}(<div class="play 
 
 body = body.replace(/(<div class="banner">)[\s\S[\d\D]{0,2500}(<div class="row lists">)/g,'<div class="row lists">');
 
+
+body = body.replace(/(<div class="banner mt-3">)[\s\S[\d\D]{0,20000}(<div class="mt-5 text-center">)/g,'<div class="mt-5 text-center">');
 
 $done({body}); 

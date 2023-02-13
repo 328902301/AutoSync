@@ -1,4 +1,4 @@
-// 2023-02-13 09:20
+// 2023-02-13 10:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -201,6 +201,23 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             continue;
           }
         } else if (item.category === "feed") {
+            if (item.data?.pic_infos) {
+              delete item.data.pic_infos;
+            }
+            if (item.data?.url_struct) {
+              delete item.data.url_struct;
+            }
+            if (
+              item.data?.extend_info?.ad ||
+              item.data?.extend_info?.shopwindow_card
+            ) {
+              delete item.data.extend_info;
+            }
+            if (
+              item.data?.common_struct?.actionlog?.source?.includes("ad")
+            ) {
+              delete item.data.common_struct;
+            }
           if (!isAd(item.data)) {
             newItems.push(item);
           } else {

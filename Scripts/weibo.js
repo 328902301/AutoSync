@@ -198,10 +198,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
-            // 商品橱窗
-            if (item.data?.common_struct) {
-              delete item.data.common_struct;
-            }
             newItems.push(item);
           } else {
             continue;
@@ -390,10 +386,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
-            // 商品橱窗
-            if (item.data?.common_struct) {
-              delete item.data?.common_struct;
-            }
             newItems.push(item);
           } else {
             // 移除所有的推广

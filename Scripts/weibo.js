@@ -1,4 +1,4 @@
-// 2023-02-13 20:50
+// 2023-02-13 20:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -106,7 +106,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.comment_bubble;
             }
             // 相关内容,过滤提示
-            if (item?.adType === 5 || item?.type === 6) {
+            if (item?.adType === "相关内容" || item?.type === 6) {
               continue;
             }
             newItems.push(item);

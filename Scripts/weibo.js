@@ -203,7 +203,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
             // 移除商品橱窗
-            if (item.data?.common_struct?.actionlog?.source?.includes("ad")) {
+            if (item.data?.common_struct) {
               delete item.data.common_struct;
             }
             newItems.push(item);
@@ -390,8 +390,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       delete obj.loadedInfo.headers;
     }
     // 移除商品橱窗
-    if (obj.common_struct?.actionlog?.source?.includes("ad")) {
-      delete obj.common_struct;
+    if (obj?.common_struct) {
+      delete obj?.common_struct;
     }
     if (obj.items) {
       let newItems = [];

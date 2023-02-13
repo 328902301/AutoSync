@@ -184,18 +184,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           // 筛选按钮
           if (item.data.card_type === 216) {
             newItems.push(item);
-          } else {
-            continue;
           }
         } else if (item.category === "group") {
-          // 热门话题,可能感兴趣的人
-          if (
-            item.items.data?.card_type === 17 ||
-            item.items.data?.card_type === 42
-          ) {
-            continue;
-          } else {
-            newItems.push(item);
+          let ii = item.items;
+          for (let i of ii) {
+            // 热门话题,可能感兴趣的人
+            if (i.data?.card_type === 17 || i.data?.card_type === 42) {
+              continue;
+            } else {
+              newItems.push(item);
+            }
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
@@ -204,8 +202,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.common_struct;
             }
             newItems.push(item);
-          } else {
-            continue;
           }
         }
       }

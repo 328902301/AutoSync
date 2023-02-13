@@ -201,23 +201,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             continue;
           }
         } else if (item.category === "feed") {
-            if (item.data?.pic_infos) {
-              delete item.data.pic_infos;
-            }
-            if (item.data?.url_struct) {
-              delete item.data.url_struct;
-            }
-            if (
-              item.data?.extend_info?.ad ||
-              item.data?.extend_info?.shopwindow_card
-            ) {
-              delete item.data.extend_info;
-            }
-            if (
-              item.data?.common_struct?.actionlog?.source?.includes("ad")
-            ) {
-              delete item.data.common_struct;
-            }
           if (!isAd(item.data)) {
             newItems.push(item);
           } else {
@@ -267,7 +250,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             );
           }
           newItems.push(item);
-        } else if (item.category === "mine") {
+        } else {
           if (itemId === "100505_-_manage") {
             if (item.style) {
               delete item.style;
@@ -277,23 +260,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.images;
             }
             newItems.push(item);
-          } else if (itemId === "100505_-_manage2") {
-            // 移除面板样式
-            if (item.footer) {
-              delete item.footer;
-            }
-            // 移除框内推广
-            if (item.body) {
-              delete item.body;
-            }
-            newItems.push(item);
           } else {
             // 其他项目全部移除
             continue;
           }
-        } else {
-          // 其他项目全部移除
-          continue;
         }
       }
       obj.items = newItems;

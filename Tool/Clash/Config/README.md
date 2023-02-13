@@ -4,7 +4,7 @@
 
 配置作者：[可莉🅥](tg://user?id=259049671)
 
-更新日期：2023-02-09
+更新日期：2023-02-13
 
 配置地址：[https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yml](https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yml)
 

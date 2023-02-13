@@ -89,18 +89,18 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 移除超话社区,头像挂件,勋章,评论气泡
-          if (item.data.user) {
-            if (item.data.user.name === "超话社区") {
-              continue;
-            }
-            removeAvatar(item.data.user);
-          }
-          // 移除评论气泡
-          if (item.data?.comment_bubble) {
-            delete item.data.comment_bubble;
-          }
           if (!isAd(item.data)) {
+            // 超话社区,头像挂件,勋章,评论气泡
+            if (item.data.user) {
+              if (item.data.user.name === "超话社区") {
+                continue;
+              }
+              removeAvatar(item.data.user);
+            }
+            // 评论气泡
+            if (item.data?.comment_bubble) {
+              delete item.data.comment_bubble;
+            }
             newItems.push(item);
           }
         }
@@ -111,7 +111,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          // 移除头像挂件、勋章、评论气泡
+          // 头像挂件、勋章、评论气泡
           if (item?.user) {
             removeAvatar(item.user);
           }

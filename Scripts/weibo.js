@@ -251,18 +251,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           newItems.push(item);
         } else {
-          if (itemId === "100505_-_manage") {
+          if (itemId !== "100505_-_manage") {
+            continue;
+          } else {
             if (item.style) {
               delete item.style;
             }
-            // 移除分隔符的点点点
             if (item.images) {
               delete item.images;
             }
             newItems.push(item);
-          } else {
-            // 其他项目全部移除
-            continue;
           }
         }
       }

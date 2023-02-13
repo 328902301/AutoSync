@@ -1,4 +1,4 @@
-// 2023-02-13 19:15
+// 2023-02-13 19:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -186,10 +186,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item.category === "group") {
-          for (let ii of item.items) {
-            if (ii.data?.itemid === "profile_top") {
-              newItems.push(item);
-            }
+          let ii = item.items;
+          // 个人置顶微博
+          if (ii.data.itemid === "profile_top") {
+            newItems.push(item);
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {

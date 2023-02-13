@@ -1,6 +1,12 @@
 # Record
 
-# 流量来啦 签到使用接口
+# 流量来啦 AES加密
+
+流程
+wx.login 获取code
+app/getJscode2Session 获取 token
+
+具体签到使用接口
 https://llhb.ah163.net/ah_red_come/app/userSign
 
 POST /ah_red_come/app/userSign HTTP/1.1
@@ -31,39 +37,6 @@ Content-Encoding: gzip
 c5aae6639f0a47bb8067086f47e2656963b7c40e31a07bf09fc2ba22861aa0e002ee10b0f9cf6643db31f1e95622423b0aa1b2e5f88cbc7a125c5f094f8f31eb
 
 
-
-# 活酸zfb mit
-https://akm.ahzwfw.gov.cn/akm-sj-user/health/detail
-
-POST /akm-sj-user/health/detail HTTP/1.1
-Host: akm.ahzwfw.gov.cn
-Accept: application/json, text/plain, */*
-protocol: https
-timestamp: 1670298474000
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,en-US;q=0.8
-token: d660f874aaa244858c150db65e758b07
-Content-Type: application/x-www-form-urlencoded
-Origin: https://akm.ahzwfw.gov.cn
-User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20B110 Ariver/1.1.0 AliApp(AP/10.2.90.6200) Nebula WK RVKType(1) AlipayDefined(nt:WIFI,ws:390|780|3.0,ac:ss) AlipayClient/10.2.90.6200 Language/zh-Hans Region/CN MiniProgram APXWebView NebulaX/1.0.0
-Content-Length: 93
-Referer: https://akm.ahzwfw.gov.cn/akm-sj-user/index.html
-Connection: keep-alive
-Cookie: Hm_lvt_21a52c4f01c4ec5e89389a602dcf726f=1667695301,1667872273,1667962289,1668046616; __jsluid_s=074e4aeba8f4fefa1256d6088fb93027
-
-HTTP/1.1 200 
-Date: Tue, 06 Dec 2022 03:48:39 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Vary: Accept-Encoding
-X-Frame-Options: SAMEORIGIN
-Content-Encoding: gzip
-X-Via-JSL: e9b2172,-
-X-Cache: bypass
-# healthStatus 1绿2黄3红
-{"flag":true,"data":{"id":"D1383636740A41A4B56E0745365B23C1","userName":"c39d3b1da88b23d8e032bad60df2beb7","idCardNo":"3422**********2494","userPhone":"173****3449","tmUserName":"*飞","tmIdCardNo":"3422**********2494","tmUserPhone":"173****3449","healthUrl":"https://akm.ahzwfw.gov.cn/akm-sj-mgr/index.html#/myAkm?isScan=1&id=akm:qrcode:0b9da5211baa42af9d6b5018cc87baf0&cityNo=340000000000","addTime":"2022-12-06 11:48","oneCodeAuthStr":null,"healthStatus":"1","isSubmitAgain":"0","jkdkUrl":"","orgName":null,"reportDate":null,"reason":null,"dataSource":null,"dataSourceEng":null,"createTime":"20220702134242","relationship":null,"userFlag":null,"userType":null,"healthStatusReason":null,"unusualDetail":null,"unusualTime":null,"colourReason":null,"groupName":null,"isFamilyShow":"1","isSick":"0","sex":null,"addressNow":null,"doorNo":null,"hourseType":null,"isNeedSubmitAgain":"0","isHaving":null,"isSicked":null,"medicalEvi":null,"isGrant":"1","departmentId":null,"belongarea":"341300","userLanguage":null,"isDelete":null,"cyrq":null,"isContactPerson":null,"updateTime":null,"belongareaName":null,"jzdCityCode":null,"applyName":null,"applyId":null,"jyAuthentication":null,"bsAuthentication":null,"age":28,"isYks":null,"tcInfo":null,"detailInfo":null},"errCode":"-1","errMsg":"success"}
 
 
 

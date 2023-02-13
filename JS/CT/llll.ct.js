@@ -12,7 +12,7 @@
  * 
  */
 /**
- * 微信内部 wx.login 获取5分钟实效授权code 请求 getJscode2Session 获取 userSign 签到接口所需 token(实效未知 暂时实验 11.23 15:22)
+ * 微信内部 wx.login 获取5分钟实效授权code 请求 getJscode2Session 获取 userSign 签到接口所需 token(4d)
  * {"code":"061Nc40w3RsICZ2gqw0w3TT1SR1Nc40E","queryDate":"2022-11-22 23:37:40","brand":"iPhone","model":"iPhone 13 Pro<iPhone14,2>"}
  * {"code":0,"msg":"操作成功","data":{"date":"2022-11-22 23:37:58","openid":"oOawA5Pnp4BnQebjIR0NVwoOFIHU","terminal":null,"user":{"seqid":"C6765843ABF31E11E053F50710ACFAA0","phone":"17334503449","reccount":19,"createTime":"2021-07-08 16:54:13","areacode":null,"remark":null,"openid":"oOawA5Pnp4BnQebjIR0NVwoOFIHU","nickname":"霜繁","headurl":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI9l8cIb5kqD9X0CzYXTkH6iatCtsib4Ceib28iaVAr7kMzl6VH37LIgOIetPZ82e4F7xx9UPBI3Z3Esw/132","basecount":20,"packagecount":5,"basepackagecount":5,"senddaycount":5,"basesenddaycount":5,"robpackagecount":6,"robbasepackagecount":5,"friendcount":1,"selfcount":1,"baseselfcount":5,"basefriendcount":1,"citycode":"557","cityname":"宿州市","brand":null,"model":null},"token":"251205c761fe4284981bbb8e8d4baaf9"}}
  * 

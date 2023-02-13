@@ -185,10 +185,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item.data.card_type === 216) {
             newItems.push(item);
           }
-        } else if (item?.items?.data?.card_type === 17) {
+        } else if (item?.items?.data?.group) {
           // 推荐话题
           continue;
-        } else if (item?.items?.data?.card_type === 42) {
+        } else if (item?.items?.data?.desc === "可能感兴趣的人") {
           // 可能感兴趣的人
           continue;
         } else if (item.category === "feed") {

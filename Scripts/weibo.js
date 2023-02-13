@@ -85,7 +85,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/comments/build_comments")) {
     // 评论区
     if (obj.datas) {
-      let items = obj.datas || [];
+      let items = obj.datas;
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
@@ -100,14 +100,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item.data?.comment_bubble) {
             delete item.data.comment_bubble;
           }
-          if (!isAd(item)) {
+          if (!isAd(item.data)) {
             newItems.push(item);
           }
         }
         obj.datas = newItems;
       }
     } else if (obj.root_comments) {
-      let items = obj.root_comments || [];
+      let items = obj.root_comments;
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
@@ -118,7 +118,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item?.comment_bubble) {
             delete item.comment_bubble;
           }
-          if (!isAd(item)) {
+          if (!isAd(item.data)) {
             newItems.push(item);
           }
         }

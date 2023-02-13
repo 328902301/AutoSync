@@ -186,11 +186,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item.category === "group") {
-          for (let ii of item.items) {
-            // 热门话题,可能感兴趣的人
-            if (ii.data?.card_type !== 17 || ii.data?.card_type !== 42) {
-              newItems.push(ii);
-            }
+          let ii = item.items;
+          // 热门话题,可能感兴趣的人
+          if (ii.data?.group) {
+            continue;
+          } else if (ii.data?.desc === "可能感兴趣的人") {
+            continue;
+          } else {
+            newItems.push(ii);
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {

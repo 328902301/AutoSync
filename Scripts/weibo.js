@@ -109,9 +109,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 移除过滤提示
             if (item.type === 6) {
               continue;
+            } else {
+              newItems.push(item);
             }
-          } else {
-            newItems.push(item);
           }
         }
         obj.datas = newItems;
@@ -134,9 +134,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 移除过滤提示
             if (item.type === 6) {
               continue;
+            } else {
+              newItems.push(item);
             }
-          } else {
-            newItems.push(item);
           }
         }
         obj.root_comments = newItems;

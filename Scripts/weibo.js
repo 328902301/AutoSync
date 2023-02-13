@@ -202,6 +202,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
+            if (item.data?.extend_info?.ad || item.data?.extend_info?.shopwindow_card) {
+              delete item.data.extend_info;
+            }
             newItems.push(item);
           } else {
             continue;

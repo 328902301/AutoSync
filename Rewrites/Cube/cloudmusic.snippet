@@ -1,5 +1,5 @@
 # ======= 网易云音乐 ======= #
-# 2023-02-10 20:10
+# 2023-02-14 16:25
 
 # 开屏广告,首页顶部横幅广告
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
@@ -26,7 +26,9 @@
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/feed\/inserted\/resources\? url reject-dict
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? url reject-dict
 
-# 首页,右上角多余图标,会员续费弹窗
+# 首页,右上角多余图标,会员续费弹窗,歌单横幅广告
+^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list\? url reject-dict
+^https:\/\/interface\.music\.163\.com\/weapi\/resource-exposure\/activity\/config\/get\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/link\/scene\/show\/resource\? url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/vipauth\/app\/auth\/recycle\? url reject-dict
 

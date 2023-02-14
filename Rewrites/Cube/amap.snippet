@@ -1,9 +1,10 @@
 # ======= 高德地图 ======= #
-# 2023-02-15 00:25
+# 2023-02-15 01:05
 
 # 导航详情页,路线规划,地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? url reject-dict
 
 # 首页,卡片,红点角标,右上角动图,搜索框热词,左下角天气,天气动效图层,消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js

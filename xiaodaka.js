@@ -9,7 +9,7 @@
 
 [rewrite_local]
 
-^https:\/\/(.*?)\.sharedaka\.com\/api\/.+\/(user|parse|habit)\/(info|token|conf|member)\/?(.*?)*$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/xiaodaka.js
+^https:\/\/.*\.sharedaka\.com\/api\/.+\/(user|parse|habit)\/(info|token|conf|member)\/?(.*?)*$ url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/xiaodaka.js
 
 [mitm]
 

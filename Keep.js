@@ -14,7 +14,7 @@
 ********************************
 [rewrite_local]
 #keep
-^http[s]?:\/\/api.gotokeep.com.*$ url script-request-header https://raw.githubusercontent.com/nameking77/Qx/main/Keep.js
+^http[s]?:\/\/api.gotokeep.com.+ url script-request-header https://raw.githubusercontent.com/nameking77/Qx/main/Keep.js
 [mitm] 
 hostname = api.gotokeep.com
 

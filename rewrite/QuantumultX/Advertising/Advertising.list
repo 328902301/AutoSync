@@ -1,11 +1,11 @@
 # NAME: Advertising
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-14 02:17:51
+# UPDATED: 2023-02-15 02:13:47
 # HOST: 14
-# REJECT: 557
-# MITM: 442
-# TOTAL: 1013
+# REJECT: 559
+# MITM: 444
+# TOTAL: 1017
 HOST,access.mypikpak.com,Advertising
 HOST,apis.lifeweek.com.cn,Advertising
 HOST,b.appsimg.com,Advertising

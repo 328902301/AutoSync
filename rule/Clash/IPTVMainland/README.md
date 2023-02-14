@@ -1,10 +1,10 @@
-# 🧸 IPTVMainland
+# 🧸 IPTV大陆
 
 ## 前言
 
 ![](https://shields.io/badge/-移除重复规则-ff69b4) ![](https://shields.io/badge/-DOMAIN与DOMAIN--SUFFIX合并-green) ![](https://shields.io/badge/-DOMAIN--SUFFIX间合并-critical) ![](https://shields.io/badge/-DOMAIN与DOMAIN--KEYWORD合并-9cf) ![](https://shields.io/badge/-DOMAIN--SUFFIX与DOMAIN--KEYWORD合并-blue) ![](https://shields.io/badge/-IP--CIDR(6)合并-blueviolet) 
 
-IPTVMainland规则由《RULE GENERATOR 规则生成器》自动生成。
+IPTV大陆规则由《RULE GENERATOR 规则生成器》自动生成。
 
 分流规则是互联网公共服务的域名和IP地址汇总，所有数据均收集自互联网公开信息，不代表我们支持或使用这些服务。
 
@@ -12,48 +12,90 @@ IPTVMainland规则由《RULE GENERATOR 规则生成器》自动生成。
 
 ## 规则统计
 
-最后更新时间：2023-02-14 02:16:49
+最后更新时间：2023-02-15 02:13:00
 
 各类型规则统计：
 | 类型 | 数量(条)  | 
 | ---- | ----  |
-| DOMAIN | 6  | 
-| IP-CIDR | 5  | 
-| TOTAL | 11  | 
+| DOMAIN | 991  | 
+| IP-CIDR | 1306  | 
+| IP-CIDR6 | 7  | 
+| TOTAL | 2304  | 
 
 
 ## Clash 
 
 #### 使用说明
 - IPTVMainland.yaml，请使用 behavior: "classical"。
+- IPTVMainland_Classical.yaml，请使用 behavior: "classical"。
+- IPTVMainland_IP.yaml，请使用 behavior: "ipcidr"。
+- IPTVMainland_IP_No_IPv6.yaml，请使用 behavior: "ipcidr"。
 
 #### 配置建议
-- IPTVMainland.yaml 单独使用。
+- IPTVMainland_IP.yaml 单独使用。
+- IPTVMainland_Classical.yaml 单独使用。
+- IPTVMainland.yaml、IPTVMainland_IP.yaml 共同使用。
 
 #### 规则链接
 **MASTER分支 (每日更新)**
 
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland.yaml
 
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
+
 **MASTER分支 CDN (每日更新)**
 
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/IPTVMainland/IPTVMainland.yaml
+
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
 
 **MASTER分支 GHProxy (每日更新)**
 
 https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland.yaml
 
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
+
 **RELEASE分支 (不定时更新)**
 
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland.yaml
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
 
 **RELEASE分支CDN (不定时更新)**
 
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/IPTVMainland/IPTVMainland.yaml
 
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
+
 **RELEASE分支 GHProxy (不定时更新)**
 
 https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland.yaml
+
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_IP.yaml
+
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_Classical.yaml
+
+https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/IPTVMainland/IPTVMainland_IP.txt
 
 ## 子规则/排除规则
 
@@ -62,7 +104,12 @@ https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_scri
 
 ## 数据来源
 
-当前规则未直接引用数据源。
+《IPTV大陆》的数据来自以下链接，如与本项目的《IPTV大陆》规则混合使用，可能会造成规则大量重复。
+
+- https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/main/bestv.m3u
+
+
+感谢以上规则作者的辛勤付出（排名不分先后）。
 
 ## 最后
 

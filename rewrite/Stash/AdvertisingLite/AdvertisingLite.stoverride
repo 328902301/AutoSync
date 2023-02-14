@@ -1,11 +1,11 @@
 name: 复写去广告(严格版)
-desc: 最后更新时间 2023-02-13 02:14:41
+desc: 最后更新时间 2023-02-15 02:13:52
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
-# reject: 494
-# mitm: 407
+# reject: 496
+# mitm: 409
 # force-http-engine-hosts: 6
-# total: 907
+# total: 911
 
 
 
@@ -13,6 +13,7 @@ desc: 最后更新时间 2023-02-13 02:14:41
 
 http:
   rewrite:
+    - ^https:\/\/api\.sfacg\.com\/ioscfg - reject
     - ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/limitedAds$ - reject
     - ^https:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash - reject
     - ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
@@ -71,6 +72,7 @@ http:
     - ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad - reject
     - ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
     - ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+    - ^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode - reject
     - ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
     - ^https?:\/\/api\.abema\.io\/v\d\/ip\/check - reject
     - ^https?:\/\/api\.ahmobile\.cn:443\/eip\?eip_serv_id=app\.getAllNew - reject
@@ -152,6 +154,7 @@ http:
     - ^https?:\/\/app\.badmintoncn\.com\/mag\/operative\/v\d\/ad\/ - reject
     - ^https?:\/\/app\.ddpai\.com\/d\/api\/v\d\/config\/get\/bootscreen - reject
     - ^https?:\/\/app\.dewu\.com\/api\/v\d\/app\/advertisement\/ - reject
+    - ^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list - reject
     - ^https?:\/\/app\.homeinns\.com\/api\/landing - reject
     - ^https?:\/\/app\.mixcapp\.com\/mixc\/api\/v\d\/ad - reject
     - ^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/getAdvertImage - reject
@@ -242,7 +245,6 @@ http:
     - ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject
     - ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
     - ^https?:\/\/gateway\.shouqiev\.com(:8443)?\/fsda\/app\/bootImage\.json - reject
-    - ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 - reject
     - ^https?:\/\/gfp\.veta\.naver\.com\/adcall\? - reject
     - ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ - reject
     - ^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ - reject
@@ -551,6 +553,7 @@ http:
     - "api-one.wallstcn.com"
     - "api-release.wuta-cam.com"
     - "api-sams.walmartmobile.cn"
+    - "api.00bang.cn"
     - "api.21jingji.com"
     - "api.abema.io"
     - "api.ahmobile.cn"
@@ -590,6 +593,7 @@ http:
     - "api.qbb6.com"
     - "api.qiuduoduo.cn"
     - "api.rr.tv"
+    - "api.sfacg.com"
     - "api.taou.com"
     - "api.tipsoon.com"
     - "api.touker.com"
@@ -620,6 +624,7 @@ http:
     - "app.badmintoncn.com"
     - "app.ddpai.com"
     - "app.dewu.com"
+    - "app.hbooker.com"
     - "app.homeinns.com"
     - "app.mixcapp.com"
     - "app.peopleapp.com"
@@ -707,7 +712,6 @@ http:
     - "games.mobileapi.hupu.com"
     - "gateway-api.dushu365.com"
     - "gateway.shouqiev.com"
-    - "gd.10086.cn"
     - "gfp.veta.naver.com"
     - "gg*.cmvideo.cn"
     - "gha.ghac.cn"

@@ -1,14 +1,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-10 02:09:43
+# UPDATED: 2023-02-15 02:10:06
 # DOMAIN: 178
 # DOMAIN-KEYWORD: 39
-# DOMAIN-SUFFIX: 37760
+# DOMAIN-SUFFIX: 37784
 # IP-CIDR: 106
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 38088
+# TOTAL: 38112
 abematv.akamaized.net
 amp.akamaized.net
 angle.com.tw
@@ -201,6 +201,7 @@ assets-priconne-redive-us.akamaized.net
 .100classicbooks.com
 .100shmar.net
 .101boyvideos.com
+.101tubeporn.com
 .101xxx.xyz
 .10bet.com
 .10xfotolia.com
@@ -288,6 +289,7 @@ assets-priconne-redive-us.akamaized.net
 .2buybeatsbydre.com
 .2ch.net
 .2chav.com
+.2dgen.com
 .2drdrebeats.com
 .2gayboys.com
 .2k.com
@@ -334,6 +336,7 @@ assets-priconne-redive-us.akamaized.net
 .4ertik.one
 .4everland.io
 .4everoutside.com
+.4f1v1.top
 .4greedy.com
 .4gtv.tv
 .4hu.tv
@@ -416,6 +419,7 @@ assets-priconne-redive-us.akamaized.net
 .88gals.com
 .88kkn.com
 .88square.com
+.8949.voto
 .8kcosplay.com
 .8kpornvids.com
 .8muses.io
@@ -466,7 +470,6 @@ assets-priconne-redive-us.akamaized.net
 .aanaan.com
 .aavs.xyz
 .abbywintersfree.com
-.abc-studios.com
 .abcheadphones.com
 .abclider.com
 .abeatsbydrdre.com
@@ -624,6 +627,7 @@ assets-priconne-redive-us.akamaized.net
 .adultlister.com
 .adultmagazinespdf.com
 .adulto.vip
+.adultpornvideos.net
 .adultrental.com
 .adultsexgame.biz
 .adultsexgames.biz
@@ -801,6 +805,7 @@ assets-priconne-redive-us.akamaized.net
 .allpornsites.net
 .allpornsitespass.com
 .allswingersclubs.org
+.allthefallen.moe
 .alotporn.com
 .alphabet.be
 .alphabet.biz
@@ -3422,7 +3427,6 @@ assets-priconne-redive-us.akamaized.net
 .damnhotz.com
 .damplips.com
 .dandalinvoa.com
-.dandanzan.cc
 .danemarket.com
 .danmarkbeatsbydrdre.com
 .danskpornofilm.com
@@ -3822,6 +3826,7 @@ assets-priconne-redive-us.akamaized.net
 .douwriteright.com
 .douya.org
 .douyintt10.me
+.douzinnsi-eromannga.com
 .dowjones.io
 .dowjoneson.com
 .download.qatp1.net
@@ -4227,6 +4232,7 @@ assets-priconne-redive-us.akamaized.net
 .elephantlist.com
 .elephantsdream.org
 .elephanttube.com
+.elephanttubenew.com
 .elgaronline.com
 .elifesciences.org
 .elite.com
@@ -5759,6 +5765,7 @@ assets-priconne-redive-us.akamaized.net
 .googlezip.net
 .gopivotal.com
 .gopivotal.net
+.goporngate.com
 .goragay.com
 .gordonmoore.com
 .goshemalecams.com
@@ -5967,6 +5974,7 @@ assets-priconne-redive-us.akamaized.net
 .hentai-archive.com
 .hentai-books.com
 .hentai-cosplays.com
+.hentai-covers.site
 .hentai-for.net
 .hentai-fun.com
 .hentai-gamer.com
@@ -6040,6 +6048,7 @@ assets-priconne-redive-us.akamaized.net
 .hentainhaven.com
 .hentainstream.com
 .hentaipapa.com
+.hentaipaw.com
 .hentaiporn.com
 .hentaipornonly.com
 .hentaiprn.com
@@ -7222,6 +7231,7 @@ assets-priconne-redive-us.akamaized.net
 .jpg4.info
 .jpg4.pw
 .jpg4us.net
+.jpvhub.com
 .jquery.com
 .jquerymobile.com
 .js.org
@@ -7252,6 +7262,7 @@ assets-priconne-redive-us.akamaized.net
 .justswallows.com
 .justusboys.com
 .justyoutube.com
+.jvid.com
 .jwkcgd.xyz
 .jwpcdn.com
 .jwplatform.com
@@ -8620,6 +8631,7 @@ assets-priconne-redive-us.akamaized.net
 .naoconto.com
 .napiszex.com
 .nasty.singles
+.nastyvids.com
 .nataliefiore.com
 .natgeomaps.com
 .nationalgeographicpartners.com
@@ -9044,7 +9056,6 @@ assets-priconne-redive-us.akamaized.net
 .nuita.net
 .nukemanga.com
 .nuki-dokoro.com
-.nunuyy.cc
 .nurofen.cn
 .nurofen.com
 .nurofen.hr
@@ -9854,6 +9865,7 @@ assets-priconne-redive-us.akamaized.net
 .pornhd.com
 .pornhd3x.tv
 .pornhd8k.net
+.pornhdfuck.com
 .pornhdtube.tv
 .pornhdvideos.tv
 .pornheed.com
@@ -9986,6 +9998,7 @@ assets-priconne-redive-us.akamaized.net
 .pornpair.com
 .pornpander.com
 .pornpaw.com
+.pornpen.ai
 .pornper.com
 .pornpics.com
 .pornpotato.com
@@ -10824,9 +10837,11 @@ assets-priconne-redive-us.akamaized.net
 .sexmummy.com
 .sexmutant.com
 .sexnaweb.net
+.sexnudo.com
 .sexo123.net
 .sexopornolive.com
 .sexoquente.blog
+.sexplustube.net
 .sexpornimg.com
 .sexpornpictures.com
 .sexsaoy.com
@@ -10845,6 +10860,7 @@ assets-priconne-redive-us.akamaized.net
 .sextreffensite.com
 .sextube.desi
 .sextube.fm
+.sextube69free.net
 .sextubebox.com
 .sextubedot.com
 .sextubehub.com
@@ -11086,6 +11102,7 @@ assets-priconne-redive-us.akamaized.net
 .smowtion.com
 .smplace.com
 .smpte.org
+.smutcams.com
 .smutindia.com
 .smutstone.com
 .smuttymoms.com
@@ -11773,8 +11790,10 @@ assets-priconne-redive-us.akamaized.net
 .to-porno.com
 .todayapp.tv
 .tokyo-porn-tube.com
+.tokyo-tosho.net
 .tokyomotion.com
 .tokyoporns.com
+.tokyotosho.info
 .tomatespodres.com
 .tomovie.net
 .tonec.com
@@ -11938,6 +11957,7 @@ assets-priconne-redive-us.akamaized.net
 .tubedna.com
 .tubedupe.com
 .tubeenema.com
+.tubefuckme.net
 .tubelombia.net
 .tubemature.tv
 .tubemogul.com
@@ -12883,6 +12903,7 @@ assets-priconne-redive-us.akamaized.net
 .x.org
 .x.team
 .x1337x.ws
+.x18r.co
 .x3guide.com
 .x3vid.com
 .x6av.com
@@ -12900,6 +12921,7 @@ assets-priconne-redive-us.akamaized.net
 .xbahis55.com
 .xbeegtube.com
 .xbnat.com
+.xbooks.work
 .xbox.co
 .xbox.org
 .xbox360.co
@@ -13413,6 +13435,8 @@ assets-priconne-redive-us.akamaized.net
 .yy55.tv
 .z.cn
 .z00.world
+.z18r.co
+.z18r.com
 .z5.app
 .z5.com
 .z676869.com

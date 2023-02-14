@@ -23,7 +23,7 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #评论区插入广告｜回复广告｜首页右上角免或vip图标｜评论右上角热评馆｜播放页正在试听弹窗｜播放页右上角live或直播图标入口｜首次登录黑胶过期弹窗
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/(position\/show\/strategy|scene\/show)|comment\/hotcomment\/collect|vipcenter\/tspopup\/get|mlivestream\/entrance\/playpage|vipauth\/app\/auth\/recycle) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/(position\/show\/(strategy|resource)|scene\/show)|comment\/hotcomment\/collect|vipcenter\/tspopup\/get|mlivestream\/entrance\/playpage|vipauth\/app\/auth\/recycle) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 #搜索页热搜卡片｜猜你喜欢,如果去不掉需要重装或者退出登录再重新登录
 ^https?:\/\/interface3?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/(activity\/)?config|middle\/clientcfg\/config) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"

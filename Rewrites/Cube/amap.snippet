@@ -1,5 +1,5 @@
 # ======= 高德地图 ======= #
-# 2023-02-14 23:35
+# 2023-02-15 00:25
 
 # 导航详情页,路线规划,地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
@@ -9,6 +9,7 @@
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-location\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/mapapi\/hint_text\/offline_data\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/message\/notice\/list\? url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict

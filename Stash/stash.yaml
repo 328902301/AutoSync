@@ -77,11 +77,12 @@ dns:
     
 # 域名使用指定的dns服务器解析
   nameserver-policy:
-    "blog.google": 94.140.15.15
+    "openwrt.lan": system
+    "blog.google": 1.0.0.1
     "talk.google.com": 108.177.125.188
     "mtalk.google.com": 108.177.125.188
-    "dl.google.com": https://dns.adguard-dns.com/dns-query
-    "dl.l.google.com": https://dns.adguard-dns.com/dns-query
+    "dl.google.com": https://cloudflare-dns.com/dns-query
+    "dl.l.google.com": https://cloudflare-dns.com/dns-query
     "update.googleapis.com": quic://dns.adguard-dns.com
     
 #💡 本地域名映射

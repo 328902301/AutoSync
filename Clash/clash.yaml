@@ -64,12 +64,13 @@ dns:
     
 # 使用指定的dns服务器解析域名
   nameserver-policy:
-    "blog.google": 94.140.15.15
+    "openwrt.lan": systme
+    "blog.google": 1.0.0.1
     "talk.google.com": 108.177.125.188
     "mtalk.google.com": 108.177.125.188
-    "dl.google.com": https://dns.adguard-dns.com/dns-query
-    "dl.l.google.com": https://dns.adguard-dns.com/dns-query
-    "update.googleapis.com": https://dns.adguard-dns.com/dns-query
+    "dl.google.com": https://cloudflare-dns.com/dns-query
+    "dl.l.google.com": https://cloudflare-dns.com/dns-query
+    "update.googleapis.com": https://cloudflare-dns.com/dns-query
 
 # geoip过滤cn以外的地址，指定到fallback
   fallback-filter:

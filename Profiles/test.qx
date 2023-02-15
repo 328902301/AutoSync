@@ -1,0 +1,3 @@
+hostname = *.x-storm.com
+
+^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/((user-profile\/)|(auth-device\/list\/))$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js

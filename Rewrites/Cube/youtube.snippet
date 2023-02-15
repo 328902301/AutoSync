@@ -1,5 +1,5 @@
 # ======= YouTube ======= #
-# 2023-02-10 18:45
+# 2023-02-15 13:25
 
 # ⚠️⚠️
 # Quantumult X 必须在 [general] 部分加入以下代码: udp_drop_list=443
@@ -8,13 +8,10 @@
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/account\/get_setting\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 
 # 首页 瀑布流,上传按钮,短视频
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/guide\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/reel\/reel_watch_sequence\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|guide|reel\/reel_watch_sequence)\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 
 # 播放页 插播广告,贴片广告
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/next\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(next|player)\?key ^POST url-and-header script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/youtube.js
 ^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad url reject-200
 
 # 搜索页

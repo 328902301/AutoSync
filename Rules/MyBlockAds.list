@@ -8,6 +8,8 @@ HOST-SUFFIX,safebrowsing.googleapis.com,REJECT
 HOST-SUFFIX,lookup.api.bsb.baidu.com,REJECT
 
 # ======= B ======= #
+# 哔哩哔哩 proto支持
+HOST,grpc.biliapi.net,REJECT
 # 哔哩哔哩 自动换区支持
 IP-CIDR,203.107.1.1/32,REJECT
 

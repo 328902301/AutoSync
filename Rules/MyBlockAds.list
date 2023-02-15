@@ -1,4 +1,4 @@
-# 2023-02-15 00:40
+# 2023-02-15 08:28
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -81,13 +81,6 @@ HOST,iadmat.nosdn.127.net,REJECT
 HOST,iadmusicmat.music.126.net,REJECT
 HOST,iadmusicmatvideo.music.126.net,REJECT
 HOST-SUFFIX,163jiasu.com,REJECT
-# 微博 开屏广告
-HOST,adstrategy.biz.weibo.com,REJECT
-HOST,boot.biz.weibo.com,REJECT
-HOST,kadmimage.biz.weibo.com,REJECT
-HOST,sdkaction.biz.weibo.com,REJECT
-HOST,sdkclick.biz.weibo.com,REJECT
-HOST,sdkmonitor.biz.weibo.com,REJECT
 # 微博 头像挂件
 HOST,new.vip.weibo.cn,REJECT
 HOST,vip.storage.weibo.com,REJECT

@@ -9,7 +9,7 @@
 
 [rewrite_local]
 
-http:\/\/iosv2\.cjapi\.5fun\.com url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/wfzy.js
+http:\/\/iosv2\.cjapi\.5fun\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/wfzy.js
 
 [mitm] 
 

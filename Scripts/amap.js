@@ -72,7 +72,7 @@ if (obj.data) {
       // "scenic_ticket_activity",
       "scenic_filter", // 购票悬浮菜单 可定明日 随时退
       // "scenic_ticket",
-      // "scenic_coupon",
+      "scenic_coupon", // 优惠券过期提示
       "movie_info", // 优惠购票 景点宣传片
       // "evaluate", // 高德出行评分
       "reviews", // 用户评价

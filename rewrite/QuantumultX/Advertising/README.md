@@ -16,56 +16,40 @@
 
 ## 规则统计
 
-最后更新时间：2023-02-15 02:13:47
+最后更新时间：2023-02-15 23:47:58
 
 各类型规则统计：
 | 类型 | 数量(条)  | 
 | ---- | ----  |
-| HOST | 14  | 
-| REJECT | 559  | 
-| MITM | 444  | 
-| TOTAL | 1017  | 
+| REJECT | 571  | 
+| MITM | 454  | 
+| TOTAL | 1025  | 
 
 
 ## QuantumultX 
 
-#### 使用说明
-- Advertising.list，为QuantumultX分流规则。
-
 #### 规则链接
 **MASTER分支 (每日更新)**
-
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.list
 
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf
 
 **MASTER分支 CDN (每日更新)**
 
-https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rewrite/QuantumultX/Advertising/Advertising.list
-
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rewrite/QuantumultX/Advertising/Advertising.conf
 
 **MASTER分支 GHProxy (每日更新)**
-
-https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.list
 
 https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf
 
 **RELEASE分支 (不定时更新)**
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rewrite/QuantumultX/Advertising/Advertising.list
-
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rewrite/QuantumultX/Advertising/Advertising.conf
 
 **RELEASE分支CDN (不定时更新)**
 
-https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rewrite/QuantumultX/Advertising/Advertising.list
-
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rewrite/QuantumultX/Advertising/Advertising.conf
 
 **RELEASE分支 GHProxy (不定时更新)**
-
-https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rewrite/QuantumultX/Advertising/Advertising.list
 
 https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rewrite/QuantumultX/Advertising/Advertising.conf
 

@@ -1,15 +1,15 @@
 name: AllInOne
-desc: 最后更新时间 2023-02-15 02:13:48
+desc: 最后更新时间 2023-02-15 23:48:00
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
 # domain: 5
 # http-request-script: 1
 # http-response-script: 32
 # redirect: 8
-# reject: 496
-# mitm: 563
+# reject: 508
+# mitm: 564
 # force-http-engine-hosts: 6
-# total: 1111
+# total: 1124
 
 
 
@@ -270,6 +270,7 @@ http:
     - ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject
     - ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
     - ^https?:\/\/gateway\.shouqiev\.com(:8443)?\/fsda\/app\/bootImage\.json - reject
+    - ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 - reject
     - ^https?:\/\/gfp\.veta\.naver\.com\/adcall\? - reject
     - ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ - reject
     - ^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ - reject
@@ -340,6 +341,7 @@ http:
     - ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList - reject
     - ^https?:\/\/m\.ibuscloud.com\/v2\/app\/getStartPage - reject
     - ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
+    - ^https?:\/\/m\.yhdm\.io\/bar\/yfgg.js - reject
     - ^https?:\/\/m\d\.amap\.com\/ws\/message\/notice\/list\? - reject
     - ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
     - ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
@@ -517,15 +519,25 @@ http:
     - ^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig - reject
     - ^https?:\/\/zjh5api\.189smarthome\.com:\d+\/xygj-config-api\/queryData - reject
     - ^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do - reject
+    - https?:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible - reject
+    - https?:\/\/apis\.lifeweek\.com\.cn\/api\/baseConfig\/getIosNewConfig - reject
+    - https?:\/\/b\.appsimg\.com\/upload\/momin\/ - reject
     - https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* - reject
     - https?:\/\/fbchina\.flipchina\.cn\/v2\/ad\/query\/* - reject
+    - https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start - reject
     - https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
+    - https?:\/\/homefront\.qunar\.com\/front\/splash\/ad - reject
     - https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad.*ios_home_modal - reject
     - https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens - reject
     - https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup - reject
     - https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
     - https?:\/\/mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity - reject
+    - https?:\/\/new-app-api\.ylyk\.com\/v1\/user\/myinfo\/adviser - reject
     - https?:\/\/open3\.vistastory\.com\/v3\/api.*get_popup - reject
+    - https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad - reject
+    - https?:\/\/support\.you\.163\.com\/appversync\/check.do - reject
+    - https?:\/\/tagit\.hyhuo\.com\/recover\/list - reject
+    - https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config - reject
     - https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 - reject
 
 
@@ -1026,6 +1038,7 @@ http:
     - "games.mobileapi.hupu.com"
     - "gateway-api.dushu365.com"
     - "gateway.shouqiev.com"
+    - "gd.10086.cn"
     - "gfp.veta.naver.com"
     - "gg*.cmvideo.cn"
     - "gg.caixin.com"

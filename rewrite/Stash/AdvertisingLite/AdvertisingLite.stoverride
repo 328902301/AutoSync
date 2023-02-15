@@ -1,11 +1,11 @@
 name: 复写去广告(严格版)
-desc: 最后更新时间 2023-02-15 02:13:52
+desc: 最后更新时间 2023-02-15 23:48:08
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
-# reject: 496
-# mitm: 409
+# reject: 497
+# mitm: 410
 # force-http-engine-hosts: 6
-# total: 911
+# total: 913
 
 
 
@@ -245,6 +245,7 @@ http:
     - ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject
     - ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
     - ^https?:\/\/gateway\.shouqiev\.com(:8443)?\/fsda\/app\/bootImage\.json - reject
+    - ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 - reject
     - ^https?:\/\/gfp\.veta\.naver\.com\/adcall\? - reject
     - ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ - reject
     - ^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ - reject
@@ -712,6 +713,7 @@ http:
     - "games.mobileapi.hupu.com"
     - "gateway-api.dushu365.com"
     - "gateway.shouqiev.com"
+    - "gd.10086.cn"
     - "gfp.veta.naver.com"
     - "gg*.cmvideo.cn"
     - "gha.ghac.cn"

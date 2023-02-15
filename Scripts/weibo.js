@@ -1,4 +1,4 @@
-// 2023-02-14 12:25
+// 2023-02-15 08:28
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -509,20 +509,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
-    }
-  } else if (url.includes("/v2/strategy/ad")) {
-    // 开屏广告
-    if (obj.data?.next_adid) {
-      obj.data.next_adid = "0";
-    }
-    if (obj.reqid) {
-      obj.reqid = "0";
-    }
-    if (obj.end) {
-      obj.end = "2040-01-01 23:59:59";
-    }
-    if (obj.start) {
-      obj.start = "2040-01-01 00:00:00";
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告

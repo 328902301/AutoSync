@@ -13,7 +13,7 @@ http:\/\/iosv2\.cjapi\.5fun\.com url script-response-body https://raw.githubuser
 
 [mitm] 
 
-hostname = iosv2.cjapi.wufan88.com
+hostname = iosv2.cjapi.5fun.com
 
 *************************************/
 

@@ -71,11 +71,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.cards) {
       let newCards = [];
       for (const card of obj.cards) {
-        // 17 猜你想搜
-        // 58 猜你想搜偏好设置
-        if (card.card_type === 17 || card.card_type === 58) {
-          continue;
-        }
         let cardGroup = card.card_group;
         if (cardGroup?.length > 0) {
           let newGroup = [];
@@ -97,7 +92,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           let cardType = card.card_type;
           // 9 广告
           // 165 广告
-          if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
             continue;
           } else {
             if (!isAd(card.mblog)) {

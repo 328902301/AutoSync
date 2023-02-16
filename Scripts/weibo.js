@@ -1,4 +1,4 @@
-// 2023-02-15 08:28
+// 2023-02-16 08:58
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -91,6 +91,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else {
           let cardType = card.card_type;
           // 9 广告
+          // 58 猜你想搜偏好设置
           // 165 广告
           if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
             continue;

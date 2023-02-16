@@ -1,3 +1,8 @@
+## 失效仓库
+WeiRen0Free-sync
+328902301-Script-sync
+paynexss-Scripts-sync
+
 ### AutoSyncScript项目介绍
 ```
 此项目用于定时拉取github上各作者的脚本备份。

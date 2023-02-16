@@ -1,7 +1,7 @@
 /*
 README:https://github.com/VirgilClyne/iRingo
 */
-const $ = new Env("Apple Location Services v2.6.3-response");
+const $ = new Env("Apple Location Services v2.7.0-response");
 const URL = new URLs();
 const DataBase = {
 	"Location":{
@@ -40,7 +40,13 @@ const DataBase = {
 		$.log(url.path);
 		switch (url.path) {
 			case "pep/gcc":
-				$response.body = Settings.PEP.GCC;
+				switch (Settings.PEP.GCC) {
+					case "AUTO":
+						break;
+					default:
+						$response.body = Settings.PEP.GCC;
+						break;
+				};
 				break;
 			case "config/defaults":
 				if ($response.status === 200 || $response.statusCode === 200) {
@@ -58,11 +64,10 @@ const DataBase = {
 						delete data["com.apple.GEO"].CountryProviders.CN.GEOBatchSpatialPlaceLookupMaxParametersCount // CN
 					}
 					data["com.apple.GEO"].CountryProviders.CN.LocalitiesAndLandmarksSupported = Settings?.Config?.Defaults?.LocalitiesAndLandmarks ?? DataBase?.Location?.Settings?.Config?.Defaults?.LocalitiesAndLandmarks; // CN
-					if (Settings?.Config?.Defaults?.LocalitiesAndLandmarks ?? DataBase?.Location?.Settings?.Config?.Defaults?.LocalitiesAndLandmarks) {
-						delete data["com.apple.GEO"].CountryProviders.CN.POIBusynessDifferentialPrivacy // CN
-						delete data["com.apple.GEO"].CountryProviders.CN.POIBusynessRealTime // CN
-					}
+					data["com.apple.GEO"].CountryProviders.CN.POIBusynessDifferentialPrivacy = Settings?.Config?.Defaults?.POIBusyness ?? DataBase?.Location?.Settings?.Config?.Defaults?.POIBusyness; // CN
+					data["com.apple.GEO"].CountryProviders.CN.POIBusynessRealTime = Settings?.Config?.Defaults?.POIBusyness ?? DataBase?.Location?.Settings?.Config?.Defaults?.POIBusyness; // CN
 					data["com.apple.GEO"].CountryProviders.CN.PedestrianAREnabled = Settings?.Config?.Defaults?.PedestrianAR ?? DataBase?.Location?.Settings?.Config?.Defaults?.PedestrianAR; // CN
+					data["com.apple.GEO"].CountryProviders.CN.TransitPayEnabled = Settings?.Config?.Defaults?.TransitPayEnabled ?? DataBase?.Location?.Settings?.Config?.Defaults?.TransitPayEnabled; // CN
 					data["com.apple.GEO"].CountryProviders.CN.WiFiQualityNetworkDisabled = Settings?.Config?.Defaults?.WiFiQualityNetworkDisabled ?? DataBase?.Location?.Settings?.Config?.Defaults?.WiFiQualityNetworkDisabled; // CN
 					data["com.apple.GEO"].CountryProviders.CN.WiFiQualityTileDisabled = Settings?.Config?.Defaults?.WiFiQualityTileDisabled ?? DataBase?.Location?.Settings?.Config?.Defaults?.WiFiQualityTileDisabled; // CN
 					//data["com.apple.GEO"].CountryProviders.CN.GEOShouldSpeakWrittenAddresses = true; // TW

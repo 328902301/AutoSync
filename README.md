@@ -1,10 +1,11 @@
-## 失效仓库
+### 失效仓库
+```
 WeiRen0Free-sync
 
 328902301-Script-sync
 
 paynexss-Scripts-sync
-
+```
 
 ### AutoSyncScript项目介绍
 ```

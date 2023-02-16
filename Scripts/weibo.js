@@ -1,4 +1,4 @@
-// 2023-02-15 08:28
+// 2023-02-16 08:58
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -67,7 +67,44 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   $done({ body: JSON.stringify(obj) + "OK" });
 } else {
   let obj = JSON.parse(body);
-  if (url.includes("/2/checkin/show")) {
+  if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (const card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (const group of cardGroup) {
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
+                // 商品橱窗
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          let cardType = card.card_type;
+          // 9 广告
+          // 58 猜你想搜偏好设置
+          // 165 广告
+          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
+            continue;
+          } else {
+            if (!isAd(card.mblog)) {
+              newCards.push(card);
+            }
+          }
+        }
+      }
+      obj.cards = newCards;
+    }
+  } else if (url.includes("/2/checkin/show")) {
     // 首页签到
     if (obj.show) {
       obj.show = 0;
@@ -338,43 +375,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         }
       }
-    }
-  } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
-    if (obj.cards) {
-      let newCards = [];
-      for (const card of obj.cards) {
-        let cardGroup = card.card_group;
-        if (cardGroup?.length > 0) {
-          let newGroup = [];
-          for (const group of cardGroup) {
-            let cardType = group.card_type;
-            if (cardType !== 118) {
-              if (!isAd(group.mblog)) {
-                // 商品橱窗
-                if (group.mblog?.common_struct) {
-                  delete group.mblog.common_struct;
-                }
-                newGroup.push(group);
-              }
-            }
-          }
-          card.card_group = newGroup;
-          newCards.push(card);
-        } else {
-          let cardType = card.card_type;
-          // 9 广告
-          // 58 猜你想搜偏好设置
-          // 165 广告
-          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
-            continue;
-          } else {
-            if (!isAd(card.mblog)) {
-              newCards.push(card);
-            }
-          }
-        }
-      }
-      obj.cards = newCards;
     }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||

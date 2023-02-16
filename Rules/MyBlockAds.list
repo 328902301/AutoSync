@@ -1,4 +1,4 @@
-# 2023-02-16 07:38
+# 2023-02-16 08:15
 
 # ======= A ======= #
 # 安全浏览限制解除
@@ -68,6 +68,9 @@ HOST,furiousfar.com,REJECT
 HOST,swallowcrockerybless.com,REJECT
 
 # ======= S ======= #
+
+# 什么值得买
+HOST,api.zuihuimai.com,REJECT
 # 数字联盟
 HOST-SUFFIX,shuzilm.cn,REJECT
 

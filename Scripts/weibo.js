@@ -73,7 +73,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (const card of obj.cards) {
         // 17 猜你想搜
         // 58 猜你想搜偏好设置
-        if ([17, 58].indexOf(card.card_type) !== -1) {
+        if (card.card_type === 17 || card.card_type === 58) {
           continue;
         }
         let cardGroup = card.card_group;
